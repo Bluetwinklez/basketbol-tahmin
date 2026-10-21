@@ -7,7 +7,7 @@ import pandas as pd
 from scipy.stats import norm
 from sklearn.metrics import log_loss,brier_score_loss,accuracy_score,mean_absolute_error
 from .ozellik import build_features,FEATURES
-from .kutu_ozellik import kutu_ozellikleri,yukle,KUTU_FEATURES
+from .kutu_ozellik import kutu_ozellikleri,yukle,KUTU_FEATURES,KUTU_LIGLERI
 from .model import fit_predict,regression
 from .odds import american_decimal,no_vig,simulate
 
@@ -19,12 +19,15 @@ ELO_SHRINK=[0.,.25,.5]
 def scores(y,p):
     return dict(log_loss=float(log_loss(y,np.clip(p,1e-6,1-1e-6),labels=[0,1])),
         brier=float(brier_score_loss(y,p)),accuracy=float(accuracy_score(y,p>=.5)))
-def run():
-    output=Path('docs/kanit'); output.mkdir(parents=True,exist_ok=True)
+def run(ligler=None,cikti='docs/kanit'):
+    """ligler verilirse yalnız onlar; cikti başka klasörse rapor/grafik/EDA üretilmez (deneme koşusu)."""
+    output=Path(cikti); output.mkdir(parents=True,exist_ok=True)
+    deneme=cikti!='docs/kanit'
     all_games=pd.read_parquet('data/maclar.parquet')
     all_games=all_games[all_games.ev_skor.notna() & all_games.dep_skor.notna()]
     rows,params,predictions=[],[],[]
     kutu,oyuncular=yukle()
+    if ligler: all_games=all_games[all_games.lig.isin(ligler)]
     for league,g in all_games.groupby('lig'):
         g=g.sort_values(['tarih_utc','mac_id']).reset_index(drop=True)
         y=(g.ev_skor>g.dep_skor).to_numpy(dtype=int)
@@ -33,7 +36,7 @@ def run():
         seasons=sorted(g.sezon.unique())
         # Kutu skor özellikleri Elo parametresine bağlı değil: lig başına bir kez hesaplanır.
         cols=FEATURES
-        if kutu is not None and kutu.mac_id.str.startswith(league).any():
+        if kutu is not None and league in KUTU_LIGLERI and kutu.mac_id.str.startswith(league).any():
             kf=kutu_ozellikleri(g,kutu,oyuncular).set_index('mac_id').loc[g.mac_id].reset_index(drop=True)
             cols=FEATURES+KUTU_FEATURES
         cache={}
@@ -149,6 +152,7 @@ def run():
     profile=dict(rows=len(all_games),missing=all_games.isna().sum().to_dict(),
         duplicates=int(all_games.mac_id.duplicated().sum()),timestamp=datetime.now(timezone.utc).isoformat())
     (output/'profil.json').write_text(json.dumps(profile,ensure_ascii=False,indent=2),'utf8')
+    if deneme: return metrics
     plot_calibration(pred)
     from .eda import run_eda
     run_eda()

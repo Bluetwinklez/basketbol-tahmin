@@ -42,6 +42,33 @@ def doldur(defter, maclar):
     return defter
 
 
+def espn_doldur(defter):
+    """NBA satırlarını ESPN skor tablosundan doldurur (yalnızca bitmiş maçlar).
+    Basketball Reference sayfaları önbellekte olduğu için süren gecenin sonuçlarını göstermez."""
+    import json
+    import urllib.request
+    from .veri.nba_kutu import ESPN_KOD
+    bos = defter[(defter.lig == 'NBA') & defter.gercek_ev.isna()]
+    gunler = {pd.Timestamp(t).tz_convert('America/New_York').strftime('%Y%m%d') for t in bos.mac_utc}
+    for gun in gunler:
+        try:
+            istek = urllib.request.Request(f'https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard?dates={gun}',
+                                           headers={'User-Agent': 'bbtahmin/0.1'})
+            with urllib.request.urlopen(istek, timeout=20) as y:
+                olaylar = json.load(y)['events']
+        except Exception:
+            continue
+        for e in olaylar:
+            c = e['competitions'][0]
+            if c['status']['type']['name'] != 'STATUS_FINAL':
+                continue
+            t = {x['homeAway']: (ESPN_KOD.get(x['team']['abbreviation'], x['team']['abbreviation']), float(x['score']))
+                 for x in c['competitors']}
+            satir = bos[(bos.ev == t['home'][0]) & (bos.dep == t['away'][0])].index
+            defter.loc[satir, ['gercek_ev', 'gercek_dep']] = [t['home'][1], t['away'][1]]
+    return defter
+
+
 def ozet(defter):
     d = defter.dropna(subset=['gercek_ev']).copy()
     if d.empty:
@@ -69,7 +96,7 @@ def run(yol=YOL):
     if not yol.exists():
         print('Defter boş.')
         return
-    defter = doldur(pd.read_csv(yol), pd.read_parquet('data/maclar.parquet'))
+    defter = espn_doldur(doldur(pd.read_csv(yol), pd.read_parquet('data/maclar.parquet')))
     defter.to_csv(yol, index=False)
     for r in defter.itertuples():
         fav, fp = (r.ev, r.ev_kazanir) if r.ev_kazanir >= .5 else (r.dep, 1 - r.ev_kazanir)

@@ -26,6 +26,10 @@ Tek giriş noktası, proje kökünden:
 .venv/Scripts/python.exe -m bbtahmin topla --ligler NBA --baslangic 2014 --sbr-izni   # oranlar: yalnız SBR izniniz varsa
 .venv/Scripts/python.exe -m bbtahmin backtest
 .venv/Scripts/python.exe -m bbtahmin tahmin "Fenerbahçe - Monaco" "Celtics - Lakers" --tarih 2026-10-25T20:45
+.venv/Scripts/python.exe -m bbtahmin tahmin "Washington - Milwaukee @1.30/2.14" --tarih 2026-10-22T02:00 --kaydet   # oran ve deftere kayıt
+.venv/Scripts/python.exe -m bbtahmin defter          # kayıtlı tahminleri sonuçlarla puanla (NBA sonuçları ESPN skor tablosundan)
+.venv/Scripts/python.exe -m bbtahmin topla-kutu      # EuroLeague/EuroCup v3 ve ESPN NBA kutu skorları
+.venv/Scripts/python.exe -m bbtahmin backtest --ligler NBA --cikti docs/deneme-nba   # deneme koşusu, ana rapora dokunmaz
 .venv/Scripts/python.exe -m pytest -q tests --junitxml=docs/kanit/pytest.xml
 .venv/Scripts/python.exe scripts/kanit_yaz.py; .venv/Scripts/python.exe scripts/verify_run.py; .venv/Scripts/python.exe scripts/finalize.py
 ```
@@ -85,3 +89,12 @@ Normal pakette aynı denetleyici (`tests/leakage_check.py`) aynı sızıntılı 
 6. PLAN BasketbolBet yönteminin sızıntısız yeniden uygulanmasını ister; referans `main.py` bulunamadığı için yapılamadı.
 
 Bu çalışma yalnız ayrılmış çalışma kopyasındadır. Commit/merge yapılmadı; ana depoya yazılmadı.
+
+## Ek bilgiler ve denenmiş özellikler
+
+- **Uzatma olasılığı:** Normal sürenin berabere bitme yoğunluğu, ligin geçmiş uzatma oranına ölçeklenerek verilir.
+- **Piyasa:** Maç `"Ev - Dep @1.30/2.14"` biçiminde yazılırsa oranlardan bahisçi marjı çıkarılmış olasılık gösterilir ve deftere yazılır.
+- **NBA sakatlık raporu:** Resmi PDF (ak-static.cms.nba.com) `pdfplumber` ile okunur; Out/Doubtful/Questionable oyuncular listelenir. Modele girmez, geçmiş raporlarla backtest yapılmadı.
+- **Tahmin defteri:** `defter/tahminler.csv` git'e girer; tahminin maçtan önce yapıldığı commit geçmişinden görülür.
+- **Kutu skor özellikleri (tempo, ORtg/DRtg, kadro devamlılığı):** EuroLeague/EuroCup v3 (9.065 maç) ve ESPN NBA (15.439 maç) verisiyle denendi. Walk-forward'da log loss'u iyileştirmedi (NBA 0,6220 → 0,6227, EuroLeague 0,5955 → 0,5965, EuroCup 0,6129 → 0,6158); bu yüzden `KUTU_LIGLERI` boş. Veri ve kod duruyor.
+

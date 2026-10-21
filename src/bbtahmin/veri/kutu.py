@@ -4,6 +4,7 @@ Kaynak: https://api-live.euroleague.net/v3/competitions/{E,U}/seasons/{kod}/game
 Yanıtlar data/raw/kutu/<mac_id>.json olarak önbelleğe alınır; önbellekte olan yeniden indirilmez.
 Saniyede en fazla ~3 istek gider; 429/5xx yanıtında beklenip yeniden denenir.
 """
+import http.client
 import json
 import threading
 import time
@@ -58,7 +59,8 @@ def _indir(mac_id, sinirlayici, deneme=4):
                 time.sleep(5 * 2 ** n)
                 continue
             raise
-        except (urllib.error.URLError, TimeoutError):
+        except (urllib.error.URLError, TimeoutError, ConnectionError, http.client.HTTPException):
+            # RemoteDisconnected (bağlantı yanıtsız kapandı) ConnectionError altındadır.
             if n < deneme - 1:
                 time.sleep(5 * 2 ** n)
                 continue
