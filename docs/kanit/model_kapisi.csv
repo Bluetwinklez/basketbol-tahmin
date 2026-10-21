@@ -1,0 +1,7 @@
+lig,model,logloss_delta_vs_elo,brier_delta_vs_elo,both_baselines,statistical_support
+E,logistic,-0.005084288920578106,-0.0020431054722062914,evet,evet
+E,hist_gradient_boosting,0.005542127461074298,0.002345941528935608,hayır,kanıt yok / yetersiz sezon
+NBA,logistic,-0.008614589094898317,-0.004188521694680786,evet,kanıt yok / yetersiz sezon
+NBA,hist_gradient_boosting,-0.006692326093161172,-0.003590790639589392,evet,kanıt yok / yetersiz sezon
+U,logistic,0.04599175853915205,0.006091658831545416,hayır,kanıt yok / yetersiz sezon
+U,hist_gradient_boosting,0.01003391895329242,0.004227502951024004,hayır,kanıt yok / yetersiz sezon

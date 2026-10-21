@@ -1,0 +1,38 @@
+﻿2026-10-21T13:32:40.3301468+03:00
+
+Path                                                                            
+----                                                                            
+C:\Users\Administrator\.feyzullah\ofis-work\worktrees\basketbol-tahmin-gmvhxpx4g
+
+
+.gitignore:1:data/raw/	data/raw/basketbolbet/main.py
+False
+
+Name                           
+----                           
+api-live.euroleague.net        
+www.basketball-reference.com   
+www.sportsbookreviewsonline.com
+
+
+Python 3.12.10
+v24.20.0
+
+Gerçek oturum komutları:
+1) Sistem Python --version: Access is denied (istenen C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe).
+2) Resmi python.org 3.12.10 embed zip ve bootstrap.pypa.io/get-pip.py proje içi .runtime/ altına indirildi.
+3) .runtime/python/python.exe -m virtualenv --no-download --app-data .runtime/virtualenv .venv
+4) .venv/Scripts/python.exe -m pip install -r requirements.txt (PIP_NO_CACHE_DIR=1, PIP_DISABLE_PIP_VERSION_CHECK=1)
+5) .venv/Scripts/python.exe -m pip install --no-build-isolation --no-deps -e .
+6) $env:PYTHONUTF8='1'; .venv/Scripts/python.exe -m bbtahmin topla
+7) $env:MPLCONFIGDIR=Join-Path (Get-Location) '.runtime/matplotlib'; $env:OMP_NUM_THREADS='2'; $env:OPENBLAS_NUM_THREADS='2'; .venv/Scripts/python.exe -m bbtahmin backtest
+8) .venv/Scripts/python.exe -m pytest -q --basetemp=.runtime/pytest --junitxml=docs/kanit/pytest.xml : 32 geçti / 0 kalan.
+9) .venv/Scripts/python.exe -m pytest tests/negative_control.py -q --basetemp=.runtime/pytest-negative : 1 beklenen başarısız, kasıtlı sızıntı yakalandı.
+10) .venv/Scripts/python.exe -m pip freeze > requirements-lock.txt
+Referans klasörü ve main.py: yok; data/raw altında benzer referans da bulunamadı.
+Commit/merge/git init yapılmadı; mevcut worktree korundu.
+
+Ek doğrulamalar: 750 gerçek maç satırında önceki döngü ile hızlandırılmış özellik üretimi birebir aynı bulundu (ozellik_esdegerlik.json). Saat dilimi eşdeğerlik testi eklendi; normal paket 33 testtir. Boosting parametre araması yaprak, regularizasyon ve ağaç sayısını birlikte seçer; Platt kalibrasyonu cezasızdır, eğim ve sabit eğitim verisinden öğrenilir.
+NBA 2016-17 kısmi ayları ardışık olmayabilir; o sezonun özellik geçmişi de eksiktir.
+
+Son normal test paketi: 34 geçti, 0 kalan. Resmi NBA MOV sayısal testi eklendi. Nihai koşu yalnız resmi NBA MOV formülünü kullanır; önceki ara koşular nihai sonuç değildir.
