@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-21T14:55:29.750387+00:00",
+  "timestamp": "2026-10-21T21:00:34.933122+00:00",
   "sources": [
     {
       "lig": "E",
@@ -489,63 +489,43 @@
   "unmatched_odds_rows": null,
   "http": [
     {
-      "url": "https://api-live.euroleague.net/robots.txt",
-      "cached": false,
-      "status": 404
-    },
-    {
-      "url": "https://api-live.euroleague.net/v2/competitions/E/seasons/E2026/games",
-      "cached": false,
-      "status": 200
-    },
-    {
-      "url": "https://api-live.euroleague.net/v2/competitions/U/seasons/U2026/games",
-      "cached": false,
-      "status": 200
-    },
-    {
-      "url": "https://www.basketball-reference.com/robots.txt",
+      "url": "https://www.basketball-reference.com/leagues/NBA_2027_games.html",
       "cached": true,
       "status": 200
     },
     {
-      "url": "https://www.basketball-reference.com/leagues/NBA_2027_games.html",
-      "cached": false,
-      "status": 200
-    },
-    {
       "url": "https://www.basketball-reference.com/leagues/NBA_2027_games-april.html",
-      "cached": false,
+      "cached": true,
       "status": 200
     },
     {
       "url": "https://www.basketball-reference.com/leagues/NBA_2027_games-december.html",
-      "cached": false,
+      "cached": true,
       "status": 200
     },
     {
       "url": "https://www.basketball-reference.com/leagues/NBA_2027_games-february.html",
-      "cached": false,
+      "cached": true,
       "status": 200
     },
     {
       "url": "https://www.basketball-reference.com/leagues/NBA_2027_games-january.html",
-      "cached": false,
+      "cached": true,
       "status": 200
     },
     {
       "url": "https://www.basketball-reference.com/leagues/NBA_2027_games-march.html",
-      "cached": false,
+      "cached": true,
       "status": 200
     },
     {
       "url": "https://www.basketball-reference.com/leagues/NBA_2027_games-november.html",
-      "cached": false,
+      "cached": true,
       "status": 200
     },
     {
       "url": "https://www.basketball-reference.com/leagues/NBA_2027_games-october.html",
-      "cached": false,
+      "cached": true,
       "status": 200
     }
   ],
