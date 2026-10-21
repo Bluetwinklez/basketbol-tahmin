@@ -48,5 +48,6 @@ def regression(x,target,train,validation,test):
         x.loc[train,FEATURES],target[train]).predict(x.loc[validation,FEATURES])
     from scipy.stats import normaltest,skew,kurtosis
     return prediction,dict(alpha=value,candidates=values,validation_mae=errors,residual_sigma=float(np.std(residual,ddof=1)),
+        residual_mean=float(np.mean(residual)),
         residual_normality_p=float(normaltest(residual).pvalue) if len(residual)>=8 else None,
         residual_skew=float(skew(residual)),residual_excess_kurtosis=float(kurtosis(residual)))

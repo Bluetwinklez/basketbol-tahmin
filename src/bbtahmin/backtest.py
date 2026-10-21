@@ -68,6 +68,9 @@ def run():
             params.append(dict(lig=league,sezon=season,model='ewma',alpha=[.1,.3][alpha_index],validation_losses=alpha_losses))
             pm,rm=regression(x,margin,train,val,test)
             pt,rt=regression(x,total,train,val,test)
+            # Skorlar yıllar içinde arttığı için toplam her sezon 2-5 sayı düşük kalıyordu; doğrulama
+            # sezonundaki ortalama artık eklenir. (Lig seviyesinden sapma hedefi denendi, MAE'yi kötüleştirdi.)
+            pt=pt+rt['residual_mean']
             params.extend([dict(lig=league,sezon=season,model='margin_ridge',**rm),
                            dict(lig=league,sezon=season,model='total_ridge',**rt)])
             # "Ev sahibi kazanır": her maçta ev sahibini seçer; olasılığı eğitim penceresindeki ev galibiyet oranıdır.
@@ -78,8 +81,14 @@ def run():
             for kind in ['logistic','hist_gradient_boosting']:
                 probabilities[kind],details=fit_predict(kind,x,y,train,val,test)
                 params.append(dict(lig=league,sezon=season,model=kind,**details))
-            margins={'home':np.full(test.sum(),margin[train|val].mean()),'logistic':pm,'hist_gradient_boosting':pm}
-            totals={'home':np.full(test.sum(),total[train|val].mean()),'logistic':pt,'hist_gradient_boosting':pt}
+            # Skor modeli: Ridge fark tahmini ve doğrulama sezonundaki artık sapmasıyla normal dağılım.
+            probabilities['skor']=norm.cdf(pm/max(rm['residual_sigma'],1e-6))
+            # Topluluk: birbirinden farklı hata yapan üç modelin olasılık ortalaması (ağırlık ayarlanmıyor).
+            probabilities['topluluk']=np.mean([probabilities['logistic'],probabilities['mov_elo'],probabilities['skor']],axis=0)
+            margins={'home':np.full(test.sum(),margin[train|val].mean()),'logistic':pm,'hist_gradient_boosting':pm,
+                     'skor':pm,'topluluk':pm}
+            totals={'home':np.full(test.sum(),total[train|val].mean()),'logistic':pt,'hist_gradient_boosting':pt,
+                    'skor':pt,'topluluk':pt}
             for baseline,key in [('elo',selected['elo']),('mov_elo',selected['mov'])]:
                 from sklearn.linear_model import LinearRegression
                 f=cache[key]

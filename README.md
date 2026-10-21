@@ -25,12 +25,14 @@ Tek giriş noktası, proje kökünden:
 .venv/Scripts/python.exe -m bbtahmin topla --ligler NBA --baslangic 2016     # yalnız belirli lig/sezonlar
 .venv/Scripts/python.exe -m bbtahmin topla --ligler NBA --baslangic 2014 --sbr-izni   # oranlar: yalnız SBR izniniz varsa
 .venv/Scripts/python.exe -m bbtahmin backtest
-.venv/Scripts/python.exe -m bbtahmin tahmin --lig E --ev ULK --dep MCO --tarih 2026-10-25T18:00:00Z
+.venv/Scripts/python.exe -m bbtahmin tahmin "Fenerbahçe - Monaco" "Celtics - Lakers" --tarih 2026-10-25T20:45
 .venv/Scripts/python.exe -m pytest -q tests --junitxml=docs/kanit/pytest.xml
 .venv/Scripts/python.exe scripts/kanit_yaz.py; .venv/Scripts/python.exe scripts/verify_run.py; .venv/Scripts/python.exe scripts/finalize.py
 ```
 
-`backtest`, `docs/kanit/*.csv|json`, kalibrasyon PNG'leri ve `docs/sonuclar.md` dosyasını üretir. `finalize.py`, raporu pytest XML'lerinden gelen gerçek test sayılarıyla yeniden yazar. `tahmin` komutu, son eğitim penceresinde seçilmiş saf Elo parametreleriyle olasılık verir; saat dilimi zorunludur.
+`backtest`, `docs/kanit/*.csv|json`, kalibrasyon PNG'leri ve `docs/sonuclar.md` dosyasını üretir. `finalize.py`, raporu pytest XML'lerinden gelen gerçek test sayılarıyla yeniden yazar. `tahmin` komutu takım adlarını serbest yazımla eşler (Türkçe karakter ve kısaltma olur; lig verilmezse bulunur), son 400 günde o ligde oynamamış takımları reddeder ve her maç için backtest'te o ligde en iyi çıkan modelin kazanma olasılığını, tahmini skoru, sayı farkını ve toplamı %80 aralıklarıyla verir. Saat dilimi verilmezse İstanbul saati varsayılır.
+
+Skor modeli: Elo ve EWMA'ya ek olarak rakibe göre düzeltilmiş hücum/savunma sayı reytingleri (iki öğrenme hızı) maç öncesi sırayla hesaplanır; fark ve toplam Ridge ile, kazanma olasılığı farkın normal dağılımından gelir. Toplam, doğrulama sezonundaki ortalama artıkla düzeltilir (skor seviyesi yıllar içinde arttığı için). Walk-forward'da %80 aralıklar maçların %80-82'sini kapsadı.
 
 Kasıtlı sızıntı negatif kontrolü ayrıca çalıştırıldığında **1 başarısız test** vermelidir (sızıntı denetleyicisinin duyarlı olduğunun kanıtı):
 
