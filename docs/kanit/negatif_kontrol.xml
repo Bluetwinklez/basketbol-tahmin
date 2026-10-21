@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="1" skipped="0" tests="1" time="0.486" timestamp="2026-10-21T23:17:24.873315+03:00" hostname="WIN-Q0DUUHH7D3A"><testcase classname="tests.negative_control" name="test_deliberately_leaky_feature" time="0.025"><failure message="AssertionError: Series are different&#10;&#10;Series values are different (100.0 %)&#10;[index]: [ev_skor_ortalama]&#10;[left]:  [91.5]&#10;[right]: [82.0]">games =     mac_id  lig    sezon  ... tarafsiz_saha   asama   kaynak
+0      E_0    E  2020-21  ...         False  normal  fixt......         False  normal  fixture
+71    U_23    U  2021-22  ...         False  normal  fixture
+
+[72 rows x 14 columns]
+
+    def test_deliberately_leaky_feature(games):
+        match=games[games.lig=='E'].iloc[5].to_dict()
+&gt;       assert_no_leakage(leaky_features,games,match)
+
+tests\negative_control.py:5: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+tests\leakage_check.py:8: in assert_no_leakage
+    pd.testing.assert_series_equal(original,recomputed,check_exact=True)
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+left = array([91.5]), right = array([82.]), err_msg = None
+
+    def _raise(left, right, err_msg) -&gt; NoReturn:
+        if err_msg is None:
+            if left.shape != right.shape:
+                raise_assert_detail(
+                    obj, f"{obj} shapes are different", left.shape, right.shape
+                )
+    
+            diff = 0
+            for left_arr, right_arr in zip(left, right):
+                # count up differences
+                if not array_equivalent(left_arr, right_arr, strict_nan=strict_nan):
+                    diff += 1
+    
+            diff = diff * 100.0 / left.size
+            msg = f"{obj} values are different ({np.round(diff, 5)} %)"
+&gt;           raise_assert_detail(obj, msg, left, right, index_values=index_values)
+E           AssertionError: Series are different
+E           
+E           Series values are different (100.0 %)
+E           [index]: [ev_skor_ortalama]
+E           [left]:  [91.5]
+E           [right]: [82.0]
+
+C:\Tools\bbtahmin-venv\Lib\site-packages\pandas\_testing\asserters.py:684: AssertionError</failure></testcase></testsuite></testsuites>

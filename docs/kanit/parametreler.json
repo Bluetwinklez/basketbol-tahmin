@@ -363,8 +363,8 @@
     "model": "ewma",
     "alpha": 0.3,
     "validation_losses": [
-      0.5711650613974839,
-      0.5622293226940813
+      0.576092212328495,
+      0.5692921034677967
     ]
   },
   {
@@ -378,34 +378,36 @@
       100.0
     ],
     "validation_mae": [
-      9.89237205136238,
-      9.77868202197079,
-      9.522876815095104
+      9.88546488003646,
+      9.744804560119764,
+      9.508953848484163
     ],
-    "residual_sigma": 12.163101995683862,
-    "residual_normality_p": 0.5837412699064588,
-    "residual_skew": -0.1746211441873927,
-    "residual_excess_kurtosis": 0.0019254833019095585
+    "residual_sigma": 12.143590144466497,
+    "residual_mean": -2.1484765135735038,
+    "residual_normality_p": 0.5856965652727647,
+    "residual_skew": -0.17532903120193308,
+    "residual_excess_kurtosis": -0.008710340406889117
   },
   {
     "lig": "E",
     "sezon": "2009-10",
     "model": "total_ridge",
-    "alpha": 100.0,
+    "alpha": 10.0,
     "candidates": [
       0.1,
       10.0,
       100.0
     ],
     "validation_mae": [
-      13.869203427814048,
-      13.848071762591312,
-      13.839143554605323
+      13.641950023772106,
+      13.577610956048597,
+      13.697413853989914
     ],
-    "residual_sigma": 18.04439236294075,
-    "residual_normality_p": 0.26729814788189243,
-    "residual_skew": 0.19946630404979196,
-    "residual_excess_kurtosis": 0.35582832396986364
+    "residual_sigma": 17.71785614716652,
+    "residual_mean": -1.4831379645881777,
+    "residual_normality_p": 0.24772849196163432,
+    "residual_skew": 0.18032426175287924,
+    "residual_excess_kurtosis": 0.4295224339132697
   },
   {
     "lig": "E",
@@ -424,13 +426,13 @@
       10.0
     ],
     "validation_losses": [
-      0.5417674646698776,
-      0.5622293226940813,
-      0.5829540254144518
+      0.5450620065727099,
+      0.5692921034677967,
+      0.5970366946272608
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.9097956389325004,
-    "calibration_intercept": -0.051835889526016164
+    "calibration_coefficient": 0.9429757740262636,
+    "calibration_intercept": -0.06960838316051295
   },
   {
     "lig": "E",
@@ -464,14 +466,14 @@
       }
     ],
     "validation_losses": [
-      0.6228851863754198,
-      0.6137731579498885,
-      0.6127878245075543,
-      0.6311040921426683
+      0.6391697053794437,
+      0.615291334461426,
+      0.6121936397374882,
+      0.6446123784885337
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.6563963313822085,
-    "calibration_intercept": -0.05138248990616567
+    "calibration_coefficient": 0.6301423881023055,
+    "calibration_intercept": -0.003162982931953825
   },
   {
     "lig": "E",
@@ -827,8 +829,8 @@
     "model": "ewma",
     "alpha": 0.3,
     "validation_losses": [
-      0.5431167404836024,
-      0.5387176423998766
+      0.5488149573781577,
+      0.5484409941378797
     ]
   },
   {
@@ -842,14 +844,15 @@
       100.0
     ],
     "validation_mae": [
-      9.756195274279206,
-      9.692290803092446,
-      9.382932520254258
+      9.971970707924653,
+      9.804630056389522,
+      9.397433760641233
     ],
-    "residual_sigma": 11.87506396480149,
-    "residual_normality_p": 0.007350977405277956,
-    "residual_skew": -0.4624337344251581,
-    "residual_excess_kurtosis": 0.6823987691556757
+    "residual_sigma": 11.889904826357101,
+    "residual_mean": -0.20195389491845528,
+    "residual_normality_p": 0.010781101109666139,
+    "residual_skew": -0.4452511603281163,
+    "residual_excess_kurtosis": 0.6316945934896201
   },
   {
     "lig": "E",
@@ -862,14 +865,15 @@
       100.0
     ],
     "validation_mae": [
-      13.222687047829561,
-      13.205917934260016,
-      13.135522188517918
+      13.984728313239604,
+      13.602292213555346,
+      13.061310236625811
     ],
-    "residual_sigma": 16.91818867601982,
-    "residual_normality_p": 0.7088732662104894,
-    "residual_skew": 0.027216951451658263,
-    "residual_excess_kurtosis": 0.2116367857391075
+    "residual_sigma": 16.800358280542575,
+    "residual_mean": -1.9426958123887346,
+    "residual_normality_p": 0.7872311433855664,
+    "residual_skew": 0.009139903246318243,
+    "residual_excess_kurtosis": 0.16187427600389315
   },
   {
     "lig": "E",
@@ -881,20 +885,20 @@
     "lig": "E",
     "sezon": "2010-11",
     "model": "logistic",
-    "parameter": 1.0,
+    "parameter": 0.1,
     "candidates": [
       0.1,
       1.0,
       10.0
     ],
     "validation_losses": [
-      0.5391438245203694,
-      0.5387176423998766,
-      0.5388630265304413
+      0.5434501707710687,
+      0.5484409941378797,
+      0.5501347851535959
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.8348099336424734,
-    "calibration_intercept": 0.034883142045523764
+    "calibration_coefficient": 0.9141021092192977,
+    "calibration_intercept": -0.01288525707880762
   },
   {
     "lig": "E",
@@ -928,14 +932,14 @@
       }
     ],
     "validation_losses": [
-      0.5780522180299081,
-      0.6198644211984966,
-      0.5883749207452006,
-      0.6288525980320053
+      0.560140400984189,
+      0.5890584629781367,
+      0.5610412214377385,
+      0.6064249347932702
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.6836072663674424,
-    "calibration_intercept": 0.036503421774855646
+    "calibration_coefficient": 0.7107103121462391,
+    "calibration_intercept": 0.10708206882800542
   },
   {
     "lig": "E",
@@ -1291,8 +1295,8 @@
     "model": "ewma",
     "alpha": 0.1,
     "validation_losses": [
-      0.6114364864149407,
-      0.6141789124838493
+      0.6131939222873566,
+      0.6152398512375638
     ]
   },
   {
@@ -1306,14 +1310,15 @@
       100.0
     ],
     "validation_mae": [
-      9.648436313407307,
-      9.639303684215395,
-      9.58820039035997
+      9.669091622130292,
+      9.651935790198081,
+      9.603402944676104
     ],
-    "residual_sigma": 12.278348260604103,
-    "residual_normality_p": 0.042502938851222014,
-    "residual_skew": 0.3335308979638412,
-    "residual_excess_kurtosis": 0.601516584452833
+    "residual_sigma": 12.252023784550577,
+    "residual_mean": 1.3175100184694735,
+    "residual_normality_p": 0.04816115020504479,
+    "residual_skew": 0.3269820092098202,
+    "residual_excess_kurtosis": 0.5825979650269018
   },
   {
     "lig": "E",
@@ -1326,14 +1331,15 @@
       100.0
     ],
     "validation_mae": [
-      12.732635552340037,
-      12.725381405071376,
-      12.688037820333252
+      13.33509380779899,
+      13.200449324496576,
+      12.807367712008402
     ],
-    "residual_sigma": 15.399704653785511,
-    "residual_normality_p": 0.2925530266964953,
-    "residual_skew": 0.26643523641082556,
-    "residual_excess_kurtosis": -0.18833066765072237
+    "residual_sigma": 15.534200689239169,
+    "residual_mean": -2.880128012066554,
+    "residual_normality_p": 0.2350049925419584,
+    "residual_skew": 0.28399378049094,
+    "residual_excess_kurtosis": -0.230426218154129
   },
   {
     "lig": "E",
@@ -1352,13 +1358,13 @@
       10.0
     ],
     "validation_losses": [
-      0.6065228700910844,
-      0.6114364864149407,
-      0.6122180138120547
+      0.6072689994443738,
+      0.6131939222873566,
+      0.6149299089686099
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.6818316626650428,
-    "calibration_intercept": 0.22652362318741884
+    "calibration_coefficient": 0.6852236208709791,
+    "calibration_intercept": 0.216441328269884
   },
   {
     "lig": "E",
@@ -1392,14 +1398,14 @@
       }
     ],
     "validation_losses": [
-      0.6557901900684447,
-      0.6640976905909358,
-      0.6657585620497827,
-      0.6623503693714934
+      0.6518680504203098,
+      0.6828851667063737,
+      0.6622109005893306,
+      0.6805566100171779
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.45492881815756786,
-    "calibration_intercept": 0.32230564903691905
+    "calibration_coefficient": 0.47173597009849505,
+    "calibration_intercept": 0.24977054431835669
   },
   {
     "lig": "E",
@@ -1753,10 +1759,10 @@
     "lig": "E",
     "sezon": "2012-13",
     "model": "ewma",
-    "alpha": 0.1,
+    "alpha": 0.3,
     "validation_losses": [
-      0.5406274525406881,
-      0.5437022817564591
+      0.5457366295897761,
+      0.5445282098277899
     ]
   },
   {
@@ -1770,34 +1776,36 @@
       100.0
     ],
     "validation_mae": [
-      9.060641086308918,
-      9.054803789799152,
-      9.02253490191333
+      8.94911075083843,
+      8.951716113525253,
+      8.93759253223744
     ],
-    "residual_sigma": 11.405498267801407,
-    "residual_normality_p": 0.6052500014765495,
-    "residual_skew": 0.10948231171827884,
-    "residual_excess_kurtosis": 0.1962788026199913
+    "residual_sigma": 11.411893039914409,
+    "residual_mean": -0.5806200331692692,
+    "residual_normality_p": 0.5437978901731924,
+    "residual_skew": 0.14060486507290265,
+    "residual_excess_kurtosis": 0.18465292205250305
   },
   {
     "lig": "E",
     "sezon": "2012-13",
     "model": "total_ridge",
-    "alpha": 100.0,
+    "alpha": 0.1,
     "candidates": [
       0.1,
       10.0,
       100.0
     ],
     "validation_mae": [
-      14.555194408519535,
-      14.54936676249243,
-      14.509069586473874
+      14.302750301284023,
+      14.305852816674882,
+      14.312545230126808
     ],
-    "residual_sigma": 17.76590970044515,
-    "residual_normality_p": 0.11323971846809679,
-    "residual_skew": -0.07440108325761462,
-    "residual_excess_kurtosis": -0.5712141519045804
+    "residual_sigma": 17.591758678752594,
+    "residual_mean": -1.909655696120333,
+    "residual_normality_p": 0.2246757097394461,
+    "residual_skew": -0.0567878263786744,
+    "residual_excess_kurtosis": -0.5062605954676562
   },
   {
     "lig": "E",
@@ -1809,20 +1817,20 @@
     "lig": "E",
     "sezon": "2012-13",
     "model": "logistic",
-    "parameter": 10.0,
+    "parameter": 0.1,
     "candidates": [
       0.1,
       1.0,
       10.0
     ],
     "validation_losses": [
-      0.5415284760896385,
-      0.5406274525406881,
-      0.540572989863683
+      0.5440929250162247,
+      0.5445282098277899,
+      0.5446167173726839
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.920663350094003,
-    "calibration_intercept": -0.023868840714731266
+    "calibration_coefficient": 0.949620986745098,
+    "calibration_intercept": -0.025943632782544114
   },
   {
     "lig": "E",
@@ -1856,14 +1864,14 @@
       }
     ],
     "validation_losses": [
-      0.5598838229365038,
-      0.5924447426960839,
-      0.5641444498913927,
-      0.5910905041736128
+      0.5904076801131173,
+      0.6516877821579175,
+      0.6107136318406192,
+      0.6234763958738067
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.8741843894821064,
-    "calibration_intercept": -0.021163240050436107
+    "calibration_coefficient": 0.7051648131033612,
+    "calibration_intercept": 0.0426236854845948
   },
   {
     "lig": "E",
@@ -2219,8 +2227,8 @@
     "model": "ewma",
     "alpha": 0.3,
     "validation_losses": [
-      0.563681081036036,
-      0.5597940087133214
+      0.5660256266787363,
+      0.5632264674952101
     ]
   },
   {
@@ -2234,34 +2242,36 @@
       100.0
     ],
     "validation_mae": [
-      9.373568061629545,
-      9.368583520458545,
-      9.345638654596712
+      9.364470588016273,
+      9.337146775497988,
+      9.271236335333182
     ],
-    "residual_sigma": 11.754865526735118,
-    "residual_normality_p": 0.3901193986616995,
-    "residual_skew": 0.18432787134676135,
-    "residual_excess_kurtosis": 0.1288775608977617
+    "residual_sigma": 11.727005069887209,
+    "residual_mean": -1.5662413937350972,
+    "residual_normality_p": 0.45054255010241906,
+    "residual_skew": 0.17572494245275444,
+    "residual_excess_kurtosis": 0.0837804992127884
   },
   {
     "lig": "E",
     "sezon": "2013-14",
     "model": "total_ridge",
-    "alpha": 10.0,
+    "alpha": 100.0,
     "candidates": [
       0.1,
       10.0,
       100.0
     ],
     "validation_mae": [
-      12.923475060305625,
-      12.922954716015125,
-      12.922974554569032
+      13.16697680443938,
+      13.123702704917774,
+      12.964150053265753
     ],
-    "residual_sigma": 16.867582078826327,
-    "residual_normality_p": 1.1186565653165866e-05,
-    "residual_skew": 0.6138143727959396,
-    "residual_excess_kurtosis": 1.1985687366379647
+    "residual_sigma": 16.757146598218647,
+    "residual_mean": -0.7169839154256965,
+    "residual_normality_p": 4.824282674434335e-05,
+    "residual_skew": 0.5744262521546594,
+    "residual_excess_kurtosis": 1.045696846808144
   },
   {
     "lig": "E",
@@ -2280,13 +2290,13 @@
       10.0
     ],
     "validation_losses": [
-      0.5591687808359237,
-      0.5597940087133214,
-      0.5599149886491076
+      0.5609070581799022,
+      0.5632264674952101,
+      0.5639204237943075
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.9919091712505426,
-    "calibration_intercept": -0.20139036120734857
+    "calibration_coefficient": 0.9837546627248528,
+    "calibration_intercept": -0.18370281430292987
   },
   {
     "lig": "E",
@@ -2294,8 +2304,8 @@
     "model": "hist_gradient_boosting",
     "parameter": {
       "max_leaf_nodes": 7,
-      "l2_regularization": 1.0,
-      "max_iter": 50
+      "l2_regularization": 10.0,
+      "max_iter": 100
     },
     "candidates": [
       {
@@ -2320,14 +2330,14 @@
       }
     ],
     "validation_losses": [
-      0.5628311489870857,
-      0.6049219812711986,
-      0.5794804601346877,
-      0.5756062094515592
+      0.5722578819109387,
+      0.5914027910675118,
+      0.5712643763388277,
+      0.5862010568015634
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.9219626949109069,
-    "calibration_intercept": -0.13127219958011394
+    "calibration_coefficient": 0.8567820159297383,
+    "calibration_intercept": -0.06347104862444075
   },
   {
     "lig": "E",
@@ -2683,34 +2693,14 @@
     "model": "ewma",
     "alpha": 0.3,
     "validation_losses": [
-      0.5466705710788935,
-      0.5463874662111823
+      0.5471034011678588,
+      0.5464087589490254
     ]
   },
   {
     "lig": "E",
     "sezon": "2014-15",
     "model": "margin_ridge",
-    "alpha": 10.0,
-    "candidates": [
-      0.1,
-      10.0,
-      100.0
-    ],
-    "validation_mae": [
-      9.319101213632136,
-      9.318026259755182,
-      9.324213902453621
-    ],
-    "residual_sigma": 12.248764619394775,
-    "residual_normality_p": 0.2993199233488753,
-    "residual_skew": 0.061698215156757316,
-    "residual_excess_kurtosis": 0.45810585557780836
-  },
-  {
-    "lig": "E",
-    "sezon": "2014-15",
-    "model": "total_ridge",
     "alpha": 0.1,
     "candidates": [
       0.1,
@@ -2718,14 +2708,36 @@
       100.0
     ],
     "validation_mae": [
-      12.873185397346846,
-      12.874202343896167,
-      12.882336455937322
+      9.376327425437722,
+      9.378088967646399,
+      9.400677212431784
     ],
-    "residual_sigma": 16.4685317195318,
-    "residual_normality_p": 0.22971347368408382,
-    "residual_skew": 0.23579038587307602,
-    "residual_excess_kurtosis": 0.16231503088085564
+    "residual_sigma": 12.263222285221964,
+    "residual_mean": 0.41215348571041316,
+    "residual_normality_p": 0.3241856153312608,
+    "residual_skew": 0.02767136818457437,
+    "residual_excess_kurtosis": 0.45460770003659867
+  },
+  {
+    "lig": "E",
+    "sezon": "2014-15",
+    "model": "total_ridge",
+    "alpha": 100.0,
+    "candidates": [
+      0.1,
+      10.0,
+      100.0
+    ],
+    "validation_mae": [
+      12.89137578791654,
+      12.869589489714734,
+      12.778849933104963
+    ],
+    "residual_sigma": 16.306341386412107,
+    "residual_mean": 0.3126585945776546,
+    "residual_normality_p": 0.22878244281187374,
+    "residual_skew": 0.25200649505851774,
+    "residual_excess_kurtosis": 0.07080529933776081
   },
   {
     "lig": "E",
@@ -2737,20 +2749,20 @@
     "lig": "E",
     "sezon": "2014-15",
     "model": "logistic",
-    "parameter": 1.0,
+    "parameter": 10.0,
     "candidates": [
       0.1,
       1.0,
       10.0
     ],
     "validation_losses": [
-      0.54654217301153,
-      0.5463874662111823,
-      0.5463936092144832
+      0.5471927881912556,
+      0.5464087589490254,
+      0.5463612590307393
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.9539356209873842,
-    "calibration_intercept": 0.03822859018407061
+    "calibration_coefficient": 0.9451910878736414,
+    "calibration_intercept": 0.04042784269199289
   },
   {
     "lig": "E",
@@ -2784,14 +2796,14 @@
       }
     ],
     "validation_losses": [
-      0.569837268701925,
-      0.5897125353327193,
-      0.5757158848602806,
-      0.5740978776171186
+      0.572613561140694,
+      0.5871305579608835,
+      0.5759186839292001,
+      0.5810921486467063
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.8352397869711661,
-    "calibration_intercept": 0.14578093008081247
+    "calibration_coefficient": 0.8599373293110946,
+    "calibration_intercept": 0.14131277132463557
   },
   {
     "lig": "E",
@@ -3147,8 +3159,8 @@
     "model": "ewma",
     "alpha": 0.1,
     "validation_losses": [
-      0.5357377089428212,
-      0.5396712409051861
+      0.5373910949711758,
+      0.5409697799451529
     ]
   },
   {
@@ -3162,14 +3174,15 @@
       100.0
     ],
     "validation_mae": [
-      8.254730560385713,
-      8.253763981543004,
-      8.257989708621851
+      8.325909896978446,
+      8.32446348252918,
+      8.331913764726542
     ],
-    "residual_sigma": 10.708144226140753,
-    "residual_normality_p": 0.280547798844316,
-    "residual_skew": -0.043237771984068585,
-    "residual_excess_kurtosis": 0.49040480978165313
+    "residual_sigma": 10.773352958353863,
+    "residual_mean": -1.0026285172966087,
+    "residual_normality_p": 0.2936774438012935,
+    "residual_skew": -0.02635503535802394,
+    "residual_excess_kurtosis": 0.48484872862599193
   },
   {
     "lig": "E",
@@ -3182,14 +3195,15 @@
       100.0
     ],
     "validation_mae": [
-      13.215198295027868,
-      13.21758724247931,
-      13.237621562292702
+      12.667864546040352,
+      12.672022766220232,
+      12.705103188721557
     ],
-    "residual_sigma": 16.687541026918414,
-    "residual_normality_p": 0.0056201111148750675,
-    "residual_skew": 0.46516396426348683,
-    "residual_excess_kurtosis": 0.3662010926268766
+    "residual_sigma": 16.160376038912318,
+    "residual_mean": 2.9377948662191606,
+    "residual_normality_p": 0.0012836585570740026,
+    "residual_skew": 0.4853935808147474,
+    "residual_excess_kurtosis": 0.6759814805222835
   },
   {
     "lig": "E",
@@ -3208,13 +3222,13 @@
       10.0
     ],
     "validation_losses": [
-      0.536656695829042,
-      0.5357377089428212,
-      0.535654580440609
+      0.5384644685253643,
+      0.5373910949711758,
+      0.5373339583507604
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 1.0319786476346609,
-    "calibration_intercept": -0.021764265804759018
+    "calibration_coefficient": 1.0375180335264336,
+    "calibration_intercept": -0.04200564928473511
   },
   {
     "lig": "E",
@@ -3222,8 +3236,8 @@
     "model": "hist_gradient_boosting",
     "parameter": {
       "max_leaf_nodes": 7,
-      "l2_regularization": 1.0,
-      "max_iter": 50
+      "l2_regularization": 10.0,
+      "max_iter": 100
     },
     "candidates": [
       {
@@ -3248,14 +3262,14 @@
       }
     ],
     "validation_losses": [
-      0.5500418572544363,
-      0.5663207168058656,
-      0.5508169400103536,
-      0.5634744096110846
+      0.5501722981221183,
+      0.5542378799101452,
+      0.5479888932418752,
+      0.5560855320184924
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.9912205517474142,
-    "calibration_intercept": 0.04511215069406152
+    "calibration_coefficient": 1.0232890708207736,
+    "calibration_intercept": 0.032669912310357915
   },
   {
     "lig": "E",
@@ -3611,8 +3625,8 @@
     "model": "ewma",
     "alpha": 0.1,
     "validation_losses": [
-      0.5850315321114322,
-      0.5858000236597657
+      0.585716260634815,
+      0.5876464486333427
     ]
   },
   {
@@ -3626,34 +3640,36 @@
       100.0
     ],
     "validation_mae": [
-      10.04306789652951,
-      10.038038483428014,
-      10.007590587704868
+      10.043513355201547,
+      10.038876616444368,
+      10.021235461098867
     ],
-    "residual_sigma": 12.566701501470714,
-    "residual_normality_p": 0.7878672888105803,
-    "residual_skew": 0.030097030073640535,
-    "residual_excess_kurtosis": 0.14090791013290316
+    "residual_sigma": 12.515565426242802,
+    "residual_mean": 0.6082664453403264,
+    "residual_normality_p": 0.8384636536665271,
+    "residual_skew": 0.01791398862462025,
+    "residual_excess_kurtosis": 0.11435375446162599
   },
   {
     "lig": "E",
     "sezon": "2016-17",
     "model": "total_ridge",
-    "alpha": 0.1,
+    "alpha": 100.0,
     "candidates": [
       0.1,
       10.0,
       100.0
     ],
     "validation_mae": [
-      13.740454521030069,
-      13.741314049597241,
-      13.74906902982451
+      13.489376907302361,
+      13.479000206708852,
+      13.433397602249403
     ],
-    "residual_sigma": 17.19123678439743,
-    "residual_normality_p": 0.14710534089459362,
-    "residual_skew": 0.29845671451757905,
-    "residual_excess_kurtosis": 0.008743420771894161
+    "residual_sigma": 16.829497716408557,
+    "residual_mean": 1.4502802100037948,
+    "residual_normality_p": 0.0993286975870656,
+    "residual_skew": 0.321383705930679,
+    "residual_excess_kurtosis": 0.09420261316225931
   },
   {
     "lig": "E",
@@ -3672,13 +3688,13 @@
       10.0
     ],
     "validation_losses": [
-      0.5833013982887392,
-      0.5850315321114322,
-      0.5852396419876441
+      0.5828192023812704,
+      0.585716260634815,
+      0.5861653267087878
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.8210483097055822,
-    "calibration_intercept": 0.15358537004527112
+    "calibration_coefficient": 0.8223575262894487,
+    "calibration_intercept": 0.14728331636557163
   },
   {
     "lig": "E",
@@ -3712,14 +3728,14 @@
       }
     ],
     "validation_losses": [
-      0.6025863406907965,
-      0.6181730031201504,
-      0.6082946455135755,
-      0.6144887171806113
+      0.5992904637564924,
+      0.6322538136693546,
+      0.6061497360659526,
+      0.6132812080798175
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.698381417479762,
-    "calibration_intercept": 0.21038057912464073
+    "calibration_coefficient": 0.7037768288228375,
+    "calibration_intercept": 0.24746192399630343
   },
   {
     "lig": "E",
@@ -4075,8 +4091,8 @@
     "model": "ewma",
     "alpha": 0.1,
     "validation_losses": [
-      0.6146179464650686,
-      0.6186119439771554
+      0.6146541180737347,
+      0.6177418161807143
     ]
   },
   {
@@ -4090,34 +4106,36 @@
       100.0
     ],
     "validation_mae": [
-      8.944567485245285,
-      8.940008237963962,
-      8.903346472956656
+      8.962763098708733,
+      8.945752451809787,
+      8.887228551727013
     ],
-    "residual_sigma": 11.366844223013729,
-    "residual_normality_p": 0.159244500084449,
-    "residual_skew": 0.0743844751813284,
-    "residual_excess_kurtosis": 0.6100879953018952
+    "residual_sigma": 11.367302569178293,
+    "residual_mean": -1.2996854422067774,
+    "residual_normality_p": 0.09797241214286813,
+    "residual_skew": 0.0813886115900217,
+    "residual_excess_kurtosis": 0.7240141180594661
   },
   {
     "lig": "E",
     "sezon": "2017-18",
     "model": "total_ridge",
-    "alpha": 0.1,
+    "alpha": 100.0,
     "candidates": [
       0.1,
       10.0,
       100.0
     ],
     "validation_mae": [
-      14.147967874334732,
-      14.152056515838664,
-      14.188112715753487
+      13.517214238288918,
+      13.50853229323813,
+      13.466822215612913
     ],
-    "residual_sigma": 17.207013359116978,
-    "residual_normality_p": 0.763129682435691,
-    "residual_skew": -0.006579047592194947,
-    "residual_excess_kurtosis": -0.2465255138280371
+    "residual_sigma": 16.55304692042332,
+    "residual_mean": 2.9042756053741883,
+    "residual_normality_p": 0.9861161221733764,
+    "residual_skew": -0.017540550421291698,
+    "residual_excess_kurtosis": -0.09348758724517259
   },
   {
     "lig": "E",
@@ -4136,13 +4154,13 @@
       10.0
     ],
     "validation_losses": [
-      0.6135054902742999,
-      0.6146179464650686,
-      0.6147428190553816
+      0.612469801842318,
+      0.6146541180737347,
+      0.61512490387488
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.751002836048768,
-    "calibration_intercept": 0.03524946999410579
+    "calibration_coefficient": 0.7842512902042243,
+    "calibration_intercept": 0.008127256665616554
   },
   {
     "lig": "E",
@@ -4176,14 +4194,14 @@
       }
     ],
     "validation_losses": [
-      0.6146698617226961,
-      0.6306147500261882,
-      0.6183829189094048,
-      0.6158712868518635
+      0.6098535261524313,
+      0.6310745572784011,
+      0.614561646027822,
+      0.6165912070380428
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.7523914177580624,
-    "calibration_intercept": 0.06611499096863756
+    "calibration_coefficient": 0.8725029936228083,
+    "calibration_intercept": -0.0038301089078592197
   },
   {
     "lig": "E",
@@ -4539,8 +4557,8 @@
     "model": "ewma",
     "alpha": 0.1,
     "validation_losses": [
-      0.6160320733707508,
-      0.6198203280335459
+      0.6205876535440574,
+      0.6220582631068086
     ]
   },
   {
@@ -4554,34 +4572,36 @@
       100.0
     ],
     "validation_mae": [
-      9.270479906604658,
-      9.267694331457104,
-      9.248129215075648
+      9.375326616808017,
+      9.3636424057936,
+      9.310888381008205
     ],
-    "residual_sigma": 11.821263118202689,
-    "residual_normality_p": 0.25426143740257484,
-    "residual_skew": 0.1736460261454862,
-    "residual_excess_kurtosis": 0.3225203926598823
+    "residual_sigma": 11.856863423498414,
+    "residual_mean": -0.3232946753927549,
+    "residual_normality_p": 0.37799286348329103,
+    "residual_skew": 0.16244395294695974,
+    "residual_excess_kurtosis": 0.21018955030113817
   },
   {
     "lig": "E",
     "sezon": "2018-19",
     "model": "total_ridge",
-    "alpha": 0.1,
+    "alpha": 100.0,
     "candidates": [
       0.1,
       10.0,
       100.0
     ],
     "validation_mae": [
-      13.698210170316631,
-      13.703017691806442,
-      13.744652424173507
+      13.318963873716529,
+      13.30720445279696,
+      13.245652506083923
     ],
-    "residual_sigma": 15.847033373092668,
-    "residual_normality_p": 0.4860079192402247,
-    "residual_skew": 0.11235596772741104,
-    "residual_excess_kurtosis": -0.2903780299577705
+    "residual_sigma": 15.828002937128081,
+    "residual_mean": 4.15354313370936,
+    "residual_normality_p": 0.15062535416242617,
+    "residual_skew": 0.15885649042298036,
+    "residual_excess_kurtosis": -0.4294045689565227
   },
   {
     "lig": "E",
@@ -4600,13 +4620,13 @@
       10.0
     ],
     "validation_losses": [
-      0.6153454416034891,
-      0.6160320733707508,
-      0.6161118692815561
+      0.6182710735693235,
+      0.6205876535440574,
+      0.6210175788117377
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.6986768801979529,
-    "calibration_intercept": 0.13427270773615332
+    "calibration_coefficient": 0.6855861396060153,
+    "calibration_intercept": 0.12924533433601304
   },
   {
     "lig": "E",
@@ -4640,14 +4660,14 @@
       }
     ],
     "validation_losses": [
-      0.6273348739098052,
-      0.670234818832803,
-      0.6463963728715328,
-      0.6453882422269652
+      0.6201697888803239,
+      0.6561673678420725,
+      0.6341813260165087,
+      0.6417240263842056
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.6419552008715379,
-    "calibration_intercept": 0.2010506249731716
+    "calibration_coefficient": 0.6909005672358994,
+    "calibration_intercept": 0.20605343050609234
   },
   {
     "lig": "E",
@@ -5003,8 +5023,8 @@
     "model": "ewma",
     "alpha": 0.1,
     "validation_losses": [
-      0.5501452063035733,
-      0.5505174469920644
+      0.5497965089679341,
+      0.5510973106740874
     ]
   },
   {
@@ -5018,34 +5038,36 @@
       100.0
     ],
     "validation_mae": [
-      8.835951741505015,
-      8.834889881905765,
-      8.82872488215363
+      8.824230946826264,
+      8.820768547388417,
+      8.81067584677267
     ],
-    "residual_sigma": 11.513914173077776,
-    "residual_normality_p": 0.018087079746593175,
-    "residual_skew": -0.0674485074422563,
-    "residual_excess_kurtosis": 1.123153608134504
+    "residual_sigma": 11.442641228823993,
+    "residual_mean": -0.15401453270658563,
+    "residual_normality_p": 0.026104705359583178,
+    "residual_skew": -0.025948792866992584,
+    "residual_excess_kurtosis": 1.060316518191768
   },
   {
     "lig": "E",
     "sezon": "2019-20",
     "model": "total_ridge",
-    "alpha": 0.1,
+    "alpha": 100.0,
     "candidates": [
       0.1,
       10.0,
       100.0
     ],
     "validation_mae": [
-      13.903932707822749,
-      13.905919142599545,
-      13.923323275884734
+      13.381973524388286,
+      13.37953118209178,
+      13.36953713724624
     ],
-    "residual_sigma": 16.71365871790496,
-    "residual_normality_p": 0.3504830961593651,
-    "residual_skew": 0.06629263121780618,
-    "residual_excess_kurtosis": -0.3821375567641834
+    "residual_sigma": 16.21231021338214,
+    "residual_mean": 1.7428588802543572,
+    "residual_normality_p": 0.3277766600775513,
+    "residual_skew": 0.043362309344370284,
+    "residual_excess_kurtosis": -0.3990386085582056
   },
   {
     "lig": "E",
@@ -5064,13 +5086,13 @@
       10.0
     ],
     "validation_losses": [
-      0.5499001816465462,
-      0.5501452063035733,
-      0.5501758203028106
+      0.5494400836387228,
+      0.5497965089679341,
+      0.5498602935244312
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 1.0815604950876436,
-    "calibration_intercept": -0.07949885434174958
+    "calibration_coefficient": 1.0991164573816126,
+    "calibration_intercept": -0.07679382100390413
   },
   {
     "lig": "E",
@@ -5078,8 +5100,8 @@
     "model": "hist_gradient_boosting",
     "parameter": {
       "max_leaf_nodes": 7,
-      "l2_regularization": 10.0,
-      "max_iter": 100
+      "l2_regularization": 1.0,
+      "max_iter": 50
     },
     "candidates": [
       {
@@ -5104,14 +5126,14 @@
       }
     ],
     "validation_losses": [
-      0.5634137468078179,
-      0.5709263467462278,
-      0.5628390757446624,
-      0.5695185567388096
+      0.5735516439936713,
+      0.5838294068000199,
+      0.5756497864088127,
+      0.575096152713489
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.9649953671039713,
-    "calibration_intercept": 0.05611667970358453
+    "calibration_coefficient": 0.9493541182442252,
+    "calibration_intercept": 0.06904717203254224
   },
   {
     "lig": "E",
@@ -5467,8 +5489,8 @@
     "model": "ewma",
     "alpha": 0.3,
     "validation_losses": [
-      0.5791328252077708,
-      0.5756978751436289
+      0.5791227955186287,
+      0.5770329441597867
     ]
   },
   {
@@ -5482,34 +5504,36 @@
       100.0
     ],
     "validation_mae": [
-      9.354913729052614,
-      9.353422962375523,
-      9.342663010735464
+      9.38855093846461,
+      9.380678009862473,
+      9.335010189705999
     ],
-    "residual_sigma": 11.704473905769728,
-    "residual_normality_p": 0.8082724544078173,
-    "residual_skew": 0.03464733493830321,
-    "residual_excess_kurtosis": 0.1236577634173961
+    "residual_sigma": 11.725000751323428,
+    "residual_mean": -0.12708394382054902,
+    "residual_normality_p": 0.7852585030246515,
+    "residual_skew": 0.025131335586601456,
+    "residual_excess_kurtosis": 0.1452829423450872
   },
   {
     "lig": "E",
     "sezon": "2020-21",
     "model": "total_ridge",
-    "alpha": 0.1,
+    "alpha": 100.0,
     "candidates": [
       0.1,
       10.0,
       100.0
     ],
     "validation_mae": [
-      14.188276787931828,
-      14.189945107568546,
-      14.205598040521492
+      14.074081194321261,
+      14.073292686221397,
+      14.066885942090838
     ],
-    "residual_sigma": 17.989138348881593,
-    "residual_normality_p": 0.18209280954085444,
-    "residual_skew": 0.23650459630430956,
-    "residual_excess_kurtosis": 0.2577243764320074
+    "residual_sigma": 17.879192636764454,
+    "residual_mean": 1.9995850129193302,
+    "residual_normality_p": 0.165838085831923,
+    "residual_skew": 0.2502754263473789,
+    "residual_excess_kurtosis": 0.23965827341789003
   },
   {
     "lig": "E",
@@ -5521,20 +5545,20 @@
     "lig": "E",
     "sezon": "2020-21",
     "model": "logistic",
-    "parameter": 10.0,
+    "parameter": 0.1,
     "candidates": [
       0.1,
       1.0,
       10.0
     ],
     "validation_losses": [
-      0.5758668220322827,
-      0.5756978751436289,
-      0.5756856156118872
+      0.5760601404591322,
+      0.5770329441597867,
+      0.5771704884737678
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.9845370244100411,
-    "calibration_intercept": -0.04815977034660735
+    "calibration_coefficient": 1.0040262922971872,
+    "calibration_intercept": -0.04699507566746693
   },
   {
     "lig": "E",
@@ -5542,8 +5566,8 @@
     "model": "hist_gradient_boosting",
     "parameter": {
       "max_leaf_nodes": 7,
-      "l2_regularization": 1.0,
-      "max_iter": 50
+      "l2_regularization": 10.0,
+      "max_iter": 100
     },
     "candidates": [
       {
@@ -5568,14 +5592,14 @@
       }
     ],
     "validation_losses": [
-      0.580420540668524,
-      0.5918146012626956,
-      0.5844077107283269,
-      0.5861354416333936
+      0.5796902004751935,
+      0.5980537704410803,
+      0.5741970605840234,
+      0.5901353681278023
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.9856045546223915,
-    "calibration_intercept": -0.03393259013761643
+    "calibration_coefficient": 0.9823621796520048,
+    "calibration_intercept": -0.03720540714858728
   },
   {
     "lig": "E",
@@ -5931,8 +5955,8 @@
     "model": "ewma",
     "alpha": 0.3,
     "validation_losses": [
-      0.6706032383784736,
-      0.6701255936535863
+      0.6704878845342,
+      0.6688993351835046
     ]
   },
   {
@@ -5946,14 +5970,15 @@
       100.0
     ],
     "validation_mae": [
-      9.787548540777099,
-      9.785128660225418,
-      9.770427733958764
+      9.789845715361809,
+      9.788077177393712,
+      9.781444460819332
     ],
-    "residual_sigma": 12.183940369293254,
-    "residual_normality_p": 0.983592037197989,
-    "residual_skew": 0.0008323174135958818,
-    "residual_excess_kurtosis": -0.09410721872814864
+    "residual_sigma": 12.198825023055951,
+    "residual_mean": -0.42279516478266427,
+    "residual_normality_p": 0.9902296522022359,
+    "residual_skew": -0.003837279075460356,
+    "residual_excess_kurtosis": -0.08331985203373415
   },
   {
     "lig": "E",
@@ -5966,14 +5991,15 @@
       100.0
     ],
     "validation_mae": [
-      12.844795525277588,
-      12.842787792408751,
-      12.825341725170164
+      12.698948037190947,
+      12.692059838351847,
+      12.656547673821171
     ],
-    "residual_sigma": 16.085331325221123,
-    "residual_normality_p": 0.3378479743281591,
-    "residual_skew": 0.1838403351343666,
-    "residual_excess_kurtosis": 0.08988150850607601
+    "residual_sigma": 15.852761234402212,
+    "residual_mean": 1.223159810405341,
+    "residual_normality_p": 0.29334980937562755,
+    "residual_skew": 0.18025553382700246,
+    "residual_excess_kurtosis": 0.16965146716207347
   },
   {
     "lig": "E",
@@ -5992,13 +6018,13 @@
       10.0
     ],
     "validation_losses": [
-      0.6687965614750441,
-      0.6701255936535863,
-      0.6702721074788638
+      0.6679087904454797,
+      0.6688993351835046,
+      0.6689956015803981
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.6059100334072622,
-    "calibration_intercept": -0.0815032647476935
+    "calibration_coefficient": 0.6079511412869347,
+    "calibration_intercept": -0.07732437871192728
   },
   {
     "lig": "E",
@@ -6032,14 +6058,14 @@
       }
     ],
     "validation_losses": [
-      0.6780219239365154,
-      0.6960775097004119,
-      0.6844318120460329,
-      0.6858082253777643
+      0.6745219204218668,
+      0.6963661400828162,
+      0.6881294058293843,
+      0.6894038147766003
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.5574504904920229,
-    "calibration_intercept": -0.07027732358919206
+    "calibration_coefficient": 0.5692349109776415,
+    "calibration_intercept": -0.04425465035304058
   },
   {
     "lig": "E",
@@ -6395,8 +6421,8 @@
     "model": "ewma",
     "alpha": 0.3,
     "validation_losses": [
-      0.6072655326961701,
-      0.6060253806059943
+      0.6082056155158433,
+      0.6058323034642957
     ]
   },
   {
@@ -6410,14 +6436,15 @@
       100.0
     ],
     "validation_mae": [
-      9.656228017334147,
-      9.652198725866118,
-      9.619024957788824
+      9.68607886320167,
+      9.68116888638276,
+      9.654438465813737
     ],
-    "residual_sigma": 12.247376939846829,
-    "residual_normality_p": 0.861683773884481,
-    "residual_skew": 0.0753248816871519,
-    "residual_excess_kurtosis": -0.06600854222768593
+    "residual_sigma": 12.28147778626512,
+    "residual_mean": 0.5115030129017052,
+    "residual_normality_p": 0.7498836331745333,
+    "residual_skew": 0.10524691420878754,
+    "residual_excess_kurtosis": -0.050569349160327626
   },
   {
     "lig": "E",
@@ -6430,14 +6457,15 @@
       100.0
     ],
     "validation_mae": [
-      14.135468587712234,
-      14.133781601989515,
-      14.119328842452948
+      13.782281478191099,
+      13.77982203072777,
+      13.769767646854959
     ],
-    "residual_sigma": 17.94140521877126,
-    "residual_normality_p": 0.2695012536869614,
-    "residual_skew": 0.08461680316097109,
-    "residual_excess_kurtosis": 0.42506409978621473
+    "residual_sigma": 17.51655998594652,
+    "residual_mean": -0.4279423124581292,
+    "residual_normality_p": 0.13411650039281856,
+    "residual_skew": 0.12108801580637452,
+    "residual_excess_kurtosis": 0.5485672250887781
   },
   {
     "lig": "E",
@@ -6456,13 +6484,13 @@
       10.0
     ],
     "validation_losses": [
-      0.6048098144398615,
-      0.6060253806059943,
-      0.6061562435497748
+      0.604779078972086,
+      0.6058323034642957,
+      0.6059700033484302
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.8065839243402476,
-    "calibration_intercept": 0.2350862517959103
+    "calibration_coefficient": 0.8093966742983212,
+    "calibration_intercept": 0.2419772885582139
   },
   {
     "lig": "E",
@@ -6496,14 +6524,14 @@
       }
     ],
     "validation_losses": [
-      0.6244718820688581,
-      0.6409181723310065,
-      0.6223874118511492,
-      0.6423452396589838
+      0.6189647421178779,
+      0.6316396785699216,
+      0.6185223604015361,
+      0.6351492803798318
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.6843511291203118,
-    "calibration_intercept": 0.3372044729492775
+    "calibration_coefficient": 0.7441328932214918,
+    "calibration_intercept": 0.35532237938395395
   },
   {
     "lig": "E",
@@ -6859,8 +6887,8 @@
     "model": "ewma",
     "alpha": 0.3,
     "validation_losses": [
-      0.6352978930548221,
-      0.6279561306017669
+      0.6343833925973974,
+      0.6295766163094261
     ]
   },
   {
@@ -6874,14 +6902,15 @@
       100.0
     ],
     "validation_mae": [
-      9.030704629377315,
-      9.029416180724679,
-      9.018613483526885
+      9.116431894587343,
+      9.116115798220479,
+      9.11336162878114
     ],
-    "residual_sigma": 11.53906909611753,
-    "residual_normality_p": 0.13982415237875429,
-    "residual_skew": 0.2183862836621251,
-    "residual_excess_kurtosis": 0.2769340798125248
+    "residual_sigma": 11.549021775341773,
+    "residual_mean": 0.9076397862548982,
+    "residual_normality_p": 0.1564177903035456,
+    "residual_skew": 0.22606807749127442,
+    "residual_excess_kurtosis": 0.21212937585593705
   },
   {
     "lig": "E",
@@ -6894,14 +6923,15 @@
       100.0
     ],
     "validation_mae": [
-      13.352247232834122,
-      13.35185460453251,
-      13.348445771795902
+      12.894595223270555,
+      12.894614142568734,
+      12.892473671162756
     ],
-    "residual_sigma": 16.59213601991445,
-    "residual_normality_p": 0.00874084271767297,
-    "residual_skew": 0.3678561492971371,
-    "residual_excess_kurtosis": 0.4012263020443658
+    "residual_sigma": 16.259947043227232,
+    "residual_mean": 2.0941346820912337,
+    "residual_normality_p": 0.005587651435198735,
+    "residual_skew": 0.3799287609754533,
+    "residual_excess_kurtosis": 0.45372936880060566
   },
   {
     "lig": "E",
@@ -6920,22 +6950,22 @@
       10.0
     ],
     "validation_losses": [
-      0.6273522975914376,
-      0.6279561306017669,
-      0.6280196620597435
+      0.6292489337157061,
+      0.6295766163094261,
+      0.6296080341319024
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.7176462488421951,
-    "calibration_intercept": 0.11950741932309529
+    "calibration_coefficient": 0.7035468206871466,
+    "calibration_intercept": 0.1487582789677138
   },
   {
     "lig": "E",
     "sezon": "2023-24",
     "model": "hist_gradient_boosting",
     "parameter": {
-      "max_leaf_nodes": 15,
-      "l2_regularization": 10.0,
-      "max_iter": 100
+      "max_leaf_nodes": 7,
+      "l2_regularization": 1.0,
+      "max_iter": 50
     },
     "candidates": [
       {
@@ -6960,14 +6990,14 @@
       }
     ],
     "validation_losses": [
-      0.6267737276784056,
-      0.6239867567677467,
-      0.630959430354499,
-      0.6328252586181483
+      0.6242941328142304,
+      0.6320514131397604,
+      0.6318742507378882,
+      0.6347979007343715
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.6981662870802361,
-    "calibration_intercept": 0.13388138502628674
+    "calibration_coefficient": 0.7452271053099357,
+    "calibration_intercept": 0.15614645878549738
   },
   {
     "lig": "E",
@@ -7323,8 +7353,8 @@
     "model": "ewma",
     "alpha": 0.1,
     "validation_losses": [
-      0.5877594308098092,
-      0.5886618244819699
+      0.5868456471342679,
+      0.588104124163834
     ]
   },
   {
@@ -7338,34 +7368,36 @@
       100.0
     ],
     "validation_mae": [
-      8.98754044997525,
-      8.98597122050236,
-      8.976167426101311
+      8.958904998105734,
+      8.957643544163533,
+      8.949602169981592
     ],
-    "residual_sigma": 11.711281420245896,
-    "residual_normality_p": 0.09773454965087977,
-    "residual_skew": 0.022495847491381907,
-    "residual_excess_kurtosis": 0.6647933635907175
+    "residual_sigma": 11.661779653349656,
+    "residual_mean": 0.1616362986726944,
+    "residual_normality_p": 0.09162417363790759,
+    "residual_skew": 0.011229885732129574,
+    "residual_excess_kurtosis": 0.6800435361792747
   },
   {
     "lig": "E",
     "sezon": "2024-25",
     "model": "total_ridge",
-    "alpha": 0.1,
+    "alpha": 100.0,
     "candidates": [
       0.1,
       10.0,
       100.0
     ],
     "validation_mae": [
-      13.259904945028522,
-      13.263248937566031,
-      13.2928966515855
+      12.929846269541496,
+      12.929416663523483,
+      12.926122231713316
     ],
-    "residual_sigma": 16.853573592670628,
-    "residual_normality_p": 1.3928087520301377e-07,
-    "residual_skew": 0.42831345181486163,
-    "residual_excess_kurtosis": 2.297666448931956
+    "residual_sigma": 16.536018985026594,
+    "residual_mean": 1.8020921213905874,
+    "residual_normality_p": 1.5491938900506205e-07,
+    "residual_skew": 0.43418799502667677,
+    "residual_excess_kurtosis": 2.251275440921834
   },
   {
     "lig": "E",
@@ -7377,20 +7409,20 @@
     "lig": "E",
     "sezon": "2024-25",
     "model": "logistic",
-    "parameter": 1.0,
+    "parameter": 0.1,
     "candidates": [
       0.1,
       1.0,
       10.0
     ],
     "validation_losses": [
-      0.5877603146541407,
-      0.5877594308098092,
-      0.5877606716431034
+      0.5867425607368176,
+      0.5868456471342679,
+      0.5868613328971211
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.9311285156694283,
-    "calibration_intercept": 0.11000211495355985
+    "calibration_coefficient": 0.9638262444277147,
+    "calibration_intercept": 0.1225297102398337
   },
   {
     "lig": "E",
@@ -7398,8 +7430,8 @@
     "model": "hist_gradient_boosting",
     "parameter": {
       "max_leaf_nodes": 7,
-      "l2_regularization": 10.0,
-      "max_iter": 100
+      "l2_regularization": 1.0,
+      "max_iter": 50
     },
     "candidates": [
       {
@@ -7424,14 +7456,14 @@
       }
     ],
     "validation_losses": [
-      0.5924142044373608,
-      0.6016398857283487,
-      0.591995629855203,
-      0.6008164560720848
+      0.5885083637739759,
+      0.6112515888541507,
+      0.5926324897212416,
+      0.5977562478860976
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.8753470134334014,
-    "calibration_intercept": 0.13928462886701246
+    "calibration_coefficient": 0.9890232370658032,
+    "calibration_intercept": 0.1358304429125199
   },
   {
     "lig": "E",
@@ -7785,36 +7817,16 @@
     "lig": "E",
     "sezon": "2025-26",
     "model": "ewma",
-    "alpha": 0.1,
+    "alpha": 0.3,
     "validation_losses": [
-      0.6197419380346912,
-      0.621076481587476
+      0.6194186236557411,
+      0.6189038208437851
     ]
   },
   {
     "lig": "E",
     "sezon": "2025-26",
     "model": "margin_ridge",
-    "alpha": 100.0,
-    "candidates": [
-      0.1,
-      10.0,
-      100.0
-    ],
-    "validation_mae": [
-      9.09251000043797,
-      9.092224131214351,
-      9.089643585625838
-    ],
-    "residual_sigma": 11.76253794023526,
-    "residual_normality_p": 0.03576221960435322,
-    "residual_skew": -0.08065791350588032,
-    "residual_excess_kurtosis": 0.8302829372239104
-  },
-  {
-    "lig": "E",
-    "sezon": "2025-26",
-    "model": "total_ridge",
     "alpha": 0.1,
     "candidates": [
       0.1,
@@ -7822,14 +7834,36 @@
       100.0
     ],
     "validation_mae": [
-      13.363608880176729,
-      13.366646464129758,
-      13.393983619139691
+      9.092580681376472,
+      9.092819971979456,
+      9.095110922829175
     ],
-    "residual_sigma": 16.153041637679124,
-    "residual_normality_p": 0.13416223727126814,
-    "residual_skew": 0.2541885006180782,
-    "residual_excess_kurtosis": 0.125513668620179
+    "residual_sigma": 11.802387264879682,
+    "residual_mean": -0.6317579973976648,
+    "residual_normality_p": 0.02697499873196484,
+    "residual_skew": -0.06978771622030332,
+    "residual_excess_kurtosis": 0.8931325674469384
+  },
+  {
+    "lig": "E",
+    "sezon": "2025-26",
+    "model": "total_ridge",
+    "alpha": 10.0,
+    "candidates": [
+      0.1,
+      10.0,
+      100.0
+    ],
+    "validation_mae": [
+      12.809773958755729,
+      12.809435463503323,
+      12.809619396348298
+    ],
+    "residual_sigma": 16.128535672530294,
+    "residual_mean": 2.7580251187125135,
+    "residual_normality_p": 0.060853826760596016,
+    "residual_skew": 0.27162789581071173,
+    "residual_excess_kurtosis": 0.3091255258328456
   },
   {
     "lig": "E",
@@ -7848,13 +7882,13 @@
       10.0
     ],
     "validation_losses": [
-      0.6195175732658583,
-      0.6197419380346912,
-      0.619766108623396
+      0.6187885800073565,
+      0.6189038208437851,
+      0.6189140323870695
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.8300499982835486,
-    "calibration_intercept": -0.021401589508971267
+    "calibration_coefficient": 0.8225817723880632,
+    "calibration_intercept": 0.008608739422277642
   },
   {
     "lig": "E",
@@ -7888,14 +7922,480 @@
       }
     ],
     "validation_losses": [
-      0.6312422979713093,
-      0.6436109964440916,
-      0.6327677824538711,
-      0.6396046498293874
+      0.6246207292169513,
+      0.6530127647726216,
+      0.6311685633797438,
+      0.6333928869817118
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.7229734239450665,
-    "calibration_intercept": 0.04136440158282189
+    "calibration_coefficient": 0.7958639620189522,
+    "calibration_intercept": 0.006337316330937906
+  },
+  {
+    "lig": "E",
+    "sezon": "2026-27",
+    "model": "elo",
+    "k": 10.0,
+    "home_advantage": 100.0,
+    "shrink": 0.25,
+    "ewma_alpha": 0.2,
+    "validation_season": "2025-26",
+    "candidates": [
+      {
+        "k": 10.0,
+        "home": 0.0,
+        "shrink": 0.0,
+        "log_loss": 0.6689045902528734
+      },
+      {
+        "k": 10.0,
+        "home": 0.0,
+        "shrink": 0.25,
+        "log_loss": 0.6674870173102234
+      },
+      {
+        "k": 10.0,
+        "home": 0.0,
+        "shrink": 0.5,
+        "log_loss": 0.6719816950297283
+      },
+      {
+        "k": 10.0,
+        "home": 50.0,
+        "shrink": 0.0,
+        "log_loss": 0.6389307877072533
+      },
+      {
+        "k": 10.0,
+        "home": 50.0,
+        "shrink": 0.25,
+        "log_loss": 0.6376185771461544
+      },
+      {
+        "k": 10.0,
+        "home": 50.0,
+        "shrink": 0.5,
+        "log_loss": 0.6422553512328517
+      },
+      {
+        "k": 10.0,
+        "home": 100.0,
+        "shrink": 0.0,
+        "log_loss": 0.6284861902412388
+      },
+      {
+        "k": 10.0,
+        "home": 100.0,
+        "shrink": 0.25,
+        "log_loss": 0.6274204450154457
+      },
+      {
+        "k": 10.0,
+        "home": 100.0,
+        "shrink": 0.5,
+        "log_loss": 0.6325320873406026
+      },
+      {
+        "k": 20.0,
+        "home": 0.0,
+        "shrink": 0.0,
+        "log_loss": 0.6749960405981937
+      },
+      {
+        "k": 20.0,
+        "home": 0.0,
+        "shrink": 0.25,
+        "log_loss": 0.6702780606202182
+      },
+      {
+        "k": 20.0,
+        "home": 0.0,
+        "shrink": 0.5,
+        "log_loss": 0.6715584663613479
+      },
+      {
+        "k": 20.0,
+        "home": 50.0,
+        "shrink": 0.0,
+        "log_loss": 0.6441251391772975
+      },
+      {
+        "k": 20.0,
+        "home": 50.0,
+        "shrink": 0.25,
+        "log_loss": 0.639469254199282
+      },
+      {
+        "k": 20.0,
+        "home": 50.0,
+        "shrink": 0.5,
+        "log_loss": 0.6408706139216923
+      },
+      {
+        "k": 20.0,
+        "home": 100.0,
+        "shrink": 0.0,
+        "log_loss": 0.6329395488435481
+      },
+      {
+        "k": 20.0,
+        "home": 100.0,
+        "shrink": 0.25,
+        "log_loss": 0.6284130014242139
+      },
+      {
+        "k": 20.0,
+        "home": 100.0,
+        "shrink": 0.5,
+        "log_loss": 0.6302295994702684
+      },
+      {
+        "k": 30.0,
+        "home": 0.0,
+        "shrink": 0.0,
+        "log_loss": 0.6832486596642532
+      },
+      {
+        "k": 30.0,
+        "home": 0.0,
+        "shrink": 0.25,
+        "log_loss": 0.6765780758093658
+      },
+      {
+        "k": 30.0,
+        "home": 0.0,
+        "shrink": 0.5,
+        "log_loss": 0.675883868062727
+      },
+      {
+        "k": 30.0,
+        "home": 50.0,
+        "shrink": 0.0,
+        "log_loss": 0.6515993339209796
+      },
+      {
+        "k": 30.0,
+        "home": 50.0,
+        "shrink": 0.25,
+        "log_loss": 0.6449089490703153
+      },
+      {
+        "k": 30.0,
+        "home": 50.0,
+        "shrink": 0.5,
+        "log_loss": 0.6442767142079092
+      },
+      {
+        "k": 30.0,
+        "home": 100.0,
+        "shrink": 0.0,
+        "log_loss": 0.6400654240086618
+      },
+      {
+        "k": 30.0,
+        "home": 100.0,
+        "shrink": 0.25,
+        "log_loss": 0.6333228802411184
+      },
+      {
+        "k": 30.0,
+        "home": 100.0,
+        "shrink": 0.5,
+        "log_loss": 0.6329456475619106
+      }
+    ]
+  },
+  {
+    "lig": "E",
+    "sezon": "2026-27",
+    "model": "mov",
+    "k": 10.0,
+    "home_advantage": 100.0,
+    "shrink": 0.25,
+    "ewma_alpha": 0.2,
+    "validation_season": "2025-26",
+    "candidates": [
+      {
+        "k": 10.0,
+        "home": 0.0,
+        "shrink": 0.0,
+        "log_loss": 0.6694987727178376
+      },
+      {
+        "k": 10.0,
+        "home": 0.0,
+        "shrink": 0.25,
+        "log_loss": 0.6664819357236571
+      },
+      {
+        "k": 10.0,
+        "home": 0.0,
+        "shrink": 0.5,
+        "log_loss": 0.6694406774130671
+      },
+      {
+        "k": 10.0,
+        "home": 50.0,
+        "shrink": 0.0,
+        "log_loss": 0.6394689115567774
+      },
+      {
+        "k": 10.0,
+        "home": 50.0,
+        "shrink": 0.25,
+        "log_loss": 0.6370452454632343
+      },
+      {
+        "k": 10.0,
+        "home": 50.0,
+        "shrink": 0.5,
+        "log_loss": 0.6403898403286407
+      },
+      {
+        "k": 10.0,
+        "home": 100.0,
+        "shrink": 0.0,
+        "log_loss": 0.6291593159469884
+      },
+      {
+        "k": 10.0,
+        "home": 100.0,
+        "shrink": 0.25,
+        "log_loss": 0.6273881596568386
+      },
+      {
+        "k": 10.0,
+        "home": 100.0,
+        "shrink": 0.5,
+        "log_loss": 0.6313538734016408
+      },
+      {
+        "k": 20.0,
+        "home": 0.0,
+        "shrink": 0.0,
+        "log_loss": 0.6768838772350518
+      },
+      {
+        "k": 20.0,
+        "home": 0.0,
+        "shrink": 0.25,
+        "log_loss": 0.6704177159088285
+      },
+      {
+        "k": 20.0,
+        "home": 0.0,
+        "shrink": 0.5,
+        "log_loss": 0.6699208035594072
+      },
+      {
+        "k": 20.0,
+        "home": 50.0,
+        "shrink": 0.0,
+        "log_loss": 0.6461373545756799
+      },
+      {
+        "k": 20.0,
+        "home": 50.0,
+        "shrink": 0.25,
+        "log_loss": 0.640068848922594
+      },
+      {
+        "k": 20.0,
+        "home": 50.0,
+        "shrink": 0.5,
+        "log_loss": 0.639907193165242
+      },
+      {
+        "k": 20.0,
+        "home": 100.0,
+        "shrink": 0.0,
+        "log_loss": 0.6356595472771073
+      },
+      {
+        "k": 20.0,
+        "home": 100.0,
+        "shrink": 0.25,
+        "log_loss": 0.6299648741553545
+      },
+      {
+        "k": 20.0,
+        "home": 100.0,
+        "shrink": 0.5,
+        "log_loss": 0.6302995735423479
+      },
+      {
+        "k": 30.0,
+        "home": 0.0,
+        "shrink": 0.0,
+        "log_loss": 0.6849641368362208
+      },
+      {
+        "k": 30.0,
+        "home": 0.0,
+        "shrink": 0.25,
+        "log_loss": 0.6771295258218946
+      },
+      {
+        "k": 30.0,
+        "home": 0.0,
+        "shrink": 0.5,
+        "log_loss": 0.6749627016692478
+      },
+      {
+        "k": 30.0,
+        "home": 50.0,
+        "shrink": 0.0,
+        "log_loss": 0.6537169784559024
+      },
+      {
+        "k": 30.0,
+        "home": 50.0,
+        "shrink": 0.25,
+        "log_loss": 0.6459692569151321
+      },
+      {
+        "k": 30.0,
+        "home": 50.0,
+        "shrink": 0.5,
+        "log_loss": 0.6439729139686019
+      },
+      {
+        "k": 30.0,
+        "home": 100.0,
+        "shrink": 0.0,
+        "log_loss": 0.6434703326599645
+      },
+      {
+        "k": 30.0,
+        "home": 100.0,
+        "shrink": 0.25,
+        "log_loss": 0.6356965080884964
+      },
+      {
+        "k": 30.0,
+        "home": 100.0,
+        "shrink": 0.5,
+        "log_loss": 0.6339552580717973
+      }
+    ]
+  },
+  {
+    "lig": "E",
+    "sezon": "2026-27",
+    "model": "ewma",
+    "alpha": 0.1,
+    "validation_losses": [
+      0.6320510143600244,
+      0.6345881949371908
+    ]
+  },
+  {
+    "lig": "E",
+    "sezon": "2026-27",
+    "model": "margin_ridge",
+    "alpha": 100.0,
+    "candidates": [
+      0.1,
+      10.0,
+      100.0
+    ],
+    "validation_mae": [
+      9.164227340586997,
+      9.163826043918547,
+      9.160061616813808
+    ],
+    "residual_sigma": 11.609789716058687,
+    "residual_mean": -0.40526430793973195,
+    "residual_normality_p": 0.5105621959273896,
+    "residual_skew": -0.133180252348141,
+    "residual_excess_kurtosis": 0.04278420378543091
+  },
+  {
+    "lig": "E",
+    "sezon": "2026-27",
+    "model": "total_ridge",
+    "alpha": 0.1,
+    "candidates": [
+      0.1,
+      10.0,
+      100.0
+    ],
+    "validation_mae": [
+      13.980340629356647,
+      13.982430009142412,
+      13.997916838011818
+    ],
+    "residual_sigma": 17.899180197656182,
+    "residual_mean": 2.9078237837700476,
+    "residual_normality_p": 4.906278204963711e-06,
+    "residual_skew": 0.4214645519397366,
+    "residual_excess_kurtosis": 1.2793655070531598
+  },
+  {
+    "lig": "E",
+    "sezon": "2026-27",
+    "model": "home",
+    "home_win_rate": 0.6265873015873016
+  },
+  {
+    "lig": "E",
+    "sezon": "2026-27",
+    "model": "logistic",
+    "parameter": 0.1,
+    "candidates": [
+      0.1,
+      1.0,
+      10.0
+    ],
+    "validation_losses": [
+      0.6318612087483121,
+      0.6320510143600244,
+      0.6320778845377516
+    ],
+    "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
+    "calibration_coefficient": 0.7056255763817517,
+    "calibration_intercept": 0.14513285226439407
+  },
+  {
+    "lig": "E",
+    "sezon": "2026-27",
+    "model": "hist_gradient_boosting",
+    "parameter": {
+      "max_leaf_nodes": 7,
+      "l2_regularization": 1.0,
+      "max_iter": 50
+    },
+    "candidates": [
+      {
+        "max_leaf_nodes": 7,
+        "l2_regularization": 1.0,
+        "max_iter": 50
+      },
+      {
+        "max_leaf_nodes": 15,
+        "l2_regularization": 10.0,
+        "max_iter": 100
+      },
+      {
+        "max_leaf_nodes": 7,
+        "l2_regularization": 10.0,
+        "max_iter": 100
+      },
+      {
+        "max_leaf_nodes": 15,
+        "l2_regularization": 1.0,
+        "max_iter": 50
+      }
+    ],
+    "validation_losses": [
+      0.6391659631406912,
+      0.6463593739259565,
+      0.6426949140426049,
+      0.6446183692307816
+    ],
+    "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
+    "calibration_coefficient": 0.6226615131947891,
+    "calibration_intercept": 0.19661967349832615
   },
   {
     "lig": "NBA",
@@ -8261,8 +8761,8 @@
     "model": "ewma",
     "alpha": 0.1,
     "validation_losses": [
-      0.593806862512767,
-      0.5985045379137417
+      0.5938130934465096,
+      0.5970874233870681
     ]
   },
   {
@@ -8276,34 +8776,36 @@
       100.0
     ],
     "validation_mae": [
-      9.564752868495493,
-      9.560218788373913,
-      9.538882441478025
+      9.570369761445756,
+      9.557249202496763,
+      9.546325108019326
     ],
-    "residual_sigma": 12.119319439334157,
-    "residual_normality_p": 0.021154687099261254,
-    "residual_skew": 0.1523743813804635,
-    "residual_excess_kurtosis": 0.22566171415234493
+    "residual_sigma": 12.11960190511968,
+    "residual_mean": 0.5562360370517369,
+    "residual_normality_p": 0.018671580796378165,
+    "residual_skew": 0.1524973020941374,
+    "residual_excess_kurtosis": 0.2377278008365895
   },
   {
     "lig": "NBA",
     "sezon": "2016-17",
     "model": "total_ridge",
-    "alpha": 0.1,
+    "alpha": 10.0,
     "candidates": [
       0.1,
       10.0,
       100.0
     ],
     "validation_mae": [
-      15.198782614657913,
-      15.20050164033719,
-      15.21471284950323
+      14.785064614318808,
+      14.777249616454483,
+      14.802658070136467
     ],
-    "residual_sigma": 18.923842006106224,
-    "residual_normality_p": 1.5992944083192162e-05,
-    "residual_skew": 0.30121801319397806,
-    "residual_excess_kurtosis": 0.2347232867411142
+    "residual_sigma": 18.222307288598984,
+    "residual_mean": 5.457375128575022,
+    "residual_normality_p": 2.1802699529824235e-06,
+    "residual_skew": 0.30581684243502794,
+    "residual_excess_kurtosis": 0.3787426816706265
   },
   {
     "lig": "NBA",
@@ -8322,13 +8824,13 @@
       10.0
     ],
     "validation_losses": [
-      0.5926386351369863,
-      0.593806862512767,
-      0.5939633142329397
+      0.592698578722237,
+      0.5938130934465096,
+      0.5944134319175047
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.7976059631024629,
-    "calibration_intercept": 0.16883880323606595
+    "calibration_coefficient": 0.8005304199162206,
+    "calibration_intercept": 0.15698008784065812
   },
   {
     "lig": "NBA",
@@ -8336,8 +8838,8 @@
     "model": "hist_gradient_boosting",
     "parameter": {
       "max_leaf_nodes": 7,
-      "l2_regularization": 1.0,
-      "max_iter": 50
+      "l2_regularization": 10.0,
+      "max_iter": 100
     },
     "candidates": [
       {
@@ -8362,14 +8864,14 @@
       }
     ],
     "validation_losses": [
-      0.6152441799690034,
-      0.6407834868553208,
-      0.6229852594455745,
-      0.6331071525823774
+      0.6234819509251116,
+      0.6395876286063158,
+      0.6202625238941046,
+      0.6363939944457305
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.679753776149074,
-    "calibration_intercept": 0.0209974565096281
+    "calibration_coefficient": 0.6556299507927186,
+    "calibration_intercept": 0.06412715343602438
   },
   {
     "lig": "NBA",
@@ -8725,8 +9227,8 @@
     "model": "ewma",
     "alpha": 0.3,
     "validation_losses": [
-      0.6267519058912505,
-      0.6266604939322297
+      0.6276571517673842,
+      0.625809675897185
     ]
   },
   {
@@ -8740,34 +9242,36 @@
       100.0
     ],
     "validation_mae": [
-      10.032546117037397,
-      10.031265520091523,
-      10.02300858028036
+      10.060476721386127,
+      10.056611753002063,
+      10.039149358624574
     ],
-    "residual_sigma": 12.85995512918043,
-    "residual_normality_p": 0.19241201225308305,
-    "residual_skew": 0.061702983648977604,
-    "residual_excess_kurtosis": 0.2179218517711825
+    "residual_sigma": 12.856875783178669,
+    "residual_mean": 0.10375780500327882,
+    "residual_normality_p": 0.28825447006573207,
+    "residual_skew": 0.045441053055285216,
+    "residual_excess_kurtosis": 0.194883257917565
   },
   {
     "lig": "NBA",
     "sezon": "2017-18",
     "model": "total_ridge",
-    "alpha": 0.1,
+    "alpha": 100.0,
     "candidates": [
       0.1,
       10.0,
       100.0
     ],
     "validation_mae": [
-      15.994032564116159,
-      15.99769186632375,
-      16.029820029380126
+      15.629301254920234,
+      15.615190343187015,
+      15.595761625720359
     ],
-    "residual_sigma": 19.106378104353446,
-    "residual_normality_p": 0.2963891649627044,
-    "residual_skew": 0.09578040018701778,
-    "residual_excess_kurtosis": 0.07603801276395528
+    "residual_sigma": 18.40862575168566,
+    "residual_mean": 6.829823441974145,
+    "residual_normality_p": 0.2757521221164343,
+    "residual_skew": 0.08378775208699295,
+    "residual_excess_kurtosis": 0.1309201147708876
   },
   {
     "lig": "NBA",
@@ -8786,13 +9290,13 @@
       10.0
     ],
     "validation_losses": [
-      0.6257152500520228,
-      0.6266604939322297,
-      0.6267655308597451
+      0.6248166876691897,
+      0.625809675897185,
+      0.625977974777624
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.7112037874467508,
-    "calibration_intercept": 0.1001470733893964
+    "calibration_coefficient": 0.7265955696915286,
+    "calibration_intercept": 0.08463120418599805
   },
   {
     "lig": "NBA",
@@ -8826,14 +9330,14 @@
       }
     ],
     "validation_losses": [
-      0.6283986669420675,
-      0.6460919668426859,
-      0.6360992789433347,
-      0.6385119916533487
+      0.6334836182277932,
+      0.6480937036801075,
+      0.6349821701166286,
+      0.6452181865379674
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.7057932372095749,
-    "calibration_intercept": 0.0424799051307784
+    "calibration_coefficient": 0.6904651639180457,
+    "calibration_intercept": 0.03506908669770032
   },
   {
     "lig": "NBA",
@@ -9189,14 +9693,35 @@
     "model": "ewma",
     "alpha": 0.3,
     "validation_losses": [
-      0.6166840172921477,
-      0.6156688127763384
+      0.6175353349434106,
+      0.616741730869168
     ]
   },
   {
     "lig": "NBA",
     "sezon": "2018-19",
     "model": "margin_ridge",
+    "alpha": 10.0,
+    "candidates": [
+      0.1,
+      10.0,
+      100.0
+    ],
+    "validation_mae": [
+      9.948631584455562,
+      9.948589907422473,
+      9.950502333353478
+    ],
+    "residual_sigma": 12.722754801051696,
+    "residual_mean": -0.6723677233733647,
+    "residual_normality_p": 0.0023347347319414118,
+    "residual_skew": 0.09241495349579526,
+    "residual_excess_kurtosis": 0.5179840484601077
+  },
+  {
+    "lig": "NBA",
+    "sezon": "2018-19",
+    "model": "total_ridge",
     "alpha": 100.0,
     "candidates": [
       0.1,
@@ -9204,34 +9729,15 @@
       100.0
     ],
     "validation_mae": [
-      9.93377616374936,
-      9.93350891974675,
-      9.932760783687366
+      15.196119367348942,
+      15.190527129200499,
+      15.160070242203501
     ],
-    "residual_sigma": 12.71877009440418,
-    "residual_normality_p": 0.0015213564065664693,
-    "residual_skew": 0.09403123820498059,
-    "residual_excess_kurtosis": 0.5432370208161696
-  },
-  {
-    "lig": "NBA",
-    "sezon": "2018-19",
-    "model": "total_ridge",
-    "alpha": 0.1,
-    "candidates": [
-      0.1,
-      10.0,
-      100.0
-    ],
-    "validation_mae": [
-      15.378490764942798,
-      15.380289742512653,
-      15.396966349236965
-    ],
-    "residual_sigma": 18.996767908273227,
-    "residual_normality_p": 0.0006594813108308515,
-    "residual_skew": 0.2520935508101268,
-    "residual_excess_kurtosis": 0.12927283348658625
+    "residual_sigma": 18.565376288149874,
+    "residual_mean": 4.3136333530927145,
+    "residual_normality_p": 0.002269750474240325,
+    "residual_skew": 0.23584695223480706,
+    "residual_excess_kurtosis": 0.04734596555979387
   },
   {
     "lig": "NBA",
@@ -9250,13 +9756,13 @@
       10.0
     ],
     "validation_losses": [
-      0.6155852768897468,
-      0.6156688127763384,
-      0.6156805895354194
+      0.6166149783750849,
+      0.616741730869168,
+      0.6167618428831572
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.9571621341139902,
-    "calibration_intercept": 0.016885831477584514
+    "calibration_coefficient": 0.9394031867202486,
+    "calibration_intercept": 0.027404404850229925
   },
   {
     "lig": "NBA",
@@ -9290,14 +9796,14 @@
       }
     ],
     "validation_losses": [
-      0.6262246893897725,
-      0.6363232250598662,
-      0.6284894388109197,
-      0.6332058743037297
+      0.6246629997080269,
+      0.638205027576671,
+      0.6284093882870337,
+      0.6340158914417385
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.8719197903117959,
-    "calibration_intercept": 0.023372609498833272
+    "calibration_coefficient": 0.8838353590181773,
+    "calibration_intercept": 0.023162133315429073
   },
   {
     "lig": "NBA",
@@ -9651,51 +10157,53 @@
     "lig": "NBA",
     "sezon": "2019-20",
     "model": "ewma",
-    "alpha": 0.3,
+    "alpha": 0.1,
     "validation_losses": [
-      0.6136222793226971,
-      0.6126465007356064
+      0.6127675468473728,
+      0.6128586639958905
     ]
   },
   {
     "lig": "NBA",
     "sezon": "2019-20",
     "model": "margin_ridge",
-    "alpha": 0.1,
+    "alpha": 10.0,
     "candidates": [
       0.1,
       10.0,
       100.0
     ],
     "validation_mae": [
-      10.211448239054727,
-      10.211661804781953,
-      10.213649317069574
+      10.214906724493057,
+      10.214762334071274,
+      10.21480006706522
     ],
-    "residual_sigma": 13.12379547731791,
-    "residual_normality_p": 0.0028668677605683604,
-    "residual_skew": -0.038882094502461856,
-    "residual_excess_kurtosis": 0.554127885790094
+    "residual_sigma": 13.144054337404237,
+    "residual_mean": 0.3163066917932704,
+    "residual_normality_p": 0.0032754053422012525,
+    "residual_skew": -0.03342837298226462,
+    "residual_excess_kurtosis": 0.5484858100051726
   },
   {
     "lig": "NBA",
     "sezon": "2019-20",
     "model": "total_ridge",
-    "alpha": 0.1,
+    "alpha": 100.0,
     "candidates": [
       0.1,
       10.0,
       100.0
     ],
     "validation_mae": [
-      16.334050329577614,
-      16.33880836762755,
-      16.381403401497835
+      16.35650304088398,
+      16.349334553348687,
+      16.297904617877943
     ],
-    "residual_sigma": 19.75713244717841,
-    "residual_normality_p": 1.3467301463464745e-13,
-    "residual_skew": 0.41644659844987403,
-    "residual_excess_kurtosis": 0.9122217641980739
+    "residual_sigma": 19.388748529421218,
+    "residual_mean": 8.305367672543623,
+    "residual_normality_p": 7.839484666936806e-16,
+    "residual_skew": 0.46829484048317493,
+    "residual_excess_kurtosis": 0.959545313353884
   },
   {
     "lig": "NBA",
@@ -9714,13 +10222,13 @@
       10.0
     ],
     "validation_losses": [
-      0.6124860069627832,
-      0.6126465007356064,
-      0.6126637547094618
+      0.6125741284930858,
+      0.6127675468473728,
+      0.6127967645050238
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.9009477343451714,
-    "calibration_intercept": 0.08851712563341427
+    "calibration_coefficient": 0.8907178028054424,
+    "calibration_intercept": 0.11693227897591923
   },
   {
     "lig": "NBA",
@@ -9754,14 +10262,14 @@
       }
     ],
     "validation_losses": [
-      0.6158805620342876,
-      0.6223939008002086,
-      0.6169478702656415,
-      0.6176168145210875
+      0.6152673934191429,
+      0.6277745184671574,
+      0.6207196691607202,
+      0.6253649623698585
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.8745681230919742,
-    "calibration_intercept": 0.08542414243880181
+    "calibration_coefficient": 0.8787393341728964,
+    "calibration_intercept": 0.11571957419888414
   },
   {
     "lig": "NBA",
@@ -10115,51 +10623,53 @@
     "lig": "NBA",
     "sezon": "2020-21",
     "model": "ewma",
-    "alpha": 0.1,
+    "alpha": 0.3,
     "validation_losses": [
-      0.6302604221633135,
-      0.6305294374496433
+      0.6326471139997839,
+      0.6317791565310363
     ]
   },
   {
     "lig": "NBA",
     "sezon": "2020-21",
     "model": "margin_ridge",
-    "alpha": 0.1,
+    "alpha": 100.0,
     "candidates": [
       0.1,
       10.0,
       100.0
     ],
     "validation_mae": [
-      10.217125385020935,
-      10.217137845042815,
-      10.21771743620902
+      10.251157557533794,
+      10.250095971245669,
+      10.246644746348414
     ],
-    "residual_sigma": 12.989805985276021,
-    "residual_normality_p": 0.01651964705056168,
-    "residual_skew": 0.17454964937054301,
-    "residual_excess_kurtosis": 0.2308028447367123
+    "residual_sigma": 13.018564620213702,
+    "residual_mean": -0.3587904888025363,
+    "residual_normality_p": 0.017895989269124578,
+    "residual_skew": 0.17183516387594774,
+    "residual_excess_kurtosis": 0.23172628451160326
   },
   {
     "lig": "NBA",
     "sezon": "2020-21",
     "model": "total_ridge",
-    "alpha": 0.1,
+    "alpha": 100.0,
     "candidates": [
       0.1,
       10.0,
       100.0
     ],
     "validation_mae": [
-      15.721639570342463,
-      15.723722571116385,
-      15.742380398818545
+      15.64181024142721,
+      15.638354060200337,
+      15.620922649138663
     ],
-    "residual_sigma": 19.670575245738963,
-    "residual_normality_p": 2.365676909491388e-06,
-    "residual_skew": 0.24913677294016578,
-    "residual_excess_kurtosis": 0.6996996244337579
+    "residual_sigma": 19.249661414178643,
+    "residual_mean": 5.166668633405001,
+    "residual_normality_p": 4.7684749339960056e-05,
+    "residual_skew": 0.2214419218094523,
+    "residual_excess_kurtosis": 0.5765193691204509
   },
   {
     "lig": "NBA",
@@ -10178,13 +10688,13 @@
       10.0
     ],
     "validation_losses": [
-      0.6300876721741869,
-      0.6302604221633135,
-      0.6302795006671794
+      0.6314803866038436,
+      0.6317791565310363,
+      0.631807493875945
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.8830880319045259,
-    "calibration_intercept": -0.10049216679861431
+    "calibration_coefficient": 0.8563689529327163,
+    "calibration_intercept": -0.06984890471756439
   },
   {
     "lig": "NBA",
@@ -10218,14 +10728,14 @@
       }
     ],
     "validation_losses": [
-      0.6337415732412008,
-      0.6372528868258128,
-      0.6347166776715635,
-      0.6361899439788039
+      0.6324626240706458,
+      0.6359796461864605,
+      0.6353815373012104,
+      0.6364485584802164
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.909336881053928,
-    "calibration_intercept": -0.11990745417456397
+    "calibration_coefficient": 0.8947872120373254,
+    "calibration_intercept": -0.1062417407053245
   },
   {
     "lig": "NBA",
@@ -10579,16 +11089,37 @@
     "lig": "NBA",
     "sezon": "2021-22",
     "model": "ewma",
-    "alpha": 0.1,
+    "alpha": 0.3,
     "validation_losses": [
-      0.6451130276101236,
-      0.6453597624742242
+      0.644429319075158,
+      0.6440857777568061
     ]
   },
   {
     "lig": "NBA",
     "sezon": "2021-22",
     "model": "margin_ridge",
+    "alpha": 0.1,
+    "candidates": [
+      0.1,
+      10.0,
+      100.0
+    ],
+    "validation_mae": [
+      11.247651221681277,
+      11.248379993936103,
+      11.249991462557032
+    ],
+    "residual_sigma": 14.183754430827776,
+    "residual_mean": -1.1135771389166333,
+    "residual_normality_p": 0.014589638888910857,
+    "residual_skew": -0.10077076463962713,
+    "residual_excess_kurtosis": 0.4136293373771416
+  },
+  {
+    "lig": "NBA",
+    "sezon": "2021-22",
+    "model": "total_ridge",
     "alpha": 100.0,
     "candidates": [
       0.1,
@@ -10596,34 +11127,15 @@
       100.0
     ],
     "validation_mae": [
-      11.27255431928047,
-      11.272489457716906,
-      11.27215008291575
+      15.084406254193752,
+      15.081906413989369,
+      15.06913989943073
     ],
-    "residual_sigma": 14.216977411693238,
-    "residual_normality_p": 0.013705395875199863,
-    "residual_skew": -0.0977303492128773,
-    "residual_excess_kurtosis": 0.4232475901616466
-  },
-  {
-    "lig": "NBA",
-    "sezon": "2021-22",
-    "model": "total_ridge",
-    "alpha": 0.1,
-    "candidates": [
-      0.1,
-      10.0,
-      100.0
-    ],
-    "validation_mae": [
-      15.252252695373416,
-      15.25398840140878,
-      15.269578554167454
-    ],
-    "residual_sigma": 19.245978664749476,
-    "residual_normality_p": 0.012331420094332152,
-    "residual_skew": 0.13454681124733475,
-    "residual_excess_kurtosis": 0.3638208189062664
+    "residual_sigma": 18.847680117245538,
+    "residual_mean": 3.7436030438119783,
+    "residual_normality_p": 0.020065275093933077,
+    "residual_skew": 0.08397595008203819,
+    "residual_excess_kurtosis": 0.4124647765854128
   },
   {
     "lig": "NBA",
@@ -10642,13 +11154,13 @@
       10.0
     ],
     "validation_losses": [
-      0.6450532956536007,
-      0.6451130276101236,
-      0.6451196339913945
+      0.6440418703399783,
+      0.6440857777568061,
+      0.6440913127762825
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.8750769911286038,
-    "calibration_intercept": -0.07744715579563108
+    "calibration_coefficient": 0.8585217164001155,
+    "calibration_intercept": -0.05273585827485316
   },
   {
     "lig": "NBA",
@@ -10682,14 +11194,14 @@
       }
     ],
     "validation_losses": [
-      0.6445632301539703,
-      0.6503352600572716,
-      0.6473817141506306,
-      0.6464871594122262
+      0.6439618965226429,
+      0.6508575745190189,
+      0.6471325827931868,
+      0.6472558280193792
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.9223924264252131,
-    "calibration_intercept": -0.09731773909577464
+    "calibration_coefficient": 0.8839062260268385,
+    "calibration_intercept": -0.07576380889614805
   },
   {
     "lig": "NBA",
@@ -11045,8 +11557,8 @@
     "model": "ewma",
     "alpha": 0.1,
     "validation_losses": [
-      0.6319757442918242,
-      0.6322994989120679
+      0.6312030005297047,
+      0.6314327431347413
     ]
   },
   {
@@ -11060,14 +11572,15 @@
       100.0
     ],
     "validation_mae": [
-      11.157204810517655,
-      11.157591750459718,
-      11.161169244817309
+      11.138441589902952,
+      11.138938529904237,
+      11.142535470823514
     ],
-    "residual_sigma": 14.245148693813235,
-    "residual_normality_p": 0.015730876131889986,
-    "residual_skew": 0.06851495926713823,
-    "residual_excess_kurtosis": 0.4154393345003622
+    "residual_sigma": 14.200531976579557,
+    "residual_mean": -0.24594886274560013,
+    "residual_normality_p": 0.015256818062601488,
+    "residual_skew": 0.07813657037083559,
+    "residual_excess_kurtosis": 0.4064780359467295
   },
   {
     "lig": "NBA",
@@ -11080,14 +11593,15 @@
       100.0
     ],
     "validation_mae": [
-      15.127701464677246,
-      15.128240935312231,
-      15.133107265913718
+      14.61787364982649,
+      14.618234667402179,
+      14.621275182475369
     ],
-    "residual_sigma": 19.06190991621839,
-    "residual_normality_p": 0.02999642894098464,
-    "residual_skew": 0.10847398255550843,
-    "residual_excess_kurtosis": 0.30648372732200846
+    "residual_sigma": 18.376180228800113,
+    "residual_mean": 1.9429373224476254,
+    "residual_normality_p": 0.008284900064855608,
+    "residual_skew": 0.16758025060748472,
+    "residual_excess_kurtosis": 0.26302707612821097
   },
   {
     "lig": "NBA",
@@ -11099,20 +11613,20 @@
     "lig": "NBA",
     "sezon": "2022-23",
     "model": "logistic",
-    "parameter": 10.0,
+    "parameter": 0.1,
     "candidates": [
       0.1,
       1.0,
       10.0
     ],
     "validation_losses": [
-      0.6320019793210344,
-      0.6319757442918242,
-      0.6319735219154305
+      0.6311104659453242,
+      0.6312030005297047,
+      0.6312231962745762
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.9174350690264192,
-    "calibration_intercept": -0.08384094131203755
+    "calibration_coefficient": 0.9069322943713299,
+    "calibration_intercept": -0.06245580350546052
   },
   {
     "lig": "NBA",
@@ -11146,14 +11660,14 @@
       }
     ],
     "validation_losses": [
-      0.6379116035292867,
-      0.6418958865635553,
-      0.6375462981856967,
-      0.640621106144392
+      0.6381595517210358,
+      0.6418944168645393,
+      0.6377566205640596,
+      0.638200889972942
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.8918413063851677,
-    "calibration_intercept": -0.06416652465574872
+    "calibration_coefficient": 0.8725996314687531,
+    "calibration_intercept": -0.04642019778268893
   },
   {
     "lig": "NBA",
@@ -11507,51 +12021,53 @@
     "lig": "NBA",
     "sezon": "2023-24",
     "model": "ewma",
-    "alpha": 0.3,
+    "alpha": 0.1,
     "validation_losses": [
-      0.6449555119203844,
-      0.6447127351057412
+      0.6469434004270915,
+      0.6469712473872159
     ]
   },
   {
     "lig": "NBA",
     "sezon": "2023-24",
     "model": "margin_ridge",
-    "alpha": 0.1,
+    "alpha": 100.0,
     "candidates": [
       0.1,
       10.0,
       100.0
     ],
     "validation_mae": [
-      10.167443937030239,
-      10.167649017251877,
-      10.169547600291065
+      10.213024326203728,
+      10.212830236128067,
+      10.212316848516453
     ],
-    "residual_sigma": 12.900890881204395,
-    "residual_normality_p": 0.03877377097878083,
-    "residual_skew": -0.050218331600446246,
-    "residual_excess_kurtosis": 0.36770451436503704
+    "residual_sigma": 12.906059015879634,
+    "residual_mean": 0.7157632364557122,
+    "residual_normality_p": 0.06647313173322733,
+    "residual_skew": -0.0497879372894795,
+    "residual_excess_kurtosis": 0.32601517638473787
   },
   {
     "lig": "NBA",
     "sezon": "2023-24",
     "model": "total_ridge",
-    "alpha": 0.1,
+    "alpha": 100.0,
     "candidates": [
       0.1,
       10.0,
       100.0
     ],
     "validation_mae": [
-      15.267097294034093,
-      15.268873433955218,
-      15.285088438090563
+      14.97590554655319,
+      14.976142181150177,
+      14.975874006863457
     ],
-    "residual_sigma": 19.076205605043462,
-    "residual_normality_p": 2.5184757864444037e-09,
-    "residual_skew": 0.27968794461538216,
-    "residual_excess_kurtosis": 0.881907401011254
+    "residual_sigma": 18.818129895419155,
+    "residual_mean": 3.799492311077092,
+    "residual_normality_p": 3.7734648488308045e-10,
+    "residual_skew": 0.286730527462226,
+    "residual_excess_kurtosis": 0.9624268023301452
   },
   {
     "lig": "NBA",
@@ -11570,13 +12086,13 @@
       10.0
     ],
     "validation_losses": [
-      0.6446608124265096,
-      0.6447127351057412,
-      0.6447181310074438
+      0.6468429136294632,
+      0.6469434004270915,
+      0.6469821348435353
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.8384004058665092,
-    "calibration_intercept": 0.11704799826266109
+    "calibration_coefficient": 0.8221818493822913,
+    "calibration_intercept": 0.1533619818480258
   },
   {
     "lig": "NBA",
@@ -11610,14 +12126,14 @@
       }
     ],
     "validation_losses": [
-      0.6468761242929809,
-      0.6552468601677675,
-      0.6507303705206511,
-      0.6504601305626646
+      0.6493922173749519,
+      0.6545379253341708,
+      0.6519269169843114,
+      0.6511659571056284
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.8598237648326907,
-    "calibration_intercept": 0.10488319992940165
+    "calibration_coefficient": 0.8613114911369716,
+    "calibration_intercept": 0.14402390295699735
   },
   {
     "lig": "NBA",
@@ -11973,8 +12489,8 @@
     "model": "ewma",
     "alpha": 0.1,
     "validation_losses": [
-      0.6095147146245306,
-      0.6102712391849184
+      0.6091196058836533,
+      0.6100781969820347
     ]
   },
   {
@@ -11988,14 +12504,15 @@
       100.0
     ],
     "validation_mae": [
-      11.059964043547767,
-      11.060197301247394,
-      11.062670843928158
+      11.028239783258893,
+      11.028633398283933,
+      11.032175313820181
     ],
-    "residual_sigma": 14.197989446850473,
-    "residual_normality_p": 3.596812976784554e-05,
-    "residual_skew": 0.25120215048863115,
-    "residual_excess_kurtosis": 0.401560617886354
+    "residual_sigma": 14.193212060639958,
+    "residual_mean": 0.45618393910695587,
+    "residual_normality_p": 5.072659982072417e-05,
+    "residual_skew": 0.24331610098685955,
+    "residual_excess_kurtosis": 0.4062661256682283
   },
   {
     "lig": "NBA",
@@ -12008,14 +12525,15 @@
       100.0
     ],
     "validation_mae": [
-      14.831474705649697,
-      14.832446188297808,
-      14.841508585172082
+      14.458544690516156,
+      14.459794071166282,
+      14.467394763656813
     ],
-    "residual_sigma": 18.54836961922911,
-    "residual_normality_p": 0.005249235192164895,
-    "residual_skew": 0.19273039471091077,
-    "residual_excess_kurtosis": 0.21345139347860753
+    "residual_sigma": 18.055679054649502,
+    "residual_mean": 2.5120132236452166,
+    "residual_normality_p": 0.02811292031761006,
+    "residual_skew": 0.16941540421409426,
+    "residual_excess_kurtosis": 0.11632190323200886
   },
   {
     "lig": "NBA",
@@ -12027,20 +12545,20 @@
     "lig": "NBA",
     "sezon": "2024-25",
     "model": "logistic",
-    "parameter": 10.0,
+    "parameter": 1.0,
     "candidates": [
       0.1,
       1.0,
       10.0
     ],
     "validation_losses": [
-      0.6095355229981596,
-      0.6095147146245306,
-      0.6095128467404223
+      0.6091270945508878,
+      0.6091196058836533,
+      0.6091244231667459
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 1.0596039414955596,
-    "calibration_intercept": -0.0607006405694576
+    "calibration_coefficient": 1.0393566732753714,
+    "calibration_intercept": -0.03556175248284874
   },
   {
     "lig": "NBA",
@@ -12048,8 +12566,8 @@
     "model": "hist_gradient_boosting",
     "parameter": {
       "max_leaf_nodes": 7,
-      "l2_regularization": 10.0,
-      "max_iter": 100
+      "l2_regularization": 1.0,
+      "max_iter": 50
     },
     "candidates": [
       {
@@ -12074,14 +12592,14 @@
       }
     ],
     "validation_losses": [
-      0.6162234847017987,
-      0.6219452194472885,
-      0.6158499314155405,
-      0.6178602176844666
+      0.6156511827957957,
+      0.6227693018243152,
+      0.6173230554791532,
+      0.6197000777611784
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 1.0747586139635268,
-    "calibration_intercept": -0.033084717763710046
+    "calibration_coefficient": 1.1117028278683474,
+    "calibration_intercept": -0.05580478176340855
   },
   {
     "lig": "NBA",
@@ -12437,29 +12955,30 @@
     "model": "ewma",
     "alpha": 0.1,
     "validation_losses": [
-      0.6077859837032005,
-      0.6080311651944649
+      0.6069513882061583,
+      0.607192339407764
     ]
   },
   {
     "lig": "NBA",
     "sezon": "2025-26",
     "model": "margin_ridge",
-    "alpha": 0.1,
+    "alpha": 100.0,
     "candidates": [
       0.1,
       10.0,
       100.0
     ],
     "validation_mae": [
-      11.084599622371087,
-      11.084831308892145,
-      11.087017032591993
+      11.069255823857354,
+      11.069085266771378,
+      11.068824426408781
     ],
-    "residual_sigma": 14.196873102632678,
-    "residual_normality_p": 0.019446328880033035,
-    "residual_skew": -0.07913231453132866,
-    "residual_excess_kurtosis": 0.38804648138090503
+    "residual_sigma": 14.190859596038484,
+    "residual_mean": -0.1974542361529526,
+    "residual_normality_p": 0.015192085990879189,
+    "residual_skew": -0.07915323396388721,
+    "residual_excess_kurtosis": 0.40593102946622395
   },
   {
     "lig": "NBA",
@@ -12472,14 +12991,15 @@
       100.0
     ],
     "validation_mae": [
-      15.164984128410163,
-      15.165604380519774,
-      15.171237486043868
+      14.849667021368289,
+      14.850561374120431,
+      14.856113334319758
     ],
-    "residual_sigma": 18.833865355518316,
-    "residual_normality_p": 0.13124501716364578,
-    "residual_skew": 0.13470768249934215,
-    "residual_excess_kurtosis": -0.0442403647693137
+    "residual_sigma": 18.41458531887697,
+    "residual_mean": 1.8881157335219894,
+    "residual_normality_p": 0.3632310120435373,
+    "residual_skew": 0.09449872051123273,
+    "residual_excess_kurtosis": -0.041146249357498554
   },
   {
     "lig": "NBA",
@@ -12498,13 +13018,13 @@
       10.0
     ],
     "validation_losses": [
-      0.6077473437648633,
-      0.6077859837032005,
-      0.6077901471672746
+      0.6069153246271486,
+      0.6069513882061583,
+      0.6069552848848195
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 1.0311827502351565,
-    "calibration_intercept": -0.07410811805738961
+    "calibration_coefficient": 1.005266542654891,
+    "calibration_intercept": -0.04705490533704617
   },
   {
     "lig": "NBA",
@@ -12538,14 +13058,480 @@
       }
     ],
     "validation_losses": [
-      0.6113118687322685,
-      0.6154822424914533,
-      0.6119517085724467,
-      0.6142784669105719
+      0.60934302704338,
+      0.6121941564372724,
+      0.6093844078039434,
+      0.6112816969524083
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 1.0829539633396923,
-    "calibration_intercept": -0.0892886249276383
+    "calibration_coefficient": 1.0825000184731313,
+    "calibration_intercept": -0.08264924234435107
+  },
+  {
+    "lig": "NBA",
+    "sezon": "2026-27",
+    "model": "elo",
+    "k": 30.0,
+    "home_advantage": 50.0,
+    "shrink": 0.5,
+    "ewma_alpha": 0.2,
+    "validation_season": "2025-26",
+    "candidates": [
+      {
+        "k": 10.0,
+        "home": 0.0,
+        "shrink": 0.0,
+        "log_loss": 0.6370571537725458
+      },
+      {
+        "k": 10.0,
+        "home": 0.0,
+        "shrink": 0.25,
+        "log_loss": 0.6285887110131324
+      },
+      {
+        "k": 10.0,
+        "home": 0.0,
+        "shrink": 0.5,
+        "log_loss": 0.6270661769574019
+      },
+      {
+        "k": 10.0,
+        "home": 50.0,
+        "shrink": 0.0,
+        "log_loss": 0.6308665917151156
+      },
+      {
+        "k": 10.0,
+        "home": 50.0,
+        "shrink": 0.25,
+        "log_loss": 0.6222159587775205
+      },
+      {
+        "k": 10.0,
+        "home": 50.0,
+        "shrink": 0.5,
+        "log_loss": 0.6206990241528668
+      },
+      {
+        "k": 10.0,
+        "home": 100.0,
+        "shrink": 0.0,
+        "log_loss": 0.6440106873146385
+      },
+      {
+        "k": 10.0,
+        "home": 100.0,
+        "shrink": 0.25,
+        "log_loss": 0.6347657429749453
+      },
+      {
+        "k": 10.0,
+        "home": 100.0,
+        "shrink": 0.5,
+        "log_loss": 0.6332661368724619
+      },
+      {
+        "k": 20.0,
+        "home": 0.0,
+        "shrink": 0.0,
+        "log_loss": 0.6253128113524969
+      },
+      {
+        "k": 20.0,
+        "home": 0.0,
+        "shrink": 0.25,
+        "log_loss": 0.618328517903155
+      },
+      {
+        "k": 20.0,
+        "home": 0.0,
+        "shrink": 0.5,
+        "log_loss": 0.6158276151269225
+      },
+      {
+        "k": 20.0,
+        "home": 50.0,
+        "shrink": 0.0,
+        "log_loss": 0.6184669842872954
+      },
+      {
+        "k": 20.0,
+        "home": 50.0,
+        "shrink": 0.25,
+        "log_loss": 0.6114004446030904
+      },
+      {
+        "k": 20.0,
+        "home": 50.0,
+        "shrink": 0.5,
+        "log_loss": 0.6089220546413422
+      },
+      {
+        "k": 20.0,
+        "home": 100.0,
+        "shrink": 0.0,
+        "log_loss": 0.6303090754930202
+      },
+      {
+        "k": 20.0,
+        "home": 100.0,
+        "shrink": 0.25,
+        "log_loss": 0.6228608821314601
+      },
+      {
+        "k": 20.0,
+        "home": 100.0,
+        "shrink": 0.5,
+        "log_loss": 0.6203721246663045
+      },
+      {
+        "k": 30.0,
+        "home": 0.0,
+        "shrink": 0.0,
+        "log_loss": 0.6232798493336557
+      },
+      {
+        "k": 30.0,
+        "home": 0.0,
+        "shrink": 0.25,
+        "log_loss": 0.616906706740712
+      },
+      {
+        "k": 30.0,
+        "home": 0.0,
+        "shrink": 0.5,
+        "log_loss": 0.6140983772770036
+      },
+      {
+        "k": 30.0,
+        "home": 50.0,
+        "shrink": 0.0,
+        "log_loss": 0.6160987901862458
+      },
+      {
+        "k": 30.0,
+        "home": 50.0,
+        "shrink": 0.25,
+        "log_loss": 0.6096729469155202
+      },
+      {
+        "k": 30.0,
+        "home": 50.0,
+        "shrink": 0.5,
+        "log_loss": 0.6068867042210985
+      },
+      {
+        "k": 30.0,
+        "home": 100.0,
+        "shrink": 0.0,
+        "log_loss": 0.6274228983663211
+      },
+      {
+        "k": 30.0,
+        "home": 100.0,
+        "shrink": 0.25,
+        "log_loss": 0.6206894569572378
+      },
+      {
+        "k": 30.0,
+        "home": 100.0,
+        "shrink": 0.5,
+        "log_loss": 0.6178689472974179
+      }
+    ]
+  },
+  {
+    "lig": "NBA",
+    "sezon": "2026-27",
+    "model": "mov",
+    "k": 30.0,
+    "home_advantage": 50.0,
+    "shrink": 0.5,
+    "ewma_alpha": 0.2,
+    "validation_season": "2025-26",
+    "candidates": [
+      {
+        "k": 10.0,
+        "home": 0.0,
+        "shrink": 0.0,
+        "log_loss": 0.6234535332539102
+      },
+      {
+        "k": 10.0,
+        "home": 0.0,
+        "shrink": 0.25,
+        "log_loss": 0.6171012339947282
+      },
+      {
+        "k": 10.0,
+        "home": 0.0,
+        "shrink": 0.5,
+        "log_loss": 0.615646145577844
+      },
+      {
+        "k": 10.0,
+        "home": 50.0,
+        "shrink": 0.0,
+        "log_loss": 0.6165640631179907
+      },
+      {
+        "k": 10.0,
+        "home": 50.0,
+        "shrink": 0.25,
+        "log_loss": 0.6102156510012113
+      },
+      {
+        "k": 10.0,
+        "home": 50.0,
+        "shrink": 0.5,
+        "log_loss": 0.6088439815176876
+      },
+      {
+        "k": 10.0,
+        "home": 100.0,
+        "shrink": 0.0,
+        "log_loss": 0.6281596295364058
+      },
+      {
+        "k": 10.0,
+        "home": 100.0,
+        "shrink": 0.25,
+        "log_loss": 0.6216536917883848
+      },
+      {
+        "k": 10.0,
+        "home": 100.0,
+        "shrink": 0.5,
+        "log_loss": 0.6203894092480258
+      },
+      {
+        "k": 20.0,
+        "home": 0.0,
+        "shrink": 0.0,
+        "log_loss": 0.6139597758918065
+      },
+      {
+        "k": 20.0,
+        "home": 0.0,
+        "shrink": 0.25,
+        "log_loss": 0.6086377738478164
+      },
+      {
+        "k": 20.0,
+        "home": 0.0,
+        "shrink": 0.5,
+        "log_loss": 0.6065681952257982
+      },
+      {
+        "k": 20.0,
+        "home": 50.0,
+        "shrink": 0.0,
+        "log_loss": 0.6065390448754899
+      },
+      {
+        "k": 20.0,
+        "home": 50.0,
+        "shrink": 0.25,
+        "log_loss": 0.6012406700477052
+      },
+      {
+        "k": 20.0,
+        "home": 50.0,
+        "shrink": 0.5,
+        "log_loss": 0.5992578818825416
+      },
+      {
+        "k": 20.0,
+        "home": 100.0,
+        "shrink": 0.0,
+        "log_loss": 0.6174438015734877
+      },
+      {
+        "k": 20.0,
+        "home": 100.0,
+        "shrink": 0.25,
+        "log_loss": 0.6120521646813607
+      },
+      {
+        "k": 20.0,
+        "home": 100.0,
+        "shrink": 0.5,
+        "log_loss": 0.6101527576131656
+      },
+      {
+        "k": 30.0,
+        "home": 0.0,
+        "shrink": 0.0,
+        "log_loss": 0.613560637428276
+      },
+      {
+        "k": 30.0,
+        "home": 0.0,
+        "shrink": 0.25,
+        "log_loss": 0.6086524044578399
+      },
+      {
+        "k": 30.0,
+        "home": 0.0,
+        "shrink": 0.5,
+        "log_loss": 0.6064375927726403
+      },
+      {
+        "k": 30.0,
+        "home": 50.0,
+        "shrink": 0.0,
+        "log_loss": 0.6060159337865882
+      },
+      {
+        "k": 30.0,
+        "home": 50.0,
+        "shrink": 0.25,
+        "log_loss": 0.601132228364954
+      },
+      {
+        "k": 30.0,
+        "home": 50.0,
+        "shrink": 0.5,
+        "log_loss": 0.5989996978894874
+      },
+      {
+        "k": 30.0,
+        "home": 100.0,
+        "shrink": 0.0,
+        "log_loss": 0.6170737314299664
+      },
+      {
+        "k": 30.0,
+        "home": 100.0,
+        "shrink": 0.25,
+        "log_loss": 0.6121053995244915
+      },
+      {
+        "k": 30.0,
+        "home": 100.0,
+        "shrink": 0.5,
+        "log_loss": 0.6100388799119845
+      }
+    ]
+  },
+  {
+    "lig": "NBA",
+    "sezon": "2026-27",
+    "model": "ewma",
+    "alpha": 0.3,
+    "validation_losses": [
+      0.5995459134806992,
+      0.5995453078882027
+    ]
+  },
+  {
+    "lig": "NBA",
+    "sezon": "2026-27",
+    "model": "margin_ridge",
+    "alpha": 0.1,
+    "candidates": [
+      0.1,
+      10.0,
+      100.0
+    ],
+    "validation_mae": [
+      11.400799345214727,
+      11.401575456628072,
+      11.40894235039087
+    ],
+    "residual_sigma": 14.569288095747485,
+    "residual_mean": -0.12498414091507078,
+    "residual_normality_p": 0.013598220136745791,
+    "residual_skew": -0.11185813356766999,
+    "residual_excess_kurtosis": 0.363049363135854
+  },
+  {
+    "lig": "NBA",
+    "sezon": "2026-27",
+    "model": "total_ridge",
+    "alpha": 0.1,
+    "candidates": [
+      0.1,
+      10.0,
+      100.0
+    ],
+    "validation_mae": [
+      14.99814422150517,
+      14.999178267379492,
+      15.007418969607455
+    ],
+    "residual_sigma": 18.90004585951217,
+    "residual_mean": 2.2918626652302034,
+    "residual_normality_p": 0.027959253170665124,
+    "residual_skew": 0.17883101259878642,
+    "residual_excess_kurtosis": 0.03697035751147926
+  },
+  {
+    "lig": "NBA",
+    "sezon": "2026-27",
+    "model": "home",
+    "home_win_rate": 0.5670908973447897
+  },
+  {
+    "lig": "NBA",
+    "sezon": "2026-27",
+    "model": "logistic",
+    "parameter": 0.1,
+    "candidates": [
+      0.1,
+      1.0,
+      10.0
+    ],
+    "validation_losses": [
+      0.599346552228522,
+      0.5995453078882027,
+      0.5995655071938576
+    ],
+    "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
+    "calibration_coefficient": 1.0085358879297723,
+    "calibration_intercept": 0.03352828083618806
+  },
+  {
+    "lig": "NBA",
+    "sezon": "2026-27",
+    "model": "hist_gradient_boosting",
+    "parameter": {
+      "max_leaf_nodes": 7,
+      "l2_regularization": 10.0,
+      "max_iter": 100
+    },
+    "candidates": [
+      {
+        "max_leaf_nodes": 7,
+        "l2_regularization": 1.0,
+        "max_iter": 50
+      },
+      {
+        "max_leaf_nodes": 15,
+        "l2_regularization": 10.0,
+        "max_iter": 100
+      },
+      {
+        "max_leaf_nodes": 7,
+        "l2_regularization": 10.0,
+        "max_iter": 100
+      },
+      {
+        "max_leaf_nodes": 15,
+        "l2_regularization": 1.0,
+        "max_iter": 50
+      }
+    ],
+    "validation_losses": [
+      0.5986492481204962,
+      0.6012585885693806,
+      0.5983415531018453,
+      0.6016523113601868
+    ],
+    "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
+    "calibration_coefficient": 1.0686911533601016,
+    "calibration_intercept": -0.004310377730614057
   },
   {
     "lig": "U",
@@ -12909,10 +13895,10 @@
     "lig": "U",
     "sezon": "2009-10",
     "model": "ewma",
-    "alpha": 0.3,
+    "alpha": 0.1,
     "validation_losses": [
-      0.656660635425171,
-      0.6458918823913433
+      0.6385403189331474,
+      0.6437781895213623
     ]
   },
   {
@@ -12926,14 +13912,15 @@
       100.0
     ],
     "validation_mae": [
-      10.814558213096015,
-      10.73121463662323,
-      10.36666808778993
+      10.471411836927349,
+      10.717747269657263,
+      10.427799873009254
     ],
-    "residual_sigma": 13.022218664585257,
-    "residual_normality_p": 0.4647934494917654,
-    "residual_skew": -0.1713014867917771,
-    "residual_excess_kurtosis": 0.24461474601459665
+    "residual_sigma": 13.02047554246999,
+    "residual_mean": -2.8451838297347867,
+    "residual_normality_p": 0.5276413774177375,
+    "residual_skew": -0.17164434057500003,
+    "residual_excess_kurtosis": 0.17065305467307157
   },
   {
     "lig": "U",
@@ -12946,14 +13933,15 @@
       100.0
     ],
     "validation_mae": [
-      14.211882164289804,
-      14.178605721480594,
-      14.066183078694497
+      14.398972555591701,
+      14.010778573052253,
+      13.923337692942395
     ],
-    "residual_sigma": 19.59999032992893,
-    "residual_normality_p": 3.958486768321627e-21,
-    "residual_skew": -1.9460193487215145,
-    "residual_excess_kurtosis": 12.555074286700732
+    "residual_sigma": 19.694947507245974,
+    "residual_mean": -2.9532325200541134,
+    "residual_normality_p": 2.9912504763589812e-21,
+    "residual_skew": -1.9505209613816563,
+    "residual_excess_kurtosis": 12.789145238356669
   },
   {
     "lig": "U",
@@ -12972,20 +13960,20 @@
       10.0
     ],
     "validation_losses": [
-      0.6299584636025736,
-      0.6458918823913433,
-      0.6493692948271332
+      0.6285159324821815,
+      0.6385403189331474,
+      0.6359439178886099
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.6565622380629512,
-    "calibration_intercept": -0.02561214900071281
+    "calibration_coefficient": 0.6497337903051679,
+    "calibration_intercept": -0.022166971880131676
   },
   {
     "lig": "U",
     "sezon": "2009-10",
     "model": "hist_gradient_boosting",
     "parameter": {
-      "max_leaf_nodes": 15,
+      "max_leaf_nodes": 7,
       "l2_regularization": 10.0,
       "max_iter": 100
     },
@@ -13012,14 +14000,14 @@
       }
     ],
     "validation_losses": [
-      0.6790517146837954,
-      0.6638208914130251,
-      0.6716664733746627,
-      0.7020164799690664
+      0.6897045567861994,
+      0.6598315485912463,
+      0.6529251266171893,
+      0.7154055534976037
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.5015018270951209,
-    "calibration_intercept": 0.007734441489893527
+    "calibration_coefficient": 0.5416132151951433,
+    "calibration_intercept": -0.049101065078282255
   },
   {
     "lig": "U",
@@ -13375,8 +14363,8 @@
     "model": "ewma",
     "alpha": 0.3,
     "validation_losses": [
-      0.6549590589071802,
-      0.6500353906520652
+      0.6649964326707382,
+      0.6598184799758948
     ]
   },
   {
@@ -13390,34 +14378,36 @@
       100.0
     ],
     "validation_mae": [
-      10.278215134691887,
-      10.248788270299041,
-      10.1231808982322
+      10.132743191910905,
+      10.142836555757063,
+      10.09371858526139
     ],
-    "residual_sigma": 12.353966724898765,
-    "residual_normality_p": 0.41095857804796476,
-    "residual_skew": 0.24896768016791915,
-    "residual_excess_kurtosis": -0.00127671560435072
+    "residual_sigma": 12.344188256529215,
+    "residual_mean": -0.36774159702340736,
+    "residual_normality_p": 0.42408154845127644,
+    "residual_skew": 0.24771122769134873,
+    "residual_excess_kurtosis": -0.04156650287763908
   },
   {
     "lig": "U",
     "sezon": "2010-11",
     "model": "total_ridge",
-    "alpha": 10.0,
+    "alpha": 0.1,
     "candidates": [
       0.1,
       10.0,
       100.0
     ],
     "validation_mae": [
-      14.742127273734983,
-      14.735593922338353,
-      14.753454130767237
+      14.100317437974594,
+      14.154438780481367,
+      14.4022055906464
     ],
-    "residual_sigma": 18.493936173820245,
-    "residual_normality_p": 0.30849865199592774,
-    "residual_skew": 0.23747865266118576,
-    "residual_excess_kurtosis": 0.257292676758329
+    "residual_sigma": 17.762113587622597,
+    "residual_mean": -0.1364551858399095,
+    "residual_normality_p": 0.6747107398119357,
+    "residual_skew": 0.16545709212485118,
+    "residual_excess_kurtosis": -0.04432970949352999
   },
   {
     "lig": "U",
@@ -13436,13 +14426,13 @@
       10.0
     ],
     "validation_losses": [
-      0.645896096748287,
-      0.6500353906520652,
-      0.6506512094039302
+      0.6474868708501806,
+      0.6598184799758948,
+      0.6655513516831199
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.6717169770242009,
-    "calibration_intercept": 0.008730759284731847
+    "calibration_coefficient": 0.6590167409769822,
+    "calibration_intercept": 0.01964172584181491
   },
   {
     "lig": "U",
@@ -13450,8 +14440,8 @@
     "model": "hist_gradient_boosting",
     "parameter": {
       "max_leaf_nodes": 7,
-      "l2_regularization": 10.0,
-      "max_iter": 100
+      "l2_regularization": 1.0,
+      "max_iter": 50
     },
     "candidates": [
       {
@@ -13476,14 +14466,14 @@
       }
     ],
     "validation_losses": [
-      0.7051201157952505,
-      0.7387311036641869,
-      0.7040745269741243,
-      0.7573633670967272
+      0.7309489631837429,
+      0.7779289756351464,
+      0.7394221397696393,
+      0.8291993456532382
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.3482404906979795,
-    "calibration_intercept": 0.19051942087152987
+    "calibration_coefficient": 0.23814951410459886,
+    "calibration_intercept": 0.28319252804515666
   },
   {
     "lig": "U",
@@ -13839,49 +14829,51 @@
     "model": "ewma",
     "alpha": 0.1,
     "validation_losses": [
-      0.6282876426457845,
-      0.6376726887854994
+      0.6305656996850489,
+      0.6394528721406745
     ]
   },
   {
     "lig": "U",
     "sezon": "2011-12",
     "model": "margin_ridge",
-    "alpha": 0.1,
+    "alpha": 100.0,
     "candidates": [
       0.1,
       10.0,
       100.0
     ],
     "validation_mae": [
-      8.920276277787533,
-      8.922239519318003,
-      8.941326739437523
+      9.094246923001611,
+      9.056348385671042,
+      8.972494527310147
     ],
-    "residual_sigma": 11.121122511270354,
-    "residual_normality_p": 0.3720406811503046,
-    "residual_skew": -0.2669350870104381,
-    "residual_excess_kurtosis": -0.15506978155392126
+    "residual_sigma": 11.18800229261209,
+    "residual_mean": -1.458029733386,
+    "residual_normality_p": 0.4455405912134778,
+    "residual_skew": -0.24272586864743895,
+    "residual_excess_kurtosis": -0.09992247929444709
   },
   {
     "lig": "U",
     "sezon": "2011-12",
     "model": "total_ridge",
-    "alpha": 0.1,
+    "alpha": 100.0,
     "candidates": [
       0.1,
       10.0,
       100.0
     ],
     "validation_mae": [
-      13.992525927390357,
-      13.998289663830954,
-      14.056491380160054
+      14.181612666017863,
+      14.1218691823543,
+      14.060254383895412
     ],
-    "residual_sigma": 17.686562249420856,
-    "residual_normality_p": 0.03655982752374558,
-    "residual_skew": 0.2586200540567134,
-    "residual_excess_kurtosis": 1.014842121657603
+    "residual_sigma": 17.765108855833898,
+    "residual_mean": -1.6181285750597723,
+    "residual_normality_p": 0.02988122021717749,
+    "residual_skew": 0.25976837518620277,
+    "residual_excess_kurtosis": 1.0797929866982505
   },
   {
     "lig": "U",
@@ -13893,20 +14885,20 @@
     "lig": "U",
     "sezon": "2011-12",
     "model": "logistic",
-    "parameter": 10.0,
+    "parameter": 0.1,
     "candidates": [
       0.1,
       1.0,
       10.0
     ],
     "validation_losses": [
-      0.6285170558445813,
-      0.6282876426457845,
-      0.6282662206614126
+      0.6283823534324091,
+      0.6305656996850489,
+      0.6311436653763244
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.8660467120948021,
-    "calibration_intercept": -0.15090025202969926
+    "calibration_coefficient": 0.8961367709375669,
+    "calibration_intercept": -0.13868028424648238
   },
   {
     "lig": "U",
@@ -13940,14 +14932,14 @@
       }
     ],
     "validation_losses": [
-      0.6915843564807849,
-      0.785798970960098,
-      0.722841071011544,
-      0.7459078045398003
+      0.6922578611949564,
+      0.7266227830429468,
+      0.70373009682318,
+      0.7242181150924466
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.3883491306911094,
-    "calibration_intercept": 0.16430814121895704
+    "calibration_coefficient": 0.38151037105903324,
+    "calibration_intercept": 0.1914195465098024
   },
   {
     "lig": "U",
@@ -14303,49 +15295,51 @@
     "model": "ewma",
     "alpha": 0.3,
     "validation_losses": [
-      0.5571542636753236,
-      0.5533870390022528
+      0.5516557860375898,
+      0.5511825528476104
     ]
   },
   {
     "lig": "U",
     "sezon": "2012-13",
     "model": "margin_ridge",
-    "alpha": 0.1,
+    "alpha": 100.0,
     "candidates": [
       0.1,
       10.0,
       100.0
     ],
     "validation_mae": [
-      9.09012301345103,
-      9.095583865443754,
-      9.143634534870525
+      9.251372115358171,
+      9.20832214859035,
+      9.15603563547515
     ],
-    "residual_sigma": 11.237023720459339,
-    "residual_normality_p": 0.7189612450164435,
-    "residual_skew": -0.1302550058876991,
-    "residual_excess_kurtosis": 0.061328249995180606
+    "residual_sigma": 11.274296040267902,
+    "residual_mean": 0.615237796177179,
+    "residual_normality_p": 0.8108767616300193,
+    "residual_skew": -0.1093421320328716,
+    "residual_excess_kurtosis": 0.007546047319828109
   },
   {
     "lig": "U",
     "sezon": "2012-13",
     "model": "total_ridge",
-    "alpha": 0.1,
+    "alpha": 100.0,
     "candidates": [
       0.1,
       10.0,
       100.0
     ],
     "validation_mae": [
-      13.127157335493639,
-      13.137465017356298,
-      13.225991043883186
+      13.233811821832537,
+      13.176766239814452,
+      13.084029633315199
     ],
-    "residual_sigma": 15.255966612896083,
-    "residual_normality_p": 0.20302000287282124,
-    "residual_skew": 0.33920563438674367,
-    "residual_excess_kurtosis": -0.1893368870258323
+    "residual_sigma": 15.22597109513673,
+    "residual_mean": -4.88591899793252,
+    "residual_normality_p": 0.18207384193813916,
+    "residual_skew": 0.34510444209920066,
+    "residual_excess_kurtosis": -0.23653226984508757
   },
   {
     "lig": "U",
@@ -14364,13 +15358,13 @@
       10.0
     ],
     "validation_losses": [
-      0.5549303891243844,
-      0.5533870390022528,
-      0.5532294697304434
+      0.5525744212882139,
+      0.5511825528476104,
+      0.5510691501974562
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 1.3282754388076559,
-    "calibration_intercept": -0.1395890595467756
+    "calibration_coefficient": 1.3359595208333708,
+    "calibration_intercept": -0.0796426800476465
   },
   {
     "lig": "U",
@@ -14378,8 +15372,8 @@
     "model": "hist_gradient_boosting",
     "parameter": {
       "max_leaf_nodes": 7,
-      "l2_regularization": 1.0,
-      "max_iter": 50
+      "l2_regularization": 10.0,
+      "max_iter": 100
     },
     "candidates": [
       {
@@ -14404,14 +15398,14 @@
       }
     ],
     "validation_losses": [
-      0.5588950975450582,
-      0.5763119614001762,
-      0.5651643048025622,
-      0.5777047550722089
+      0.5963103739159344,
+      0.6070245437525986,
+      0.5937156246721882,
+      0.6077333781275953
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 1.1443644786814988,
-    "calibration_intercept": 0.07376034906029245
+    "calibration_coefficient": 0.8352738667797694,
+    "calibration_intercept": 0.36674422916439736
   },
   {
     "lig": "U",
@@ -14765,31 +15759,32 @@
     "lig": "U",
     "sezon": "2013-14",
     "model": "ewma",
-    "alpha": 0.1,
+    "alpha": 0.3,
     "validation_losses": [
-      0.6303476345694071,
-      0.6341707001550817
+      0.6374901302836626,
+      0.6347454119930243
     ]
   },
   {
     "lig": "U",
     "sezon": "2013-14",
     "model": "margin_ridge",
-    "alpha": 0.1,
+    "alpha": 100.0,
     "candidates": [
       0.1,
       10.0,
       100.0
     ],
     "validation_mae": [
-      10.451298958184413,
-      10.453696464506768,
-      10.469480571933337
+      10.636992334043825,
+      10.627855298288358,
+      10.623702430709493
     ],
-    "residual_sigma": 12.928407108223267,
-    "residual_normality_p": 0.888715326571917,
-    "residual_skew": 0.03151535761852894,
-    "residual_excess_kurtosis": -0.2390139075634483
+    "residual_sigma": 13.000033801460944,
+    "residual_mean": -0.8882758849586398,
+    "residual_normality_p": 0.5831911783342455,
+    "residual_skew": 0.11980716762299508,
+    "residual_excess_kurtosis": -0.34074669528657386
   },
   {
     "lig": "U",
@@ -14802,14 +15797,15 @@
       100.0
     ],
     "validation_mae": [
-      14.135572813079449,
-      14.13361467206172,
-      14.117921850413069
+      14.199435350555449,
+      14.179265420721089,
+      14.091614829522989
     ],
-    "residual_sigma": 18.02921149519263,
-    "residual_normality_p": 0.5368713960826748,
-    "residual_skew": 0.1111629087807307,
-    "residual_excess_kurtosis": 0.28198171209108214
+    "residual_sigma": 17.945352674955114,
+    "residual_mean": 2.3824317550503076,
+    "residual_normality_p": 0.43080791504591165,
+    "residual_skew": 0.1335767730593381,
+    "residual_excess_kurtosis": 0.3489912698893858
   },
   {
     "lig": "U",
@@ -14821,20 +15817,20 @@
     "lig": "U",
     "sezon": "2013-14",
     "model": "logistic",
-    "parameter": 10.0,
+    "parameter": 0.1,
     "candidates": [
       0.1,
       1.0,
       10.0
     ],
     "validation_losses": [
-      0.6307316082564562,
-      0.6303476345694071,
-      0.6303155245863743
+      0.6324039795139502,
+      0.6347454119930243,
+      0.6354444668227326
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.8243220431468619,
-    "calibration_intercept": -0.23521410479144372
+    "calibration_coefficient": 0.8884929665995382,
+    "calibration_intercept": -0.26235714976230995
   },
   {
     "lig": "U",
@@ -14868,14 +15864,14 @@
       }
     ],
     "validation_losses": [
-      0.6167510875006409,
-      0.6187343643210436,
-      0.6129871385066913,
-      0.6323515541661835
+      0.6298652333027398,
+      0.6437039650436704,
+      0.6283894894168759,
+      0.6460232952324991
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.8629610404854374,
-    "calibration_intercept": -0.2396035571045115
+    "calibration_coefficient": 0.791112662234456,
+    "calibration_intercept": -0.18628093776833343
   },
   {
     "lig": "U",
@@ -15229,31 +16225,32 @@
     "lig": "U",
     "sezon": "2014-15",
     "model": "ewma",
-    "alpha": 0.1,
+    "alpha": 0.3,
     "validation_losses": [
-      1.1126407092184147,
-      1.113213732596509
+      1.0845490351760705,
+      1.0712971048905324
     ]
   },
   {
     "lig": "U",
     "sezon": "2014-15",
     "model": "margin_ridge",
-    "alpha": 0.1,
+    "alpha": 100.0,
     "candidates": [
       0.1,
       10.0,
       100.0
     ],
     "validation_mae": [
-      9.645228948713779,
-      9.648058579617254,
-      9.670553529331107
+      9.733298009399961,
+      9.717016407295848,
+      9.698010008111938
     ],
-    "residual_sigma": 12.180828394342702,
-    "residual_normality_p": 0.8206795273836232,
-    "residual_skew": -0.06398911585381753,
-    "residual_excess_kurtosis": -0.12935468084650958
+    "residual_sigma": 12.23723556875057,
+    "residual_mean": 0.9853871594195903,
+    "residual_normality_p": 0.9148424516037722,
+    "residual_skew": -0.051757913113619505,
+    "residual_excess_kurtosis": -0.022691959072068002
   },
   {
     "lig": "U",
@@ -15266,14 +16263,15 @@
       100.0
     ],
     "validation_mae": [
-      21.994228647628965,
-      21.905245012695772,
-      21.158645115692792
+      21.76286099725196,
+      21.651011216858077,
+      20.87208028213966
     ],
-    "residual_sigma": 31.303454827381707,
-    "residual_normality_p": 1.9804966937221483e-07,
-    "residual_skew": 0.34712304297831426,
-    "residual_excess_kurtosis": 2.291104264843142
+    "residual_sigma": 30.64776998933561,
+    "residual_mean": 1.0536962709908326,
+    "residual_normality_p": 5.008446881820105e-07,
+    "residual_skew": 0.3432071157911034,
+    "residual_excess_kurtosis": 2.1354587106149436
   },
   {
     "lig": "U",
@@ -15292,13 +16290,13 @@
       10.0
     ],
     "validation_losses": [
-      1.0775985406911144,
-      1.1126407092184147,
-      1.1163823296065158
+      1.042738786028933,
+      1.0712971048905324,
+      1.074344556852119
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.05464506803230039,
-    "calibration_intercept": 0.5924449126290822
+    "calibration_coefficient": 0.061178078686370575,
+    "calibration_intercept": 0.5924352927610984
   },
   {
     "lig": "U",
@@ -15332,14 +16330,14 @@
       }
     ],
     "validation_losses": [
-      0.6314562153422763,
-      0.6619693562155,
-      0.6420979739734934,
-      0.6522416751498517
+      0.6192489462805589,
+      0.6542829402597824,
+      0.6237029428275068,
+      0.6477314717387788
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.5576607442654461,
-    "calibration_intercept": 0.3308556357855308
+    "calibration_coefficient": 0.6339400514597398,
+    "calibration_intercept": 0.3329233355410515
   },
   {
     "lig": "U",
@@ -15695,8 +16693,8 @@
     "model": "ewma",
     "alpha": 0.1,
     "validation_losses": [
-      0.6000079306084583,
-      0.6021499621388824
+      0.6061989320157318,
+      0.608289528797574
     ]
   },
   {
@@ -15710,34 +16708,36 @@
       100.0
     ],
     "validation_mae": [
-      9.694015507358394,
-      9.688382419274383,
-      9.645124724256199
+      9.651226768280003,
+      9.64408107361496,
+      9.610789029795598
     ],
-    "residual_sigma": 12.171257434642733,
-    "residual_normality_p": 0.007336165294914568,
-    "residual_skew": -0.3540584886614032,
-    "residual_excess_kurtosis": 0.5725643505174864
+    "residual_sigma": 12.200595164176805,
+    "residual_mean": -1.4757687376874267,
+    "residual_normality_p": 0.004591270477419801,
+    "residual_skew": -0.3675207570301903,
+    "residual_excess_kurtosis": 0.6257032592503662
   },
   {
     "lig": "U",
     "sezon": "2015-16",
     "model": "total_ridge",
-    "alpha": 100.0,
+    "alpha": 0.1,
     "candidates": [
       0.1,
       10.0,
       100.0
     ],
     "validation_mae": [
-      13.707006585129092,
-      13.705950196143158,
-      13.697765711425697
+      13.454617872128916,
+      13.45508889208994,
+      13.470142870307638
     ],
-    "residual_sigma": 17.078006917416847,
-    "residual_normality_p": 0.18857798165838863,
-    "residual_skew": 0.2466776077993317,
-    "residual_excess_kurtosis": 0.06488378783490623
+    "residual_sigma": 16.728726482756965,
+    "residual_mean": 1.0095393703528182,
+    "residual_normality_p": 0.127244944351486,
+    "residual_skew": 0.2511755976347105,
+    "residual_excess_kurtosis": 0.21778599634415396
   },
   {
     "lig": "U",
@@ -15756,13 +16756,13 @@
       10.0
     ],
     "validation_losses": [
-      0.5996255332714158,
-      0.6000079306084583,
-      0.6000590674399572
+      0.6041320564033683,
+      0.6061989320157318,
+      0.6065512866706367
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.9589559978279578,
-    "calibration_intercept": -0.12387234777765506
+    "calibration_coefficient": 0.9507664585467542,
+    "calibration_intercept": -0.10707055835349744
   },
   {
     "lig": "U",
@@ -15796,14 +16796,14 @@
       }
     ],
     "validation_losses": [
-      0.6083808226007212,
-      0.6133613343874275,
-      0.6126820374746771,
-      0.6116738444300736
+      0.6075323392743787,
+      0.620184776324101,
+      0.6096041206351523,
+      0.6133423789769368
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.9174162733249844,
-    "calibration_intercept": -0.1734705677486151
+    "calibration_coefficient": 0.8975112649038836,
+    "calibration_intercept": -0.09005873174455936
   },
   {
     "lig": "U",
@@ -16159,8 +17159,8 @@
     "model": "ewma",
     "alpha": 0.1,
     "validation_losses": [
-      0.6606796428202986,
-      0.6636930870321891
+      0.6549850316446445,
+      0.6564733802797895
     ]
   },
   {
@@ -16174,14 +17174,15 @@
       100.0
     ],
     "validation_mae": [
-      10.153692979068392,
-      10.146957251206729,
-      10.0946114891567
+      9.9325331819025,
+      9.925987077978746,
+      9.917080793639071
     ],
-    "residual_sigma": 12.730096537961836,
-    "residual_normality_p": 0.5681449459632424,
-    "residual_skew": -0.04140880318439595,
-    "residual_excess_kurtosis": 0.24890983175981685
+    "residual_sigma": 12.600979989451462,
+    "residual_mean": -0.33788170449620036,
+    "residual_normality_p": 0.4674029632325595,
+    "residual_skew": 0.0067263883189852235,
+    "residual_excess_kurtosis": 0.3227043540431249
   },
   {
     "lig": "U",
@@ -16194,14 +17195,15 @@
       100.0
     ],
     "validation_mae": [
-      12.684094796079533,
-      12.684086146475229,
-      12.683959052220176
+      12.778221760296278,
+      12.76119083450806,
+      12.665375407366252
     ],
-    "residual_sigma": 15.903110481703527,
-    "residual_normality_p": 0.29045321935275675,
-    "residual_skew": 0.2145319462673943,
-    "residual_excess_kurtosis": 0.023566059421812113
+    "residual_sigma": 15.765798021267067,
+    "residual_mean": 2.2750699243178447,
+    "residual_normality_p": 0.5283800991346601,
+    "residual_skew": 0.15442423941722236,
+    "residual_excess_kurtosis": -0.0927316155350022
   },
   {
     "lig": "U",
@@ -16220,13 +17222,13 @@
       10.0
     ],
     "validation_losses": [
-      0.6591410494672201,
-      0.6606796428202986,
-      0.6608473392390334
+      0.6540947212929716,
+      0.6549850316446445,
+      0.6551126194648907
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.5676956330045411,
-    "calibration_intercept": 0.07633742438354398
+    "calibration_coefficient": 0.6237479780519066,
+    "calibration_intercept": 0.05649818386521631
   },
   {
     "lig": "U",
@@ -16260,14 +17262,14 @@
       }
     ],
     "validation_losses": [
-      0.6690768758658667,
-      0.6792492997387074,
-      0.6696658284837329,
-      0.6842435920093717
+      0.6606286043617048,
+      0.6914564543709979,
+      0.6698810564326491,
+      0.6847951562010218
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.5163772059675915,
-    "calibration_intercept": 0.12084862754819123
+    "calibration_coefficient": 0.56994655998758,
+    "calibration_intercept": 0.11084776104533185
   },
   {
     "lig": "U",
@@ -16621,16 +17623,37 @@
     "lig": "U",
     "sezon": "2017-18",
     "model": "ewma",
-    "alpha": 0.1,
+    "alpha": 0.3,
     "validation_losses": [
-      0.575490778152768,
-      0.5777199089525846
+      0.5759257881863893,
+      0.5758821158998506
     ]
   },
   {
     "lig": "U",
     "sezon": "2017-18",
     "model": "margin_ridge",
+    "alpha": 0.1,
+    "candidates": [
+      0.1,
+      10.0,
+      100.0
+    ],
+    "validation_mae": [
+      10.07215953713635,
+      10.07969485778491,
+      10.106599938717428
+    ],
+    "residual_sigma": 12.617734804811217,
+    "residual_mean": -0.2248337739127046,
+    "residual_normality_p": 0.33651848728417916,
+    "residual_skew": -0.29097210784183003,
+    "residual_excess_kurtosis": -0.0852232191761666
+  },
+  {
+    "lig": "U",
+    "sezon": "2017-18",
+    "model": "total_ridge",
     "alpha": 100.0,
     "candidates": [
       0.1,
@@ -16638,34 +17661,15 @@
       100.0
     ],
     "validation_mae": [
-      10.10931082689674,
-      10.106115020541607,
-      10.082328101580302
+      14.236537820505811,
+      14.223308543489942,
+      14.160330765652878
     ],
-    "residual_sigma": 12.671725844978441,
-    "residual_normality_p": 0.3864997115618146,
-    "residual_skew": -0.2692848326690403,
-    "residual_excess_kurtosis": -0.040264724648792605
-  },
-  {
-    "lig": "U",
-    "sezon": "2017-18",
-    "model": "total_ridge",
-    "alpha": 0.1,
-    "candidates": [
-      0.1,
-      10.0,
-      100.0
-    ],
-    "validation_mae": [
-      14.599324025226956,
-      14.601326464539865,
-      14.619282762371089
-    ],
-    "residual_sigma": 18.251631641981877,
-    "residual_normality_p": 0.00015557115914374662,
-    "residual_skew": 0.5216641781608005,
-    "residual_excess_kurtosis": 2.1466261769183763
+    "residual_sigma": 17.670303752915128,
+    "residual_mean": 5.092710054020219,
+    "residual_normality_p": 0.00015590103863746693,
+    "residual_skew": 0.5111028705417572,
+    "residual_excess_kurtosis": 2.1899676267742922
   },
   {
     "lig": "U",
@@ -16684,13 +17688,13 @@
       10.0
     ],
     "validation_losses": [
-      0.5755358146458897,
-      0.575490778152768,
-      0.575489909583946
+      0.5771988544126718,
+      0.5758821158998506,
+      0.5757194160544075
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.955404606791271,
-    "calibration_intercept": 0.06113342895314938
+    "calibration_coefficient": 1.029543929048113,
+    "calibration_intercept": 0.08793987893712787
   },
   {
     "lig": "U",
@@ -16724,14 +17728,14 @@
       }
     ],
     "validation_losses": [
-      0.5731780843368046,
-      0.579531237087216,
-      0.5813236005824957,
-      0.5825004817397842
+      0.608328908248585,
+      0.6408224962082445,
+      0.6120090824328742,
+      0.621983274565303
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.9629926225976247,
-    "calibration_intercept": 0.049756046469354845
+    "calibration_coefficient": 0.7802004859125388,
+    "calibration_intercept": 0.17823957377549987
   },
   {
     "lig": "U",
@@ -17087,8 +18091,8 @@
     "model": "ewma",
     "alpha": 0.3,
     "validation_losses": [
-      0.6000877299996038,
-      0.598830885270792
+      0.5993584717263262,
+      0.5985494083280289
     ]
   },
   {
@@ -17102,34 +18106,36 @@
       100.0
     ],
     "validation_mae": [
-      9.367967269269677,
-      9.367488501291716,
-      9.364944361388785
+      9.384016642798853,
+      9.379886354770433,
+      9.366151481120653
     ],
-    "residual_sigma": 11.6925678528197,
-    "residual_normality_p": 0.7827300520597377,
-    "residual_skew": 0.12214166622178112,
-    "residual_excess_kurtosis": -0.07294073226074094
+    "residual_sigma": 11.68106238599355,
+    "residual_mean": 0.6503815904338801,
+    "residual_normality_p": 0.8403977888003178,
+    "residual_skew": 0.1017426449378092,
+    "residual_excess_kurtosis": -0.05410160719364354
   },
   {
     "lig": "U",
     "sezon": "2018-19",
     "model": "total_ridge",
-    "alpha": 0.1,
+    "alpha": 100.0,
     "candidates": [
       0.1,
       10.0,
       100.0
     ],
     "validation_mae": [
-      14.194828319055446,
-      14.198277270000093,
-      14.230983121677829
+      14.327071776961153,
+      14.306764187273723,
+      14.214021709868367
     ],
-    "residual_sigma": 18.400788418917905,
-    "residual_normality_p": 5.925631368816293e-09,
-    "residual_skew": 0.9060846076886302,
-    "residual_excess_kurtosis": 2.852630775495008
+    "residual_sigma": 18.34335874110453,
+    "residual_mean": 4.5825672096229875,
+    "residual_normality_p": 1.714951634137465e-09,
+    "residual_skew": 0.960533478954093,
+    "residual_excess_kurtosis": 2.939258376172691
   },
   {
     "lig": "U",
@@ -17148,22 +18154,22 @@
       10.0
     ],
     "validation_losses": [
-      0.5989807836011253,
-      0.598830885270792,
-      0.5988223101944752
+      0.5986652496931215,
+      0.5985494083280289,
+      0.598532887510775
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 1.143133761228333,
-    "calibration_intercept": -0.14682326574880836
+    "calibration_coefficient": 1.164201326571535,
+    "calibration_intercept": -0.13702573657953218
   },
   {
     "lig": "U",
     "sezon": "2018-19",
     "model": "hist_gradient_boosting",
     "parameter": {
-      "max_leaf_nodes": 15,
-      "l2_regularization": 10.0,
-      "max_iter": 100
+      "max_leaf_nodes": 7,
+      "l2_regularization": 1.0,
+      "max_iter": 50
     },
     "candidates": [
       {
@@ -17188,14 +18194,14 @@
       }
     ],
     "validation_losses": [
-      0.6075328788119639,
-      0.5959457872394534,
-      0.6051500004353021,
-      0.6152768639135391
+      0.6119627267099187,
+      0.6188900182105452,
+      0.6124724855863712,
+      0.6207769311316137
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.9714525804102107,
-    "calibration_intercept": -0.10535488673934217
+    "calibration_coefficient": 1.0310902438832397,
+    "calibration_intercept": -0.1687611360334616
   },
   {
     "lig": "U",
@@ -17551,34 +18557,14 @@
     "model": "ewma",
     "alpha": 0.3,
     "validation_losses": [
-      0.5590125670576225,
-      0.5504848253387378
+      0.549853565762287,
+      0.5455583265322266
     ]
   },
   {
     "lig": "U",
     "sezon": "2019-20",
     "model": "margin_ridge",
-    "alpha": 100.0,
-    "candidates": [
-      0.1,
-      10.0,
-      100.0
-    ],
-    "validation_mae": [
-      8.42906941291091,
-      8.427284197844578,
-      8.41283899619937
-    ],
-    "residual_sigma": 10.69876959980268,
-    "residual_normality_p": 0.6958754731405814,
-    "residual_skew": -0.04306657825821378,
-    "residual_excess_kurtosis": 0.2123327281552294
-  },
-  {
-    "lig": "U",
-    "sezon": "2019-20",
-    "model": "total_ridge",
     "alpha": 0.1,
     "candidates": [
       0.1,
@@ -17586,14 +18572,36 @@
       100.0
     ],
     "validation_mae": [
-      14.021589031794877,
-      14.023668014043311,
-      14.042082819170673
+      8.301800304474652,
+      8.304430562052378,
+      8.318253881912332
     ],
-    "residual_sigma": 17.87640641960942,
-    "residual_normality_p": 0.05494844773409206,
-    "residual_skew": 0.4335504809704432,
-    "residual_excess_kurtosis": -0.09304158213082614
+    "residual_sigma": 10.609372080040506,
+    "residual_mean": 0.008158459175609022,
+    "residual_normality_p": 0.5525422416810577,
+    "residual_skew": -0.05091244113696834,
+    "residual_excess_kurtosis": 0.3119295236105857
+  },
+  {
+    "lig": "U",
+    "sezon": "2019-20",
+    "model": "total_ridge",
+    "alpha": 100.0,
+    "candidates": [
+      0.1,
+      10.0,
+      100.0
+    ],
+    "validation_mae": [
+      14.02327990430838,
+      14.018629014264247,
+      14.00123542007954
+    ],
+    "residual_sigma": 17.764047680633038,
+    "residual_mean": 2.9468169788490752,
+    "residual_normality_p": 0.06487956846109967,
+    "residual_skew": 0.4178956020012906,
+    "residual_excess_kurtosis": -0.15264082732439999
   },
   {
     "lig": "U",
@@ -17612,13 +18620,13 @@
       10.0
     ],
     "validation_losses": [
-      0.5510510162518446,
-      0.5504848253387378,
-      0.5504298244424926
+      0.5462743194015031,
+      0.5455583265322266,
+      0.5455252842382233
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 1.2629431381620817,
-    "calibration_intercept": -0.06706824613603181
+    "calibration_coefficient": 1.3746467739542527,
+    "calibration_intercept": -0.09519720906540077
   },
   {
     "lig": "U",
@@ -17626,8 +18634,8 @@
     "model": "hist_gradient_boosting",
     "parameter": {
       "max_leaf_nodes": 7,
-      "l2_regularization": 10.0,
-      "max_iter": 100
+      "l2_regularization": 1.0,
+      "max_iter": 50
     },
     "candidates": [
       {
@@ -17652,14 +18660,14 @@
       }
     ],
     "validation_losses": [
-      0.5802643267319537,
-      0.5785276633491142,
-      0.5747737725114447,
-      0.586372192748528
+      0.563073551553077,
+      0.5751833671456456,
+      0.5712734304517405,
+      0.5716746952318373
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.9880945102829148,
-    "calibration_intercept": 0.032682344239421596
+    "calibration_coefficient": 1.1784838372043995,
+    "calibration_intercept": -0.05381357812845387
   },
   {
     "lig": "U",
@@ -18015,8 +19023,8 @@
     "model": "ewma",
     "alpha": 0.1,
     "validation_losses": [
-      0.6486423486435213,
-      0.6526953095788753
+      0.6486618984709696,
+      0.6526735670030238
     ]
   },
   {
@@ -18030,34 +19038,36 @@
       100.0
     ],
     "validation_mae": [
-      9.60558217989331,
-      9.604073897116978,
-      9.591421061385116
+      9.591371707790554,
+      9.586982130910876,
+      9.562971893392836
     ],
-    "residual_sigma": 11.819691324351547,
-    "residual_normality_p": 0.7086452759217572,
-    "residual_skew": -0.14597090678829922,
-    "residual_excess_kurtosis": -0.1600382388131507
+    "residual_sigma": 11.787205178640818,
+    "residual_mean": -0.40827183255437116,
+    "residual_normality_p": 0.7239379554182865,
+    "residual_skew": -0.14446664408905355,
+    "residual_excess_kurtosis": -0.13413536175464413
   },
   {
     "lig": "U",
     "sezon": "2020-21",
     "model": "total_ridge",
-    "alpha": 100.0,
+    "alpha": 0.1,
     "candidates": [
       0.1,
       10.0,
       100.0
     ],
     "validation_mae": [
-      14.42629184413133,
-      14.426249550868834,
-      14.42594080315935
+      13.741765103955128,
+      13.745996198291559,
+      13.780995912052699
     ],
-    "residual_sigma": 17.527546749341212,
-    "residual_normality_p": 0.5282706604014672,
-    "residual_skew": -0.19230119619431088,
-    "residual_excess_kurtosis": 0.0578222647854596
+    "residual_sigma": 16.882330020547464,
+    "residual_mean": 2.5224051045727784,
+    "residual_normality_p": 0.7364677858274633,
+    "residual_skew": -0.08215461918120852,
+    "residual_excess_kurtosis": 0.14497568509038183
   },
   {
     "lig": "U",
@@ -18076,13 +19086,13 @@
       10.0
     ],
     "validation_losses": [
-      0.6472046539954848,
-      0.6486423486435213,
-      0.64879685824555
+      0.6476847232417356,
+      0.6486618984709696,
+      0.6487724574249112
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.5678535321059276,
-    "calibration_intercept": 0.25510957200803647
+    "calibration_coefficient": 0.5704304995328937,
+    "calibration_intercept": 0.2641538904887454
   },
   {
     "lig": "U",
@@ -18116,14 +19126,14 @@
       }
     ],
     "validation_losses": [
-      0.6514158221765521,
-      0.6806285015223051,
-      0.6558460861524792,
-      0.6571938731639412
+      0.6634681733549723,
+      0.6957412506151182,
+      0.6671859385089023,
+      0.6791066984401276
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.5261702592448895,
-    "calibration_intercept": 0.2744850414170212
+    "calibration_coefficient": 0.41565333707207813,
+    "calibration_intercept": 0.34984805776770095
   },
   {
     "lig": "U",
@@ -18477,51 +19487,53 @@
     "lig": "U",
     "sezon": "2021-22",
     "model": "ewma",
-    "alpha": 0.3,
+    "alpha": 0.1,
     "validation_losses": [
-      0.5946613435061452,
-      0.5925880236746357
+      0.5916194049589872,
+      0.5924525939141585
     ]
   },
   {
     "lig": "U",
     "sezon": "2021-22",
     "model": "margin_ridge",
-    "alpha": 0.1,
+    "alpha": 100.0,
     "candidates": [
       0.1,
       10.0,
       100.0
     ],
     "validation_mae": [
-      9.475889015527946,
-      9.476951875073366,
-      9.487990222020178
+      9.496428325293309,
+      9.49026109704117,
+      9.464404524257452
     ],
-    "residual_sigma": 11.642520255697837,
-    "residual_normality_p": 0.801323861928547,
-    "residual_skew": 0.09415670594527695,
-    "residual_excess_kurtosis": 0.048804019093811934
+    "residual_sigma": 11.744932798489854,
+    "residual_mean": -1.6954069365154434,
+    "residual_normality_p": 0.6569270025055487,
+    "residual_skew": 0.1302169961168316,
+    "residual_excess_kurtosis": 0.1015409585438034
   },
   {
     "lig": "U",
     "sezon": "2021-22",
     "model": "total_ridge",
-    "alpha": 0.1,
+    "alpha": 10.0,
     "candidates": [
       0.1,
       10.0,
       100.0
     ],
     "validation_mae": [
-      14.558958934874996,
-      14.560511000431555,
-      14.573986572963603
+      14.6122437965755,
+      14.611713649027756,
+      14.61307474947824
     ],
-    "residual_sigma": 18.36091595067696,
-    "residual_normality_p": 0.5112813726813925,
-    "residual_skew": 0.19283964351597868,
-    "residual_excess_kurtosis": 0.038349197421061465
+    "residual_sigma": 18.333485973094046,
+    "residual_mean": 1.9797243915922238,
+    "residual_normality_p": 0.49914393845728444,
+    "residual_skew": 0.19409025633933336,
+    "residual_excess_kurtosis": 0.05367357300295206
   },
   {
     "lig": "U",
@@ -18540,13 +19552,13 @@
       10.0
     ],
     "validation_losses": [
-      0.5929445574658465,
-      0.5925880236746357,
-      0.5925528865437119
+      0.5917496196720374,
+      0.5916194049589872,
+      0.5916150175997571
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 1.3634087742605654,
-    "calibration_intercept": -0.3763981491515187
+    "calibration_coefficient": 1.3549432097570504,
+    "calibration_intercept": -0.34357033392099534
   },
   {
     "lig": "U",
@@ -18580,14 +19592,14 @@
       }
     ],
     "validation_losses": [
-      0.6025941319527847,
-      0.6171389012502215,
-      0.6069464817341932,
-      0.6123674660354643
+      0.5993899417796706,
+      0.6138588850768913,
+      0.6087199068388593,
+      0.6077920328108846
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 1.2233260761951865,
-    "calibration_intercept": -0.31671061137352774
+    "calibration_coefficient": 1.1728171964141039,
+    "calibration_intercept": -0.2093674819374292
   },
   {
     "lig": "U",
@@ -18943,49 +19955,51 @@
     "model": "ewma",
     "alpha": 0.1,
     "validation_losses": [
-      0.6146270297754324,
-      0.6195115601294274
+      0.612547814308631,
+      0.6155202441641465
     ]
   },
   {
     "lig": "U",
     "sezon": "2022-23",
     "model": "margin_ridge",
-    "alpha": 10.0,
+    "alpha": 100.0,
     "candidates": [
       0.1,
       10.0,
       100.0
     ],
     "validation_mae": [
-      10.071954418657956,
-      10.071803348503355,
-      10.072067895486875
+      10.103937713356718,
+      10.102118290744645,
+      10.093967530884575
     ],
-    "residual_sigma": 12.380374070955979,
-    "residual_normality_p": 0.13069123427741483,
-    "residual_skew": -0.022235162020442154,
-    "residual_excess_kurtosis": -0.5648130520554626
+    "residual_sigma": 12.35375999625761,
+    "residual_mean": -0.01723343769971417,
+    "residual_normality_p": 0.10035180030877809,
+    "residual_skew": -0.014148836190600603,
+    "residual_excess_kurtosis": -0.5878193224932513
   },
   {
     "lig": "U",
     "sezon": "2022-23",
     "model": "total_ridge",
-    "alpha": 0.1,
+    "alpha": 100.0,
     "candidates": [
       0.1,
       10.0,
       100.0
     ],
     "validation_mae": [
-      13.97252080829045,
-      13.972531022499382,
-      13.974112667694532
+      14.05268567960137,
+      14.046990052529422,
+      14.010713109917383
     ],
-    "residual_sigma": 17.414893483351907,
-    "residual_normality_p": 0.8896147915765529,
-    "residual_skew": 0.030246772311883767,
-    "residual_excess_kurtosis": -0.2140270074695385
+    "residual_sigma": 17.249077057723,
+    "residual_mean": 2.1654234721918413,
+    "residual_normality_p": 0.7027840258914478,
+    "residual_skew": 0.07226867765367294,
+    "residual_excess_kurtosis": -0.2877169988708843
   },
   {
     "lig": "U",
@@ -19004,13 +20018,13 @@
       10.0
     ],
     "validation_losses": [
-      0.6141656876542009,
-      0.6146270297754324,
-      0.6146768128551718
+      0.6121077696831989,
+      0.612547814308631,
+      0.6126217482149746
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.7693517740794049,
-    "calibration_intercept": 0.07002691467524842
+    "calibration_coefficient": 0.8014034300214978,
+    "calibration_intercept": 0.07668979833979057
   },
   {
     "lig": "U",
@@ -19044,14 +20058,14 @@
       }
     ],
     "validation_losses": [
-      0.6233281098602003,
-      0.6476283901366822,
-      0.6316762521579072,
-      0.6387688539049923
+      0.6112274172002228,
+      0.6311448329677655,
+      0.6161034657438444,
+      0.627478206265013
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.7120896437683191,
-    "calibration_intercept": 0.13895724769416143
+    "calibration_coefficient": 0.8068757778575014,
+    "calibration_intercept": 0.1342569489522386
   },
   {
     "lig": "U",
@@ -19407,8 +20421,8 @@
     "model": "ewma",
     "alpha": 0.1,
     "validation_losses": [
-      0.5983535554453553,
-      0.6010392632985411
+      0.6014042753840259,
+      0.6034947744938792
     ]
   },
   {
@@ -19422,34 +20436,36 @@
       100.0
     ],
     "validation_mae": [
-      9.516482203279475,
-      9.514389945483071,
-      9.498290394369276
+      9.540904017863706,
+      9.539055824124253,
+      9.52557287142899
     ],
-    "residual_sigma": 12.271894935029577,
-    "residual_normality_p": 0.16089988902853838,
-    "residual_skew": 0.01564036966062992,
-    "residual_excess_kurtosis": 0.7345232172478071
+    "residual_sigma": 12.328335863749672,
+    "residual_mean": -0.3038111386708305,
+    "residual_normality_p": 0.1557809264679076,
+    "residual_skew": -0.00578443920791905,
+    "residual_excess_kurtosis": 0.7453008020619265
   },
   {
     "lig": "U",
     "sezon": "2023-24",
     "model": "total_ridge",
-    "alpha": 0.1,
+    "alpha": 100.0,
     "candidates": [
       0.1,
       10.0,
       100.0
     ],
     "validation_mae": [
-      13.837721361885265,
-      13.83929476188617,
-      13.853166839003933
+      13.186162806830112,
+      13.179398565406506,
+      13.140662003135661
     ],
-    "residual_sigma": 16.739224618260643,
-    "residual_normality_p": 0.3848728208182367,
-    "residual_skew": 0.18610443564811377,
-    "residual_excess_kurtosis": 0.22342990176622424
+    "residual_sigma": 16.330409484550447,
+    "residual_mean": 4.0978794496041,
+    "residual_normality_p": 0.25415356049117654,
+    "residual_skew": 0.1908592354243078,
+    "residual_excess_kurtosis": 0.38284305805629426
   },
   {
     "lig": "U",
@@ -19468,13 +20484,13 @@
       10.0
     ],
     "validation_losses": [
-      0.5982646268993723,
-      0.5983535554453553,
-      0.5983645406267171
+      0.6007226639999633,
+      0.6014042753840259,
+      0.601493390631729
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 1.034154781237645,
-    "calibration_intercept": -0.04571640958344444
+    "calibration_coefficient": 1.0077310197361669,
+    "calibration_intercept": -0.011739306626767601
   },
   {
     "lig": "U",
@@ -19508,14 +20524,14 @@
       }
     ],
     "validation_losses": [
-      0.5997056193295174,
-      0.6061904107363674,
-      0.5950285976296039,
-      0.5982207319478934
+      0.5955418611673797,
+      0.5981002269849959,
+      0.59458601378076,
+      0.5982745916492792
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 1.0363799359814512,
-    "calibration_intercept": -0.006768851115317757
+    "calibration_coefficient": 0.9895016899410902,
+    "calibration_intercept": 0.015201200055971135
   },
   {
     "lig": "U",
@@ -19871,34 +20887,14 @@
     "model": "ewma",
     "alpha": 0.1,
     "validation_losses": [
-      0.5970782224087089,
-      0.6029015798115013
+      0.5969883689747482,
+      0.6034665486080314
     ]
   },
   {
     "lig": "U",
     "sezon": "2024-25",
     "model": "margin_ridge",
-    "alpha": 100.0,
-    "candidates": [
-      0.1,
-      10.0,
-      100.0
-    ],
-    "validation_mae": [
-      10.110245042286977,
-      10.107242278238788,
-      10.082756116855245
-    ],
-    "residual_sigma": 12.62419007067429,
-    "residual_normality_p": 0.5025645028593957,
-    "residual_skew": -0.15813391162908116,
-    "residual_excess_kurtosis": 0.17115997142178863
-  },
-  {
-    "lig": "U",
-    "sezon": "2024-25",
-    "model": "total_ridge",
     "alpha": 0.1,
     "candidates": [
       0.1,
@@ -19906,14 +20902,36 @@
       100.0
     ],
     "validation_mae": [
-      15.853852123873082,
-      15.85918946684634,
-      15.906269654079365
+      9.987748136323864,
+      9.988494713946952,
+      9.99005545127682
     ],
-    "residual_sigma": 18.849265407452446,
-    "residual_normality_p": 0.0326594499330796,
-    "residual_skew": 0.36415700364245934,
-    "residual_excess_kurtosis": 0.5525821898490495
+    "residual_sigma": 12.614549612171274,
+    "residual_mean": -1.7545338270117006,
+    "residual_normality_p": 0.568931636253778,
+    "residual_skew": -0.12748647345540517,
+    "residual_excess_kurtosis": 0.184790736885021
+  },
+  {
+    "lig": "U",
+    "sezon": "2024-25",
+    "model": "total_ridge",
+    "alpha": 100.0,
+    "candidates": [
+      0.1,
+      10.0,
+      100.0
+    ],
+    "validation_mae": [
+      14.420088817946082,
+      14.409648193897654,
+      14.343126658889588
+    ],
+    "residual_sigma": 18.222128193609063,
+    "residual_mean": 5.731032745158112,
+    "residual_normality_p": 0.011453118544569737,
+    "residual_skew": 0.43427105627629314,
+    "residual_excess_kurtosis": 0.6139886758023598
   },
   {
     "lig": "U",
@@ -19925,20 +20943,20 @@
     "lig": "U",
     "sezon": "2024-25",
     "model": "logistic",
-    "parameter": 0.1,
+    "parameter": 10.0,
     "candidates": [
       0.1,
       1.0,
       10.0
     ],
     "validation_losses": [
-      0.5964734917243476,
-      0.5970782224087089,
-      0.5971433672004952
+      0.5970334946099979,
+      0.5969883689747482,
+      0.59698033761009
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.9699602035456184,
-    "calibration_intercept": -0.3475699553431158
+    "calibration_coefficient": 0.9682094978341201,
+    "calibration_intercept": -0.32673457187083077
   },
   {
     "lig": "U",
@@ -19972,14 +20990,14 @@
       }
     ],
     "validation_losses": [
-      0.601284056585955,
-      0.6392520910936932,
-      0.6109308942795849,
-      0.6170233464832361
+      0.6070704771431294,
+      0.6302183675765699,
+      0.6102273882857204,
+      0.6153147155702406
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.9620859062186379,
-    "calibration_intercept": -0.29028180607488857
+    "calibration_coefficient": 0.9450831852747776,
+    "calibration_intercept": -0.30751421695773046
   },
   {
     "lig": "U",
@@ -20335,14 +21353,35 @@
     "model": "ewma",
     "alpha": 0.1,
     "validation_losses": [
-      0.6106965967699125,
-      0.6126017667789925
+      0.6116973856047925,
+      0.61323097010757
     ]
   },
   {
     "lig": "U",
     "sezon": "2025-26",
     "model": "margin_ridge",
+    "alpha": 10.0,
+    "candidates": [
+      0.1,
+      10.0,
+      100.0
+    ],
+    "validation_mae": [
+      10.010913983847887,
+      10.010794864387062,
+      10.019632144047792
+    ],
+    "residual_sigma": 13.267085032276535,
+    "residual_mean": 0.10113021881470582,
+    "residual_normality_p": 0.28097115985223414,
+    "residual_skew": -0.03026352978350947,
+    "residual_excess_kurtosis": 0.5566272115173079
+  },
+  {
+    "lig": "U",
+    "sezon": "2025-26",
+    "model": "total_ridge",
     "alpha": 100.0,
     "candidates": [
       0.1,
@@ -20350,34 +21389,15 @@
       100.0
     ],
     "validation_mae": [
-      10.208100720904751,
-      10.206608935467635,
-      10.194213789491029
+      14.601651375705817,
+      14.595607419641812,
+      14.562091892549365
     ],
-    "residual_sigma": 13.263659625920738,
-    "residual_normality_p": 0.3844358482750958,
-    "residual_skew": -0.058363059070214406,
-    "residual_excess_kurtosis": 0.43666556890773744
-  },
-  {
-    "lig": "U",
-    "sezon": "2025-26",
-    "model": "total_ridge",
-    "alpha": 0.1,
-    "candidates": [
-      0.1,
-      10.0,
-      100.0
-    ],
-    "validation_mae": [
-      14.791849597700338,
-      14.793242337424747,
-      14.805571479468417
-    ],
-    "residual_sigma": 18.17255565702192,
-    "residual_normality_p": 0.17738329338034012,
-    "residual_skew": 0.29840646546426236,
-    "residual_excess_kurtosis": -0.26969673979134257
+    "residual_sigma": 17.897991757449073,
+    "residual_mean": 2.5938203410932372,
+    "residual_normality_p": 0.38154021491758866,
+    "residual_skew": 0.21659085055669222,
+    "residual_excess_kurtosis": -0.24024575973240303
   },
   {
     "lig": "U",
@@ -20396,20 +21416,20 @@
       10.0
     ],
     "validation_losses": [
-      0.6104163723218032,
-      0.6106965967699125,
-      0.6107264625941874
+      0.6105423773112627,
+      0.6116973856047925,
+      0.6118624857530517
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.8390621632381996,
-    "calibration_intercept": 0.08315287772425654
+    "calibration_coefficient": 0.8579751760804715,
+    "calibration_intercept": 0.12741067964646113
   },
   {
     "lig": "U",
     "sezon": "2025-26",
     "model": "hist_gradient_boosting",
     "parameter": {
-      "max_leaf_nodes": 7,
+      "max_leaf_nodes": 15,
       "l2_regularization": 1.0,
       "max_iter": 50
     },
@@ -20436,13 +21456,479 @@
       }
     ],
     "validation_losses": [
-      0.6162337227627424,
-      0.6300099598459855,
-      0.6203399034057625,
-      0.6295954209355664
+      0.6281896198436553,
+      0.6319724589010598,
+      0.6279155318637974,
+      0.626421529318959
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.8279367873343711,
-    "calibration_intercept": 0.12959428598587616
+    "calibration_coefficient": 0.7311541370515783,
+    "calibration_intercept": 0.1953703070693721
+  },
+  {
+    "lig": "U",
+    "sezon": "2026-27",
+    "model": "elo",
+    "k": 30.0,
+    "home_advantage": 50.0,
+    "shrink": 0.0,
+    "ewma_alpha": 0.2,
+    "validation_season": "2025-26",
+    "candidates": [
+      {
+        "k": 10.0,
+        "home": 0.0,
+        "shrink": 0.0,
+        "log_loss": 0.6515265750144499
+      },
+      {
+        "k": 10.0,
+        "home": 0.0,
+        "shrink": 0.25,
+        "log_loss": 0.6573215412734261
+      },
+      {
+        "k": 10.0,
+        "home": 0.0,
+        "shrink": 0.5,
+        "log_loss": 0.6637181502298994
+      },
+      {
+        "k": 10.0,
+        "home": 50.0,
+        "shrink": 0.0,
+        "log_loss": 0.6371758278719117
+      },
+      {
+        "k": 10.0,
+        "home": 50.0,
+        "shrink": 0.25,
+        "log_loss": 0.6429815964423045
+      },
+      {
+        "k": 10.0,
+        "home": 50.0,
+        "shrink": 0.5,
+        "log_loss": 0.6494419665500893
+      },
+      {
+        "k": 10.0,
+        "home": 100.0,
+        "shrink": 0.0,
+        "log_loss": 0.6426456790151714
+      },
+      {
+        "k": 10.0,
+        "home": 100.0,
+        "shrink": 0.25,
+        "log_loss": 0.6487585029523175
+      },
+      {
+        "k": 10.0,
+        "home": 100.0,
+        "shrink": 0.5,
+        "log_loss": 0.6555045687271697
+      },
+      {
+        "k": 20.0,
+        "home": 0.0,
+        "shrink": 0.0,
+        "log_loss": 0.641631027628125
+      },
+      {
+        "k": 20.0,
+        "home": 0.0,
+        "shrink": 0.25,
+        "log_loss": 0.6449532415593843
+      },
+      {
+        "k": 20.0,
+        "home": 0.0,
+        "shrink": 0.5,
+        "log_loss": 0.6506722120453738
+      },
+      {
+        "k": 20.0,
+        "home": 50.0,
+        "shrink": 0.0,
+        "log_loss": 0.626650552324995
+      },
+      {
+        "k": 20.0,
+        "home": 50.0,
+        "shrink": 0.25,
+        "log_loss": 0.6300830792003006
+      },
+      {
+        "k": 20.0,
+        "home": 50.0,
+        "shrink": 0.5,
+        "log_loss": 0.6359582575458239
+      },
+      {
+        "k": 20.0,
+        "home": 100.0,
+        "shrink": 0.0,
+        "log_loss": 0.6311691847752058
+      },
+      {
+        "k": 20.0,
+        "home": 100.0,
+        "shrink": 0.25,
+        "log_loss": 0.6350798210396901
+      },
+      {
+        "k": 20.0,
+        "home": 100.0,
+        "shrink": 0.5,
+        "log_loss": 0.6414703656149505
+      },
+      {
+        "k": 30.0,
+        "home": 0.0,
+        "shrink": 0.0,
+        "log_loss": 0.6401998867389154
+      },
+      {
+        "k": 30.0,
+        "home": 0.0,
+        "shrink": 0.25,
+        "log_loss": 0.6411781348576638
+      },
+      {
+        "k": 30.0,
+        "home": 0.0,
+        "shrink": 0.5,
+        "log_loss": 0.6452516265857225
+      },
+      {
+        "k": 30.0,
+        "home": 50.0,
+        "shrink": 0.0,
+        "log_loss": 0.6247013489745549
+      },
+      {
+        "k": 30.0,
+        "home": 50.0,
+        "shrink": 0.25,
+        "log_loss": 0.6258528284213147
+      },
+      {
+        "k": 30.0,
+        "home": 50.0,
+        "shrink": 0.5,
+        "log_loss": 0.6301255597708374
+      },
+      {
+        "k": 30.0,
+        "home": 100.0,
+        "shrink": 0.0,
+        "log_loss": 0.628656828245251
+      },
+      {
+        "k": 30.0,
+        "home": 100.0,
+        "shrink": 0.25,
+        "log_loss": 0.630296881383624
+      },
+      {
+        "k": 30.0,
+        "home": 100.0,
+        "shrink": 0.5,
+        "log_loss": 0.6351597350033927
+      }
+    ]
+  },
+  {
+    "lig": "U",
+    "sezon": "2026-27",
+    "model": "mov",
+    "k": 30.0,
+    "home_advantage": 50.0,
+    "shrink": 0.25,
+    "ewma_alpha": 0.2,
+    "validation_season": "2025-26",
+    "candidates": [
+      {
+        "k": 10.0,
+        "home": 0.0,
+        "shrink": 0.0,
+        "log_loss": 0.6374085351080941
+      },
+      {
+        "k": 10.0,
+        "home": 0.0,
+        "shrink": 0.25,
+        "log_loss": 0.6430939321652052
+      },
+      {
+        "k": 10.0,
+        "home": 0.0,
+        "shrink": 0.5,
+        "log_loss": 0.6498711578504397
+      },
+      {
+        "k": 10.0,
+        "home": 50.0,
+        "shrink": 0.0,
+        "log_loss": 0.6238588377396784
+      },
+      {
+        "k": 10.0,
+        "home": 50.0,
+        "shrink": 0.25,
+        "log_loss": 0.6294679813910805
+      },
+      {
+        "k": 10.0,
+        "home": 50.0,
+        "shrink": 0.5,
+        "log_loss": 0.6363015888742
+      },
+      {
+        "k": 10.0,
+        "home": 100.0,
+        "shrink": 0.0,
+        "log_loss": 0.6295240258354008
+      },
+      {
+        "k": 10.0,
+        "home": 100.0,
+        "shrink": 0.25,
+        "log_loss": 0.6354249660622922
+      },
+      {
+        "k": 10.0,
+        "home": 100.0,
+        "shrink": 0.5,
+        "log_loss": 0.6426269926242988
+      },
+      {
+        "k": 20.0,
+        "home": 0.0,
+        "shrink": 0.0,
+        "log_loss": 0.6282756987078144
+      },
+      {
+        "k": 20.0,
+        "home": 0.0,
+        "shrink": 0.25,
+        "log_loss": 0.6305158595413292
+      },
+      {
+        "k": 20.0,
+        "home": 0.0,
+        "shrink": 0.5,
+        "log_loss": 0.6353063872926036
+      },
+      {
+        "k": 20.0,
+        "home": 50.0,
+        "shrink": 0.0,
+        "log_loss": 0.6138606962791024
+      },
+      {
+        "k": 20.0,
+        "home": 50.0,
+        "shrink": 0.25,
+        "log_loss": 0.6163230462825838
+      },
+      {
+        "k": 20.0,
+        "home": 50.0,
+        "shrink": 0.5,
+        "log_loss": 0.6214167157926916
+      },
+      {
+        "k": 20.0,
+        "home": 100.0,
+        "shrink": 0.0,
+        "log_loss": 0.6185339534681857
+      },
+      {
+        "k": 20.0,
+        "home": 100.0,
+        "shrink": 0.25,
+        "log_loss": 0.6215764007983872
+      },
+      {
+        "k": 20.0,
+        "home": 100.0,
+        "shrink": 0.5,
+        "log_loss": 0.6273442493827528
+      },
+      {
+        "k": 30.0,
+        "home": 0.0,
+        "shrink": 0.0,
+        "log_loss": 0.6289257752192148
+      },
+      {
+        "k": 30.0,
+        "home": 0.0,
+        "shrink": 0.25,
+        "log_loss": 0.6285328707113205
+      },
+      {
+        "k": 30.0,
+        "home": 0.0,
+        "shrink": 0.5,
+        "log_loss": 0.6309851032396626
+      },
+      {
+        "k": 30.0,
+        "home": 50.0,
+        "shrink": 0.0,
+        "log_loss": 0.6138516105686068
+      },
+      {
+        "k": 30.0,
+        "home": 50.0,
+        "shrink": 0.25,
+        "log_loss": 0.6138357506947095
+      },
+      {
+        "k": 30.0,
+        "home": 50.0,
+        "shrink": 0.5,
+        "log_loss": 0.6167147239334438
+      },
+      {
+        "k": 30.0,
+        "home": 100.0,
+        "shrink": 0.0,
+        "log_loss": 0.6181304059508196
+      },
+      {
+        "k": 30.0,
+        "home": 100.0,
+        "shrink": 0.25,
+        "log_loss": 0.6187833055713999
+      },
+      {
+        "k": 30.0,
+        "home": 100.0,
+        "shrink": 0.5,
+        "log_loss": 0.622437073973379
+      }
+    ]
+  },
+  {
+    "lig": "U",
+    "sezon": "2026-27",
+    "model": "ewma",
+    "alpha": 0.1,
+    "validation_losses": [
+      0.626483059691811,
+      0.6271304742080388
+    ]
+  },
+  {
+    "lig": "U",
+    "sezon": "2026-27",
+    "model": "margin_ridge",
+    "alpha": 0.1,
+    "candidates": [
+      0.1,
+      10.0,
+      100.0
+    ],
+    "validation_mae": [
+      11.562375282955427,
+      11.56238431292455,
+      11.5636061505847
+    ],
+    "residual_sigma": 14.168842626091518,
+    "residual_mean": -0.7830483267093579,
+    "residual_normality_p": 0.1198942270780182,
+    "residual_skew": -0.15980222179132725,
+    "residual_excess_kurtosis": -0.5249378594482805
+  },
+  {
+    "lig": "U",
+    "sezon": "2026-27",
+    "model": "total_ridge",
+    "alpha": 0.1,
+    "candidates": [
+      0.1,
+      10.0,
+      100.0
+    ],
+    "validation_mae": [
+      15.146621017126348,
+      15.14686205671815,
+      15.152592582353911
+    ],
+    "residual_sigma": 18.084668032764625,
+    "residual_mean": 4.2347516104411405,
+    "residual_normality_p": 0.680711784824509,
+    "residual_skew": -0.1233950969958304,
+    "residual_excess_kurtosis": -0.22165629677951948
+  },
+  {
+    "lig": "U",
+    "sezon": "2026-27",
+    "model": "home",
+    "home_win_rate": 0.6132413087934561
+  },
+  {
+    "lig": "U",
+    "sezon": "2026-27",
+    "model": "logistic",
+    "parameter": 0.1,
+    "candidates": [
+      0.1,
+      1.0,
+      10.0
+    ],
+    "validation_losses": [
+      0.6259154576246673,
+      0.626483059691811,
+      0.6265578703844238
+    ],
+    "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
+    "calibration_coefficient": 0.7563576782001568,
+    "calibration_intercept": 0.0706046445089469
+  },
+  {
+    "lig": "U",
+    "sezon": "2026-27",
+    "model": "hist_gradient_boosting",
+    "parameter": {
+      "max_leaf_nodes": 7,
+      "l2_regularization": 10.0,
+      "max_iter": 100
+    },
+    "candidates": [
+      {
+        "max_leaf_nodes": 7,
+        "l2_regularization": 1.0,
+        "max_iter": 50
+      },
+      {
+        "max_leaf_nodes": 15,
+        "l2_regularization": 10.0,
+        "max_iter": 100
+      },
+      {
+        "max_leaf_nodes": 7,
+        "l2_regularization": 10.0,
+        "max_iter": 100
+      },
+      {
+        "max_leaf_nodes": 15,
+        "l2_regularization": 1.0,
+        "max_iter": 50
+      }
+    ],
+    "validation_losses": [
+      0.6553500158039137,
+      0.6520805378364276,
+      0.6438594712725443,
+      0.6690986212889021
+    ],
+    "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
+    "calibration_coefficient": 0.6339781536277151,
+    "calibration_intercept": 0.18724292453774244
   }
 ]
