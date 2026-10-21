@@ -10,6 +10,11 @@ from itertools import groupby
 import numpy as np
 import pandas as pd
 
+# Kutu özelliklerinin kullanıldığı ligler: backtest'te fayda sağladığı ölçülenler.
+# NBA: 2026-10-22 denemesinde log loss 0,6220 → 0,6227, toplam MAE 14,88 → 14,93 (kötüleşti), kapalı.
+# E/U: log loss 0,5955 → 0,5965 ve 0,6129 → 0,6158 (kötüleşti); toplam MAE yalnız U'da 14,59 → 14,54. Kapalı.
+# Sayı reytingleri tempo/verim bilgisinin çoğunu zaten taşıyor olabilir. Veri ve kod duruyor.
+KUTU_LIGLERI = set()
 KUTU_FEATURES = ['k_tempo', 'k_ortg_diff', 'k_drtg_diff', 'k_bek_toplam', 'k_bek_fark', 'k_kadro_diff', 'k_kadro_ort']
 VARSAYILAN = dict(tempo=72., ortg=108., kadro=.5)   # hiç veri yokken kullanılan nötr değerler
 

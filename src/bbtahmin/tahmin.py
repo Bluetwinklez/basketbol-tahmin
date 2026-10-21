@@ -9,7 +9,7 @@ import numpy as np
 import pandas as pd
 from scipy.stats import norm
 from .ozellik import build_features, FEATURES
-from .kutu_ozellik import kutu_ozellikleri, yukle, KUTU_FEATURES
+from .kutu_ozellik import kutu_ozellikleri, yukle, KUTU_FEATURES, KUTU_LIGLERI
 from .model import fit_predict, regression
 from .takim_ad import coz
 
@@ -85,7 +85,7 @@ def tahmin_et(lig, eslesmeler, tarih, veri='data/maclar.parquet'):
                        alpha=alpha, mov=True)
     cols = FEATURES
     kutu, oyuncular = yukle()
-    if kutu is not None and kutu.mac_id.str.startswith(lig).any():
+    if kutu is not None and lig in KUTU_LIGLERI and kutu.mac_id.str.startswith(lig).any():
         kf = kutu_ozellikleri(hepsi, kutu, oyuncular).set_index('mac_id').loc[hepsi.mac_id].reset_index(drop=True)
         x = pd.concat([x.reset_index(drop=True), kf[KUTU_FEATURES]], axis=1)
         cols = FEATURES + KUTU_FEATURES

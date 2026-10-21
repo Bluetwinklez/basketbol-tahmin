@@ -9,7 +9,9 @@ def main():
     collect.add_argument('--sbr-izni',action='store_true',
         help='SBR oran arşivini kullanma izniniz olduğunu onaylar (site şartları yazılı izin ister)')
     sub.add_parser('topla-kutu',help='EuroLeague/EuroCup kutu skorlarını ve oyuncu dakikalarını topla')
-    sub.add_parser('backtest')
+    bt=sub.add_parser('backtest')
+    bt.add_argument('--ligler',nargs='+',choices=['E','U','NBA'])
+    bt.add_argument('--cikti',default='docs/kanit',help='Başka klasör verilirse deneme koşusu: rapor yazılmaz')
     prediction=sub.add_parser('tahmin',help='Gelecek maçları tahmin et: tahmin "Fenerbahçe - Real Madrid" "Celtics - Lakers"')
     prediction.add_argument('maclar',nargs='+',help='"Ev - Deplasman" biçiminde bir ya da daha çok maç')
     prediction.add_argument('--lig',choices=['E','U','NBA'],help='Verilmezse takım adlarından bulunur')
@@ -30,7 +32,7 @@ def main():
         topla(maclar)
     elif args.command=='backtest':
         from .backtest import run
-        run()
+        run(args.ligler,args.cikti)
     elif args.command=='defter':
         from .defter import run
         run()
