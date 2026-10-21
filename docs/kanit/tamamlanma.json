@@ -1,0 +1,22 @@
+{
+  "timestamp": "2026-10-21T11:11:24.897414+00:00",
+  "audit": {
+    "passed": true,
+    "metric_rows": 175,
+    "prediction_rows": 44120,
+    "evaluated_games": 8824,
+    "windows": 35,
+    "probability_bounds": true,
+    "unique_predictions": true,
+    "recomputed_metrics": true,
+    "calibration_counts": true,
+    "training_precedes_test": true,
+    "parameter_selection": true,
+    "dataset_hash_unchanged": true
+  },
+  "pytest_tests": 34,
+  "pytest_failures": 0,
+  "prediction_smoke_test": true,
+  "calibration_png_visual_check": true,
+  "note": "PowerShell forwarded the Matplotlib font-cache informational stderr message as NativeCommandError; all 35 windows and outputs completed and the independent numeric audit passed."
+}
