@@ -7,6 +7,7 @@ import pandas as pd
 from scipy.stats import norm
 from sklearn.metrics import log_loss,brier_score_loss,accuracy_score,mean_absolute_error
 from .ozellik import build_features,FEATURES
+from .kutu_ozellik import kutu_ozellikleri,yukle,KUTU_FEATURES
 from .model import fit_predict,regression
 from .odds import american_decimal,no_vig,simulate
 
@@ -23,12 +24,18 @@ def run():
     all_games=pd.read_parquet('data/maclar.parquet')
     all_games=all_games[all_games.ev_skor.notna() & all_games.dep_skor.notna()]
     rows,params,predictions=[],[],[]
+    kutu,oyuncular=yukle()
     for league,g in all_games.groupby('lig'):
         g=g.sort_values(['tarih_utc','mac_id']).reset_index(drop=True)
         y=(g.ev_skor>g.dep_skor).to_numpy(dtype=int)
         margin=(g.ev_skor-g.dep_skor).to_numpy(dtype=float)
         total=(g.ev_skor+g.dep_skor).to_numpy(dtype=float)
         seasons=sorted(g.sezon.unique())
+        # Kutu skor özellikleri Elo parametresine bağlı değil: lig başına bir kez hesaplanır.
+        cols=FEATURES
+        if kutu is not None and kutu.mac_id.str.startswith(league).any():
+            kf=kutu_ozellikleri(g,kutu,oyuncular).set_index('mac_id').loc[g.mac_id].reset_index(drop=True)
+            cols=FEATURES+KUTU_FEATURES
         cache={}
         # Feature parameters are selected using only preceding-season validation.
         for mov in [False,True]:
@@ -65,9 +72,11 @@ def run():
                 pp=m.predict_proba(f.loc[val,FEATURES])[:,1]
                 alpha_losses.append(scores(y[val],pp)['log_loss']);alpha_features.append(f)
             alpha_index=int(np.argmin(alpha_losses));x=alpha_features[alpha_index]
+            if cols is not FEATURES:
+                x=pd.concat([x,kf[KUTU_FEATURES]],axis=1)
             params.append(dict(lig=league,sezon=season,model='ewma',alpha=[.1,.3][alpha_index],validation_losses=alpha_losses))
-            pm,rm=regression(x,margin,train,val,test)
-            pt,rt=regression(x,total,train,val,test)
+            pm,rm=regression(x,margin,train,val,test,cols)
+            pt,rt=regression(x,total,train,val,test,cols)
             # Skorlar yıllar içinde arttığı için toplam her sezon 2-5 sayı düşük kalıyordu; doğrulama
             # sezonundaki ortalama artık eklenir. (Lig seviyesinden sapma hedefi denendi, MAE'yi kötüleştirdi.)
             pt=pt+rt['residual_mean']
@@ -79,7 +88,7 @@ def run():
             probabilities={'home':np.full(test.sum(),home_rate),'elo':cache[selected['elo']].loc[test,'elo_p'].to_numpy(),
                            'mov_elo':cache[selected['mov']].loc[test,'elo_p'].to_numpy()}
             for kind in ['logistic','hist_gradient_boosting']:
-                probabilities[kind],details=fit_predict(kind,x,y,train,val,test)
+                probabilities[kind],details=fit_predict(kind,x,y,train,val,test,cols)
                 params.append(dict(lig=league,sezon=season,model=kind,**details))
             # Skor modeli: Ridge fark tahmini ve doğrulama sezonundaki artık sapmasıyla normal dağılım.
             probabilities['skor']=norm.cdf(pm/max(rm['residual_sigma'],1e-6))
