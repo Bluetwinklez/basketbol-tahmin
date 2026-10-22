@@ -95,7 +95,7 @@ def lig_bul(ev, dep, gecmis, tarih):
     raise ValueError('Takımlar desteklenen liglerde bulunamadı (EuroLeague, EuroCup, NBA).\n  ' + '\n  '.join(hatalar))
 
 
-def tahmin_et(lig, eslesmeler, tarih, veri='data/maclar.parquet', rapor=None):
+def tahmin_et(lig, eslesmeler, tarih, veri='data/maclar.parquet', rapor=None, adaptive_form=False):
     """eslesmeler: [(ev_kodu, dep_kodu)]. rapor: NBA sakatlık raporu (Out oyuncuları eksik sayılır)."""
     tarih = pd.Timestamp(tarih)
     tarih = tarih.tz_localize('Europe/Istanbul') if tarih.tzinfo is None else tarih
@@ -104,7 +104,10 @@ def tahmin_et(lig, eslesmeler, tarih, veri='data/maclar.parquet', rapor=None):
         from .cba_model import predict
         return [predict(ev,dep,tarih) for ev,dep in eslesmeler]
     if lig in ('ECW','FEC','VTB'):
-        from .competition_model import predict
+        if adaptive_form:
+            from .adaptive import predict
+        else:
+            from .competition_model import predict
         return [predict(lig,ev,dep,tarih) for ev,dep in eslesmeler]
     gecmis = pd.read_parquet(veri)
     gecmis = gecmis[(gecmis.lig == lig) & (gecmis.ev_skor > 0) & (gecmis.dep_skor > 0)
@@ -239,7 +242,9 @@ def oran_ayir(mac):
     return metin.strip(), *values
 
 
-def run(lig, maclar, tarih, json_cikti=False, kaydet=False, injury_report=False, confidence_threshold=None):
+def run(lig, maclar, tarih, json_cikti=False, kaydet=False, injury_report=False, confidence_threshold=None, adaptive_form=False):
+    if adaptive_form and lig not in ('ECW','FEC','VTB'):
+        raise ValueError('--adaptive-form requires an explicit ECW, FEC or VTB league')
     if confidence_threshold is not None and (not np.isfinite(confidence_threshold) or not .5<=confidence_threshold<=1):
         raise ValueError('Confidence threshold must be between 0.5 and 1')
     gecmis = pd.read_parquet('data/maclar.parquet')
@@ -277,7 +282,7 @@ def run(lig, maclar, tarih, json_cikti=False, kaydet=False, injury_report=False,
         except Exception as e:  # rapor alınamazsa tahmin eksiksiz kadro varsayımıyla verilir
             import sys
             print(f'[!] Sakatlık raporu alınamadı: {e}',file=sys.stderr)
-    sonuclar = [t for l, es in gruplar.items() for t in tahmin_et(l, es, tarih, rapor=rapor if l == 'NBA' else None)]
+    sonuclar = [t for l, es in gruplar.items() for t in tahmin_et(l, es, tarih, rapor=rapor if l == 'NBA' else None, adaptive_form=adaptive_form)]
     for t in sonuclar:
         if confidence_threshold is not None:
             t['guven_esigi']=confidence_threshold

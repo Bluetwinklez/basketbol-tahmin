@@ -18,6 +18,8 @@ A Python research package for pregame basketball probabilities, score margins an
 | Two-way, overtime-inclusive moneyline and full-game totals | Explicit market checks; integer totals include push probability |
 | Read-only MCP tools for local data, bulletin and predictions | Optional Python SDK extra; stdio tested |
 | Local odds history and movement | Pregame snapshots only, historical knowledge cutoffs, duplicate/conflict checks |
+| Adaptive form experiment | Optional earlier-season-gated monthly refits for ECW/FEC/VTB; default model remains fixed |
+| Auxiliary domestic/ABA workload | 39 official-club observations; partial coverage, diagnostic only, explicit missingness |
 | Confidence threshold and coverage report | Available; rejected predictions remain visible |
 | NBA injury PDF display | Optional `--sakatlik`; informational only |
 | Retrospective player-absence feature | **Disabled by default:** actual participants are postgame knowledge |
@@ -161,6 +163,12 @@ python -m bbtahmin bulten --lig ECW
 
 See [sources, coverage, test results and replay limits](docs/competitions.md). The five October 22 screenshot reconstructions were generated after tipoff and are excluded from prospective performance. No in-play support is implied for these competitions.
 
+## Adaptive form and domestic workload research
+
+An optional monthly-refit policy selected only from earlier-season results improved the same 214-game ECW 2025–26 test from **150 to 152 correct (70.09% → 71.03%)**, with a small log-loss improvement. FEC and VTB retained the fixed baseline. This is exploratory reuse of existing research seasons; no general accuracy increase has been established. The current 2026–27 selection keeps fixed updates in all three leagues.
+
+Use `tahmin --lig ECW --adaptive-form` with the usual matchup and timestamp arguments to inspect the optional policy. Defaults remain unchanged. A separate official-club archive adds **39 domestic/ABA observations** and explicit workload diagnostics; older training coverage is insufficient to include them in score fitting. See [methods, commands and limitations](docs/adaptive-form.md).
+
 ## Optional local MCP server
 
 ```bash
@@ -191,7 +199,7 @@ python -m pytest -q
 
 Tests are offline. Install the MCP extra to include its protocol test; otherwise that optional test skips. GitHub Actions installs the extra and runs the suite.
 
-Latest local verification (2026-10-22): **151 tests passed**, including new competition/gender checks, distinct Brno identities, cold starts, target-day leakage and nullable-overtime ledger recording; see [latest test evidence](docs/kanit/competitions/tests.xml). Earlier [CBA test evidence](docs/kanit/cba/tests.xml) is retained. Earlier 127-test and five-tool stdio checks are retained in [review_tests.xml](docs/kanit/review_tests.xml) and [mcp_smoke.json](docs/kanit/mcp_smoke.json). The extended server exposes six tools, including experimental manual-state CBA projection.
+Latest local verification (2026-10-22): **163 tests passed**, including monthly refit causality, auxiliary club workload, competition/gender checks, cold starts and ledger recording; see [latest test evidence](docs/kanit/adaptive/tests.xml). Earlier [151-test evidence](docs/kanit/competitions/tests.xml), [CBA tests](docs/kanit/cba/tests.xml), [review tests](docs/kanit/review_tests.xml) and [stdio checks](docs/kanit/mcp_smoke.json) are retained. The server exposes six read-only tools.
 
 A [fresh runtime verification](docs/kanit/runtime_validation/README.md) retrained all seven models for 2025–26 and partial 2026–27, reproduced 15,932 archived prediction rows within 2.04e-14, exercised a real bulletin fixture, and documented the rejection of unsupported live CBA games. It also reports the chronological **model-selection policy** separately from the fixed-model tables above: NBA 65.81% and NBL 59.22% across five completed seasons.
 

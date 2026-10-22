@@ -64,10 +64,14 @@ def predict(code,home,away,when):
     sm=errors[0]['sigma'];st=errors[1]['sigma']
     margin=float(np.clip(margin,-max(total,0.),max(total,0.)));total=max(0.,total)
     p=float(norm.cdf(margin/sm));path=Path(f'data/competitions/{code}.parquet')
+    from .club_context import load as load_context,team_status
+    auxiliary=load_context()
+    context=dict(home=team_status(auxiliary,home,date),away=team_status(auxiliary,away,date),
+        used_in_score_model=False,coverage='Partial official club cohorts; missing observations are not zero workload.')
     return dict(lig=code,ev=home,dep=away,tarih_utc=date.tz_convert('UTC').isoformat(),
         model=SPEC,ev_kazanir=p,ev_skor=max(0.,(total+margin)/2),dep_skor=max(0.,(total-margin)/2),
         fark=margin,fark_80=[margin-z*sm,margin+z*sm],toplam=total,toplam_80=[max(0.,total-z*st),total+z*st],
-        tum_modeller={SPEC:p},uzatma=None,az_veri=low,recent_games=counts,
+        tum_modeller={SPEC:p},uzatma=None,az_veri=low,recent_games=counts,auxiliary_workload=context,
         training_cutoff=cutoff.isoformat(),calibration_season=earlier[-1],experimental=True,
         dataset_sha256=hashlib.sha256(path.read_bytes()).hexdigest(),
         note='Independent competition/gender model. Low-history forecasts rely heavily on league priors; their intervals are not separately validated. Historical scores may include overtime; ties excluded from binary winner evaluation.')

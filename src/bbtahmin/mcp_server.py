@@ -28,7 +28,8 @@ def create_server(root):
         """Show stored league coverage and whether the bulletin exists; no network requests."""
         g=pd.read_parquet(root/'data/maclar.parquet')
         cba=root/'data/cba_games.parquet'
-        return dict(games=len(g),leagues={str(k):int(v) for k,v in g.groupby('lig').size().items()},
+        context=root/'data/context/club_games.parquet'
+        return dict(auxiliary_club_games=len(pd.read_parquet(context)) if context.exists() else 0,games=len(g),leagues={str(k):int(v) for k,v in g.groupby('lig').size().items()},
                     cba_games=len(pd.read_parquet(cba)) if cba.exists() else 0,
                     experimental_competitions={code:len(pd.read_parquet(path)) for code in ('ECW','FEC','VTB') if (path:=root/f'data/competitions/{code}.parquet').exists()},
                     latest_game_utc=g.tarih_utc.max().isoformat(),bulletin_available=(root/'data/bulten/latest.json').exists())
@@ -76,7 +77,7 @@ def create_server(root):
         result={}
         for name,filename in [('pregame_verified','completed_seasons.csv'),
                               ('data_expansion_model','summary.csv'),('feature_research','summary.csv'),
-                              ('calibration_research','summary.csv'),('competitions','summary.csv')]:
+                              ('calibration_research','summary.csv'),('competitions','summary.csv'),('adaptive','summary.csv')]:
             path=root/f'docs/kanit/{name}/{filename}'
             if path.exists():
                 t=pd.read_csv(path)

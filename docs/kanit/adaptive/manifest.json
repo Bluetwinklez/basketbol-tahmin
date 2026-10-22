@@ -1,0 +1,16 @@
+{
+  "spec": "competition-monthly-prior-gate-v1",
+  "generated_at_utc": "2026-10-22T20:48:54.592104+00:00",
+  "files": {
+    "data/competitions/ECW.parquet": "96a0ba7dcd86d05a196d6b4f1dec6c7b901927171f1042d847452715d946c0b4",
+    "data/competitions/FEC.parquet": "56771b499724c5d6164b02103cc349224a19704fe9625736e5b4aa9a8cd7d9c2",
+    "data/competitions/VTB.parquet": "b1c55c4f80374ca74d07bb1ab639750bf1742beaa53341fd3c621f955c0199a1"
+  },
+  "packages": {
+    "numpy": "2.2.6",
+    "pandas": "2.2.3",
+    "scipy": "1.15.3",
+    "scikit-learn": "1.6.1"
+  },
+  "method": "Prior-season-only selection; candidate expands training at UTC month boundaries, never with current-month outcomes. Same evaluation rows. Existing historical research seasons reused; exploratory, not an untouched holdout."
+}
