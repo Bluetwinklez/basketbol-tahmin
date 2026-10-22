@@ -1,0 +1,16 @@
+{
+  "experimental": true,
+  "activated": false,
+  "source_sha256": "a7194e949217dafea705bfd00ba530ac85795ed1fde7af83f71c1abc5e11e1b7",
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "packages": {
+    "numpy": "2.2.6",
+    "pandas": "2.2.3",
+    "scipy": "1.15.3",
+    "scikit-learn": "1.6.1"
+  },
+  "method": "Unpenalized Platt on all strictly earlier completed-season OOS score probabilities.",
+  "warmup": "2021-22 excluded from both candidate and baseline; partial current season excluded.",
+  "limitations": "Exploratory comparison on existing research seasons; not a new untouched holdout.",
+  "timestamp": "2026-10-22T11:44:19.973768+00:00"
+}

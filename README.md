@@ -14,6 +14,7 @@ A Python research package for pregame basketball probabilities, score margins an
 | Experimental Iddaa basketball bulletin | Website JSON backend tested; no API key; upstream may change |
 | Two-way, overtime-inclusive moneyline and full-game totals | Explicit market checks; integer totals include push probability |
 | Read-only MCP tools for local data, bulletin and predictions | Optional Python SDK extra; stdio tested |
+| Local odds history and movement | Pregame snapshots only, historical knowledge cutoffs, duplicate/conflict checks |
 | Confidence threshold and coverage report | Available; rejected predictions remain visible |
 | NBA injury PDF display | Optional `--sakatlik`; informational only |
 | Retrospective player-absence feature | **Disabled by default:** actual participants are postgame knowledge |
@@ -61,6 +62,15 @@ python -m bbtahmin bulten --lig NBA --limit 10
 python -m bbtahmin bulten --tahmin EVENT_ID
 ```
 
+Inspect locally recorded odds changes without downloading new data:
+
+```bash
+python -m bbtahmin bulten --gecmis EVENT_ID
+python -m bbtahmin bulten --gecmis EVENT_ID --asof 2026-10-22T10:00:00Z
+```
+
+History uses only snapshots captured before tipoff and no later than the requested cutoff. Duplicate captures count once; conflicting prices or changed fixture identities fail explicitly. The first and last **locally observed** quotes are not verified bookmaker opening/closing prices. Refreshes build a local archive under `data/bulten/`; archive files are ignored by Git and are not a historical data download. Movement is a diagnostic and remains outside the prediction model.
+
 This is an **experimental adapter for Iddaa's website backend**, not a contracted developer API and not a Nesine API. It does not log in, purchase a plan or submit a bet. Snapshots older than 15 minutes cannot be used for an odds comparison; started fixtures are refused by the pregame model.
 
 Market configuration is checked explicitly. Regulation/first-half/three-way markets are not treated as two-way overtime moneylines. Unsupported competitions, including women's competitions without a matching model, cannot silently use the men's model. Source minimum-combination counts and alternative price fields are retained; expected-return arithmetic is not proof that a standalone selection is executable or profitable. Quarter-point Asian totals are excluded from the simple settlement calculation.
@@ -94,7 +104,9 @@ For the NBA score model on those **same 6,605 games**:
 
 The 79.69% number describes a selected quarter of the games, **not overall accuracy**, future certainty or profitability. Thresholds are descriptive diagnostics, not a claim that a threshold optimized on this report will generalize. Full tables: [confidence.csv](docs/kanit/pregame_verified/confidence.csv).
 
-Artifact manifests record feature semantics, data fingerprints and parameter/metric checksums. Prediction output includes artifact status. Old reports in `docs/sonuclar.md` and top-level `docs/kanit` are retained as historical snapshots; their absence-enhanced results must not be presented as current, achievable pregame performance.
+Artifact manifests record feature semantics, data fingerprints and parameter/metric checksums. Prediction output includes artifact status for the actual input dataset. Default prediction fails with a rebuild instruction if the verified benchmark is missing or invalid; it cannot silently switch to legacy parameters or use an unsigned aggregate to select a model. Old reports in `docs/sonuclar.md` and top-level `docs/kanit` are retained as historical snapshots; their absence-enhanced results must not be presented as current, achievable pregame performance.
+
+An additional chronological Platt-calibration experiment uses strictly earlier seasons' out-of-sample score predictions. EuroLeague accuracy changed from **64.49% to 65.42%** on 1,391 matched games, but NBA accuracy did not improve and NBL deteriorated. These 2022–23 through 2025–26 comparisons exclude the 2021–22 warmup season from both variants and are **not directly comparable to the five-season table above**. The candidate remains disabled pending untouched future evaluation. [Fold results and method](docs/kanit/calibration_research/).
 
 ## Reproduce or extend the data
 
@@ -106,6 +118,7 @@ python scripts/audit_dataset.py
 python -m bbtahmin backtest --ilk-test 2021 --cikti docs/kanit/pregame_verified
 python scripts/confidence_report.py
 PYTHONPATH=src python scripts/evaluate_features.py
+python scripts/evaluate_calibration.py
 ```
 
 `--ilk-test` limits evaluated test seasons; it does not discard earlier training history. For standalone scripts on Windows, use `$env:PYTHONPATH='src'` instead of the POSIX prefix when needed.
@@ -142,7 +155,7 @@ Example configuration for a stdio-capable MCP host:
 }
 ```
 
-On Windows, use the absolute `.venv\\Scripts\\python.exe` path, escaped for JSON. Tools: `dataset_status`, `bulletin_events`, `predict_bulletin_event`, `research_results`. They are read-only and do not refresh upstream data or modify the ledger. Run the bulletin refresh explicitly in the CLI. The server was tested over actual stdio and an in-memory protocol client; no host configuration is changed by installing the package.
+On Windows, use the absolute `.venv\\Scripts\\python.exe` path, escaped for JSON. Tools: `dataset_status`, `bulletin_events`, `bulletin_history`, `predict_bulletin_event`, `research_results`. They are read-only and do not refresh upstream data or modify the ledger. Run the bulletin refresh explicitly in the CLI. The server was tested over actual stdio and an in-memory protocol client; no host configuration is changed by installing the package.
 
 ## Tests and next priorities
 
@@ -151,5 +164,7 @@ python -m pytest -q
 ```
 
 Tests are offline. Install the MCP extra to include its protocol test; otherwise that optional test skips. GitHub Actions installs the extra and runs the suite.
+
+Latest local verification (2026-10-22): **127 tests passed** with the pinned requirements and MCP extra. A separate real-stdio smoke check exercised five tools, local odds history and a current bulletin event prediction; evidence is stored in [review_tests.xml](docs/kanit/review_tests.xml) and [mcp_smoke.json](docs/kanit/mcp_smoke.json).
 
 The highest-priority research additions are point-in-time injury/lineup history, timestamped market snapshots, stronger player/rotation value estimates, domestic-league workload and travel, and chronological calibration/interval checks. The implemented shooting-profile experiment did not consistently improve outcomes and remains disabled. Detailed priorities, reviewed repositories, provider limitations and measured ablations are in [research-and-roadmap.md](docs/research-and-roadmap.md).

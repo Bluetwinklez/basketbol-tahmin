@@ -46,11 +46,18 @@ def create_server(root):
             return predict_event(event_id,root)
 
     @server.tool(annotations=readonly)
+    def bulletin_history(event_id: str, as_of: str | None = None, limit: int = 200) -> dict:
+        """Read local pregame odds observations up to a past cutoff; never refresh."""
+        from .market_history import history
+        return history(event_id,root,as_of,limit)
+
+    @server.tool(annotations=readonly)
     def research_results() -> dict:
         """Read fixed research summaries; these are not prospective live accuracy figures."""
         result={}
         for name,filename in [('pregame_verified','completed_seasons.csv'),
-                              ('data_expansion_model','summary.csv'),('feature_research','summary.csv')]:
+                              ('data_expansion_model','summary.csv'),('feature_research','summary.csv'),
+                              ('calibration_research','summary.csv')]:
             path=root/f'docs/kanit/{name}/{filename}'
             if path.exists():
                 t=pd.read_csv(path)

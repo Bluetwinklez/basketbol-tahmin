@@ -27,11 +27,20 @@ def verified_path(filename,directory='docs/kanit/pregame_verified'):
     return root/filename if verified_manifest(directory) and (root/filename).exists() else None
 
 
-def status(directory='docs/kanit/pregame_verified'):
+def require_verified_path(filename,directory='docs/kanit/pregame_verified'):
+    path=verified_path(filename,directory)
+    if path is None:
+        raise ValueError('Missing or invalid pregame_verified benchmark; rerun '
+                         'python -m bbtahmin backtest --ilk-test 2021 '
+                         '--cikti docs/kanit/pregame_verified')
+    return path
+
+
+def status(directory='docs/kanit/pregame_verified',dataset='data/maclar.parquet'):
     manifest=verified_manifest(directory)
     if manifest is None:
-        return dict(verified=False,note='Legacy parameters; refresh the pregame_verified benchmark.')
-    path=Path('data/maclar.parquet')
+        return dict(verified=False,note='Invalid benchmark; default predictions require a refresh.')
+    path=Path(dataset)
     match=path.exists() and hashlib.sha256(path.read_bytes()).hexdigest()==manifest['dataset_sha256']
     return dict(verified=True,evaluated_at=manifest['timestamp'],dataset_matches_evaluation=bool(match),
                 absence_features=bool(manifest['absence_leagues']))

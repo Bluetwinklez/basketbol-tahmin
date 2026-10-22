@@ -31,15 +31,26 @@ def main():
     bulletin.add_argument('--guncelle',action='store_true',help='Web backendinden üç salt-okunur GET isteği yap')
     bulletin.add_argument('--lig',choices=['E','U','NBA','NBL'])
     bulletin.add_argument('--limit',type=int,default=30)
-    bulletin.add_argument('--tahmin',help='Yerel bültendeki bir etkinlik kimliği için model/piyasa karşılaştırması')
+    action=bulletin.add_mutually_exclusive_group()
+    action.add_argument('--tahmin',help='Yerel bültendeki bir etkinlik kimliği için model/piyasa karşılaştırması')
+    action.add_argument('--gecmis',help='Etkinlik kimliğinin yerel maç önü oran geçmişi')
+    bulletin.add_argument('--asof',help='Oran geçmişi için saat dilimli bilgi kesim zamanı; gelecekte olamaz')
     args=parser.parse_args()
     if args.command=='bulten':
         import json
+        if args.asof and not args.gecmis:
+            parser.error('--asof requires --gecmis')
+        if args.guncelle and args.asof:
+            parser.error('Historical as-of queries cannot refresh providers')
         if args.guncelle:
             from .veri.iddaa import collect
             collect()
         from .bulletin import list_events,predict_event
-        result=predict_event(args.tahmin) if args.tahmin else list_events(league=args.lig,limit=args.limit)
+        if args.gecmis:
+            from .market_history import history
+            result=history(args.gecmis,as_of=args.asof,limit=args.limit)
+        else:
+            result=predict_event(args.tahmin) if args.tahmin else list_events(league=args.lig,limit=args.limit)
         print(json.dumps(result,ensure_ascii=False,indent=2,allow_nan=False))
     elif args.command=='topla':
         from .veri.collect import run

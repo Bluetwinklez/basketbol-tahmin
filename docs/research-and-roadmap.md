@@ -28,6 +28,8 @@ A website's internal endpoint being reachable does not establish a stable schema
 | [sportsdataverse/hoopR](https://github.com/sportsdataverse/hoopR) | Schedule, box-score and play-by-play workflows | Useful source ecosystem; existing sportsdataverse files are already normalized in this repository. |
 | [MCP Python SDK](https://github.com/modelcontextprotocol/python-sdk) | Typed local tools and stdio transport | Optional SDK 2.3.0 integration added and tested with a real protocol client. |
 | [scikit-learn calibration docs](https://scikit-learn.org/stable/modules/calibration.html) | Calibration is evaluated separately from hit rate | Continue chronological holdouts. Calibrated probabilities, confidence intervals and accuracy are different measurements. |
+| [roni-altshuler/nba_predictor](https://github.com/roni-altshuler/nba_predictor) | Monthly refits, paired closing-market comparisons, separately scored published forecasts | Useful evaluation and product patterns. Its own README reports the market outperforming its model; neither its accuracy nor its data split is interchangeable with this project's results. Source claims were reviewed, not independently reproduced. |
+| [s9b/NBA-Predictor](https://github.com/s9b/NBA-Predictor) | Injury/market context, multiple learners, player usage and schedule features | README documents these candidates; training implementation was not verified in this pass. A larger feature/model count is not evidence of greater accuracy. Market features require genuinely historical timestamps before any evaluation. |
 
 ## Bugs and gaps addressed in this review
 
@@ -39,6 +41,8 @@ A website's internal endpoint being reachable does not establish a stable schema
 6. **Stale evaluation artifacts:** new manifests fingerprint the dataset, feature semantics and parameter/metric files. Predictions prefer the verified evaluation and report its status. Legacy actual-participation metrics are not relabeled as current results.
 7. **Unnecessary loading/network work:** disabled auxiliary feature tables are not loaded for every prediction; injury-PDF downloads require explicit `--sakatlik`.
 8. **Operational access:** explicit bulletin refresh, freshness checks, supported-league checks, overtime/period checks, integer-line push handling, read-only MCP tools and offline CI were added.
+9. **Silent legacy fallback:** default predictions previously fell back to legacy evaluation files if verified artifacts failed validation. They now stop with a rebuild command. Model selection uses the checksummed per-season metrics instead of an unsigned aggregate, and dataset status fingerprints the actual input path.
+10. **Unused local odds archive:** `bulten --gecmis EVENT_ID [--asof TIMESTAMP]` and the read-only `bulletin_history` MCP tool now expose pregame observations without future quotes. Duplicate capture instants count once; conflicting quotes and changed fixture identities fail explicitly. First/last local observations are not relabeled opening/closing prices, and price movement is not activated as a predictive feature.
 
 ## Measured model experiments
 
@@ -50,12 +54,25 @@ The [ablation](kanit/feature_research/summary.csv) keeps games and fold paramete
 
 A separate [confidence report](kanit/pregame_verified/confidence.csv) shows that higher observed hit rates on strong favorites come with lower coverage: NBA score-model accuracy was **65.80% across 6,605 games**, versus **79.69% across 1,684 selected games (25.50% coverage)** at a 70% predicted-winner threshold. Wilson intervals and all fixed thresholds are published. This is a subset diagnostic, not a new universal accuracy figure or a betting-profit result.
 
+### Additional chronological score calibration
+
+`python scripts/evaluate_calibration.py` applies unpenalized Platt calibration to archived score-model probabilities. Each target season uses only the out-of-sample predictions/outcomes of strictly earlier completed seasons. The warmup 2021–22 season is excluded from both variants; current partial-season results are excluded. Target/future outcome mutation tests verify that earlier calibrated probabilities stay unchanged. Environment versions and the input archive checksum are recorded with [fold-level evidence](kanit/calibration_research/).
+
+| League | Identical games, 2022–23 to 2025–26 | Baseline accuracy → calibrated | Baseline log loss → calibrated |
+|---|---:|---:|---:|
+| EuroLeague | 1,391 | 64.49% → 65.42% | 0.61797 → 0.61754 |
+| NBA | 5,282 | 65.94% → 65.87% | 0.61704 → 0.61663 |
+| NBL | 676 | 60.65% → 58.14% | 0.66002 → 0.67380 |
+| EuroCup | 781 | 66.07% → 66.84% | 0.60668 → 0.60803 |
+
+The mixed results do not establish a general improvement. EuroCup illustrates why higher hit rate alone can accompany worse probabilities. This is exploratory reuse of existing research seasons, not a new untouched holdout; **no second-stage calibrator was activated**. The five-season README baseline must not be compared directly to this four-season subset.
+
 ## Prioritized additions that could improve real pregame performance
 
 | Priority | Addition | Why it may help | Evidence / acceptance requirement |
 |---|---|---|---|
 | 1 | Timestamped official injury and expected-lineup history | Replaces postgame absence proxies with information actually available before tipoff | Published/observed timestamps, fixture identity, status revisions; chronological ablation against injury-free baseline |
-| 1 | Opening/current/closing odds snapshots | Supplies a strong market baseline and allows movement/closing-line comparison | Same settlement rules, bookmaker identity, MBS/promotion restrictions, timestamps before each prediction cutoff; never train an early forecast with a later closing quote |
+| 1 | Verified opening/current/closing odds dataset | Supplies a strong market baseline and allows movement/closing-line comparison; local capture and as-of query infrastructure now exists | Collect adequate history, verify true opening/closing coverage, keep identical settlement rules/bookmakers/MBS restrictions; never train an early forecast with a later closing quote |
 | 2 | Player and rotation impact | Team averages miss star absences, minutes changes and transfers | Lagged minutes/value estimates from player/PBP data; no current-game participation leakage |
 | 2 | Domestic league workload for European clubs | European-only history misses local games, rest and congestion | Reliable BSL/ACB/etc. schedules and cross-source team identity; joint workload features from past games only |
 | 2 | Better calibration and predictive intervals | Useful probabilities need more than winner hit rate | Chronological calibration folds, reliability curves, Brier/log loss and interval coverage; compare to Elo and market |
