@@ -29,8 +29,10 @@ def _son(kayitlar):
     return sorted(kayitlar, key=lambda r: r['sezon'])[-1] if kayitlar else None
 
 
-def parametreler(lig, yol='docs/kanit/parametreler.json'):
+def parametreler(lig, yol='docs/kanit/parametreler.json', sezon=None):
     kayitlar = [r for r in json.loads(Path(yol).read_text('utf8')) if r.get('lig') == lig]
+    if sezon is not None:
+        kayitlar = [r for r in kayitlar if r['sezon'] <= sezon]
     mov = _son([r for r in kayitlar if r.get('model') == 'mov'])
     if not mov:
         raise ValueError(f'{lig} için doğrulanmış parametre yok; önce "python -m bbtahmin backtest" çalıştırın')
@@ -38,20 +40,30 @@ def parametreler(lig, yol='docs/kanit/parametreler.json'):
     return mov, (ewma['alpha'] if ewma else .2)
 
 
-def en_iyi_model(lig, yol='docs/kanit/toplam.csv'):
+def en_iyi_model(lig, yol='docs/kanit/toplam.csv', sezon=None):
     """Backtest'te o ligde en düşük log loss'u veren model."""
     try:
+        if sezon is not None:
+            # Aggregate test results may include the target season. Model choice
+            # for a historical query can use only earlier completed seasons.
+            metrics = pd.read_csv(Path(yol).with_name('metrikler.csv'))
+            metrics = metrics[(metrics.lig == lig) & (metrics.sezon < sezon) & metrics.model.isin(MODELLER)]
+            if metrics.empty:
+                return 'mov_elo'
+            losses = metrics.assign(weighted=metrics.log_loss * metrics.n).groupby('model')[['weighted','n']].sum()
+            return (losses.weighted / losses.n).idxmin()
         t = pd.read_csv(yol)
         t = t[(t.lig == lig) & t.model.isin(MODELLER)]
         return t.sort_values('log_loss').iloc[0].model if len(t) else 'topluluk'
     except (OSError, KeyError):
-        return 'topluluk'
+        return 'mov_elo' if sezon is not None else 'topluluk'
 
 
 def aktif_kodlar(gecmis, lig, tarih, gun=400):
     """Son `gun` günde o ligde oynamış takımlar. Ligden ayrılmış takım (ör. 2022'den beri
     EuroLeague'de olmayan Zenit) eski reytingiyle tahmin edilmesin diye eşleşmez."""
-    son = gecmis[(gecmis.lig == lig) & (gecmis.tarih_utc >= tarih - pd.Timedelta(days=gun))]
+    son = gecmis[(gecmis.lig == lig) & (gecmis.tarih_utc >= tarih - pd.Timedelta(days=gun))
+                 & (gecmis.tarih_utc < tarih)]
     return set(son.ev) | set(son.dep)
 
 
@@ -73,9 +85,9 @@ def tahmin_et(lig, eslesmeler, tarih, veri='data/maclar.parquet', rapor=None):
     tarih = tarih.tz_localize('Europe/Istanbul') if tarih.tzinfo is None else tarih
     tarih = tarih.tz_convert('UTC')
     gecmis = pd.read_parquet(veri)
-    gecmis = gecmis[(gecmis.lig == lig) & gecmis.ev_skor.notna() & gecmis.dep_skor.notna()
+    gecmis = gecmis[(gecmis.lig == lig) & (gecmis.ev_skor > 0) & (gecmis.dep_skor > 0)
                     & (gecmis.tarih_utc < tarih.floor('D'))].copy()
-    mov, alpha = parametreler(lig)
+    mov, alpha = parametreler(lig, sezon=sezon_adi(tarih))
     sorgular = pd.DataFrame([dict(mac_id=f'SORGU_{i}', lig=lig, sezon=sezon_adi(tarih), tarih_utc=tarih,
                                   ev=ev, dep=dep, ev_skor=np.nan, dep_skor=np.nan, tarafsiz_saha=False)
                              for i, (ev, dep) in enumerate(eslesmeler)])
@@ -112,7 +124,9 @@ def tahmin_et(lig, eslesmeler, tarih, veri='data/maclar.parquet', rapor=None):
     if not tam:
         raise ValueError(f'{lig}: kalibrasyon için tamamlanmış sezon yok')
     dogrulama = (hepsi.sezon == tam[-1]).to_numpy() & ~sorgu
-    egitim = ~dogrulama & ~sorgu
+    # Current-season results must not train a model whose calibration holdout
+    # is the preceding season. Match the chronological backtest split.
+    egitim = (hepsi.sezon < tam[-1]).to_numpy() & ~sorgu
     p_log, _ = fit_predict('logistic', x, y, egitim, dogrulama, sorgu, cols)
     p_hgb, _ = fit_predict('hist_gradient_boosting', x, y, egitim, dogrulama, sorgu, cols)
     pm, rm = regression(x, fark, egitim, dogrulama, sorgu, cols)
@@ -122,7 +136,7 @@ def tahmin_et(lig, eslesmeler, tarih, veri='data/maclar.parquet', rapor=None):
     olasilik = {'logistic': p_log, 'hist_gradient_boosting': p_hgb,
                 'mov_elo': x.loc[sorgu, 'elo_p'].to_numpy(), 'skor': norm.cdf(pm / sm)}
     olasilik['topluluk'] = np.mean([olasilik['logistic'], olasilik['mov_elo'], olasilik['skor']], axis=0)
-    secilen = en_iyi_model(lig)
+    secilen = en_iyi_model(lig, sezon=sezon_adi(tarih))
     # Uzatma olasılığı: normal süre farkının 0 olma yoğunluğu, ligin geçmiş uzatma oranına ölçeklenir.
     # Ölçek için tüm maçların fark dağılımı kullanılır (tahmin ve artık dağılımlarının toplamı).
     gecmis_fark = fark[~sorgu]

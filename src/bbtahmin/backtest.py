@@ -25,7 +25,7 @@ def run(ligler=None,cikti='docs/kanit'):
     output=Path(cikti); output.mkdir(parents=True,exist_ok=True)
     deneme=cikti!='docs/kanit'
     all_games=pd.read_parquet('data/maclar.parquet')
-    all_games=all_games[all_games.ev_skor.notna() & all_games.dep_skor.notna()]
+    all_games=all_games[(all_games.ev_skor>0) & (all_games.dep_skor>0)]
     rows,params,predictions=[],[],[]
     kutu,oyuncular=yukle()
     oyuncu_mac=eksik_yukle()
