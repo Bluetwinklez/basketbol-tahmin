@@ -1,0 +1,355 @@
+{
+  "recorded_at_utc": "2026-10-22T12:44:11.372424+00:00",
+  "model_github_commit": "50c3f03f403d511c96740abaa6f6c3078c7bb716",
+  "source": "User screenshot, phone clock 15:43 Europe/Istanbul; timestamp precision one minute, not independently verified feed.",
+  "observation_time_assumption": "2026-10-22T15:43:00+03:00",
+  "status": "Predictions frozen before looking up subsequent outcomes",
+  "evaluation": "Compare regulation leader and absolute regulation total/score error after verified final results; exclude ties from binary lead accuracy and report OT separately. Five late-game matches are a small, selected demonstration, not general model accuracy.",
+  "fixtures": [
+    {
+      "home_name": "Shanxi",
+      "away_name": "Shanghai",
+      "recorded_at_utc": "2026-10-22T12:44:11.943806+00:00",
+      "prediction": {
+        "home_score": 98.63483209446471,
+        "away_score": 91.36981895438507,
+        "total": 190.00465104884978,
+        "margin": 7.265013140079645,
+        "home_regulation_lead_probability": 0.7756116074024175,
+        "total_80": [
+          177.30559956079532,
+          202.70370253690425
+        ],
+        "elapsed_fraction": 0.5341666666666667,
+        "regulation_minutes": 40,
+        "period": 3,
+        "remaining": "08:38",
+        "score_observed": [
+          56,
+          48
+        ],
+        "experimental": true,
+        "note": "Regulation score projection. Win probability uses normal residual approximation; quarter-boundary evaluation does not establish within-quarter calibration. No overtime projection.",
+        "home": "CBA_638",
+        "away": "CBA_76",
+        "observed_at_utc": "2026-10-22T12:43:00+00:00",
+        "replay": false,
+        "input_source": "Manual observed game state; not an automatic live feed",
+        "prior": {
+          "lig": "CBA",
+          "ev": "CBA_638",
+          "dep": "CBA_76",
+          "tarih_utc": "2026-10-22T12:43:00+00:00",
+          "model": "cba-ridge-per40-v1",
+          "ev_kazanir": 0.5389505946106876,
+          "ev_skor": 93.03178573796792,
+          "dep_skor": 91.8085604815759,
+          "fark": 1.2232252563920176,
+          "fark_80": [
+            -14.807263035385171,
+            17.253713548169205
+          ],
+          "toplam": 184.84034621954382,
+          "toplam_80": [
+            162.20500330359258,
+            207.47568913549506
+          ],
+          "tum_modeller": {
+            "cba-ridge-per40-v1": 0.5389505946106876
+          },
+          "uzatma": null,
+          "az_veri": [],
+          "regulation_minutes": 40,
+          "training_cutoff": "2026-10-22T00:00:00+00:00",
+          "calibration_season": "2025-26",
+          "experimental": true,
+          "dataset_sha256": "ff8708583942a0c98e2225086a35e3c54daff09ba2d308f0c39b22d23de0c1db",
+          "dataset_matches_evaluation": true,
+          "note": "CBA-only research model. Historical overtime totals may be included; live projections target regulation."
+        },
+        "model": "cba-remaining-ridge-v1",
+        "quarter_dataset_sha256": "c23be4386027f97f09e70b5d1507eba9d36e9ad1b4e8299de1d20bc7a00df47b",
+        "quarter_dataset_matches_evaluation": true,
+        "training_games": 120,
+        "calibration_season": "2025-26"
+      },
+      "actual_final": null
+    },
+    {
+      "home_name": "Fujian",
+      "away_name": "Ningbo",
+      "recorded_at_utc": "2026-10-22T12:44:12.334263+00:00",
+      "prediction": {
+        "home_score": 91.30806504600679,
+        "away_score": 84.67447870251783,
+        "total": 175.98254374852462,
+        "margin": 6.6335863434889575,
+        "home_regulation_lead_probability": 0.7609276118391941,
+        "total_80": [
+          163.59979632477427,
+          188.36529117227496
+        ],
+        "elapsed_fraction": 0.5570833333333334,
+        "regulation_minutes": 40,
+        "period": 3,
+        "remaining": "07:43",
+        "score_observed": [
+          50,
+          48
+        ],
+        "experimental": true,
+        "note": "Regulation score projection. Win probability uses normal residual approximation; quarter-boundary evaluation does not establish within-quarter calibration. No overtime projection.",
+        "home": "CBA_290",
+        "away": "CBA_86",
+        "observed_at_utc": "2026-10-22T12:43:00+00:00",
+        "replay": false,
+        "input_source": "Manual observed game state; not an automatic live feed",
+        "prior": {
+          "lig": "CBA",
+          "ev": "CBA_290",
+          "dep": "CBA_86",
+          "tarih_utc": "2026-10-22T12:43:00+00:00",
+          "model": "cba-ridge-per40-v1",
+          "ev_kazanir": 0.8194868378525079,
+          "ev_skor": 93.54214139580749,
+          "dep_skor": 82.11659463915971,
+          "fark": 11.425546756647782,
+          "fark_80": [
+            -4.604941535129408,
+            27.456035048424972
+          ],
+          "toplam": 175.6587360349672,
+          "toplam_80": [
+            153.02339311901596,
+            198.29407895091845
+          ],
+          "tum_modeller": {
+            "cba-ridge-per40-v1": 0.8194868378525079
+          },
+          "uzatma": null,
+          "az_veri": [],
+          "regulation_minutes": 40,
+          "training_cutoff": "2026-10-22T00:00:00+00:00",
+          "calibration_season": "2025-26",
+          "experimental": true,
+          "dataset_sha256": "ff8708583942a0c98e2225086a35e3c54daff09ba2d308f0c39b22d23de0c1db",
+          "dataset_matches_evaluation": true,
+          "note": "CBA-only research model. Historical overtime totals may be included; live projections target regulation."
+        },
+        "model": "cba-remaining-ridge-v1",
+        "quarter_dataset_sha256": "c23be4386027f97f09e70b5d1507eba9d36e9ad1b4e8299de1d20bc7a00df47b",
+        "quarter_dataset_matches_evaluation": true,
+        "training_games": 120,
+        "calibration_season": "2025-26"
+      },
+      "actual_final": null
+    },
+    {
+      "home_name": "Guangdong",
+      "away_name": "Zhejiang Lions",
+      "recorded_at_utc": "2026-10-22T12:44:12.756271+00:00",
+      "prediction": {
+        "home_score": 89.44564224737172,
+        "away_score": 81.89785997067396,
+        "total": 171.34350221804567,
+        "margin": 7.54778227669776,
+        "home_regulation_lead_probability": 0.8039855951226667,
+        "total_80": [
+          159.66824959131418,
+          183.01875484477716
+        ],
+        "elapsed_fraction": 0.60625,
+        "regulation_minutes": 40,
+        "period": 3,
+        "remaining": "05:45",
+        "score_observed": [
+          56,
+          46
+        ],
+        "experimental": true,
+        "note": "Regulation score projection. Win probability uses normal residual approximation; quarter-boundary evaluation does not establish within-quarter calibration. No overtime projection.",
+        "home": "CBA_14",
+        "away": "CBA_289",
+        "observed_at_utc": "2026-10-22T12:43:00+00:00",
+        "replay": false,
+        "input_source": "Manual observed game state; not an automatic live feed",
+        "prior": {
+          "lig": "CBA",
+          "ev": "CBA_14",
+          "dep": "CBA_289",
+          "tarih_utc": "2026-10-22T12:43:00+00:00",
+          "model": "cba-ridge-per40-v1",
+          "ev_kazanir": 0.4724475710793017,
+          "ev_skor": 90.98391210491451,
+          "dep_skor": 91.84849408539705,
+          "fark": -0.864581980482535,
+          "fark_80": [
+            -16.895070272259723,
+            15.165906311294654
+          ],
+          "toplam": 182.83240619031156,
+          "toplam_80": [
+            160.19706327436032,
+            205.4677491062628
+          ],
+          "tum_modeller": {
+            "cba-ridge-per40-v1": 0.4724475710793017
+          },
+          "uzatma": null,
+          "az_veri": [],
+          "regulation_minutes": 40,
+          "training_cutoff": "2026-10-22T00:00:00+00:00",
+          "calibration_season": "2025-26",
+          "experimental": true,
+          "dataset_sha256": "ff8708583942a0c98e2225086a35e3c54daff09ba2d308f0c39b22d23de0c1db",
+          "dataset_matches_evaluation": true,
+          "note": "CBA-only research model. Historical overtime totals may be included; live projections target regulation."
+        },
+        "model": "cba-remaining-ridge-v1",
+        "quarter_dataset_sha256": "c23be4386027f97f09e70b5d1507eba9d36e9ad1b4e8299de1d20bc7a00df47b",
+        "quarter_dataset_matches_evaluation": true,
+        "training_games": 120,
+        "calibration_season": "2025-26"
+      },
+      "actual_final": null
+    },
+    {
+      "home_name": "Jilin",
+      "away_name": "Xinjiang",
+      "recorded_at_utc": "2026-10-22T12:44:13.166180+00:00",
+      "prediction": {
+        "home_score": 93.35228801699745,
+        "away_score": 81.95017203924778,
+        "total": 175.30246005624522,
+        "margin": 11.402115977749673,
+        "home_regulation_lead_probability": 0.9002358613487058,
+        "total_80": [
+          163.53491150607945,
+          187.070008606411
+        ],
+        "elapsed_fraction": 0.6,
+        "regulation_minutes": 40,
+        "period": 3,
+        "remaining": "06:00",
+        "score_observed": [
+          61,
+          45
+        ],
+        "experimental": true,
+        "note": "Regulation score projection. Win probability uses normal residual approximation; quarter-boundary evaluation does not establish within-quarter calibration. No overtime projection.",
+        "home": "CBA_372",
+        "away": "CBA_742",
+        "observed_at_utc": "2026-10-22T12:43:00+00:00",
+        "replay": false,
+        "input_source": "Manual observed game state; not an automatic live feed",
+        "prior": {
+          "lig": "CBA",
+          "ev": "CBA_372",
+          "dep": "CBA_742",
+          "tarih_utc": "2026-10-22T12:43:00+00:00",
+          "model": "cba-ridge-per40-v1",
+          "ev_kazanir": 0.35249069943599776,
+          "ev_skor": 85.58353437714149,
+          "dep_skor": 90.31937105914909,
+          "fark": -4.735836682007607,
+          "fark_80": [
+            -20.766324973784798,
+            11.294651609769582
+          ],
+          "toplam": 175.90290543629058,
+          "toplam_80": [
+            153.26756252033934,
+            198.53824835224182
+          ],
+          "tum_modeller": {
+            "cba-ridge-per40-v1": 0.35249069943599776
+          },
+          "uzatma": null,
+          "az_veri": [],
+          "regulation_minutes": 40,
+          "training_cutoff": "2026-10-22T00:00:00+00:00",
+          "calibration_season": "2025-26",
+          "experimental": true,
+          "dataset_sha256": "ff8708583942a0c98e2225086a35e3c54daff09ba2d308f0c39b22d23de0c1db",
+          "dataset_matches_evaluation": true,
+          "note": "CBA-only research model. Historical overtime totals may be included; live projections target regulation."
+        },
+        "model": "cba-remaining-ridge-v1",
+        "quarter_dataset_sha256": "c23be4386027f97f09e70b5d1507eba9d36e9ad1b4e8299de1d20bc7a00df47b",
+        "quarter_dataset_matches_evaluation": true,
+        "training_games": 120,
+        "calibration_season": "2025-26"
+      },
+      "actual_final": null
+    },
+    {
+      "home_name": "Beijing",
+      "away_name": "Shenzhen",
+      "recorded_at_utc": "2026-10-22T12:44:13.579898+00:00",
+      "prediction": {
+        "home_score": 107.8176826455967,
+        "away_score": 67.73981256295562,
+        "total": 175.55749520855233,
+        "margin": 40.077870082641084,
+        "home_regulation_lead_probability": 0.9999953697422118,
+        "total_80": [
+          163.58940079707537,
+          187.52558962002928
+        ],
+        "elapsed_fraction": 0.58625,
+        "regulation_minutes": 40,
+        "period": 3,
+        "remaining": "06:33",
+        "score_observed": [
+          72,
+          32
+        ],
+        "experimental": true,
+        "note": "Regulation score projection. Win probability uses normal residual approximation; quarter-boundary evaluation does not establish within-quarter calibration. No overtime projection.",
+        "home": "CBA_287",
+        "away": "CBA_93",
+        "observed_at_utc": "2026-10-22T12:43:00+00:00",
+        "replay": false,
+        "input_source": "Manual observed game state; not an automatic live feed",
+        "prior": {
+          "lig": "CBA",
+          "ev": "CBA_287",
+          "dep": "CBA_93",
+          "tarih_utc": "2026-10-22T12:43:00+00:00",
+          "model": "cba-ridge-per40-v1",
+          "ev_kazanir": 0.8118964957912727,
+          "ev_skor": 96.25531847560737,
+          "dep_skor": 85.18632580960764,
+          "fark": 11.068992665999719,
+          "fark_80": [
+            -4.96149562577747,
+            27.09948095777691
+          ],
+          "toplam": 181.441644285215,
+          "toplam_80": [
+            158.80630136926376,
+            204.07698720116625
+          ],
+          "tum_modeller": {
+            "cba-ridge-per40-v1": 0.8118964957912727
+          },
+          "uzatma": null,
+          "az_veri": [],
+          "regulation_minutes": 40,
+          "training_cutoff": "2026-10-22T00:00:00+00:00",
+          "calibration_season": "2025-26",
+          "experimental": true,
+          "dataset_sha256": "ff8708583942a0c98e2225086a35e3c54daff09ba2d308f0c39b22d23de0c1db",
+          "dataset_matches_evaluation": true,
+          "note": "CBA-only research model. Historical overtime totals may be included; live projections target regulation."
+        },
+        "model": "cba-remaining-ridge-v1",
+        "quarter_dataset_sha256": "c23be4386027f97f09e70b5d1507eba9d36e9ad1b4e8299de1d20bc7a00df47b",
+        "quarter_dataset_matches_evaluation": true,
+        "training_games": 120,
+        "calibration_season": "2025-26"
+      },
+      "actual_final": null
+    }
+  ]
+}
