@@ -16,8 +16,9 @@ from .takim_ad import coz
 
 Z80 = norm.ppf(.9)  # %80 aralığın yarı genişliği (standart sapma cinsinden)
 MODELLER = ('logistic', 'mov_elo', 'skor', 'topluluk', 'hist_gradient_boosting')
-LIGLER = ('E', 'U', 'NBA', 'NBL')
-LIG_ADI = {'E': 'EuroLeague', 'U': 'EuroCup', 'NBA': 'NBA', 'NBL': 'Avustralya NBL'}
+LIGLER = ('E', 'U', 'NBA', 'NBL', 'CBA','ECW','FEC','VTB')
+LIG_ADI = {'E': 'EuroLeague', 'U': 'EuroCup', 'NBA': 'NBA', 'NBL': 'Avustralya NBL','CBA':'Chinese CBA',
+           'ECW':'EuroCup Women','FEC':'FIBA Europe Cup','VTB':'VTB United League'}
 
 
 def sezon_adi(tarih):
@@ -29,8 +30,13 @@ def _son(kayitlar):
     return sorted(kayitlar, key=lambda r: r['sezon'])[-1] if kayitlar else None
 
 
-def parametreler(lig, yol='docs/kanit/parametreler.json'):
+def parametreler(lig, yol='docs/kanit/parametreler.json', sezon=None):
+    if str(yol)=='docs/kanit/parametreler.json':
+        from .artifacts import require_verified_path
+        yol=require_verified_path('parametreler.json')
     kayitlar = [r for r in json.loads(Path(yol).read_text('utf8')) if r.get('lig') == lig]
+    if sezon is not None:
+        kayitlar = [r for r in kayitlar if r['sezon'] <= sezon]
     mov = _son([r for r in kayitlar if r.get('model') == 'mov'])
     if not mov:
         raise ValueError(f'{lig} için doğrulanmış parametre yok; önce "python -m bbtahmin backtest" çalıştırın')
@@ -38,20 +44,42 @@ def parametreler(lig, yol='docs/kanit/parametreler.json'):
     return mov, (ewma['alpha'] if ewma else .2)
 
 
-def en_iyi_model(lig, yol='docs/kanit/toplam.csv'):
+def en_iyi_model(lig, yol='docs/kanit/toplam.csv', sezon=None):
     """Backtest'te o ligde en düşük log loss'u veren model."""
+    if str(yol)=='docs/kanit/toplam.csv':
+        # Derive choices from checksummed metrics, never an unsigned aggregate
+        # or legacy participation-enhanced evaluation after an integrity failure.
+        from .artifacts import require_verified_path
+        metrics=pd.read_csv(require_verified_path('metrikler.csv'))
+        metrics=metrics[(metrics.lig==lig) & metrics.model.isin(MODELLER)]
+        if sezon is not None:
+            metrics=metrics[metrics.sezon<sezon]
+        if metrics.empty:
+            return 'mov_elo'
+        losses=metrics.assign(weighted=metrics.log_loss*metrics.n).groupby('model')[['weighted','n']].sum()
+        return (losses.weighted/losses.n).idxmin()
     try:
+        if sezon is not None:
+            # Aggregate test results may include the target season. Model choice
+            # for a historical query can use only earlier completed seasons.
+            metrics = pd.read_csv(Path(yol).with_name('metrikler.csv'))
+            metrics = metrics[(metrics.lig == lig) & (metrics.sezon < sezon) & metrics.model.isin(MODELLER)]
+            if metrics.empty:
+                return 'mov_elo'
+            losses = metrics.assign(weighted=metrics.log_loss * metrics.n).groupby('model')[['weighted','n']].sum()
+            return (losses.weighted / losses.n).idxmin()
         t = pd.read_csv(yol)
         t = t[(t.lig == lig) & t.model.isin(MODELLER)]
         return t.sort_values('log_loss').iloc[0].model if len(t) else 'topluluk'
     except (OSError, KeyError):
-        return 'topluluk'
+        return 'mov_elo' if sezon is not None else 'topluluk'
 
 
 def aktif_kodlar(gecmis, lig, tarih, gun=400):
     """Son `gun` günde o ligde oynamış takımlar. Ligden ayrılmış takım (ör. 2022'den beri
     EuroLeague'de olmayan Zenit) eski reytingiyle tahmin edilmesin diye eşleşmez."""
-    son = gecmis[(gecmis.lig == lig) & (gecmis.tarih_utc >= tarih - pd.Timedelta(days=gun))]
+    son = gecmis[(gecmis.lig == lig) & (gecmis.tarih_utc >= tarih - pd.Timedelta(days=gun))
+                 & (gecmis.tarih_utc < tarih)]
     return set(son.ev) | set(son.dep)
 
 
@@ -67,15 +95,25 @@ def lig_bul(ev, dep, gecmis, tarih):
     raise ValueError('Takımlar desteklenen liglerde bulunamadı (EuroLeague, EuroCup, NBA).\n  ' + '\n  '.join(hatalar))
 
 
-def tahmin_et(lig, eslesmeler, tarih, veri='data/maclar.parquet', rapor=None):
+def _tahmin_et(lig, eslesmeler, tarih, veri='data/maclar.parquet', rapor=None, adaptive_form=False):
     """eslesmeler: [(ev_kodu, dep_kodu)]. rapor: NBA sakatlık raporu (Out oyuncuları eksik sayılır)."""
     tarih = pd.Timestamp(tarih)
     tarih = tarih.tz_localize('Europe/Istanbul') if tarih.tzinfo is None else tarih
     tarih = tarih.tz_convert('UTC')
-    gecmis = pd.read_parquet(veri)
-    gecmis = gecmis[(gecmis.lig == lig) & gecmis.ev_skor.notna() & gecmis.dep_skor.notna()
+    if lig=='CBA':
+        from .cba_model import predict
+        return [predict(ev,dep,tarih) for ev,dep in eslesmeler]
+    if lig in ('ECW','FEC','VTB'):
+        if adaptive_form:
+            from .adaptive import predict
+        else:
+            from .competition_model import predict
+        return [predict(lig,ev,dep,tarih) for ev,dep in eslesmeler]
+    from .runtime_history import load as load_history
+    gecmis = load_history(veri)
+    gecmis = gecmis[(gecmis.lig == lig) & (gecmis.ev_skor > 0) & (gecmis.dep_skor > 0)
                     & (gecmis.tarih_utc < tarih.floor('D'))].copy()
-    mov, alpha = parametreler(lig)
+    mov, alpha = parametreler(lig, sezon=sezon_adi(tarih))
     sorgular = pd.DataFrame([dict(mac_id=f'SORGU_{i}', lig=lig, sezon=sezon_adi(tarih), tarih_utc=tarih,
                                   ev=ev, dep=dep, ev_skor=np.nan, dep_skor=np.nan, tarafsiz_saha=False)
                              for i, (ev, dep) in enumerate(eslesmeler)])
@@ -86,12 +124,12 @@ def tahmin_et(lig, eslesmeler, tarih, veri='data/maclar.parquet', rapor=None):
                        alpha=alpha, mov=True)
     cols = list(FEATURES)
     x = x.reset_index(drop=True)
-    kutu, oyuncular = yukle()
+    kutu, oyuncular = yukle() if lig in KUTU_LIGLERI else (None,None)
     if kutu is not None and lig in KUTU_LIGLERI and kutu.mac_id.str.startswith(lig).any():
         kf = kutu_ozellikleri(hepsi, kutu, oyuncular).set_index('mac_id').loc[hepsi.mac_id].reset_index(drop=True)
         x = pd.concat([x, kf[KUTU_FEATURES]], axis=1)
         cols += KUTU_FEATURES
-    oyuncu_mac = eksik_yukle()
+    oyuncu_mac = eksik_yukle() if lig in EKSIK_LIGLERI else None
     eksik_bilgi = {}
     if oyuncu_mac is not None and lig in EKSIK_LIGLERI:
         sorgu_eksik = {}
@@ -112,7 +150,9 @@ def tahmin_et(lig, eslesmeler, tarih, veri='data/maclar.parquet', rapor=None):
     if not tam:
         raise ValueError(f'{lig}: kalibrasyon için tamamlanmış sezon yok')
     dogrulama = (hepsi.sezon == tam[-1]).to_numpy() & ~sorgu
-    egitim = ~dogrulama & ~sorgu
+    # Current-season results must not train a model whose calibration holdout
+    # is the preceding season. Match the chronological backtest split.
+    egitim = (hepsi.sezon < tam[-1]).to_numpy() & ~sorgu
     p_log, _ = fit_predict('logistic', x, y, egitim, dogrulama, sorgu, cols)
     p_hgb, _ = fit_predict('hist_gradient_boosting', x, y, egitim, dogrulama, sorgu, cols)
     pm, rm = regression(x, fark, egitim, dogrulama, sorgu, cols)
@@ -122,7 +162,7 @@ def tahmin_et(lig, eslesmeler, tarih, veri='data/maclar.parquet', rapor=None):
     olasilik = {'logistic': p_log, 'hist_gradient_boosting': p_hgb,
                 'mov_elo': x.loc[sorgu, 'elo_p'].to_numpy(), 'skor': norm.cdf(pm / sm)}
     olasilik['topluluk'] = np.mean([olasilik['logistic'], olasilik['mov_elo'], olasilik['skor']], axis=0)
-    secilen = en_iyi_model(lig)
+    secilen = en_iyi_model(lig, sezon=sezon_adi(tarih))
     # Uzatma olasılığı: normal süre farkının 0 olma yoğunluğu, ligin geçmiş uzatma oranına ölçeklenir.
     # Ölçek için tüm maçların fark dağılımı kullanılır (tahmin ve artık dağılımlarının toplamı).
     gecmis_fark = fark[~sorgu]
@@ -132,6 +172,13 @@ def tahmin_et(lig, eslesmeler, tarih, veri='data/maclar.parquet', rapor=None):
     # Sorgular sıralamada yer değiştirebilir (SORGU_10 < SORGU_2); konumu kimlikten bul.
     sira = list(hepsi.loc[sorgu, 'mac_id'])
     sonuc = []
+    from .artifacts import status
+    artifact_status=status(dataset=veri)
+    from .runtime_history import PATH as overlay_path
+    if lig=='E' and str(veri)=='data/maclar.parquet' and overlay_path.exists():
+        import hashlib
+        artifact_status.update(runtime_overlay_sha256=hashlib.sha256(overlay_path.read_bytes()).hexdigest(),
+            dataset_matches_evaluation=False,runtime_overlay=True)
     for n, (ev, dep) in enumerate(eslesmeler):
         i = sira.index(f'SORGU_{n}')
         p = float(olasilik[secilen][i])
@@ -141,11 +188,26 @@ def tahmin_et(lig, eslesmeler, tarih, veri='data/maclar.parquet', rapor=None):
             fark=float(pm[i]), fark_80=(float(pm[i] - Z80 * sm), float(pm[i] + Z80 * sm)),
             toplam=float(pt[i]), toplam_80=(float(pt[i] - Z80 * st), float(pt[i] + Z80 * st)),
             tum_modeller={k: float(v[i]) for k, v in olasilik.items()},
+            artifact_status=artifact_status,
             uzatma=float(np.clip(olcek * norm.pdf(0, pm[i], sm), 0, .5)),
             eksik_dk=(float(x.loc[np.flatnonzero(sorgu)[i], 'eksik_dk_diff']) * 48) if 'eksik_dk_diff' in x else None,
             eksik_eslesmeyen=eksik_bilgi.get(n, []),
             az_veri=[t for t in (ev, dep) if mac_sayisi.get(t, 0) < 10]))
     return sonuc
+
+
+def tahmin_et(lig, eslesmeler, tarih, veri='data/maclar.parquet', rapor=None, adaptive_form=False):
+    results=_tahmin_et(lig,eslesmeler,tarih,veri,rapor,adaptive_form)
+    from .quality import assess
+    path=('data/cba_games.parquet' if lig=='CBA' else
+          f'data/competitions/{lig}.parquet' if lig in ('ECW','FEC','VTB') else veri)
+    from .runtime_history import load as load_history
+    history=load_history(path)
+    for result in results:
+        result['data_quality']=assess(result,history)
+        result['recommendation_validated']=False
+        result['selection_eligible']=result['data_quality']['diagnostic_gate_passed']
+    return results
 
 
 def alt_ust(t, cizgi):
@@ -161,10 +223,13 @@ def yazdir(sonuclar, gosterim=None):
         favori, fp = (ev, p) if p >= .5 else (dep, 1 - p)
         print(f"\n{LIG_ADI[t['lig']]}: {ev} – {dep}")
         print(f"  Kazanan:  {favori} %{fp * 100:.1f}   (ev %{p * 100:.1f} / dep %{(1 - p) * 100:.1f}, model: {t['model']})")
+        if 'secildi' in t:
+            print(f"  Güven eşiği: %{t['guven_esigi']*100:.0f} — {'geçti' if t['secildi'] else 'eşik altında'}")
         print(f"  Skor:     {t['ev_skor']:.0f} – {t['dep_skor']:.0f}")
         print(f"  Fark:     {t['fark']:+.1f}  (%80 aralık {t['fark_80'][0]:+.0f} … {t['fark_80'][1]:+.0f})")
         print(f"  Toplam:   {t['toplam']:.1f}  (%80 aralık {t['toplam_80'][0]:.0f} … {t['toplam_80'][1]:.0f})")
-        print(f"  Uzatma:   %{t['uzatma'] * 100:.1f}")
+        if t.get('uzatma') is not None:
+            print(f"  Uzatma:   %{t['uzatma'] * 100:.1f}")
         if t.get('piyasa_ev') is not None:
             pe = t['piyasa_ev']
             print(f"  Piyasa:   ev %{pe * 100:.1f} / dep %{(1 - pe) * 100:.1f}  (oranlar {t['oran_ev']} / {t['oran_dep']}, marj çıkarıldı)")
@@ -176,6 +241,8 @@ def yazdir(sonuclar, gosterim=None):
                 print(f"  Eksik {(gosterim or {}).get(kod, kod)}: {', '.join(eksik)}")
         diger = ', '.join(f'{k} %{v * 100:.0f}' for k, v in t['tum_modeller'].items())
         print(f"  Modeller: {diger}")
+        if t.get('data_quality',{}).get('issues'):
+            print('  Data checks: '+ '; '.join(t['data_quality']['issues']))
         if t['az_veri']:
             print(f"  [!] Az geçmiş verisi olan takım: {', '.join(t['az_veri'])}; tahmin güvenilirliği düşük")
 
@@ -186,20 +253,36 @@ def oran_ayir(mac):
         return mac, None, None
     metin, oran = mac.rsplit('@', 1)
     parca = [o.strip().replace(',', '.') for o in oran.split('/')]
+    if len(parca) != 2:
+        raise ValueError('Oranlar @ev/deplasman biçiminde iki değer olmalı')
     sayi = lambda o: float(o) if o and o not in ('-', '?') else None
-    return metin.strip(), sayi(parca[0]), sayi(parca[1]) if len(parca) > 1 else None
+    values = [sayi(o) for o in parca]
+    from .odds import decimal_probability
+    for value in values:
+        if value is not None:
+            decimal_probability(value)
+    return metin.strip(), *values
 
 
-def run(lig, maclar, tarih, json_cikti=False, kaydet=False):
+def run(lig, maclar, tarih, json_cikti=False, kaydet=False, injury_report=False, confidence_threshold=None, adaptive_form=False):
+    if adaptive_form and lig not in ('ECW','FEC','VTB'):
+        raise ValueError('--adaptive-form requires an explicit ECW, FEC or VTB league')
+    if confidence_threshold is not None and (not np.isfinite(confidence_threshold) or not .5<=confidence_threshold<=1):
+        raise ValueError('Confidence threshold must be between 0.5 and 1')
     gecmis = pd.read_parquet('data/maclar.parquet')
+    if Path('data/cba_games.parquet').exists():
+        gecmis=pd.concat([gecmis,pd.read_parquet('data/cba_games.parquet')],ignore_index=True)
+    for code in ('ECW','FEC','VTB'):
+        path=Path(f'data/competitions/{code}.parquet')
+        if path.exists():gecmis=pd.concat([gecmis,pd.read_parquet(path)],ignore_index=True)
     tarih = tarih or pd.Timestamp.now(tz='Europe/Istanbul').isoformat()
     an = pd.Timestamp(tarih)
     an = (an.tz_localize('Europe/Istanbul') if an.tzinfo is None else an).tz_convert('UTC')
     gruplar, gosterim, atlanan, oranlar = {}, {}, [], {}
     for mac in maclar:
-        mac, o1, o2 = oran_ayir(mac)
-        parca = [s.strip() for s in mac.replace('–', '-').split(' - ')]
         try:
+            mac, o1, o2 = oran_ayir(mac)
+            parca = [s.strip() for s in mac.replace('–', '-').split(' - ')]
             if len(parca) != 2:
                 raise ValueError('"Ev - Deplasman" biçiminde olmalı')
             if lig:
@@ -214,14 +297,19 @@ def run(lig, maclar, tarih, json_cikti=False, kaydet=False):
         oranlar[bulunan[1:]] = (o1, o2)
         gruplar.setdefault(bulunan[0], []).append(bulunan[1:])
     rapor = None
-    if 'NBA' in gruplar:
+    if 'NBA' in gruplar and injury_report:
         from .veri.sakatlik import son_rapor
         try:
             rapor = son_rapor(an)
         except Exception as e:  # rapor alınamazsa tahmin eksiksiz kadro varsayımıyla verilir
-            print(f'[!] Sakatlık raporu alınamadı, eksik oyuncu 0 kabul edildi: {e}')
-    sonuclar = [t for l, es in gruplar.items() for t in tahmin_et(l, es, tarih, rapor=rapor if l == 'NBA' else None)]
+            import sys
+            print(f'[!] Sakatlık raporu alınamadı: {e}',file=sys.stderr)
+    sonuclar = [t for l, es in gruplar.items() for t in tahmin_et(l, es, tarih, rapor=rapor if l == 'NBA' else None, adaptive_form=adaptive_form)]
     for t in sonuclar:
+        if confidence_threshold is not None:
+            t['guven_esigi']=confidence_threshold
+            t['threshold_passed']=max(t['ev_kazanir'],1-t['ev_kazanir'])>=confidence_threshold
+            t['secildi']=t['threshold_passed'] and t.get('selection_eligible',True)
         o1, o2 = oranlar.get((t['ev'], t['dep']), (None, None))
         t['oran_ev'], t['oran_dep'] = o1, o2
         t['piyasa_ev'] = (1 / o1) / (1 / o1 + 1 / o2) if o1 and o2 else None
@@ -231,7 +319,9 @@ def run(lig, maclar, tarih, json_cikti=False, kaydet=False):
             t['sakatlik_raporu'] = rapor.attrs.get('rapor')
     if kaydet and sonuclar:
         from .defter import kaydet as defter_kaydet
-        print(f'[defter] {defter_kaydet(sonuclar)} tahmin kaydedildi: defter/tahminler.csv')
+        import sys
+        print(f'[defter] {defter_kaydet(sonuclar)} tahmin kaydedildi: defter/tahminler.csv',
+              file=sys.stderr if json_cikti else sys.stdout)
     if json_cikti:
         print(json.dumps(dict(tahminler=sonuclar, atlanan=atlanan), ensure_ascii=False, indent=2))
     else:

@@ -1,0 +1,201 @@
+{
+  "transport": "stdio",
+  "captured_at_utc": "2026-10-22T11:46:01.375613+00:00",
+  "tools": [
+    "dataset_status",
+    "bulletin_events",
+    "predict_bulletin_event",
+    "bulletin_history",
+    "research_results"
+  ],
+  "dataset": {
+    "games": 54808,
+    "leagues": {
+      "E": 6664,
+      "NBA": 41620,
+      "NBL": 1653,
+      "U": 4871
+    },
+    "latest_game_utc": "2026-10-21T18:30:00+00:00",
+    "bulletin_available": true
+  },
+  "history": {
+    "event_id": "3235425",
+    "as_of_utc": "2026-10-22T11:45:55.000050+00:00",
+    "observations": 4,
+    "returned": 4,
+    "truncated": false,
+    "skipped_files": 0,
+    "first_observed": {
+      "captured_at_utc": "2026-10-22T10:14:15.353731+00:00",
+      "start_utc": "2026-10-24T00:00:00+00:00",
+      "home": "Miami",
+      "away": "Detroit",
+      "home_odds": 1.56,
+      "away_odds": 1.81,
+      "market_home": 0.5370919881305638,
+      "minimum_combination_count": 1,
+      "promotion_flag": true
+    },
+    "latest_observed": {
+      "captured_at_utc": "2026-10-22T11:45:21.868880+00:00",
+      "start_utc": "2026-10-24T00:00:00+00:00",
+      "home": "Miami",
+      "away": "Detroit",
+      "home_odds": 1.56,
+      "away_odds": 1.81,
+      "market_home": 0.5370919881305638,
+      "minimum_combination_count": 1,
+      "promotion_flag": true
+    },
+    "market_home_change": 0.0,
+    "history": [
+      {
+        "captured_at_utc": "2026-10-22T10:14:15.353731+00:00",
+        "start_utc": "2026-10-24T00:00:00+00:00",
+        "home": "Miami",
+        "away": "Detroit",
+        "home_odds": 1.56,
+        "away_odds": 1.81,
+        "market_home": 0.5370919881305638,
+        "minimum_combination_count": 1,
+        "promotion_flag": true
+      },
+      {
+        "captured_at_utc": "2026-10-22T10:22:42.327397+00:00",
+        "start_utc": "2026-10-24T00:00:00+00:00",
+        "home": "Miami",
+        "away": "Detroit",
+        "home_odds": 1.56,
+        "away_odds": 1.81,
+        "market_home": 0.5370919881305638,
+        "minimum_combination_count": 1,
+        "promotion_flag": true
+      },
+      {
+        "captured_at_utc": "2026-10-22T10:31:42.308516+00:00",
+        "start_utc": "2026-10-24T00:00:00+00:00",
+        "home": "Miami",
+        "away": "Detroit",
+        "home_odds": 1.56,
+        "away_odds": 1.81,
+        "market_home": 0.5370919881305638,
+        "minimum_combination_count": 1,
+        "promotion_flag": true
+      },
+      {
+        "captured_at_utc": "2026-10-22T11:45:21.868880+00:00",
+        "start_utc": "2026-10-24T00:00:00+00:00",
+        "home": "Miami",
+        "away": "Detroit",
+        "home_odds": 1.56,
+        "away_odds": 1.81,
+        "market_home": 0.5370919881305638,
+        "minimum_combination_count": 1,
+        "promotion_flag": true
+      }
+    ],
+    "note": "First/last locally observed pregame quote, not verified opening/closing prices. Movement is descriptive, not an activated model feature or a profit estimate."
+  },
+  "prediction": {
+    "event": {
+      "event_id": "3235425",
+      "home": "Miami",
+      "away": "Detroit",
+      "start_utc": "2026-10-24T00:00:00+00:00",
+      "league_name": "ABD Amerika Basketbol Ligi",
+      "model_league": "NBA",
+      "competition_id": "138",
+      "source": "iddaa-web-experimental",
+      "captured_at_utc": "2026-10-22T11:45:21.868880+00:00",
+      "pre_match": true,
+      "minimum_combination_count": 1,
+      "promotion_flag": true,
+      "moneyline": {
+        "market_id": "1_2",
+        "market_name": "Maç Sonucu (Uzt.Dahil)",
+        "price_field": "odd",
+        "includes_overtime": true,
+        "minimum_combination_count": 1,
+        "home_odds": 1.56,
+        "away_odds": 1.81,
+        "home_alternative_price": 1.5,
+        "away_alternative_price": 1.75
+      },
+      "totals": [
+        {
+          "market_id": "2_114",
+          "market_name": "Toplam Sayı Alt/Üst (Uzt.Dahil)  {0}",
+          "price_field": "odd",
+          "includes_overtime": true,
+          "minimum_combination_count": 1,
+          "line": 236.5,
+          "under_odds": 1.71,
+          "over_odds": 1.65,
+          "push_possible": false
+        }
+      ]
+    },
+    "prediction": {
+      "lig": "NBA",
+      "ev": "MIA",
+      "dep": "DET",
+      "tarih_utc": "2026-10-24T00:00:00+00:00",
+      "model": "skor",
+      "ev_kazanir": 0.471624721971028,
+      "ev_skor": 114.20613095353984,
+      "dep_skor": 115.24360654492905,
+      "fark": -1.0374755913892146,
+      "fark_80": [
+        -19.714910859127023,
+        17.639959676348596
+      ],
+      "toplam": 229.4497374984689,
+      "toplam_80": [
+        205.2013802144208,
+        253.698094782517
+      ],
+      "tum_modeller": {
+        "logistic": 0.4493469285380842,
+        "hist_gradient_boosting": 0.4764390022748576,
+        "mov_elo": 0.46734938729852066,
+        "skor": 0.471624721971028,
+        "topluluk": 0.462773679269211
+      },
+      "artifact_status": {
+        "verified": true,
+        "evaluated_at": "2026-10-22T10:22:06.663243+00:00",
+        "dataset_matches_evaluation": true,
+        "absence_features": false
+      },
+      "uzatma": 0.05515974274218633,
+      "eksik_dk": null,
+      "eksik_eslesmeyen": [],
+      "az_veri": []
+    },
+    "comparison": {
+      "moneyline": {
+        "model_home": 0.471624721971028,
+        "market_home": 0.5370919881305638,
+        "home_edge": -0.0654672661595358,
+        "home_expected_return": -0.2642654337251963,
+        "away_expected_return": -0.04364074676756069,
+        "minimum_combination_count": 1
+      },
+      "totals": [
+        {
+          "line": 236.5,
+          "under": 0.6452820865338719,
+          "over": 0.35471791346612813,
+          "push": 0.0,
+          "under_expected_return": 0.10343236797292088,
+          "over_expected_return": -0.4147154427808886,
+          "assumption": "Normal total-score approximation; integer lines use continuity correction."
+        }
+      ],
+      "note": "Model estimates, not observed accuracy. MBS/combination and promotion restrictions may prevent a standalone bet."
+    },
+    "injury_features": "Disabled: historical participant lists are not pregame injury snapshots."
+  },
+  "passed": true
+}

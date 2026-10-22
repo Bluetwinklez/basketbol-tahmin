@@ -1,0 +1,125 @@
+{
+  "timestamp": "2026-10-22T09:26:52.888685+00:00",
+  "games": 54808,
+  "files": {
+    "kutu": {
+      "rows": 18130,
+      "games": 9065,
+      "bytes": 185277,
+      "sha256": "e343530d0ed2129f57bb53ba3a42424cfdab3cf9274d1a449560d8915c5b92a3"
+    },
+    "kutu_nba": {
+      "rows": 82914,
+      "games": 41457,
+      "bytes": 913828,
+      "sha256": "fac8e8ce7263f810086b62d20292340a94b7e3fdc045bfede3c1a6b37f66ec11"
+    },
+    "oyuncular": {
+      "rows": 189018,
+      "games": 9064,
+      "bytes": 666946,
+      "sha256": "6f54bdc912c3b00700f67bdc9a7a0f15b34993238878143ae97872306a9674c1"
+    },
+    "oyuncular_nba": {
+      "rows": 855193,
+      "games": 41517,
+      "bytes": 1851543,
+      "sha256": "b51411e1f5148d9f7459d0379d7cc9650f5787fd559922e6212f64fe5f2f006e"
+    },
+    "nba_oyuncu_mac": {
+      "rows": 328467,
+      "games": 15442,
+      "bytes": 2623561,
+      "sha256": "10594f10e0ab18942d0e5c9c87128aee32c9d0389d79334c9062c2f12521f8c1"
+    },
+    "nba_mac_baglami": {
+      "rows": 41578,
+      "games": 41578,
+      "bytes": 866445,
+      "sha256": "0583b22db2a7b0a2638090c59133d15e7acc78ecec9714fd85b5e35d35aea148"
+    },
+    "nba_takim_istatistik": {
+      "rows": 82912,
+      "games": 41456,
+      "bytes": 1711716,
+      "sha256": "d2aad12f295306c66b257017e5661ed214fcc9ca01134b15fa6aef40efb18fe2"
+    },
+    "nba_oyuncu_istatistik": {
+      "rows": 1071430,
+      "games": 41516,
+      "bytes": 10587699,
+      "sha256": "843e582c40688c8dc10364a509597993f5b92102096cd9807c7e5eb49dbc6e42"
+    },
+    "avrupa_takim_istatistik": {
+      "rows": 2246,
+      "games": 1123,
+      "bytes": 59189,
+      "sha256": "bb14f601a2c9768769511faa45020cb3314c7405998c8af8885676f57540ff21"
+    },
+    "avrupa_oyuncu_istatistik": {
+      "rows": 26448,
+      "games": 1123,
+      "bytes": 361971,
+      "sha256": "662a37ee8fddf328693c804f28211d02add08c6214cc2373f7553ff2d2f8fd51"
+    },
+    "avrupa_sutlar": {
+      "rows": 178177,
+      "games": 1123,
+      "bytes": 1716086,
+      "sha256": "1b7009798c37a60a24af43530c2a788a8174ae4e0c3d5eb2f5c584cefd017a61"
+    },
+    "avrupa_olaylar": {
+      "rows": 625187,
+      "games": 1123,
+      "bytes": 3184459,
+      "sha256": "4bb94930dd5e6aa251cb691033b82c69ac245c3ded70dcdc450333e345d76051"
+    }
+  },
+  "zero_score_results_excluded_from_models": [
+    {
+      "mac_id": "E2001_264",
+      "ev_skor": 2,
+      "dep_skor": 0
+    },
+    {
+      "mac_id": "E2003_200",
+      "ev_skor": 20,
+      "dep_skor": 0
+    },
+    {
+      "mac_id": "U2008_72",
+      "ev_skor": 20,
+      "dep_skor": 0
+    },
+    {
+      "mac_id": "NBL_314773",
+      "ev_skor": 0,
+      "dep_skor": 5
+    }
+  ],
+  "original_games": 26200,
+  "added_games": 28608,
+  "original_results_preserved": true,
+  "coverage": {
+    "E": {
+      "games": 6664,
+      "first": "2000-10-15 22:00:00+00:00",
+      "last": "2026-10-21 16:00:00+00:00"
+    },
+    "NBA": {
+      "games": 41620,
+      "first": "1993-11-06 00:00:00+00:00",
+      "last": "2026-10-21 01:30:00+00:00"
+    },
+    "NBL": {
+      "games": 1653,
+      "first": "2015-10-07 08:00:00+00:00",
+      "last": "2026-10-21 08:30:00+00:00"
+    },
+    "U": {
+      "games": 4871,
+      "first": "2002-10-14 22:00:00+00:00",
+      "last": "2026-10-21 18:30:00+00:00"
+    }
+  }
+}

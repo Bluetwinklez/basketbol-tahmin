@@ -1,0 +1,109 @@
+{
+  "passed": true,
+  "source": "iddaa-web-experimental",
+  "captured_at_utc": "2026-10-22T10:31:42.308516+00:00",
+  "bulletin_events": 139,
+  "supported_events": 27,
+  "example": {
+    "event": {
+      "event_id": "3235425",
+      "home": "Miami",
+      "away": "Detroit",
+      "start_utc": "2026-10-24T00:00:00+00:00",
+      "league_name": "ABD Amerika Basketbol Ligi",
+      "model_league": "NBA",
+      "competition_id": "138",
+      "source": "iddaa-web-experimental",
+      "captured_at_utc": "2026-10-22T10:31:42.308516+00:00",
+      "pre_match": true,
+      "minimum_combination_count": 1,
+      "promotion_flag": true,
+      "moneyline": {
+        "market_id": "1_2",
+        "market_name": "Maç Sonucu (Uzt.Dahil)",
+        "price_field": "odd",
+        "includes_overtime": true,
+        "minimum_combination_count": 1,
+        "home_odds": 1.56,
+        "away_odds": 1.81,
+        "home_alternative_price": 1.5,
+        "away_alternative_price": 1.75
+      },
+      "totals": [
+        {
+          "market_id": "2_114",
+          "market_name": "Toplam Sayı Alt/Üst (Uzt.Dahil)  {0}",
+          "price_field": "odd",
+          "includes_overtime": true,
+          "minimum_combination_count": 1,
+          "line": 237.5,
+          "under_odds": 1.65,
+          "over_odds": 1.7,
+          "push_possible": false
+        }
+      ]
+    },
+    "prediction": {
+      "lig": "NBA",
+      "ev": "MIA",
+      "dep": "DET",
+      "tarih_utc": "2026-10-24T00:00:00+00:00",
+      "model": "skor",
+      "ev_kazanir": 0.4716247219710278,
+      "ev_skor": 114.20613095353983,
+      "dep_skor": 115.24360654492907,
+      "fark": -1.0374755913892244,
+      "fark_80": [
+        -19.714910859127034,
+        17.639959676348585
+      ],
+      "toplam": 229.4497374984689,
+      "toplam_80": [
+        205.2013802144208,
+        253.698094782517
+      ],
+      "tum_modeller": {
+        "logistic": 0.44934692853808234,
+        "hist_gradient_boosting": 0.4764390022748576,
+        "mov_elo": 0.46734938729852066,
+        "skor": 0.4716247219710278,
+        "topluluk": 0.46277367926921026
+      },
+      "artifact_status": {
+        "verified": true,
+        "evaluated_at": "2026-10-22T10:22:06.663243+00:00",
+        "dataset_matches_evaluation": true,
+        "absence_features": false
+      },
+      "uzatma": 0.055159742742186324,
+      "eksik_dk": null,
+      "eksik_eslesmeyen": [],
+      "az_veri": []
+    },
+    "comparison": {
+      "moneyline": {
+        "model_home": 0.4716247219710278,
+        "market_home": 0.5370919881305638,
+        "home_edge": -0.06546726615953602,
+        "home_expected_return": -0.2642654337251966,
+        "away_expected_return": -0.043640746767560246,
+        "minimum_combination_count": 1
+      },
+      "totals": [
+        {
+          "line": 237.5,
+          "under": 0.6647511222735074,
+          "over": 0.3352488777264926,
+          "push": 0.0,
+          "under_expected_return": 0.09683935175128716,
+          "over_expected_return": -0.4300769078649626,
+          "assumption": "Normal total-score approximation; integer lines use continuity correction."
+        }
+      ],
+      "note": "Model estimates, not observed accuracy. MBS/combination and promotion restrictions may prevent a standalone bet."
+    },
+    "injury_features": "Disabled: historical participant lists are not pregame injury snapshots."
+  },
+  "fixture_start_utc": "2026-10-24T00:00:00+00:00",
+  "snapshot_before_fixture": true
+}

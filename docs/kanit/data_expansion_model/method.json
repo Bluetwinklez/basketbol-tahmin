@@ -1,0 +1,10 @@
+{
+  "baseline_rows": 26198,
+  "expanded_rows": 54804,
+  "timestamp": "2026-10-22T09:19:53.612010+00:00",
+  "test": "Common games in the last five completed seasons; season-by-season chronological holdout.",
+  "exclusions": "Retrospective player-absence labels and new detailed box scores are excluded.",
+  "parameters": "Previously recorded fold-specific Elo/EWMA parameters, identical across variants.",
+  "adaptive": "Ridge alpha and 3/5/10/all prior training seasons selected on preceding validation season.",
+  "limitations": "Point estimates; no statistical superiority or live performance claim."
+}

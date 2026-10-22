@@ -1,0 +1,10 @@
+{
+  "generated_at_utc": "2026-10-22T21:27:29.848606+00:00",
+  "files": {
+    "docs/kanit/winner/ECW_predictions.csv": "87d7a0fbeb4daedf60490a26fd2b267118917a8f6e1d24ed0f0bbb8f2480d649",
+    "docs/kanit/winner/FEC_predictions.csv": "b152aac283f6696d3210b4964f1edcb325d69afc05f8f1f57c46894ed731168e",
+    "docs/kanit/winner/VTB_predictions.csv": "2b5f2e82018b92acbd4d9bbcb828d4c905469539f704d61e09b3770b88533435"
+  },
+  "runtime_policy": "Default model retained. Every challenger and failed prior-season selection policy remains research-only.",
+  "limitations": "Previously inspected historical seasons; no fresh holdout. Domestic form covers explicitly mapped Czech senior women only, retrospective availability unverified. Confidence-based filtering does not demonstrate higher all-game accuracy. Bootstrap intervals are exploratory, not multiple-testing corrected."
+}

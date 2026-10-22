@@ -1,0 +1,37 @@
+{
+  "checked_at_utc": "2026-10-22T20:49:44.310304+00:00",
+  "command": "python -m bbtahmin tahmin \"ZKK Celje - KP Brno\" --lig ECW --tarih 2026-10-22T19:00+03:00 --adaptive-form --json",
+  "eligible_for_prospective_accuracy": false,
+  "model": "competition-monthly-prior-gate-v1",
+  "selection": {
+    "selection_season": "2025-26",
+    "monthly_selected": false,
+    "validation_games": 214,
+    "fixed_margin_mae": 14.155508479527139,
+    "monthly_margin_mae": 14.039142870920205,
+    "fixed_total_mae": 13.770190861040794,
+    "monthly_total_mae": 13.728590995028432,
+    "fixed_accuracy": 0.7009345794392523,
+    "monthly_accuracy": 0.7102803738317757,
+    "rule": "Monthly must reduce both validation MAEs by more than 1%, with no lower winner accuracy."
+  },
+  "auxiliary_workload": {
+    "home": {
+      "observed": false,
+      "games_7d": null,
+      "games_14d": null,
+      "rest_days": null,
+      "latest_game_utc": null
+    },
+    "away": {
+      "observed": false,
+      "games_7d": null,
+      "games_14d": null,
+      "rest_days": null,
+      "latest_game_utc": "2026-02-22T09:30:00+00:00"
+    },
+    "used_in_score_model": false,
+    "coverage": "Partial official club cohorts; missing observations are not zero workload."
+  },
+  "skipped": []
+}

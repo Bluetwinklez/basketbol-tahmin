@@ -1,0 +1,47 @@
+{
+  "timestamp_utc": "2026-10-22T11:55:14.764562+00:00",
+  "tested_github_commit": "39659689dde6c867ee36004df1acbc827402b99e",
+  "tested_git_tree": "c51dcd0a6576f19c1bfab483e5707d37a5981567",
+  "local_tests_passed": 127,
+  "github_ci_passed": true,
+  "fresh_prediction_rows": 15932,
+  "matched_archived_rows": 15932,
+  "max_absolute_probability_difference": 2.0372592501871623e-14,
+  "completed_test_season": "2025-26",
+  "partial_season_excluded": "2026-27",
+  "selection": "Each league uses model chosen solely from benchmark seasons before 2025-26.",
+  "results": [
+    {
+      "lig": "E",
+      "model": "skor",
+      "n": 402,
+      "correct": 250,
+      "accuracy": 0.6218905472636815,
+      "log_loss": 0.6332717217397424
+    },
+    {
+      "lig": "NBA",
+      "model": "skor",
+      "n": 1322,
+      "correct": 897,
+      "accuracy": 0.6785173978819969,
+      "log_loss": 0.6015567664577901
+    },
+    {
+      "lig": "NBL",
+      "model": "mov_elo",
+      "n": 179,
+      "correct": 114,
+      "accuracy": 0.6368715083798883,
+      "log_loss": 0.6140415116263956
+    },
+    {
+      "lig": "U",
+      "model": "skor",
+      "n": 195,
+      "correct": 130,
+      "accuracy": 0.6666666666666666,
+      "log_loss": 0.6171626568654106
+    }
+  ]
+}

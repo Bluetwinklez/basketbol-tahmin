@@ -1,0 +1,926 @@
+[
+  {
+    "league": "ECW",
+    "season": "2025-26",
+    "variant": "club_strength",
+    "n": 214,
+    "day_blocks": 32,
+    "replicates": 1000,
+    "seed": 20261022,
+    "changes": {
+      "accuracy": {
+        "delta": -0.06074766355140187,
+        "day_block_95_interval": [
+          -0.13043478260869565,
+          0.021636636636636623
+        ]
+      },
+      "log_loss": {
+        "delta": 0.04131878340563097,
+        "day_block_95_interval": [
+          -0.026617877724394615,
+          0.09673060142094071
+        ]
+      },
+      "brier": {
+        "delta": 0.017993197387769194,
+        "day_block_95_interval": [
+          -0.011350897037547556,
+          0.04205400999292233
+        ]
+      }
+    },
+    "interpretation": "Candidate minus reference. Higher accuracy / lower losses are better. Exploratory day-block percentile intervals; few blocks and repeated model searches limit inference."
+  },
+  {
+    "league": "ECW",
+    "season": "2025-26",
+    "variant": "domestic_logistic",
+    "n": 214,
+    "day_blocks": 32,
+    "replicates": 1000,
+    "seed": 20261022,
+    "changes": {
+      "accuracy": {
+        "delta": -0.014018691588785047,
+        "day_block_95_interval": [
+          -0.03475443475443475,
+          0.014118992304341481
+        ]
+      },
+      "log_loss": {
+        "delta": 0.050984176646498944,
+        "day_block_95_interval": [
+          0.007479836421013222,
+          0.09784187255457968
+        ]
+      },
+      "brier": {
+        "delta": 0.011574133129591792,
+        "day_block_95_interval": [
+          -0.0016741021651977134,
+          0.02513004540738706
+        ]
+      }
+    },
+    "interpretation": "Candidate minus reference. Higher accuracy / lower losses are better. Exploratory day-block percentile intervals; few blocks and repeated model searches limit inference."
+  },
+  {
+    "league": "ECW",
+    "season": "2025-26",
+    "variant": "domestic_score",
+    "n": 214,
+    "day_blocks": 32,
+    "replicates": 1000,
+    "seed": 20261022,
+    "changes": {
+      "accuracy": {
+        "delta": 0.009345794392523364,
+        "day_block_95_interval": [
+          0.0,
+          0.026151571739807027
+        ]
+      },
+      "log_loss": {
+        "delta": 0.008136811373981048,
+        "day_block_95_interval": [
+          -0.007478791346244908,
+          0.027661751933097268
+        ]
+      },
+      "brier": {
+        "delta": 0.0019052751122883862,
+        "day_block_95_interval": [
+          -0.004266073636619077,
+          0.008619660057147687
+        ]
+      }
+    },
+    "interpretation": "Candidate minus reference. Higher accuracy / lower losses are better. Exploratory day-block percentile intervals; few blocks and repeated model searches limit inference."
+  },
+  {
+    "league": "ECW",
+    "season": "2025-26",
+    "variant": "elo",
+    "n": 214,
+    "day_blocks": 32,
+    "replicates": 1000,
+    "seed": 20261022,
+    "changes": {
+      "accuracy": {
+        "delta": -0.08411214953271028,
+        "day_block_95_interval": [
+          -0.14801668076557048,
+          -0.010316392900452033
+        ]
+      },
+      "log_loss": {
+        "delta": 0.036617863634653906,
+        "day_block_95_interval": [
+          -0.01888833993135332,
+          0.08566739944463925
+        ]
+      },
+      "brier": {
+        "delta": 0.0171339406448904,
+        "day_block_95_interval": [
+          -0.006473576591484252,
+          0.03708303334900081
+        ]
+      }
+    },
+    "interpretation": "Candidate minus reference. Higher accuracy / lower losses are better. Exploratory day-block percentile intervals; few blocks and repeated model searches limit inference."
+  },
+  {
+    "league": "ECW",
+    "season": "2025-26",
+    "variant": "logistic",
+    "n": 214,
+    "day_blocks": 32,
+    "replicates": 1000,
+    "seed": 20261022,
+    "changes": {
+      "accuracy": {
+        "delta": -0.02336448598130841,
+        "day_block_95_interval": [
+          -0.04369197788958969,
+          0.0
+        ]
+      },
+      "log_loss": {
+        "delta": 0.027835269551311805,
+        "day_block_95_interval": [
+          0.0010802569662060428,
+          0.05502092812564651
+        ]
+      },
+      "brier": {
+        "delta": 0.007341558830733488,
+        "day_block_95_interval": [
+          -0.0010338622769998048,
+          0.01690386621476393
+        ]
+      }
+    },
+    "interpretation": "Candidate minus reference. Higher accuracy / lower losses are better. Exploratory day-block percentile intervals; few blocks and repeated model searches limit inference."
+  },
+  {
+    "league": "ECW",
+    "season": "2025-26",
+    "variant": "selected_policy",
+    "n": 214,
+    "day_blocks": 32,
+    "replicates": 1000,
+    "seed": 20261022,
+    "changes": {
+      "accuracy": {
+        "delta": -0.02336448598130841,
+        "day_block_95_interval": [
+          -0.04369197788958969,
+          0.0
+        ]
+      },
+      "log_loss": {
+        "delta": 0.027835269551311805,
+        "day_block_95_interval": [
+          0.0010802569662060428,
+          0.05502092812564651
+        ]
+      },
+      "brier": {
+        "delta": 0.007341558830733488,
+        "day_block_95_interval": [
+          -0.0010338622769998048,
+          0.01690386621476393
+        ]
+      }
+    },
+    "interpretation": "Candidate minus reference. Higher accuracy / lower losses are better. Exploratory day-block percentile intervals; few blocks and repeated model searches limit inference."
+  },
+  {
+    "league": "ECW",
+    "season": "2025-26",
+    "variant": "women_logistic",
+    "n": 214,
+    "day_blocks": 32,
+    "replicates": 1000,
+    "seed": 20261022,
+    "changes": {
+      "accuracy": {
+        "delta": -0.03271028037383177,
+        "day_block_95_interval": [
+          -0.08573593073593073,
+          0.031088658606793322
+        ]
+      },
+      "log_loss": {
+        "delta": 0.0289408867509216,
+        "day_block_95_interval": [
+          -0.015103181024665853,
+          0.07042209042542419
+        ]
+      },
+      "brier": {
+        "delta": 0.008361585471928841,
+        "day_block_95_interval": [
+          -0.010755220984931296,
+          0.02587056126676935
+        ]
+      }
+    },
+    "interpretation": "Candidate minus reference. Higher accuracy / lower losses are better. Exploratory day-block percentile intervals; few blocks and repeated model searches limit inference."
+  },
+  {
+    "league": "ECW",
+    "season": "2025-26",
+    "variant": "women_score",
+    "n": 214,
+    "day_blocks": 32,
+    "replicates": 1000,
+    "seed": 20261022,
+    "changes": {
+      "accuracy": {
+        "delta": -0.03271028037383177,
+        "day_block_95_interval": [
+          -0.07335995891041763,
+          0.019716873165149015
+        ]
+      },
+      "log_loss": {
+        "delta": -0.0013807065828294611,
+        "day_block_95_interval": [
+          -0.031909902818857076,
+          0.02474566816136565
+        ]
+      },
+      "brier": {
+        "delta": -0.001502716895625597,
+        "day_block_95_interval": [
+          -0.014735723626973504,
+          0.010032101141739027
+        ]
+      }
+    },
+    "interpretation": "Candidate minus reference. Higher accuracy / lower losses are better. Exploratory day-block percentile intervals; few blocks and repeated model searches limit inference."
+  },
+  {
+    "league": "ECW",
+    "season": "2026-27",
+    "variant": "club_strength",
+    "n": 51,
+    "day_blocks": 10,
+    "replicates": 1000,
+    "seed": 20261022,
+    "changes": {
+      "accuracy": {
+        "delta": -0.13725490196078433,
+        "day_block_95_interval": [
+          -0.23259524987629884,
+          -0.05707792207792214
+        ]
+      },
+      "log_loss": {
+        "delta": 0.1874873945400756,
+        "day_block_95_interval": [
+          0.11128168330944951,
+          0.2861766286283051
+        ]
+      },
+      "brier": {
+        "delta": 0.07842854075396366,
+        "day_block_95_interval": [
+          0.04489985901772633,
+          0.12218956559866465
+        ]
+      }
+    },
+    "interpretation": "Candidate minus reference. Higher accuracy / lower losses are better. Exploratory day-block percentile intervals; few blocks and repeated model searches limit inference."
+  },
+  {
+    "league": "ECW",
+    "season": "2026-27",
+    "variant": "domestic_logistic",
+    "n": 51,
+    "day_blocks": 10,
+    "replicates": 1000,
+    "seed": 20261022,
+    "changes": {
+      "accuracy": {
+        "delta": 0.0392156862745098,
+        "day_block_95_interval": [
+          0.0,
+          0.08337765957446804
+        ]
+      },
+      "log_loss": {
+        "delta": 0.0008213731063920332,
+        "day_block_95_interval": [
+          -0.021072753018461347,
+          0.04631342765149498
+        ]
+      },
+      "brier": {
+        "delta": 9.146835453963075e-05,
+        "day_block_95_interval": [
+          -0.008976902854843304,
+          0.018563430594797106
+        ]
+      }
+    },
+    "interpretation": "Candidate minus reference. Higher accuracy / lower losses are better. Exploratory day-block percentile intervals; few blocks and repeated model searches limit inference."
+  },
+  {
+    "league": "ECW",
+    "season": "2026-27",
+    "variant": "domestic_score",
+    "n": 51,
+    "day_blocks": 10,
+    "replicates": 1000,
+    "seed": 20261022,
+    "changes": {
+      "accuracy": {
+        "delta": 0.0,
+        "day_block_95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "log_loss": {
+        "delta": 0.0014866317376914324,
+        "day_block_95_interval": [
+          -0.004141232024204694,
+          0.004720404993674312
+        ]
+      },
+      "brier": {
+        "delta": 0.0007014020564822909,
+        "day_block_95_interval": [
+          -0.00045995233861113134,
+          0.0015162432769671513
+        ]
+      }
+    },
+    "interpretation": "Candidate minus reference. Higher accuracy / lower losses are better. Exploratory day-block percentile intervals; few blocks and repeated model searches limit inference."
+  },
+  {
+    "league": "ECW",
+    "season": "2026-27",
+    "variant": "elo",
+    "n": 51,
+    "day_blocks": 10,
+    "replicates": 1000,
+    "seed": 20261022,
+    "changes": {
+      "accuracy": {
+        "delta": -0.11764705882352941,
+        "day_block_95_interval": [
+          -0.2285863095238095,
+          -0.029390756302521026
+        ]
+      },
+      "log_loss": {
+        "delta": 0.16153981613535556,
+        "day_block_95_interval": [
+          0.07629153063875549,
+          0.23277156958832168
+        ]
+      },
+      "brier": {
+        "delta": 0.06514213112782762,
+        "day_block_95_interval": [
+          0.027905141409316377,
+          0.09724450311322094
+        ]
+      }
+    },
+    "interpretation": "Candidate minus reference. Higher accuracy / lower losses are better. Exploratory day-block percentile intervals; few blocks and repeated model searches limit inference."
+  },
+  {
+    "league": "ECW",
+    "season": "2026-27",
+    "variant": "logistic",
+    "n": 51,
+    "day_blocks": 10,
+    "replicates": 1000,
+    "seed": 20261022,
+    "changes": {
+      "accuracy": {
+        "delta": 0.0196078431372549,
+        "day_block_95_interval": [
+          -0.047619047619047616,
+          0.08333333333333333
+        ]
+      },
+      "log_loss": {
+        "delta": 0.008021382928274453,
+        "day_block_95_interval": [
+          -0.01643266787650643,
+          0.052943494585539375
+        ]
+      },
+      "brier": {
+        "delta": 0.0032554401055120033,
+        "day_block_95_interval": [
+          -0.006883229018228555,
+          0.02194239649889813
+        ]
+      }
+    },
+    "interpretation": "Candidate minus reference. Higher accuracy / lower losses are better. Exploratory day-block percentile intervals; few blocks and repeated model searches limit inference."
+  },
+  {
+    "league": "ECW",
+    "season": "2026-27",
+    "variant": "selected_policy",
+    "n": 51,
+    "day_blocks": 10,
+    "replicates": 1000,
+    "seed": 20261022,
+    "changes": {
+      "accuracy": {
+        "delta": 0.0,
+        "day_block_95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "log_loss": {
+        "delta": 0.0,
+        "day_block_95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "brier": {
+        "delta": 0.0,
+        "day_block_95_interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "interpretation": "Candidate minus reference. Higher accuracy / lower losses are better. Exploratory day-block percentile intervals; few blocks and repeated model searches limit inference."
+  },
+  {
+    "league": "ECW",
+    "season": "2026-27",
+    "variant": "women_logistic",
+    "n": 51,
+    "day_blocks": 10,
+    "replicates": 1000,
+    "seed": 20261022,
+    "changes": {
+      "accuracy": {
+        "delta": -0.0784313725490196,
+        "day_block_95_interval": [
+          -0.19047619047619047,
+          0.0
+        ]
+      },
+      "log_loss": {
+        "delta": 0.10697603879600355,
+        "day_block_95_interval": [
+          0.025250395586261017,
+          0.16875398223449847
+        ]
+      },
+      "brier": {
+        "delta": 0.04635797546154913,
+        "day_block_95_interval": [
+          0.010426583676016118,
+          0.07331594997496448
+        ]
+      }
+    },
+    "interpretation": "Candidate minus reference. Higher accuracy / lower losses are better. Exploratory day-block percentile intervals; few blocks and repeated model searches limit inference."
+  },
+  {
+    "league": "ECW",
+    "season": "2026-27",
+    "variant": "women_score",
+    "n": 51,
+    "day_blocks": 10,
+    "replicates": 1000,
+    "seed": 20261022,
+    "changes": {
+      "accuracy": {
+        "delta": -0.058823529411764705,
+        "day_block_95_interval": [
+          -0.14584603658536585,
+          0.05003205128205126
+        ]
+      },
+      "log_loss": {
+        "delta": 0.08253520761007109,
+        "day_block_95_interval": [
+          -0.036068479584245555,
+          0.16081264041691778
+        ]
+      },
+      "brier": {
+        "delta": 0.03654845081949073,
+        "day_block_95_interval": [
+          -0.01594627530968193,
+          0.07209927037476196
+        ]
+      }
+    },
+    "interpretation": "Candidate minus reference. Higher accuracy / lower losses are better. Exploratory day-block percentile intervals; few blocks and repeated model searches limit inference."
+  },
+  {
+    "league": "FEC",
+    "season": "2025-26",
+    "variant": "elo",
+    "n": 195,
+    "day_blocks": 34,
+    "replicates": 1000,
+    "seed": 20261022,
+    "changes": {
+      "accuracy": {
+        "delta": 0.03076923076923077,
+        "day_block_95_interval": [
+          -0.023384238566075216,
+          0.08668023255813953
+        ]
+      },
+      "log_loss": {
+        "delta": 0.012448610047122758,
+        "day_block_95_interval": [
+          -0.03276024560488807,
+          0.05075976691075221
+        ]
+      },
+      "brier": {
+        "delta": 0.003526596872883122,
+        "day_block_95_interval": [
+          -0.013898347740031633,
+          0.01884736183679204
+        ]
+      }
+    },
+    "interpretation": "Candidate minus reference. Higher accuracy / lower losses are better. Exploratory day-block percentile intervals; few blocks and repeated model searches limit inference."
+  },
+  {
+    "league": "FEC",
+    "season": "2025-26",
+    "variant": "logistic",
+    "n": 195,
+    "day_blocks": 34,
+    "replicates": 1000,
+    "seed": 20261022,
+    "changes": {
+      "accuracy": {
+        "delta": 0.015384615384615385,
+        "day_block_95_interval": [
+          -0.004835144927536231,
+          0.04023310654089995
+        ]
+      },
+      "log_loss": {
+        "delta": 0.007985515853576038,
+        "day_block_95_interval": [
+          -0.004652785151390164,
+          0.019918924847526973
+        ]
+      },
+      "brier": {
+        "delta": 0.0006953452783829602,
+        "day_block_95_interval": [
+          -0.0044115601571855555,
+          0.0054377325956699914
+        ]
+      }
+    },
+    "interpretation": "Candidate minus reference. Higher accuracy / lower losses are better. Exploratory day-block percentile intervals; few blocks and repeated model searches limit inference."
+  },
+  {
+    "league": "FEC",
+    "season": "2025-26",
+    "variant": "selected_policy",
+    "n": 195,
+    "day_blocks": 34,
+    "replicates": 1000,
+    "seed": 20261022,
+    "changes": {
+      "accuracy": {
+        "delta": 0.0,
+        "day_block_95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "log_loss": {
+        "delta": 0.0,
+        "day_block_95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "brier": {
+        "delta": 0.0,
+        "day_block_95_interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "interpretation": "Candidate minus reference. Higher accuracy / lower losses are better. Exploratory day-block percentile intervals; few blocks and repeated model searches limit inference."
+  },
+  {
+    "league": "FEC",
+    "season": "2026-27",
+    "variant": "elo",
+    "n": 76,
+    "day_blocks": 9,
+    "replicates": 1000,
+    "seed": 20261022,
+    "changes": {
+      "accuracy": {
+        "delta": -0.05263157894736842,
+        "day_block_95_interval": [
+          -0.13542108050847457,
+          0.020838815789473678
+        ]
+      },
+      "log_loss": {
+        "delta": 0.02617975507276846,
+        "day_block_95_interval": [
+          -0.02709057328859487,
+          0.07308006755190369
+        ]
+      },
+      "brier": {
+        "delta": 0.01143531090420284,
+        "day_block_95_interval": [
+          -0.01132796591210162,
+          0.030463561464809857
+        ]
+      }
+    },
+    "interpretation": "Candidate minus reference. Higher accuracy / lower losses are better. Exploratory day-block percentile intervals; few blocks and repeated model searches limit inference."
+  },
+  {
+    "league": "FEC",
+    "season": "2026-27",
+    "variant": "logistic",
+    "n": 76,
+    "day_blocks": 9,
+    "replicates": 1000,
+    "seed": 20261022,
+    "changes": {
+      "accuracy": {
+        "delta": 0.0,
+        "day_block_95_interval": [
+          -0.0595508658008658,
+          0.05747679045092838
+        ]
+      },
+      "log_loss": {
+        "delta": 0.003461967285112682,
+        "day_block_95_interval": [
+          -0.03403590774493806,
+          0.044573688169076975
+        ]
+      },
+      "brier": {
+        "delta": 0.0014191998688093516,
+        "day_block_95_interval": [
+          -0.014936908307677327,
+          0.018662441872379174
+        ]
+      }
+    },
+    "interpretation": "Candidate minus reference. Higher accuracy / lower losses are better. Exploratory day-block percentile intervals; few blocks and repeated model searches limit inference."
+  },
+  {
+    "league": "FEC",
+    "season": "2026-27",
+    "variant": "selected_policy",
+    "n": 76,
+    "day_blocks": 9,
+    "replicates": 1000,
+    "seed": 20261022,
+    "changes": {
+      "accuracy": {
+        "delta": 0.0,
+        "day_block_95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "log_loss": {
+        "delta": 0.0,
+        "day_block_95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "brier": {
+        "delta": 0.0,
+        "day_block_95_interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "interpretation": "Candidate minus reference. Higher accuracy / lower losses are better. Exploratory day-block percentile intervals; few blocks and repeated model searches limit inference."
+  },
+  {
+    "league": "VTB",
+    "season": "2025-26",
+    "variant": "elo",
+    "n": 254,
+    "day_blocks": 146,
+    "replicates": 1000,
+    "seed": 20261022,
+    "changes": {
+      "accuracy": {
+        "delta": -0.007874015748031496,
+        "day_block_95_interval": [
+          -0.032381074732051096,
+          0.016197636949516647
+        ]
+      },
+      "log_loss": {
+        "delta": 0.022468492431859048,
+        "day_block_95_interval": [
+          -0.003697609634352443,
+          0.04705425505806158
+        ]
+      },
+      "brier": {
+        "delta": 0.00705438690218104,
+        "day_block_95_interval": [
+          -0.0010249128473538123,
+          0.0145282914295763
+        ]
+      }
+    },
+    "interpretation": "Candidate minus reference. Higher accuracy / lower losses are better. Exploratory day-block percentile intervals; few blocks and repeated model searches limit inference."
+  },
+  {
+    "league": "VTB",
+    "season": "2025-26",
+    "variant": "logistic",
+    "n": 254,
+    "day_blocks": 146,
+    "replicates": 1000,
+    "seed": 20261022,
+    "changes": {
+      "accuracy": {
+        "delta": -0.003937007874015748,
+        "day_block_95_interval": [
+          -0.019232625482625484,
+          0.00826532011933747
+        ]
+      },
+      "log_loss": {
+        "delta": 0.008176734032736048,
+        "day_block_95_interval": [
+          -0.0036164746940546746,
+          0.021053645019808265
+        ]
+      },
+      "brier": {
+        "delta": 0.002136433838135118,
+        "day_block_95_interval": [
+          -0.0022614284982399096,
+          0.00673763042165649
+        ]
+      }
+    },
+    "interpretation": "Candidate minus reference. Higher accuracy / lower losses are better. Exploratory day-block percentile intervals; few blocks and repeated model searches limit inference."
+  },
+  {
+    "league": "VTB",
+    "season": "2025-26",
+    "variant": "selected_policy",
+    "n": 254,
+    "day_blocks": 146,
+    "replicates": 1000,
+    "seed": 20261022,
+    "changes": {
+      "accuracy": {
+        "delta": 0.0,
+        "day_block_95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "log_loss": {
+        "delta": 0.0,
+        "day_block_95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "brier": {
+        "delta": 0.0,
+        "day_block_95_interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "interpretation": "Candidate minus reference. Higher accuracy / lower losses are better. Exploratory day-block percentile intervals; few blocks and repeated model searches limit inference."
+  },
+  {
+    "league": "VTB",
+    "season": "2026-27",
+    "variant": "elo",
+    "n": 29,
+    "day_blocks": 15,
+    "replicates": 1000,
+    "seed": 20261022,
+    "changes": {
+      "accuracy": {
+        "delta": 0.0,
+        "day_block_95_interval": [
+          -0.11538461538461539,
+          0.0967741935483871
+        ]
+      },
+      "log_loss": {
+        "delta": 0.03406685731741207,
+        "day_block_95_interval": [
+          -0.05091410060725596,
+          0.10208713401784789
+        ]
+      },
+      "brier": {
+        "delta": 0.004074503416502576,
+        "day_block_95_interval": [
+          -0.029979596940138555,
+          0.03482927184973165
+        ]
+      }
+    },
+    "interpretation": "Candidate minus reference. Higher accuracy / lower losses are better. Exploratory day-block percentile intervals; few blocks and repeated model searches limit inference."
+  },
+  {
+    "league": "VTB",
+    "season": "2026-27",
+    "variant": "logistic",
+    "n": 29,
+    "day_blocks": 15,
+    "replicates": 1000,
+    "seed": 20261022,
+    "changes": {
+      "accuracy": {
+        "delta": 0.0,
+        "day_block_95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "log_loss": {
+        "delta": -0.002665112875875493,
+        "day_block_95_interval": [
+          -0.019792784595586484,
+          0.018527499770375593
+        ]
+      },
+      "brier": {
+        "delta": 0.001743695322367727,
+        "day_block_95_interval": [
+          -0.005328370067154534,
+          0.01064252518540845
+        ]
+      }
+    },
+    "interpretation": "Candidate minus reference. Higher accuracy / lower losses are better. Exploratory day-block percentile intervals; few blocks and repeated model searches limit inference."
+  },
+  {
+    "league": "VTB",
+    "season": "2026-27",
+    "variant": "selected_policy",
+    "n": 29,
+    "day_blocks": 15,
+    "replicates": 1000,
+    "seed": 20261022,
+    "changes": {
+      "accuracy": {
+        "delta": 0.0,
+        "day_block_95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "log_loss": {
+        "delta": 0.0,
+        "day_block_95_interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "brier": {
+        "delta": 0.0,
+        "day_block_95_interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "interpretation": "Candidate minus reference. Higher accuracy / lower losses are better. Exploratory day-block percentile intervals; few blocks and repeated model searches limit inference."
+  }
+]

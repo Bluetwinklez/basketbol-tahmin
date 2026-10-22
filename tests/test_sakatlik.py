@@ -21,3 +21,20 @@ def test_uzun_satirda_takilmaz():
     t0 = time.time()
     ayristir(f"ATL@ORL AtlantaHawks {satir}\n" * 50)
     assert time.time() - t0 < 2
+
+
+def test_future_fixture_never_requests_a_future_injury_report(tmp_path,monkeypatch):
+    import sys,types,urllib.error,re
+    import pandas as pd
+    from bbtahmin.veri import sakatlik
+    urls=[]
+    monkeypatch.setitem(sys.modules,'pdfplumber',types.SimpleNamespace())
+    monkeypatch.setattr(sakatlik,'ONBELLEK',tmp_path)
+    def missing(request,**kwargs):
+        urls.append(request.full_url)
+        raise urllib.error.HTTPError(request.full_url,404,'missing',None,None)
+    monkeypatch.setattr('urllib.request.urlopen',missing)
+    result=sakatlik.son_rapor(pd.Timestamp.now(tz='UTC')+pd.Timedelta(days=100),geriye_saat=.25)
+    assert result.empty and len(urls)==1
+    date=re.search(r'Injury-Report_(\d{4}-\d{2}-\d{2})_',urls[0])[1]
+    assert date<=pd.Timestamp.now(tz='America/New_York').strftime('%Y-%m-%d')

@@ -1,7 +1,7 @@
 import json
-def collect(http, competition, year):
+def collect(http, competition, year, refresh=False):
     url=f'https://api-live.euroleague.net/v2/competitions/{competition}/seasons/{competition}{year}/games'
-    payload=json.loads(http.get(url))
+    payload=json.loads(http.get(url,refresh=True) if refresh else http.get(url))
     games=payload['data']
     if payload.get('total',len(games)) != len(games):
         raise ValueError('Sayfalama: eksik maç')

@@ -1,0 +1,13 @@
+{
+  "transport": "stdio",
+  "tools": [
+    "dataset_status",
+    "bulletin_events",
+    "predict_bulletin_event",
+    "bulletin_history",
+    "predict_live_cba",
+    "research_results"
+  ],
+  "auxiliary_club_games": 39,
+  "adaptive_report_rows": 12
+}

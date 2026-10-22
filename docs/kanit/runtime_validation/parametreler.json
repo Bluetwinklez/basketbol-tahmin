@@ -1,0 +1,4082 @@
+[
+  {
+    "lig": "E",
+    "sezon": "2025-26",
+    "model": "elo",
+    "k": 20.0,
+    "home_advantage": 100.0,
+    "shrink": 0.25,
+    "ewma_alpha": 0.2,
+    "validation_season": "2024-25",
+    "candidates": [
+      {
+        "k": 10.0,
+        "home": 0.0,
+        "shrink": 0.0,
+        "log_loss": 0.6586437842311464
+      },
+      {
+        "k": 10.0,
+        "home": 0.0,
+        "shrink": 0.25,
+        "log_loss": 0.6563870981066693
+      },
+      {
+        "k": 10.0,
+        "home": 0.0,
+        "shrink": 0.5,
+        "log_loss": 0.6617703759090989
+      },
+      {
+        "k": 10.0,
+        "home": 50.0,
+        "shrink": 0.0,
+        "log_loss": 0.6341070928561678
+      },
+      {
+        "k": 10.0,
+        "home": 50.0,
+        "shrink": 0.25,
+        "log_loss": 0.6318065207138069
+      },
+      {
+        "k": 10.0,
+        "home": 50.0,
+        "shrink": 0.5,
+        "log_loss": 0.6372768583544169
+      },
+      {
+        "k": 10.0,
+        "home": 100.0,
+        "shrink": 0.0,
+        "log_loss": 0.6287124901155339
+      },
+      {
+        "k": 10.0,
+        "home": 100.0,
+        "shrink": 0.25,
+        "log_loss": 0.6265778181828413
+      },
+      {
+        "k": 10.0,
+        "home": 100.0,
+        "shrink": 0.5,
+        "log_loss": 0.6325164630542334
+      },
+      {
+        "k": 20.0,
+        "home": 0.0,
+        "shrink": 0.0,
+        "log_loss": 0.6599424499979699
+      },
+      {
+        "k": 20.0,
+        "home": 0.0,
+        "shrink": 0.25,
+        "log_loss": 0.6545756311556112
+      },
+      {
+        "k": 20.0,
+        "home": 0.0,
+        "shrink": 0.5,
+        "log_loss": 0.6570712387431107
+      },
+      {
+        "k": 20.0,
+        "home": 50.0,
+        "shrink": 0.0,
+        "log_loss": 0.6348867832079482
+      },
+      {
+        "k": 20.0,
+        "home": 50.0,
+        "shrink": 0.25,
+        "log_loss": 0.6293233971584349
+      },
+      {
+        "k": 20.0,
+        "home": 50.0,
+        "shrink": 0.5,
+        "log_loss": 0.6318228703843707
+      },
+      {
+        "k": 20.0,
+        "home": 100.0,
+        "shrink": 0.0,
+        "log_loss": 0.6290840100042703
+      },
+      {
+        "k": 20.0,
+        "home": 100.0,
+        "shrink": 0.25,
+        "log_loss": 0.6233198408216317
+      },
+      {
+        "k": 20.0,
+        "home": 100.0,
+        "shrink": 0.5,
+        "log_loss": 0.6261425617826493
+      },
+      {
+        "k": 30.0,
+        "home": 0.0,
+        "shrink": 0.0,
+        "log_loss": 0.6655062390006516
+      },
+      {
+        "k": 30.0,
+        "home": 0.0,
+        "shrink": 0.25,
+        "log_loss": 0.6588273342294196
+      },
+      {
+        "k": 30.0,
+        "home": 0.0,
+        "shrink": 0.5,
+        "log_loss": 0.6595352222691081
+      },
+      {
+        "k": 30.0,
+        "home": 50.0,
+        "shrink": 0.0,
+        "log_loss": 0.639885664013347
+      },
+      {
+        "k": 30.0,
+        "home": 50.0,
+        "shrink": 0.25,
+        "log_loss": 0.6329487341815415
+      },
+      {
+        "k": 30.0,
+        "home": 50.0,
+        "shrink": 0.5,
+        "log_loss": 0.6335951764514344
+      },
+      {
+        "k": 30.0,
+        "home": 100.0,
+        "shrink": 0.0,
+        "log_loss": 0.6337591290611585
+      },
+      {
+        "k": 30.0,
+        "home": 100.0,
+        "shrink": 0.25,
+        "log_loss": 0.6264654749380487
+      },
+      {
+        "k": 30.0,
+        "home": 100.0,
+        "shrink": 0.5,
+        "log_loss": 0.6272871338301186
+      }
+    ]
+  },
+  {
+    "lig": "E",
+    "sezon": "2025-26",
+    "model": "mov",
+    "k": 20.0,
+    "home_advantage": 100.0,
+    "shrink": 0.25,
+    "ewma_alpha": 0.2,
+    "validation_season": "2024-25",
+    "candidates": [
+      {
+        "k": 10.0,
+        "home": 0.0,
+        "shrink": 0.0,
+        "log_loss": 0.652980764586777
+      },
+      {
+        "k": 10.0,
+        "home": 0.0,
+        "shrink": 0.25,
+        "log_loss": 0.6499323374549879
+      },
+      {
+        "k": 10.0,
+        "home": 0.0,
+        "shrink": 0.5,
+        "log_loss": 0.655267443329433
+      },
+      {
+        "k": 10.0,
+        "home": 50.0,
+        "shrink": 0.0,
+        "log_loss": 0.6292642884523634
+      },
+      {
+        "k": 10.0,
+        "home": 50.0,
+        "shrink": 0.25,
+        "log_loss": 0.6263374166687683
+      },
+      {
+        "k": 10.0,
+        "home": 50.0,
+        "shrink": 0.5,
+        "log_loss": 0.6317241374082005
+      },
+      {
+        "k": 10.0,
+        "home": 100.0,
+        "shrink": 0.0,
+        "log_loss": 0.6247132318131726
+      },
+      {
+        "k": 10.0,
+        "home": 100.0,
+        "shrink": 0.25,
+        "log_loss": 0.6219829312720611
+      },
+      {
+        "k": 10.0,
+        "home": 100.0,
+        "shrink": 0.5,
+        "log_loss": 0.627724954549065
+      },
+      {
+        "k": 20.0,
+        "home": 0.0,
+        "shrink": 0.0,
+        "log_loss": 0.6537114456399064
+      },
+      {
+        "k": 20.0,
+        "home": 0.0,
+        "shrink": 0.25,
+        "log_loss": 0.648211034010075
+      },
+      {
+        "k": 20.0,
+        "home": 0.0,
+        "shrink": 0.5,
+        "log_loss": 0.6504213556780883
+      },
+      {
+        "k": 20.0,
+        "home": 50.0,
+        "shrink": 0.0,
+        "log_loss": 0.6290494370138634
+      },
+      {
+        "k": 20.0,
+        "home": 50.0,
+        "shrink": 0.25,
+        "log_loss": 0.6236111066664474
+      },
+      {
+        "k": 20.0,
+        "home": 50.0,
+        "shrink": 0.5,
+        "log_loss": 0.6258987919477843
+      },
+      {
+        "k": 20.0,
+        "home": 100.0,
+        "shrink": 0.0,
+        "log_loss": 0.6240552164754694
+      },
+      {
+        "k": 20.0,
+        "home": 100.0,
+        "shrink": 0.25,
+        "log_loss": 0.618606351124482
+      },
+      {
+        "k": 20.0,
+        "home": 100.0,
+        "shrink": 0.5,
+        "log_loss": 0.6211604753790091
+      },
+      {
+        "k": 30.0,
+        "home": 0.0,
+        "shrink": 0.0,
+        "log_loss": 0.6588405338785673
+      },
+      {
+        "k": 30.0,
+        "home": 0.0,
+        "shrink": 0.25,
+        "log_loss": 0.6521038111647025
+      },
+      {
+        "k": 30.0,
+        "home": 0.0,
+        "shrink": 0.5,
+        "log_loss": 0.6524700961265372
+      },
+      {
+        "k": 30.0,
+        "home": 50.0,
+        "shrink": 0.0,
+        "log_loss": 0.6330679396269879
+      },
+      {
+        "k": 30.0,
+        "home": 50.0,
+        "shrink": 0.25,
+        "log_loss": 0.626368207275872
+      },
+      {
+        "k": 30.0,
+        "home": 50.0,
+        "shrink": 0.5,
+        "log_loss": 0.6268355858962016
+      },
+      {
+        "k": 30.0,
+        "home": 100.0,
+        "shrink": 0.0,
+        "log_loss": 0.6276339733845773
+      },
+      {
+        "k": 30.0,
+        "home": 100.0,
+        "shrink": 0.25,
+        "log_loss": 0.6208010258280602
+      },
+      {
+        "k": 30.0,
+        "home": 100.0,
+        "shrink": 0.5,
+        "log_loss": 0.6214729879751072
+      }
+    ]
+  },
+  {
+    "lig": "E",
+    "sezon": "2025-26",
+    "model": "ewma",
+    "alpha": 0.3,
+    "validation_losses": [
+      0.619730043655078,
+      0.6188563783382466
+    ]
+  },
+  {
+    "lig": "E",
+    "sezon": "2025-26",
+    "model": "margin_ridge",
+    "alpha": 0.1,
+    "candidates": [
+      0.1,
+      10.0,
+      100.0
+    ],
+    "validation_mae": [
+      9.117546140378009,
+      9.119279583594608,
+      9.124789194123814
+    ],
+    "history_window": null,
+    "validation_objective": "mae",
+    "validation_losses": [
+      9.117546140378009,
+      9.119279583594608,
+      9.124789194123814
+    ],
+    "history_candidates": [
+      {
+        "alpha": 0.1,
+        "window": null
+      },
+      {
+        "alpha": 10.0,
+        "window": null
+      },
+      {
+        "alpha": 100.0,
+        "window": null
+      }
+    ],
+    "training_rows": 5869,
+    "residual_sigma": 11.84915069854544,
+    "residual_mean": -0.4802280113125834,
+    "residual_normality_p": 0.027074500690824017,
+    "residual_skew": -0.07581242583646025,
+    "residual_excess_kurtosis": 0.8876697215683418
+  },
+  {
+    "lig": "E",
+    "sezon": "2025-26",
+    "model": "total_ridge",
+    "alpha": 0.1,
+    "candidates": [
+      0.1,
+      10.0,
+      100.0
+    ],
+    "validation_mae": [
+      12.767913186847942,
+      12.76850836447258,
+      12.772277214439397
+    ],
+    "history_window": null,
+    "validation_objective": "mae",
+    "validation_losses": [
+      12.767913186847942,
+      12.76850836447258,
+      12.772277214439397
+    ],
+    "history_candidates": [
+      {
+        "alpha": 0.1,
+        "window": null
+      },
+      {
+        "alpha": 10.0,
+        "window": null
+      },
+      {
+        "alpha": 100.0,
+        "window": null
+      }
+    ],
+    "training_rows": 5869,
+    "residual_sigma": 16.14923796366696,
+    "residual_mean": 2.4780703577819065,
+    "residual_normality_p": 0.048858222324568316,
+    "residual_skew": 0.28139185485830515,
+    "residual_excess_kurtosis": 0.32956419686568283
+  },
+  {
+    "lig": "E",
+    "sezon": "2025-26",
+    "model": "home",
+    "home_win_rate": 0.6259074044200678
+  },
+  {
+    "lig": "E",
+    "sezon": "2025-26",
+    "model": "logistic",
+    "parameter": 10.0,
+    "candidates": [
+      0.1,
+      1.0,
+      10.0
+    ],
+    "validation_losses": [
+      0.6191239302675925,
+      0.6188563783382466,
+      0.6188096081905745
+    ],
+    "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
+    "calibration_coefficient": 0.804669414118677,
+    "calibration_intercept": 0.08767597045965929
+  },
+  {
+    "lig": "E",
+    "sezon": "2025-26",
+    "model": "hist_gradient_boosting",
+    "parameter": {
+      "max_leaf_nodes": 7,
+      "l2_regularization": 1.0,
+      "max_iter": 50
+    },
+    "candidates": [
+      {
+        "max_leaf_nodes": 7,
+        "l2_regularization": 1.0,
+        "max_iter": 50
+      },
+      {
+        "max_leaf_nodes": 15,
+        "l2_regularization": 10.0,
+        "max_iter": 100
+      },
+      {
+        "max_leaf_nodes": 7,
+        "l2_regularization": 10.0,
+        "max_iter": 100
+      },
+      {
+        "max_leaf_nodes": 15,
+        "l2_regularization": 1.0,
+        "max_iter": 50
+      }
+    ],
+    "validation_losses": [
+      0.6296725762405172,
+      0.6420264271338509,
+      0.6344393980154907,
+      0.6411929445201977
+    ],
+    "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
+    "calibration_coefficient": 0.7309217228916248,
+    "calibration_intercept": 0.06968283335953318
+  },
+  {
+    "lig": "E",
+    "sezon": "2026-27",
+    "model": "elo",
+    "k": 10.0,
+    "home_advantage": 100.0,
+    "shrink": 0.25,
+    "ewma_alpha": 0.2,
+    "validation_season": "2025-26",
+    "candidates": [
+      {
+        "k": 10.0,
+        "home": 0.0,
+        "shrink": 0.0,
+        "log_loss": 0.6693521705187893
+      },
+      {
+        "k": 10.0,
+        "home": 0.0,
+        "shrink": 0.25,
+        "log_loss": 0.6674679469205103
+      },
+      {
+        "k": 10.0,
+        "home": 0.0,
+        "shrink": 0.5,
+        "log_loss": 0.6719811104372222
+      },
+      {
+        "k": 10.0,
+        "home": 50.0,
+        "shrink": 0.0,
+        "log_loss": 0.6393798572074869
+      },
+      {
+        "k": 10.0,
+        "home": 50.0,
+        "shrink": 0.25,
+        "log_loss": 0.637598503997215
+      },
+      {
+        "k": 10.0,
+        "home": 50.0,
+        "shrink": 0.5,
+        "log_loss": 0.6422546851643498
+      },
+      {
+        "k": 10.0,
+        "home": 100.0,
+        "shrink": 0.0,
+        "log_loss": 0.6289188308380209
+      },
+      {
+        "k": 10.0,
+        "home": 100.0,
+        "shrink": 0.25,
+        "log_loss": 0.6273962066579072
+      },
+      {
+        "k": 10.0,
+        "home": 100.0,
+        "shrink": 0.5,
+        "log_loss": 0.6325311349930612
+      },
+      {
+        "k": 20.0,
+        "home": 0.0,
+        "shrink": 0.0,
+        "log_loss": 0.6757711997950809
+      },
+      {
+        "k": 20.0,
+        "home": 0.0,
+        "shrink": 0.25,
+        "log_loss": 0.6702777665702022
+      },
+      {
+        "k": 20.0,
+        "home": 0.0,
+        "shrink": 0.5,
+        "log_loss": 0.6715597350103418
+      },
+      {
+        "k": 20.0,
+        "home": 50.0,
+        "shrink": 0.0,
+        "log_loss": 0.6449195525409442
+      },
+      {
+        "k": 20.0,
+        "home": 50.0,
+        "shrink": 0.25,
+        "log_loss": 0.6394687973814857
+      },
+      {
+        "k": 20.0,
+        "home": 50.0,
+        "shrink": 0.5,
+        "log_loss": 0.6408718757930738
+      },
+      {
+        "k": 20.0,
+        "home": 100.0,
+        "shrink": 0.0,
+        "log_loss": 0.633776032243468
+      },
+      {
+        "k": 20.0,
+        "home": 100.0,
+        "shrink": 0.25,
+        "log_loss": 0.6284122695961935
+      },
+      {
+        "k": 20.0,
+        "home": 100.0,
+        "shrink": 0.5,
+        "log_loss": 0.6302308504445362
+      },
+      {
+        "k": 30.0,
+        "home": 0.0,
+        "shrink": 0.0,
+        "log_loss": 0.6839368225706498
+      },
+      {
+        "k": 30.0,
+        "home": 0.0,
+        "shrink": 0.25,
+        "log_loss": 0.6765753358534513
+      },
+      {
+        "k": 30.0,
+        "home": 0.0,
+        "shrink": 0.5,
+        "log_loss": 0.6758853039921412
+      },
+      {
+        "k": 30.0,
+        "home": 50.0,
+        "shrink": 0.0,
+        "log_loss": 0.6523158401754514
+      },
+      {
+        "k": 30.0,
+        "home": 50.0,
+        "shrink": 0.25,
+        "log_loss": 0.6449059376865378
+      },
+      {
+        "k": 30.0,
+        "home": 50.0,
+        "shrink": 0.5,
+        "log_loss": 0.6442781496713312
+      },
+      {
+        "k": 30.0,
+        "home": 100.0,
+        "shrink": 0.0,
+        "log_loss": 0.640846526449264
+      },
+      {
+        "k": 30.0,
+        "home": 100.0,
+        "shrink": 0.25,
+        "log_loss": 0.6333200132092799
+      },
+      {
+        "k": 30.0,
+        "home": 100.0,
+        "shrink": 0.5,
+        "log_loss": 0.6329471528828446
+      }
+    ]
+  },
+  {
+    "lig": "E",
+    "sezon": "2026-27",
+    "model": "mov",
+    "k": 10.0,
+    "home_advantage": 100.0,
+    "shrink": 0.25,
+    "ewma_alpha": 0.2,
+    "validation_season": "2025-26",
+    "candidates": [
+      {
+        "k": 10.0,
+        "home": 0.0,
+        "shrink": 0.0,
+        "log_loss": 0.670187051751229
+      },
+      {
+        "k": 10.0,
+        "home": 0.0,
+        "shrink": 0.25,
+        "log_loss": 0.6664740000175161
+      },
+      {
+        "k": 10.0,
+        "home": 0.0,
+        "shrink": 0.5,
+        "log_loss": 0.6694415366076089
+      },
+      {
+        "k": 10.0,
+        "home": 50.0,
+        "shrink": 0.0,
+        "log_loss": 0.6401696299451962
+      },
+      {
+        "k": 10.0,
+        "home": 50.0,
+        "shrink": 0.25,
+        "log_loss": 0.6370385009036382
+      },
+      {
+        "k": 10.0,
+        "home": 50.0,
+        "shrink": 0.5,
+        "log_loss": 0.640390540602438
+      },
+      {
+        "k": 10.0,
+        "home": 100.0,
+        "shrink": 0.0,
+        "log_loss": 0.629884279318071
+      },
+      {
+        "k": 10.0,
+        "home": 100.0,
+        "shrink": 0.25,
+        "log_loss": 0.6273827645809668
+      },
+      {
+        "k": 10.0,
+        "home": 100.0,
+        "shrink": 0.5,
+        "log_loss": 0.6313544399510568
+      },
+      {
+        "k": 20.0,
+        "home": 0.0,
+        "shrink": 0.0,
+        "log_loss": 0.677600627988205
+      },
+      {
+        "k": 20.0,
+        "home": 0.0,
+        "shrink": 0.25,
+        "log_loss": 0.6704199175007184
+      },
+      {
+        "k": 20.0,
+        "home": 0.0,
+        "shrink": 0.5,
+        "log_loss": 0.6699227588501587
+      },
+      {
+        "k": 20.0,
+        "home": 50.0,
+        "shrink": 0.0,
+        "log_loss": 0.6468935566117904
+      },
+      {
+        "k": 20.0,
+        "home": 50.0,
+        "shrink": 0.25,
+        "log_loss": 0.6400707709551513
+      },
+      {
+        "k": 20.0,
+        "home": 50.0,
+        "shrink": 0.5,
+        "log_loss": 0.639909016507366
+      },
+      {
+        "k": 20.0,
+        "home": 100.0,
+        "shrink": 0.0,
+        "log_loss": 0.6364832012921595
+      },
+      {
+        "k": 20.0,
+        "home": 100.0,
+        "shrink": 0.25,
+        "log_loss": 0.6299669172968108
+      },
+      {
+        "k": 20.0,
+        "home": 100.0,
+        "shrink": 0.5,
+        "log_loss": 0.6303013029376914
+      },
+      {
+        "k": 30.0,
+        "home": 0.0,
+        "shrink": 0.0,
+        "log_loss": 0.6854920474265471
+      },
+      {
+        "k": 30.0,
+        "home": 0.0,
+        "shrink": 0.25,
+        "log_loss": 0.677128649408177
+      },
+      {
+        "k": 30.0,
+        "home": 0.0,
+        "shrink": 0.5,
+        "log_loss": 0.6749645515944891
+      },
+      {
+        "k": 30.0,
+        "home": 50.0,
+        "shrink": 0.0,
+        "log_loss": 0.6542903374649406
+      },
+      {
+        "k": 30.0,
+        "home": 50.0,
+        "shrink": 0.25,
+        "log_loss": 0.6459676814145587
+      },
+      {
+        "k": 30.0,
+        "home": 50.0,
+        "shrink": 0.5,
+        "log_loss": 0.6439747226385286
+      },
+      {
+        "k": 30.0,
+        "home": 100.0,
+        "shrink": 0.0,
+        "log_loss": 0.6441157176639355
+      },
+      {
+        "k": 30.0,
+        "home": 100.0,
+        "shrink": 0.25,
+        "log_loss": 0.6356943812146517
+      },
+      {
+        "k": 30.0,
+        "home": 100.0,
+        "shrink": 0.5,
+        "log_loss": 0.6339570615279669
+      }
+    ]
+  },
+  {
+    "lig": "E",
+    "sezon": "2026-27",
+    "model": "ewma",
+    "alpha": 0.1,
+    "validation_losses": [
+      0.6310627750816804,
+      0.6332614242771069
+    ]
+  },
+  {
+    "lig": "E",
+    "sezon": "2026-27",
+    "model": "margin_ridge",
+    "alpha": 100.0,
+    "candidates": [
+      0.1,
+      10.0,
+      100.0
+    ],
+    "validation_mae": [
+      9.185786823967558,
+      9.184045703146007,
+      9.174304255951823
+    ],
+    "history_window": null,
+    "validation_objective": "mae",
+    "validation_losses": [
+      9.185786823967558,
+      9.184045703146007,
+      9.174304255951823
+    ],
+    "history_candidates": [
+      {
+        "alpha": 0.1,
+        "window": null
+      },
+      {
+        "alpha": 10.0,
+        "window": null
+      },
+      {
+        "alpha": 100.0,
+        "window": null
+      }
+    ],
+    "training_rows": 6199,
+    "residual_sigma": 11.607221365839107,
+    "residual_mean": -0.2931463888432073,
+    "residual_normality_p": 0.5154464253588493,
+    "residual_skew": -0.13321624509078184,
+    "residual_excess_kurtosis": 0.03554626986790321
+  },
+  {
+    "lig": "E",
+    "sezon": "2026-27",
+    "model": "total_ridge",
+    "alpha": 0.1,
+    "candidates": [
+      0.1,
+      10.0,
+      100.0
+    ],
+    "validation_mae": [
+      13.986645389751917,
+      13.987797266952912,
+      13.996940040382514
+    ],
+    "history_window": null,
+    "validation_objective": "mae",
+    "validation_losses": [
+      13.986645389751917,
+      13.987797266952912,
+      13.996940040382514
+    ],
+    "history_candidates": [
+      {
+        "alpha": 0.1,
+        "window": null
+      },
+      {
+        "alpha": 10.0,
+        "window": null
+      },
+      {
+        "alpha": 100.0,
+        "window": null
+      }
+    ],
+    "training_rows": 6199,
+    "residual_sigma": 17.927764763488607,
+    "residual_mean": 2.6815892505017107,
+    "residual_normality_p": 4.9802420666950305e-06,
+    "residual_skew": 0.418439827563569,
+    "residual_excess_kurtosis": 1.2888792982436579
+  },
+  {
+    "lig": "E",
+    "sezon": "2026-27",
+    "model": "home",
+    "home_win_rate": 0.6265717315558249
+  },
+  {
+    "lig": "E",
+    "sezon": "2026-27",
+    "model": "logistic",
+    "parameter": 0.1,
+    "candidates": [
+      0.1,
+      1.0,
+      10.0
+    ],
+    "validation_losses": [
+      0.6307753982056942,
+      0.6310627750816804,
+      0.6310979987717098
+    ],
+    "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
+    "calibration_coefficient": 0.7063970440055454,
+    "calibration_intercept": 0.19907163035711642
+  },
+  {
+    "lig": "E",
+    "sezon": "2026-27",
+    "model": "hist_gradient_boosting",
+    "parameter": {
+      "max_leaf_nodes": 7,
+      "l2_regularization": 1.0,
+      "max_iter": 50
+    },
+    "candidates": [
+      {
+        "max_leaf_nodes": 7,
+        "l2_regularization": 1.0,
+        "max_iter": 50
+      },
+      {
+        "max_leaf_nodes": 15,
+        "l2_regularization": 10.0,
+        "max_iter": 100
+      },
+      {
+        "max_leaf_nodes": 7,
+        "l2_regularization": 10.0,
+        "max_iter": 100
+      },
+      {
+        "max_leaf_nodes": 15,
+        "l2_regularization": 1.0,
+        "max_iter": 50
+      }
+    ],
+    "validation_losses": [
+      0.6352041795227575,
+      0.6456562658045195,
+      0.6389607425458943,
+      0.6379059203213957
+    ],
+    "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
+    "calibration_coefficient": 0.6672253609289788,
+    "calibration_intercept": 0.1982099405044487
+  },
+  {
+    "lig": "NBA",
+    "sezon": "2025-26",
+    "model": "elo",
+    "k": 20.0,
+    "home_advantage": 50.0,
+    "shrink": 0.5,
+    "ewma_alpha": 0.2,
+    "validation_season": "2024-25",
+    "candidates": [
+      {
+        "k": 10.0,
+        "home": 0.0,
+        "shrink": 0.0,
+        "log_loss": 0.6339630372309747
+      },
+      {
+        "k": 10.0,
+        "home": 0.0,
+        "shrink": 0.25,
+        "log_loss": 0.6283381422442497
+      },
+      {
+        "k": 10.0,
+        "home": 0.0,
+        "shrink": 0.5,
+        "log_loss": 0.6290063523075351
+      },
+      {
+        "k": 10.0,
+        "home": 50.0,
+        "shrink": 0.0,
+        "log_loss": 0.6304244805306354
+      },
+      {
+        "k": 10.0,
+        "home": 50.0,
+        "shrink": 0.25,
+        "log_loss": 0.6246880683868656
+      },
+      {
+        "k": 10.0,
+        "home": 50.0,
+        "shrink": 0.5,
+        "log_loss": 0.6254188366623801
+      },
+      {
+        "k": 10.0,
+        "home": 100.0,
+        "shrink": 0.0,
+        "log_loss": 0.6458789078529009
+      },
+      {
+        "k": 10.0,
+        "home": 100.0,
+        "shrink": 0.25,
+        "log_loss": 0.6397422260183402
+      },
+      {
+        "k": 10.0,
+        "home": 100.0,
+        "shrink": 0.5,
+        "log_loss": 0.6406364247409227
+      },
+      {
+        "k": 20.0,
+        "home": 0.0,
+        "shrink": 0.0,
+        "log_loss": 0.6255603354423473
+      },
+      {
+        "k": 20.0,
+        "home": 0.0,
+        "shrink": 0.25,
+        "log_loss": 0.6210647016107141
+      },
+      {
+        "k": 20.0,
+        "home": 0.0,
+        "shrink": 0.5,
+        "log_loss": 0.6205656898975486
+      },
+      {
+        "k": 20.0,
+        "home": 50.0,
+        "shrink": 0.0,
+        "log_loss": 0.621639289672384
+      },
+      {
+        "k": 20.0,
+        "home": 50.0,
+        "shrink": 0.25,
+        "log_loss": 0.6170383661316399
+      },
+      {
+        "k": 20.0,
+        "home": 50.0,
+        "shrink": 0.5,
+        "log_loss": 0.6165600313348553
+      },
+      {
+        "k": 20.0,
+        "home": 100.0,
+        "shrink": 0.0,
+        "log_loss": 0.6361320415090482
+      },
+      {
+        "k": 20.0,
+        "home": 100.0,
+        "shrink": 0.25,
+        "log_loss": 0.6312508189902617
+      },
+      {
+        "k": 20.0,
+        "home": 100.0,
+        "shrink": 0.5,
+        "log_loss": 0.630858475216843
+      },
+      {
+        "k": 30.0,
+        "home": 0.0,
+        "shrink": 0.0,
+        "log_loss": 0.6260000876021383
+      },
+      {
+        "k": 30.0,
+        "home": 0.0,
+        "shrink": 0.25,
+        "log_loss": 0.6219150364688613
+      },
+      {
+        "k": 30.0,
+        "home": 0.0,
+        "shrink": 0.5,
+        "log_loss": 0.6209445010568954
+      },
+      {
+        "k": 30.0,
+        "home": 50.0,
+        "shrink": 0.0,
+        "log_loss": 0.6218263735632557
+      },
+      {
+        "k": 30.0,
+        "home": 50.0,
+        "shrink": 0.25,
+        "log_loss": 0.6176256411100814
+      },
+      {
+        "k": 30.0,
+        "home": 50.0,
+        "shrink": 0.5,
+        "log_loss": 0.6166468929485351
+      },
+      {
+        "k": 30.0,
+        "home": 100.0,
+        "shrink": 0.0,
+        "log_loss": 0.6360037097300095
+      },
+      {
+        "k": 30.0,
+        "home": 100.0,
+        "shrink": 0.25,
+        "log_loss": 0.6315296765896811
+      },
+      {
+        "k": 30.0,
+        "home": 100.0,
+        "shrink": 0.5,
+        "log_loss": 0.6305680102529643
+      }
+    ]
+  },
+  {
+    "lig": "NBA",
+    "sezon": "2025-26",
+    "model": "mov",
+    "k": 20.0,
+    "home_advantage": 50.0,
+    "shrink": 0.5,
+    "ewma_alpha": 0.2,
+    "validation_season": "2024-25",
+    "candidates": [
+      {
+        "k": 10.0,
+        "home": 0.0,
+        "shrink": 0.0,
+        "log_loss": 0.6256342809854766
+      },
+      {
+        "k": 10.0,
+        "home": 0.0,
+        "shrink": 0.25,
+        "log_loss": 0.6214346513857912
+      },
+      {
+        "k": 10.0,
+        "home": 0.0,
+        "shrink": 0.5,
+        "log_loss": 0.6215909212324512
+      },
+      {
+        "k": 10.0,
+        "home": 50.0,
+        "shrink": 0.0,
+        "log_loss": 0.6219776994912756
+      },
+      {
+        "k": 10.0,
+        "home": 50.0,
+        "shrink": 0.25,
+        "log_loss": 0.6178224794851626
+      },
+      {
+        "k": 10.0,
+        "home": 50.0,
+        "shrink": 0.5,
+        "log_loss": 0.618104788569325
+      },
+      {
+        "k": 10.0,
+        "home": 100.0,
+        "shrink": 0.0,
+        "log_loss": 0.636748943090616
+      },
+      {
+        "k": 10.0,
+        "home": 100.0,
+        "shrink": 0.25,
+        "log_loss": 0.6325483094402501
+      },
+      {
+        "k": 10.0,
+        "home": 100.0,
+        "shrink": 0.5,
+        "log_loss": 0.6330491954041141
+      },
+      {
+        "k": 20.0,
+        "home": 0.0,
+        "shrink": 0.0,
+        "log_loss": 0.6202032295352574
+      },
+      {
+        "k": 20.0,
+        "home": 0.0,
+        "shrink": 0.25,
+        "log_loss": 0.6166334877725238
+      },
+      {
+        "k": 20.0,
+        "home": 0.0,
+        "shrink": 0.5,
+        "log_loss": 0.6158340056008714
+      },
+      {
+        "k": 20.0,
+        "home": 50.0,
+        "shrink": 0.0,
+        "log_loss": 0.6161025852226677
+      },
+      {
+        "k": 20.0,
+        "home": 50.0,
+        "shrink": 0.25,
+        "log_loss": 0.6125825036148658
+      },
+      {
+        "k": 20.0,
+        "home": 50.0,
+        "shrink": 0.5,
+        "log_loss": 0.6118873026455178
+      },
+      {
+        "k": 20.0,
+        "home": 100.0,
+        "shrink": 0.0,
+        "log_loss": 0.6304347160174633
+      },
+      {
+        "k": 20.0,
+        "home": 100.0,
+        "shrink": 0.25,
+        "log_loss": 0.6269067764953667
+      },
+      {
+        "k": 20.0,
+        "home": 100.0,
+        "shrink": 0.5,
+        "log_loss": 0.6263657263132071
+      },
+      {
+        "k": 30.0,
+        "home": 0.0,
+        "shrink": 0.0,
+        "log_loss": 0.6222560846554579
+      },
+      {
+        "k": 30.0,
+        "home": 0.0,
+        "shrink": 0.25,
+        "log_loss": 0.6190292227860678
+      },
+      {
+        "k": 30.0,
+        "home": 0.0,
+        "shrink": 0.5,
+        "log_loss": 0.6180011431324821
+      },
+      {
+        "k": 30.0,
+        "home": 50.0,
+        "shrink": 0.0,
+        "log_loss": 0.6179011653885871
+      },
+      {
+        "k": 30.0,
+        "home": 50.0,
+        "shrink": 0.25,
+        "log_loss": 0.6147132529251884
+      },
+      {
+        "k": 30.0,
+        "home": 50.0,
+        "shrink": 0.5,
+        "log_loss": 0.6137684294922394
+      },
+      {
+        "k": 30.0,
+        "home": 100.0,
+        "shrink": 0.0,
+        "log_loss": 0.6323225016286089
+      },
+      {
+        "k": 30.0,
+        "home": 100.0,
+        "shrink": 0.25,
+        "log_loss": 0.629116771886096
+      },
+      {
+        "k": 30.0,
+        "home": 100.0,
+        "shrink": 0.5,
+        "log_loss": 0.6282843336222382
+      }
+    ]
+  },
+  {
+    "lig": "NBA",
+    "sezon": "2025-26",
+    "model": "ewma",
+    "alpha": 0.1,
+    "validation_losses": [
+      0.6068838312992703,
+      0.6074172772518049
+    ]
+  },
+  {
+    "lig": "NBA",
+    "sezon": "2025-26",
+    "model": "margin_ridge",
+    "alpha": 100.0,
+    "candidates": [
+      0.1,
+      10.0,
+      100.0
+    ],
+    "validation_mae": [
+      11.0724656017515,
+      11.072364752077409,
+      11.071690652761639
+    ],
+    "history_window": null,
+    "validation_objective": "mae",
+    "validation_losses": [
+      11.0724656017515,
+      11.072364752077409,
+      11.071690652761639
+    ],
+    "history_candidates": [
+      {
+        "alpha": 0.1,
+        "window": null
+      },
+      {
+        "alpha": 10.0,
+        "window": null
+      },
+      {
+        "alpha": 100.0,
+        "window": null
+      }
+    ],
+    "training_rows": 38974,
+    "residual_sigma": 14.184970799603025,
+    "residual_mean": -0.38640916677156745,
+    "residual_normality_p": 0.014933345016658923,
+    "residual_skew": -0.07388747731257557,
+    "residual_excess_kurtosis": 0.41352578102769355
+  },
+  {
+    "lig": "NBA",
+    "sezon": "2025-26",
+    "model": "total_ridge",
+    "alpha": 0.1,
+    "candidates": [
+      0.1,
+      10.0,
+      100.0
+    ],
+    "validation_mae": [
+      14.849113063943742,
+      14.849569909102838,
+      14.853254353572252
+    ],
+    "history_window": null,
+    "validation_objective": "mae",
+    "validation_losses": [
+      14.849113063943742,
+      14.849569909102838,
+      14.853254353572252
+    ],
+    "history_candidates": [
+      {
+        "alpha": 0.1,
+        "window": null
+      },
+      {
+        "alpha": 10.0,
+        "window": null
+      },
+      {
+        "alpha": 100.0,
+        "window": null
+      }
+    ],
+    "training_rows": 38974,
+    "residual_sigma": 18.41984999310665,
+    "residual_mean": 1.8046849341133346,
+    "residual_normality_p": 0.3621388032320172,
+    "residual_skew": 0.09357686870430487,
+    "residual_excess_kurtosis": -0.052133339756284425
+  },
+  {
+    "lig": "NBA",
+    "sezon": "2025-26",
+    "model": "home",
+    "home_win_rate": 0.5916366794887703
+  },
+  {
+    "lig": "NBA",
+    "sezon": "2025-26",
+    "model": "logistic",
+    "parameter": 0.1,
+    "candidates": [
+      0.1,
+      1.0,
+      10.0
+    ],
+    "validation_losses": [
+      0.6068625219695242,
+      0.6068838312992703,
+      0.6068872677368482
+    ],
+    "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
+    "calibration_coefficient": 0.9224220261743693,
+    "calibration_intercept": -0.06385665549333824
+  },
+  {
+    "lig": "NBA",
+    "sezon": "2025-26",
+    "model": "hist_gradient_boosting",
+    "parameter": {
+      "max_leaf_nodes": 7,
+      "l2_regularization": 10.0,
+      "max_iter": 100
+    },
+    "candidates": [
+      {
+        "max_leaf_nodes": 7,
+        "l2_regularization": 1.0,
+        "max_iter": 50
+      },
+      {
+        "max_leaf_nodes": 15,
+        "l2_regularization": 10.0,
+        "max_iter": 100
+      },
+      {
+        "max_leaf_nodes": 7,
+        "l2_regularization": 10.0,
+        "max_iter": 100
+      },
+      {
+        "max_leaf_nodes": 15,
+        "l2_regularization": 1.0,
+        "max_iter": 50
+      }
+    ],
+    "validation_losses": [
+      0.6077365665021386,
+      0.6069691257412437,
+      0.6067362760441214,
+      0.6089749441365248
+    ],
+    "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
+    "calibration_coefficient": 1.0518086767042,
+    "calibration_intercept": -0.08498011193405793
+  },
+  {
+    "lig": "NBA",
+    "sezon": "2026-27",
+    "model": "elo",
+    "k": 30.0,
+    "home_advantage": 50.0,
+    "shrink": 0.5,
+    "ewma_alpha": 0.2,
+    "validation_season": "2025-26",
+    "candidates": [
+      {
+        "k": 10.0,
+        "home": 0.0,
+        "shrink": 0.0,
+        "log_loss": 0.6370581039347495
+      },
+      {
+        "k": 10.0,
+        "home": 0.0,
+        "shrink": 0.25,
+        "log_loss": 0.6285887205436245
+      },
+      {
+        "k": 10.0,
+        "home": 0.0,
+        "shrink": 0.5,
+        "log_loss": 0.6270661769798659
+      },
+      {
+        "k": 10.0,
+        "home": 50.0,
+        "shrink": 0.0,
+        "log_loss": 0.6309807274376571
+      },
+      {
+        "k": 10.0,
+        "home": 50.0,
+        "shrink": 0.25,
+        "log_loss": 0.6223393282380828
+      },
+      {
+        "k": 10.0,
+        "home": 50.0,
+        "shrink": 0.5,
+        "log_loss": 0.6208330469693049
+      },
+      {
+        "k": 10.0,
+        "home": 100.0,
+        "shrink": 0.0,
+        "log_loss": 0.6441362712780557
+      },
+      {
+        "k": 10.0,
+        "home": 100.0,
+        "shrink": 0.25,
+        "log_loss": 0.6349162095832478
+      },
+      {
+        "k": 10.0,
+        "home": 100.0,
+        "shrink": 0.5,
+        "log_loss": 0.6334412178169848
+      },
+      {
+        "k": 20.0,
+        "home": 0.0,
+        "shrink": 0.0,
+        "log_loss": 0.6253128118243637
+      },
+      {
+        "k": 20.0,
+        "home": 0.0,
+        "shrink": 0.25,
+        "log_loss": 0.6183285179070984
+      },
+      {
+        "k": 20.0,
+        "home": 0.0,
+        "shrink": 0.5,
+        "log_loss": 0.6158276151269295
+      },
+      {
+        "k": 20.0,
+        "home": 50.0,
+        "shrink": 0.0,
+        "log_loss": 0.6185881156645882
+      },
+      {
+        "k": 20.0,
+        "home": 50.0,
+        "shrink": 0.25,
+        "log_loss": 0.6115295655861154
+      },
+      {
+        "k": 20.0,
+        "home": 50.0,
+        "shrink": 0.5,
+        "log_loss": 0.6090598046158964
+      },
+      {
+        "k": 20.0,
+        "home": 100.0,
+        "shrink": 0.0,
+        "log_loss": 0.6304563093750377
+      },
+      {
+        "k": 20.0,
+        "home": 100.0,
+        "shrink": 0.25,
+        "log_loss": 0.6230275270253915
+      },
+      {
+        "k": 20.0,
+        "home": 100.0,
+        "shrink": 0.5,
+        "log_loss": 0.6205576071838368
+      },
+      {
+        "k": 30.0,
+        "home": 0.0,
+        "shrink": 0.0,
+        "log_loss": 0.6232798493339188
+      },
+      {
+        "k": 30.0,
+        "home": 0.0,
+        "shrink": 0.25,
+        "log_loss": 0.6169067067407137
+      },
+      {
+        "k": 30.0,
+        "home": 0.0,
+        "shrink": 0.5,
+        "log_loss": 0.6140983772770036
+      },
+      {
+        "k": 30.0,
+        "home": 50.0,
+        "shrink": 0.0,
+        "log_loss": 0.6162254557158139
+      },
+      {
+        "k": 30.0,
+        "home": 50.0,
+        "shrink": 0.25,
+        "log_loss": 0.6098072351614773
+      },
+      {
+        "k": 30.0,
+        "home": 50.0,
+        "shrink": 0.5,
+        "log_loss": 0.607028975030559
+      },
+      {
+        "k": 30.0,
+        "home": 100.0,
+        "shrink": 0.0,
+        "log_loss": 0.6275858469886226
+      },
+      {
+        "k": 30.0,
+        "home": 100.0,
+        "shrink": 0.25,
+        "log_loss": 0.6208693441884353
+      },
+      {
+        "k": 30.0,
+        "home": 100.0,
+        "shrink": 0.5,
+        "log_loss": 0.6180653953496351
+      }
+    ]
+  },
+  {
+    "lig": "NBA",
+    "sezon": "2026-27",
+    "model": "mov",
+    "k": 30.0,
+    "home_advantage": 50.0,
+    "shrink": 0.5,
+    "ewma_alpha": 0.2,
+    "validation_season": "2025-26",
+    "candidates": [
+      {
+        "k": 10.0,
+        "home": 0.0,
+        "shrink": 0.0,
+        "log_loss": 0.623453578343956
+      },
+      {
+        "k": 10.0,
+        "home": 0.0,
+        "shrink": 0.25,
+        "log_loss": 0.6171012344731287
+      },
+      {
+        "k": 10.0,
+        "home": 0.0,
+        "shrink": 0.5,
+        "log_loss": 0.6156461455787832
+      },
+      {
+        "k": 10.0,
+        "home": 50.0,
+        "shrink": 0.0,
+        "log_loss": 0.616675507742397
+      },
+      {
+        "k": 10.0,
+        "home": 50.0,
+        "shrink": 0.25,
+        "log_loss": 0.6103319745466796
+      },
+      {
+        "k": 10.0,
+        "home": 50.0,
+        "shrink": 0.5,
+        "log_loss": 0.608970931777211
+      },
+      {
+        "k": 10.0,
+        "home": 100.0,
+        "shrink": 0.0,
+        "log_loss": 0.6282878780040765
+      },
+      {
+        "k": 10.0,
+        "home": 100.0,
+        "shrink": 0.25,
+        "log_loss": 0.6217932131111754
+      },
+      {
+        "k": 10.0,
+        "home": 100.0,
+        "shrink": 0.5,
+        "log_loss": 0.6205514694869699
+      },
+      {
+        "k": 20.0,
+        "home": 0.0,
+        "shrink": 0.0,
+        "log_loss": 0.6139597758928012
+      },
+      {
+        "k": 20.0,
+        "home": 0.0,
+        "shrink": 0.25,
+        "log_loss": 0.6086377738478249
+      },
+      {
+        "k": 20.0,
+        "home": 0.0,
+        "shrink": 0.5,
+        "log_loss": 0.6065681952257983
+      },
+      {
+        "k": 20.0,
+        "home": 50.0,
+        "shrink": 0.0,
+        "log_loss": 0.6066606261301861
+      },
+      {
+        "k": 20.0,
+        "home": 50.0,
+        "shrink": 0.25,
+        "log_loss": 0.6013685938832309
+      },
+      {
+        "k": 20.0,
+        "home": 50.0,
+        "shrink": 0.5,
+        "log_loss": 0.5993946219991353
+      },
+      {
+        "k": 20.0,
+        "home": 100.0,
+        "shrink": 0.0,
+        "log_loss": 0.6175966682745981
+      },
+      {
+        "k": 20.0,
+        "home": 100.0,
+        "shrink": 0.25,
+        "log_loss": 0.6122181984072265
+      },
+      {
+        "k": 20.0,
+        "home": 100.0,
+        "shrink": 0.5,
+        "log_loss": 0.6103370147961039
+      },
+      {
+        "k": 30.0,
+        "home": 0.0,
+        "shrink": 0.0,
+        "log_loss": 0.613560637428276
+      },
+      {
+        "k": 30.0,
+        "home": 0.0,
+        "shrink": 0.25,
+        "log_loss": 0.60865240445784
+      },
+      {
+        "k": 30.0,
+        "home": 0.0,
+        "shrink": 0.5,
+        "log_loss": 0.6064375927726403
+      },
+      {
+        "k": 30.0,
+        "home": 50.0,
+        "shrink": 0.0,
+        "log_loss": 0.6061485976260003
+      },
+      {
+        "k": 30.0,
+        "home": 50.0,
+        "shrink": 0.25,
+        "log_loss": 0.6012712661076564
+      },
+      {
+        "k": 30.0,
+        "home": 50.0,
+        "shrink": 0.5,
+        "log_loss": 0.5991458849761155
+      },
+      {
+        "k": 30.0,
+        "home": 100.0,
+        "shrink": 0.0,
+        "log_loss": 0.6172505554335446
+      },
+      {
+        "k": 30.0,
+        "home": 100.0,
+        "shrink": 0.25,
+        "log_loss": 0.6122951491929692
+      },
+      {
+        "k": 30.0,
+        "home": 100.0,
+        "shrink": 0.5,
+        "log_loss": 0.6102431801204147
+      }
+    ]
+  },
+  {
+    "lig": "NBA",
+    "sezon": "2026-27",
+    "model": "ewma",
+    "alpha": 0.1,
+    "validation_losses": [
+      0.599547452083842,
+      0.5998112891679951
+    ]
+  },
+  {
+    "lig": "NBA",
+    "sezon": "2026-27",
+    "model": "margin_ridge",
+    "alpha": 0.1,
+    "candidates": [
+      0.1,
+      10.0,
+      100.0
+    ],
+    "validation_mae": [
+      11.410907805686088,
+      11.411088506012945,
+      11.412983290042568
+    ],
+    "history_window": null,
+    "validation_objective": "mae",
+    "validation_losses": [
+      11.410907805686088,
+      11.411088506012945,
+      11.412983290042568
+    ],
+    "history_candidates": [
+      {
+        "alpha": 0.1,
+        "window": null
+      },
+      {
+        "alpha": 10.0,
+        "window": null
+      },
+      {
+        "alpha": 100.0,
+        "window": null
+      }
+    ],
+    "training_rows": 40295,
+    "residual_sigma": 14.57408017741429,
+    "residual_mean": -0.2178446134573288,
+    "residual_normality_p": 0.014753562689960403,
+    "residual_skew": -0.11666305831195091,
+    "residual_excess_kurtosis": 0.3474951462443707
+  },
+  {
+    "lig": "NBA",
+    "sezon": "2026-27",
+    "model": "total_ridge",
+    "alpha": 0.1,
+    "candidates": [
+      0.1,
+      10.0,
+      100.0
+    ],
+    "validation_mae": [
+      14.9840305986044,
+      14.984435974375542,
+      14.987957152407475
+    ],
+    "history_window": null,
+    "validation_objective": "mae",
+    "validation_losses": [
+      14.9840305986044,
+      14.984435974375542,
+      14.987957152407475
+    ],
+    "history_candidates": [
+      {
+        "alpha": 0.1,
+        "window": null
+      },
+      {
+        "alpha": 10.0,
+        "window": null
+      },
+      {
+        "alpha": 100.0,
+        "window": null
+      }
+    ],
+    "training_rows": 40295,
+    "residual_sigma": 18.921093724187113,
+    "residual_mean": 1.9093767416051017,
+    "residual_normality_p": 0.029474868296062887,
+    "residual_skew": 0.17852231097627327,
+    "residual_excess_kurtosis": 0.018505229408334767
+  },
+  {
+    "lig": "NBA",
+    "sezon": "2026-27",
+    "model": "home",
+    "home_win_rate": 0.5904798519835645
+  },
+  {
+    "lig": "NBA",
+    "sezon": "2026-27",
+    "model": "logistic",
+    "parameter": 0.1,
+    "candidates": [
+      0.1,
+      1.0,
+      10.0
+    ],
+    "validation_losses": [
+      0.5994336800914495,
+      0.599547452083842,
+      0.5995590876623145
+    ],
+    "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
+    "calibration_coefficient": 0.9211300486999909,
+    "calibration_intercept": 0.029943101971678113
+  },
+  {
+    "lig": "NBA",
+    "sezon": "2026-27",
+    "model": "hist_gradient_boosting",
+    "parameter": {
+      "max_leaf_nodes": 15,
+      "l2_regularization": 1.0,
+      "max_iter": 50
+    },
+    "candidates": [
+      {
+        "max_leaf_nodes": 7,
+        "l2_regularization": 1.0,
+        "max_iter": 50
+      },
+      {
+        "max_leaf_nodes": 15,
+        "l2_regularization": 10.0,
+        "max_iter": 100
+      },
+      {
+        "max_leaf_nodes": 7,
+        "l2_regularization": 10.0,
+        "max_iter": 100
+      },
+      {
+        "max_leaf_nodes": 15,
+        "l2_regularization": 1.0,
+        "max_iter": 50
+      }
+    ],
+    "validation_losses": [
+      0.597957909160055,
+      0.6001262277139765,
+      0.5986685607647243,
+      0.5978297169981234
+    ],
+    "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
+    "calibration_coefficient": 1.084020674901461,
+    "calibration_intercept": -0.012091778043401566
+  },
+  {
+    "lig": "NBL",
+    "sezon": "2025-26",
+    "model": "elo",
+    "k": 10.0,
+    "home_advantage": 50.0,
+    "shrink": 0.25,
+    "ewma_alpha": 0.2,
+    "validation_season": "2024-25",
+    "candidates": [
+      {
+        "k": 10.0,
+        "home": 0.0,
+        "shrink": 0.0,
+        "log_loss": 0.6794730731319375
+      },
+      {
+        "k": 10.0,
+        "home": 0.0,
+        "shrink": 0.25,
+        "log_loss": 0.679342113558495
+      },
+      {
+        "k": 10.0,
+        "home": 0.0,
+        "shrink": 0.5,
+        "log_loss": 0.6806699333133202
+      },
+      {
+        "k": 10.0,
+        "home": 50.0,
+        "shrink": 0.0,
+        "log_loss": 0.6747591380875353
+      },
+      {
+        "k": 10.0,
+        "home": 50.0,
+        "shrink": 0.25,
+        "log_loss": 0.6747158021752128
+      },
+      {
+        "k": 10.0,
+        "home": 50.0,
+        "shrink": 0.5,
+        "log_loss": 0.6760231860856909
+      },
+      {
+        "k": 10.0,
+        "home": 100.0,
+        "shrink": 0.0,
+        "log_loss": 0.6899232905051348
+      },
+      {
+        "k": 10.0,
+        "home": 100.0,
+        "shrink": 0.25,
+        "log_loss": 0.6902310721025622
+      },
+      {
+        "k": 10.0,
+        "home": 100.0,
+        "shrink": 0.5,
+        "log_loss": 0.6917501031742668
+      },
+      {
+        "k": 20.0,
+        "home": 0.0,
+        "shrink": 0.0,
+        "log_loss": 0.684334094837559
+      },
+      {
+        "k": 20.0,
+        "home": 0.0,
+        "shrink": 0.25,
+        "log_loss": 0.6814871188662945
+      },
+      {
+        "k": 20.0,
+        "home": 0.0,
+        "shrink": 0.5,
+        "log_loss": 0.6803011976134257
+      },
+      {
+        "k": 20.0,
+        "home": 50.0,
+        "shrink": 0.0,
+        "log_loss": 0.679747592646495
+      },
+      {
+        "k": 20.0,
+        "home": 50.0,
+        "shrink": 0.25,
+        "log_loss": 0.6768151672236441
+      },
+      {
+        "k": 20.0,
+        "home": 50.0,
+        "shrink": 0.5,
+        "log_loss": 0.6755074674754539
+      },
+      {
+        "k": 20.0,
+        "home": 100.0,
+        "shrink": 0.0,
+        "log_loss": 0.6955406194741102
+      },
+      {
+        "k": 20.0,
+        "home": 100.0,
+        "shrink": 0.25,
+        "log_loss": 0.6925486594344519
+      },
+      {
+        "k": 20.0,
+        "home": 100.0,
+        "shrink": 0.5,
+        "log_loss": 0.6912083969878985
+      },
+      {
+        "k": 30.0,
+        "home": 0.0,
+        "shrink": 0.0,
+        "log_loss": 0.6899375250970877
+      },
+      {
+        "k": 30.0,
+        "home": 0.0,
+        "shrink": 0.25,
+        "log_loss": 0.6861654842670258
+      },
+      {
+        "k": 30.0,
+        "home": 0.0,
+        "shrink": 0.5,
+        "log_loss": 0.6839127150058452
+      },
+      {
+        "k": 30.0,
+        "home": 50.0,
+        "shrink": 0.0,
+        "log_loss": 0.6854374462362111
+      },
+      {
+        "k": 30.0,
+        "home": 50.0,
+        "shrink": 0.25,
+        "log_loss": 0.6814485086324966
+      },
+      {
+        "k": 30.0,
+        "home": 50.0,
+        "shrink": 0.5,
+        "log_loss": 0.6789888238947192
+      },
+      {
+        "k": 30.0,
+        "home": 100.0,
+        "shrink": 0.0,
+        "log_loss": 0.7016086641759376
+      },
+      {
+        "k": 30.0,
+        "home": 100.0,
+        "shrink": 0.25,
+        "log_loss": 0.6973474731301031
+      },
+      {
+        "k": 30.0,
+        "home": 100.0,
+        "shrink": 0.5,
+        "log_loss": 0.6946892473238941
+      }
+    ]
+  },
+  {
+    "lig": "NBL",
+    "sezon": "2025-26",
+    "model": "mov",
+    "k": 20.0,
+    "home_advantage": 50.0,
+    "shrink": 0.5,
+    "ewma_alpha": 0.2,
+    "validation_season": "2024-25",
+    "candidates": [
+      {
+        "k": 10.0,
+        "home": 0.0,
+        "shrink": 0.0,
+        "log_loss": 0.6763535558660234
+      },
+      {
+        "k": 10.0,
+        "home": 0.0,
+        "shrink": 0.25,
+        "log_loss": 0.673536932473488
+      },
+      {
+        "k": 10.0,
+        "home": 0.0,
+        "shrink": 0.5,
+        "log_loss": 0.6725752225133035
+      },
+      {
+        "k": 10.0,
+        "home": 50.0,
+        "shrink": 0.0,
+        "log_loss": 0.672900010967938
+      },
+      {
+        "k": 10.0,
+        "home": 50.0,
+        "shrink": 0.25,
+        "log_loss": 0.6703032790990615
+      },
+      {
+        "k": 10.0,
+        "home": 50.0,
+        "shrink": 0.5,
+        "log_loss": 0.6692532932730472
+      },
+      {
+        "k": 10.0,
+        "home": 100.0,
+        "shrink": 0.0,
+        "log_loss": 0.6896328788314472
+      },
+      {
+        "k": 10.0,
+        "home": 100.0,
+        "shrink": 0.25,
+        "log_loss": 0.6873555044589457
+      },
+      {
+        "k": 10.0,
+        "home": 100.0,
+        "shrink": 0.5,
+        "log_loss": 0.686288245851033
+      },
+      {
+        "k": 20.0,
+        "home": 0.0,
+        "shrink": 0.0,
+        "log_loss": 0.6789114250556931
+      },
+      {
+        "k": 20.0,
+        "home": 0.0,
+        "shrink": 0.25,
+        "log_loss": 0.6742201982731594
+      },
+      {
+        "k": 20.0,
+        "home": 0.0,
+        "shrink": 0.5,
+        "log_loss": 0.6715918018544182
+      },
+      {
+        "k": 20.0,
+        "home": 50.0,
+        "shrink": 0.0,
+        "log_loss": 0.6765054095351926
+      },
+      {
+        "k": 20.0,
+        "home": 50.0,
+        "shrink": 0.25,
+        "log_loss": 0.6716462243863413
+      },
+      {
+        "k": 20.0,
+        "home": 50.0,
+        "shrink": 0.5,
+        "log_loss": 0.6687870678286761
+      },
+      {
+        "k": 20.0,
+        "home": 100.0,
+        "shrink": 0.0,
+        "log_loss": 0.6950494673418119
+      },
+      {
+        "k": 20.0,
+        "home": 100.0,
+        "shrink": 0.25,
+        "log_loss": 0.6898771165849099
+      },
+      {
+        "k": 20.0,
+        "home": 100.0,
+        "shrink": 0.5,
+        "log_loss": 0.6866921340450425
+      },
+      {
+        "k": 30.0,
+        "home": 0.0,
+        "shrink": 0.0,
+        "log_loss": 0.6848087681907142
+      },
+      {
+        "k": 30.0,
+        "home": 0.0,
+        "shrink": 0.25,
+        "log_loss": 0.6799824040258616
+      },
+      {
+        "k": 30.0,
+        "home": 0.0,
+        "shrink": 0.5,
+        "log_loss": 0.6770475221883046
+      },
+      {
+        "k": 30.0,
+        "home": 50.0,
+        "shrink": 0.0,
+        "log_loss": 0.6828242577854313
+      },
+      {
+        "k": 30.0,
+        "home": 50.0,
+        "shrink": 0.25,
+        "log_loss": 0.6777349542987663
+      },
+      {
+        "k": 30.0,
+        "home": 50.0,
+        "shrink": 0.5,
+        "log_loss": 0.6745753025068632
+      },
+      {
+        "k": 30.0,
+        "home": 100.0,
+        "shrink": 0.0,
+        "log_loss": 0.7023440342060078
+      },
+      {
+        "k": 30.0,
+        "home": 100.0,
+        "shrink": 0.25,
+        "log_loss": 0.6967715181940796
+      },
+      {
+        "k": 30.0,
+        "home": 100.0,
+        "shrink": 0.5,
+        "log_loss": 0.6932383662484835
+      }
+    ]
+  },
+  {
+    "lig": "NBL",
+    "sezon": "2025-26",
+    "model": "ewma",
+    "alpha": 0.1,
+    "validation_losses": [
+      0.6714304705689425,
+      0.676285563126284
+    ]
+  },
+  {
+    "lig": "NBL",
+    "sezon": "2025-26",
+    "model": "margin_ridge",
+    "alpha": 100.0,
+    "candidates": [
+      0.1,
+      10.0,
+      100.0
+    ],
+    "validation_mae": [
+      12.0435651098886,
+      12.041991425723674,
+      12.032997996344763
+    ],
+    "history_window": null,
+    "validation_objective": "mae",
+    "validation_losses": [
+      12.0435651098886,
+      12.041991425723674,
+      12.032997996344763
+    ],
+    "history_candidates": [
+      {
+        "alpha": 0.1,
+        "window": null
+      },
+      {
+        "alpha": 10.0,
+        "window": null
+      },
+      {
+        "alpha": 100.0,
+        "window": null
+      }
+    ],
+    "training_rows": 1251,
+    "residual_sigma": 15.549850735637655,
+    "residual_mean": -1.0813758047860438,
+    "residual_normality_p": 0.12646498515610996,
+    "residual_skew": -0.24206752204962828,
+    "residual_excess_kurtosis": 0.5650425367961649
+  },
+  {
+    "lig": "NBL",
+    "sezon": "2025-26",
+    "model": "total_ridge",
+    "alpha": 0.1,
+    "candidates": [
+      0.1,
+      10.0,
+      100.0
+    ],
+    "validation_mae": [
+      15.23165989573064,
+      15.243359828289043,
+      15.324316053157292
+    ],
+    "history_window": null,
+    "validation_objective": "mae",
+    "validation_losses": [
+      15.23165989573064,
+      15.243359828289043,
+      15.324316053157292
+    ],
+    "history_candidates": [
+      {
+        "alpha": 0.1,
+        "window": null
+      },
+      {
+        "alpha": 10.0,
+        "window": null
+      },
+      {
+        "alpha": 100.0,
+        "window": null
+      }
+    ],
+    "training_rows": 1251,
+    "residual_sigma": 18.856727071409324,
+    "residual_mean": 4.297937433733605,
+    "residual_normality_p": 0.6380814799239907,
+    "residual_skew": 0.17131990930289684,
+    "residual_excess_kurtosis": -0.0959471921142745
+  },
+  {
+    "lig": "NBL",
+    "sezon": "2025-26",
+    "model": "home",
+    "home_win_rate": 0.5832747716092762
+  },
+  {
+    "lig": "NBL",
+    "sezon": "2025-26",
+    "model": "logistic",
+    "parameter": 10.0,
+    "candidates": [
+      0.1,
+      1.0,
+      10.0
+    ],
+    "validation_losses": [
+      0.6714751116481767,
+      0.6714304705689425,
+      0.6713798367598853
+    ],
+    "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
+    "calibration_coefficient": 0.7554818419110433,
+    "calibration_intercept": -0.02988799650547053
+  },
+  {
+    "lig": "NBL",
+    "sezon": "2025-26",
+    "model": "hist_gradient_boosting",
+    "parameter": {
+      "max_leaf_nodes": 7,
+      "l2_regularization": 1.0,
+      "max_iter": 50
+    },
+    "candidates": [
+      {
+        "max_leaf_nodes": 7,
+        "l2_regularization": 1.0,
+        "max_iter": 50
+      },
+      {
+        "max_leaf_nodes": 15,
+        "l2_regularization": 10.0,
+        "max_iter": 100
+      },
+      {
+        "max_leaf_nodes": 7,
+        "l2_regularization": 10.0,
+        "max_iter": 100
+      },
+      {
+        "max_leaf_nodes": 15,
+        "l2_regularization": 1.0,
+        "max_iter": 50
+      }
+    ],
+    "validation_losses": [
+      0.6620221064997862,
+      0.6899066470892177,
+      0.6762644625515725,
+      0.676564347860699
+    ],
+    "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
+    "calibration_coefficient": 0.7659206759287764,
+    "calibration_intercept": -0.033014204852549876
+  },
+  {
+    "lig": "NBL",
+    "sezon": "2026-27",
+    "model": "elo",
+    "k": 30.0,
+    "home_advantage": 0.0,
+    "shrink": 0.25,
+    "ewma_alpha": 0.2,
+    "validation_season": "2025-26",
+    "candidates": [
+      {
+        "k": 10.0,
+        "home": 0.0,
+        "shrink": 0.0,
+        "log_loss": 0.6417961345943405
+      },
+      {
+        "k": 10.0,
+        "home": 0.0,
+        "shrink": 0.25,
+        "log_loss": 0.6467851590321825
+      },
+      {
+        "k": 10.0,
+        "home": 0.0,
+        "shrink": 0.5,
+        "log_loss": 0.6516341121783537
+      },
+      {
+        "k": 10.0,
+        "home": 50.0,
+        "shrink": 0.0,
+        "log_loss": 0.6438141884881862
+      },
+      {
+        "k": 10.0,
+        "home": 50.0,
+        "shrink": 0.25,
+        "log_loss": 0.6489276353239578
+      },
+      {
+        "k": 10.0,
+        "home": 50.0,
+        "shrink": 0.5,
+        "log_loss": 0.6537994988606757
+      },
+      {
+        "k": 10.0,
+        "home": 100.0,
+        "shrink": 0.0,
+        "log_loss": 0.6648652136531358
+      },
+      {
+        "k": 10.0,
+        "home": 100.0,
+        "shrink": 0.25,
+        "log_loss": 0.6706921466924668
+      },
+      {
+        "k": 10.0,
+        "home": 100.0,
+        "shrink": 0.5,
+        "log_loss": 0.6759644101531601
+      },
+      {
+        "k": 20.0,
+        "home": 0.0,
+        "shrink": 0.0,
+        "log_loss": 0.6343614842498823
+      },
+      {
+        "k": 20.0,
+        "home": 0.0,
+        "shrink": 0.25,
+        "log_loss": 0.6343130987296962
+      },
+      {
+        "k": 20.0,
+        "home": 0.0,
+        "shrink": 0.5,
+        "log_loss": 0.6362219729166314
+      },
+      {
+        "k": 20.0,
+        "home": 50.0,
+        "shrink": 0.0,
+        "log_loss": 0.6362269580215496
+      },
+      {
+        "k": 20.0,
+        "home": 50.0,
+        "shrink": 0.25,
+        "log_loss": 0.6363003384819721
+      },
+      {
+        "k": 20.0,
+        "home": 50.0,
+        "shrink": 0.5,
+        "log_loss": 0.638292032209214
+      },
+      {
+        "k": 20.0,
+        "home": 100.0,
+        "shrink": 0.0,
+        "log_loss": 0.6573449373782211
+      },
+      {
+        "k": 20.0,
+        "home": 100.0,
+        "shrink": 0.25,
+        "log_loss": 0.6577747961825883
+      },
+      {
+        "k": 20.0,
+        "home": 100.0,
+        "shrink": 0.5,
+        "log_loss": 0.6600917229230894
+      },
+      {
+        "k": 30.0,
+        "home": 0.0,
+        "shrink": 0.0,
+        "log_loss": 0.6312526120858232
+      },
+      {
+        "k": 30.0,
+        "home": 0.0,
+        "shrink": 0.25,
+        "log_loss": 0.6294583897231575
+      },
+      {
+        "k": 30.0,
+        "home": 0.0,
+        "shrink": 0.5,
+        "log_loss": 0.6300155793902624
+      },
+      {
+        "k": 30.0,
+        "home": 50.0,
+        "shrink": 0.0,
+        "log_loss": 0.6327603013530966
+      },
+      {
+        "k": 30.0,
+        "home": 50.0,
+        "shrink": 0.25,
+        "log_loss": 0.6311210448679183
+      },
+      {
+        "k": 30.0,
+        "home": 50.0,
+        "shrink": 0.5,
+        "log_loss": 0.6318145257626698
+      },
+      {
+        "k": 30.0,
+        "home": 100.0,
+        "shrink": 0.0,
+        "log_loss": 0.6536498220874554
+      },
+      {
+        "k": 30.0,
+        "home": 100.0,
+        "shrink": 0.25,
+        "log_loss": 0.6522252091926134
+      },
+      {
+        "k": 30.0,
+        "home": 100.0,
+        "shrink": 0.5,
+        "log_loss": 0.6531930331022642
+      }
+    ]
+  },
+  {
+    "lig": "NBL",
+    "sezon": "2026-27",
+    "model": "mov",
+    "k": 30.0,
+    "home_advantage": 50.0,
+    "shrink": 0.25,
+    "ewma_alpha": 0.2,
+    "validation_season": "2025-26",
+    "candidates": [
+      {
+        "k": 10.0,
+        "home": 0.0,
+        "shrink": 0.0,
+        "log_loss": 0.6270540500172318
+      },
+      {
+        "k": 10.0,
+        "home": 0.0,
+        "shrink": 0.25,
+        "log_loss": 0.6292138438853984
+      },
+      {
+        "k": 10.0,
+        "home": 0.0,
+        "shrink": 0.5,
+        "log_loss": 0.6322005032311724
+      },
+      {
+        "k": 10.0,
+        "home": 50.0,
+        "shrink": 0.0,
+        "log_loss": 0.6275525090705408
+      },
+      {
+        "k": 10.0,
+        "home": 50.0,
+        "shrink": 0.25,
+        "log_loss": 0.6295686895421555
+      },
+      {
+        "k": 10.0,
+        "home": 50.0,
+        "shrink": 0.5,
+        "log_loss": 0.6325181843906972
+      },
+      {
+        "k": 10.0,
+        "home": 100.0,
+        "shrink": 0.0,
+        "log_loss": 0.6468901047732204
+      },
+      {
+        "k": 10.0,
+        "home": 100.0,
+        "shrink": 0.25,
+        "log_loss": 0.6489911196746958
+      },
+      {
+        "k": 10.0,
+        "home": 100.0,
+        "shrink": 0.5,
+        "log_loss": 0.6520987266012942
+      },
+      {
+        "k": 20.0,
+        "home": 0.0,
+        "shrink": 0.0,
+        "log_loss": 0.6150629245111114
+      },
+      {
+        "k": 20.0,
+        "home": 0.0,
+        "shrink": 0.25,
+        "log_loss": 0.6141551653077663
+      },
+      {
+        "k": 20.0,
+        "home": 0.0,
+        "shrink": 0.5,
+        "log_loss": 0.615091785161951
+      },
+      {
+        "k": 20.0,
+        "home": 50.0,
+        "shrink": 0.0,
+        "log_loss": 0.6136954869519888
+      },
+      {
+        "k": 20.0,
+        "home": 50.0,
+        "shrink": 0.25,
+        "log_loss": 0.6129287349920847
+      },
+      {
+        "k": 20.0,
+        "home": 50.0,
+        "shrink": 0.5,
+        "log_loss": 0.6140415116263956
+      },
+      {
+        "k": 20.0,
+        "home": 100.0,
+        "shrink": 0.0,
+        "log_loss": 0.6312665638845966
+      },
+      {
+        "k": 20.0,
+        "home": 100.0,
+        "shrink": 0.25,
+        "log_loss": 0.6306394748534498
+      },
+      {
+        "k": 20.0,
+        "home": 100.0,
+        "shrink": 0.5,
+        "log_loss": 0.6320078241162097
+      },
+      {
+        "k": 30.0,
+        "home": 0.0,
+        "shrink": 0.0,
+        "log_loss": 0.6119810561413345
+      },
+      {
+        "k": 30.0,
+        "home": 0.0,
+        "shrink": 0.25,
+        "log_loss": 0.6101521818129431
+      },
+      {
+        "k": 30.0,
+        "home": 0.0,
+        "shrink": 0.5,
+        "log_loss": 0.6101892957456135
+      },
+      {
+        "k": 30.0,
+        "home": 50.0,
+        "shrink": 0.0,
+        "log_loss": 0.6093333128059018
+      },
+      {
+        "k": 30.0,
+        "home": 50.0,
+        "shrink": 0.25,
+        "log_loss": 0.6078191107197737
+      },
+      {
+        "k": 30.0,
+        "home": 50.0,
+        "shrink": 0.5,
+        "log_loss": 0.6081632175168267
+      },
+      {
+        "k": 30.0,
+        "home": 100.0,
+        "shrink": 0.0,
+        "log_loss": 0.6257784405259759
+      },
+      {
+        "k": 30.0,
+        "home": 100.0,
+        "shrink": 0.25,
+        "log_loss": 0.6245686739485303
+      },
+      {
+        "k": 30.0,
+        "home": 100.0,
+        "shrink": 0.5,
+        "log_loss": 0.625294437091524
+      }
+    ]
+  },
+  {
+    "lig": "NBL",
+    "sezon": "2026-27",
+    "model": "ewma",
+    "alpha": 0.3,
+    "validation_losses": [
+      0.6049428384692873,
+      0.6006705891821178
+    ]
+  },
+  {
+    "lig": "NBL",
+    "sezon": "2026-27",
+    "model": "margin_ridge",
+    "alpha": 0.1,
+    "candidates": [
+      0.1,
+      10.0,
+      100.0
+    ],
+    "validation_mae": [
+      11.967848768851374,
+      11.973784985966018,
+      12.022418285883617
+    ],
+    "history_window": null,
+    "validation_objective": "mae",
+    "validation_losses": [
+      11.967848768851374,
+      11.973784985966018,
+      12.022418285883617
+    ],
+    "history_candidates": [
+      {
+        "alpha": 0.1,
+        "window": null
+      },
+      {
+        "alpha": 10.0,
+        "window": null
+      },
+      {
+        "alpha": 100.0,
+        "window": null
+      }
+    ],
+    "training_rows": 1423,
+    "residual_sigma": 15.502137201636257,
+    "residual_mean": -0.39222634708452253,
+    "residual_normality_p": 0.44682039672882135,
+    "residual_skew": -0.15837463337363372,
+    "residual_excess_kurtosis": 0.25161250633896826
+  },
+  {
+    "lig": "NBL",
+    "sezon": "2026-27",
+    "model": "total_ridge",
+    "alpha": 10.0,
+    "candidates": [
+      0.1,
+      10.0,
+      100.0
+    ],
+    "validation_mae": [
+      14.821842887785616,
+      14.81646415207202,
+      14.824817713153566
+    ],
+    "history_window": null,
+    "validation_objective": "mae",
+    "validation_losses": [
+      14.821842887785616,
+      14.81646415207202,
+      14.824817713153566
+    ],
+    "history_candidates": [
+      {
+        "alpha": 0.1,
+        "window": null
+      },
+      {
+        "alpha": 10.0,
+        "window": null
+      },
+      {
+        "alpha": 100.0,
+        "window": null
+      }
+    ],
+    "training_rows": 1423,
+    "residual_sigma": 18.283169037622578,
+    "residual_mean": 2.307320486474413,
+    "residual_normality_p": 0.29388231303487944,
+    "residual_skew": 0.28025728705240205,
+    "residual_excess_kurtosis": -0.05801357410165586
+  },
+  {
+    "lig": "NBL",
+    "sezon": "2026-27",
+    "model": "home",
+    "home_win_rate": 0.5774032459425718
+  },
+  {
+    "lig": "NBL",
+    "sezon": "2026-27",
+    "model": "logistic",
+    "parameter": 10.0,
+    "candidates": [
+      0.1,
+      1.0,
+      10.0
+    ],
+    "validation_losses": [
+      0.6018515167303471,
+      0.6006705891821178,
+      0.6005588037773538
+    ],
+    "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
+    "calibration_coefficient": 1.367727811344318,
+    "calibration_intercept": -0.19478846150266205
+  },
+  {
+    "lig": "NBL",
+    "sezon": "2026-27",
+    "model": "hist_gradient_boosting",
+    "parameter": {
+      "max_leaf_nodes": 7,
+      "l2_regularization": 1.0,
+      "max_iter": 50
+    },
+    "candidates": [
+      {
+        "max_leaf_nodes": 7,
+        "l2_regularization": 1.0,
+        "max_iter": 50
+      },
+      {
+        "max_leaf_nodes": 15,
+        "l2_regularization": 10.0,
+        "max_iter": 100
+      },
+      {
+        "max_leaf_nodes": 7,
+        "l2_regularization": 10.0,
+        "max_iter": 100
+      },
+      {
+        "max_leaf_nodes": 15,
+        "l2_regularization": 1.0,
+        "max_iter": 50
+      }
+    ],
+    "validation_losses": [
+      0.661185755497783,
+      0.6748081360402104,
+      0.6672595848172502,
+      0.6827180516384044
+    ],
+    "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
+    "calibration_coefficient": 0.7055652143724745,
+    "calibration_intercept": 0.04129042364632668
+  },
+  {
+    "lig": "U",
+    "sezon": "2025-26",
+    "model": "elo",
+    "k": 30.0,
+    "home_advantage": 100.0,
+    "shrink": 0.25,
+    "ewma_alpha": 0.2,
+    "validation_season": "2024-25",
+    "candidates": [
+      {
+        "k": 10.0,
+        "home": 0.0,
+        "shrink": 0.0,
+        "log_loss": 0.653568744469696
+      },
+      {
+        "k": 10.0,
+        "home": 0.0,
+        "shrink": 0.25,
+        "log_loss": 0.656808264925355
+      },
+      {
+        "k": 10.0,
+        "home": 0.0,
+        "shrink": 0.5,
+        "log_loss": 0.6644896019340896
+      },
+      {
+        "k": 10.0,
+        "home": 50.0,
+        "shrink": 0.0,
+        "log_loss": 0.6342998839041301
+      },
+      {
+        "k": 10.0,
+        "home": 50.0,
+        "shrink": 0.25,
+        "log_loss": 0.6376715517965791
+      },
+      {
+        "k": 10.0,
+        "home": 50.0,
+        "shrink": 0.5,
+        "log_loss": 0.6453082111051012
+      },
+      {
+        "k": 10.0,
+        "home": 100.0,
+        "shrink": 0.0,
+        "log_loss": 0.6345268594942647
+      },
+      {
+        "k": 10.0,
+        "home": 100.0,
+        "shrink": 0.25,
+        "log_loss": 0.6384623933411205
+      },
+      {
+        "k": 10.0,
+        "home": 100.0,
+        "shrink": 0.5,
+        "log_loss": 0.6464114209661234
+      },
+      {
+        "k": 20.0,
+        "home": 0.0,
+        "shrink": 0.0,
+        "log_loss": 0.6487520147093495
+      },
+      {
+        "k": 20.0,
+        "home": 0.0,
+        "shrink": 0.25,
+        "log_loss": 0.6482186179441316
+      },
+      {
+        "k": 20.0,
+        "home": 0.0,
+        "shrink": 0.5,
+        "log_loss": 0.6537961017543954
+      },
+      {
+        "k": 20.0,
+        "home": 50.0,
+        "shrink": 0.0,
+        "log_loss": 0.629081901932311
+      },
+      {
+        "k": 20.0,
+        "home": 50.0,
+        "shrink": 0.25,
+        "log_loss": 0.6285089357861906
+      },
+      {
+        "k": 20.0,
+        "home": 50.0,
+        "shrink": 0.5,
+        "log_loss": 0.6340484290357044
+      },
+      {
+        "k": 20.0,
+        "home": 100.0,
+        "shrink": 0.0,
+        "log_loss": 0.6290120914427768
+      },
+      {
+        "k": 20.0,
+        "home": 100.0,
+        "shrink": 0.25,
+        "log_loss": 0.6285843080315994
+      },
+      {
+        "k": 20.0,
+        "home": 100.0,
+        "shrink": 0.5,
+        "log_loss": 0.6345189561036978
+      },
+      {
+        "k": 30.0,
+        "home": 0.0,
+        "shrink": 0.0,
+        "log_loss": 0.6489754134929272
+      },
+      {
+        "k": 30.0,
+        "home": 0.0,
+        "shrink": 0.25,
+        "log_loss": 0.6468147091764943
+      },
+      {
+        "k": 30.0,
+        "home": 0.0,
+        "shrink": 0.5,
+        "log_loss": 0.6502504939522714
+      },
+      {
+        "k": 30.0,
+        "home": 50.0,
+        "shrink": 0.0,
+        "log_loss": 0.6287335505300353
+      },
+      {
+        "k": 30.0,
+        "home": 50.0,
+        "shrink": 0.25,
+        "log_loss": 0.626444364898066
+      },
+      {
+        "k": 30.0,
+        "home": 50.0,
+        "shrink": 0.5,
+        "log_loss": 0.6298101081543412
+      },
+      {
+        "k": 30.0,
+        "home": 100.0,
+        "shrink": 0.0,
+        "log_loss": 0.6282280774362983
+      },
+      {
+        "k": 30.0,
+        "home": 100.0,
+        "shrink": 0.25,
+        "log_loss": 0.6259309322031015
+      },
+      {
+        "k": 30.0,
+        "home": 100.0,
+        "shrink": 0.5,
+        "log_loss": 0.6296263185785905
+      }
+    ]
+  },
+  {
+    "lig": "U",
+    "sezon": "2025-26",
+    "model": "mov",
+    "k": 30.0,
+    "home_advantage": 50.0,
+    "shrink": 0.25,
+    "ewma_alpha": 0.2,
+    "validation_season": "2024-25",
+    "candidates": [
+      {
+        "k": 10.0,
+        "home": 0.0,
+        "shrink": 0.0,
+        "log_loss": 0.6417567975649565
+      },
+      {
+        "k": 10.0,
+        "home": 0.0,
+        "shrink": 0.25,
+        "log_loss": 0.645269700156357
+      },
+      {
+        "k": 10.0,
+        "home": 0.0,
+        "shrink": 0.5,
+        "log_loss": 0.6539236899007894
+      },
+      {
+        "k": 10.0,
+        "home": 50.0,
+        "shrink": 0.0,
+        "log_loss": 0.6230460305839771
+      },
+      {
+        "k": 10.0,
+        "home": 50.0,
+        "shrink": 0.25,
+        "log_loss": 0.6268917477996381
+      },
+      {
+        "k": 10.0,
+        "home": 50.0,
+        "shrink": 0.5,
+        "log_loss": 0.6354803695422457
+      },
+      {
+        "k": 10.0,
+        "home": 100.0,
+        "shrink": 0.0,
+        "log_loss": 0.623537348853553
+      },
+      {
+        "k": 10.0,
+        "home": 100.0,
+        "shrink": 0.25,
+        "log_loss": 0.6280861592188421
+      },
+      {
+        "k": 10.0,
+        "home": 100.0,
+        "shrink": 0.5,
+        "log_loss": 0.6369919552469614
+      },
+      {
+        "k": 20.0,
+        "home": 0.0,
+        "shrink": 0.0,
+        "log_loss": 0.6350171298989419
+      },
+      {
+        "k": 20.0,
+        "home": 0.0,
+        "shrink": 0.25,
+        "log_loss": 0.6360626986845949
+      },
+      {
+        "k": 20.0,
+        "home": 0.0,
+        "shrink": 0.5,
+        "log_loss": 0.6423137554466214
+      },
+      {
+        "k": 20.0,
+        "home": 50.0,
+        "shrink": 0.0,
+        "log_loss": 0.6158858192608835
+      },
+      {
+        "k": 20.0,
+        "home": 50.0,
+        "shrink": 0.25,
+        "log_loss": 0.6170104582859107
+      },
+      {
+        "k": 20.0,
+        "home": 50.0,
+        "shrink": 0.5,
+        "log_loss": 0.623230629507179
+      },
+      {
+        "k": 20.0,
+        "home": 100.0,
+        "shrink": 0.0,
+        "log_loss": 0.6162589417981302
+      },
+      {
+        "k": 20.0,
+        "home": 100.0,
+        "shrink": 0.25,
+        "log_loss": 0.6176970105910397
+      },
+      {
+        "k": 20.0,
+        "home": 100.0,
+        "shrink": 0.5,
+        "log_loss": 0.624247159506901
+      },
+      {
+        "k": 30.0,
+        "home": 0.0,
+        "shrink": 0.0,
+        "log_loss": 0.6356626702472646
+      },
+      {
+        "k": 30.0,
+        "home": 0.0,
+        "shrink": 0.25,
+        "log_loss": 0.6354622112029742
+      },
+      {
+        "k": 30.0,
+        "home": 0.0,
+        "shrink": 0.5,
+        "log_loss": 0.6397042454388648
+      },
+      {
+        "k": 30.0,
+        "home": 50.0,
+        "shrink": 0.0,
+        "log_loss": 0.6156493045910574
+      },
+      {
+        "k": 30.0,
+        "home": 50.0,
+        "shrink": 0.25,
+        "log_loss": 0.615442222423879
+      },
+      {
+        "k": 30.0,
+        "home": 50.0,
+        "shrink": 0.5,
+        "log_loss": 0.6196542109546892
+      },
+      {
+        "k": 30.0,
+        "home": 100.0,
+        "shrink": 0.0,
+        "log_loss": 0.615687041673075
+      },
+      {
+        "k": 30.0,
+        "home": 100.0,
+        "shrink": 0.25,
+        "log_loss": 0.6156417578244494
+      },
+      {
+        "k": 30.0,
+        "home": 100.0,
+        "shrink": 0.5,
+        "log_loss": 0.6201145202569736
+      }
+    ]
+  },
+  {
+    "lig": "U",
+    "sezon": "2025-26",
+    "model": "ewma",
+    "alpha": 0.1,
+    "validation_losses": [
+      0.6143362905282242,
+      0.6156746973532249
+    ]
+  },
+  {
+    "lig": "U",
+    "sezon": "2025-26",
+    "model": "margin_ridge",
+    "alpha": 100.0,
+    "candidates": [
+      0.1,
+      10.0,
+      100.0
+    ],
+    "validation_mae": [
+      10.096833301529392,
+      10.094591506517576,
+      10.087346768937598
+    ],
+    "history_window": null,
+    "validation_objective": "mae",
+    "validation_losses": [
+      10.096833301529392,
+      10.094591506517576,
+      10.087346768937598
+    ],
+    "history_candidates": [
+      {
+        "alpha": 0.1,
+        "window": null
+      },
+      {
+        "alpha": 10.0,
+        "window": null
+      },
+      {
+        "alpha": 100.0,
+        "window": null
+      }
+    ],
+    "training_rows": 4415,
+    "residual_sigma": 13.352363222742207,
+    "residual_mean": 0.11270044714919736,
+    "residual_normality_p": 0.3508937738397598,
+    "residual_skew": -0.005711484238298471,
+    "residual_excess_kurtosis": 0.4884334008782476
+  },
+  {
+    "lig": "U",
+    "sezon": "2025-26",
+    "model": "total_ridge",
+    "alpha": 100.0,
+    "candidates": [
+      0.1,
+      10.0,
+      100.0
+    ],
+    "validation_mae": [
+      14.868889088421959,
+      14.865858978832025,
+      14.839360332885903
+    ],
+    "history_window": null,
+    "validation_objective": "mae",
+    "validation_losses": [
+      14.868889088421959,
+      14.865858978832025,
+      14.839360332885903
+    ],
+    "history_candidates": [
+      {
+        "alpha": 0.1,
+        "window": null
+      },
+      {
+        "alpha": 10.0,
+        "window": null
+      },
+      {
+        "alpha": 100.0,
+        "window": null
+      }
+    ],
+    "training_rows": 4415,
+    "residual_sigma": 17.90130908877964,
+    "residual_mean": 5.5066653131702505,
+    "residual_normality_p": 0.43381369390390256,
+    "residual_skew": 0.20881731485077235,
+    "residual_excess_kurtosis": -0.20011055458020133
+  },
+  {
+    "lig": "U",
+    "sezon": "2025-26",
+    "model": "home",
+    "home_win_rate": 0.6274127087399697
+  },
+  {
+    "lig": "U",
+    "sezon": "2025-26",
+    "model": "logistic",
+    "parameter": 0.1,
+    "candidates": [
+      0.1,
+      1.0,
+      10.0
+    ],
+    "validation_losses": [
+      0.6140689349826887,
+      0.6143362905282242,
+      0.6143667613364661
+    ],
+    "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
+    "calibration_coefficient": 0.7880526800995978,
+    "calibration_intercept": 0.0827267156879653
+  },
+  {
+    "lig": "U",
+    "sezon": "2025-26",
+    "model": "hist_gradient_boosting",
+    "parameter": {
+      "max_leaf_nodes": 7,
+      "l2_regularization": 10.0,
+      "max_iter": 100
+    },
+    "candidates": [
+      {
+        "max_leaf_nodes": 7,
+        "l2_regularization": 1.0,
+        "max_iter": 50
+      },
+      {
+        "max_leaf_nodes": 15,
+        "l2_regularization": 10.0,
+        "max_iter": 100
+      },
+      {
+        "max_leaf_nodes": 7,
+        "l2_regularization": 10.0,
+        "max_iter": 100
+      },
+      {
+        "max_leaf_nodes": 15,
+        "l2_regularization": 1.0,
+        "max_iter": 50
+      }
+    ],
+    "validation_losses": [
+      0.6184169239172657,
+      0.6290455265438526,
+      0.6172985265280432,
+      0.6227021146165003
+    ],
+    "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
+    "calibration_coefficient": 0.7528528716377048,
+    "calibration_intercept": 0.12171859156034796
+  },
+  {
+    "lig": "U",
+    "sezon": "2026-27",
+    "model": "elo",
+    "k": 30.0,
+    "home_advantage": 50.0,
+    "shrink": 0.0,
+    "ewma_alpha": 0.2,
+    "validation_season": "2025-26",
+    "candidates": [
+      {
+        "k": 10.0,
+        "home": 0.0,
+        "shrink": 0.0,
+        "log_loss": 0.650342977597898
+      },
+      {
+        "k": 10.0,
+        "home": 0.0,
+        "shrink": 0.25,
+        "log_loss": 0.6569353697141299
+      },
+      {
+        "k": 10.0,
+        "home": 0.0,
+        "shrink": 0.5,
+        "log_loss": 0.6636321376080538
+      },
+      {
+        "k": 10.0,
+        "home": 50.0,
+        "shrink": 0.0,
+        "log_loss": 0.6360027325530955
+      },
+      {
+        "k": 10.0,
+        "home": 50.0,
+        "shrink": 0.25,
+        "log_loss": 0.6425927073308745
+      },
+      {
+        "k": 10.0,
+        "home": 50.0,
+        "shrink": 0.5,
+        "log_loss": 0.6493548667290917
+      },
+      {
+        "k": 10.0,
+        "home": 100.0,
+        "shrink": 0.0,
+        "log_loss": 0.6414889081690195
+      },
+      {
+        "k": 10.0,
+        "home": 100.0,
+        "shrink": 0.25,
+        "log_loss": 0.648357518808077
+      },
+      {
+        "k": 10.0,
+        "home": 100.0,
+        "shrink": 0.5,
+        "log_loss": 0.6554133075132776
+      },
+      {
+        "k": 20.0,
+        "home": 0.0,
+        "shrink": 0.0,
+        "log_loss": 0.6401649354759252
+      },
+      {
+        "k": 20.0,
+        "home": 0.0,
+        "shrink": 0.25,
+        "log_loss": 0.6445898860584063
+      },
+      {
+        "k": 20.0,
+        "home": 0.0,
+        "shrink": 0.5,
+        "log_loss": 0.6506011286628437
+      },
+      {
+        "k": 20.0,
+        "home": 50.0,
+        "shrink": 0.0,
+        "log_loss": 0.6251665375405558
+      },
+      {
+        "k": 20.0,
+        "home": 50.0,
+        "shrink": 0.25,
+        "log_loss": 0.6297118600579488
+      },
+      {
+        "k": 20.0,
+        "home": 50.0,
+        "shrink": 0.5,
+        "log_loss": 0.6358852894142202
+      },
+      {
+        "k": 20.0,
+        "home": 100.0,
+        "shrink": 0.0,
+        "log_loss": 0.6295885361454486
+      },
+      {
+        "k": 20.0,
+        "home": 100.0,
+        "shrink": 0.25,
+        "log_loss": 0.6346751400781917
+      },
+      {
+        "k": 20.0,
+        "home": 100.0,
+        "shrink": 0.5,
+        "log_loss": 0.6413899043053781
+      },
+      {
+        "k": 30.0,
+        "home": 0.0,
+        "shrink": 0.0,
+        "log_loss": 0.6392239946059306
+      },
+      {
+        "k": 30.0,
+        "home": 0.0,
+        "shrink": 0.25,
+        "log_loss": 0.6409586500556179
+      },
+      {
+        "k": 30.0,
+        "home": 0.0,
+        "shrink": 0.5,
+        "log_loss": 0.6452119986059547
+      },
+      {
+        "k": 30.0,
+        "home": 50.0,
+        "shrink": 0.0,
+        "log_loss": 0.623695449986574
+      },
+      {
+        "k": 30.0,
+        "home": 50.0,
+        "shrink": 0.25,
+        "log_loss": 0.6256241640469918
+      },
+      {
+        "k": 30.0,
+        "home": 50.0,
+        "shrink": 0.5,
+        "log_loss": 0.6300838459039286
+      },
+      {
+        "k": 30.0,
+        "home": 100.0,
+        "shrink": 0.0,
+        "log_loss": 0.6275122235198328
+      },
+      {
+        "k": 30.0,
+        "home": 100.0,
+        "shrink": 0.25,
+        "log_loss": 0.6300301757649411
+      },
+      {
+        "k": 30.0,
+        "home": 100.0,
+        "shrink": 0.5,
+        "log_loss": 0.6351099994900803
+      }
+    ]
+  },
+  {
+    "lig": "U",
+    "sezon": "2026-27",
+    "model": "mov",
+    "k": 20.0,
+    "home_advantage": 50.0,
+    "shrink": 0.0,
+    "ewma_alpha": 0.2,
+    "validation_season": "2025-26",
+    "candidates": [
+      {
+        "k": 10.0,
+        "home": 0.0,
+        "shrink": 0.0,
+        "log_loss": 0.6362899118032695
+      },
+      {
+        "k": 10.0,
+        "home": 0.0,
+        "shrink": 0.25,
+        "log_loss": 0.6427281982490934
+      },
+      {
+        "k": 10.0,
+        "home": 0.0,
+        "shrink": 0.5,
+        "log_loss": 0.6497912912672758
+      },
+      {
+        "k": 10.0,
+        "home": 50.0,
+        "shrink": 0.0,
+        "log_loss": 0.6227614599761311
+      },
+      {
+        "k": 10.0,
+        "home": 50.0,
+        "shrink": 0.25,
+        "log_loss": 0.6291083433528792
+      },
+      {
+        "k": 10.0,
+        "home": 50.0,
+        "shrink": 0.5,
+        "log_loss": 0.6362222319310927
+      },
+      {
+        "k": 10.0,
+        "home": 100.0,
+        "shrink": 0.0,
+        "log_loss": 0.6284144244353697
+      },
+      {
+        "k": 10.0,
+        "home": 100.0,
+        "shrink": 0.25,
+        "log_loss": 0.6350577131966892
+      },
+      {
+        "k": 10.0,
+        "home": 100.0,
+        "shrink": 0.5,
+        "log_loss": 0.6425450129334632
+      },
+      {
+        "k": 20.0,
+        "home": 0.0,
+        "shrink": 0.0,
+        "log_loss": 0.6276169532677603
+      },
+      {
+        "k": 20.0,
+        "home": 0.0,
+        "shrink": 0.25,
+        "log_loss": 0.6303036446923551
+      },
+      {
+        "k": 20.0,
+        "home": 0.0,
+        "shrink": 0.5,
+        "log_loss": 0.6352579457743815
+      },
+      {
+        "k": 20.0,
+        "home": 50.0,
+        "shrink": 0.0,
+        "log_loss": 0.6131651868347943
+      },
+      {
+        "k": 20.0,
+        "home": 50.0,
+        "shrink": 0.25,
+        "log_loss": 0.6161018911553946
+      },
+      {
+        "k": 20.0,
+        "home": 50.0,
+        "shrink": 0.5,
+        "log_loss": 0.6213650797227963
+      },
+      {
+        "k": 20.0,
+        "home": 100.0,
+        "shrink": 0.0,
+        "log_loss": 0.617753230753523
+      },
+      {
+        "k": 20.0,
+        "home": 100.0,
+        "shrink": 0.25,
+        "log_loss": 0.6213320525699552
+      },
+      {
+        "k": 20.0,
+        "home": 100.0,
+        "shrink": 0.5,
+        "log_loss": 0.6272861383891589
+      },
+      {
+        "k": 30.0,
+        "home": 0.0,
+        "shrink": 0.0,
+        "log_loss": 0.6287510558168049
+      },
+      {
+        "k": 30.0,
+        "home": 0.0,
+        "shrink": 0.25,
+        "log_loss": 0.6284522824665356
+      },
+      {
+        "k": 30.0,
+        "home": 0.0,
+        "shrink": 0.5,
+        "log_loss": 0.6309646021846056
+      },
+      {
+        "k": 30.0,
+        "home": 50.0,
+        "shrink": 0.0,
+        "log_loss": 0.6136343896160403
+      },
+      {
+        "k": 30.0,
+        "home": 50.0,
+        "shrink": 0.25,
+        "log_loss": 0.6137414204399047
+      },
+      {
+        "k": 30.0,
+        "home": 50.0,
+        "shrink": 0.5,
+        "log_loss": 0.6166892113213528
+      },
+      {
+        "k": 30.0,
+        "home": 100.0,
+        "shrink": 0.0,
+        "log_loss": 0.6178378093166528
+      },
+      {
+        "k": 30.0,
+        "home": 100.0,
+        "shrink": 0.25,
+        "log_loss": 0.618665014897235
+      },
+      {
+        "k": 30.0,
+        "home": 100.0,
+        "shrink": 0.5,
+        "log_loss": 0.6224038867689846
+      }
+    ]
+  },
+  {
+    "lig": "U",
+    "sezon": "2026-27",
+    "model": "ewma",
+    "alpha": 0.1,
+    "validation_losses": [
+      0.6228470306234599,
+      0.6245950861048316
+    ]
+  },
+  {
+    "lig": "U",
+    "sezon": "2026-27",
+    "model": "margin_ridge",
+    "alpha": 0.1,
+    "candidates": [
+      0.1,
+      10.0,
+      100.0
+    ],
+    "validation_mae": [
+      11.479070569960767,
+      11.480177199595108,
+      11.48691727287102
+    ],
+    "history_window": null,
+    "validation_objective": "mae",
+    "validation_losses": [
+      11.479070569960767,
+      11.480177199595108,
+      11.48691727287102
+    ],
+    "history_candidates": [
+      {
+        "alpha": 0.1,
+        "window": null
+      },
+      {
+        "alpha": 10.0,
+        "window": null
+      },
+      {
+        "alpha": 100.0,
+        "window": null
+      }
+    ],
+    "training_rows": 4611,
+    "residual_sigma": 14.143012581969279,
+    "residual_mean": -0.9378081056617558,
+    "residual_normality_p": 0.24626945052680632,
+    "residual_skew": -0.16278117772217543,
+    "residual_excess_kurtosis": -0.4333153967127057
+  },
+  {
+    "lig": "U",
+    "sezon": "2026-27",
+    "model": "total_ridge",
+    "alpha": 0.1,
+    "candidates": [
+      0.1,
+      10.0,
+      100.0
+    ],
+    "validation_mae": [
+      16.201890441408977,
+      16.22364314752184,
+      16.314155261174847
+    ],
+    "history_window": null,
+    "validation_objective": "mae",
+    "validation_losses": [
+      16.201890441408977,
+      16.22364314752184,
+      16.314155261174847
+    ],
+    "history_candidates": [
+      {
+        "alpha": 0.1,
+        "window": null
+      },
+      {
+        "alpha": 10.0,
+        "window": null
+      },
+      {
+        "alpha": 100.0,
+        "window": null
+      }
+    ],
+    "training_rows": 4611,
+    "residual_sigma": 18.379446002165036,
+    "residual_mean": 7.611030956584172,
+    "residual_normality_p": 0.789021602080956,
+    "residual_skew": -0.10564650142093691,
+    "residual_excess_kurtosis": -0.16674136028656683
+  },
+  {
+    "lig": "U",
+    "sezon": "2026-27",
+    "model": "home",
+    "home_win_rate": 0.6256762380357886
+  },
+  {
+    "lig": "U",
+    "sezon": "2026-27",
+    "model": "logistic",
+    "parameter": 0.1,
+    "candidates": [
+      0.1,
+      1.0,
+      10.0
+    ],
+    "validation_losses": [
+      0.6224087230378639,
+      0.6228470306234599,
+      0.622892693587435
+    ],
+    "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
+    "calibration_coefficient": 0.7806187648829918,
+    "calibration_intercept": -0.016086484162742873
+  },
+  {
+    "lig": "U",
+    "sezon": "2026-27",
+    "model": "hist_gradient_boosting",
+    "parameter": {
+      "max_leaf_nodes": 7,
+      "l2_regularization": 1.0,
+      "max_iter": 50
+    },
+    "candidates": [
+      {
+        "max_leaf_nodes": 7,
+        "l2_regularization": 1.0,
+        "max_iter": 50
+      },
+      {
+        "max_leaf_nodes": 15,
+        "l2_regularization": 10.0,
+        "max_iter": 100
+      },
+      {
+        "max_leaf_nodes": 7,
+        "l2_regularization": 10.0,
+        "max_iter": 100
+      },
+      {
+        "max_leaf_nodes": 15,
+        "l2_regularization": 1.0,
+        "max_iter": 50
+      }
+    ],
+    "validation_losses": [
+      0.6271759450582093,
+      0.6478341327486377,
+      0.6388583220086707,
+      0.6390317320906865
+    ],
+    "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
+    "calibration_coefficient": 0.7893665012358388,
+    "calibration_intercept": 0.010488639678294507
+  }
+]

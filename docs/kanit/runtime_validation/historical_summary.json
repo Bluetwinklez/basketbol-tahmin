@@ -1,0 +1,208 @@
+{
+  "timestamp_utc": "2026-10-22T11:52:10.180037+00:00",
+  "github_commit": "39659689dde6c867ee36004df1acbc827402b99e",
+  "prediction_archive_hash_verified": true,
+  "completed_seasons": [
+    "2021-22",
+    "2022-23",
+    "2023-24",
+    "2024-25",
+    "2025-26"
+  ],
+  "results": [
+    {
+      "lig": "E",
+      "policy": "fixed_current_model",
+      "n": 1690,
+      "correct": 1092,
+      "accuracy": 0.6461538461538462,
+      "log_loss": 0.6159347121720344,
+      "brier": 0.21456016636149927
+    },
+    {
+      "lig": "E",
+      "policy": "prior_seasons_selection",
+      "n": 1690,
+      "correct": 1092,
+      "accuracy": 0.6461538461538462,
+      "log_loss": 0.6192007117351394,
+      "brier": 0.2157700060792661
+    },
+    {
+      "lig": "NBA",
+      "policy": "fixed_current_model",
+      "n": 6605,
+      "correct": 4346,
+      "accuracy": 0.6579863739591219,
+      "log_loss": 0.6197717808229742,
+      "brier": 0.21540965901759399
+    },
+    {
+      "lig": "NBA",
+      "policy": "prior_seasons_selection",
+      "n": 6605,
+      "correct": 4347,
+      "accuracy": 0.6581377744133232,
+      "log_loss": 0.6211235727592883,
+      "brier": 0.215990433952063
+    },
+    {
+      "lig": "NBL",
+      "policy": "fixed_current_model",
+      "n": 824,
+      "correct": 503,
+      "accuracy": 0.6104368932038835,
+      "log_loss": 0.658566435749262,
+      "brier": 0.23349772810622543
+    },
+    {
+      "lig": "NBL",
+      "policy": "prior_seasons_selection",
+      "n": 824,
+      "correct": 488,
+      "accuracy": 0.5922330097087378,
+      "log_loss": 0.6659029292639895,
+      "brier": 0.23690495998420832
+    },
+    {
+      "lig": "U",
+      "policy": "fixed_current_model",
+      "n": 970,
+      "correct": 639,
+      "accuracy": 0.6587628865979381,
+      "log_loss": 0.6056704322946238,
+      "brier": 0.2093086513943472
+    },
+    {
+      "lig": "U",
+      "policy": "prior_seasons_selection",
+      "n": 970,
+      "correct": 638,
+      "accuracy": 0.6577319587628866,
+      "log_loss": 0.6088668426772545,
+      "brier": 0.21062586280196555
+    }
+  ],
+  "model_choices": [
+    {
+      "lig": "E",
+      "sezon": "2021-22",
+      "model": "mov_elo",
+      "games": 299
+    },
+    {
+      "lig": "E",
+      "sezon": "2022-23",
+      "model": "skor",
+      "games": 328
+    },
+    {
+      "lig": "E",
+      "sezon": "2023-24",
+      "model": "skor",
+      "games": 331
+    },
+    {
+      "lig": "E",
+      "sezon": "2024-25",
+      "model": "skor",
+      "games": 330
+    },
+    {
+      "lig": "E",
+      "sezon": "2025-26",
+      "model": "skor",
+      "games": 402
+    },
+    {
+      "lig": "NBA",
+      "sezon": "2021-22",
+      "model": "mov_elo",
+      "games": 1323
+    },
+    {
+      "lig": "NBA",
+      "sezon": "2022-23",
+      "model": "logistic",
+      "games": 1320
+    },
+    {
+      "lig": "NBA",
+      "sezon": "2023-24",
+      "model": "skor",
+      "games": 1319
+    },
+    {
+      "lig": "NBA",
+      "sezon": "2024-25",
+      "model": "skor",
+      "games": 1321
+    },
+    {
+      "lig": "NBA",
+      "sezon": "2025-26",
+      "model": "skor",
+      "games": 1322
+    },
+    {
+      "lig": "NBL",
+      "sezon": "2021-22",
+      "model": "mov_elo",
+      "games": 148
+    },
+    {
+      "lig": "NBL",
+      "sezon": "2022-23",
+      "model": "logistic",
+      "games": 152
+    },
+    {
+      "lig": "NBL",
+      "sezon": "2023-24",
+      "model": "mov_elo",
+      "games": 173
+    },
+    {
+      "lig": "NBL",
+      "sezon": "2024-25",
+      "model": "mov_elo",
+      "games": 172
+    },
+    {
+      "lig": "NBL",
+      "sezon": "2025-26",
+      "model": "mov_elo",
+      "games": 179
+    },
+    {
+      "lig": "U",
+      "sezon": "2021-22",
+      "model": "mov_elo",
+      "games": 189
+    },
+    {
+      "lig": "U",
+      "sezon": "2022-23",
+      "model": "skor",
+      "games": 195
+    },
+    {
+      "lig": "U",
+      "sezon": "2023-24",
+      "model": "skor",
+      "games": 195
+    },
+    {
+      "lig": "U",
+      "sezon": "2024-25",
+      "model": "skor",
+      "games": 196
+    },
+    {
+      "lig": "U",
+      "sezon": "2025-26",
+      "model": "skor",
+      "games": 195
+    }
+  ]
+}

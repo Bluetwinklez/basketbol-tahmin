@@ -1,0 +1,267 @@
+{
+  "source_sha256": "9a77db32a1978a43f87cd719c787e4debe75f5815244532b317dad6d84ad54c5",
+  "games": [
+    {
+      "match": "Helsinki Basketball Academy - BK Zabiny Brno",
+      "fixture_id": "ECW_F135401",
+      "historical_reconstruction": true,
+      "prospective_eligible": false,
+      "data_quality_at_cutoff": {
+        "status": "limited",
+        "issues": [
+          "ECW_66458: fewer than five observed games in 400 days"
+        ],
+        "team_history": {
+          "ECW_66458": {
+            "all_prior_games": 1,
+            "recent_400d_games": 1,
+            "days_since_last": 7.25,
+            "effective_games_180d_half_life": 0.972467689597352,
+            "opponents": 1,
+            "seasons": [
+              "2026-27"
+            ]
+          },
+          "ECW_892": {
+            "all_prior_games": 17,
+            "recent_400d_games": 9,
+            "days_since_last": 7.333333333333333,
+            "effective_games_180d_half_life": 3.216521513576637,
+            "opponents": 5,
+            "seasons": [
+              "2023-24",
+              "2025-26",
+              "2026-27"
+            ]
+          }
+        },
+        "information_cutoff_utc": "2026-10-22T00:00:00+00:00",
+        "recommendation_validated": false,
+        "thresholds": "Five games / 400 days and 60-day staleness are diagnostic flags, not validated selection thresholds.",
+        "unknowns": [
+          "Full domestic schedule coverage",
+          "Expected roster and injuries",
+          "Historical publication times for retrospectively collected results"
+        ],
+        "note": "Data adequacy is separate from win probability; no validated recommendation or accuracy guarantee."
+      },
+      "actual_home": 59,
+      "actual_away": 95,
+      "winner_correct": true,
+      "home_signed_error": 3.487842875077618,
+      "away_signed_error": -11.301860237731788,
+      "home_absolute_error": 3.487842875077618,
+      "away_absolute_error": 11.301860237731788,
+      "score_mae": 7.394851556404703,
+      "total_signed_error": -7.81401736265417,
+      "total_absolute_error": 7.81401736265417,
+      "total_percentage_error": 5.074037248476733,
+      "margin_signed_error": 14.789703112809402,
+      "margin_absolute_error": 14.789703112809402,
+      "home_percentage_error": 5.911598093351895,
+      "away_percentage_error": 11.896694987086091,
+      "brier": 0.013443529063883979,
+      "log_loss": 0.12323739636659645,
+      "total_in_80": true,
+      "margin_in_80": true
+    },
+    {
+      "match": "KK Parnu - BC Vienna",
+      "fixture_id": "FEC_F135760",
+      "historical_reconstruction": true,
+      "prospective_eligible": false,
+      "data_quality_at_cutoff": {
+        "status": "limited",
+        "issues": [
+          "FEC_73436: fewer than five observed games in 400 days"
+        ],
+        "team_history": {
+          "FEC_58616": {
+            "all_prior_games": 14,
+            "recent_400d_games": 6,
+            "days_since_last": 8.333333333333334,
+            "effective_games_180d_half_life": 4.575841796415142,
+            "opponents": 4,
+            "seasons": [
+              "2023-24",
+              "2024-25",
+              "2025-26",
+              "2026-27"
+            ]
+          },
+          "FEC_73436": {
+            "all_prior_games": 2,
+            "recent_400d_games": 2,
+            "days_since_last": 8.291666666666666,
+            "effective_games_180d_half_life": 1.9115407518259746,
+            "opponents": 2,
+            "seasons": [
+              "2026-27"
+            ]
+          }
+        },
+        "information_cutoff_utc": "2026-10-22T00:00:00+00:00",
+        "recommendation_validated": false,
+        "thresholds": "Five games / 400 days and 60-day staleness are diagnostic flags, not validated selection thresholds.",
+        "unknowns": [
+          "Full domestic schedule coverage",
+          "Expected roster and injuries",
+          "Historical publication times for retrospectively collected results"
+        ],
+        "note": "Data adequacy is separate from win probability; no validated recommendation or accuracy guarantee."
+      },
+      "actual_home": 86,
+      "actual_away": 69,
+      "winner_correct": false,
+      "home_signed_error": -13.361319625063146,
+      "away_signed_error": 14.332348649802896,
+      "home_absolute_error": 13.361319625063146,
+      "away_absolute_error": 14.332348649802896,
+      "score_mae": 13.84683413743302,
+      "total_signed_error": 0.9710290247397495,
+      "total_absolute_error": 0.9710290247397495,
+      "total_percentage_error": 0.6264703385417739,
+      "margin_signed_error": -27.693668274866056,
+      "margin_absolute_error": 27.693668274866056,
+      "home_percentage_error": 15.536418168678079,
+      "away_percentage_error": 20.771519782323036,
+      "brier": 0.5490873734424642,
+      "log_loss": 1.3509438218837166,
+      "total_in_80": true,
+      "margin_in_80": false
+    },
+    {
+      "match": "ZKK Celje - KP Brno",
+      "fixture_id": "ECW_F135385",
+      "historical_reconstruction": true,
+      "prospective_eligible": false,
+      "data_quality_at_cutoff": {
+        "status": "limited",
+        "issues": [
+          "ECW_58477: fewer than five observed games in 400 days"
+        ],
+        "team_history": {
+          "ECW_58477": {
+            "all_prior_games": 1,
+            "recent_400d_games": 1,
+            "days_since_last": 7.229166666666667,
+            "effective_games_180d_half_life": 0.9725457093052732,
+            "opponents": 1,
+            "seasons": [
+              "2026-27"
+            ]
+          },
+          "ECW_891": {
+            "all_prior_games": 22,
+            "recent_400d_games": 8,
+            "days_since_last": 7.333333333333333,
+            "effective_games_180d_half_life": 3.3130806823129686,
+            "opponents": 5,
+            "seasons": [
+              "2023-24",
+              "2024-25",
+              "2025-26",
+              "2026-27"
+            ]
+          }
+        },
+        "information_cutoff_utc": "2026-10-22T00:00:00+00:00",
+        "recommendation_validated": false,
+        "thresholds": "Five games / 400 days and 60-day staleness are diagnostic flags, not validated selection thresholds.",
+        "unknowns": [
+          "Full domestic schedule coverage",
+          "Expected roster and injuries",
+          "Historical publication times for retrospectively collected results"
+        ],
+        "note": "Data adequacy is separate from win probability; no validated recommendation or accuracy guarantee."
+      },
+      "actual_home": 92,
+      "actual_away": 62,
+      "winner_correct": false,
+      "home_signed_error": -23.913351086877597,
+      "away_signed_error": 11.411234206679282,
+      "home_absolute_error": 23.913351086877597,
+      "away_absolute_error": 11.411234206679282,
+      "score_mae": 17.66229264677844,
+      "total_signed_error": -12.502116880198315,
+      "total_absolute_error": 12.502116880198315,
+      "total_percentage_error": 8.11825771441449,
+      "margin_signed_error": -35.324585293556865,
+      "margin_absolute_error": 35.324585293556865,
+      "home_percentage_error": 25.992772920519126,
+      "away_percentage_error": 18.40521646238594,
+      "brier": 0.3818688072037855,
+      "log_loss": 0.9622177767386104,
+      "total_in_80": true,
+      "margin_in_80": false
+    },
+    {
+      "match": "Montana 2003 - Uni Girona CB",
+      "fixture_id": "ECW_F135362",
+      "historical_reconstruction": true,
+      "prospective_eligible": false,
+      "data_quality_at_cutoff": {
+        "status": "limited",
+        "issues": [
+          "ECW_813: fewer than five observed games in 400 days",
+          "ECW_65758: fewer than five observed games in 400 days"
+        ],
+        "team_history": {
+          "ECW_813": {
+            "all_prior_games": 1,
+            "recent_400d_games": 1,
+            "days_since_last": 6.3125,
+            "effective_games_180d_half_life": 0.9759847804025558,
+            "opponents": 1,
+            "seasons": [
+              "2026-27"
+            ]
+          },
+          "ECW_65758": {
+            "all_prior_games": 27,
+            "recent_400d_games": 1,
+            "days_since_last": 7.239583333333333,
+            "effective_games_180d_half_life": 2.125350061127508,
+            "opponents": 1,
+            "seasons": [
+              "2023-24",
+              "2024-25",
+              "2026-27"
+            ]
+          }
+        },
+        "information_cutoff_utc": "2026-10-22T00:00:00+00:00",
+        "recommendation_validated": false,
+        "thresholds": "Five games / 400 days and 60-day staleness are diagnostic flags, not validated selection thresholds.",
+        "unknowns": [
+          "Full domestic schedule coverage",
+          "Expected roster and injuries",
+          "Historical publication times for retrospectively collected results"
+        ],
+        "note": "Data adequacy is separate from win probability; no validated recommendation or accuracy guarantee."
+      },
+      "actual_home": 82,
+      "actual_away": 73,
+      "winner_correct": false,
+      "home_signed_error": -20.14731826427851,
+      "away_signed_error": 5.314968165797779,
+      "home_absolute_error": 20.14731826427851,
+      "away_absolute_error": 5.314968165797779,
+      "score_mae": 12.731143215038145,
+      "total_signed_error": -14.832350098480731,
+      "total_absolute_error": 14.832350098480731,
+      "total_percentage_error": 9.569258128052084,
+      "margin_signed_error": -25.462286430076286,
+      "margin_absolute_error": 25.462286430076286,
+      "home_percentage_error": 24.569900322290867,
+      "away_percentage_error": 7.280778309312026,
+      "brier": 0.6777658583322401,
+      "log_loss": 1.7331058987928418,
+      "total_in_80": true,
+      "margin_in_80": false
+    }
+  ],
+  "correct": 1,
+  "n": 4,
+  "interpretation": "All four have sparse-history issues, including the correct pick. No loser-only filtering or retuning. Missing data is a hypothesis, not a proven cause. These post-tipoff reconstructions never enter prospective accuracy."
+}

@@ -1,101 +1,232 @@
-# Basketbol maç tahmini
+# Basketball Pregame Research
 
-Sızıntısız, sezon ilerlemeli (walk-forward) değerlendirme yapan araştırma paketi. EuroLeague (E), EuroCup (U) ve NBA maçlarını toplar; ev sahibi tabanı, saf Elo, MOV Elo, kalibre lojistik regresyon ve HistGradientBoosting modellerini aynı düzenekte karşılaştırır. Sonuçlar [docs/sonuclar.md](docs/sonuclar.md), ham metrik çıktıları [docs/kanit](docs/kanit) altındadır. Bahis getirisi veya BasketbolBet karşısında üstünlük iddiası yoktur.
+A Python research package for pregame basketball probabilities, score margins and totals. It combines a reproducible historical archive, chronological model evaluation, an experimental Iddaa bulletin reader and a read-only local MCP server.
 
-## Kurulum (PowerShell)
+**The archive contains 54,808 games. More data has not established a general increase in prediction accuracy.** Results below distinguish full coverage from confidence-filtered subsets, and historical tests from live performance.
 
-```powershell
-& 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe' -m venv .venv
-.venv/Scripts/python.exe -m pip install -r requirements.txt
-.venv/Scripts/python.exe -m pip install --no-deps -e .
-.venv/Scripts/python.exe -m pip freeze > requirements-lock.txt
-$env:PYTHONUTF8='1'
+## What works
+
+| Capability | Status |
+|---|---|
+| EuroLeague, EuroCup, NBA and Australian NBL history | Available; 54,808 stored games |
+| Chinese CBA | Separate 2,386-game archive, 20 teams; experimental CBA-only score model |
+| EuroCup Women (ECW), FIBA Europe Cup men (FEC), VTB men | Separate experimental archives: 674 / 651 / 860 games; independent pregame models |
+| CBA in-play state | Experimental manual score/period/remaining-clock projection; regulation only, no automatic live scoreboard |
+| Home-win probability, score, margin and total; 80% score intervals | Available; uncertainty estimates need continued validation |
+| Home baseline, Elo, MOV Elo, logistic regression, gradient boosting, score regression, ensemble | Chronological evaluation; parameters selected using earlier seasons |
+| Experimental Iddaa basketball bulletin | Website JSON backend tested; no API key; upstream may change |
+| Two-way, overtime-inclusive moneyline and full-game totals | Explicit market checks; integer totals include push probability |
+| Read-only MCP tools for local data, bulletin and predictions | Optional Python SDK extra; stdio tested |
+| Local odds history and movement | Pregame snapshots only, historical knowledge cutoffs, duplicate/conflict checks |
+| Adaptive form experiment | Optional earlier-season-gated monthly refits for ECW/FEC/VTB; default model remains fixed |
+| Auxiliary domestic/ABA workload | 39 official-club observations; partial coverage, diagnostic only, explicit missingness |
+| Confidence threshold and coverage report | Available; rejected predictions remain visible |
+| NBA injury PDF display | Optional `--sakatlik`; informational only |
+| Retrospective player-absence feature | **Disabled by default:** actual participants are postgame knowledge |
+| Four-factor/shooting profiles | Implemented and tested as an experiment; **not enabled by default** |
+| Turkish BSL, other unsupported leagues, non-CBA in-play prediction | No trained model; bulletin presence does not imply model support |
+| Betting execution, guaranteed returns | Not provided |
+
+## Reliability development and prospective verification
+
+The latest implementation adds **561 Czech senior women’s results**, **359 EuroLeague Women results** and **two early ECW results** in separate archives. A fresh official EuroLeague runtime overlay preserves the frozen benchmark dataset. See [implementation, measured failures and remaining source gaps](docs/improvement-implementation.md).
+
+Domestic-form research changes ECW winner picks from **150/214 to 152/214**, but worsens log loss from **0.604484 to 0.612621**. It is **not activated**. All candidates, failed selection policies, low-history strata and equal-coverage comparisons are retained. No general accuracy increase is claimed.
+
+Predictions now expose data adequacy independently of estimated win probability. Sparse/stale history and score/winner disagreements can block confidence-filtered selection. Diagnostic thresholds are not validated success guarantees. Immutable future-fixture records and separate final-result checks report both point and percentage errors.
+
+```bash
+python -m bbtahmin veri-denetle
+python scripts/evaluate_winners.py
+python scripts/evaluate_protocol.py
+python scripts/evaluate_intervals.py
 ```
 
-- Doğrudan bağımlılıklar sürümleriyle `requirements.txt` (ve `pyproject.toml`) içinde; gerçek ortamın tam kilidi `requirements-lock.txt` (pip freeze). Kilitteki `-e` satırı yerel yoldur; başka kopyada kurarken o satırı çıkarıp `pip install --no-deps -e .` kullanın.
-- HTTP taşıması Node.js'in yerleşik `fetch` fonksiyonuyla yapılır (`scripts/fetch.mjs`); Node.js 18+ gerekir. Ayrıştırma, model ve testler Python'dur.
-- Ortam notu: ilk oturumda sistem Python'u "Access is denied" verdiği için `.venv`, proje içine indirilen resmi CPython 3.12.10 taşınabilir dağıtımıyla kuruldu. İkinci oturumda sistem Python'u (aynı 3.12.10) çalıştı, fakat `.venv/Scripts/python.exe` etkileşimli onay istedi; bu yüzden komutlar `.runtime/run.py` sarmalayıcısıyla (sistem Python + `.venv` site-packages + `src`) çalıştırıldı. İki yol aynı paketleri kullanır.
+## Frozen two-game prospective demonstration
 
-## Komutlar
+Predictions were generated by this project's existing score model with fresh official EuroLeague results, recorded at **2026-10-22 21:30:47 UTC**, before both scheduled tipoffs. The earliest two confirmed future EuroLeague fixtures were selected; neither was chosen using its outcome.
 
-Tek giriş noktası, proje kökünden:
+| Fixture | Tipoff, Europe/Istanbul | Rounded score forecast | Home-win probability |
+|---|---|---|---:|
+| Žalgiris – ASVEL | 23 October 2026, 20:00 | 91–82 | 76.36% |
+| Olympiacos – Fenerbahçe | 23 October 2026, 21:15 | 91–82 | 78.25% |
 
-```powershell
-.venv/Scripts/python.exe -m bbtahmin topla                                   # E, U: 2007-08…2025-26; NBA: 2014-15…2025-26
-.venv/Scripts/python.exe -m bbtahmin topla --ligler NBA --baslangic 2016     # yalnız belirli lig/sezonlar
-.venv/Scripts/python.exe -m bbtahmin topla --ligler NBA --baslangic 2014 --sbr-izni   # oranlar: yalnız SBR izniniz varsa
-.venv/Scripts/python.exe -m bbtahmin backtest
-.venv/Scripts/python.exe -m bbtahmin tahmin "Fenerbahçe - Monaco" "Celtics - Lakers" --tarih 2026-10-25T20:45
-.venv/Scripts/python.exe -m bbtahmin tahmin "Washington - Milwaukee @1.30/2.14" --tarih 2026-10-22T02:00 --kaydet   # oran ve deftere kayıt
-.venv/Scripts/python.exe -m bbtahmin defter          # kayıtlı tahminleri sonuçlarla puanla (NBA sonuçları ESPN skor tablosundan)
-.venv/Scripts/python.exe -m bbtahmin topla-kutu      # EuroLeague/EuroCup v3 ve ESPN NBA kutu skorları
-.venv/Scripts/python.exe -m bbtahmin backtest --ligler NBA --cikti docs/deneme-nba   # deneme koşusu, ana rapora dokunmaz
-.venv/Scripts/python.exe -m pytest -q tests --junitxml=docs/kanit/pytest.xml
-.venv/Scripts/python.exe scripts/kanit_yaz.py; .venv/Scripts/python.exe scripts/verify_run.py; .venv/Scripts/python.exe scripts/finalize.py
+These are model probabilities, **not observed success rates**. [Frozen inputs, full-precision scores, intervals and hashes](docs/kanit/prospective/2026-10-23.json) remain unchanged. New result-check files report final scores, winner correctness and point/percentage errors. The fresh runtime overlay differs from the historical benchmark dataset and is explicitly flagged. Two games cannot validate general accuracy.
+
+## Install
+
+Python **3.12+**. The legacy Basketball Reference/EuroLeague collector also requires Node.js **18+** for `scripts/fetch.mjs`.
+
+```bash
+python -m venv .venv
+# Linux/macOS: source .venv/bin/activate
+# Windows PowerShell: .venv\Scripts\Activate.ps1
+python -m pip install -r requirements.txt
+python -m pip install --no-deps -e .
 ```
 
-`backtest`, `docs/kanit/*.csv|json`, kalibrasyon PNG'leri ve `docs/sonuclar.md` dosyasını üretir. `finalize.py`, raporu pytest XML'lerinden gelen gerçek test sayılarıyla yeniden yazar. `tahmin` komutu takım adlarını serbest yazımla eşler (Türkçe karakter ve kısaltma olur; lig verilmezse bulunur), son 400 günde o ligde oynamamış takımları reddeder ve her maç için backtest'te o ligde en iyi çıkan modelin kazanma olasılığını, tahmini skoru, sayı farkını ve toplamı %80 aralıklarıyla verir. Saat dilimi verilmezse İstanbul saati varsayılır.
+The checked-in Parquet files can be used immediately. `requirements-lock.txt` records an older Windows environment and contains a machine-specific editable-install path; `requirements.txt` is the portable direct-dependency specification.
 
-Skor modeli: Elo ve EWMA'ya ek olarak rakibe göre düzeltilmiş hücum/savunma sayı reytingleri (iki öğrenme hızı) maç öncesi sırayla hesaplanır; fark ve toplam Ridge ile, kazanma olasılığı farkın normal dağılımından gelir. Toplam, doğrulama sezonundaki ortalama artıkla düzeltilir (skor seviyesi yıllar içinde arttığı için). Walk-forward'da %80 aralıklar maçların %80-82'sini kapsadı.
+## Predict and record
 
-Kasıtlı sızıntı negatif kontrolü ayrıca çalıştırıldığında **1 başarısız test** vermelidir (sızıntı denetleyicisinin duyarlı olduğunun kanıtı):
-
-```powershell
-.venv/Scripts/python.exe -m pytest tests/negative_control.py -q --junitxml=docs/kanit/negatif_kontrol.xml
+```bash
+python -m bbtahmin tahmin "Celtics - Lakers" --lig NBA --tarih 2026-10-25T20:00 --json
+python -m bbtahmin tahmin "Fenerbahçe - Monaco" --lig E --tarih 2026-10-25T20:00 --min-guven 0.70
+python -m bbtahmin tahmin "Celtics - Lakers @1.90/1.95" --lig NBA --tarih 2026-10-25T20:00 --kaydet
+python -m bbtahmin defter
 ```
 
-Normal pakette aynı denetleyici (`tests/leakage_check.py`) aynı sızıntılı fonksiyonla `pytest.raises(AssertionError)` altında çalışır; normal paket tamamen geçmelidir. Testler ağ kullanmaz (fixture ve sahte HTTP).
+These named matchups are **hypothetical usage examples**, not confirmed fixtures. Times without an offset mean Europe/Istanbul. An actual fixture ID from the bulletin is preferable when comparing odds.
 
-## Veri kaynakları
+`--min-guven 0.70` marks a matchup as selected only when the model gives either team at least 70% and the diagnostic history/consistency gate passes. It does not delete lower-confidence predictions or turn an estimated probability into observed accuracy. The ledger refuses post-tipoff records, excludes unverifiable/late records from performance summaries and reports selected coverage separately. Ambiguous result matches remain unresolved.
 
-| Kaynak | Kapsam | Not |
-|---|---|---|
-| [EuroLeague API v2](https://api-live.euroleague.net/v2/competitions/E/seasons/E2024/games) | E ve U, 2007-08…2025-26 | Yol: `/v2/competitions/{E,U}/seasons/{E,U}YYYY/games`. Yanıttaki `total` alanıyla eksiksizlik denetlenir. Oynanmamış maçlar ve EuroCup iki ayaklı eşleşmelerdeki beraberlikler dışlanır ve sayılır. |
-| [Basketball Reference](https://www.basketball-reference.com/leagues/NBA_2025_games.html) | NBA 2014-15…2025-26 | Sezon sayfasındaki aylık bağlantılar izlenir; ABD Doğu saati DST ile UTC'ye çevrilir. robots.txt okunur, tanımlı User-Agent, en az 6,1 sn aralık ve kayan 60 sn'de en fazla 10 istek. HTTP 429 sonrası aynı oturumda o sunucuya istek gönderilmez. |
-| [Sportsbook Reviews Online](https://www.sportsbookreviewsonline.com/scoresoddsarchives/nba-odds-2021-22/) | NBA kapanış moneyline | robots.txt arşive izin verir; 2014-15…2022-23 sayfaları tablo içerir, 2023-24 ve sonrası ana sayfaya yönlenir. **Sitenin [Terms](https://www.sportsbookreviewsonline.com/terms/) sayfası içeriğin yazılı izin olmadan kullanılmasını yasaklar**; bu yüzden ayrıştırma yalnız `--sbr-izni` ile çalışır ve bu çalışmada **kullanılmadı**. |
+Optional `--sakatlik` reads the official NBA injury PDF, capped at the earlier of now and the requested fixture time. It does not modify the default model. No report is downloaded by default.
 
-- Ham yanıtlar ve HTTP meta verisi URL SHA-256 anahtarıyla `data/raw/<sunucu>/` altında önbelleğe alınır; önbellekte olan tekrar indirilmez. Hatalı (429 gibi) yanıtlar da önbelleğe yazılır; yeniden denemek için ilgili çift bilinçli olarak silinmelidir (bu çalışmada Retry-After süresi dolduktan sonra yapıldı).
-- Normal tablo `data/maclar.parquet`: PLAN.md şeması (`mac_id, lig, sezon, tarih_utc, ev, dep, ev_skor, dep_skor, uzatma, ev_iy, dep_iy, tarafsiz_saha, asama, kaynak`). Tekrarlı `mac_id` ve beraberlik hata verir.
-- Takım/franchise eşlemesi `src/bbtahmin/veri/teams.py`: oran arşivi adları (`LALakers`, `GoldenState`…) ve Basketball Reference adları/kodları; New Jersey→Brooklyn, New Orleans Hornets→Pelicans, Charlotte Bobcats→Hornets, Seattle→Oklahoma City, Vancouver→Memphis dahil. Bilinmeyen ad hata verir; oran eşleştirmesinde eşleşmeyen satırlar nedenleriyle sayılır.
-- Referans: `data/raw/basketbolbet/main.py` ve `data/raw` altında benzer bir klasör bu çalışma kopyasında **bulunamadı** (`data/raw` git dışında olduğu için ayrı çalışma kopyasına gelmez). BasketbolBet taban çizgisi **yapılamadı (referans bulunamadı)**. Eski kod kopyalanmadı, formül uydurulmadı.
-- `.gitignore`: `data/raw/`, `data/*.parquet`, `.venv/`, `.runtime/`. Doğrulama: `git check-ignore -v data/raw/basketbolbet/main.py` → `.gitignore:1:data/raw/	data/raw/basketbolbet/main.py` (çıktı `docs/kanit/ortam.txt`).
+## Iddaa bulletin and odds comparison
 
-## Modelleme ve değerlendirme
+```bash
+# Three read-only GET requests; writes an observed-time snapshot.
+python -m bbtahmin bulten --guncelle --limit 10
+# Read the saved snapshot without a network request.
+python -m bbtahmin bulten --lig NBA --limit 10
+# Replace EVENT_ID with an ID actually returned above.
+python -m bbtahmin bulten --tahmin EVENT_ID
+```
 
-- **Taban çizgileri:** ev sahibi kazanır (olasılık = eğitim penceresindeki ev galibiyet oranı), saf Elo, MOV Elo (FiveThirtyEight NBA Elo MOV çarpanı).
-- **Asıl modeller (PLAN):** Platt kalibre lojistik regresyon ve HistGradientBoosting; sayı farkı ve toplam için Ridge regresyonu.
-- **Walk-forward:** her lig için sezon S, yalnız S'den önceki sezonlarla eğitilir: son önceki sezon kronolojik doğrulama, daha eskileri iç eğitim; seçimden sonra ikisinin birleşimiyle yeniden eğitim. Sezon içinde Elo/EWMA/dinlenme durumu her gün güncellenir; bir günün sonuçları ancak ertesi UTC gününden itibaren özelliğe girer (bitiş saati bilinmediği için korumacı gecikme). Her ligin ilk iki sezonu test edilmez.
-- **Öğrenilen ayarlar:** Elo K∈{10,20,30}, ev avantajı∈{0,50,100}, sezon başı çekme∈{0;0,25;0,5}; EWMA alfa∈{0,1;0,3}; lojistik C, boosting yaprak/regularizasyon/ağaç sayısı, Ridge alfa ve Platt katsayıları. Hepsi yalnız eğitim penceresinde seçilir ve her pencere için `docs/kanit/parametreler.json` içine kaydedilir. Bahis eşiği (oran kullanıldığında) yalnız önceki sezonların walk-forward tahminlerinden seçilir.
-- **Özellikler:** Elo farkı, ev/tarafsız saha, EWMA atılan/yenen/fark, tempo vekili toplam, dinlenme farkı, arka arkaya maç, son 7 günde maç sayısı, deplasman serisi, sezondaki maç sayısı, Avrupa maç yükü (yalnız E/U verisinden). Hiç maçı görülmemiş takımın EWMA değeri ligin geçmiş ortalamasıyla başlar.
-- **Metrikler:** log loss, Brier, doğruluk, 10 kovalı kalibrasyon tablosu (`kalibrasyon.csv`) ve PNG (`docs/kalibrasyon_*.png`), sayı farkı ve toplam MAE. Model−Elo log loss farkı için sezon bootstrap'ı, işaret permütasyonu ve lig içinde Holm düzeltmesi; p<0,05 olmadan üstünlük iddiası yapılmaz.
-- **Piyasa kıyası ve bahis:** vig'siz kapanış olasılığı (iki tarafın 1/ondalık oranı normalize edilir), sabit pay (%1 güncel sermaye) ve çeyrek Kelly; ROI, en büyük düşüş ve bahis sayısı. Kod ve fixture testleri hazır; gerçek oranlar ToS nedeniyle kullanılmadığı için **sonuç üretilmedi**.
+Inspect locally recorded odds changes without downloading new data:
 
-## Sınırlamalar
+```bash
+python -m bbtahmin bulten --gecmis EVENT_ID
+python -m bbtahmin bulten --gecmis EVENT_ID --asof 2026-10-22T10:00:00Z
+```
 
-- NBA tarafsız saha bilgisi ve ilk yarı skorları alınmadı; tarafsız sahası bilinmeyen maçta ev avantajı var sayılır (2019-20 balon maçları dahil).
-- Yerel ligler (BSL, ACB, BBL, LBA, LNB) yapılmadı: PLAN'a göre EuroLeague API'de maç verisi yok.
-- Avrupa yorgunluğu yalnız Avrupa maçlarından hesaplanır; yerel lig programı yok.
-- Yeniden eğitim yalnız sezon başında; aylık yeniden eğitim yapılmadı.
-- NBA kapanış oranı yok → piyasa kıyası, bahis simülasyonu ve eşleşmeyen oran satırı sayısı **yapılmadı**.
-- Tahmin komutu saf Elo verir; sınıflandırıcıyla gelecek maç servisi yapılmadı.
+History uses only snapshots captured before tipoff and no later than the requested cutoff. Duplicate captures count once; conflicting prices or changed fixture identities fail explicitly. The first and last **locally observed** quotes are not verified bookmaker opening/closing prices. Refreshes build a local archive under `data/bulten/`; archive files are ignored by Git and are not a historical data download. Movement is a diagnostic and remains outside the prediction model.
 
-## PLAN.md ile çelişkiler / farklar
+This is an **experimental adapter for Iddaa's website backend**, not a contracted developer API and not a Nesine API. It does not log in, purchase a plan or submit a bet. Snapshots older than 15 minutes cannot be used for an odds comparison; started fixtures are refused by the pregame model.
 
-1. Görev paketin `bbtahmin/` altında olmasını, PLAN `src/bbtahmin/` yapısını ister: PLAN uygulandı.
-2. İstek sınırı: görev en fazla 15/dk, PLAN 20/dk. İlk koşu 15/dk ile HTTP 429 aldı; ikisinden de sıkı 10/dk + 6,1 sn aralık uygulandı.
-3. PLAN SBR oran arşivini erişilebilir ("200") listeler; erişim teknik olarak var (2014-15…2022-23), ancak sitenin kullanım şartları yazılı izin istediğinden görevin "kullanım şartlarına uy" kuralı gereği kullanılmadı. 2023-24 ve sonrası arşivde yok.
-4. PLAN Elo için K≈20 ve %25 çekme önerir; görev sabit katsayıyı yasaklar. Bu değerler ızgaranın içinde tutuldu ve eğitim penceresinde seçildi.
-5. PLAN "ev sahibi kazanır" tabanını olasılıksal tanımlamaz; log loss/Brier hesaplanabilsin diye olasılığı eğitim penceresindeki ev galibiyet oranı alındı (doğruluk p=1 ile aynıdır).
-6. PLAN BasketbolBet yönteminin sızıntısız yeniden uygulanmasını ister; referans `main.py` bulunamadığı için yapılamadı.
+Market configuration is checked explicitly. Regulation/first-half/three-way markets are not treated as two-way overtime moneylines. Unsupported competitions, including women's competitions without a matching model, cannot silently use the men's model. Source minimum-combination counts and alternative price fields are retained; expected-return arithmetic is not proof that a standalone selection is executable or profitable. Quarter-point Asian totals are excluded from the simple settlement calculation.
 
-Bu çalışma yalnız ayrılmış çalışma kopyasındadır. Commit/merge yapılmadı; ana depoya yazılmadı.
+The statement that no Iddaa MCP exists is incorrect: [`borakilicoglu/iddaa-mcp`](https://github.com/borakilicoglu/iddaa-mcp) exists. Its source helped identify the website endpoint; it is not bundled or executed here. MCP also does **not** require a dynamic external API: the local server below reads project files. See [the source-backed API/MCP review](docs/research-and-roadmap.md).
 
-## Ek bilgiler ve denenmiş özellikler
+## Current evaluation
 
-- **Uzatma olasılığı:** Normal sürenin berabere bitme yoğunluğu, ligin geçmiş uzatma oranına ölçeklenerek verilir.
-- **Piyasa:** Maç `"Ev - Dep @1.30/2.14"` biçiminde yazılırsa oranlardan bahisçi marjı çıkarılmış olasılık gösterilir ve deftere yazılır.
-- **NBA sakatlık raporu:** Resmi PDF (ak-static.cms.nba.com) `pdfplumber` ile okunur; Out/Doubtful/Questionable oyuncular listelenir. Modele girmez, geçmiş raporlarla backtest yapılmadı.
-- **Tahmin defteri:** `defter/tahminler.csv` git'e girer; tahminin maçtan önce yapıldığı commit geçmişinden görülür.
-- **Kutu skor özellikleri (tempo, ORtg/DRtg, kadro devamlılığı):** EuroLeague/EuroCup v3 (9.065 maç) ve ESPN NBA (15.439 maç) verisiyle denendi. Walk-forward'da log loss'u iyileştirmedi (NBA 0,6220 → 0,6227, EuroLeague 0,5955 → 0,5965, EuroCup 0,6129 → 0,6158); bu yüzden `KUTU_LIGLERI` boş. Veri ve kod duruyor.
+The new seven-model run is under [`docs/kanit/pregame_verified`](docs/kanit/pregame_verified). It excludes actual-participant absence labels. Each test season uses only preceding seasons for fitting/tuning; same-UTC-day outcomes are withheld from pregame features. Models refit at season boundaries, not monthly.
 
-- **NBA eksik oyuncu (açık):** nba_api `PlayerGameLogs` ile 2014-15'ten bu yana 328.467 oyuncu-maç kaydı (`bbtahmin.veri.nba_oyuncu`). Her oyuncunun değeri yalnızca önceki maçlarından (dakika ve 48 dakikaya ölçekli +/- üstel ortalaması) hesaplanır; maçta olmayan düzenli oyuncuların toplamı özellik olur (`eksik_ozellik.py`). Walk-forward (skor modeli): log loss 0,6220 → 0,6169, isabet %65,27 → %65,82, fark MAE 10,67 → 10,58; tamamlanmış 10 sezonun 10'unda iyileşti. **Yaklaşım:** backtest'te "eksik" = o maçta oynamayan düzenli oyuncu, yani son dakika kadro dışı kalanlar da önceden biliniyormuş gibi sayılır; gerçek kazanç biraz daha düşük olabilir. Tahminde eksikler resmi sakatlık raporundaki `Out` oyunculardır; bu sezon henüz oynamamış rapordaki oyuncu için son bilinen değeri kullanılır. Hiç NBA maçı olmayan çaylaklar eşleşmez (etki 0).
+The following are **fixed-model results on the last five completed seasons, 2021–22 through 2025–26**. The current incomplete season is excluded. These are not live results, a comparison with identical previous injury-based metrics, or an out-of-sample evaluation of choosing the winning model after seeing this table.
+
+| League | Model | Games | Winner accuracy | Log loss |
+|---|---|---:|---:|---:|
+| NBA | Score regression | 6,605 | 65.80% | 0.61977 |
+| EuroLeague | Score regression | 1,690 | 64.62% | 0.61594 |
+| EuroCup | Score regression | 970 | 65.88% | 0.60567 |
+| NBL | Ensemble | 824 | 61.04% | 0.65857 |
+
+Lower log loss is better. The NBL score baseline on the same 824 games was 60.19% / 0.66102; the ensemble comparison is encouraging but does not establish a prospective improvement. Predictions select models only from evaluation seasons earlier than the requested season.
+
+### Higher hit rate requires reporting what was excluded
+
+For the NBA score model on those **same 6,605 games**:
+
+| Minimum predicted winner probability | Selected games | Coverage | Observed accuracy | Wilson 95% interval |
+|---|---:|---:|---:|---:|
+| 50% — all games | 6,605 | 100.00% | 65.80% | 64.65–66.93% |
+| 70% | 1,684 | 25.50% | 79.69% | 77.70–81.54% |
+| 75% | 988 | 14.96% | 82.59% | 80.10–84.83% |
+
+The 79.69% number describes a selected quarter of the games, **not overall accuracy**, future certainty or profitability. Thresholds are descriptive diagnostics, not a claim that a threshold optimized on this report will generalize. Full tables: [confidence.csv](docs/kanit/pregame_verified/confidence.csv).
+
+Artifact manifests record feature semantics, data fingerprints and parameter/metric checksums. Prediction output includes artifact status for the actual input dataset. Default prediction fails with a rebuild instruction if the verified benchmark is missing or invalid; it cannot silently switch to legacy parameters or use an unsigned aggregate to select a model. Old reports in `docs/sonuclar.md` and top-level `docs/kanit` are retained as historical snapshots; their absence-enhanced results must not be presented as current, achievable pregame performance.
+
+An additional chronological Platt-calibration experiment uses strictly earlier seasons' out-of-sample score predictions. EuroLeague accuracy changed from **64.49% to 65.42%** on 1,391 matched games, but NBA accuracy did not improve and NBL deteriorated. These 2022–23 through 2025–26 comparisons exclude the 2021–22 warmup season from both variants and are **not directly comparable to the five-season table above**. The candidate remains disabled pending untouched future evaluation. [Fold results and method](docs/kanit/calibration_research/).
+
+## Reproduce or extend the data
+
+```bash
+python -m bbtahmin genislet
+python -m bbtahmin genislet --ligler NBA --baslangic 1993 --bitis 2026
+python -m bbtahmin genislet --ligler E U --yalniz-skor
+python scripts/audit_dataset.py
+python -m bbtahmin backtest --ilk-test 2021 --cikti docs/kanit/pregame_verified
+python scripts/confidence_report.py
+PYTHONPATH=src python scripts/evaluate_features.py
+python scripts/evaluate_calibration.py
+```
+
+`--ilk-test` limits evaluated test seasons; it does not discard earlier training history. For standalone scripts on Windows, use `$env:PYTHONPATH='src'` instead of the POSIX prefix when needed.
+
+| Archive | Coverage / contents |
+|---|---|
+| Games | NBA 1993–94 onward; EuroLeague 2000–01; EuroCup 2002–03; NBL 2015–16 |
+| NBA player statistics | 1,071,430 provider player-box rows; includes recorded zero-minute/DNP observations |
+| NBA team statistics | 82,912 detailed team-box rows |
+| European shots | 178,177 structured shot observations |
+| European play-by-play | 625,187 structured events |
+
+Available records are not a claim of complete coverage for every season or league. Data collectors preserve existing results, quarantine conflicting scores/shifted-date duplicates, normalize athlete IDs and retain source provenance. Four zero-score/administrative records remain in the factual archive but are excluded from ordinary-game modeling. Rich shot/player data is not automatically a same-game pregame feature.
+
+Sources: official EuroLeague API, Basketball Reference, ESPN/sportsdataverse, nba_api, nblR and verified numeric fields from euroleague-open-data. See [data expansion](docs/data-expansion.md), [source notes](data/KAYNAKLAR.md) and [dataset audit](docs/kanit/dataset_audit.json). The SBR collector remains permission-gated; no closing-odds profitability result is claimed.
+
+## Experimental CBA and live-state projections
+
+CBA has a separate **2,386-game** archive and a CBA-only model. The completed 2025–26 pregame test achieved **329/453 correct (72.63%)**; the current 2026–27 sample is only **14/25 (56.00%)** and is reported separately. These figures do not establish live accuracy. An additional remaining-score model uses real historical quarter states and explicit manual score, period and remaining-clock inputs. It is experimental, regulation-only and has no automatic scoreboard feed. Old screenshot inputs require `--replay`.
+
+```bash
+python -m bbtahmin tahmin "Jilin - Xinjiang" --lig CBA --json
+python -m bbtahmin canli --ev Jilin --dep Xinjiang --skor 16 15 --periyot 1 --kalan 01:28 --tarih 2026-10-22T14:52:00+03:00 --replay
+```
+
+See [CBA methods, sources, evaluation and replay limits](docs/cba-live.md). The older runtime-verification report describes CBA as unsupported at that earlier commit; this extension adds support separately and preserves those historical observations.
+
+## EuroCup Women, FIBA Europe Cup and VTB
+
+Three separate pregame models add **2,185 games** without changing the original archive. In the completed 2025–26 historical test, ECW achieved **150/214 (70.09%)**, FEC **133/195 (68.21%)**, and VTB **206/254 (81.10%)**. Each has only one completed test season; VTB historical coverage follows current teams. These are historical winner-selection rates, not live or exact-score accuracy. Low-history teams are explicitly flagged.
+
+```bash
+python -m bbtahmin lig-topla --ligler ECW FEC VTB
+python scripts/evaluate_competitions.py
+python -m bbtahmin bulten --lig ECW
+```
+
+See [sources, coverage, test results and replay limits](docs/competitions.md). The five October 22 screenshot reconstructions were generated after tipoff and are excluded from prospective performance. No in-play support is implied for these competitions.
+
+## Adaptive form and domestic workload research
+
+An optional monthly-refit policy selected only from earlier-season results improved the same 214-game ECW 2025–26 test from **150 to 152 correct (70.09% → 71.03%)**, with a small log-loss improvement. FEC and VTB retained the fixed baseline. This is exploratory reuse of existing research seasons; no general accuracy increase has been established. The current 2026–27 selection keeps fixed updates in all three leagues.
+
+Use `tahmin --lig ECW --adaptive-form` with the usual matchup and timestamp arguments to inspect the optional policy. Defaults remain unchanged. A separate official-club archive adds **39 domestic/ABA observations** and explicit workload diagnostics; older training coverage is insufficient to include them in score fitting. See [methods, commands and limitations](docs/adaptive-form.md).
+
+## Optional local MCP server
+
+```bash
+python -m pip install -e '.[mcp]'
+python -m bbtahmin.mcp_server --root /absolute/path/to/basketbol-tahmin
+```
+
+Example configuration for a stdio-capable MCP host:
+
+```json
+{
+  "mcpServers": {
+    "basketball-research": {
+      "command": "/absolute/path/to/.venv/bin/python",
+      "args": ["-m", "bbtahmin.mcp_server", "--root", "/absolute/path/to/basketbol-tahmin"]
+    }
+  }
+}
+```
+
+On Windows, use the absolute `.venv\\Scripts\\python.exe` path, escaped for JSON. Tools: `dataset_status`, `bulletin_events`, `bulletin_history`, `predict_bulletin_event`, `predict_live_cba`, `research_results`. They are read-only and do not refresh upstream data or modify the ledger. Run the bulletin refresh explicitly in the CLI. The server was tested over actual stdio and an in-memory protocol client; no host configuration is changed by installing the package.
+
+## Tests and next priorities
+
+```bash
+python -m pytest -q
+```
+
+Tests are offline. Install the MCP extra to include its protocol test; otherwise that optional test skips. GitHub Actions installs the extra and runs the suite.
+
+Latest local verification (2026-10-22): **163 tests passed**, including monthly refit causality, auxiliary club workload, competition/gender checks, cold starts and ledger recording; see [latest test evidence](docs/kanit/adaptive/tests.xml). Earlier [151-test evidence](docs/kanit/competitions/tests.xml), [CBA tests](docs/kanit/cba/tests.xml), [review tests](docs/kanit/review_tests.xml) and [stdio checks](docs/kanit/mcp_smoke.json) are retained. The server exposes six read-only tools.
+
+A [fresh runtime verification](docs/kanit/runtime_validation/README.md) retrained all seven models for 2025–26 and partial 2026–27, reproduced 15,932 archived prediction rows within 2.04e-14, exercised a real bulletin fixture, and documented the rejection of unsupported live CBA games. It also reports the chronological **model-selection policy** separately from the fixed-model tables above: NBA 65.81% and NBL 59.22% across five completed seasons.
+
+The highest-priority research additions are point-in-time injury/lineup history, timestamped market snapshots, stronger player/rotation value estimates, domestic-league workload and travel, and chronological calibration/interval checks. The implemented shooting-profile experiment did not consistently improve outcomes and remains disabled. Detailed priorities, reviewed repositories, provider limitations and measured ablations are in [research-and-roadmap.md](docs/research-and-roadmap.md).

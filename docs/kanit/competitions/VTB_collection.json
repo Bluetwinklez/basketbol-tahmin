@@ -1,0 +1,19 @@
+{
+  "timestamp_utc": "2026-10-22T19:24:47.318225+00:00",
+  "league": "VTB",
+  "games": 860,
+  "teams": 11,
+  "seasons": {
+    "2023-24": 283,
+    "2024-25": 294,
+    "2025-26": 254,
+    "2026-27": 29
+  },
+  "sources": [
+    "https://basketball.realgm.com/international/league/35/VTB-United-League/teams"
+  ],
+  "errors": [],
+  "gender": "Men",
+  "note": "Normalized numeric facts from public pages; no supported developer API contract. Nominal home/away, neutral venues not independently verified.",
+  "coverage": "Current-team cohort schedules; historical games between departed teams may be absent."
+}

@@ -1,0 +1,15 @@
+{
+  "captured_at_utc": "2026-10-22T20:45:24.694047+00:00",
+  "games": 39,
+  "competitions": {
+    "ABA_M": 3,
+    "AT_M_BSL": 5,
+    "CZ_W_ZBL": 31
+  },
+  "source_urls": {
+    "zabiny": "https://www.bkzabiny.cz/tym/9-a-tym/zapasy",
+    "vienna": "https://bcvienna.com/en/schedule/"
+  },
+  "sha256": "5ac6f417bd71b3d960ccd5d2ccf0a4c05179d8b5472cc98b85147c114fa5107b",
+  "limitations": "Official club cohorts, incomplete historical coverage. Vienna score orientation not independently verified, so its scores are not stored. Czech scores are source facts but not independently verified. Only auxiliary workload uses these rows; no score-strength features. Source capture is not original historical publication time."
+}
