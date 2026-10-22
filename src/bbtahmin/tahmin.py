@@ -16,8 +16,9 @@ from .takim_ad import coz
 
 Z80 = norm.ppf(.9)  # %80 aralığın yarı genişliği (standart sapma cinsinden)
 MODELLER = ('logistic', 'mov_elo', 'skor', 'topluluk', 'hist_gradient_boosting')
-LIGLER = ('E', 'U', 'NBA', 'NBL', 'CBA')
-LIG_ADI = {'E': 'EuroLeague', 'U': 'EuroCup', 'NBA': 'NBA', 'NBL': 'Avustralya NBL','CBA':'Chinese CBA'}
+LIGLER = ('E', 'U', 'NBA', 'NBL', 'CBA','ECW','FEC','VTB')
+LIG_ADI = {'E': 'EuroLeague', 'U': 'EuroCup', 'NBA': 'NBA', 'NBL': 'Avustralya NBL','CBA':'Chinese CBA',
+           'ECW':'EuroCup Women','FEC':'FIBA Europe Cup','VTB':'VTB United League'}
 
 
 def sezon_adi(tarih):
@@ -102,6 +103,9 @@ def tahmin_et(lig, eslesmeler, tarih, veri='data/maclar.parquet', rapor=None):
     if lig=='CBA':
         from .cba_model import predict
         return [predict(ev,dep,tarih) for ev,dep in eslesmeler]
+    if lig in ('ECW','FEC','VTB'):
+        from .competition_model import predict
+        return [predict(lig,ev,dep,tarih) for ev,dep in eslesmeler]
     gecmis = pd.read_parquet(veri)
     gecmis = gecmis[(gecmis.lig == lig) & (gecmis.ev_skor > 0) & (gecmis.dep_skor > 0)
                     & (gecmis.tarih_utc < tarih.floor('D'))].copy()
@@ -241,6 +245,9 @@ def run(lig, maclar, tarih, json_cikti=False, kaydet=False, injury_report=False,
     gecmis = pd.read_parquet('data/maclar.parquet')
     if Path('data/cba_games.parquet').exists():
         gecmis=pd.concat([gecmis,pd.read_parquet('data/cba_games.parquet')],ignore_index=True)
+    for code in ('ECW','FEC','VTB'):
+        path=Path(f'data/competitions/{code}.parquet')
+        if path.exists():gecmis=pd.concat([gecmis,pd.read_parquet(path)],ignore_index=True)
     tarih = tarih or pd.Timestamp.now(tz='Europe/Istanbul').isoformat()
     an = pd.Timestamp(tarih)
     an = (an.tz_localize('Europe/Istanbul') if an.tzinfo is None else an).tz_convert('UTC')

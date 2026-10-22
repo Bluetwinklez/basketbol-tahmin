@@ -1,0 +1,22 @@
+{
+  "timestamp_utc": "2026-10-22T19:20:53.181364+00:00",
+  "league": "ECW",
+  "games": 674,
+  "teams": 104,
+  "seasons": {
+    "2023-24": 198,
+    "2024-25": 211,
+    "2025-26": 214,
+    "2026-27": 51
+  },
+  "sources": [
+    "https://www.fiba.basketball/en/history/165-fiba-womens-european-club-competitions-tier-2/208763/games",
+    "https://www.fiba.basketball/en/events/eurocup-women-24-25/games",
+    "https://www.fiba.basketball/en/events/eurocup-women-25-26/games",
+    "https://www.fiba.basketball/en/events/eurocup-women-26-27/games"
+  ],
+  "errors": [],
+  "gender": "Women",
+  "note": "Normalized numeric facts from public pages; no supported developer API contract. Nominal home/away, neutral venues not independently verified.",
+  "coverage": "Finished non-tied games with positive scores from public pages; not a completeness guarantee. Aggregate-leg ties and unplayed games excluded."
+}

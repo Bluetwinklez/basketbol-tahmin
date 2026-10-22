@@ -1,0 +1,212 @@
+{
+  "generated_at_utc": "2026-10-22T19:27:12.866972+00:00",
+  "historical_reconstruction": true,
+  "eligible_for_prospective_accuracy": false,
+  "note": "Generated after scheduled tipoff. Excludes all target UTC-day outcomes. This does not reconstruct historical availability of revised source data and cannot be counted as a pre-recorded forecast.",
+  "fixtures": [
+    {
+      "match": "Helsinki Basketball Academy - BK Zabiny Brno",
+      "fixture_id": "ECW_F135401",
+      "time_source": "FIBA public fixture",
+      "prediction": {
+        "lig": "ECW",
+        "ev": "ECW_66458",
+        "dep": "ECW_892",
+        "tarih_utc": "2026-10-22T15:30:00+00:00",
+        "model": "separate-competition-ridge-v1",
+        "ev_kazanir": 0.115946233504517,
+        "ev_skor": 62.48784287507762,
+        "dep_skor": 83.69813976226821,
+        "fark": -21.210296887190598,
+        "fark_80": [
+          -43.94733723330662,
+          1.5267434589254236
+        ],
+        "toplam": 146.18598263734583,
+        "toplam_80": [
+          124.0739129163392,
+          168.29805235835246
+        ],
+        "tum_modeller": {
+          "separate-competition-ridge-v1": 0.115946233504517
+        },
+        "uzatma": null,
+        "az_veri": [
+          "ECW_66458"
+        ],
+        "recent_games": {
+          "ECW_66458": 1,
+          "ECW_892": 9
+        },
+        "training_cutoff": "2026-10-22T00:00:00+00:00",
+        "calibration_season": "2025-26",
+        "experimental": true,
+        "dataset_sha256": "96a0ba7dcd86d05a196d6b4f1dec6c7b901927171f1042d847452715d946c0b4",
+        "note": "Independent competition/gender model. Low-history forecasts rely heavily on league priors; their intervals are not separately validated. Historical scores may include overtime; ties excluded from binary winner evaluation."
+      }
+    },
+    {
+      "match": "UNICS Kazan - MBA Moscow",
+      "fixture_id": null,
+      "time_source": "User screenshot, not independently verified VTB tipoff",
+      "prediction": {
+        "lig": "VTB",
+        "ev": "VTB_146",
+        "dep": "VTB_2535",
+        "tarih_utc": "2026-10-22T16:00:00+00:00",
+        "model": "separate-competition-ridge-v1",
+        "ev_kazanir": 0.9313665872219896,
+        "ev_skor": 93.2490070173539,
+        "dep_skor": 73.08623506387059,
+        "fark": 20.16277195348333,
+        "fark_80": [
+          2.7745999110619373,
+          37.55094399590472
+        ],
+        "toplam": 166.3352420812245,
+        "toplam_80": [
+          144.79890537340378,
+          187.8715787890452
+        ],
+        "tum_modeller": {
+          "separate-competition-ridge-v1": 0.9313665872219896
+        },
+        "uzatma": null,
+        "az_veri": [],
+        "recent_games": {
+          "VTB_146": 59,
+          "VTB_2535": 47
+        },
+        "training_cutoff": "2026-10-22T00:00:00+00:00",
+        "calibration_season": "2025-26",
+        "experimental": true,
+        "dataset_sha256": "b1c55c4f80374ca74d07bb1ab639750bf1742beaa53341fd3c621f955c0199a1",
+        "note": "Independent competition/gender model. Low-history forecasts rely heavily on league priors; their intervals are not separately validated. Historical scores may include overtime; ties excluded from binary winner evaluation."
+      }
+    },
+    {
+      "match": "KK Parnu - BC Vienna",
+      "fixture_id": "FEC_F135760",
+      "time_source": "FIBA public fixture",
+      "prediction": {
+        "lig": "FEC",
+        "ev": "FEC_58616",
+        "dep": "FEC_73436",
+        "tarih_utc": "2026-10-22T16:00:00+00:00",
+        "model": "separate-competition-ridge-v1",
+        "ev_kazanir": 0.25899569944401524,
+        "ev_skor": 72.63868037493685,
+        "dep_skor": 83.3323486498029,
+        "fark": -10.693668274866056,
+        "fark_80": [
+          -31.89345117087158,
+          10.506114621139467
+        ],
+        "toplam": 155.97102902473975,
+        "toplam_80": [
+          136.31815587155458,
+          175.62390217792492
+        ],
+        "tum_modeller": {
+          "separate-competition-ridge-v1": 0.25899569944401524
+        },
+        "uzatma": null,
+        "az_veri": [
+          "FEC_73436"
+        ],
+        "recent_games": {
+          "FEC_58616": 6,
+          "FEC_73436": 2
+        },
+        "training_cutoff": "2026-10-22T00:00:00+00:00",
+        "calibration_season": "2025-26",
+        "experimental": true,
+        "dataset_sha256": "56771b499724c5d6164b02103cc349224a19704fe9625736e5b4aa9a8cd7d9c2",
+        "note": "Independent competition/gender model. Low-history forecasts rely heavily on league priors; their intervals are not separately validated. Historical scores may include overtime; ties excluded from binary winner evaluation."
+      }
+    },
+    {
+      "match": "ZKK Celje - KP Brno",
+      "fixture_id": "ECW_F135385",
+      "time_source": "FIBA public fixture",
+      "prediction": {
+        "lig": "ECW",
+        "ev": "ECW_58477",
+        "dep": "ECW_891",
+        "tarih_utc": "2026-10-22T16:00:00+00:00",
+        "model": "separate-competition-ridge-v1",
+        "ev_kazanir": 0.3820446559792645,
+        "ev_skor": 68.0866489131224,
+        "dep_skor": 73.41123420667928,
+        "fark": -5.324585293556868,
+        "fark_80": [
+          -28.06162563967289,
+          17.412455052559153
+        ],
+        "toplam": 141.49788311980168,
+        "toplam_80": [
+          119.38581339879505,
+          163.60995284080832
+        ],
+        "tum_modeller": {
+          "separate-competition-ridge-v1": 0.3820446559792645
+        },
+        "uzatma": null,
+        "az_veri": [
+          "ECW_58477"
+        ],
+        "recent_games": {
+          "ECW_58477": 1,
+          "ECW_891": 8
+        },
+        "training_cutoff": "2026-10-22T00:00:00+00:00",
+        "calibration_season": "2025-26",
+        "experimental": true,
+        "dataset_sha256": "96a0ba7dcd86d05a196d6b4f1dec6c7b901927171f1042d847452715d946c0b4",
+        "note": "Independent competition/gender model. Low-history forecasts rely heavily on league priors; their intervals are not separately validated. Historical scores may include overtime; ties excluded from binary winner evaluation."
+      }
+    },
+    {
+      "match": "Montana 2003 - Uni Girona CB",
+      "fixture_id": "ECW_F135362",
+      "time_source": "FIBA public fixture",
+      "prediction": {
+        "lig": "ECW",
+        "ev": "ECW_813",
+        "dep": "ECW_65758",
+        "tarih_utc": "2026-10-22T16:30:00+00:00",
+        "model": "separate-competition-ridge-v1",
+        "ev_kazanir": 0.17673463674691126,
+        "ev_skor": 61.85268173572149,
+        "dep_skor": 78.31496816579778,
+        "fark": -16.462286430076286,
+        "fark_80": [
+          -39.19932677619231,
+          6.274753916039735
+        ],
+        "toplam": 140.16764990151927,
+        "toplam_80": [
+          118.05558018051264,
+          162.2797196225259
+        ],
+        "tum_modeller": {
+          "separate-competition-ridge-v1": 0.17673463674691126
+        },
+        "uzatma": null,
+        "az_veri": [
+          "ECW_813",
+          "ECW_65758"
+        ],
+        "recent_games": {
+          "ECW_813": 1,
+          "ECW_65758": 1
+        },
+        "training_cutoff": "2026-10-22T00:00:00+00:00",
+        "calibration_season": "2025-26",
+        "experimental": true,
+        "dataset_sha256": "96a0ba7dcd86d05a196d6b4f1dec6c7b901927171f1042d847452715d946c0b4",
+        "note": "Independent competition/gender model. Low-history forecasts rely heavily on league priors; their intervals are not separately validated. Historical scores may include overtime; ties excluded from binary winner evaluation."
+      }
+    }
+  ]
+}
