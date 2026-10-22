@@ -1,0 +1,404 @@
+{
+  "ECW": {
+    "features": [
+      {
+        "feature": "elo_diff",
+        "reference_n": 214,
+        "current_n": 51,
+        "current_missing_fraction": 0.0,
+        "standardized_mean_shift": 0.06895611653286271,
+        "diagnostic_alert": false
+      },
+      {
+        "feature": "home",
+        "reference_n": 214,
+        "current_n": 51,
+        "current_missing_fraction": 0.0,
+        "standardized_mean_shift": null,
+        "diagnostic_alert": false
+      },
+      {
+        "feature": "points_for_diff",
+        "reference_n": 214,
+        "current_n": 51,
+        "current_missing_fraction": 0.0,
+        "standardized_mean_shift": -0.1321611668083068,
+        "diagnostic_alert": false
+      },
+      {
+        "feature": "points_against_diff",
+        "reference_n": 214,
+        "current_n": 51,
+        "current_missing_fraction": 0.0,
+        "standardized_mean_shift": 0.14588079005413743,
+        "diagnostic_alert": false
+      },
+      {
+        "feature": "margin_diff",
+        "reference_n": 214,
+        "current_n": 51,
+        "current_missing_fraction": 0.0,
+        "standardized_mean_shift": -0.16930504709659933,
+        "diagnostic_alert": false
+      },
+      {
+        "feature": "total_mean",
+        "reference_n": 214,
+        "current_n": 51,
+        "current_missing_fraction": 0.0,
+        "standardized_mean_shift": -0.14835849705337917,
+        "diagnostic_alert": false
+      },
+      {
+        "feature": "rest_diff",
+        "reference_n": 214,
+        "current_n": 51,
+        "current_missing_fraction": 0.0,
+        "standardized_mean_shift": 0.1327606023090002,
+        "diagnostic_alert": false
+      },
+      {
+        "feature": "back_to_back_diff",
+        "reference_n": 214,
+        "current_n": 51,
+        "current_missing_fraction": 0.0,
+        "standardized_mean_shift": null,
+        "diagnostic_alert": false
+      },
+      {
+        "feature": "load7_diff",
+        "reference_n": 214,
+        "current_n": 51,
+        "current_missing_fraction": 0.0,
+        "standardized_mean_shift": 0.22448790292777143,
+        "diagnostic_alert": false
+      },
+      {
+        "feature": "road_streak_diff",
+        "reference_n": 214,
+        "current_n": 51,
+        "current_missing_fraction": 0.0,
+        "standardized_mean_shift": -0.01978081642374849,
+        "diagnostic_alert": false
+      },
+      {
+        "feature": "games_diff",
+        "reference_n": 214,
+        "current_n": 51,
+        "current_missing_fraction": 0.0,
+        "standardized_mean_shift": 0.01974740250085666,
+        "diagnostic_alert": false
+      },
+      {
+        "feature": "europe_load_diff",
+        "reference_n": 214,
+        "current_n": 51,
+        "current_missing_fraction": 0.0,
+        "standardized_mean_shift": null,
+        "diagnostic_alert": false
+      },
+      {
+        "feature": "rmarj_04",
+        "reference_n": 214,
+        "current_n": 51,
+        "current_missing_fraction": 0.0,
+        "standardized_mean_shift": 0.03442975098741515,
+        "diagnostic_alert": false
+      },
+      {
+        "feature": "rtop_04",
+        "reference_n": 214,
+        "current_n": 51,
+        "current_missing_fraction": 0.0,
+        "standardized_mean_shift": -0.2891567195544072,
+        "diagnostic_alert": false
+      },
+      {
+        "feature": "rmarj_12",
+        "reference_n": 214,
+        "current_n": 51,
+        "current_missing_fraction": 0.0,
+        "standardized_mean_shift": 0.05425220005285686,
+        "diagnostic_alert": false
+      },
+      {
+        "feature": "rtop_12",
+        "reference_n": 214,
+        "current_n": 51,
+        "current_missing_fraction": 0.0,
+        "standardized_mean_shift": -0.26761769574457916,
+        "diagnostic_alert": false
+      }
+    ],
+    "automatic_retraining": false,
+    "note": "Two-standard-deviation mean shifts are diagnostic alerts, not validated performance alarms. Review sample sizes and data-source changes."
+  },
+  "FEC": {
+    "features": [
+      {
+        "feature": "elo_diff",
+        "reference_n": 195,
+        "current_n": 76,
+        "current_missing_fraction": 0.0,
+        "standardized_mean_shift": 0.026302388115972058,
+        "diagnostic_alert": false
+      },
+      {
+        "feature": "home",
+        "reference_n": 195,
+        "current_n": 76,
+        "current_missing_fraction": 0.0,
+        "standardized_mean_shift": null,
+        "diagnostic_alert": false
+      },
+      {
+        "feature": "points_for_diff",
+        "reference_n": 195,
+        "current_n": 76,
+        "current_missing_fraction": 0.0,
+        "standardized_mean_shift": 0.01867006397344233,
+        "diagnostic_alert": false
+      },
+      {
+        "feature": "points_against_diff",
+        "reference_n": 195,
+        "current_n": 76,
+        "current_missing_fraction": 0.0,
+        "standardized_mean_shift": -0.11778354687299038,
+        "diagnostic_alert": false
+      },
+      {
+        "feature": "margin_diff",
+        "reference_n": 195,
+        "current_n": 76,
+        "current_missing_fraction": 0.0,
+        "standardized_mean_shift": 0.07818268714322069,
+        "diagnostic_alert": false
+      },
+      {
+        "feature": "total_mean",
+        "reference_n": 195,
+        "current_n": 76,
+        "current_missing_fraction": 0.0,
+        "standardized_mean_shift": -0.5877909945679822,
+        "diagnostic_alert": false
+      },
+      {
+        "feature": "rest_diff",
+        "reference_n": 195,
+        "current_n": 76,
+        "current_missing_fraction": 0.0,
+        "standardized_mean_shift": 0.28176722978566643,
+        "diagnostic_alert": false
+      },
+      {
+        "feature": "back_to_back_diff",
+        "reference_n": 195,
+        "current_n": 76,
+        "current_missing_fraction": 0.0,
+        "standardized_mean_shift": null,
+        "diagnostic_alert": false
+      },
+      {
+        "feature": "load7_diff",
+        "reference_n": 195,
+        "current_n": 76,
+        "current_missing_fraction": 0.0,
+        "standardized_mean_shift": -0.15510176785671823,
+        "diagnostic_alert": false
+      },
+      {
+        "feature": "road_streak_diff",
+        "reference_n": 195,
+        "current_n": 76,
+        "current_missing_fraction": 0.0,
+        "standardized_mean_shift": 0.0688982823059963,
+        "diagnostic_alert": false
+      },
+      {
+        "feature": "games_diff",
+        "reference_n": 195,
+        "current_n": 76,
+        "current_missing_fraction": 0.0,
+        "standardized_mean_shift": -0.02375903459039753,
+        "diagnostic_alert": false
+      },
+      {
+        "feature": "europe_load_diff",
+        "reference_n": 195,
+        "current_n": 76,
+        "current_missing_fraction": 0.0,
+        "standardized_mean_shift": null,
+        "diagnostic_alert": false
+      },
+      {
+        "feature": "rmarj_04",
+        "reference_n": 195,
+        "current_n": 76,
+        "current_missing_fraction": 0.0,
+        "standardized_mean_shift": 0.08303824352609429,
+        "diagnostic_alert": false
+      },
+      {
+        "feature": "rtop_04",
+        "reference_n": 195,
+        "current_n": 76,
+        "current_missing_fraction": 0.0,
+        "standardized_mean_shift": -0.6197093272443616,
+        "diagnostic_alert": false
+      },
+      {
+        "feature": "rmarj_12",
+        "reference_n": 195,
+        "current_n": 76,
+        "current_missing_fraction": 0.0,
+        "standardized_mean_shift": 0.08645709792332029,
+        "diagnostic_alert": false
+      },
+      {
+        "feature": "rtop_12",
+        "reference_n": 195,
+        "current_n": 76,
+        "current_missing_fraction": 0.0,
+        "standardized_mean_shift": -0.43457709231830344,
+        "diagnostic_alert": false
+      }
+    ],
+    "automatic_retraining": false,
+    "note": "Two-standard-deviation mean shifts are diagnostic alerts, not validated performance alarms. Review sample sizes and data-source changes."
+  },
+  "VTB": {
+    "features": [
+      {
+        "feature": "elo_diff",
+        "reference_n": 254,
+        "current_n": 29,
+        "current_missing_fraction": 0.0,
+        "standardized_mean_shift": -0.02145426910034774,
+        "diagnostic_alert": false
+      },
+      {
+        "feature": "home",
+        "reference_n": 254,
+        "current_n": 29,
+        "current_missing_fraction": 0.0,
+        "standardized_mean_shift": null,
+        "diagnostic_alert": false
+      },
+      {
+        "feature": "points_for_diff",
+        "reference_n": 254,
+        "current_n": 29,
+        "current_missing_fraction": 0.0,
+        "standardized_mean_shift": -0.17687130130497616,
+        "diagnostic_alert": false
+      },
+      {
+        "feature": "points_against_diff",
+        "reference_n": 254,
+        "current_n": 29,
+        "current_missing_fraction": 0.0,
+        "standardized_mean_shift": -0.331330596345885,
+        "diagnostic_alert": false
+      },
+      {
+        "feature": "margin_diff",
+        "reference_n": 254,
+        "current_n": 29,
+        "current_missing_fraction": 0.0,
+        "standardized_mean_shift": 0.06614761113929614,
+        "diagnostic_alert": false
+      },
+      {
+        "feature": "total_mean",
+        "reference_n": 254,
+        "current_n": 29,
+        "current_missing_fraction": 0.0,
+        "standardized_mean_shift": 0.05263490479821441,
+        "diagnostic_alert": false
+      },
+      {
+        "feature": "rest_diff",
+        "reference_n": 254,
+        "current_n": 29,
+        "current_missing_fraction": 0.0,
+        "standardized_mean_shift": -0.13455743490003805,
+        "diagnostic_alert": false
+      },
+      {
+        "feature": "back_to_back_diff",
+        "reference_n": 254,
+        "current_n": 29,
+        "current_missing_fraction": 0.0,
+        "standardized_mean_shift": null,
+        "diagnostic_alert": false
+      },
+      {
+        "feature": "load7_diff",
+        "reference_n": 254,
+        "current_n": 29,
+        "current_missing_fraction": 0.0,
+        "standardized_mean_shift": -0.11387004391449794,
+        "diagnostic_alert": false
+      },
+      {
+        "feature": "road_streak_diff",
+        "reference_n": 254,
+        "current_n": 29,
+        "current_missing_fraction": 0.0,
+        "standardized_mean_shift": -0.008884262749718966,
+        "diagnostic_alert": false
+      },
+      {
+        "feature": "games_diff",
+        "reference_n": 254,
+        "current_n": 29,
+        "current_missing_fraction": 0.0,
+        "standardized_mean_shift": 0.03132639221782819,
+        "diagnostic_alert": false
+      },
+      {
+        "feature": "europe_load_diff",
+        "reference_n": 254,
+        "current_n": 29,
+        "current_missing_fraction": 0.0,
+        "standardized_mean_shift": null,
+        "diagnostic_alert": false
+      },
+      {
+        "feature": "rmarj_04",
+        "reference_n": 254,
+        "current_n": 29,
+        "current_missing_fraction": 0.0,
+        "standardized_mean_shift": -0.040347819166700834,
+        "diagnostic_alert": false
+      },
+      {
+        "feature": "rtop_04",
+        "reference_n": 254,
+        "current_n": 29,
+        "current_missing_fraction": 0.0,
+        "standardized_mean_shift": -0.2987900789125494,
+        "diagnostic_alert": false
+      },
+      {
+        "feature": "rmarj_12",
+        "reference_n": 254,
+        "current_n": 29,
+        "current_missing_fraction": 0.0,
+        "standardized_mean_shift": -0.041348802120539596,
+        "diagnostic_alert": false
+      },
+      {
+        "feature": "rtop_12",
+        "reference_n": 254,
+        "current_n": 29,
+        "current_missing_fraction": 0.0,
+        "standardized_mean_shift": 0.004217549666251831,
+        "diagnostic_alert": false
+      }
+    ],
+    "automatic_retraining": false,
+    "note": "Two-standard-deviation mean shifts are diagnostic alerts, not validated performance alarms. Review sample sizes and data-source changes."
+  }
+}

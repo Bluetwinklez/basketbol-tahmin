@@ -10,7 +10,8 @@ import pandas as pd
 from bs4 import BeautifulSoup
 
 ROOT=Path('data/raw/expansion')
-FIBA={'ECW':('eurocup-women','Women','EuroCup Women',165,208763),
+FIBA={'ELW':('euroleague-women','Women','EuroLeague Women',211,208762),
+      'ECW':('eurocup-women','Women','EuroCup Women',165,208763),
       'FEC':('fiba-europe-cup','Men','FIBA Europe Cup',212,208765)}
 
 
@@ -110,7 +111,7 @@ def collect_fiba(code):
     slug,gender,name,marketing,old=FIBA[code];records=[];fixtures=[];teams={};sources=[]
     for year in [2024,2025,2026,2027]:
         url=(f'https://www.fiba.basketball/en/history/{marketing}-fiba-'
-             f'{"womens" if code=="ECW" else "mens"}-european-club-competitions-tier-2/{old}/games') if year==2024 else f'https://www.fiba.basketball/en/events/{slug}-{year-2001:02d}-{year-2000:02d}/games'
+             f'{"womens" if gender=="Women" else "mens"}-european-club-competitions-tier-{1 if code=='ELW' else 2}/{old}/games') if year==2024 else f'https://www.fiba.basketball/en/events/{slug}-{year-2001:02d}-{year-2000:02d}/games'
         # Reuse a previously downloaded exact source page where available.
         local=ROOT/f'{code}_2024_history.html' if year==2024 else ROOT/f'{code}_{year}.html'
         current=pd.Timestamp.now(tz='UTC');active=current.year+(current.month>=7)

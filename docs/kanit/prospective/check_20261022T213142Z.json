@@ -1,0 +1,24 @@
+{
+  "forecast_sha256": "d786691850bb74207e9ecac38ea6c06c4ce38dde7d874d9ba5a58df0238352a0",
+  "checked_at_utc": "2026-10-22T21:31:48.517309+00:00",
+  "games": [
+    {
+      "event_id": "E2026_68",
+      "home": "ZAL",
+      "away": "ASV",
+      "status": "pending"
+    },
+    {
+      "event_id": "E2026_70",
+      "home": "OLY",
+      "away": "ULK",
+      "status": "pending"
+    }
+  ],
+  "settled_games": 0,
+  "pending_games": 2,
+  "winner_accuracy": null,
+  "mean_total_absolute_error": null,
+  "mean_score_mae": null,
+  "note": "Percentage errors use actual positive scores as denominator. Signed errors = prediction minus actual. Winner accuracy is separate from score accuracy; this small batch is not a general benchmark."
+}

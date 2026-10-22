@@ -39,6 +39,8 @@ def main():
     live.add_argument('--kalan',required=True,help='Periyotta KALAN süre MM:SS')
     live.add_argument('--tarih',required=True,help='Skorun gözlendiği saat dilimli zaman')
     live.add_argument('--dakika',type=int,choices=[40,48])
+    live.add_argument('--previous-state',help='Previous live JSON output for transition validation')
+    live.add_argument('--score-correction',action='store_true',help='Explicitly flag a provider clock/score correction')
     live.add_argument('--replay',action='store_true',help='Eski durumun tarihsel tekrarını açıkça etiketle')
     bulletin=sub.add_parser('bulten',help='Deneysel İddaa web bültenini oku; varsayılan yerel snapshot')
     bulletin.add_argument('--guncelle',action='store_true',help='Web backendinden üç salt-okunur GET isteği yap')
@@ -48,8 +50,45 @@ def main():
     action.add_argument('--tahmin',help='Yerel bültendeki bir etkinlik kimliği için model/piyasa karşılaştırması')
     action.add_argument('--gecmis',help='Etkinlik kimliğinin yerel maç önü oran geçmişi')
     bulletin.add_argument('--asof',help='Oran geçmişi için saat dilimli bilgi kesim zamanı; gelecekte olamaz')
+    sub.add_parser('yerel-topla',help='Collect official Czech senior women results separately')
+    sub.add_parser('kadin-gecmis-topla',help='Collect separate EuroLeague Women and early EuroCup Women history')
+    sub.add_parser('veri-denetle',help='Write league/season coverage and data-quality inventory')
+    imported=sub.add_parser('baglam-aktar',help='Validate and quarantine versioned official result imports')
+    imported.add_argument('--source',required=True);imported.add_argument('--identities',required=True)
+    future=sub.add_parser('prospektif',help='Freeze the earliest verified future fixtures without overwriting')
+    future.add_argument('--fixtures',required=True);future.add_argument('--output',required=True)
+    future.add_argument('--limit',type=int,default=2)
+    settled=sub.add_parser('sonuc-kontrol',help='Score verified final results without rewriting frozen forecasts')
+    settled.add_argument('--record',required=True);settled.add_argument('--results',required=True)
+    settled.add_argument('--output',required=True)
     args=parser.parse_args()
-    if args.command=='baglam-topla':
+    if args.command in ('veri-denetle','baglam-aktar','prospektif','sonuc-kontrol'):
+        import json
+        from pathlib import Path
+        if args.command=='veri-denetle':
+            from .quality import write_inventory
+            result=write_inventory()
+        elif args.command=='baglam-aktar':
+            from .context_import import ingest
+            result=ingest(args.source,args.identities)
+        elif args.command=='prospektif':
+            from .prospective import generate
+            if args.limit<1:parser.error('--limit must be positive')
+            result=generate(args.fixtures,args.output,args.limit)
+        else:
+            from .prospective import settle
+            result=settle(json.loads(Path(args.record).read_text()),json.loads(Path(args.results).read_text()))
+            target=Path(args.output);target.parent.mkdir(parents=True,exist_ok=True)
+            with target.open('x') as f:json.dump(result,f,indent=2,allow_nan=False)
+        print(json.dumps(result,ensure_ascii=False,indent=2,allow_nan=False))
+    elif args.command=='yerel-topla':
+        from .veri.domestic import collect
+        collect()
+    elif args.command=='kadin-gecmis-topla':
+        from .veri.competitions import collect_fiba
+        from .veri.women_history import collect
+        collect_fiba('ELW');collect()
+    elif args.command=='baglam-topla':
         from .veri.club_context import collect
         collect()
     elif args.command=='lig-topla':
@@ -60,12 +99,14 @@ def main():
         collect()
     elif args.command=='canli':
         import json
+        from pathlib import Path
         from .live import predict
         from .cba_model import load
         from .takim_ad import coz
         g=load();codes=set(g.ev)|set(g.dep)
         result=predict(coz('CBA',args.ev,codes),coz('CBA',args.dep,codes),*args.skor,
-                       args.periyot,args.kalan,args.tarih,args.dakika,args.replay)
+                       args.periyot,args.kalan,args.tarih,args.dakika,args.replay,
+                       json.loads(Path(args.previous_state).read_text()) if args.previous_state else None,args.score_correction)
         print(json.dumps(result,ensure_ascii=False,indent=2,allow_nan=False))
     elif args.command=='bulten':
         import json

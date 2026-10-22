@@ -35,7 +35,8 @@ def fit(x,g,train,val,test):
         residual=target[val]-inner.predict(x.loc[val,FEATURES])
         final=estimator().fit(x.loc[train|val,FEATURES],target[train|val])
         predictions.append(final.predict(x.loc[test,FEATURES]))
-        errors.append(dict(sigma=max(float(np.std(residual,ddof=1)),1.),bias=float(np.mean(residual))))
+        errors.append(dict(sigma=max(float(np.std(residual,ddof=1)),1.),bias=float(np.mean(residual)),
+            residual_quantiles_80=np.quantile(residual,[.1,.9]).astype(float).tolist()))
     return predictions,errors
 
 
@@ -71,6 +72,9 @@ def predict(code,home,away,when):
     return dict(lig=code,ev=home,dep=away,tarih_utc=date.tz_convert('UTC').isoformat(),
         model=SPEC,ev_kazanir=p,ev_skor=max(0.,(total+margin)/2),dep_skor=max(0.,(total-margin)/2),
         fark=margin,fark_80=[margin-z*sm,margin+z*sm],toplam=total,toplam_80=[max(0.,total-z*st),total+z*st],
+        empirical_intervals_research=dict(margin=[margin+v for v in errors[0]['residual_quantiles_80']],
+            total=[max(0.,total-errors[1]['bias']+v) for v in errors[1]['residual_quantiles_80']],
+            note='Prior-season empirical residual quantiles; research only, not validated conditional coverage.'),
         tum_modeller={SPEC:p},uzatma=None,az_veri=low,recent_games=counts,auxiliary_workload=context,
         training_cutoff=cutoff.isoformat(),calibration_season=earlier[-1],experimental=True,
         dataset_sha256=hashlib.sha256(path.read_bytes()).hexdigest(),
