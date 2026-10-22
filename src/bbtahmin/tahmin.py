@@ -16,8 +16,8 @@ from .takim_ad import coz
 
 Z80 = norm.ppf(.9)  # %80 aralığın yarı genişliği (standart sapma cinsinden)
 MODELLER = ('logistic', 'mov_elo', 'skor', 'topluluk', 'hist_gradient_boosting')
-LIGLER = ('E', 'U', 'NBA')
-LIG_ADI = {'E': 'EuroLeague', 'U': 'EuroCup', 'NBA': 'NBA'}
+LIGLER = ('E', 'U', 'NBA', 'NBL')
+LIG_ADI = {'E': 'EuroLeague', 'U': 'EuroCup', 'NBA': 'NBA', 'NBL': 'Avustralya NBL'}
 
 
 def sezon_adi(tarih):

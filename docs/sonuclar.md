@@ -1,6 +1,6 @@
 # Gerçek çalıştırma sonuçları
 
-Rapor zamanı (UTC): 2026-10-22T05:31:42.747462+00:00. Toplama: 2026-10-21T21:00:34.933122+00:00.
+Rapor zamanı (UTC): 2026-10-22T06:45:41.984752+00:00. Toplama: 2026-10-22T06:41:56.963445+00:00.
 
 Tam komutlar ve ortam: [README](../README.md) ve [ortam.txt](kanit/ortam.txt).
 
@@ -35,6 +35,13 @@ python .runtime/run.py -m pytest -q -p no:cacheprovider tests/negative_control.p
 | NBA | mov_elo | 12855 | 0.6258 | 0.2180 | 0.6506 | 10.7234 |
 | NBA | skor | 12855 | 0.6169 | 0.2143 | 0.6582 | 10.5805 |
 | NBA | topluluk | 12855 | 0.6185 | 0.2149 | 0.6544 | 10.5805 |
+| NBL | elo | 1418 | 0.6690 | 0.2377 | 0.6058 | 11.2562 |
+| NBL | hist_gradient_boosting | 1418 | 0.6835 | 0.2448 | 0.5769 | 11.1598 |
+| NBL | home | 1418 | 0.6887 | 0.2477 | 0.5642 | 11.6869 |
+| NBL | logistic | 1418 | 0.6726 | 0.2396 | 0.5867 | 11.1598 |
+| NBL | mov_elo | 1418 | 0.6619 | 0.2347 | 0.6079 | 11.1310 |
+| NBL | skor | 1418 | 0.6615 | 0.2346 | 0.5987 | 11.1598 |
+| NBL | topluluk | 1418 | 0.6619 | 0.2349 | 0.6037 | 11.1598 |
 | U | elo | 3491 | 0.6245 | 0.2172 | 0.6557 | 10.0207 |
 | U | hist_gradient_boosting | 3491 | 0.6325 | 0.2207 | 0.6451 | 9.8666 |
 | U | home | 3491 | 0.6703 | 0.2387 | 0.6084 | 10.7496 |
@@ -85,6 +92,21 @@ Hücre: log loss / Brier / doğruluk / fark MAE. Her ligin ilk iki mevcut sezonu
 | 2024-25 | 0.6174 / 0.2148 / 0.6571 / 11.27 | 0.6063 / 0.2096 / 0.6752 / 10.99 | 0.6904 / 0.2486 / 0.5450 / 12.67 | 0.6035 / 0.2084 / 0.6692 / 10.99 | 0.6130 / 0.2128 / 0.6563 / 11.18 | 0.6044 / 0.2086 / 0.6699 / 10.99 | 0.6045 / 0.2089 / 0.6677 / 10.99 |
 | 2025-26 | 0.6089 / 0.2103 / 0.6710 / 11.61 | 0.5924 / 0.2029 / 0.6815 / 11.24 | 0.6874 / 0.2471 / 0.5552 / 13.15 | 0.5912 / 0.2028 / 0.6838 / 11.24 | 0.5993 / 0.2060 / 0.6891 / 11.47 | 0.5927 / 0.2033 / 0.6861 / 11.24 | 0.5924 / 0.2031 / 0.6770 / 11.24 |
 | 2026-27 | 0.8797 / 0.3357 / 0.3333 / 10.73 | 0.9807 / 0.3820 / 0.3333 / 12.46 | 0.7472 / 0.2769 / 0.3333 / 9.43 | 1.0432 / 0.4005 / 0.3333 / 12.46 | 0.9635 / 0.3718 / 0.3333 / 11.53 | 0.9686 / 0.3745 / 0.3333 / 12.46 | 0.9900 / 0.3820 / 0.3333 / 12.46 |
+
+### NBL
+
+| sezon | elo | hist_gradient_boosting | home | logistic | mov_elo | skor | topluluk |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| 2017-18 | 0.6521 / 0.2296 / 0.6471 / 10.67 | 0.7261 / 0.2635 / 0.5966 / 10.73 | 0.6764 / 0.2415 / 0.6050 / 11.01 | 0.6691 / 0.2381 / 0.6050 / 10.73 | 0.6555 / 0.2312 / 0.6639 / 10.72 | 0.6592 / 0.2328 / 0.6134 / 10.73 | 0.6572 / 0.2322 / 0.6134 / 10.73 |
+| 2018-19 | 0.6797 / 0.2411 / 0.6083 / 10.83 | 0.6732 / 0.2403 / 0.5500 / 10.39 | 0.6904 / 0.2484 / 0.5750 / 10.69 | 0.6579 / 0.2328 / 0.5917 / 10.39 | 0.6714 / 0.2377 / 0.5833 / 10.61 | 0.6581 / 0.2329 / 0.5750 / 10.39 | 0.6568 / 0.2322 / 0.6000 / 10.39 |
+| 2019-20 | 0.6276 / 0.2182 / 0.6716 / 10.07 | 0.6618 / 0.2344 / 0.6269 / 10.37 | 0.6532 / 0.2303 / 0.6418 / 10.54 | 0.6615 / 0.2353 / 0.5896 / 10.37 | 0.6220 / 0.2157 / 0.6940 / 9.98 | 0.6371 / 0.2231 / 0.6418 / 10.37 | 0.6364 / 0.2228 / 0.6343 / 10.37 |
+| 2020-21 | 0.6612 / 0.2349 / 0.6023 / 10.05 | 0.6975 / 0.2508 / 0.5556 / 10.20 | 0.6945 / 0.2505 / 0.5614 / 10.79 | 0.6899 / 0.2461 / 0.5848 / 10.20 | 0.6704 / 0.2378 / 0.6082 / 10.17 | 0.6618 / 0.2350 / 0.5965 / 10.20 | 0.6704 / 0.2383 / 0.5789 / 10.20 |
+| 2021-22 | 0.6500 / 0.2290 / 0.6014 / 9.98 | 0.6845 / 0.2456 / 0.5608 / 10.11 | 0.7252 / 0.2657 / 0.4865 / 11.14 | 0.6491 / 0.2290 / 0.6351 / 10.11 | 0.6511 / 0.2297 / 0.6216 / 10.03 | 0.6658 / 0.2369 / 0.5811 / 10.11 | 0.6526 / 0.2306 / 0.6216 / 10.11 |
+| 2022-23 | 0.7176 / 0.2594 / 0.5724 / 12.11 | 0.6994 / 0.2529 / 0.5395 / 11.97 | 0.6908 / 0.2488 / 0.5526 / 11.99 | 0.7122 / 0.2585 / 0.5329 / 11.97 | 0.6756 / 0.2423 / 0.5724 / 11.87 | 0.6855 / 0.2454 / 0.5724 / 11.97 | 0.6844 / 0.2458 / 0.5921 / 11.97 |
+| 2023-24 | 0.6781 / 0.2425 / 0.5896 / 11.66 | 0.6746 / 0.2408 / 0.5896 / 11.65 | 0.6770 / 0.2420 / 0.5896 / 11.79 | 0.6761 / 0.2416 / 0.5896 / 11.65 | 0.6856 / 0.2462 / 0.5549 / 11.65 | 0.6767 / 0.2420 / 0.5896 / 11.65 | 0.6777 / 0.2425 / 0.5954 / 11.65 |
+| 2024-25 | 0.6747 / 0.2406 / 0.5872 / 12.20 | 0.6680 / 0.2375 / 0.5814 / 12.10 | 0.6901 / 0.2485 / 0.5523 / 12.40 | 0.6771 / 0.2418 / 0.5640 / 12.10 | 0.6693 / 0.2378 / 0.6047 / 12.04 | 0.6740 / 0.2394 / 0.6279 / 12.10 | 0.6716 / 0.2389 / 0.5930 / 12.10 |
+| 2025-26 | 0.6489 / 0.2286 / 0.6369 / 12.91 | 0.6470 / 0.2277 / 0.6257 / 12.00 | 0.6968 / 0.2518 / 0.5307 / 13.98 | 0.6112 / 0.2118 / 0.6313 / 12.00 | 0.6140 / 0.2137 / 0.6369 / 12.21 | 0.6087 / 0.2107 / 0.6257 / 12.00 | 0.6104 / 0.2117 / 0.6536 / 12.00 |
+| 2026-27 | 0.7509 / 0.2775 / 0.4600 / 11.65 | 0.7793 / 0.2904 / 0.4600 / 12.12 | 0.6803 / 0.2436 / 0.5800 / 11.50 | 0.8291 / 0.3073 / 0.4600 / 12.12 | 0.7862 / 0.2935 / 0.4600 / 11.93 | 0.7481 / 0.2771 / 0.4800 / 12.12 | 0.7795 / 0.2907 / 0.4600 / 12.12 |
 
 ### U
 
@@ -166,6 +188,18 @@ Hücre: log loss / Brier / doğruluk / fark MAE. Her ligin ilk iki mevcut sezonu
 | E | 2026-27 | 60 | alındı |
 | U | 2026-27 | 53 | alındı |
 | NBA | 2026-27 | 3 | alındı |
+| NBL | 2025-26 | 179 | alındı |
+| NBL | 2023-24 | 173 | alındı |
+| NBL | 2024-25 | 172 | alındı |
+| NBL | 2020-21 | 171 | alındı |
+| NBL | 2022-23 | 152 | alındı |
+| NBL | 2021-22 | 148 | alındı |
+| NBL | 2019-20 | 134 | alındı |
+| NBL | 2018-19 | 120 | alındı |
+| NBL | 2017-18 | 119 | alındı |
+| NBL | 2015-16 | 118 | alındı |
+| NBL | 2016-17 | 117 | alındı |
+| NBL | 2026-27 | 50 | alındı |
 
 Oynanmayan maçlar alınmadı. EuroCup iki ayaklı eşleşme beraberlikleri dışlandı; adetler toplama.json / excluded_ties alanında. Pandemi sezonları eksik kalmıştır.
 
@@ -199,13 +233,16 @@ Model − Elo log loss farkı: negatif daha iyi. Sezonlara eşit ağırlık; 10.
 | NBA | logistic | 11 | 0.0053 | -0.0128 | 0.0382 | 1.0000 | 1.0000 |
 | NBA | hist_gradient_boosting | 11 | 0.0036 | -0.0085 | 0.0241 | 0.9959 | 1.0000 |
 | NBA | mov_elo | 11 | 0.0047 | -0.0049 | 0.0214 | 0.9869 | 1.0000 |
-| U | logistic | 18 | 0.0199 | -0.0104 | 0.0694 | 0.6387 | 0.6387 |
-| U | hist_gradient_boosting | 18 | 0.0067 | -0.0021 | 0.0158 | 0.1684 | 0.3368 |
-| U | mov_elo | 18 | -0.0045 | -0.0078 | -0.0012 | 0.0175 | 0.0525 |
+| NBL | logistic | 10 | 0.0093 | -0.0085 | 0.0295 | 0.4180 | 0.8359 |
+| NBL | hist_gradient_boosting | 10 | 0.0171 | 0.0006 | 0.0344 | 0.0861 | 0.2583 |
+| NBL | mov_elo | 10 | -0.0040 | -0.0170 | 0.0089 | 0.5849 | 0.8359 |
+| U | logistic | 18 | 0.0199 | -0.0105 | 0.0697 | 0.6330 | 0.6330 |
+| U | hist_gradient_boosting | 18 | 0.0067 | -0.0024 | 0.0155 | 0.1633 | 0.3266 |
+| U | mov_elo | 18 | -0.0045 | -0.0077 | -0.0013 | 0.0173 | 0.0519 |
 
 Regresyon artıklarının normal dağılım sınaması, çarpıklık, basıklık ve sigma: parametreler.json. Normal varsayımı reddedilirse handikap olasılığı doğrulanmış kabul edilmez. Gerçek handikap ve toplam skor çizgileri yok; alt/üst bahisleri değerlendirilmedi.
 
-Veri: 24547 satır; yinelenen maç: 0. Eksik alanlar profil.json içinde. NBA ilk yarı ve tarafsız saha bilgisi yok; özellikte ev avantajı var kabul edildi. Avrupa yorgunluğu yalnız Avrupa maçlarından; yerel lig verisi yok.
+Veri: 26200 satır; yinelenen maç: 0. Eksik alanlar profil.json içinde. NBA ilk yarı ve tarafsız saha bilgisi yok; özellikte ev avantajı var kabul edildi. Avrupa yorgunluğu yalnız Avrupa maçlarından; yerel lig verisi yok.
 
 Öneri: sezonlar arasındaki tutarlılığı ve kalibrasyonu birlikte değerlendirin. Kapanış oranı olmadan bahis kararı çıkarılamaz. Demografik veri yok; demografik adalet iddiası yapılmadı.
 
@@ -232,13 +269,15 @@ kanit/: metrikler.csv, toplam.csv, tahminler.csv, kalibrasyon.csv, anlamlilik.cs
 
 ## Test sonucu
 
-Pytest: 76 test; 0 başarısız, 0 hata, 0 atlanan. Ayrı negatif kontrol (tests/negative_control.py, kasıtlı sızıntılı özellik): 1 test, 1 başarısız — beklenen sonuç, sızıntı yakalandı.
+Pytest: 78 test; 0 başarısız, 0 hata, 0 atlanan. Ayrı negatif kontrol (tests/negative_control.py, kasıtlı sızıntılı özellik): 1 test, 1 başarısız — beklenen sonuç, sızıntı yakalandı.
 
 ## Kalibrasyon görselleri
 
 ![E kalibrasyon](kalibrasyon_E.png)
 
 ![NBA kalibrasyon](kalibrasyon_NBA.png)
+
+![NBL kalibrasyon](kalibrasyon_NBL.png)
 
 ![U kalibrasyon](kalibrasyon_U.png)
 
@@ -262,6 +301,8 @@ PLAN koşulu: yeni model, ev sahibi ve saf Elo tabanlarını hem log loss hem Br
 | E | hist_gradient_boosting | 0.0039 | 0.0014 | hayır | kanıt yok / yetersiz sezon |
 | NBA | logistic | -0.0106 | -0.0047 | evet | kanıt yok / yetersiz sezon |
 | NBA | hist_gradient_boosting | -0.0062 | -0.0029 | evet | kanıt yok / yetersiz sezon |
+| NBL | logistic | 0.0036 | 0.0018 | hayır | kanıt yok / yetersiz sezon |
+| NBL | hist_gradient_boosting | 0.0145 | 0.0070 | hayır | kanıt yok / yetersiz sezon |
 | U | logistic | 0.0423 | 0.0046 | hayır | kanıt yok / yetersiz sezon |
 | U | hist_gradient_boosting | 0.0081 | 0.0035 | hayır | kanıt yok / yetersiz sezon |
 

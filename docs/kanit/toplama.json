@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-10-21T21:00:34.933122+00:00",
+  "timestamp": "2026-10-22T06:41:56.963445+00:00",
   "sources": [
     {
       "lig": "E",
@@ -477,6 +477,78 @@
       "months": 7,
       "status": "ok",
       "count": 3
+    },
+    {
+      "lig": "NBL",
+      "sezon": "2025-26",
+      "status": "ok",
+      "count": 179
+    },
+    {
+      "lig": "NBL",
+      "sezon": "2023-24",
+      "status": "ok",
+      "count": 173
+    },
+    {
+      "lig": "NBL",
+      "sezon": "2024-25",
+      "status": "ok",
+      "count": 172
+    },
+    {
+      "lig": "NBL",
+      "sezon": "2020-21",
+      "status": "ok",
+      "count": 171
+    },
+    {
+      "lig": "NBL",
+      "sezon": "2022-23",
+      "status": "ok",
+      "count": 152
+    },
+    {
+      "lig": "NBL",
+      "sezon": "2021-22",
+      "status": "ok",
+      "count": 148
+    },
+    {
+      "lig": "NBL",
+      "sezon": "2019-20",
+      "status": "ok",
+      "count": 134
+    },
+    {
+      "lig": "NBL",
+      "sezon": "2018-19",
+      "status": "ok",
+      "count": 120
+    },
+    {
+      "lig": "NBL",
+      "sezon": "2017-18",
+      "status": "ok",
+      "count": 119
+    },
+    {
+      "lig": "NBL",
+      "sezon": "2015-16",
+      "status": "ok",
+      "count": 118
+    },
+    {
+      "lig": "NBL",
+      "sezon": "2016-17",
+      "status": "ok",
+      "count": 117
+    },
+    {
+      "lig": "NBL",
+      "sezon": "2026-27",
+      "status": "ok",
+      "count": 50
     }
   ],
   "odds": [
@@ -487,48 +559,7 @@
     }
   ],
   "unmatched_odds_rows": null,
-  "http": [
-    {
-      "url": "https://www.basketball-reference.com/leagues/NBA_2027_games.html",
-      "cached": true,
-      "status": 200
-    },
-    {
-      "url": "https://www.basketball-reference.com/leagues/NBA_2027_games-april.html",
-      "cached": true,
-      "status": 200
-    },
-    {
-      "url": "https://www.basketball-reference.com/leagues/NBA_2027_games-december.html",
-      "cached": true,
-      "status": 200
-    },
-    {
-      "url": "https://www.basketball-reference.com/leagues/NBA_2027_games-february.html",
-      "cached": true,
-      "status": 200
-    },
-    {
-      "url": "https://www.basketball-reference.com/leagues/NBA_2027_games-january.html",
-      "cached": true,
-      "status": 200
-    },
-    {
-      "url": "https://www.basketball-reference.com/leagues/NBA_2027_games-march.html",
-      "cached": true,
-      "status": 200
-    },
-    {
-      "url": "https://www.basketball-reference.com/leagues/NBA_2027_games-november.html",
-      "cached": true,
-      "status": 200
-    },
-    {
-      "url": "https://www.basketball-reference.com/leagues/NBA_2027_games-october.html",
-      "cached": true,
-      "status": 200
-    }
-  ],
+  "http": [],
   "limitations": [
     "NBA neutral courts unknown"
   ]

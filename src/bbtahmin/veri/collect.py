@@ -10,6 +10,7 @@ def run(leagues=('E','U','NBA'),start=2007,end=2025,sbr_permission=False):
     rows,status,odds=[],[],[]
     odds_rows=[]
     for league in leagues:
+        if league=='NBL': continue   # NBL tek dosyadan, aşağıda
         for year in range(max(start,2014) if league=='NBA' else start,end+1):
             item=dict(lig=league,sezon=f'{year}-{str(year+1)[-2:]}')
             try:
@@ -38,6 +39,15 @@ def run(leagues=('E','U','NBA'),start=2007,end=2025,sbr_permission=False):
                 except Exception as e:
                     item.update(status='missing',error=str(e))
             odds.append(item)
+    if 'NBL' in leagues:
+        from . import nbl
+        try:
+            tablo,bilgi=nbl.topla()
+            rows.extend(tablo.to_dict('records'))
+            status.extend(dict(lig='NBL',sezon=s,status='ok',count=int(n)) for s,n in tablo.sezon.value_counts().items())
+        except Exception as e:
+            status.append(dict(lig='NBL',sezon='hepsi',status='error',count=0,error=str(e)))
+        print(json.dumps(status[-1],ensure_ascii=False),flush=True)
     df=normalize(rows)
     path=Path('data/maclar.parquet')
     path.parent.mkdir(exist_ok=True)

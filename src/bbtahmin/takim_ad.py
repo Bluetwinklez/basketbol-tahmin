@@ -58,6 +58,10 @@ def aday_adlari(lig, kodlar):
         adlar = {kod} | set(EK_ADLAR.get(kod, []))
         if lig == 'NBA':
             adlar |= set(ALIASES.get(kod, []))
+        elif lig == 'NBL':
+            from .veri.nbl import ADLAR
+            ad = ADLAR.get(kod, '')
+            adlar |= {ad, ad.split()[-1], ' '.join(ad.split()[:-1])} if ad else set()
         else:
             adlar |= euro.get((lig, kod), set())
         sonuc[kod] = {anahtar(a) for a in adlar if a}
