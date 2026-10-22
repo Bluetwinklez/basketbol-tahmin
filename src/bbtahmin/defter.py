@@ -69,6 +69,40 @@ def espn_doldur(defter):
     return defter
 
 
+def bdl_doldur(defter):
+    """ESPN'in dolduramadığı NBA satırları için yedek kaynak: balldontlie (BALLDONTLIE_API_KEY gerekir).
+    Anahtar yalnızca ortam değişkeninden okunur; yoksa sessizce atlanır."""
+    import json
+    import os
+    import urllib.request
+    anahtar = os.environ.get('BALLDONTLIE_API_KEY')
+    if not anahtar:
+        try:   # setx ile kaydedilen değer açık oturuma yansımamış olabilir
+            import winreg
+            with winreg.OpenKey(winreg.HKEY_CURRENT_USER, 'Environment') as k:
+                anahtar = winreg.QueryValueEx(k, 'BALLDONTLIE_API_KEY')[0]
+        except Exception:
+            return defter
+    kod = {'BKN': 'BRK', 'CHA': 'CHO', 'PHX': 'PHO'}
+    bos = defter[(defter.lig == 'NBA') & defter.gercek_ev.isna()]
+    for gun in {pd.Timestamp(t).tz_convert('America/New_York').strftime('%Y-%m-%d') for t in bos.mac_utc}:
+        try:
+            istek = urllib.request.Request(f'https://api.balldontlie.io/v1/games?dates[]={gun}&per_page=100',
+                                           headers={'Authorization': anahtar, 'User-Agent': 'bbtahmin/0.1'})
+            with urllib.request.urlopen(istek, timeout=20) as y:
+                maclar = json.load(y)['data']
+        except Exception:
+            continue
+        for m in maclar:
+            if m.get('status') != 'Final':
+                continue
+            ev = kod.get(m['home_team']['abbreviation'], m['home_team']['abbreviation'])
+            dep = kod.get(m['visitor_team']['abbreviation'], m['visitor_team']['abbreviation'])
+            satir = bos[(bos.ev == ev) & (bos.dep == dep)].index
+            defter.loc[satir, ['gercek_ev', 'gercek_dep']] = [float(m['home_team_score']), float(m['visitor_team_score'])]
+    return defter
+
+
 def ozet(defter):
     d = defter.dropna(subset=['gercek_ev']).copy()
     if d.empty:
@@ -96,7 +130,7 @@ def run(yol=YOL):
     if not yol.exists():
         print('Defter boş.')
         return
-    defter = espn_doldur(doldur(pd.read_csv(yol), pd.read_parquet('data/maclar.parquet')))
+    defter = bdl_doldur(espn_doldur(doldur(pd.read_csv(yol), pd.read_parquet('data/maclar.parquet'))))
     defter.to_csv(yol, index=False)
     for r in defter.itertuples():
         fav, fp = (r.ev, r.ev_kazanir) if r.ev_kazanir >= .5 else (r.dep, 1 - r.ev_kazanir)
