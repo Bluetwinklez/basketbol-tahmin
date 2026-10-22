@@ -1,0 +1,46 @@
+[
+  {
+    "season": "2023-24",
+    "completed": true,
+    "n": 563,
+    "correct": 420,
+    "accuracy": 0.7460035523978685,
+    "home_baseline_accuracy": 0.6269982238010657,
+    "log_loss": 0.5332905000382883,
+    "margin_mae": 10.412447838870168,
+    "total_mae": 16.838302006727716
+  },
+  {
+    "season": "2024-25",
+    "completed": true,
+    "n": 497,
+    "correct": 370,
+    "accuracy": 0.744466800804829,
+    "home_baseline_accuracy": 0.5995975855130785,
+    "log_loss": 0.5019860429701609,
+    "margin_mae": 10.20301173018125,
+    "total_mae": 15.797470155980728
+  },
+  {
+    "season": "2025-26",
+    "completed": true,
+    "n": 453,
+    "correct": 329,
+    "accuracy": 0.7262693156732892,
+    "home_baseline_accuracy": 0.6114790286975718,
+    "log_loss": 0.5209519832329,
+    "margin_mae": 9.863534602712988,
+    "total_mae": 14.160717844882635
+  },
+  {
+    "season": "2026-27",
+    "completed": false,
+    "n": 25,
+    "correct": 14,
+    "accuracy": 0.56,
+    "home_baseline_accuracy": 0.44,
+    "log_loss": 0.7627625527410786,
+    "margin_mae": 13.917211176038947,
+    "total_mae": 12.725820419921465
+  }
+]

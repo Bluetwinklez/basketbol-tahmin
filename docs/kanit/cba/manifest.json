@@ -1,0 +1,18 @@
+{
+  "timestamp_utc": "2026-10-22T12:16:59.974236+00:00",
+  "pregame_spec": "cba-ridge-per40-v1",
+  "live_spec": "cba-remaining-ridge-v1",
+  "packages": {
+    "numpy": "2.2.6",
+    "pandas": "2.2.3",
+    "scipy": "1.15.3",
+    "scikit-learn": "1.6.1"
+  },
+  "files": {
+    "data/cba_games.parquet": "ff8708583942a0c98e2225086a35e3c54daff09ba2d308f0c39b22d23de0c1db",
+    "data/cba_quarters.parquet": "c23be4386027f97f09e70b5d1507eba9d36e9ad1b4e8299de1d20bc7a00df47b"
+  },
+  "source": "RealGM public numeric schedule and quarter facts",
+  "live_method": "Fixed Ridge alpha 10 on strictly earlier seasons; variance calibrated on preceding season. Same game never crosses season folds.",
+  "live_limitations": "40 sampled test games in 2025-26, three correlated quarter-end observations per game; no within-quarter validation or automatic scoreboard feed. Regulation only."
+}

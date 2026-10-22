@@ -1,0 +1,41 @@
+[
+  {
+    "season": "2025-26",
+    "period": 1,
+    "games": 40,
+    "decisive_games": 39,
+    "lead_accuracy": 0.7948717948717948,
+    "frozen_pregame_accuracy": 0.7692307692307693,
+    "log_loss": 0.4403057728807593,
+    "brier": 0.14167873967414366,
+    "total_mae": 13.2436915952893,
+    "frozen_pregame_total_mae": 11.338033617993336,
+    "total_interval80_coverage": 0.725
+  },
+  {
+    "season": "2025-26",
+    "period": 2,
+    "games": 40,
+    "decisive_games": 39,
+    "lead_accuracy": 0.9230769230769231,
+    "frozen_pregame_accuracy": 0.7692307692307693,
+    "log_loss": 0.32796703939853844,
+    "brier": 0.09766171260256522,
+    "total_mae": 11.164913846439935,
+    "frozen_pregame_total_mae": 11.338033617993336,
+    "total_interval80_coverage": 0.85
+  },
+  {
+    "season": "2025-26",
+    "period": 3,
+    "games": 40,
+    "decisive_games": 39,
+    "lead_accuracy": 0.9487179487179487,
+    "frozen_pregame_accuracy": 0.7692307692307693,
+    "log_loss": 0.18818591666891282,
+    "brier": 0.051409745765490115,
+    "total_mae": 6.022146891720498,
+    "frozen_pregame_total_mae": 11.338033617993336,
+    "total_interval80_coverage": 0.9
+  }
+]

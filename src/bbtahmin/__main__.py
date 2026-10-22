@@ -20,23 +20,44 @@ def main():
     bt.add_argument('--ilk-test',type=int,help='İlk değerlendirilecek sezonun başlangıç yılı; eğitim geçmişi korunur')
     prediction=sub.add_parser('tahmin',help='Gelecek maçları tahmin et: tahmin "Fenerbahçe - Real Madrid" "Celtics - Lakers"')
     prediction.add_argument('maclar',nargs='+',help='"Ev - Deplasman" biçiminde bir ya da daha çok maç')
-    prediction.add_argument('--lig',choices=['E','U','NBA','NBL'],help='Verilmezse takım adlarından bulunur')
+    prediction.add_argument('--lig',choices=['E','U','NBA','NBL','CBA'],help='Verilmezse takım adlarından bulunur')
     prediction.add_argument('--tarih',help='Maç zamanı, ör. 2026-10-23T20:45 (saat dilimi yoksa İstanbul). Varsayılan: şimdi')
     prediction.add_argument('--json',action='store_true',help='Çıktıyı JSON olarak ver')
     prediction.add_argument('--kaydet',action='store_true',help='Tahminleri defter/tahminler.csv dosyasına ekle')
     prediction.add_argument('--sakatlik',action='store_true',help='Resmi NBA sakatlık raporunu bilgi amaçlı ayrıca indir')
     prediction.add_argument('--min-guven',type=float,help='0.5–1 arası eşik; eşik altındaki maçlar da açıkça gösterilir')
     sub.add_parser('defter',help='Defterdeki tahminleri gerçek sonuçlarla puanla')
+    sub.add_parser('cba-topla',help='Tarihli CBA sonuçlarını ayrı arşive topla')
+    live=sub.add_parser('canli',help='Deneysel CBA canlı durumundan normal süre skor projeksiyonu')
+    live.add_argument('--ev',required=True);live.add_argument('--dep',required=True)
+    live.add_argument('--skor',nargs=2,type=int,required=True,metavar=('EV','DEP'))
+    live.add_argument('--periyot',type=int,required=True)
+    live.add_argument('--kalan',required=True,help='Periyotta KALAN süre MM:SS')
+    live.add_argument('--tarih',required=True,help='Skorun gözlendiği saat dilimli zaman')
+    live.add_argument('--dakika',type=int,choices=[40,48])
+    live.add_argument('--replay',action='store_true',help='Eski durumun tarihsel tekrarını açıkça etiketle')
     bulletin=sub.add_parser('bulten',help='Deneysel İddaa web bültenini oku; varsayılan yerel snapshot')
     bulletin.add_argument('--guncelle',action='store_true',help='Web backendinden üç salt-okunur GET isteği yap')
-    bulletin.add_argument('--lig',choices=['E','U','NBA','NBL'])
+    bulletin.add_argument('--lig',choices=['E','U','NBA','NBL','CBA'])
     bulletin.add_argument('--limit',type=int,default=30)
     action=bulletin.add_mutually_exclusive_group()
     action.add_argument('--tahmin',help='Yerel bültendeki bir etkinlik kimliği için model/piyasa karşılaştırması')
     action.add_argument('--gecmis',help='Etkinlik kimliğinin yerel maç önü oran geçmişi')
     bulletin.add_argument('--asof',help='Oran geçmişi için saat dilimli bilgi kesim zamanı; gelecekte olamaz')
     args=parser.parse_args()
-    if args.command=='bulten':
+    if args.command=='cba-topla':
+        from .veri.cba import collect
+        collect()
+    elif args.command=='canli':
+        import json
+        from .live import predict
+        from .cba_model import load
+        from .takim_ad import coz
+        g=load();codes=set(g.ev)|set(g.dep)
+        result=predict(coz('CBA',args.ev,codes),coz('CBA',args.dep,codes),*args.skor,
+                       args.periyot,args.kalan,args.tarih,args.dakika,args.replay)
+        print(json.dumps(result,ensure_ascii=False,indent=2,allow_nan=False))
+    elif args.command=='bulten':
         import json
         if args.asof and not args.gecmis:
             parser.error('--asof requires --gecmis')
