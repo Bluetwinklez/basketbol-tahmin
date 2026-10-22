@@ -1,3 +1,25 @@
-....................................................                     [100%]
+........................................................................ [ 94%]
+....                                                                     [100%]
+============================== warnings summary ===============================
+tests/test_eksik.py::test_eksik_ozellik_gelecegi_kullanmaz[4]
+tests/test_eksik.py::test_eksik_ozellik_gelecegi_kullanmaz[8]
+tests/test_eksik.py::test_eksik_ozellik_gelecegi_kullanmaz[13]
+tests/test_eksik.py::test_eksik_ozellik_gelecegi_kullanmaz[18]
+tests/test_eksik.py::test_eksik_ozellik_gelecegi_kullanmaz[23]
+  C:\Users\Administrator\Desktop\claude\basketbol-tahmin\tests\test_eksik.py:27: FutureWarning: The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.
+    kisa = pd.concat([gecmis, g[g.mac_id == hedef.mac_id].assign(ev_skor=np.nan, dep_skor=np.nan)], ignore_index=True)
+
+tests/test_kutu.py::test_kutu_ozellikleri_gelecegi_kullanmaz[3-E]
+tests/test_kutu.py::test_kutu_ozellikleri_gelecegi_kullanmaz[3-U]
+tests/test_kutu.py::test_kutu_ozellikleri_gelecegi_kullanmaz[9-E]
+tests/test_kutu.py::test_kutu_ozellikleri_gelecegi_kullanmaz[9-U]
+tests/test_kutu.py::test_kutu_ozellikleri_gelecegi_kullanmaz[15-E]
+tests/test_kutu.py::test_kutu_ozellikleri_gelecegi_kullanmaz[15-U]
+tests/test_kutu.py::test_kutu_ozellikleri_gelecegi_kullanmaz[20-E]
+tests/test_kutu.py::test_kutu_ozellikleri_gelecegi_kullanmaz[20-U]
+  C:\Users\Administrator\Desktop\claude\basketbol-tahmin\tests\test_kutu.py:32: FutureWarning: The behavior of DataFrame concatenation with empty or all-NA entries is deprecated. In a future version, this will no longer exclude empty or all-NA columns when determining the result dtypes. To retain the old behavior, exclude the relevant entries before the concat operation.
+    kisa = pd.concat([gecmis, sorgu], ignore_index=True)
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
 - generated xml file: C:\Users\Administrator\Desktop\claude\basketbol-tahmin\docs\kanit\pytest.xml -
-52 passed in 8.14s
+76 passed, 13 warnings in 4.10s
