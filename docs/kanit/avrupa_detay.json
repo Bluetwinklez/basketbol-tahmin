@@ -1,0 +1,28 @@
+{
+  "source": "https://github.com/McNews11/euroleague-open-data",
+  "database_url": "https://raw.githubusercontent.com/McNews11/euroleague-open-data/main/data/euroleague.duckdb",
+  "snapshot_sha256": "00ccbcb3bc1a12212005ab138a042f8296b1a65235e249839ab6d439c0935728",
+  "timestamp": "2026-10-22T09:13:10.969809+00:00",
+  "verified_games": 1123,
+  "rejected_games": 0,
+  "tables": {
+    "avrupa_takim_istatistik": {
+      "rows": 2246,
+      "games": 1123
+    },
+    "avrupa_oyuncu_istatistik": {
+      "rows": 26448,
+      "games": 1123
+    },
+    "avrupa_sutlar": {
+      "rows": 178177,
+      "games": 1123
+    },
+    "avrupa_olaylar": {
+      "rows": 625187,
+      "games": 1123
+    }
+  },
+  "usage": "Postgame facts only. Do not use same-game shots/events as pregame features.",
+  "new_standard_box_rows": 0
+}

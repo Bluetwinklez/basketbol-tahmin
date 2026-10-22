@@ -1,0 +1,37 @@
+{
+  "timestamp": "2026-10-22T10:22:06.663243+00:00",
+  "first_test": 2021,
+  "dataset_sha256": "b47d00dbc49469d0511f23e1f2282a123e40302cca080aa3e6dcd85e619262b4",
+  "absence_leagues": [],
+  "box_leagues": [],
+  "base_features": [
+    "elo_diff",
+    "home",
+    "points_for_diff",
+    "points_against_diff",
+    "margin_diff",
+    "total_mean",
+    "rest_diff",
+    "back_to_back_diff",
+    "load7_diff",
+    "road_streak_diff",
+    "games_diff",
+    "europe_load_diff",
+    "rmarj_04",
+    "rtop_04",
+    "rmarj_12",
+    "rtop_12"
+  ],
+  "files": {
+    "parametreler.json": "2eb49c8c7d7347f326dd3fc8a5a9ba8a201a0819466fda02c73730bf5e5ace63",
+    "metrikler.csv": "6a0c600cff3e78be4d2bffccef9c4f72ce5f7f062dca7f4b7a436028cf42f26e"
+  },
+  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
+  "packages": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scipy": "1.17.0",
+    "scikit-learn": "1.6.1"
+  },
+  "prediction_sha256": "38c10a57b69ca7d28dd7b2e661b6fcc711710d1e6ecccb7b7d015dba6bde25a3"
+}

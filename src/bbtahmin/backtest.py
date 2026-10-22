@@ -1,4 +1,7 @@
 import json
+import hashlib
+import importlib.metadata
+import sys
 from itertools import product
 from datetime import datetime,timezone
 from pathlib import Path
@@ -20,12 +23,12 @@ ELO_SHRINK=[0.,.25,.5]
 def scores(y,p):
     return dict(log_loss=float(log_loss(y,np.clip(p,1e-6,1-1e-6),labels=[0,1])),
         brier=float(brier_score_loss(y,p)),accuracy=float(accuracy_score(y,p>=.5)))
-def run(ligler=None,cikti='docs/kanit'):
+def run(ligler=None,cikti='docs/kanit',first_test=None):
     """ligler verilirse yalnız onlar; cikti başka klasörse rapor/grafik/EDA üretilmez (deneme koşusu)."""
     output=Path(cikti); output.mkdir(parents=True,exist_ok=True)
     deneme=cikti!='docs/kanit'
     all_games=pd.read_parquet('data/maclar.parquet')
-    all_games=all_games[all_games.ev_skor.notna() & all_games.dep_skor.notna()]
+    all_games=all_games[(all_games.ev_skor>0) & (all_games.dep_skor>0)]
     rows,params,predictions=[],[],[]
     kutu,oyuncular=yukle()
     oyuncu_mac=eksik_yukle()
@@ -52,6 +55,8 @@ def run(ligler=None,cikti='docs/kanit'):
                 cache[key]=build_features(g,k=k,advantage=h,shrink=s,mov=mov)
         ewma_cache={}
         for i,season in enumerate(seasons):
+            if first_test is not None and int(season[:4])<first_test:
+                continue
             if i<2:
                 params.append(dict(lig=league,sezon=season,status='yapılmadı: iki geçmiş sezon gerekli'))
                 continue
@@ -157,6 +162,13 @@ def run(ligler=None,cikti='docs/kanit'):
     profile=dict(rows=len(all_games),missing=all_games.isna().sum().to_dict(),
         duplicates=int(all_games.mac_id.duplicated().sum()),timestamp=datetime.now(timezone.utc).isoformat())
     (output/'profil.json').write_text(json.dumps(profile,ensure_ascii=False,indent=2),'utf8')
+    manifest=dict(timestamp=datetime.now(timezone.utc).isoformat(),first_test=first_test,
+        python=sys.version,packages={name:importlib.metadata.version(name) for name in ['numpy','pandas','scipy','scikit-learn']},
+        prediction_sha256=hashlib.sha256((output/'tahminler.csv').read_bytes()).hexdigest(),
+        dataset_sha256=hashlib.sha256(Path('data/maclar.parquet').read_bytes()).hexdigest(),
+        absence_leagues=sorted(EKSIK_LIGLERI),box_leagues=sorted(KUTU_LIGLERI),base_features=FEATURES,
+        files={name:hashlib.sha256((output/name).read_bytes()).hexdigest() for name in ['parametreler.json','metrikler.csv']})
+    (output/'manifest.json').write_text(json.dumps(manifest,indent=2),'utf8')
     if deneme: return metrics
     plot_calibration(pred)
     from .eda import run_eda

@@ -1,0 +1,18 @@
+{
+  "spec": "winner-prior-selection-v1",
+  "generated_at_utc": "2026-10-22T21:27:26.218795+00:00",
+  "packages": {
+    "numpy": "2.2.6",
+    "pandas": "2.2.3",
+    "scipy": "1.15.3",
+    "scikit-learn": "1.6.1"
+  },
+  "files": {
+    "data/competitions/ECW.parquet": "96a0ba7dcd86d05a196d6b4f1dec6c7b901927171f1042d847452715d946c0b4",
+    "data/competitions/FEC.parquet": "56771b499724c5d6164b02103cc349224a19704fe9625736e5b4aa9a8cd7d9c2",
+    "data/competitions/VTB.parquet": "b1c55c4f80374ca74d07bb1ab639750bf1742beaa53341fd3c621f955c0199a1",
+    "data/competitions/ELW.parquet": "1ef58d649d8ddb1a502d2f4625dfd76f9c66a624a5b28f5d881e878aea9e5119",
+    "data/competitions/ECW_early.parquet": "8ee1cd6fb04ce492d472573fbbdc8e681a8807a424beac06ea6a60e11218d6ff"
+  },
+  "limitations": "Historical exploratory reuse of already inspected seasons, not a new untouched holdout. Current-season rows include the four known matches; never use their outcomes to choose parameters. All variants reported, including failures. Eligibility is coverage filtering, not model accuracy improvement."
+}

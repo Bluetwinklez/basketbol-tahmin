@@ -36,20 +36,39 @@ def fit_predict(kind,x,y,train,validation,test,cols=None):
         calibration='Unpenalized Platt on prior-season out-of-sample predictions',
         calibration_coefficient=float(calibrator.coef_[0,0]),calibration_intercept=float(calibrator.intercept_[0]))
 
-def regression(x,target,train,validation,test,cols=None):
+def regression(x,target,train,validation,test,cols=None,seasons=None,objective='mae'):
     cols=cols or FEATURES
     values=[.1,10.,100.]
-    errors=[]
-    for value in values:
-        m=make_pipeline(StandardScaler(),Ridge(alpha=value)).fit(x.loc[train,cols],target[train])
-        errors.append(float(np.mean(np.abs(target[validation]-m.predict(x.loc[validation,cols])))))
-    value=values[int(np.argmin(errors))]
-    final=make_pipeline(StandardScaler(),Ridge(alpha=value)).fit(x.loc[train|validation,cols],target[train|validation])
+    # More history is not automatically more useful: rules, pace and rosters
+    # change. Select the history length exclusively on the prior-season holdout.
+    windows=[None] if seasons is None else [None,3,5,10]
+    errors=[]; trials=[]
+    for window in windows:
+        mask=np.asarray(train,dtype=bool).copy()
+        if window is not None:
+            available=sorted(set(np.asarray(seasons)[mask]))
+            mask &= np.isin(seasons,available[-window:])
+        for value in values:
+            m=make_pipeline(StandardScaler(),Ridge(alpha=value)).fit(x.loc[mask,cols],target[mask])
+            pv=m.predict(x.loc[validation,cols])
+            residual=target[validation]-pv
+            if objective=='log_loss':
+                from scipy.stats import norm
+                p=norm.cdf(pv/max(float(np.std(residual,ddof=1)),1e-6))
+                error=float(log_loss((target[validation]>0).astype(int),np.clip(p,1e-6,1-1e-6),labels=[0,1]))
+            else:
+                error=float(np.mean(np.abs(residual)))
+            errors.append(error);trials.append((value,window,mask))
+    index=int(np.argmin(errors));value,window,selected_train=trials[index]
+    final=make_pipeline(StandardScaler(),Ridge(alpha=value)).fit(x.loc[selected_train|validation,cols],target[selected_train|validation])
     prediction=final.predict(x.loc[test,cols])
     residual=target[validation]-make_pipeline(StandardScaler(),Ridge(alpha=value)).fit(
-        x.loc[train,cols],target[train]).predict(x.loc[validation,cols])
+        x.loc[selected_train,cols],target[selected_train]).predict(x.loc[validation,cols])
     from scipy.stats import normaltest,skew,kurtosis
-    return prediction,dict(alpha=value,candidates=values,validation_mae=errors,residual_sigma=float(np.std(residual,ddof=1)),
+    return prediction,dict(alpha=value,candidates=values,validation_mae=errors if objective=='mae' else None,
+        history_window=window,validation_objective=objective,validation_losses=errors,
+        history_candidates=[dict(alpha=a,window=w) for a,w,_ in trials],
+        training_rows=int(selected_train.sum()),residual_sigma=float(np.std(residual,ddof=1)),
         residual_mean=float(np.mean(residual)),
         residual_normality_p=float(normaltest(residual).pvalue) if len(residual)>=8 else None,
         residual_skew=float(skew(residual)),residual_excess_kurtosis=float(kurtosis(residual)))

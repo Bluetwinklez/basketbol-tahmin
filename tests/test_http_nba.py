@@ -39,6 +39,29 @@ def test_429_stops_host(tmp_path,monkeypatch):
     with pytest.raises(RuntimeError,match='429'):http.get('https://example.test/b',robots=False)
     assert len(calls)==1
 
+def test_explicit_refresh_replaces_stale_success_cache(tmp_path,monkeypatch):
+    import hashlib
+    monkeypatch.chdir(tmp_path)
+    url='https://example.test/current-season'
+    path=Path('data/raw/example.test')/hashlib.sha256(url.encode()).hexdigest()
+    path.parent.mkdir(parents=True)
+    path.write_bytes(b'old')
+    path.with_suffix('.json').write_text('{"status":200}')
+    calls=[]
+    def fake_run(args,**kwargs):
+        calls.append(args)
+        Path(args[3]).write_bytes(b'new')
+        class Result:
+            returncode=0
+            stdout=json.dumps({'status':200,'url':args[2]})
+        return Result()
+    monkeypatch.setattr('subprocess.run',fake_run)
+    http=CachedHTTP()
+    assert http.get(url,robots=False)==b'old'
+    assert http.get(url,robots=False,refresh=True)==b'new'
+    assert http.get(url,robots=False)==b'new'
+    assert len(calls)==1
+
 def test_nba_schedule_fixture():
     from bbtahmin.veri.nba_bref import collect
     base='<div class="filter"><a href="/leagues/NBA_2025_games-october.html">Oct</a></div>'

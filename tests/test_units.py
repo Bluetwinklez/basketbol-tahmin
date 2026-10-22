@@ -33,3 +33,9 @@ def test_official_nba_mov_multiplier():
     expected_delta=20*(7**.8)/7.5*.5
     assert h==pytest.approx(1500+expected_delta)
     assert a==pytest.approx(1500-expected_delta)
+
+
+@pytest.mark.parametrize('value',[float('nan'),float('inf'),0,1,-2])
+def test_nonfinite_and_invalid_decimal_odds_are_rejected(value):
+    with pytest.raises(ValueError):
+        no_vig(value,2.)

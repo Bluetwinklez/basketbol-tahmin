@@ -1,0 +1,29 @@
+{
+  "transport": "stdio",
+  "tool_names": [
+    "dataset_status",
+    "bulletin_events",
+    "predict_bulletin_event",
+    "bulletin_history",
+    "predict_live_cba",
+    "research_results"
+  ],
+  "dataset_status": {
+    "games": 54808,
+    "leagues": {
+      "E": 6664,
+      "NBA": 41620,
+      "NBL": 1653,
+      "U": 4871
+    },
+    "cba_games": 2386,
+    "experimental_competitions": {
+      "ECW": 674,
+      "FEC": 651,
+      "VTB": 860
+    },
+    "latest_game_utc": "2026-10-21T18:30:00+00:00",
+    "bulletin_available": true
+  },
+  "competition_report_rows": 6
+}

@@ -1,0 +1,22 @@
+{
+  "timestamp_utc": "2026-10-22T19:20:55.502577+00:00",
+  "league": "FEC",
+  "games": 651,
+  "teams": 127,
+  "seasons": {
+    "2023-24": 188,
+    "2024-25": 192,
+    "2025-26": 195,
+    "2026-27": 76
+  },
+  "sources": [
+    "https://www.fiba.basketball/en/history/212-fiba-mens-european-club-competitions-tier-2/208765/games",
+    "https://www.fiba.basketball/en/events/fiba-europe-cup-24-25/games",
+    "https://www.fiba.basketball/en/events/fiba-europe-cup-25-26/games",
+    "https://www.fiba.basketball/en/events/fiba-europe-cup-26-27/games"
+  ],
+  "errors": [],
+  "gender": "Men",
+  "note": "Normalized numeric facts from public pages; no supported developer API contract. Nominal home/away, neutral venues not independently verified.",
+  "coverage": "Finished non-tied games with positive scores from public pages; not a completeness guarantee. Aggregate-leg ties and unplayed games excluded."
+}

@@ -1,0 +1,140 @@
+{
+  "ECW": {
+    "metrics": {
+      "n": 214,
+      "accuracy": 0.7009345794392523,
+      "log_loss": 0.6044837318967473,
+      "brier": 0.20821186504127517
+    },
+    "bins": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 24,
+        "mean_predicted": 0.13682027407119482,
+        "observed_home_win_rate": 0.125
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 39,
+        "mean_predicted": 0.3135142958959656,
+        "observed_home_win_rate": 0.3333333333333333
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6000000000000001,
+        "n": 56,
+        "mean_predicted": 0.4872436849163095,
+        "observed_home_win_rate": 0.42857142857142855
+      },
+      {
+        "lower": 0.6000000000000001,
+        "upper": 0.8,
+        "n": 60,
+        "mean_predicted": 0.7050445797033955,
+        "observed_home_win_rate": 0.65
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 35,
+        "mean_predicted": 0.8848372873736255,
+        "observed_home_win_rate": 0.7428571428571429
+      }
+    ],
+    "note": "Small reliability bins are noisy; do not interpret them as per-match accuracy guarantees."
+  },
+  "FEC": {
+    "metrics": {
+      "n": 195,
+      "accuracy": 0.6820512820512821,
+      "log_loss": 0.599250551688685,
+      "brier": 0.20763032128695197
+    },
+    "bins": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 17,
+        "mean_predicted": 0.1320082960426508,
+        "observed_home_win_rate": 0.11764705882352941
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 45,
+        "mean_predicted": 0.30431713511029196,
+        "observed_home_win_rate": 0.4
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6000000000000001,
+        "n": 43,
+        "mean_predicted": 0.5146081707839305,
+        "observed_home_win_rate": 0.7441860465116279
+      },
+      {
+        "lower": 0.6000000000000001,
+        "upper": 0.8,
+        "n": 41,
+        "mean_predicted": 0.7062265516701428,
+        "observed_home_win_rate": 0.6829268292682927
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 49,
+        "mean_predicted": 0.8851067680310948,
+        "observed_home_win_rate": 0.7959183673469388
+      }
+    ],
+    "note": "Small reliability bins are noisy; do not interpret them as per-match accuracy guarantees."
+  },
+  "VTB": {
+    "metrics": {
+      "n": 254,
+      "accuracy": 0.8110236220472441,
+      "log_loss": 0.4321683256850639,
+      "brier": 0.13875270209916835
+    },
+    "bins": [
+      {
+        "lower": 0.0,
+        "upper": 0.2,
+        "n": 63,
+        "mean_predicted": 0.08988182886564892,
+        "observed_home_win_rate": 0.07936507936507936
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.4,
+        "n": 36,
+        "mean_predicted": 0.30408933369972374,
+        "observed_home_win_rate": 0.2222222222222222
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.6000000000000001,
+        "n": 32,
+        "mean_predicted": 0.501671099639137,
+        "observed_home_win_rate": 0.59375
+      },
+      {
+        "lower": 0.6000000000000001,
+        "upper": 0.8,
+        "n": 46,
+        "mean_predicted": 0.7019716804253288,
+        "observed_home_win_rate": 0.717391304347826
+      },
+      {
+        "lower": 0.8,
+        "upper": 1.0,
+        "n": 77,
+        "mean_predicted": 0.9161550442873145,
+        "observed_home_win_rate": 0.8831168831168831
+      }
+    ],
+    "note": "Small reliability bins are noisy; do not interpret them as per-match accuracy guarantees."
+  }
+}
