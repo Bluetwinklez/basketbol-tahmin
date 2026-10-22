@@ -4,6 +4,13 @@ Sızıntısız, sezon ilerlemeli (walk-forward) değerlendirme yapan araştırma
 
 ## Kurulum (PowerShell)
 
+**2026-10-22 veri genişletmesi:** Arşiv 26.200 maçtan **54.808 maça** çıktı;
+NBA 1993-94, EuroLeague 2000-01, EuroCup 2002-03 sezonuna uzanıyor.
+1.071.430 NBA oyuncu istatistik satırı, 178.177 Avrupa şutu ve 625.187 maç içi olay
+kaydı eklendi. [Veri kapsamı, kalite denetimleri ve dürüst model karşılaştırması](docs/data-expansion.md).
+Eski ana rapor önceki veri/model koşusunun kaydıdır; yeni sonuçlarla karıştırılmamalıdır.
+Güncellemek için `python -m bbtahmin genislet`; denetlemek için `python scripts/audit_dataset.py`.
+
 ```powershell
 & 'C:\Users\Administrator\AppData\Local\Programs\Python\Python312\python.exe' -m venv .venv
 .venv/Scripts/python.exe -m pip install -r requirements.txt
@@ -77,7 +84,7 @@ Normal pakette aynı denetleyici (`tests/leakage_check.py`) aynı sızıntılı 
 - Avrupa yorgunluğu yalnız Avrupa maçlarından hesaplanır; yerel lig programı yok.
 - Yeniden eğitim yalnız sezon başında; aylık yeniden eğitim yapılmadı.
 - NBA kapanış oranı yok → piyasa kıyası, bahis simülasyonu ve eşleşmeyen oran satırı sayısı **yapılmadı**.
-- Tahmin komutu saf Elo verir; sınıflandırıcıyla gelecek maç servisi yapılmadı.
+- Tahmin komutu Elo, sınıflandırıcı ve skor modellerini çalıştırır; model seçimi tahmin sezonundan önceki değerlendirme sonuçlarını kullanır.
 
 ## PLAN.md ile çelişkiler / farklar
 
@@ -88,7 +95,7 @@ Normal pakette aynı denetleyici (`tests/leakage_check.py`) aynı sızıntılı 
 5. PLAN "ev sahibi kazanır" tabanını olasılıksal tanımlamaz; log loss/Brier hesaplanabilsin diye olasılığı eğitim penceresindeki ev galibiyet oranı alındı (doğruluk p=1 ile aynıdır).
 6. PLAN BasketbolBet yönteminin sızıntısız yeniden uygulanmasını ister; referans `main.py` bulunamadığı için yapılamadı.
 
-Bu çalışma yalnız ayrılmış çalışma kopyasındadır. Commit/merge yapılmadı; ana depoya yazılmadı.
+Veri genişletmesinin kapsamı ve güncel doğrulaması için [docs/data-expansion.md](docs/data-expansion.md) dosyasına bakın.
 
 ## Ek bilgiler ve denenmiş özellikler
 

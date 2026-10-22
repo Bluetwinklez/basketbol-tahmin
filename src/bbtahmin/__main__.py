@@ -9,6 +9,11 @@ def main():
     collect.add_argument('--sbr-izni',action='store_true',
         help='SBR oran arşivini kullanma izniniz olduğunu onaylar (site şartları yazılı izin ister)')
     sub.add_parser('topla-kutu',help='EuroLeague/EuroCup kutu skorlarını ve oyuncu dakikalarını topla')
+    expand=sub.add_parser('genislet',help='Geçmiş maçları ve ayrıntılı NBA istatistiklerini ekle; mevcut sonuçları korur')
+    expand.add_argument('--baslangic',type=int,default=1993,help='Sezon başlangıç yılı')
+    expand.add_argument('--bitis',type=int,help='Varsayılan: içinde bulunulan sezon')
+    expand.add_argument('--yalniz-skor',action='store_true',help='NBA takım/oyuncu ayrıntılarını indirme')
+    expand.add_argument('--ligler',nargs='+',choices=['E','U','NBA'],default=['E','U','NBA'])
     bt=sub.add_parser('backtest')
     bt.add_argument('--ligler',nargs='+',choices=['E','U','NBA','NBL'])
     bt.add_argument('--cikti',default='docs/kanit',help='Başka klasör verilirse deneme koşusu: rapor yazılmaz')
@@ -23,6 +28,10 @@ def main():
     if args.command=='topla':
         from .veri.collect import run
         run(args.ligler,args.baslangic,args.bitis,args.sbr_izni)
+    elif args.command=='genislet':
+        from .veri.genislet import run
+        run(args.baslangic,args.bitis,not args.yalniz_skor,
+            europe=[l for l in args.ligler if l in ('E','U')],nba='NBA' in args.ligler)
     elif args.command=='topla-kutu':
         import pandas as pd
         from .veri.kutu import topla

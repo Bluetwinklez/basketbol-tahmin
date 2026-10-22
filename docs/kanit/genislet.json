@@ -1,0 +1,3649 @@
+{
+  "timestamp": "2026-10-22T09:17:48.448493+00:00",
+  "before": 26200,
+  "after": 54808,
+  "added": 28608,
+  "enriched": 15440,
+  "conflicts": [
+    {
+      "mac_id": "NBA_201412120CHI",
+      "existing": {
+        "ev": "CHI",
+        "dep": "POR",
+        "ev_skor": "115",
+        "dep_skor": "106"
+      },
+      "incoming": {
+        "ev": "CHI",
+        "dep": "POR",
+        "ev_skor": "115",
+        "dep_skor": "96"
+      },
+      "source": "https://github.com/sportsdataverse/sportsdataverse-data/releases/download/espn_nba_schedules/nba_schedule_2015.parquet"
+    },
+    {
+      "mac_id": "NBA_202003010PHO",
+      "reason": "possible duplicate with shifted source date",
+      "existing_mac_ids": [
+        "NBA_202002290PHO"
+      ],
+      "source": "https://github.com/sportsdataverse/sportsdataverse-data/releases/download/espn_nba_schedules/nba_schedule_2020.parquet"
+    },
+    {
+      "mac_id": "NBA_202003010ATL",
+      "reason": "possible duplicate with shifted source date",
+      "existing_mac_ids": [
+        "NBA_202002290ATL"
+      ],
+      "source": "https://github.com/sportsdataverse/sportsdataverse-data/releases/download/espn_nba_schedules/nba_schedule_2020.parquet"
+    },
+    {
+      "mac_id": "NBA_202002290LAC",
+      "reason": "possible duplicate with shifted source date",
+      "existing_mac_ids": [
+        "NBA_202002280LAC"
+      ],
+      "source": "https://github.com/sportsdataverse/sportsdataverse-data/releases/download/espn_nba_schedules/nba_schedule_2020.parquet"
+    },
+    {
+      "mac_id": "NBA_202002240POR",
+      "reason": "possible duplicate with shifted source date",
+      "existing_mac_ids": [
+        "NBA_202002230POR"
+      ],
+      "source": "https://github.com/sportsdataverse/sportsdataverse-data/releases/download/espn_nba_schedules/nba_schedule_2020.parquet"
+    }
+  ],
+  "sources": [
+    {
+      "lig": "E",
+      "sezon": "2000-01",
+      "status": "ok",
+      "listed": 158,
+      "played": 158,
+      "excluded_ties": 0,
+      "added": 158
+    },
+    {
+      "lig": "E",
+      "sezon": "2001-02",
+      "status": "ok",
+      "listed": 275,
+      "played": 275,
+      "excluded_ties": 0,
+      "added": 275
+    },
+    {
+      "lig": "E",
+      "sezon": "2002-03",
+      "status": "ok",
+      "listed": 220,
+      "played": 220,
+      "excluded_ties": 0,
+      "added": 220
+    },
+    {
+      "lig": "E",
+      "sezon": "2003-04",
+      "status": "ok",
+      "listed": 220,
+      "played": 220,
+      "excluded_ties": 0,
+      "added": 220
+    },
+    {
+      "lig": "E",
+      "sezon": "2004-05",
+      "status": "ok",
+      "listed": 229,
+      "played": 229,
+      "excluded_ties": 0,
+      "added": 229
+    },
+    {
+      "lig": "E",
+      "sezon": "2005-06",
+      "status": "ok",
+      "listed": 231,
+      "played": 231,
+      "excluded_ties": 0,
+      "added": 231
+    },
+    {
+      "lig": "E",
+      "sezon": "2006-07",
+      "status": "ok",
+      "listed": 230,
+      "played": 230,
+      "excluded_ties": 0,
+      "added": 230
+    },
+    {
+      "lig": "E",
+      "sezon": "2007-08",
+      "status": "ok",
+      "listed": 231,
+      "played": 231,
+      "excluded_ties": 0,
+      "added": 0
+    },
+    {
+      "lig": "E",
+      "sezon": "2008-09",
+      "status": "ok",
+      "listed": 188,
+      "played": 188,
+      "excluded_ties": 0,
+      "added": 0
+    },
+    {
+      "lig": "E",
+      "sezon": "2009-10",
+      "status": "ok",
+      "listed": 188,
+      "played": 188,
+      "excluded_ties": 0,
+      "added": 0
+    },
+    {
+      "lig": "E",
+      "sezon": "2010-11",
+      "status": "ok",
+      "listed": 189,
+      "played": 189,
+      "excluded_ties": 0,
+      "added": 0
+    },
+    {
+      "lig": "E",
+      "sezon": "2011-12",
+      "status": "ok",
+      "listed": 188,
+      "played": 188,
+      "excluded_ties": 0,
+      "added": 0
+    },
+    {
+      "lig": "E",
+      "sezon": "2012-13",
+      "status": "ok",
+      "listed": 253,
+      "played": 253,
+      "excluded_ties": 0,
+      "added": 0
+    },
+    {
+      "lig": "E",
+      "sezon": "2013-14",
+      "status": "ok",
+      "listed": 253,
+      "played": 253,
+      "excluded_ties": 0,
+      "added": 0
+    },
+    {
+      "lig": "E",
+      "sezon": "2014-15",
+      "status": "ok",
+      "listed": 251,
+      "played": 251,
+      "excluded_ties": 0,
+      "added": 0
+    },
+    {
+      "lig": "E",
+      "sezon": "2015-16",
+      "status": "ok",
+      "listed": 250,
+      "played": 250,
+      "excluded_ties": 0,
+      "added": 0
+    },
+    {
+      "lig": "E",
+      "sezon": "2016-17",
+      "status": "ok",
+      "listed": 259,
+      "played": 259,
+      "excluded_ties": 0,
+      "added": 0
+    },
+    {
+      "lig": "E",
+      "sezon": "2017-18",
+      "status": "ok",
+      "listed": 260,
+      "played": 260,
+      "excluded_ties": 0,
+      "added": 0
+    },
+    {
+      "lig": "E",
+      "sezon": "2018-19",
+      "status": "ok",
+      "listed": 260,
+      "played": 260,
+      "excluded_ties": 0,
+      "added": 0
+    },
+    {
+      "lig": "E",
+      "sezon": "2019-20",
+      "status": "ok",
+      "listed": 306,
+      "played": 252,
+      "excluded_ties": 0,
+      "added": 0
+    },
+    {
+      "lig": "E",
+      "sezon": "2020-21",
+      "status": "ok",
+      "listed": 328,
+      "played": 328,
+      "excluded_ties": 0,
+      "added": 0
+    },
+    {
+      "lig": "E",
+      "sezon": "2021-22",
+      "status": "ok",
+      "listed": 327,
+      "played": 299,
+      "excluded_ties": 0,
+      "added": 0
+    },
+    {
+      "lig": "E",
+      "sezon": "2022-23",
+      "status": "ok",
+      "listed": 328,
+      "played": 328,
+      "excluded_ties": 0,
+      "added": 0
+    },
+    {
+      "lig": "E",
+      "sezon": "2023-24",
+      "status": "ok",
+      "listed": 331,
+      "played": 331,
+      "excluded_ties": 0,
+      "added": 0
+    },
+    {
+      "lig": "E",
+      "sezon": "2024-25",
+      "status": "ok",
+      "listed": 330,
+      "played": 330,
+      "excluded_ties": 0,
+      "added": 0
+    },
+    {
+      "lig": "E",
+      "sezon": "2025-26",
+      "status": "ok",
+      "listed": 402,
+      "played": 402,
+      "excluded_ties": 0,
+      "added": 0
+    },
+    {
+      "lig": "E",
+      "sezon": "2026-27",
+      "status": "ok",
+      "listed": 380,
+      "played": 61,
+      "excluded_ties": 0,
+      "added": 1
+    },
+    {
+      "lig": "U",
+      "sezon": "2002-03",
+      "status": "ok",
+      "listed": 150,
+      "played": 150,
+      "excluded_ties": 0,
+      "added": 150
+    },
+    {
+      "lig": "U",
+      "sezon": "2003-04",
+      "status": "ok",
+      "listed": 209,
+      "played": 209,
+      "excluded_ties": 0,
+      "added": 209
+    },
+    {
+      "lig": "U",
+      "sezon": "2004-05",
+      "status": "ok",
+      "listed": 239,
+      "played": 239,
+      "excluded_ties": 1,
+      "added": 238
+    },
+    {
+      "lig": "U",
+      "sezon": "2005-06",
+      "status": "ok",
+      "listed": 149,
+      "played": 149,
+      "excluded_ties": 0,
+      "added": 149
+    },
+    {
+      "lig": "U",
+      "sezon": "2006-07",
+      "status": "ok",
+      "listed": 149,
+      "played": 149,
+      "excluded_ties": 0,
+      "added": 149
+    },
+    {
+      "lig": "U",
+      "sezon": "2007-08",
+      "status": "ok",
+      "listed": 326,
+      "played": 326,
+      "excluded_ties": 3,
+      "added": 0
+    },
+    {
+      "lig": "U",
+      "sezon": "2008-09",
+      "status": "ok",
+      "listed": 151,
+      "played": 151,
+      "excluded_ties": 0,
+      "added": 0
+    },
+    {
+      "lig": "U",
+      "sezon": "2009-10",
+      "status": "ok",
+      "listed": 156,
+      "played": 156,
+      "excluded_ties": 0,
+      "added": 0
+    },
+    {
+      "lig": "U",
+      "sezon": "2010-11",
+      "status": "ok",
+      "listed": 156,
+      "played": 156,
+      "excluded_ties": 1,
+      "added": 0
+    },
+    {
+      "lig": "U",
+      "sezon": "2011-12",
+      "status": "ok",
+      "listed": 156,
+      "played": 156,
+      "excluded_ties": 0,
+      "added": 0
+    },
+    {
+      "lig": "U",
+      "sezon": "2012-13",
+      "status": "ok",
+      "listed": 157,
+      "played": 157,
+      "excluded_ties": 0,
+      "added": 0
+    },
+    {
+      "lig": "U",
+      "sezon": "2013-14",
+      "status": "ok",
+      "listed": 366,
+      "played": 366,
+      "excluded_ties": 0,
+      "added": 0
+    },
+    {
+      "lig": "U",
+      "sezon": "2014-15",
+      "status": "ok",
+      "listed": 306,
+      "played": 306,
+      "excluded_ties": 1,
+      "added": 0
+    },
+    {
+      "lig": "U",
+      "sezon": "2015-16",
+      "status": "ok",
+      "listed": 306,
+      "played": 306,
+      "excluded_ties": 2,
+      "added": 0
+    },
+    {
+      "lig": "U",
+      "sezon": "2016-17",
+      "status": "ok",
+      "listed": 146,
+      "played": 146,
+      "excluded_ties": 0,
+      "added": 0
+    },
+    {
+      "lig": "U",
+      "sezon": "2017-18",
+      "status": "ok",
+      "listed": 184,
+      "played": 184,
+      "excluded_ties": 0,
+      "added": 0
+    },
+    {
+      "lig": "U",
+      "sezon": "2018-19",
+      "status": "ok",
+      "listed": 186,
+      "played": 186,
+      "excluded_ties": 0,
+      "added": 0
+    },
+    {
+      "lig": "U",
+      "sezon": "2019-20",
+      "status": "ok",
+      "listed": 180,
+      "played": 168,
+      "excluded_ties": 0,
+      "added": 0
+    },
+    {
+      "lig": "U",
+      "sezon": "2020-21",
+      "status": "ok",
+      "listed": 185,
+      "played": 185,
+      "excluded_ties": 0,
+      "added": 0
+    },
+    {
+      "lig": "U",
+      "sezon": "2021-22",
+      "status": "ok",
+      "listed": 195,
+      "played": 189,
+      "excluded_ties": 0,
+      "added": 0
+    },
+    {
+      "lig": "U",
+      "sezon": "2022-23",
+      "status": "ok",
+      "listed": 195,
+      "played": 195,
+      "excluded_ties": 0,
+      "added": 0
+    },
+    {
+      "lig": "U",
+      "sezon": "2023-24",
+      "status": "ok",
+      "listed": 195,
+      "played": 195,
+      "excluded_ties": 0,
+      "added": 0
+    },
+    {
+      "lig": "U",
+      "sezon": "2024-25",
+      "status": "ok",
+      "listed": 196,
+      "played": 196,
+      "excluded_ties": 0,
+      "added": 0
+    },
+    {
+      "lig": "U",
+      "sezon": "2025-26",
+      "status": "ok",
+      "listed": 195,
+      "played": 195,
+      "excluded_ties": 0,
+      "added": 0
+    },
+    {
+      "lig": "U",
+      "sezon": "2026-27",
+      "status": "ok",
+      "listed": 224,
+      "played": 64,
+      "excluded_ties": 0,
+      "added": 11
+    },
+    {
+      "lig": "NBA",
+      "sezon": "1993-94",
+      "status": "ok",
+      "added": 1184,
+      "enriched": 0,
+      "listed": 1185,
+      "accepted": 1185,
+      "rejected": [],
+      "nba_takim_istatistik": 2358,
+      "nba_oyuncu_istatistik": 28195
+    },
+    {
+      "lig": "NBA",
+      "sezon": "1994-95",
+      "status": "ok",
+      "added": 1181,
+      "enriched": 0,
+      "listed": 1181,
+      "accepted": 1181,
+      "rejected": [],
+      "nba_takim_istatistik": 2358,
+      "nba_oyuncu_istatistik": 28219
+    },
+    {
+      "lig": "NBA",
+      "sezon": "1995-96",
+      "status": "ok",
+      "added": 1257,
+      "enriched": 0,
+      "listed": 1257,
+      "accepted": 1257,
+      "rejected": [],
+      "nba_takim_istatistik": 2346,
+      "nba_oyuncu_istatistik": 29846
+    },
+    {
+      "lig": "NBA",
+      "sezon": "1996-97",
+      "status": "ok",
+      "added": 1261,
+      "enriched": 0,
+      "listed": 1263,
+      "accepted": 1261,
+      "rejected": [
+        {
+          "game_id": "170501031",
+          "error": "Eşleşmeyen takım: East All-Stars"
+        },
+        {
+          "game_id": "170429031",
+          "error": "Eşleşmeyen takım: East All-Stars"
+        }
+      ],
+      "nba_takim_istatistik": 2500,
+      "nba_oyuncu_istatistik": 29832
+    },
+    {
+      "lig": "NBA",
+      "sezon": "1997-98",
+      "status": "ok",
+      "added": 1260,
+      "enriched": 0,
+      "listed": 1261,
+      "accepted": 1260,
+      "rejected": [
+        {
+          "game_id": "171209083",
+          "error": "Eşleşmeyen takım: Detroit Falcons"
+        }
+      ],
+      "nba_takim_istatistik": 2510,
+      "nba_oyuncu_istatistik": 29959
+    },
+    {
+      "lig": "NBA",
+      "sezon": "1998-99",
+      "status": "ok",
+      "added": 792,
+      "enriched": 0,
+      "listed": 842,
+      "accepted": 792,
+      "rejected": [
+        {
+          "game_id": "400217414",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400217398",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400217383",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400217374",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400217342",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400217327",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400217315",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400217304",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400217293",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400217275",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400217269",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400217244",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400217237",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400217218",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400217211",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400217188",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400217176",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400217163",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400217148",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400217138",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400217120",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400217113",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400217086",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400217073",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400217065",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400217048",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400217037",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400217025",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400217023",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400216998",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400216974",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400216966",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400216948",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400216944",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400216907",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400216894",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400216885",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400216871",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400216853",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400216837",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400216830",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400216824",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400216814",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400216793",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400216779",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400216766",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400216752",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400216735",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400216721",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400216711",
+          "error": "record belongs to a different season"
+        }
+      ],
+      "nba_takim_istatistik": 1582,
+      "nba_oyuncu_istatistik": 19283
+    },
+    {
+      "lig": "NBA",
+      "sezon": "1999-00",
+      "status": "ok",
+      "added": 1242,
+      "enriched": 0,
+      "listed": 1827,
+      "accepted": 1242,
+      "rejected": [
+        {
+          "game_id": "200505100",
+          "error": "Eşleşmeyen takım: Utah Stars"
+        },
+        {
+          "game_id": "200424100",
+          "error": "Eşleşmeyen takım: Utah Stars"
+        },
+        {
+          "game_id": "200422100",
+          "error": "Eşleşmeyen takım: Utah Stars"
+        },
+        {
+          "game_id": "400218927",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400218915",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400218909",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400218885",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400218880",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400218864",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400218840",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400218824",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400218810",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400218796",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400218790",
+          "error": "Eşleşmeyen takım: Charlotte Chahornets"
+        },
+        {
+          "game_id": "400218774",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400218766",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400218740",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400218720",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400218704",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400218684",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400218672",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400218656",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400218638",
+          "error": "Eşleşmeyen takım: Charlotte Chahornets"
+        },
+        {
+          "game_id": "400218620",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400218589",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400218575",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400218563",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400218546",
+          "error": "Eşleşmeyen takım: Charlotte Chahornets"
+        },
+        {
+          "game_id": "400218536",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400218515",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400218505",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400218480",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400218459",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400218451",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400218431",
+          "error": "Eşleşmeyen takım: Vancouver"
+        },
+        {
+          "game_id": "400218407",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400218385",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400218364",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400218345",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400218329",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400218311",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400218298",
+          "error": "Eşleşmeyen takım: Vancouver"
+        },
+        {
+          "game_id": "400218277",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400218265",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400218239",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400218231",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400218202",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400218196",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400218180",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400218152",
+          "error": "Eşleşmeyen takım: Charlotte Chahornets"
+        },
+        {
+          "game_id": "400218148",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400218123",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400218109",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400218083",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400218056",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400218051",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400218027",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400218005",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400217991",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400217976",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400217960",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400217953",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400217923",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400217905",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400217886",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400217880",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400217855",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400217826",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400217810",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400217794",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400217757",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400217735",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400217696",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400217687",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400217669",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400217635",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400217622",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400217606",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400217593",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400217572",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400217568",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400217545",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400217526",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400217518",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "400217505",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "190505018",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190505001",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190505004",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190505009",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190505012",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190505013",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190505017",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190505023",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190505002",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190505007",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190505020",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190505021",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190505028",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400217414",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "190503018",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190503004",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190503013",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190503007",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190503027",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190503029",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400217398",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "190501017",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190501014",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190501002",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190501006",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190501016",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190501020",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190501021",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190501024",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400217383",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "190430001",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190430003",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190430005",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190430015",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190430019",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190430010",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190430016",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190430025",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400217374",
+          "error": "Eşleşmeyen takım: Charlotte Chahornets"
+        },
+        {
+          "game_id": "190426003",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190426005",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190426006",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190426009",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190426012",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190426015",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190426010",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190426022",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190426026",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400217342",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "190424009",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190424012",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190424003",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190424024",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190424011",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190424023",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400217327",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "190423026",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190423018",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190423019",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190423004",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190423012",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190423015",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190423023",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190423029",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190423007",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190423027",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400217315",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "190421003",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190421010",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190421014",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190421017",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190421023",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190421002",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190421011",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190421021",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190421022",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190421025",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190421027",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190421029",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400217304",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "190420004",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190420006",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190420009",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190420015",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190420028",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190420026",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400217293",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "190418004",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190418016",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190418012",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190418014",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190418024",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190418019",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190418017",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190418027",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190418021",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190418029",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400217275",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "190416002",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190416008",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190416020",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190416001",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190416009",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190416015",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190416024",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190416025",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190416016",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190416021",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190416027",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190416028",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400217269",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "190414003",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190414004",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190414010",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190414015",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190414024",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190414002",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190414007",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190414011",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190414020",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190414025",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190414027",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400217244",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "190413005",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190413006",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190413012",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190413014",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190413015",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190413018",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190413023",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190413022",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400217237",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "190411002",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190411014",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190411022",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190411029",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190411016",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190411017",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190411013",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190411026",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190411027",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400217218",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "190410004",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190410005",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190410012",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190410006",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190410011",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190410021",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190410023",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400217211",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "190407003",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190407004",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190407008",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190407014",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190407015",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190407017",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190407023",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190407002",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190407021",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190407029",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400217188",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "190406018",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190406027",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190406005",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190406010",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190406012",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190406013",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190406020",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190406022",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190406025",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190406028",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400217176",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "190404005",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190404004",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190404007",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190404028",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190404025",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190404027",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190404011",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190404001",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190404002",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400217163",
+          "error": "Eşleşmeyen takım: Vancouver"
+        },
+        {
+          "game_id": "190402003",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190402001",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190402004",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190402009",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190402022",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190402002",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190402016",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190402020",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190402021",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400217148",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "190401006",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190401008",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190401014",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190401017",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190401018",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190401024",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190401007",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190401026",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190401028",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400217138",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "190330018",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190330001",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190330003",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190330004",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190330005",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190330009",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190330012",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190330015",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190330019",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190330023",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190330024",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190330016",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190330029",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400217120",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "190328003",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190328021",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190328023",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190328013",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190328028",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190328016",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190328002",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190328008",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190328019",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400217113",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "190326008",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190326001",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190326003",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190326006",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190326009",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190326013",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190326017",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190326024",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190326029",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190326016",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190326020",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190326025",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190326021",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400217086",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "190324001",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190324003",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190324006",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190324012",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190324013",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190324015",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190324017",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190324023",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190324002",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190324025",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190324029",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400217073",
+          "error": "Eşleşmeyen takım: Charlotte Chahornets"
+        },
+        {
+          "game_id": "190323004",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190323005",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190323019",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190323024",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190323022",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190323026",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400217065",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "190321007",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190321015",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190321005",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190321022",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190321008",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190321002",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190321028",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190321016",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190321019",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400217048",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "190319008",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190319001",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190319003",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190319009",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190319007",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190319011",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190319020",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190319022",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190319028",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400217037",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "190318004",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190318005",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190318015",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190318018",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190318023",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190318027",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190318029",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400217025",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "190317001",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190317003",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190317008",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190317009",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190317017",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190317019",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190317002",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190317007",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190317020",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400217023",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "190315004",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190315006",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190315009",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190315019",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190315007",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190315015",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190315016",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190315028",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400216998",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "190312008",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190312004",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190312013",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190312023",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190312011",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190312020",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190312021",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190312022",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190312027",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400216974",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "190311001",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190311004",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190311006",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190311009",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190311010",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190311012",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190311014",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190311018",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190311026",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400216966",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "190309003",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190309004",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190309006",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190309009",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190309010",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190309012",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190309018",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190309016",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190309022",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190309026",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400216948",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "190308008",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190308014",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190308015",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190308019",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190308029",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400216944",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "190303013",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190303015",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190303019",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190303023",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190303020",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190303026",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190303027",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400216907",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "190302014",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190302001",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190302004",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190302005",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190302006",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190302010",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190302017",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190302011",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190302016",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190302022",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190302029",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400216894",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "190228028",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190228007",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190228016",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190228021",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190228013",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190228015",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190228024",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190228008",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190228014",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400216885",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "190227004",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190227012",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190227017",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190227006",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190227027",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190227029",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400216871",
+          "error": "Eşleşmeyen takım: Charlotte Chahornets"
+        },
+        {
+          "game_id": "190225004",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190225005",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190225006",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190225010",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190225012",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190225018",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190225027",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190225029",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400216853",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "190223004",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190223006",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190223008",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190223012",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190223018",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190223029",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190223010",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190223027",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400216837",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "190222001",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190222005",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190222019",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190222016",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190222021",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190222026",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190222007",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400216830",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "190221011",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190221019",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190221025",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190221028",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190221016",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190221018",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190221027",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190221024",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400216824",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "190219001",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190219009",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190219013",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190219023",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190219016",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190219020",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190219022",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190219027",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190219028",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190219021",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400216814",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "190217008",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190217009",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190217013",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190217015",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190217019",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190217024",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190217016",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190217022",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190217025",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190217029",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400216793",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "190216011",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190216004",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190216005",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190216010",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190216012",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190216013",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190216017",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190216018",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190216023",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190216020",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190216025",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400216779",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "190214009",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190214012",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190214019",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190214020",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190214013",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190214004",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190214029",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400216766",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "190211001",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190211004",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190211005",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190211006",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190211008",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190211014",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190211015",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190211029",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190211016",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190211021",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400216752",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "190209014",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190209004",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190209006",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190209016",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190209020",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190209021",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190209025",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190209028",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400216735",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "190207009",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190207012",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190207017",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190207021",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190207023",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190207025",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190207008",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190207018",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190207013",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400216721",
+          "error": "invalid final score"
+        },
+        {
+          "game_id": "190205002",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190205019",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190205001",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190205003",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190205012",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190205013",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190205014",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190205024",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190205007",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190205011",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190205025",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "190205026",
+          "error": "record belongs to a different season"
+        },
+        {
+          "game_id": "400216711",
+          "error": "invalid final score"
+        }
+      ],
+      "nba_takim_istatistik": 2472,
+      "nba_oyuncu_istatistik": 29575
+    },
+    {
+      "lig": "NBA",
+      "sezon": "2000-01",
+      "status": "ok",
+      "added": 1250,
+      "enriched": 0,
+      "listed": 1250,
+      "accepted": 1250,
+      "rejected": [],
+      "nba_takim_istatistik": 2500,
+      "nba_oyuncu_istatistik": 29941
+    },
+    {
+      "lig": "NBA",
+      "sezon": "2001-02",
+      "status": "ok",
+      "added": 1260,
+      "enriched": 0,
+      "listed": 1261,
+      "accepted": 1260,
+      "rejected": [
+        {
+          "game_id": "220210031",
+          "error": "Eşleşmeyen takım: East All-Stars"
+        }
+      ],
+      "nba_takim_istatistik": 2520,
+      "nba_oyuncu_istatistik": 30279
+    },
+    {
+      "lig": "NBA",
+      "sezon": "2002-03",
+      "status": "ok",
+      "added": 1277,
+      "enriched": 0,
+      "listed": 1278,
+      "accepted": 1277,
+      "rejected": [
+        {
+          "game_id": "230209031",
+          "error": "Eşleşmeyen takım: East All-Stars"
+        }
+      ],
+      "nba_takim_istatistik": 2554,
+      "nba_oyuncu_istatistik": 30870
+    },
+    {
+      "lig": "NBA",
+      "sezon": "2003-04",
+      "status": "ok",
+      "added": 1271,
+      "enriched": 0,
+      "listed": 1272,
+      "accepted": 1271,
+      "rejected": [
+        {
+          "game_id": "240215032",
+          "error": "Eşleşmeyen takım: Western Confe All-Stars"
+        }
+      ],
+      "nba_takim_istatistik": 2542,
+      "nba_oyuncu_istatistik": 30606
+    },
+    {
+      "lig": "NBA",
+      "sezon": "2004-05",
+      "status": "ok",
+      "added": 1314,
+      "enriched": 0,
+      "listed": 1315,
+      "accepted": 1314,
+      "rejected": [
+        {
+          "game_id": "250220032",
+          "error": "Eşleşmeyen takım: Western Conf All-Stars"
+        }
+      ],
+      "nba_takim_istatistik": 2628,
+      "nba_oyuncu_istatistik": 31552
+    },
+    {
+      "lig": "NBA",
+      "sezon": "2005-06",
+      "status": "ok",
+      "added": 1319,
+      "enriched": 0,
+      "listed": 1320,
+      "accepted": 1319,
+      "rejected": [
+        {
+          "game_id": "260219032",
+          "error": "Eşleşmeyen takım: Western Conf All-Stars"
+        }
+      ],
+      "nba_takim_istatistik": 2638,
+      "nba_oyuncu_istatistik": 37691
+    },
+    {
+      "lig": "NBA",
+      "sezon": "2006-07",
+      "status": "ok",
+      "added": 1309,
+      "enriched": 0,
+      "listed": 1310,
+      "accepted": 1309,
+      "rejected": [
+        {
+          "game_id": "270218032",
+          "error": "Eşleşmeyen takım: Western Conf All-Stars"
+        }
+      ],
+      "nba_takim_istatistik": 2618,
+      "nba_oyuncu_istatistik": 38234
+    },
+    {
+      "lig": "NBA",
+      "sezon": "2007-08",
+      "status": "ok",
+      "added": 1316,
+      "enriched": 0,
+      "listed": 1317,
+      "accepted": 1316,
+      "rejected": [
+        {
+          "game_id": "280217032",
+          "error": "Eşleşmeyen takım: Western Conf All-Stars"
+        }
+      ],
+      "nba_takim_istatistik": 2632,
+      "nba_oyuncu_istatistik": 37973
+    },
+    {
+      "lig": "NBA",
+      "sezon": "2008-09",
+      "status": "ok",
+      "added": 1315,
+      "enriched": 0,
+      "listed": 1316,
+      "accepted": 1315,
+      "rejected": [
+        {
+          "game_id": "290215032",
+          "error": "Eşleşmeyen takım: Western Conf All-Stars"
+        }
+      ],
+      "nba_takim_istatistik": 2630,
+      "nba_oyuncu_istatistik": 37453
+    },
+    {
+      "lig": "NBA",
+      "sezon": "2009-10",
+      "status": "ok",
+      "added": 1312,
+      "enriched": 0,
+      "listed": 1313,
+      "accepted": 1312,
+      "rejected": [
+        {
+          "game_id": "300214032",
+          "error": "Eşleşmeyen takım: Western Conf All-Stars"
+        }
+      ],
+      "nba_takim_istatistik": 2624,
+      "nba_oyuncu_istatistik": 37079
+    },
+    {
+      "lig": "NBA",
+      "sezon": "2010-11",
+      "status": "ok",
+      "added": 1311,
+      "enriched": 0,
+      "listed": 1312,
+      "accepted": 1311,
+      "rejected": [
+        {
+          "game_id": "310220032",
+          "error": "Eşleşmeyen takım: Western Conf All-Stars"
+        }
+      ],
+      "nba_takim_istatistik": 2622,
+      "nba_oyuncu_istatistik": 37717
+    },
+    {
+      "lig": "NBA",
+      "sezon": "2011-12",
+      "status": "ok",
+      "added": 1074,
+      "enriched": 0,
+      "listed": 1075,
+      "accepted": 1074,
+      "rejected": [
+        {
+          "game_id": "320226031",
+          "error": "Eşleşmeyen takım: Eastern Conf All-Stars"
+        }
+      ],
+      "nba_takim_istatistik": 2148,
+      "nba_oyuncu_istatistik": 31014
+    },
+    {
+      "lig": "NBA",
+      "sezon": "2012-13",
+      "status": "ok",
+      "added": 1314,
+      "enriched": 0,
+      "listed": 1315,
+      "accepted": 1314,
+      "rejected": [
+        {
+          "game_id": "400436572",
+          "error": "Eşleşmeyen takım: Western Conf All-Stars"
+        }
+      ],
+      "nba_takim_istatistik": 2618,
+      "nba_oyuncu_istatistik": 33424
+    },
+    {
+      "lig": "NBA",
+      "sezon": "2013-14",
+      "status": "ok",
+      "added": 1319,
+      "enriched": 0,
+      "listed": 1320,
+      "accepted": 1319,
+      "rejected": [
+        {
+          "game_id": "400517994",
+          "error": "Eşleşmeyen takım: Western Conf All-Stars"
+        }
+      ],
+      "nba_takim_istatistik": 2636,
+      "nba_oyuncu_istatistik": 33705
+    },
+    {
+      "lig": "NBA",
+      "sezon": "2014-15",
+      "status": "ok",
+      "added": 0,
+      "enriched": 1310,
+      "listed": 1312,
+      "accepted": 1311,
+      "rejected": [
+        {
+          "game_id": "400606285",
+          "error": "Eşleşmeyen takım: Eastern Conf All-Stars"
+        }
+      ],
+      "nba_takim_istatistik": 2620,
+      "nba_oyuncu_istatistik": 33529
+    },
+    {
+      "lig": "NBA",
+      "sezon": "2015-16",
+      "status": "ok",
+      "added": 0,
+      "enriched": 1316,
+      "listed": 1317,
+      "accepted": 1316,
+      "rejected": [
+        {
+          "game_id": "400829482",
+          "error": "Eşleşmeyen takım: Eastern Conf All-Stars"
+        }
+      ],
+      "nba_takim_istatistik": 2632,
+      "nba_oyuncu_istatistik": 33691
+    },
+    {
+      "lig": "NBA",
+      "sezon": "2016-17",
+      "status": "ok",
+      "added": 0,
+      "enriched": 1309,
+      "listed": 1310,
+      "accepted": 1309,
+      "rejected": [
+        {
+          "game_id": "400935635",
+          "error": "Eşleşmeyen takım: Western Conf All-Stars"
+        }
+      ],
+      "nba_takim_istatistik": 2616,
+      "nba_oyuncu_istatistik": 33606
+    },
+    {
+      "lig": "NBA",
+      "sezon": "2017-18",
+      "status": "ok",
+      "added": 0,
+      "enriched": 1312,
+      "listed": 1314,
+      "accepted": 1312,
+      "rejected": [
+        {
+          "game_id": "401001760",
+          "error": "Eşleşmeyen takım: Team Stephen"
+        },
+        {
+          "game_id": "401018033",
+          "error": "Eşleşmeyen takım: USA"
+        }
+      ],
+      "nba_takim_istatistik": 2622,
+      "nba_oyuncu_istatistik": 33075
+    },
+    {
+      "lig": "NBA",
+      "sezon": "2018-19",
+      "status": "ok",
+      "added": 0,
+      "enriched": 1312,
+      "listed": 1314,
+      "accepted": 1312,
+      "rejected": [
+        {
+          "game_id": "401098037",
+          "error": "Eşleşmeyen takım: Team Giannis"
+        },
+        {
+          "game_id": "401098038",
+          "error": "Eşleşmeyen takım: USA"
+        }
+      ],
+      "nba_takim_istatistik": 2624,
+      "nba_oyuncu_istatistik": 32938
+    },
+    {
+      "lig": "NBA",
+      "sezon": "2019-20",
+      "status": "ok",
+      "added": 0,
+      "enriched": 1138,
+      "listed": 1157,
+      "accepted": 1142,
+      "rejected": [
+        {
+          "game_id": "401197813",
+          "error": "Eşleşmeyen takım: Team Giannis"
+        },
+        {
+          "game_id": "401197814",
+          "error": "Eşleşmeyen takım: USA"
+        }
+      ],
+      "nba_takim_istatistik": 2276,
+      "nba_oyuncu_istatistik": 28596
+    },
+    {
+      "lig": "NBA",
+      "sezon": "2020-21",
+      "status": "ok",
+      "added": 0,
+      "enriched": 1165,
+      "listed": 1204,
+      "accepted": 1165,
+      "rejected": [
+        {
+          "game_id": "401306581",
+          "error": "Eşleşmeyen takım: Team Durant"
+        }
+      ],
+      "nba_takim_istatistik": 2330,
+      "nba_oyuncu_istatistik": 31402
+    },
+    {
+      "lig": "NBA",
+      "sezon": "2021-22",
+      "status": "ok",
+      "added": 0,
+      "enriched": 1317,
+      "listed": 1335,
+      "accepted": 1317,
+      "rejected": [
+        {
+          "game_id": "401410564",
+          "error": "Eşleşmeyen takım: Team LeBron"
+        }
+      ],
+      "nba_takim_istatistik": 2634,
+      "nba_oyuncu_istatistik": 33702
+    },
+    {
+      "lig": "NBA",
+      "sezon": "2022-23",
+      "status": "ok",
+      "added": 0,
+      "enriched": 1314,
+      "listed": 1322,
+      "accepted": 1314,
+      "rejected": [
+        {
+          "game_id": "401524696",
+          "error": "Eşleşmeyen takım: Team LeBron"
+        }
+      ],
+      "nba_takim_istatistik": 2628,
+      "nba_oyuncu_istatistik": 33872
+    },
+    {
+      "lig": "NBA",
+      "sezon": "2023-24",
+      "status": "ok",
+      "added": 0,
+      "enriched": 1313,
+      "listed": 1322,
+      "accepted": 1313,
+      "rejected": [
+        {
+          "game_id": "401623259",
+          "error": "Eşleşmeyen takım: Eastern Conf All-Stars"
+        }
+      ],
+      "nba_takim_istatistik": 2626,
+      "nba_oyuncu_istatistik": 34843
+    },
+    {
+      "lig": "NBA",
+      "sezon": "2024-25",
+      "status": "ok",
+      "added": 0,
+      "enriched": 1315,
+      "listed": 1329,
+      "accepted": 1315,
+      "rejected": [
+        {
+          "game_id": "401752957",
+          "error": "Eşleşmeyen takım: Team Chuck"
+        },
+        {
+          "game_id": "401752956",
+          "error": "Eşleşmeyen takım: Team Shaq"
+        },
+        {
+          "game_id": "401752955",
+          "error": "Eşleşmeyen takım: Team Chuck"
+        }
+      ],
+      "nba_takim_istatistik": 2630,
+      "nba_oyuncu_istatistik": 35039
+    },
+    {
+      "lig": "NBA",
+      "sezon": "2025-26",
+      "status": "ok",
+      "added": 0,
+      "enriched": 1316,
+      "listed": 1330,
+      "accepted": 1316,
+      "rejected": [
+        {
+          "game_id": "401838143",
+          "error": "Eşleşmeyen takım: Team Stripes"
+        },
+        {
+          "game_id": "401838142",
+          "error": "Eşleşmeyen takım: Team Stripes"
+        },
+        {
+          "game_id": "401838141",
+          "error": "Eşleşmeyen takım: Team Stripes"
+        },
+        {
+          "game_id": "401838140",
+          "error": "Eşleşmeyen takım: Team Stars"
+        }
+      ],
+      "nba_takim_istatistik": 2632,
+      "nba_oyuncu_istatistik": 34640
+    },
+    {
+      "lig": "NBA",
+      "sezon": "2026-27",
+      "status": "ok",
+      "added": 0,
+      "enriched": 3,
+      "listed": 1206,
+      "accepted": 3,
+      "rejected": [],
+      "nba_takim_istatistik": 6,
+      "nba_oyuncu_istatistik": 84
+    }
+  ],
+  "note": "Additional data is not evidence of increased predictive accuracy. Re-run chronological evaluation."
+}

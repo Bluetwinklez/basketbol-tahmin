@@ -21,12 +21,12 @@ class CachedHTTP:
         self.blocked = set()
         self.last_url = None  # yönlendirme sonrası son adres
 
-    def get(self, url, nba=False, robots=True):
+    def get(self, url, nba=False, robots=True, refresh=False):
         key = hashlib.sha256(url.encode()).hexdigest()
         path = Path('data/raw') / urlparse(url).netloc / key
         path.parent.mkdir(parents=True, exist_ok=True)
         meta_path = path.with_suffix('.json')
-        if path.exists() and meta_path.exists():
+        if not refresh and path.exists() and meta_path.exists():
             meta = json.loads(meta_path.read_text('utf8'))
             if meta['status'] == 200 or (meta['status'] == 404 and url.endswith('/robots.txt')):
                 self.events.append(dict(url=url, cached=True, status=meta['status']))
