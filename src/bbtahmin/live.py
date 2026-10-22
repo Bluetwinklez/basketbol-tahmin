@@ -86,10 +86,29 @@ def project(prior,home_score,away_score,period,remaining,minutes,models,sigma):
              'quarter-boundary evaluation does not establish within-quarter calibration. No overtime projection.')
 
 
-def predict(home,away,home_score,away_score,period,remaining,observed_at,minutes=None,replay=False):
+def validate_transition(previous,home,away,home_score,away_score,period,remaining,observed_at,correction=False):
+    from .quality import timestamp
+    if previous.get('home')!=home or previous.get('away')!=away:raise ValueError('Previous state belongs to another fixture')
+    if timestamp(observed_at)<=timestamp(previous['observed_at_utc']):raise ValueError('Out-of-order or duplicate observation')
+    old_h,old_a=previous['score_observed']
+    def seconds(clock):
+        parts=clock.split(':')
+        if len(parts)!=2 or not all(p.isdigit() for p in parts):raise ValueError('Invalid remaining clock')
+        mm,ss=map(int,parts)
+        if ss>=60:raise ValueError('Invalid remaining clock')
+        return mm*60+ss
+    backward=period<previous['period'] or (period==previous['period'] and seconds(remaining)>seconds(previous['remaining']))
+    if not correction and (home_score<old_h or away_score<old_a or backward):
+        raise ValueError('Score/clock went backwards; explicit source correction required')
+    return dict(previous_observed_at_utc=previous['observed_at_utc'],explicit_source_correction=bool(correction))
+
+
+def predict(home,away,home_score,away_score,period,remaining,observed_at,minutes=None,replay=False,
+            previous_state=None,score_correction=False):
     date=pd.Timestamp(observed_at);now=pd.Timestamp.now(tz='UTC')
     if date.tzinfo is None or pd.isna(date) or date>now:raise ValueError('Observation needs a valid non-future timezone-aware timestamp')
     if not replay and (now-date).total_seconds()>120:raise ValueError('Live observation older than 120 seconds; use explicit replay for historical inputs')
+    transition=validate_transition(previous_state,home,away,home_score,away_score,period,remaining,date,score_correction) if previous_state is not None else None
     prior=cba_model.predict(home,away,date)
     duration=prior['regulation_minutes'] if minutes is None else minutes
     if duration!=prior['regulation_minutes']:raise ValueError('Duration disagrees with the trained CBA season regime')
@@ -103,7 +122,7 @@ def predict(home,away,home_score,away_score,period,remaining,observed_at,minutes
     evidence=Path('docs/kanit/cba/manifest.json')
     manifest=json.loads(evidence.read_text()) if evidence.exists() else {}
     result.update(home=home,away=away,observed_at_utc=date.tz_convert('UTC').isoformat(),
-        replay=bool(replay),input_source='Manual observed game state; not an automatic live feed',
+        replay=bool(replay),transition=transition,input_source='Manual observed game state; not an automatic live feed',
         prior=prior,model='cba-remaining-ridge-v1',quarter_dataset_sha256=quarter_fingerprint,
         quarter_dataset_matches_evaluation=manifest.get('files',{}).get(str(quarter_path))==quarter_fingerprint,**info)
     return result

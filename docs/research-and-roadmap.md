@@ -81,3 +81,8 @@ The mixed results do not establish a general improvement. EuroCup illustrates wh
 | 3 | More frequent retraining and artifact caching | Could adapt to roster and pace shifts and reduce repeated work | Monthly walk-forward testing, training-cutoff/model fingerprints, benchmark against season-boundary refits |
 
 The next genuine bottleneck is **point-in-time information and validation**, not another unverified high-accuracy GitHub model or merely increasing archive row counts.
+
+
+## Implemented reliability work and explicit remaining gaps
+
+See [implementation status](improvement-implementation.md) for the separate Czech/ELW archives, rejected winner candidates, paired day-block comparisons, information-time import quarantine, runtime data-quality flags, live transition checks, interval diagnostics and immutable prospective protocol. The implementation report distinguishes completed components from unavailable historical sources and outcomes that require future time. No high-accuracy claim is inferred from two matches or from confidence filtering.

@@ -1,0 +1,170 @@
+{
+  "captured_at_utc": "2026-10-22T21:21:45.423289+00:00",
+  "games": 561,
+  "seasons": {
+    "2022-23": 121,
+    "2023-24": 142,
+    "2024-25": 134,
+    "2025-26": 139,
+    "2026-27": 25
+  },
+  "teams": 13,
+  "excluded": [
+    {
+      "source": "https://zbl.basketball/zapasy?y=2023&c=0&k=0&p1%5B%5D=7795&d_od=&d_do=",
+      "reason": "Official forfeit; excluded from played-score modeling"
+    },
+    {
+      "source": "https://zbl.basketball/zapasy?y=2024&c=0&k=0&p1%5B%5D=8830&d_od=&d_do=",
+      "reason": "Official forfeit; excluded from played-score modeling"
+    },
+    {
+      "source": "https://zbl.basketball/zapasy?y=2026&c=0&k=0&p1%5B%5D=10442&d_od=&d_do=",
+      "reason": "Future fixture, not a finished result"
+    }
+  ],
+  "phases": [
+    {
+      "year": 2022,
+      "phase": "7130",
+      "listed": 90,
+      "finished": 90
+    },
+    {
+      "year": 2022,
+      "phase": "7543",
+      "listed": 25,
+      "finished": 25
+    },
+    {
+      "year": 2022,
+      "phase": "7544",
+      "listed": 3,
+      "finished": 3
+    },
+    {
+      "year": 2022,
+      "phase": "7747",
+      "listed": 3,
+      "finished": 3
+    },
+    {
+      "year": 2023,
+      "phase": "7795",
+      "listed": 89,
+      "finished": 89
+    },
+    {
+      "year": 2023,
+      "phase": "8406",
+      "listed": 10,
+      "finished": 10
+    },
+    {
+      "year": 2023,
+      "phase": "8407",
+      "listed": 10,
+      "finished": 10
+    },
+    {
+      "year": 2023,
+      "phase": "8438",
+      "listed": 29,
+      "finished": 29
+    },
+    {
+      "year": 2023,
+      "phase": "8439",
+      "listed": 4,
+      "finished": 4
+    },
+    {
+      "year": 2024,
+      "phase": "8830",
+      "listed": 89,
+      "finished": 89
+    },
+    {
+      "year": 2024,
+      "phase": "9089",
+      "listed": 10,
+      "finished": 10
+    },
+    {
+      "year": 2024,
+      "phase": "9090",
+      "listed": 10,
+      "finished": 10
+    },
+    {
+      "year": 2024,
+      "phase": "9137",
+      "listed": 25,
+      "finished": 25
+    },
+    {
+      "year": 2025,
+      "phase": "9600",
+      "listed": 90,
+      "finished": 90
+    },
+    {
+      "year": 2025,
+      "phase": "9856",
+      "listed": 10,
+      "finished": 10
+    },
+    {
+      "year": 2025,
+      "phase": "9857",
+      "listed": 10,
+      "finished": 10
+    },
+    {
+      "year": 2025,
+      "phase": "9921",
+      "listed": 26,
+      "finished": 26
+    },
+    {
+      "year": 2025,
+      "phase": "9931",
+      "listed": 3,
+      "finished": 3
+    },
+    {
+      "year": 2026,
+      "phase": "10442",
+      "listed": 25,
+      "finished": 25
+    }
+  ],
+  "sources": [
+    "https://zbl.basketball/zapasy?y=2022&c=0&k=0&p1%5B%5D=7130&d_od=&d_do=",
+    "https://zbl.basketball/zapasy?y=2022&c=0&k=0&p1%5B%5D=7543&d_od=&d_do=",
+    "https://zbl.basketball/zapasy?y=2022&c=0&k=0&p1%5B%5D=7544&d_od=&d_do=",
+    "https://zbl.basketball/zapasy?y=2022&c=0&k=0&p1%5B%5D=7747&d_od=&d_do=",
+    "https://zbl.basketball/zapasy?y=2023&c=0&k=0&p1%5B%5D=7795&d_od=&d_do=",
+    "https://zbl.basketball/zapasy?y=2023&c=0&k=0&p1%5B%5D=8406&d_od=&d_do=",
+    "https://zbl.basketball/zapasy?y=2023&c=0&k=0&p1%5B%5D=8407&d_od=&d_do=",
+    "https://zbl.basketball/zapasy?y=2023&c=0&k=0&p1%5B%5D=8438&d_od=&d_do=",
+    "https://zbl.basketball/zapasy?y=2023&c=0&k=0&p1%5B%5D=8439&d_od=&d_do=",
+    "https://zbl.basketball/zapasy?y=2024&c=0&k=0&p1%5B%5D=8830&d_od=&d_do=",
+    "https://zbl.basketball/zapasy?y=2024&c=0&k=0&p1%5B%5D=9089&d_od=&d_do=",
+    "https://zbl.basketball/zapasy?y=2024&c=0&k=0&p1%5B%5D=9090&d_od=&d_do=",
+    "https://zbl.basketball/zapasy?y=2024&c=0&k=0&p1%5B%5D=9137&d_od=&d_do=",
+    "https://zbl.basketball/zapasy?y=2025&c=0&k=0&p1%5B%5D=9600&d_od=&d_do=",
+    "https://zbl.basketball/zapasy?y=2025&c=0&k=0&p1%5B%5D=9856&d_od=&d_do=",
+    "https://zbl.basketball/zapasy?y=2025&c=0&k=0&p1%5B%5D=9857&d_od=&d_do=",
+    "https://zbl.basketball/zapasy?y=2025&c=0&k=0&p1%5B%5D=9921&d_od=&d_do=",
+    "https://zbl.basketball/zapasy?y=2025&c=0&k=0&p1%5B%5D=9931&d_od=&d_do=",
+    "https://zbl.basketball/zapasy?y=2026&c=0&k=0&p1%5B%5D=10442&d_od=&d_do="
+  ],
+  "explicit_mappings": {
+    "Žabiny Brno": "ECW_892",
+    "KP Brno": "ECW_891"
+  },
+  "sha256": "1ba3b7c2dbfafb99ed3e7caf878cbc63a3183cb5d9fb35d1fd371d47424ed2e2",
+  "used_in_default_model": false,
+  "limitations": "Official listing numeric facts; not independently crosschecked. All discovered phases requested; completeness unverified. Historical publication time unknown. Neutral venues and overtime not independently verified. No fuzzy identity mapping."
+}

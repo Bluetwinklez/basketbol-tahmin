@@ -1,0 +1,12 @@
+{
+  "tests": 184,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "test_report_sha256": "9681b6d35ffe87fe61a1e3dbe28f53b28e081e2b6576948ce851032a0767cd94",
+  "command": "python -m pytest -q --junitxml=/tmp/bbt-tests.xml",
+  "forecast_sha256": "d786691850bb74207e9ecac38ea6c06c4ce38dde7d874d9ba5a58df0238352a0",
+  "source_code_matches_frozen_forecast": true,
+  "no_general_accuracy_increase_claimed": true,
+  "default_challenger_promoted": false
+}

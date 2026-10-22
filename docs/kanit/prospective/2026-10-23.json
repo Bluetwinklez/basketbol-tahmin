@@ -1,0 +1,298 @@
+{
+  "spec": "prospective-v1",
+  "recorded_at_utc": "2026-10-22T21:30:47.554727+00:00",
+  "git_revision": "2728aa8ec547be7f2dcb2f1c2279b04ac293db1d",
+  "source_code_sha256": "f79eaf4d1b21a6598cbda8ea108f7d696c4b98efe3b24e4498d45b7f5d2c8f25",
+  "datasets": {
+    "data/maclar.parquet": "b47d00dbc49469d0511f23e1f2282a123e40302cca080aa3e6dcd85e619262b4",
+    "data/cba_games.parquet": "ff8708583942a0c98e2225086a35e3c54daff09ba2d308f0c39b22d23de0c1db",
+    "data/competitions/ECW.parquet": "96a0ba7dcd86d05a196d6b4f1dec6c7b901927171f1042d847452715d946c0b4",
+    "data/competitions/FEC.parquet": "56771b499724c5d6164b02103cc349224a19704fe9625736e5b4aa9a8cd7d9c2",
+    "data/competitions/VTB.parquet": "b1c55c4f80374ca74d07bb1ab639750bf1742beaa53341fd3c621f955c0199a1",
+    "data/competitions/ELW.parquet": "1ef58d649d8ddb1a502d2f4625dfd76f9c66a624a5b28f5d881e878aea9e5119",
+    "data/domestic/CZ_W_ZBL.parquet": "1ba3b7c2dbfafb99ed3e7caf878cbc63a3183cb5d9fb35d1fd371d47424ed2e2",
+    "data/recent/E.parquet": "2f39b64d9f98814f1f2619a4b3de5399a39e53bf11bac019741bc1b2378a9a0b"
+  },
+  "forecasts": [
+    {
+      "fixture": {
+        "event_id": "E2026_68",
+        "source_url": "https://api-live.euroleague.net/v2/competitions/E/seasons/E2026/games",
+        "captured_at": "2026-10-22T21:30:39.096585+00:00",
+        "start_utc": "2026-10-23T17:00:00+00:00",
+        "league": "E",
+        "home": "ZAL",
+        "away": "ASV",
+        "home_name": "Zalgiris Kaunas",
+        "away_name": "LDLC ASVEL Villeurbanne",
+        "status": "scheduled"
+      },
+      "prediction": {
+        "lig": "E",
+        "ev": "ZAL",
+        "dep": "ASV",
+        "tarih_utc": "2026-10-23T17:00:00+00:00",
+        "model": "skor",
+        "ev_kazanir": 0.7635542869009857,
+        "ev_skor": 90.70970794970407,
+        "dep_skor": 82.3782479731351,
+        "fark": 8.331459976568954,
+        "fark_80": [
+          -6.543792736444889,
+          23.206712689582798
+        ],
+        "toplam": 173.08795592283917,
+        "toplam_80": [
+          150.11260092347501,
+          196.06331092220333
+        ],
+        "tum_modeller": {
+          "logistic": 0.7637268792086742,
+          "hist_gradient_boosting": 0.7703693487496451,
+          "mov_elo": 0.7729911481922298,
+          "skor": 0.7635542869009857,
+          "topluluk": 0.76675743810063
+        },
+        "artifact_status": {
+          "verified": true,
+          "evaluated_at": "2026-10-22T10:22:06.663243+00:00",
+          "dataset_matches_evaluation": false,
+          "absence_features": false,
+          "runtime_overlay_sha256": "2f39b64d9f98814f1f2619a4b3de5399a39e53bf11bac019741bc1b2378a9a0b",
+          "runtime_overlay": true
+        },
+        "uzatma": 0.04279557839046786,
+        "eksik_dk": null,
+        "eksik_eslesmeyen": [],
+        "az_veri": [],
+        "data_quality": {
+          "status": "limited",
+          "issues": [
+            "Prediction dataset differs from the historical benchmark dataset"
+          ],
+          "blocking_issues": [],
+          "diagnostic_gate_passed": true,
+          "team_history": {
+            "ZAL": {
+              "all_prior_games": 635,
+              "recent_400d_games": 48,
+              "days_since_last": 5.291666666666667,
+              "effective_games_180d_half_life": 24.11778804907147,
+              "opponents": 19,
+              "seasons": [
+                "2000-01",
+                "2001-02",
+                "2002-03",
+                "2003-04",
+                "2004-05",
+                "2005-06",
+                "2006-07",
+                "2007-08",
+                "2008-09",
+                "2009-10",
+                "2010-11",
+                "2011-12",
+                "2012-13",
+                "2013-14",
+                "2014-15",
+                "2015-16",
+                "2016-17",
+                "2017-18",
+                "2018-19",
+                "2019-20",
+                "2020-21",
+                "2021-22",
+                "2022-23",
+                "2023-24",
+                "2024-25",
+                "2025-26",
+                "2026-27"
+              ]
+            },
+            "ASV": {
+              "all_prior_games": 312,
+              "recent_400d_games": 44,
+              "days_since_last": 6.208333333333333,
+              "effective_games_180d_half_life": 22.030142774992356,
+              "opponents": 19,
+              "seasons": [
+                "2001-02",
+                "2002-03",
+                "2003-04",
+                "2004-05",
+                "2009-10",
+                "2019-20",
+                "2020-21",
+                "2021-22",
+                "2022-23",
+                "2023-24",
+                "2024-25",
+                "2025-26",
+                "2026-27"
+              ]
+            }
+          },
+          "information_cutoff_utc": "2026-10-22T00:00:00+00:00",
+          "recommendation_validated": false,
+          "thresholds": "Five games / 400 days and 60-day staleness are diagnostic flags, not validated selection thresholds.",
+          "unknowns": [
+            "Full domestic schedule coverage",
+            "Expected roster and injuries",
+            "Historical publication times for retrospectively collected results"
+          ],
+          "note": "Data adequacy is separate from win probability; no validated recommendation or accuracy guarantee."
+        },
+        "recommendation_validated": false,
+        "selection_eligible": true
+      }
+    },
+    {
+      "fixture": {
+        "event_id": "E2026_70",
+        "source_url": "https://api-live.euroleague.net/v2/competitions/E/seasons/E2026/games",
+        "captured_at": "2026-10-22T21:30:39.096585+00:00",
+        "start_utc": "2026-10-23T18:15:00+00:00",
+        "league": "E",
+        "home": "OLY",
+        "away": "ULK",
+        "home_name": "Olympiacos Piraeus",
+        "away_name": "Fenerbahce Tarfin Istanbul",
+        "status": "scheduled"
+      },
+      "prediction": {
+        "lig": "E",
+        "ev": "OLY",
+        "dep": "ULK",
+        "tarih_utc": "2026-10-23T18:15:00+00:00",
+        "model": "skor",
+        "ev_kazanir": 0.7824949993478405,
+        "ev_skor": 90.74033707941909,
+        "dep_skor": 81.67919179420748,
+        "fark": 9.061145285211602,
+        "fark_80": [
+          -5.8141074278022415,
+          23.936397998225445
+        ],
+        "toplam": 172.41952887362658,
+        "toplam_80": [
+          149.44417387426242,
+          195.39488387299073
+        ],
+        "tum_modeller": {
+          "logistic": 0.7611686834628033,
+          "hist_gradient_boosting": 0.789655979468051,
+          "mov_elo": 0.7261510603682123,
+          "skor": 0.7824949993478405,
+          "topluluk": 0.7566049143929522
+        },
+        "artifact_status": {
+          "verified": true,
+          "evaluated_at": "2026-10-22T10:22:06.663243+00:00",
+          "dataset_matches_evaluation": false,
+          "absence_features": false,
+          "runtime_overlay_sha256": "2f39b64d9f98814f1f2619a4b3de5399a39e53bf11bac019741bc1b2378a9a0b",
+          "runtime_overlay": true
+        },
+        "uzatma": 0.040826671000844264,
+        "eksik_dk": null,
+        "eksik_eslesmeyen": [],
+        "az_veri": [],
+        "data_quality": {
+          "status": "limited",
+          "issues": [
+            "Prediction dataset differs from the historical benchmark dataset"
+          ],
+          "blocking_issues": [],
+          "diagnostic_gate_passed": true,
+          "team_history": {
+            "OLY": {
+              "all_prior_games": 728,
+              "recent_400d_games": 49,
+              "days_since_last": 5.229166666666667,
+              "effective_games_180d_half_life": 25.861430451815767,
+              "opponents": 19,
+              "seasons": [
+                "2000-01",
+                "2001-02",
+                "2002-03",
+                "2003-04",
+                "2004-05",
+                "2005-06",
+                "2006-07",
+                "2007-08",
+                "2008-09",
+                "2009-10",
+                "2010-11",
+                "2011-12",
+                "2012-13",
+                "2013-14",
+                "2014-15",
+                "2015-16",
+                "2016-17",
+                "2017-18",
+                "2018-19",
+                "2019-20",
+                "2020-21",
+                "2021-22",
+                "2022-23",
+                "2023-24",
+                "2024-25",
+                "2025-26",
+                "2026-27"
+              ]
+            },
+            "ULK": {
+              "all_prior_games": 673,
+              "recent_400d_games": 49,
+              "days_since_last": 6.260416666666667,
+              "effective_games_180d_half_life": 25.718772096456338,
+              "opponents": 19,
+              "seasons": [
+                "2001-02",
+                "2002-03",
+                "2003-04",
+                "2004-05",
+                "2005-06",
+                "2006-07",
+                "2007-08",
+                "2008-09",
+                "2009-10",
+                "2010-11",
+                "2011-12",
+                "2012-13",
+                "2013-14",
+                "2014-15",
+                "2015-16",
+                "2016-17",
+                "2017-18",
+                "2018-19",
+                "2019-20",
+                "2020-21",
+                "2021-22",
+                "2022-23",
+                "2023-24",
+                "2024-25",
+                "2025-26",
+                "2026-27"
+              ]
+            }
+          },
+          "information_cutoff_utc": "2026-10-22T00:00:00+00:00",
+          "recommendation_validated": false,
+          "thresholds": "Five games / 400 days and 60-day staleness are diagnostic flags, not validated selection thresholds.",
+          "unknowns": [
+            "Full domestic schedule coverage",
+            "Expected roster and injuries",
+            "Historical publication times for retrospectively collected results"
+          ],
+          "note": "Data adequacy is separate from win probability; no validated recommendation or accuracy guarantee."
+        },
+        "recommendation_validated": false,
+        "selection_eligible": true
+      }
+    }
+  ],
+  "selection_rule": "Earliest verified future fixtures with supported identities; no outcome-based replacement.",
+  "note": "Research predictions. Two games cannot establish general accuracy. Baseline and all limited-data flags remain visible.",
+  "payload_sha256": "d786691850bb74207e9ecac38ea6c06c4ce38dde7d874d9ba5a58df0238352a0"
+}

@@ -95,7 +95,7 @@ def lig_bul(ev, dep, gecmis, tarih):
     raise ValueError('Takımlar desteklenen liglerde bulunamadı (EuroLeague, EuroCup, NBA).\n  ' + '\n  '.join(hatalar))
 
 
-def tahmin_et(lig, eslesmeler, tarih, veri='data/maclar.parquet', rapor=None, adaptive_form=False):
+def _tahmin_et(lig, eslesmeler, tarih, veri='data/maclar.parquet', rapor=None, adaptive_form=False):
     """eslesmeler: [(ev_kodu, dep_kodu)]. rapor: NBA sakatlık raporu (Out oyuncuları eksik sayılır)."""
     tarih = pd.Timestamp(tarih)
     tarih = tarih.tz_localize('Europe/Istanbul') if tarih.tzinfo is None else tarih
@@ -109,7 +109,8 @@ def tahmin_et(lig, eslesmeler, tarih, veri='data/maclar.parquet', rapor=None, ad
         else:
             from .competition_model import predict
         return [predict(lig,ev,dep,tarih) for ev,dep in eslesmeler]
-    gecmis = pd.read_parquet(veri)
+    from .runtime_history import load as load_history
+    gecmis = load_history(veri)
     gecmis = gecmis[(gecmis.lig == lig) & (gecmis.ev_skor > 0) & (gecmis.dep_skor > 0)
                     & (gecmis.tarih_utc < tarih.floor('D'))].copy()
     mov, alpha = parametreler(lig, sezon=sezon_adi(tarih))
@@ -173,6 +174,11 @@ def tahmin_et(lig, eslesmeler, tarih, veri='data/maclar.parquet', rapor=None, ad
     sonuc = []
     from .artifacts import status
     artifact_status=status(dataset=veri)
+    from .runtime_history import PATH as overlay_path
+    if lig=='E' and str(veri)=='data/maclar.parquet' and overlay_path.exists():
+        import hashlib
+        artifact_status.update(runtime_overlay_sha256=hashlib.sha256(overlay_path.read_bytes()).hexdigest(),
+            dataset_matches_evaluation=False,runtime_overlay=True)
     for n, (ev, dep) in enumerate(eslesmeler):
         i = sira.index(f'SORGU_{n}')
         p = float(olasilik[secilen][i])
@@ -188,6 +194,20 @@ def tahmin_et(lig, eslesmeler, tarih, veri='data/maclar.parquet', rapor=None, ad
             eksik_eslesmeyen=eksik_bilgi.get(n, []),
             az_veri=[t for t in (ev, dep) if mac_sayisi.get(t, 0) < 10]))
     return sonuc
+
+
+def tahmin_et(lig, eslesmeler, tarih, veri='data/maclar.parquet', rapor=None, adaptive_form=False):
+    results=_tahmin_et(lig,eslesmeler,tarih,veri,rapor,adaptive_form)
+    from .quality import assess
+    path=('data/cba_games.parquet' if lig=='CBA' else
+          f'data/competitions/{lig}.parquet' if lig in ('ECW','FEC','VTB') else veri)
+    from .runtime_history import load as load_history
+    history=load_history(path)
+    for result in results:
+        result['data_quality']=assess(result,history)
+        result['recommendation_validated']=False
+        result['selection_eligible']=result['data_quality']['diagnostic_gate_passed']
+    return results
 
 
 def alt_ust(t, cizgi):
@@ -221,6 +241,8 @@ def yazdir(sonuclar, gosterim=None):
                 print(f"  Eksik {(gosterim or {}).get(kod, kod)}: {', '.join(eksik)}")
         diger = ', '.join(f'{k} %{v * 100:.0f}' for k, v in t['tum_modeller'].items())
         print(f"  Modeller: {diger}")
+        if t.get('data_quality',{}).get('issues'):
+            print('  Data checks: '+ '; '.join(t['data_quality']['issues']))
         if t['az_veri']:
             print(f"  [!] Az geçmiş verisi olan takım: {', '.join(t['az_veri'])}; tahmin güvenilirliği düşük")
 
@@ -286,7 +308,8 @@ def run(lig, maclar, tarih, json_cikti=False, kaydet=False, injury_report=False,
     for t in sonuclar:
         if confidence_threshold is not None:
             t['guven_esigi']=confidence_threshold
-            t['secildi']=max(t['ev_kazanir'],1-t['ev_kazanir'])>=confidence_threshold
+            t['threshold_passed']=max(t['ev_kazanir'],1-t['ev_kazanir'])>=confidence_threshold
+            t['secildi']=t['threshold_passed'] and t.get('selection_eligible',True)
         o1, o2 = oranlar.get((t['ev'], t['dep']), (None, None))
         t['oran_ev'], t['oran_dep'] = o1, o2
         t['piyasa_ev'] = (1 / o1) / (1 / o1 + 1 / o2) if o1 and o2 else None
