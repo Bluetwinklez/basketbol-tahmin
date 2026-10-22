@@ -1,5 +1,6 @@
 data/raw/
 data/*.part
+data/bulten/iddaa_*.json
 __pycache__/
 *.pyc
 .venv/
@@ -9,4 +10,5 @@ rapor/
 *.egg-info/
 build/
 docs/kanit/tahminler.csv
+docs/kanit/pregame_verified/tahminler.csv
 docs/deneme*/

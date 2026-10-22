@@ -1,0 +1,21 @@
+{
+  "transport": "stdio",
+  "tools": [
+    "dataset_status",
+    "bulletin_events",
+    "predict_bulletin_event",
+    "research_results"
+  ],
+  "dataset": {
+    "games": 54808,
+    "leagues": {
+      "E": 6664,
+      "NBA": 41620,
+      "NBL": 1653,
+      "U": 4871
+    },
+    "latest_game_utc": "2026-10-21T18:30:00+00:00",
+    "bulletin_available": true
+  },
+  "passed": true
+}

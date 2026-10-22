@@ -120,6 +120,9 @@ python -m pip install duckdb==1.4.1
 PYTHONPATH=src python scripts/import_europe_details.py --database /path/to/euroleague.duckdb
 ```
 
+Subsequent review: the retrospective absence feature is now disabled by default;
+see [research-and-roadmap.md](research-and-roadmap.md) and the new pregame-verified benchmark.
+
 Future work: evaluate genuinely pregame injury snapshots, lagged shooting profiles,
 and player role changes. The existing retrospective absence feature still has the
 availability limitation documented in the README; its backtest is not proof of

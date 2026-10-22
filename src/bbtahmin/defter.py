@@ -12,6 +12,12 @@ YOL = Path('defter/tahminler.csv')
 
 def kaydet(sonuclar, yol=YOL):
     simdi = datetime.now(timezone.utc).isoformat(timespec='seconds')
+    for t in sonuclar:
+        start=pd.Timestamp(t['tarih_utc'])
+        if start.tzinfo is None or start<=pd.Timestamp(simdi):
+            raise ValueError('Only predictions recorded before tipoff can enter the ledger')
+        if not np.isfinite(t['ev_kazanir']) or not 0<=t['ev_kazanir']<=1:
+            raise ValueError('Invalid prediction probability')
     yeni = pd.DataFrame([dict(
         kayit_utc=simdi, lig=t['lig'], mac_utc=t['tarih_utc'], ev=t['ev'], dep=t['dep'], model=t['model'],
         ev_kazanir=round(t['ev_kazanir'], 4), ev_skor=round(t['ev_skor'], 1), dep_skor=round(t['dep_skor'], 1),
@@ -19,10 +25,11 @@ def kaydet(sonuclar, yol=YOL):
         toplam_80_alt=round(t['toplam_80'][0]), toplam_80_ust=round(t['toplam_80'][1]),
         oran_ev=t.get('oran_ev'), oran_dep=t.get('oran_dep'),
         piyasa_ev=round(t['piyasa_ev'], 4) if t.get('piyasa_ev') is not None else None,
+        guven_esigi=t.get('guven_esigi'),secildi=t.get('secildi',True),
         uzatma=round(t.get('uzatma', np.nan), 4),
         eksik_ev=sum(o['takim'] == t['ev'] and o['durum'] == 'Out' for o in t.get('sakatlik', [])),
         eksik_dep=sum(o['takim'] == t['dep'] and o['durum'] == 'Out' for o in t.get('sakatlik', [])),
-        gercek_ev=None, gercek_dep=None) for t in sonuclar])
+        gercek_ev=None, gercek_dep=None,gercek_mac_utc=None) for t in sonuclar])
     yol.parent.mkdir(exist_ok=True)
     eski = pd.read_csv(yol) if yol.exists() else pd.DataFrame()
     pd.concat([eski, yeni], ignore_index=True).to_csv(yol, index=False)
@@ -30,15 +37,16 @@ def kaydet(sonuclar, yol=YOL):
 
 
 def doldur(defter, maclar):
-    """Gerçek skoru boş satırları, aynı lig/takımlar ve ±36 saat içindeki oynanmış maçla doldurur."""
-    oynanan = maclar[maclar.ev_skor.notna()].copy()
+    """Match an unambiguous result within six hours; never choose an arbitrary row."""
+    oynanan = maclar[(maclar.ev_skor>0)&(maclar.dep_skor>0)].copy()
     oynanan['tarih_utc'] = pd.to_datetime(oynanan.tarih_utc, utc=True)
     for i, r in defter[defter.gercek_ev.isna()].iterrows():
         an = pd.Timestamp(r.mac_utc)
         aday = oynanan[(oynanan.lig == r.lig) & (oynanan.ev == r.ev) & (oynanan.dep == r.dep)
-                       & ((oynanan.tarih_utc - an).abs() <= pd.Timedelta(hours=36))]
-        if len(aday):
+                       & ((oynanan.tarih_utc - an).abs() <= pd.Timedelta(hours=6))]
+        if len(aday)==1:
             defter.loc[i, ['gercek_ev', 'gercek_dep']] = aday.iloc[0][['ev_skor', 'dep_skor']].to_numpy(dtype=float)
+            defter.loc[i,'gercek_mac_utc']=aday.iloc[0].tarih_utc.isoformat()
     return defter
 
 
@@ -64,8 +72,13 @@ def espn_doldur(defter):
                 continue
             t = {x['homeAway']: (ESPN_KOD.get(x['team']['abbreviation'], x['team']['abbreviation']), float(x['score']))
                  for x in c['competitors']}
-            satir = bos[(bos.ev == t['home'][0]) & (bos.dep == t['away'][0])].index
+            starts=pd.to_datetime(bos.mac_utc,utc=True)
+            event_time=pd.Timestamp(e['date'])
+            satir = bos[(bos.ev == t['home'][0]) & (bos.dep == t['away'][0])
+                        & (starts.dt.tz_convert('America/New_York').dt.strftime('%Y%m%d')==gun)
+                        & ((starts-event_time).abs()<=pd.Timedelta(hours=6))].index
             defter.loc[satir, ['gercek_ev', 'gercek_dep']] = [t['home'][1], t['away'][1]]
+            defter.loc[satir,'gercek_mac_utc']=event_time.isoformat()
     return defter
 
 
@@ -98,13 +111,25 @@ def bdl_doldur(defter):
                 continue
             ev = kod.get(m['home_team']['abbreviation'], m['home_team']['abbreviation'])
             dep = kod.get(m['visitor_team']['abbreviation'], m['visitor_team']['abbreviation'])
-            satir = bos[(bos.ev == ev) & (bos.dep == dep)].index
+            starts=pd.to_datetime(bos.mac_utc,utc=True)
+            satir = bos[(bos.ev == ev) & (bos.dep == dep)
+                        & (starts.dt.tz_convert('America/New_York').dt.strftime('%Y-%m-%d')==gun)].index
             defter.loc[satir, ['gercek_ev', 'gercek_dep']] = [float(m['home_team_score']), float(m['visitor_team_score'])]
     return defter
 
 
 def ozet(defter):
     d = defter.dropna(subset=['gercek_ev']).copy()
+    if 'kayit_utc' not in d:
+        return None  # legacy rows without provenance cannot establish live accuracy
+    recorded=pd.to_datetime(d.kayit_utc,utc=True,errors='coerce')
+    start=pd.to_datetime(d.mac_utc,utc=True,errors='coerce')
+    actual=pd.to_datetime(d.gercek_mac_utc,utc=True,errors='coerce').fillna(start) if 'gercek_mac_utc' in d else start
+    d['__fixture']=actual
+    d=d[(recorded<start)&(recorded<actual)&d.gercek_dep.notna()&(d.gercek_ev>0)&(d.gercek_dep>0)
+        &(d.gercek_ev!=d.gercek_dep)&d.ev_kazanir.between(0,1)].copy()
+    d['__recorded']=pd.to_datetime(d.kayit_utc,utc=True)
+    d=d.sort_values('__recorded').drop_duplicates(['lig','__fixture','ev','dep'],keep='last')
     if d.empty:
         return None
     y = (d.gercek_ev > d.gercek_dep).astype(int)
@@ -116,6 +141,10 @@ def ozet(defter):
                  toplam_mae=float((d.toplam - toplam).abs().mean()),
                  toplam_80_icinde=float(((toplam >= d.toplam_80_alt) & (toplam <= d.toplam_80_ust)).mean()))
     m = d.dropna(subset=['piyasa_ev'])
+    if 'secildi' in d:
+        selected=d[d.secildi.isin([True,1,'True','true'])]
+        sonuc.update(secilen_mac=len(selected),kapsama=len(selected)/len(d),
+                     secilen_isabet=float(((selected.ev_kazanir>=.5)==(selected.gercek_ev>selected.gercek_dep)).mean()) if len(selected) else None)
     if len(m):
         ym, pm = (m.gercek_ev > m.gercek_dep).astype(int), m.piyasa_ev.clip(1e-6, 1 - 1e-6)
         pmod = m.ev_kazanir.clip(1e-6, 1 - 1e-6)

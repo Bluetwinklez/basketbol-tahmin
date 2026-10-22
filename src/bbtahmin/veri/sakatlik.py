@@ -60,8 +60,11 @@ def _saat_adi(t):
 def son_rapor(an, geriye_saat=30):
     """an (UTC zaman damgası) ya da öncesindeki en son raporu indirir ve okur. Bulunamazsa boş tablo."""
     import pdfplumber
-    et = pd.Timestamp(an).tz_convert('America/New_York')
-    et = et.floor('15min')
+    requested = pd.Timestamp(an)
+    if requested.tzinfo is None:
+        raise ValueError('Injury report cutoff must include a timezone')
+    cutoff = min(requested.tz_convert('UTC'), pd.Timestamp.now(tz='UTC'))
+    et = cutoff.floor('15min').tz_convert('America/New_York')
     for adim in range(int(geriye_saat * 4)):
         t = et - timedelta(minutes=15 * adim)
         ad = f"{t.strftime('%Y-%m-%d')}_{_saat_adi(t)}"
@@ -80,5 +83,6 @@ def son_rapor(an, geriye_saat=30):
             metin = '\n'.join(p.extract_text() or '' for p in pdf.pages)
         tablo = ayristir(metin)
         tablo.attrs['rapor'] = f'{ad} ET'
+        tablo.attrs['published_at_utc'] = t.tz_convert('UTC').isoformat()
         return tablo
     return pd.DataFrame(columns=['mac', 'takim', 'oyuncu', 'durum', 'neden'])

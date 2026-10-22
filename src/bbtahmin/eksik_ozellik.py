@@ -20,7 +20,9 @@ import pandas as pd
 EKSIK_FEATURES = ['eksik_dk_diff', 'eksik_deger_diff', 'eksik_dk_top']
 # Kullanıldığı ligler. NBA walk-forward (skor modeli): log loss 0,6220 → 0,6169, isabet %65,27 → %65,82,
 # fark MAE 10,67 → 10,58; tamamlanmış 10 sezonun 10'unda iyileşti (2026-10-22).
-EKSIK_LIGLERI = {'NBA'}
+# Actual participants are known only after tipoff. Keep this research helper,
+# but do not use its retrospective labels in default training/live predictions.
+EKSIK_LIGLERI = set()
 DUZENLI_DK = 12.
 ALPHA = .2
 

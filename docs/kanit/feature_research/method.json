@@ -1,0 +1,25 @@
+{
+  "timestamp": "2026-10-22T10:30:05.297182+00:00",
+  "dataset_sha256": "b47d00dbc49469d0511f23e1f2282a123e40302cca080aa3e6dcd85e619262b4",
+  "features": [
+    "ff_efg_diff",
+    "ff_efg_mean",
+    "ff_tov_diff",
+    "ff_tov_mean",
+    "ff_orb_diff",
+    "ff_orb_mean",
+    "ff_ft_diff",
+    "ff_ft_mean",
+    "ff_three_diff",
+    "ff_three_mean",
+    "ff_pace_diff",
+    "ff_pace_mean",
+    "ff_coverage_diff",
+    "ff_coverage_min"
+  ],
+  "alpha": 0.15,
+  "rule": "All UTC-day profiles are emitted before any same-day box updates.",
+  "evaluation": "Identical games, prior-season validation; current incomplete season excluded.",
+  "exclusions": "No retrospective participant labels or market odds. No selection on test labels.",
+  "limitation": "Exploratory ablation; no confidence interval or prospective performance claim."
+}

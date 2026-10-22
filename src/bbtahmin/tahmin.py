@@ -30,6 +30,9 @@ def _son(kayitlar):
 
 
 def parametreler(lig, yol='docs/kanit/parametreler.json', sezon=None):
+    if str(yol)=='docs/kanit/parametreler.json':
+        from .artifacts import verified_path
+        yol=verified_path('parametreler.json') or yol
     kayitlar = [r for r in json.loads(Path(yol).read_text('utf8')) if r.get('lig') == lig]
     if sezon is not None:
         kayitlar = [r for r in kayitlar if r['sezon'] <= sezon]
@@ -43,6 +46,11 @@ def parametreler(lig, yol='docs/kanit/parametreler.json', sezon=None):
 def en_iyi_model(lig, yol='docs/kanit/toplam.csv', sezon=None):
     """Backtest'te o ligde en düşük log loss'u veren model."""
     try:
+        if str(yol)=='docs/kanit/toplam.csv':
+            from .artifacts import verified_path
+            fresh=verified_path('metrikler.csv')
+            if fresh is not None:
+                yol=fresh.with_name('toplam.csv')
         if sezon is not None:
             # Aggregate test results may include the target season. Model choice
             # for a historical query can use only earlier completed seasons.
@@ -98,12 +106,12 @@ def tahmin_et(lig, eslesmeler, tarih, veri='data/maclar.parquet', rapor=None):
                        alpha=alpha, mov=True)
     cols = list(FEATURES)
     x = x.reset_index(drop=True)
-    kutu, oyuncular = yukle()
+    kutu, oyuncular = yukle() if lig in KUTU_LIGLERI else (None,None)
     if kutu is not None and lig in KUTU_LIGLERI and kutu.mac_id.str.startswith(lig).any():
         kf = kutu_ozellikleri(hepsi, kutu, oyuncular).set_index('mac_id').loc[hepsi.mac_id].reset_index(drop=True)
         x = pd.concat([x, kf[KUTU_FEATURES]], axis=1)
         cols += KUTU_FEATURES
-    oyuncu_mac = eksik_yukle()
+    oyuncu_mac = eksik_yukle() if lig in EKSIK_LIGLERI else None
     eksik_bilgi = {}
     if oyuncu_mac is not None and lig in EKSIK_LIGLERI:
         sorgu_eksik = {}
@@ -146,6 +154,8 @@ def tahmin_et(lig, eslesmeler, tarih, veri='data/maclar.parquet', rapor=None):
     # Sorgular sıralamada yer değiştirebilir (SORGU_10 < SORGU_2); konumu kimlikten bul.
     sira = list(hepsi.loc[sorgu, 'mac_id'])
     sonuc = []
+    from .artifacts import status
+    artifact_status=status()
     for n, (ev, dep) in enumerate(eslesmeler):
         i = sira.index(f'SORGU_{n}')
         p = float(olasilik[secilen][i])
@@ -155,6 +165,7 @@ def tahmin_et(lig, eslesmeler, tarih, veri='data/maclar.parquet', rapor=None):
             fark=float(pm[i]), fark_80=(float(pm[i] - Z80 * sm), float(pm[i] + Z80 * sm)),
             toplam=float(pt[i]), toplam_80=(float(pt[i] - Z80 * st), float(pt[i] + Z80 * st)),
             tum_modeller={k: float(v[i]) for k, v in olasilik.items()},
+            artifact_status=artifact_status,
             uzatma=float(np.clip(olcek * norm.pdf(0, pm[i], sm), 0, .5)),
             eksik_dk=(float(x.loc[np.flatnonzero(sorgu)[i], 'eksik_dk_diff']) * 48) if 'eksik_dk_diff' in x else None,
             eksik_eslesmeyen=eksik_bilgi.get(n, []),
@@ -175,6 +186,8 @@ def yazdir(sonuclar, gosterim=None):
         favori, fp = (ev, p) if p >= .5 else (dep, 1 - p)
         print(f"\n{LIG_ADI[t['lig']]}: {ev} – {dep}")
         print(f"  Kazanan:  {favori} %{fp * 100:.1f}   (ev %{p * 100:.1f} / dep %{(1 - p) * 100:.1f}, model: {t['model']})")
+        if 'secildi' in t:
+            print(f"  Güven eşiği: %{t['guven_esigi']*100:.0f} — {'geçti' if t['secildi'] else 'eşik altında'}")
         print(f"  Skor:     {t['ev_skor']:.0f} – {t['dep_skor']:.0f}")
         print(f"  Fark:     {t['fark']:+.1f}  (%80 aralık {t['fark_80'][0]:+.0f} … {t['fark_80'][1]:+.0f})")
         print(f"  Toplam:   {t['toplam']:.1f}  (%80 aralık {t['toplam_80'][0]:.0f} … {t['toplam_80'][1]:.0f})")
@@ -200,20 +213,29 @@ def oran_ayir(mac):
         return mac, None, None
     metin, oran = mac.rsplit('@', 1)
     parca = [o.strip().replace(',', '.') for o in oran.split('/')]
+    if len(parca) != 2:
+        raise ValueError('Oranlar @ev/deplasman biçiminde iki değer olmalı')
     sayi = lambda o: float(o) if o and o not in ('-', '?') else None
-    return metin.strip(), sayi(parca[0]), sayi(parca[1]) if len(parca) > 1 else None
+    values = [sayi(o) for o in parca]
+    from .odds import decimal_probability
+    for value in values:
+        if value is not None:
+            decimal_probability(value)
+    return metin.strip(), *values
 
 
-def run(lig, maclar, tarih, json_cikti=False, kaydet=False):
+def run(lig, maclar, tarih, json_cikti=False, kaydet=False, injury_report=False, confidence_threshold=None):
+    if confidence_threshold is not None and (not np.isfinite(confidence_threshold) or not .5<=confidence_threshold<=1):
+        raise ValueError('Confidence threshold must be between 0.5 and 1')
     gecmis = pd.read_parquet('data/maclar.parquet')
     tarih = tarih or pd.Timestamp.now(tz='Europe/Istanbul').isoformat()
     an = pd.Timestamp(tarih)
     an = (an.tz_localize('Europe/Istanbul') if an.tzinfo is None else an).tz_convert('UTC')
     gruplar, gosterim, atlanan, oranlar = {}, {}, [], {}
     for mac in maclar:
-        mac, o1, o2 = oran_ayir(mac)
-        parca = [s.strip() for s in mac.replace('–', '-').split(' - ')]
         try:
+            mac, o1, o2 = oran_ayir(mac)
+            parca = [s.strip() for s in mac.replace('–', '-').split(' - ')]
             if len(parca) != 2:
                 raise ValueError('"Ev - Deplasman" biçiminde olmalı')
             if lig:
@@ -228,14 +250,18 @@ def run(lig, maclar, tarih, json_cikti=False, kaydet=False):
         oranlar[bulunan[1:]] = (o1, o2)
         gruplar.setdefault(bulunan[0], []).append(bulunan[1:])
     rapor = None
-    if 'NBA' in gruplar:
+    if 'NBA' in gruplar and injury_report:
         from .veri.sakatlik import son_rapor
         try:
             rapor = son_rapor(an)
         except Exception as e:  # rapor alınamazsa tahmin eksiksiz kadro varsayımıyla verilir
-            print(f'[!] Sakatlık raporu alınamadı, eksik oyuncu 0 kabul edildi: {e}')
+            import sys
+            print(f'[!] Sakatlık raporu alınamadı: {e}',file=sys.stderr)
     sonuclar = [t for l, es in gruplar.items() for t in tahmin_et(l, es, tarih, rapor=rapor if l == 'NBA' else None)]
     for t in sonuclar:
+        if confidence_threshold is not None:
+            t['guven_esigi']=confidence_threshold
+            t['secildi']=max(t['ev_kazanir'],1-t['ev_kazanir'])>=confidence_threshold
         o1, o2 = oranlar.get((t['ev'], t['dep']), (None, None))
         t['oran_ev'], t['oran_dep'] = o1, o2
         t['piyasa_ev'] = (1 / o1) / (1 / o1 + 1 / o2) if o1 and o2 else None
@@ -245,7 +271,9 @@ def run(lig, maclar, tarih, json_cikti=False, kaydet=False):
             t['sakatlik_raporu'] = rapor.attrs.get('rapor')
     if kaydet and sonuclar:
         from .defter import kaydet as defter_kaydet
-        print(f'[defter] {defter_kaydet(sonuclar)} tahmin kaydedildi: defter/tahminler.csv')
+        import sys
+        print(f'[defter] {defter_kaydet(sonuclar)} tahmin kaydedildi: defter/tahminler.csv',
+              file=sys.stderr if json_cikti else sys.stdout)
     if json_cikti:
         print(json.dumps(dict(tahminler=sonuclar, atlanan=atlanan), ensure_ascii=False, indent=2))
     else:
