@@ -22,11 +22,13 @@ def main():
     prediction.add_argument('maclar',nargs='+',help='"Ev - Deplasman" biçiminde bir ya da daha çok maç')
     prediction.add_argument('--lig',choices=['E','U','NBA','NBL','CBA','ECW','FEC','VTB'],help='Verilmezse takım adlarından bulunur')
     prediction.add_argument('--tarih',help='Maç zamanı, ör. 2026-10-23T20:45 (saat dilimi yoksa İstanbul). Varsayılan: şimdi')
+    prediction.add_argument('--adaptive-form',action='store_true',help='Deneysel: önceki sezonun testine göre aylık model güncellemesi; yalnız ECW/FEC/VTB')
     prediction.add_argument('--json',action='store_true',help='Çıktıyı JSON olarak ver')
     prediction.add_argument('--kaydet',action='store_true',help='Tahminleri defter/tahminler.csv dosyasına ekle')
     prediction.add_argument('--sakatlik',action='store_true',help='Resmi NBA sakatlık raporunu bilgi amaçlı ayrıca indir')
     prediction.add_argument('--min-guven',type=float,help='0.5–1 arası eşik; eşik altındaki maçlar da açıkça gösterilir')
     sub.add_parser('defter',help='Defterdeki tahminleri gerçek sonuçlarla puanla')
+    sub.add_parser('baglam-topla',help='Resmi kulüp sayfalarından ayrı yerel maç yükü gözlemlerini topla')
     sub.add_parser('cba-topla',help='Tarihli CBA sonuçlarını ayrı arşive topla')
     regional=sub.add_parser('lig-topla',help='Kadınlar EuroCup, FIBA Avrupa Kupası ve VTB sonuçlarını topla')
     regional.add_argument('--ligler',nargs='+',choices=['ECW','FEC','VTB'],default=['ECW','FEC','VTB'])
@@ -47,7 +49,10 @@ def main():
     action.add_argument('--gecmis',help='Etkinlik kimliğinin yerel maç önü oran geçmişi')
     bulletin.add_argument('--asof',help='Oran geçmişi için saat dilimli bilgi kesim zamanı; gelecekte olamaz')
     args=parser.parse_args()
-    if args.command=='lig-topla':
+    if args.command=='baglam-topla':
+        from .veri.club_context import collect
+        collect()
+    elif args.command=='lig-topla':
         from .veri.competitions import collect
         collect(args.ligler)
     elif args.command=='cba-topla':
@@ -100,5 +105,5 @@ def main():
         run()
     else:
         from .tahmin import run
-        run(args.lig,args.maclar,args.tarih,args.json,args.kaydet,args.sakatlik,args.min_guven)
+        run(args.lig,args.maclar,args.tarih,args.json,args.kaydet,args.sakatlik,args.min_guven,args.adaptive_form)
 if __name__=='__main__':main()

@@ -1,0 +1,9 @@
+{
+  "score_features_enabled": false,
+  "reason": "Insufficient earlier training/calibration coverage. No domestic-form accuracy improvement claimed.",
+  "source_coverage": "Partial official club cohorts; no completeness guarantee. Captured now, not point-in-time publication snapshots.",
+  "thresholds": {
+    "minimum_covered_training_games": 50,
+    "minimum_covered_validation_games": 20
+  }
+}
