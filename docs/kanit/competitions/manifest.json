@@ -1,0 +1,17 @@
+{
+  "timestamp_utc": "2026-10-22T19:26:02.252619+00:00",
+  "spec": "separate-competition-ridge-v1",
+  "files": {
+    "data/competitions/ECW.parquet": "96a0ba7dcd86d05a196d6b4f1dec6c7b901927171f1042d847452715d946c0b4",
+    "data/competitions/FEC.parquet": "56771b499724c5d6164b02103cc349224a19704fe9625736e5b4aa9a8cd7d9c2",
+    "data/competitions/VTB.parquet": "b1c55c4f80374ca74d07bb1ab639750bf1742beaa53341fd3c621f955c0199a1"
+  },
+  "packages": {
+    "numpy": "2.2.6",
+    "pandas": "2.2.3",
+    "scipy": "1.15.3",
+    "scikit-learn": "1.6.1"
+  },
+  "method": "Fixed Ridge alpha=10. Earlier seasons train; preceding season calibrates residuals; refit on both. Features update only after UTC day ends. No test-season tuning.",
+  "limitations": "One completed test season per league; incomplete 2026-27 reported separately. VTB current-team cohort. No in-play support, odds, injuries, domestic-league games or cold-start-specific calibration. Retrospective results are not prospective accuracy."
+}

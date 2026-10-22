@@ -18,7 +18,8 @@ ENDPOINTS = {'events': 'events?st=2&type=0&version=0',
              'competitions': 'competitions', 'markets': 'get_market_config'}
 LATEST = Path('data/bulten/latest.json')
 LEAGUES = {'abd amerika basketbol ligi':'NBA','abd amerikan basketbol ligi':'NBA','nba':'NBA','euroleague':'E',
-           'eurocup':'U','avustralya nbl':'NBL','cin cba':'CBA'}
+           'eurocup':'U','avustralya nbl':'NBL','cin cba':'CBA',
+           'eurocup kadinlar':'ECW','vtb birlesik ligi':'VTB','fiba avrupa kupasi':'FEC'}
 
 
 def key(value):

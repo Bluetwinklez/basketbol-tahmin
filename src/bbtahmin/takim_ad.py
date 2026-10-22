@@ -58,6 +58,13 @@ def aday_adlari(lig, kodlar):
         adlar = {kod} | set(EK_ADLAR.get(kod, []))
         if lig == 'NBA':
             adlar |= set(ALIASES.get(kod, []))
+        elif lig in ('ECW','FEC','VTB'):
+            path=Path(f'data/competitions/{lig}_teams.json')
+            entry=json.loads(path.read_text('utf8')).get(kod,{}) if path.exists() else {}
+            adlar |= {entry.get('name','')} | set(entry.get('aliases',[]))
+            specific={'ECW_892':['BK Zabiny Brno'],'ECW_58477':['ZKK Celje'],
+                      'ECW_813':['Montana 2003'],'FEC_58616':['KK Parnu']}
+            adlar |= set(specific.get(kod,[]))
         elif lig == 'CBA':
             path=Path('data/cba_teams.json')
             entry=json.loads(path.read_text('utf8')).get(kod,{}) if path.exists() else {}

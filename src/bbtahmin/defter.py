@@ -26,7 +26,7 @@ def kaydet(sonuclar, yol=YOL):
         oran_ev=t.get('oran_ev'), oran_dep=t.get('oran_dep'),
         piyasa_ev=round(t['piyasa_ev'], 4) if t.get('piyasa_ev') is not None else None,
         guven_esigi=t.get('guven_esigi'),secildi=t.get('secildi',True),
-        uzatma=round(t.get('uzatma', np.nan), 4),
+        uzatma=round(t['uzatma'], 4) if t.get('uzatma') is not None else np.nan,
         eksik_ev=sum(o['takim'] == t['ev'] and o['durum'] == 'Out' for o in t.get('sakatlik', [])),
         eksik_dep=sum(o['takim'] == t['dep'] and o['durum'] == 'Out' for o in t.get('sakatlik', [])),
         gercek_ev=None, gercek_dep=None,gercek_mac_utc=None) for t in sonuclar])
@@ -159,7 +159,13 @@ def run(yol=YOL):
     if not yol.exists():
         print('Defter boş.')
         return
-    defter = bdl_doldur(espn_doldur(doldur(pd.read_csv(yol), pd.read_parquet('data/maclar.parquet'))))
+    archives=[Path('data/maclar.parquet'),Path('data/cba_games.parquet'),
+              *[Path(f'data/competitions/{code}.parquet') for code in ('ECW','FEC','VTB')]]
+    games=pd.concat([pd.read_parquet(p) for p in archives if p.exists()],ignore_index=True)
+    # Day-only source dates cannot establish tipoff; never use them to certify a timely ledger entry.
+    if 'date_precision' in games:
+        games=games[games.date_precision.ne('day')]
+    defter = bdl_doldur(espn_doldur(doldur(pd.read_csv(yol), games)))
     defter.to_csv(yol, index=False)
     for r in defter.itertuples():
         fav, fp = (r.ev, r.ev_kazanir) if r.ev_kazanir >= .5 else (r.dep, 1 - r.ev_kazanir)

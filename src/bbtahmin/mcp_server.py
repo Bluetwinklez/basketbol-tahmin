@@ -30,12 +30,13 @@ def create_server(root):
         cba=root/'data/cba_games.parquet'
         return dict(games=len(g),leagues={str(k):int(v) for k,v in g.groupby('lig').size().items()},
                     cba_games=len(pd.read_parquet(cba)) if cba.exists() else 0,
+                    experimental_competitions={code:len(pd.read_parquet(path)) for code in ('ECW','FEC','VTB') if (path:=root/f'data/competitions/{code}.parquet').exists()},
                     latest_game_utc=g.tarih_utc.max().isoformat(),bulletin_available=(root/'data/bulten/latest.json').exists())
 
     @server.tool(annotations=readonly)
     def bulletin_events(league: str | None = None,limit: int = 30) -> dict:
         """List future fixtures from the local bulletin with capture age; does not refresh."""
-        if league is not None and league not in ('E','U','NBA','NBL','CBA'):
+        if league is not None and league not in ('E','U','NBA','NBL','CBA','ECW','FEC','VTB'):
             raise ValueError('Unknown supported model league')
         return list_events(root,league,limit)
 
@@ -75,7 +76,7 @@ def create_server(root):
         result={}
         for name,filename in [('pregame_verified','completed_seasons.csv'),
                               ('data_expansion_model','summary.csv'),('feature_research','summary.csv'),
-                              ('calibration_research','summary.csv')]:
+                              ('calibration_research','summary.csv'),('competitions','summary.csv')]:
             path=root/f'docs/kanit/{name}/{filename}'
             if path.exists():
                 t=pd.read_csv(path)

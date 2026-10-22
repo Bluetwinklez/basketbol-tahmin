@@ -10,6 +10,7 @@ A Python research package for pregame basketball probabilities, score margins an
 |---|---|
 | EuroLeague, EuroCup, NBA and Australian NBL history | Available; 54,808 stored games |
 | Chinese CBA | Separate 2,386-game archive, 20 teams; experimental CBA-only score model |
+| EuroCup Women (ECW), FIBA Europe Cup men (FEC), VTB men | Separate experimental archives: 674 / 651 / 860 games; independent pregame models |
 | CBA in-play state | Experimental manual score/period/remaining-clock projection; regulation only, no automatic live scoreboard |
 | Home-win probability, score, margin and total; 80% score intervals | Available; uncertainty estimates need continued validation |
 | Home baseline, Elo, MOV Elo, logistic regression, gradient boosting, score regression, ensemble | Chronological evaluation; parameters selected using earlier seasons |
@@ -148,6 +149,18 @@ python -m bbtahmin canli --ev Jilin --dep Xinjiang --skor 16 15 --periyot 1 --ka
 
 See [CBA methods, sources, evaluation and replay limits](docs/cba-live.md). The older runtime-verification report describes CBA as unsupported at that earlier commit; this extension adds support separately and preserves those historical observations.
 
+## EuroCup Women, FIBA Europe Cup and VTB
+
+Three separate pregame models add **2,185 games** without changing the original archive. In the completed 2025–26 historical test, ECW achieved **150/214 (70.09%)**, FEC **133/195 (68.21%)**, and VTB **206/254 (81.10%)**. Each has only one completed test season; VTB historical coverage follows current teams. These are historical winner-selection rates, not live or exact-score accuracy. Low-history teams are explicitly flagged.
+
+```bash
+python -m bbtahmin lig-topla --ligler ECW FEC VTB
+python scripts/evaluate_competitions.py
+python -m bbtahmin bulten --lig ECW
+```
+
+See [sources, coverage, test results and replay limits](docs/competitions.md). The five October 22 screenshot reconstructions were generated after tipoff and are excluded from prospective performance. No in-play support is implied for these competitions.
+
 ## Optional local MCP server
 
 ```bash
@@ -178,7 +191,7 @@ python -m pytest -q
 
 Tests are offline. Install the MCP extra to include its protocol test; otherwise that optional test skips. GitHub Actions installs the extra and runs the suite.
 
-Latest local verification (2026-10-22): **142 tests passed**, including CBA state validation and target-season leakage checks; see [CBA test evidence](docs/kanit/cba/tests.xml). Earlier 127-test and five-tool stdio checks are retained in [review_tests.xml](docs/kanit/review_tests.xml) and [mcp_smoke.json](docs/kanit/mcp_smoke.json). The extended server exposes six tools, including experimental manual-state CBA projection.
+Latest local verification (2026-10-22): **151 tests passed**, including new competition/gender checks, distinct Brno identities, cold starts, target-day leakage and nullable-overtime ledger recording; see [latest test evidence](docs/kanit/competitions/tests.xml). Earlier [CBA test evidence](docs/kanit/cba/tests.xml) is retained. Earlier 127-test and five-tool stdio checks are retained in [review_tests.xml](docs/kanit/review_tests.xml) and [mcp_smoke.json](docs/kanit/mcp_smoke.json). The extended server exposes six tools, including experimental manual-state CBA projection.
 
 A [fresh runtime verification](docs/kanit/runtime_validation/README.md) retrained all seven models for 2025–26 and partial 2026–27, reproduced 15,932 archived prediction rows within 2.04e-14, exercised a real bulletin fixture, and documented the rejection of unsupported live CBA games. It also reports the chronological **model-selection policy** separately from the fixed-model tables above: NBA 65.81% and NBL 59.22% across five completed seasons.
 
