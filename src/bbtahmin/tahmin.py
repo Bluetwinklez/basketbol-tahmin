@@ -10,6 +10,7 @@ import pandas as pd
 from scipy.stats import norm
 from .ozellik import build_features, FEATURES
 from .kutu_ozellik import kutu_ozellikleri, yukle, KUTU_FEATURES, KUTU_LIGLERI
+from .eksik_ozellik import eksik_ozellikleri, rapor_eslestir, EKSIK_FEATURES, EKSIK_LIGLERI, yukle as eksik_yukle
 from .model import fit_predict, regression
 from .takim_ad import coz
 
@@ -66,8 +67,8 @@ def lig_bul(ev, dep, gecmis, tarih):
     raise ValueError('Takımlar desteklenen liglerde bulunamadı (EuroLeague, EuroCup, NBA).\n  ' + '\n  '.join(hatalar))
 
 
-def tahmin_et(lig, eslesmeler, tarih, veri='data/maclar.parquet'):
-    """eslesmeler: [(ev_kodu, dep_kodu)]. Her maç için sözlük döndürür."""
+def tahmin_et(lig, eslesmeler, tarih, veri='data/maclar.parquet', rapor=None):
+    """eslesmeler: [(ev_kodu, dep_kodu)]. rapor: NBA sakatlık raporu (Out oyuncuları eksik sayılır)."""
     tarih = pd.Timestamp(tarih)
     tarih = tarih.tz_localize('Europe/Istanbul') if tarih.tzinfo is None else tarih
     tarih = tarih.tz_convert('UTC')
@@ -83,12 +84,24 @@ def tahmin_et(lig, eslesmeler, tarih, veri='data/maclar.parquet'):
     hepsi = hepsi.sort_values(['tarih_utc', 'mac_id']).reset_index(drop=True)
     x = build_features(hepsi, k=mov['k'], advantage=mov['home_advantage'], shrink=mov['shrink'],
                        alpha=alpha, mov=True)
-    cols = FEATURES
+    cols = list(FEATURES)
+    x = x.reset_index(drop=True)
     kutu, oyuncular = yukle()
     if kutu is not None and lig in KUTU_LIGLERI and kutu.mac_id.str.startswith(lig).any():
         kf = kutu_ozellikleri(hepsi, kutu, oyuncular).set_index('mac_id').loc[hepsi.mac_id].reset_index(drop=True)
-        x = pd.concat([x.reset_index(drop=True), kf[KUTU_FEATURES]], axis=1)
-        cols = FEATURES + KUTU_FEATURES
+        x = pd.concat([x, kf[KUTU_FEATURES]], axis=1)
+        cols += KUTU_FEATURES
+    oyuncu_mac = eksik_yukle()
+    eksik_bilgi = {}
+    if oyuncu_mac is not None and lig in EKSIK_LIGLERI:
+        sorgu_eksik = {}
+        for i, (ev, dep) in enumerate(eslesmeler):
+            kume, eslesmeyen = rapor_eslestir(rapor, oyuncu_mac, [ev, dep])
+            sorgu_eksik[f'SORGU_{i}'] = kume
+            eksik_bilgi[i] = eslesmeyen
+        ef = eksik_ozellikleri(hepsi, oyuncu_mac, sorgu_eksik).set_index('mac_id').loc[hepsi.mac_id].reset_index(drop=True)
+        x = pd.concat([x, ef[EKSIK_FEATURES]], axis=1)
+        cols += EKSIK_FEATURES
     sorgu = hepsi.mac_id.str.startswith('SORGU_').to_numpy()
     y = (hepsi.ev_skor > hepsi.dep_skor).fillna(False).to_numpy(dtype=int)
     fark = (hepsi.ev_skor - hepsi.dep_skor).fillna(0).to_numpy(dtype=float)
@@ -129,6 +142,8 @@ def tahmin_et(lig, eslesmeler, tarih, veri='data/maclar.parquet'):
             toplam=float(pt[i]), toplam_80=(float(pt[i] - Z80 * st), float(pt[i] + Z80 * st)),
             tum_modeller={k: float(v[i]) for k, v in olasilik.items()},
             uzatma=float(np.clip(olcek * norm.pdf(0, pm[i], sm), 0, .5)),
+            eksik_dk=(float(x.loc[np.flatnonzero(sorgu)[i], 'eksik_dk_diff']) * 48) if 'eksik_dk_diff' in x else None,
+            eksik_eslesmeyen=eksik_bilgi.get(n, []),
             az_veri=[t for t in (ev, dep) if mac_sayisi.get(t, 0) < 10]))
     return sonuc
 
@@ -153,6 +168,8 @@ def yazdir(sonuclar, gosterim=None):
         if t.get('piyasa_ev') is not None:
             pe = t['piyasa_ev']
             print(f"  Piyasa:   ev %{pe * 100:.1f} / dep %{(1 - pe) * 100:.1f}  (oranlar {t['oran_ev']} / {t['oran_dep']}, marj çıkarıldı)")
+        if t.get('eksik_dk') is not None:
+            print(f"  Eksik etkisi: ev − dep eksik dakika farkı {t['eksik_dk']:+.0f} dk (modele dahil)")
         for kod in (t['ev'], t['dep']):
             eksik = [f"{o['oyuncu']} ({o['durum']})" for o in t.get('sakatlik', []) if o['takim'] == kod]
             if eksik:
@@ -196,14 +213,14 @@ def run(lig, maclar, tarih, json_cikti=False, kaydet=False):
         gosterim[bulunan[1]], gosterim[bulunan[2]] = parca
         oranlar[bulunan[1:]] = (o1, o2)
         gruplar.setdefault(bulunan[0], []).append(bulunan[1:])
-    sonuclar = [t for l, es in gruplar.items() for t in tahmin_et(l, es, tarih)]
     rapor = None
-    if any(t['lig'] == 'NBA' for t in sonuclar):
+    if 'NBA' in gruplar:
         from .veri.sakatlik import son_rapor
         try:
             rapor = son_rapor(an)
-        except Exception as e:  # rapor alınamazsa tahmin yine verilir
-            print(f'[!] Sakatlık raporu alınamadı: {e}')
+        except Exception as e:  # rapor alınamazsa tahmin eksiksiz kadro varsayımıyla verilir
+            print(f'[!] Sakatlık raporu alınamadı, eksik oyuncu 0 kabul edildi: {e}')
+    sonuclar = [t for l, es in gruplar.items() for t in tahmin_et(l, es, tarih, rapor=rapor if l == 'NBA' else None)]
     for t in sonuclar:
         o1, o2 = oranlar.get((t['ev'], t['dep']), (None, None))
         t['oran_ev'], t['oran_dep'] = o1, o2
