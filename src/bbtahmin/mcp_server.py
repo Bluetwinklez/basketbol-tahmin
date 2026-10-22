@@ -27,13 +27,15 @@ def create_server(root):
     def dataset_status() -> dict:
         """Show stored league coverage and whether the bulletin exists; no network requests."""
         g=pd.read_parquet(root/'data/maclar.parquet')
+        cba=root/'data/cba_games.parquet'
         return dict(games=len(g),leagues={str(k):int(v) for k,v in g.groupby('lig').size().items()},
+                    cba_games=len(pd.read_parquet(cba)) if cba.exists() else 0,
                     latest_game_utc=g.tarih_utc.max().isoformat(),bulletin_available=(root/'data/bulten/latest.json').exists())
 
     @server.tool(annotations=readonly)
     def bulletin_events(league: str | None = None,limit: int = 30) -> dict:
         """List future fixtures from the local bulletin with capture age; does not refresh."""
-        if league is not None and league not in ('E','U','NBA','NBL'):
+        if league is not None and league not in ('E','U','NBA','NBL','CBA'):
             raise ValueError('Unknown supported model league')
         return list_events(root,league,limit)
 
@@ -50,6 +52,22 @@ def create_server(root):
         """Read local pregame odds observations up to a past cutoff; never refresh."""
         from .market_history import history
         return history(event_id,root,as_of,limit)
+
+    @server.tool(annotations=readonly)
+    def predict_live_cba(home: str,away: str,home_score: int,away_score: int,
+                         period: int,remaining: str,observed_at: str,replay: bool=False) -> dict:
+        """Experimental CBA regulation projection from manual scores and MM:SS remaining.
+
+        No automatic scoreboard feed. Stale inputs require explicit historical replay.
+        """
+        if Path.cwd().resolve()!=root:raise ValueError('Start through the --root entrypoint')
+        from .cba_model import load
+        from .takim_ad import coz
+        from .live import predict
+        g=load();codes=set(g.ev)|set(g.dep)
+        with contextlib.redirect_stdout(sys.stderr):
+            return predict(coz('CBA',home,codes),coz('CBA',away,codes),home_score,away_score,
+                           period,remaining,observed_at,replay=replay)
 
     @server.tool(annotations=readonly)
     def research_results() -> dict:

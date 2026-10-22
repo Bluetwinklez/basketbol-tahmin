@@ -16,8 +16,8 @@ from .takim_ad import coz
 
 Z80 = norm.ppf(.9)  # %80 aralığın yarı genişliği (standart sapma cinsinden)
 MODELLER = ('logistic', 'mov_elo', 'skor', 'topluluk', 'hist_gradient_boosting')
-LIGLER = ('E', 'U', 'NBA', 'NBL')
-LIG_ADI = {'E': 'EuroLeague', 'U': 'EuroCup', 'NBA': 'NBA', 'NBL': 'Avustralya NBL'}
+LIGLER = ('E', 'U', 'NBA', 'NBL', 'CBA')
+LIG_ADI = {'E': 'EuroLeague', 'U': 'EuroCup', 'NBA': 'NBA', 'NBL': 'Avustralya NBL','CBA':'Chinese CBA'}
 
 
 def sezon_adi(tarih):
@@ -99,6 +99,9 @@ def tahmin_et(lig, eslesmeler, tarih, veri='data/maclar.parquet', rapor=None):
     tarih = pd.Timestamp(tarih)
     tarih = tarih.tz_localize('Europe/Istanbul') if tarih.tzinfo is None else tarih
     tarih = tarih.tz_convert('UTC')
+    if lig=='CBA':
+        from .cba_model import predict
+        return [predict(ev,dep,tarih) for ev,dep in eslesmeler]
     gecmis = pd.read_parquet(veri)
     gecmis = gecmis[(gecmis.lig == lig) & (gecmis.ev_skor > 0) & (gecmis.dep_skor > 0)
                     & (gecmis.tarih_utc < tarih.floor('D'))].copy()
@@ -198,7 +201,8 @@ def yazdir(sonuclar, gosterim=None):
         print(f"  Skor:     {t['ev_skor']:.0f} – {t['dep_skor']:.0f}")
         print(f"  Fark:     {t['fark']:+.1f}  (%80 aralık {t['fark_80'][0]:+.0f} … {t['fark_80'][1]:+.0f})")
         print(f"  Toplam:   {t['toplam']:.1f}  (%80 aralık {t['toplam_80'][0]:.0f} … {t['toplam_80'][1]:.0f})")
-        print(f"  Uzatma:   %{t['uzatma'] * 100:.1f}")
+        if t.get('uzatma') is not None:
+            print(f"  Uzatma:   %{t['uzatma'] * 100:.1f}")
         if t.get('piyasa_ev') is not None:
             pe = t['piyasa_ev']
             print(f"  Piyasa:   ev %{pe * 100:.1f} / dep %{(1 - pe) * 100:.1f}  (oranlar {t['oran_ev']} / {t['oran_dep']}, marj çıkarıldı)")
@@ -235,6 +239,8 @@ def run(lig, maclar, tarih, json_cikti=False, kaydet=False, injury_report=False,
     if confidence_threshold is not None and (not np.isfinite(confidence_threshold) or not .5<=confidence_threshold<=1):
         raise ValueError('Confidence threshold must be between 0.5 and 1')
     gecmis = pd.read_parquet('data/maclar.parquet')
+    if Path('data/cba_games.parquet').exists():
+        gecmis=pd.concat([gecmis,pd.read_parquet('data/cba_games.parquet')],ignore_index=True)
     tarih = tarih or pd.Timestamp.now(tz='Europe/Istanbul').isoformat()
     an = pd.Timestamp(tarih)
     an = (an.tz_localize('Europe/Istanbul') if an.tzinfo is None else an).tz_convert('UTC')

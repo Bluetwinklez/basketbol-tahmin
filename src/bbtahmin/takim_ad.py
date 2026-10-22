@@ -58,6 +58,10 @@ def aday_adlari(lig, kodlar):
         adlar = {kod} | set(EK_ADLAR.get(kod, []))
         if lig == 'NBA':
             adlar |= set(ALIASES.get(kod, []))
+        elif lig == 'CBA':
+            path=Path('data/cba_teams.json')
+            entry=json.loads(path.read_text('utf8')).get(kod,{}) if path.exists() else {}
+            adlar |= {entry.get('name','')} | set(entry.get('aliases',[]))
         elif lig == 'NBL':
             from .veri.nbl import ADLAR
             ad = ADLAR.get(kod, '')

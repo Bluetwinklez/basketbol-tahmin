@@ -9,6 +9,8 @@ A Python research package for pregame basketball probabilities, score margins an
 | Capability | Status |
 |---|---|
 | EuroLeague, EuroCup, NBA and Australian NBL history | Available; 54,808 stored games |
+| Chinese CBA | Separate 2,386-game archive, 20 teams; experimental CBA-only score model |
+| CBA in-play state | Experimental manual score/period/remaining-clock projection; regulation only, no automatic live scoreboard |
 | Home-win probability, score, margin and total; 80% score intervals | Available; uncertainty estimates need continued validation |
 | Home baseline, Elo, MOV Elo, logistic regression, gradient boosting, score regression, ensemble | Chronological evaluation; parameters selected using earlier seasons |
 | Experimental Iddaa basketball bulletin | Website JSON backend tested; no API key; upstream may change |
@@ -19,7 +21,7 @@ A Python research package for pregame basketball probabilities, score margins an
 | NBA injury PDF display | Optional `--sakatlik`; informational only |
 | Retrospective player-absence feature | **Disabled by default:** actual participants are postgame knowledge |
 | Four-factor/shooting profiles | Implemented and tested as an experiment; **not enabled by default** |
-| Turkish BSL, other unsupported leagues, in-play prediction | No trained model; bulletin presence does not imply model support |
+| Turkish BSL, other unsupported leagues, non-CBA in-play prediction | No trained model; bulletin presence does not imply model support |
 | Betting execution, guaranteed returns | Not provided |
 
 ## Install
@@ -135,6 +137,17 @@ Available records are not a claim of complete coverage for every season or leagu
 
 Sources: official EuroLeague API, Basketball Reference, ESPN/sportsdataverse, nba_api, nblR and verified numeric fields from euroleague-open-data. See [data expansion](docs/data-expansion.md), [source notes](data/KAYNAKLAR.md) and [dataset audit](docs/kanit/dataset_audit.json). The SBR collector remains permission-gated; no closing-odds profitability result is claimed.
 
+## Experimental CBA and live-state projections
+
+CBA has a separate **2,386-game** archive and a CBA-only model. The completed 2025–26 pregame test achieved **329/453 correct (72.63%)**; the current 2026–27 sample is only **14/25 (56.00%)** and is reported separately. These figures do not establish live accuracy. An additional remaining-score model uses real historical quarter states and explicit manual score, period and remaining-clock inputs. It is experimental, regulation-only and has no automatic scoreboard feed. Old screenshot inputs require `--replay`.
+
+```bash
+python -m bbtahmin tahmin "Jilin - Xinjiang" --lig CBA --json
+python -m bbtahmin canli --ev Jilin --dep Xinjiang --skor 16 15 --periyot 1 --kalan 01:28 --tarih 2026-10-22T14:52:00+03:00 --replay
+```
+
+See [CBA methods, sources, evaluation and replay limits](docs/cba-live.md). The older runtime-verification report describes CBA as unsupported at that earlier commit; this extension adds support separately and preserves those historical observations.
+
 ## Optional local MCP server
 
 ```bash
@@ -155,7 +168,7 @@ Example configuration for a stdio-capable MCP host:
 }
 ```
 
-On Windows, use the absolute `.venv\\Scripts\\python.exe` path, escaped for JSON. Tools: `dataset_status`, `bulletin_events`, `bulletin_history`, `predict_bulletin_event`, `research_results`. They are read-only and do not refresh upstream data or modify the ledger. Run the bulletin refresh explicitly in the CLI. The server was tested over actual stdio and an in-memory protocol client; no host configuration is changed by installing the package.
+On Windows, use the absolute `.venv\\Scripts\\python.exe` path, escaped for JSON. Tools: `dataset_status`, `bulletin_events`, `bulletin_history`, `predict_bulletin_event`, `predict_live_cba`, `research_results`. They are read-only and do not refresh upstream data or modify the ledger. Run the bulletin refresh explicitly in the CLI. The server was tested over actual stdio and an in-memory protocol client; no host configuration is changed by installing the package.
 
 ## Tests and next priorities
 
@@ -165,7 +178,7 @@ python -m pytest -q
 
 Tests are offline. Install the MCP extra to include its protocol test; otherwise that optional test skips. GitHub Actions installs the extra and runs the suite.
 
-Latest local verification (2026-10-22): **127 tests passed** with the pinned requirements and MCP extra. A separate real-stdio smoke check exercised five tools, local odds history and a current bulletin event prediction; evidence is stored in [review_tests.xml](docs/kanit/review_tests.xml) and [mcp_smoke.json](docs/kanit/mcp_smoke.json).
+Latest local verification (2026-10-22): **142 tests passed**, including CBA state validation and target-season leakage checks; see [CBA test evidence](docs/kanit/cba/tests.xml). Earlier 127-test and five-tool stdio checks are retained in [review_tests.xml](docs/kanit/review_tests.xml) and [mcp_smoke.json](docs/kanit/mcp_smoke.json). The extended server exposes six tools, including experimental manual-state CBA projection.
 
 A [fresh runtime verification](docs/kanit/runtime_validation/README.md) retrained all seven models for 2025–26 and partial 2026–27, reproduced 15,932 archived prediction rows within 2.04e-14, exercised a real bulletin fixture, and documented the rejection of unsupported live CBA games. It also reports the chronological **model-selection policy** separately from the fixed-model tables above: NBA 65.81% and NBL 59.22% across five completed seasons.
 

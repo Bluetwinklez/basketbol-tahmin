@@ -1,0 +1,63 @@
+{
+  "home_score": 95.32688995865314,
+  "away_score": 83.91541113547217,
+  "total": 179.2423010941253,
+  "margin": 11.411478823180971,
+  "home_regulation_lead_probability": 0.8190988045567068,
+  "total_80": [
+    162.67431290059858,
+    195.81028928765204
+  ],
+  "elapsed_fraction": 0.20708333333333334,
+  "regulation_minutes": 40,
+  "period": 1,
+  "remaining": "01:43",
+  "score_observed": [
+    22,
+    15
+  ],
+  "experimental": true,
+  "note": "Regulation score projection. Win probability uses normal residual approximation; quarter-boundary evaluation does not establish within-quarter calibration. No overtime projection.",
+  "home": "CBA_287",
+  "away": "CBA_93",
+  "observed_at_utc": "2026-10-22T11:52:00+00:00",
+  "replay": true,
+  "input_source": "Manual observed game state; not an automatic live feed",
+  "prior": {
+    "lig": "CBA",
+    "ev": "CBA_287",
+    "dep": "CBA_93",
+    "tarih_utc": "2026-10-22T11:52:00+00:00",
+    "model": "cba-ridge-per40-v1",
+    "ev_kazanir": 0.8118964957912727,
+    "ev_skor": 96.25531847560737,
+    "dep_skor": 85.18632580960764,
+    "fark": 11.068992665999719,
+    "fark_80": [
+      -4.96149562577747,
+      27.09948095777691
+    ],
+    "toplam": 181.441644285215,
+    "toplam_80": [
+      158.80630136926376,
+      204.07698720116625
+    ],
+    "tum_modeller": {
+      "cba-ridge-per40-v1": 0.8118964957912727
+    },
+    "uzatma": null,
+    "az_veri": [],
+    "regulation_minutes": 40,
+    "training_cutoff": "2026-10-22T00:00:00+00:00",
+    "calibration_season": "2025-26",
+    "experimental": true,
+    "dataset_sha256": "ff8708583942a0c98e2225086a35e3c54daff09ba2d308f0c39b22d23de0c1db",
+    "dataset_matches_evaluation": true,
+    "note": "CBA-only research model. Historical overtime totals may be included; live projections target regulation."
+  },
+  "model": "cba-remaining-ridge-v1",
+  "quarter_dataset_sha256": "c23be4386027f97f09e70b5d1507eba9d36e9ad1b4e8299de1d20bc7a00df47b",
+  "quarter_dataset_matches_evaluation": true,
+  "training_games": 120,
+  "calibration_season": "2025-26"
+}

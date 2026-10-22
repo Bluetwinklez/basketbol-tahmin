@@ -69,7 +69,7 @@ def predict_event(event_id,root='.'):
         raise ValueError('This competition has no trained model in this project')
     if snapshot['stale']:
         raise ValueError('Bulletin is older than 15 minutes; refresh before comparing odds')
-    games=pd.read_parquet(root/'data/maclar.parquet')
+    games=pd.read_parquet(root/('data/cba_games.parquet' if league=='CBA' else 'data/maclar.parquet'))
     codes=aktif_kodlar(games,league,now)
     home,away=coz(league,event['home'],codes),coz(league,event['away'],codes)
     if home==away:
