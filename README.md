@@ -167,4 +167,6 @@ Tests are offline. Install the MCP extra to include its protocol test; otherwise
 
 Latest local verification (2026-10-22): **127 tests passed** with the pinned requirements and MCP extra. A separate real-stdio smoke check exercised five tools, local odds history and a current bulletin event prediction; evidence is stored in [review_tests.xml](docs/kanit/review_tests.xml) and [mcp_smoke.json](docs/kanit/mcp_smoke.json).
 
+A [fresh runtime verification](docs/kanit/runtime_validation/README.md) retrained all seven models for 2025–26 and partial 2026–27, reproduced 15,932 archived prediction rows within 2.04e-14, exercised a real bulletin fixture, and documented the rejection of unsupported live CBA games. It also reports the chronological **model-selection policy** separately from the fixed-model tables above: NBA 65.81% and NBL 59.22% across five completed seasons.
+
 The highest-priority research additions are point-in-time injury/lineup history, timestamped market snapshots, stronger player/rotation value estimates, domestic-league workload and travel, and chronological calibration/interval checks. The implemented shooting-profile experiment did not consistently improve outcomes and remains disabled. Detailed priorities, reviewed repositories, provider limitations and measured ablations are in [research-and-roadmap.md](docs/research-and-roadmap.md).

@@ -1,0 +1,30 @@
+{
+  "captured_at_utc": "2026-10-22T11:54:01.414661+00:00",
+  "source": "User screenshot; scoreboard observations are not a verified live feed",
+  "supported_leagues": [
+    "E",
+    "NBA",
+    "NBL",
+    "U"
+  ],
+  "cba_games": 0,
+  "live_model_available": false,
+  "fixtures": [
+    {
+      "home": "Jilin",
+      "away": "Xinjiang",
+      "screenshot_score": "16-15",
+      "model_probability": null,
+      "status": "unsupported_league_and_live_state",
+      "team_resolution_rejected": true
+    },
+    {
+      "home": "Beijing",
+      "away": "Shenzhen",
+      "screenshot_score": "22-15",
+      "model_probability": null,
+      "status": "unsupported_league_and_live_state",
+      "team_resolution_rejected": true
+    }
+  ]
+}
