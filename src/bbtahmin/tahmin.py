@@ -31,8 +31,8 @@ def _son(kayitlar):
 
 def parametreler(lig, yol='docs/kanit/parametreler.json', sezon=None):
     if str(yol)=='docs/kanit/parametreler.json':
-        from .artifacts import verified_path
-        yol=verified_path('parametreler.json') or yol
+        from .artifacts import require_verified_path
+        yol=require_verified_path('parametreler.json')
     kayitlar = [r for r in json.loads(Path(yol).read_text('utf8')) if r.get('lig') == lig]
     if sezon is not None:
         kayitlar = [r for r in kayitlar if r['sezon'] <= sezon]
@@ -45,12 +45,19 @@ def parametreler(lig, yol='docs/kanit/parametreler.json', sezon=None):
 
 def en_iyi_model(lig, yol='docs/kanit/toplam.csv', sezon=None):
     """Backtest'te o ligde en düşük log loss'u veren model."""
+    if str(yol)=='docs/kanit/toplam.csv':
+        # Derive choices from checksummed metrics, never an unsigned aggregate
+        # or legacy participation-enhanced evaluation after an integrity failure.
+        from .artifacts import require_verified_path
+        metrics=pd.read_csv(require_verified_path('metrikler.csv'))
+        metrics=metrics[(metrics.lig==lig) & metrics.model.isin(MODELLER)]
+        if sezon is not None:
+            metrics=metrics[metrics.sezon<sezon]
+        if metrics.empty:
+            return 'mov_elo'
+        losses=metrics.assign(weighted=metrics.log_loss*metrics.n).groupby('model')[['weighted','n']].sum()
+        return (losses.weighted/losses.n).idxmin()
     try:
-        if str(yol)=='docs/kanit/toplam.csv':
-            from .artifacts import verified_path
-            fresh=verified_path('metrikler.csv')
-            if fresh is not None:
-                yol=fresh.with_name('toplam.csv')
         if sezon is not None:
             # Aggregate test results may include the target season. Model choice
             # for a historical query can use only earlier completed seasons.
@@ -155,7 +162,7 @@ def tahmin_et(lig, eslesmeler, tarih, veri='data/maclar.parquet', rapor=None):
     sira = list(hepsi.loc[sorgu, 'mac_id'])
     sonuc = []
     from .artifacts import status
-    artifact_status=status()
+    artifact_status=status(dataset=veri)
     for n, (ev, dep) in enumerate(eslesmeler):
         i = sira.index(f'SORGU_{n}')
         p = float(olasilik[secilen][i])
