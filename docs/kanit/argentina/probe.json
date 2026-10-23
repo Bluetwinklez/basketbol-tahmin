@@ -1,0 +1,36 @@
+[
+  {
+    "url": "https://basketball.realgm.com/international/league/58/Argentinian-Liga-A/teams",
+    "captured_at_utc": "2026-10-23T20:12:11.249983+00:00",
+    "error": "HTTPError: HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://basketball.realgm.com/international/league/58/Argentinian-Liga-A/teams/2023",
+    "captured_at_utc": "2026-10-23T20:12:11.468967+00:00",
+    "error": "HTTPError: HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://basketball.realgm.com/international/league/58/Argentinian-Liga-A/team/1238/Atletico-Argentino-de-Junin/schedule/2023",
+    "captured_at_utc": "2026-10-23T20:12:11.514454+00:00",
+    "error": "HTTPError: HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://basketball.realgm.com/international/league/58/Argentinian-Liga-A/team/1238/Atletico-Argentino-de-Junin/schedule/2027",
+    "captured_at_utc": "2026-10-23T20:12:11.563223+00:00",
+    "error": "HTTPError: HTTP Error 403: Forbidden"
+  },
+  {
+    "url": "https://www.laliganacional.com.ar/laliga/fixture",
+    "captured_at_utc": "2026-10-23T20:12:11.603438+00:00",
+    "title": "La Liga Nacional de Básquetbol | Fixture",
+    "headings": [],
+    "tables": [],
+    "links": [],
+    "scripts": [
+      "https://code.jquery.com/jquery-3.5.1.min.js",
+      "/lib/bootstrap-5.2.0/bootstrap.bundle.min.js",
+      "/js/funciones.js?a=0&v=De94QjihEc_F0yzlFP5g-MZJZ62zIGdiEt6ohOCpNzE"
+    ],
+    "selects": []
+  }
+]
