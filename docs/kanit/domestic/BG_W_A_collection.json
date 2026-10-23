@@ -1,0 +1,24 @@
+{
+  "source": "basketball.bg",
+  "sources": [
+    "https://comps.basketball.bg/games.inc.php?bg_id=3&act=results&age_id=0&gender=0&season=25&region_id=0&regiongroup_id=0&bigchamp_id=0&champ_id=0",
+    "https://comps.basketball.bg/games.inc.php?bg_id=3&act=results&age_id=0&gender=0&season=26&region_id=0&regiongroup_id=0&bigchamp_id=0&champ_id=0",
+    "https://comps.basketball.bg/games.inc.php?bg_id=3&act=results&age_id=0&gender=0&season=27&region_id=0&regiongroup_id=0&bigchamp_id=0&champ_id=0",
+    "https://comps.basketball.bg/games.inc.php?bg_id=3&act=results&age_id=0&gender=0&season=28&region_id=0&regiongroup_id=0&bigchamp_id=0&champ_id=0",
+    "https://comps.basketball.bg/games.inc.php?bg_id=3&act=results&age_id=0&gender=0&season=29&region_id=0&regiongroup_id=0&bigchamp_id=0&champ_id=0"
+  ],
+  "captured_at_utc": "2026-10-22T21:46:02.400066+00:00",
+  "excluded": 4,
+  "coverage": "All returned senior A-group phases, excluding friendlies. Completeness, overtime and neutral venues not independently verified; publication time unknown.",
+  "games": 249,
+  "teams": 11,
+  "seasons": {
+    "2022-23": 58,
+    "2023-24": 102,
+    "2024-25": 59,
+    "2025-26": 24,
+    "2026-27": 6
+  },
+  "sha256": "a3a753b012959f41b398a5164bb25d419f9019b43632d9a6f7fb8e06f994920c",
+  "used_in_default_model": false
+}

@@ -1,120 +1,131 @@
 # Prediction reliability implementation
 
-This release implements data-quality, reproducible research, runtime diagnostics and prospective verification. It does **not** establish a general improvement in winner accuracy. The default competition models remain unchanged because challengers have mixed results.
+The data/validation implementation is delivered and tested. A higher general winner-success rate is **not established**. New candidates remain research-only because same-fixture evaluation does not support replacing the baseline. Future match results, missing historical publication records and provider access cannot be manufactured by completing code.
 
-## Data added separately
+## Separately stored data
 
-- **561 Czech senior women's ZBL results**, 13 observed identities, seasons 2022–23 through partial 2026–27: 121 / 142 / 134 / 139 / 25. Every phase discovered in the official season selector was requested. Forfeits and future fixtures are excluded. Counts do not prove complete season coverage. Source table scores and home/away order are parsed and tested; independent cross-source verification, neutral venues and overtime remain unresolved.
-- **359 EuroLeague Women results**, kept separate from men's competitions and the original ECW archive.
-- **Two early ECW results** from a public historical page. This is explicitly **not** a complete early season.
-- Explicit Czech senior-women mappings connect Žabiny Brno and KP Brno to their FIBA organisation identities. Other Czech teams retain a separate namespace; no fuzzy cross-gender or sponsor-name joins.
-- Fresh official 2026–27 EuroLeague results use a runtime overlay. Existing benchmark archives stay unchanged; predictions flag that the runtime data differ from the evaluated dataset.
+| Archive | Results | Scope and source checks |
+|---|---:|---|
+| Czech women ZBL | 561 | Official discovered season phases; exact Žabiny/KP Brno links; forfeits excluded |
+| Bulgarian women A group | 249 | Official senior category only; friendlies excluded; exact Montana link |
+| Slovenian women first league | 331 | Official FEMALE/ABSOLUTE/FIRST season IDs; finished games only; exact Celje link |
+| Finnish women Korisliiga | 310 | Official FEMALE/SENIOR identity; dated confirmed scores; undated playoff series totals excluded |
+| Girona senior women | 123 | FEB widget final and calendar scores/side IDs must agree; actual tipoff and quarter sums checked |
+| Senior WABA | 261 | Official league 31913, discovered season selector and advertised pagination; Celje/Montana links |
+| Pärnu men | 43 | Official club calendar; named Estonian/Latvian domestic competitions only; European duplicates excluded |
+| EuroLeague Women | 359 | Separate women's cup archive; explicit organisation namespace |
+| Early EuroCup Women | 2 | Limited historical source; not a complete season |
 
-Sources and per-phase counts: [Czech collection](kanit/domestic/CZ_W_ZBL_collection.json), [ELW collection](kanit/competitions/ELW_collection.json). Raw page caches are not committed.
+The domestic/regional total is **1,878**, including 561 from the previous release. This follow-up adds **1,317 results**. These counts are stored observations, not proof of full season/league coverage or independent cross-source verification. Source details, season counts, exclusions and file hashes are in [collection reports](kanit/domestic/).
 
-## Research results and rejection decisions
+Finnish 2022–23 and 2023–24 responses lack status fields: all 286 returned rows are excluded, not silently called confirmed finals. Girona game 2344939 has a stale non-final widget despite a calendar result; it is rejected and listed in the report. Girona is a regular-calendar club cohort, not all Spanish teams or playoff coverage. Pärnu is a club cohort, not the full Estonian/Latvian league.
 
-The completed 2025–26 ECW season contains the **same 214 target games** in every comparison:
+WABA source times do not certify a timezone. Its original calendar date remains `tarih_utc` with `date_precision: day`; `model_time_utc` is one day later. Both domestic features and the hierarchy use this conservative modeling time and withhold the entire UTC day. The embargo avoids pretending that an uncertain local tipoff is an exact UTC timestamp. WABA does not assign a domestic country group to its participating clubs.
+
+Historical publication times, some neutral venues, overtime details and complete coverage remain unknown. Default benchmarks are not silently expanded. The official EuroLeague runtime overlay is separately fingerprinted.
+
+## Measured results and deployment decision
+
+The completed 2025–26 ECW comparison uses the **same 214 games** for every candidate:
 
 | Candidate | Correct | Accuracy | Log loss | Brier |
 |---|---:|---:|---:|---:|
 | Existing score model | 150 | 70.09% | 0.604484 | 0.208212 |
-| Direct logistic | 145 | 67.76% | 0.632319 | 0.215553 |
+| Expanded domestic form + score | 150 | 70.09% | 0.607545 | 0.209006 |
+| Expanded domestic form + logistic | 147 | 68.69% | 0.644414 | 0.217811 |
+| Linked hierarchical attack/defence | 143 | 66.82% | 0.626473 | 0.217827 |
 | Pooled women's-cup score features | 143 | 66.82% | 0.603103 | 0.206709 |
-| Czech domestic form + score model | 152 | 71.03% | 0.612621 | 0.210117 |
-| Czech domestic form + logistic | 147 | 68.69% | 0.655468 | 0.219786 |
+| Direct logistic | 145 | 67.76% | 0.632319 | 0.215553 |
+| Czech club-strength ablation | 137 | 64.02% | 0.645803 | 0.226205 |
 
-Domestic form gains two winner picks but worsens both probability losses. Pooled cup features improve losses slightly but lose seven winner picks. Neither demonstrates broad superiority. A research policy selected using the preceding season also underperforms on ECW; it remains visible and **is not deployed**. Domestic features are separate lagged, shrunken summaries; domestic scores do not update European score states. The pooled-cup candidate is explicitly a rough exploratory ablation and does not solve cross-tier strength adjustment.
+**Defaults remain unchanged.** Expanded domestic form does not gain winner picks. The hierarchy is worse on these outcomes. Slightly better losses in a pooled candidate do not offset its seven fewer correct picks. The earlier Czech-only 152/214 result is preserved in the [previous release](https://github.com/Bluetwinklez/basketbol-tahmin/blob/ba29b1cf503040cecfdc8f8a65bfb4115c8e51f5/docs/kanit/winner/summary.csv); it must not be presented as the result of today's expanded data.
 
-A further regularized club-strength candidate combines explicitly linked senior-women schedules with L2 team priors and time decay; its results are also published without automatic activation. This is not an explicit Bayesian league hierarchy.
+On partial 2026–27, domestic logistic gets **42/51 (82.35%)**, compared with baseline **41/51 (80.39%)**, with lower log loss (0.409184 vs 0.429685). This small already-inspected sample is not a completed season, independent holdout or proof of a stable improvement. The prior-season selection policy gets only 37/51; failed policies remain reported.
 
-These seasons have already been inspected. They are exploratory reused history, not a fresh holdout or proof from prospective predictions. Partial 2026–27 is separate. Eligibility flags are diagnostics, not learned or validated thresholds.
+For expanded domestic score on the completed season, the paired day-block 95% interval for the accuracy difference is approximately **−1.84 to +2.19 percentage points**. There is no demonstrated accuracy gain. Confidence filtering reports its coverage and never becomes the all-game success rate.
 
-Evidence: [all variants](kanit/winner/summary.csv), [prior-only selections](kanit/winner/selections.json), [paired day-block comparisons](kanit/protocol/paired.json), [low-history strata](kanit/protocol/strata.csv), [equal-coverage curves](kanit/protocol/coverage_curves.csv).
+Evidence: [all variants](kanit/winner/summary.csv), [prior-only selections](kanit/winner/selections.json), [paired comparisons](kanit/protocol/paired.json), [strata](kanit/protocol/strata.csv), [equal-coverage curves](kanit/protocol/coverage_curves.csv).
 
-## Four-match failure audit
+## Model and evaluation implementation
 
-[Review](kanit/governance/four_match_review.json) scores the original unmodified post-tipoff reconstructions. The group is 1/4 on winner accuracy. Each fixture has sparse-history issues, including the correct Helsinki–Žabiny pick. Filtering only the losers would be invalid. Missing data is a hypothesis, not a proven cause. These reconstructions never enter prospective accuracy.
+`hierarchical.py` implements fixed Gaussian-prior MAP attack and defence effects: separate competition scoring/home levels, country groups and shrunk club deviations. It is a regularized hierarchy, not posterior sampling. All fits stop before the query's UTC day; daily rolling validation/test predictions can update with already completed earlier days. Country membership is used only after an earlier domestic observation exists. Men's results never enter this women-only model. Residual intervals do not include full parameter uncertainty or guarantee cold-start coverage.
 
-## Data and information-time controls
+`winner_model.py` separates the preceding season by UTC-day halves: the first calibrates score residual scales; the second selects candidates. The target season never selects its own model. Future/test outcomes cannot determine calibration. Challenger rules require extra correct picks, lower log loss and no worse Brier in the earlier selection window. Historical seasons have already been inspected, so every result is exploratory reuse.
 
-`quality.py` reports per-team prior game counts, recency, exponentially decayed history and distinct opponents. It separates data adequacy from win probability, exposes score/winner disagreement and benchmark/runtime differences. Fewer than five observed games in 400 days or a last result older than 60 days trigger a diagnostic restriction. These thresholds are not validated recommendation rules.
+A discovered domestic-form bug used concatenated archive order for the last ten games. It now sorts by effective event time first; reversing input archive order leaves form unchanged. Evaluation hashes input datasets and source code before/after the run and refuses changing inputs. The paired report refuses stale winner manifests.
 
-When `--min-guven` is supplied, both the probability threshold and the diagnostic gate must pass. `threshold_passed`, `selection_eligible` and `secildi` remain separate. No output claims validated recommendations. Coverage reports retain all rows.
+`--hierarchical` exposes the rejected ECW candidate explicitly for research; it cannot combine with monthly adaptive form. Ordinary predictions continue to use the established model. No four-match-specific parameters were fitted.
 
-`context_import.py` accepts explicit senior gender identities, final scores, source URLs, event/capture/availability times and score verification. Rejected records go to quarantine. Conflicting observations, including conflicts across previous imports, require review. Missing historical publication time stays null; point-in-time queries conservatively use capture time. Imported data are not silently activated in the model.
+## Information-time player context and actual observations
 
-## Uncertainty and monitoring
+`player_context.py` archives an actual official NBA injury PDF with publication time, actual capture time and PDF hash. Reports match exact away/home codes **and the fixture's US Eastern calendar date**. Both publication and capture must precede the cutoff; stale or missing reports mean unknown availability. A missing player/report is never interpreted as available or injured.
 
-Prior-season empirical residual quantiles are evaluated alongside the existing normal intervals on identical fixtures. Coverage, interval width and interval score are reported. Empirical intervals remain research-only; neither method promises conditional coverage for cold-start teams. See [interval comparison](kanit/intervals/summary.csv).
+Lagged rotation uses only prior UTC days, the most recent ten observed games within 60 days, and recency-weighted minutes. It does not use target-game participants or force an incomplete rotation to total 240 minutes. Continuity and shrunk historical plus/minus are descriptive; they are not validated causal player-impact adjustments. Future information cutoffs are refused.
 
-Feature-distribution shifts, missingness and reliability bins are written to [governance evidence](kanit/governance/). Two-standard-deviation shifts are diagnostic alerts, not validated retraining triggers. Small samples never automatically promote or retrain models.
+The real collection smoke run captured **85 injury-report rows**, a public ESPN scoreboard with **two listed events / zero in-play events**, and **176 Iddaa basketball events with zero schema rejections**. That verifies collection, not live-prediction accuracy. An earlier 63-row report remains immutable. Repeated observations are snapshots, not extra unique injuries.
 
-CBA live inputs retain timestamp freshness and regulation-duration checks. Optional previous-state validation rejects out-of-order timestamps, other fixtures and backward scores/clocks unless an explicit source correction is recorded. No automatic live feed, possession/lineup feed or newly validated within-quarter model is claimed.
+`live_feed.py` supports strict NBA/ESPN score-period-clock parsing. The NBA CDN was unavailable with HTTP 403; the independently accessible ESPN provider is the default, with unverified source freshness when no update timestamp exists. This is observation collection, not a trained NBA in-play model. Manual CBA projections remain a separate experimental feature.
 
-## Prospective protocol
+`.github/workflows/observations.yml` schedules captures at **20:15 and 23:15 UTC**, also allowing manual dispatch. Source failures remain in run reports; total provider failure fails the job. Only observation files are committed; models and frozen forecasts are not rewritten. Runtime provider access and repository write permissions are not guaranteed by an offline test. `bulten --gecmis` reads both manual and scheduled quote archives with cutoff/deduplication/conflict checks. First/last observed quotes are not certified opening/closing prices.
 
-`prospective.py` freezes confirmed future fixtures before tipoff using exclusive file creation. It stores fixture/source identities, capture time, complete probabilities/scores/intervals, data checks, code fingerprint, Git revision and dataset hashes. A SHA-256 payload detects subsequent modification; publishing the record to Git provides external pregame evidence. The checksum alone is not an external timestamp.
+## Venue and workload context
 
-Results are separate files. Only verified final scores with matching event/team/league identities count. A changed actual tipoff or major reschedule requires review. Pending/cancelled games do not become losses or disappear. Duplicate results fail rather than choosing arbitrarily.
+`travel.py` computes great-circle distance from the last observed venue to the scheduled venue, elapsed tipoff hours and timezone offset differences. Unknown venues remain null. These are schedule proxies, not actual flights, intermediate stops or full recovery time, and do not alter predictions.
 
-Settlement reports:
+Five arena identities were matched against official schedule names/addresses and one-off OpenStreetMap observations. Registry attribution: **© OpenStreetMap contributors, ODbL 1.0**; source links are retained. No generic runtime geocoder was installed. The included official schedule cache could not be freshly refreshed after HTTP 403, so `source_freshness_verified` stays false. Only necessary schedule facts are retained. Examples are [here](kanit/context/venue_examples.json), including a documented hypothetical player-context smoke example.
 
-- Winner correct/incorrect, Brier and log loss.
-- Home/away signed and absolute score errors.
-- Mean absolute error across the two team scores.
+## Existing safeguards retained
+
+Data adequacy is separate from win probability. Fewer than five observed games in 400 days, results older than 60 days and score/winner disagreement can block diagnostic selection. These thresholds are not validated success rules. `--min-guven` requires both probability and diagnostic gates, while retaining all rows.
+
+Explicit senior/gender identity imports validate event/capture/publication times and quarantine invalid rows. Cross-batch conflicts require review. Empirical intervals and feature shifts remain research diagnostics. CBA transitions reject stale/wrong-fixture/backward states unless an explicit source correction is recorded.
+
+The [four-match review](kanit/governance/four_match_review.json) remains **1/4** for the original post-tipoff reconstructions. All four have sparse-history issues, including the correct one. They are not prospective forecasts, and their original predictions are not rewritten after results.
+
+## Prospective verification
+
+The two October 23 forecasts in [the frozen record](kanit/prospective/2026-10-23.json) are unchanged. Payload SHA-256: `d786691850bb74207e9ecac38ea6c06c4ce38dde7d874d9ba5a58df0238352a0`. Source/model changes do not retroactively regenerate them. Publishing to Git provides external pregame evidence; a checksum alone is not an external timestamp.
+
+New freezes conservatively fingerprint side datasets and observation archives as well as the core data and source code. Exclusive file creation prevents overwrites. Final-result checks require matching event, team, league and tipoff identities, and write separate records with:
+
+- Winner correctness, Brier and log loss.
+- Team score signed/absolute errors and score MAE.
 - Total and margin signed/absolute errors.
-- Percentage errors using actual positive team/total scores as denominators.
-- Whether actual total/margin fell in the recorded 80% intervals.
+- Percentage errors using actual positive scores as denominators.
+- Recorded 80% interval coverage.
 
-Two matches are a small prospective demonstration, not a new general accuracy percentage. Results must never change the frozen predictions or be used to retune and rescore the same pair.
+The established scheduled follow-up checks official finals; outcomes remain pending before the games finish. Neither a two-game result nor choosing only successful examples establishes general accuracy.
 
 ## Reproduce
 
 ```bash
-python -m bbtahmin yerel-topla
-python -m bbtahmin kadin-gecmis-topla
+python -m pip install -e '.[mcp]'
+python -m bbtahmin bolgesel-topla
+python -m bbtahmin slovenya-topla
+python -m bbtahmin finlandiya-topla
+python -m bbtahmin girona-topla
+python -m bbtahmin waba-topla
 python -m bbtahmin veri-denetle
 python scripts/evaluate_winners.py
 python scripts/evaluate_protocol.py
-python scripts/evaluate_intervals.py
-python scripts/review_failures.py
+python scripts/collect_observations.py
 python -m pytest -q
-```
-
-Import a separately verified JSONL archive:
-
-```bash
-python -m bbtahmin baglam-aktar --source observations.jsonl --identities identities.json
-```
-
-Each identity has `gender: Women|Men` and `category: senior`. Each observation requires `event_id`, `competition`, `season`, `gender`, `home`, `away`, positive integer `home_score`/`away_score`, timezone-aware `event_time`/`captured_at`, nullable `available_at`, HTTPS `source_url`, `status: final`, `date_precision: timestamp|day`, and `score_verified: true`. Review the source and identity before asserting verification. Importing is not independent verification.
-
-Freeze and later check official EuroLeague fixtures:
-
-```bash
-# Refuses to overwrite an existing forecast file; uses the earliest two confirmed future fixtures.
-python scripts/forecast_cycle.py --freeze --record docs/kanit/prospective/2026-10-23.json
-# Read-only official refresh; writes a new result-check file, leaves predictions intact.
+# Later, when official finals exist; never use --freeze to overwrite the record:
 python scripts/forecast_cycle.py --record docs/kanit/prospective/2026-10-23.json
 ```
 
-Generic CLI: `prospektif --fixtures FILE --output FILE --limit 2`, and `sonuc-kontrol --record FILE --results FILE --output FILE`.
+The latest full local suite has **205 passing tests**, including the optional MCP protocol client. Tests cover source/gender/final-state identity, series exclusion, date embargoes, future mutation isolation, archive order, injury capture/fixture date and venue unknowns. See [test evidence](kanit/remaining_tests.xml). Runtime collection and CLI smoke checks are separate from offline tests.
 
-## Work that cannot honestly be marked completed
+## Research/source conditions still unresolved
 
-| Workstream | Current state / remaining condition |
+| Condition | Honest state |
 |---|---|
-| Czech domestic history | Implemented separate archive and ablation; incomplete identity mappings and unverified completeness |
-| Spain, Bulgaria, Slovenia, Finland, Austria and Estonia full league history | Not collected as complete archives; need reliable season adapters and source verification |
-| WABA | Official senior schedule page inspected; embedded third-party widget requires a tested adapter and age/category validation; no fabricated results added |
-| Hierarchical cross-league strengths | Not implemented; pooled ablation is not a substitute |
-| Point-in-time expected rosters and injuries | No adequate historical archive; actual participants remain excluded from pregame features |
-| Player transfer/rotation impact | Requires timestamped roster/minute data and independent ablation |
-| True opening/closing odds | Local snapshots exist; no comprehensive historical provider contract or subscription purchased |
-| Venue/travel and possession-level live modeling | Reliable historical source and evaluation still required |
-| New untouched historical test | Cannot recreate an untouched past after inspecting its outcomes; use future frozen predictions |
-| General success increase | Not established; retain default rather than ship a worse challenger |
-| Two future game outcomes | Necessarily pending until official finals are available; scheduled follow-up handles this |
+| Complete Austria/Estonia/Spain/Finland history | Club cohorts or selected validated seasons exist; not complete league archives. Austrian federation routes tested in this environment returned 404. Existing Vienna/ABA workload remains diagnostic only. |
+| Historical point-in-time rosters/transfers | New actual snapshots and lagged rotations implemented; missing historic publication records cannot be reconstructed from postgame participants. |
+| Learned injury, transfer, travel or possession-level effects | Context/collection implemented where source facts exist; independent sufficiently covered training/evaluation still needed before activation. |
+| True bookmaker opening/closing prices | Actual local quote capture implemented; no paid provider contract or invented retrospective timestamps. |
+| New untouched historical holdout | Already inspected past cannot become untouched; future frozen forecasts are required. |
+| General accuracy increase | Not established; worse/mixed challengers remain inactive. |
+| Future two-game final report | Requires actual official final results; scheduled follow-up already exists. |
 
-No API keys, paid subscription, inaccessible source, or future match outcome is invented. Next promotion requires same-fixture chronological comparisons, stable subgroup performance, an explicitly frozen candidate and independent prospective evidence. The two-game demonstration alone is insufficient.
+These are data, evidence and future-event conditions, not undisclosed completed features. No paid subscription, API credential, inaccessible result or successful forecast is invented.

@@ -17,6 +17,16 @@ def fingerprint(root=Path('.')):
     return hashlib.sha256(b''.join(str(p.relative_to(root)).encode()+b'\0'+p.read_bytes() for p in paths)).hexdigest()
 
 
+def dataset_hashes():
+    """Conservatively fingerprint all local model inputs, including new side data."""
+    paths={Path(p) for p in ARCHIVES.values() if Path(p).exists()}
+    for folder in ('data/competitions','data/domestic','data/context','data/observations'):
+        paths.update(Path(folder).rglob('*.parquet'))
+        paths.update(Path(folder).rglob('*.json'))
+    paths.update(Path('data').glob('*.parquet'))
+    return {str(p):hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(paths)}
+
+
 def freeze(predictions,fixtures,destination,now=None):
     now=timestamp(now or pd.Timestamp.now(tz='UTC'))
     if not predictions or len(predictions)!=len(fixtures):raise ValueError('Each prediction requires one verified fixture')
@@ -37,8 +47,7 @@ def freeze(predictions,fixtures,destination,now=None):
     try:revision=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip()
     except (OSError,subprocess.CalledProcessError):revision=None
     payload=dict(spec=SPEC,recorded_at_utc=now.isoformat(),git_revision=revision,
-        source_code_sha256=fingerprint(),datasets={path:hashlib.sha256(Path(path).read_bytes()).hexdigest()
-            for path in ARCHIVES.values() if Path(path).exists()},forecasts=rows,
+        source_code_sha256=fingerprint(),datasets=dataset_hashes(),forecasts=rows,
         selection_rule='Earliest verified future fixtures with supported identities; no outcome-based replacement.',
         note='Research predictions. Two games cannot establish general accuracy. Baseline and all limited-data flags remain visible.')
     payload['payload_sha256']=hashlib.sha256(canonical(payload)).hexdigest()

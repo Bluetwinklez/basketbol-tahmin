@@ -1,0 +1,58 @@
+{
+  "source": "Federación Española de Baloncesto",
+  "sources": [
+    "https://baloncestoenvivo.feb.es/calendario.aspx?g=4&t=2022",
+    "https://baloncestoenvivo.feb.es/calendario.aspx?g=4&t=2023",
+    "https://baloncestoenvivo.feb.es/calendario.aspx?g=4&t=2024",
+    "https://baloncestoenvivo.feb.es/calendario.aspx?g=4&t=2025",
+    "https://baloncestoenvivo.feb.es/calendario.aspx?g=4&t=2026"
+  ],
+  "captured_at_utc": "2026-10-23T06:22:07.416704+00:00",
+  "counts": [
+    {
+      "year": 2022,
+      "listed": 30,
+      "accepted": 30
+    },
+    {
+      "year": 2023,
+      "listed": 30,
+      "accepted": 29
+    },
+    {
+      "year": 2024,
+      "listed": 30,
+      "accepted": 30
+    },
+    {
+      "year": 2025,
+      "listed": 30,
+      "accepted": 30
+    },
+    {
+      "year": 2026,
+      "listed": 4,
+      "accepted": 4
+    }
+  ],
+  "rejected": [
+    {
+      "game_id": "2344939",
+      "season": 2023,
+      "source_url": "https://intrafeb.feb.es/LiveStats.API/api/v1/TeamStats/2344939",
+      "reason": "Not a confirmed final"
+    }
+  ],
+  "coverage": "Girona regular-calendar cohort only, not complete Spanish league history. Only matching final widget/calendar scores accepted; rejected stale/conflicting widget rows retained in this report. Actual widget tipoffs and quarter totals checked. Historical publication time and neutral venues unknown. Public session token is not stored.",
+  "games": 123,
+  "teams": 22,
+  "seasons": {
+    "2022-23": 30,
+    "2023-24": 29,
+    "2024-25": 30,
+    "2025-26": 30,
+    "2026-27": 4
+  },
+  "sha256": "f4247582bdcb6a79af5bc3bb5988694bae9a12b7252f5c3cb4806337a6a42d57",
+  "used_in_default_model": false
+}

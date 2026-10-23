@@ -1,0 +1,47 @@
+{
+  "captured_at_utc": "2026-10-23T06:20:25.483752+00:00",
+  "attribution": "© OpenStreetMap contributors; ODbL 1.0",
+  "license_url": "https://opendatacommons.org/licenses/odbl/1-0/",
+  "venues": {
+    "ATJ": {
+      "name": "ZALGIRIO ARENA",
+      "latitude": 54.8904082,
+      "longitude": 23.9144444,
+      "timezone": "Europe/Vilnius",
+      "source_url": "https://www.openstreetmap.org/way/106050077",
+      "identity_method": "Arena name/city and official schedule address manually matched to OSM; not a generic runtime geocoder"
+    },
+    "ATI7": {
+      "name": "MOVISTAR ARENA",
+      "latitude": 40.4238624,
+      "longitude": -3.6717885,
+      "timezone": "Europe/Madrid",
+      "source_url": "https://www.openstreetmap.org/way/15808330",
+      "identity_method": "Arena name/city and official schedule address manually matched to OSM; not a generic runtime geocoder"
+    },
+    "AMH": {
+      "name": "PALAU BLAUGRANA",
+      "latitude": 41.3800318,
+      "longitude": 2.1200886,
+      "timezone": "Europe/Madrid",
+      "source_url": "https://www.openstreetmap.org/way/45330589",
+      "identity_method": "Arena name/city and official schedule address manually matched to OSM; not a generic runtime geocoder"
+    },
+    "AMY": {
+      "name": "ULKER SPORTS AND EVENT HALL",
+      "latitude": 40.9928871,
+      "longitude": 29.1048303,
+      "timezone": "Europe/Istanbul",
+      "source_url": "https://www.openstreetmap.org/way/616526115",
+      "identity_method": "Arena name/city and official schedule address manually matched to OSM; not a generic runtime geocoder"
+    },
+    "AVT1": {
+      "name": "SUNEL ARENA",
+      "latitude": 38.0816894,
+      "longitude": 23.6865247,
+      "timezone": "Europe/Athens",
+      "source_url": "https://www.openstreetmap.org/way/206451656",
+      "identity_method": "Arena name/city and official schedule address manually matched to OSM; not a generic runtime geocoder"
+    }
+  }
+}
