@@ -116,3 +116,12 @@ def test_csv_export_has_point_errors_and_neutralizes_formula_names():
                        total_absolute_error=3.,margin_absolute_error=7.,total_in_80=True,margin_in_80=True))
     rows=list(csv.DictReader(io.StringIO(export_csv(report(),[row]).decode('utf-8-sig'))))
     assert rows[0]['home']=="'=FORMULA()" and rows[0]['margin_absolute_error']=='7.0'
+
+
+def test_football_model_selection_rejects_unknown_paths(local_app):
+    server,state=local_app
+    assert request(server,'/api/football?model=opponent')[0]==200
+    assert request(server,'/api/football?model=../../other')[0]==400
+    status,_,_=request(server,'/api/football/run',dict(model='unknown'),
+                      {'Content-Type':'application/json','X-App-Token':state.token})
+    assert status==400 and state.job['status']=='idle'

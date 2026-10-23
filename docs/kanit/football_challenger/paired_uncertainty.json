@@ -1,0 +1,36 @@
+{
+  "expanded_20_leagues": {
+    "games": 4701,
+    "days": 243,
+    "baseline_correct": 2242,
+    "opponent_correct": 2279,
+    "accuracy_delta": 0.007870665815783875,
+    "accuracy_delta_day_block_95": [
+      0.0,
+      0.015866841294181696
+    ],
+    "log_loss_delta": -0.011295404594828634,
+    "log_loss_delta_day_block_95": [
+      -0.015614704227692714,
+      -0.0070133678730704375
+    ],
+    "note": "Paired bootstrap by fixture date across leagues, 2500 resamples, seed 1729; descriptive retrospective uncertainty, not prospective proof."
+  },
+  "original_14_leagues": {
+    "games": 3744,
+    "days": 221,
+    "baseline_correct": 1789,
+    "opponent_correct": 1819,
+    "accuracy_delta": 0.008012820512820512,
+    "accuracy_delta_day_block_95": [
+      -0.0013478329838887662,
+      0.01640572062232525
+    ],
+    "log_loss_delta": -0.011073597567847551,
+    "log_loss_delta_day_block_95": [
+      -0.01624098531101062,
+      -0.006077692902432102
+    ],
+    "note": "Paired bootstrap by fixture date across leagues, 2500 resamples, seed 1729; descriptive retrospective uncertainty, not prospective proof."
+  }
+}

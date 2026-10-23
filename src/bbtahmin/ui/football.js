@@ -9,7 +9,7 @@ function render() {
   const running=busy||state?.job?.status==='running';
   $('saved').disabled=running;$('refresh').disabled=running;
   $('status').textContent=state?.job?.message||'Ready';
-  if(!report)return;
+  if(!report){$('cards').replaceChildren();$('issues').replaceChildren();$('summary').textContent='No saved forecasts for this model. Run saved sources or refresh to create its separate ledger.';return;}
   $('summary').textContent=`${state.sample?'Saved demonstration · ':''}${report.forecasts.length} recorded forecasts · ${report.pending} pending · ${report.publisher_performance.games} community finals · 0 officially verified. Checked ${report.checked_at_utc}.`;
   const search=$('search').value.toLocaleLowerCase();const league=$('league').value;
   $('cards').replaceChildren();
@@ -31,7 +31,7 @@ function render() {
   for(const issue of [...report.source_errors,...report.skipped])$('issues').append(el('li',JSON.stringify(issue)));
 }
 async function poll() {
-  try {const res=await fetch('/api/football',{cache:'no-store'});if(!res.ok)throw Error('Could not load report');state=await res.json();
+  try {const res=await fetch('/api/football?model='+encodeURIComponent($('model').value),{cache:'no-store'});if(!res.ok)throw Error('Could not load report');state=await res.json();
     const leagues=[...new Set((state.report?.forecasts||[]).map(x=>x.fixture.league))].sort();
     const value=$('league').value;$('league').replaceChildren(el('option','All football leagues'));$('league').firstChild.value='';
     for(const code of leagues){const o=el('option',code);o.value=code;$('league').append(o);}$('league').value=value;render();
@@ -39,9 +39,10 @@ async function poll() {
 }
 async function run(refresh) {
   if(busy||state?.job?.status==='running')return;busy=true;render();
-  try {const res=await fetch('/api/football/run',{method:'POST',headers:{'Content-Type':'application/json','X-App-Token':token},body:JSON.stringify({refresh,days:7})});if(!res.ok){const data=await res.json();throw Error(data.error||'Run failed');}await poll();}
+  try {const res=await fetch('/api/football/run',{method:'POST',headers:{'Content-Type':'application/json','X-App-Token':token},body:JSON.stringify({refresh,days:7,model:$('model').value})});if(!res.ok){const data=await res.json();throw Error(data.error||'Run failed');}await poll();}
   catch(e){$('status').textContent=e.message;}finally{busy=false;$('saved').disabled=false;$('refresh').disabled=false;}
 }
 $('saved').addEventListener('click',()=>run(false));$('refresh').addEventListener('click',()=>run(true));
+$('model').addEventListener('change',poll);
 $('search').addEventListener('input',render);$('league').addEventListener('change',render);
 poll();setInterval(poll,3000);

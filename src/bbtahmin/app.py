@@ -16,7 +16,7 @@ from datetime import datetime, timezone
 from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from importlib.resources import files
 from pathlib import Path
-from urllib.parse import urlsplit
+from urllib.parse import urlsplit, parse_qs
 
 from .daily import LEAGUES, markdown, run
 
@@ -138,22 +138,24 @@ class AppState:
                 self.job.update(status='failed', message=f'{type(exc).__name__}: {exc}', finished_at=utc_now())
 
     def submit_football(self, payload):
-        if not isinstance(payload, dict) or set(payload)-{'refresh','days'}:
+        if not isinstance(payload, dict) or set(payload)-{'refresh','days','model'}:
             raise ValueError('Unknown football options')
         refresh,days=payload.get('refresh',False),payload.get('days',7)
+        model=payload.get('model','baseline')
+        if model not in ('baseline','opponent'): raise ValueError('Unknown football model')
         if type(refresh) is not bool or type(days) is not int or not 1<=days<=14:
             raise ValueError('Choose refresh true/false and 1..14 days')
         with self.lock:
             if self.job['status']=='running': raise RuntimeError('A run is already in progress')
             self.job=dict(status='running',message='Processing football sources',started_at=utc_now(),finished_at=None)
-        self.pool.submit(self._football_work,refresh,days)
+        self.pool.submit(self._football_work,refresh,days,model)
 
-    def _football_work(self, refresh, days):
+    def _football_work(self, refresh, days, model):
         try:
             from .football.data import collect
             from .football.daily import run as football_run
             if refresh: collect(current_only=True)
-            report=football_run(days,self.football_directory)
+            report=football_run(days,self.football_directory,model=model)
             with self.lock:
                 self.job.update(status='partial' if report['source_errors'] or report['skipped'] else 'succeeded',
                                 message='Football report saved',finished_at=utc_now())
@@ -161,12 +163,14 @@ class AppState:
             with self.lock:
                 self.job.update(status='failed',message=f'{type(exc).__name__}: {exc}',finished_at=utc_now())
 
-    def football_snapshot(self):
+    def football_snapshot(self, model='baseline'):
+        if model not in ('baseline','opponent'): raise ValueError('Unknown football model')
         report=None
-        path=Path(self.football_directory)/'latest.json'
+        suffix=Path('opponent/latest.json') if model=='opponent' else Path('latest.json')
+        path=Path(self.football_directory)/suffix
         sample=False
         if not path.exists():
-            path=Path('data/football_ledger/latest.json');sample=True
+            path=Path('data/football_ledger')/suffix;sample=True
         if path.exists(): report=json.loads(path.read_text('utf8'))
         with self.lock: job=dict(self.job)
         return dict(report=report,job=job,sample=sample)
@@ -227,7 +231,9 @@ class Handler(BaseHTTPRequestHandler):
                 raw = raw.replace('__CSRF_TOKEN__', self.server.state.token)
             return self.send(raw.encode('utf8'), kind)
         if path == '/api/football':
-            return self.send(self.server.state.football_snapshot())
+            model=parse_qs(urlsplit(self.path).query).get('model',['baseline'])[0]
+            try: return self.send(self.server.state.football_snapshot(model))
+            except ValueError as exc: return self.send(dict(error=str(exc)),status=400)
         snapshot = self.server.state.snapshot()
         if path == '/api/state':
             return self.send(snapshot)

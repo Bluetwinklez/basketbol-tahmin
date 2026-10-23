@@ -103,7 +103,9 @@ def main():
     travel=sub.add_parser('seyahat-baglam',help='Observed venue-to-venue schedule proxies; no inferred actual itinerary')
     travel.add_argument('--event-id',required=True);travel.add_argument('--asof',required=True)
     football=sub.add_parser('futbol',help='Separate football data, goal forecasts and chronological evaluation')
-    football.add_argument('action',choices=['collect','daily','predict','evaluate'])
+    football.add_argument('action',choices=['collect','daily','predict','evaluate','compare'])
+    football.add_argument('--model',choices=['baseline','opponent'],default='baseline')
+    football.add_argument('--leagues',nargs='+',choices=__import__('bbtahmin.football.data',fromlist=['LEAGUES']).LEAGUES)
     football.add_argument('--first',type=int,default=2010)
     football.add_argument('--last',type=int)
     football.add_argument('--current-only',action='store_true')
@@ -120,14 +122,17 @@ def main():
         from .football.data import collect,load,write_json
         from .football.model import GoalModel,evaluate
         if args.action=='collect':
-            result=collect(args.first,args.last,current_only=args.current_only)
+            result=collect(args.first,args.last,current_only=args.current_only,leagues=args.leagues)
         elif args.action=='daily':
             from .football.daily import run as football_run
             if args.refresh: collect(current_only=True)
-            result=football_run(args.days,args.output)
-        elif args.action=='evaluate':
+            result=football_run(args.days,args.output,model=args.model)
+        elif args.action in ('evaluate','compare'):
             import gzip
-            result=evaluate(load(),args.season)
+            if args.action=='compare':
+                from .football.opponent import compare
+                result=compare(load(),args.season or '2025-26')
+            else: result=evaluate(load(),args.season)
             predictions=result.pop('predictions')
             target=Path(args.output);target.mkdir(parents=True,exist_ok=True)
             (target/'predictions.json.gz').write_bytes(gzip.compress(json.dumps(predictions,ensure_ascii=False,allow_nan=False).encode(),mtime=0))
@@ -139,7 +144,10 @@ def main():
             if pd.Timestamp(args.date).date()<pd.Timestamp.now(tz='UTC').date():
                 parser.error('Use evaluate for historical predictions')
             cutoff=min(pd.Timestamp(args.date).date(),pd.Timestamp.now(tz='UTC').date())
-            result=GoalModel(load(),args.league,str(cutoff)).predict(args.home,args.away)
+            if args.model=='opponent':
+                from .football.opponent import OpponentGoalModel as SelectedModel
+            else: SelectedModel=GoalModel
+            result=SelectedModel(load(),args.league,str(cutoff)).predict(args.home,args.away)
             result['fixture_date']=args.date
             result['fixture_verified']=False
         print(json.dumps(result,ensure_ascii=False,indent=2,allow_nan=False))

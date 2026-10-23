@@ -13,8 +13,11 @@ ROOT = Path('data/football')
 LEAGUES = {'TR1': 'Turkish Süper Lig', 'EN1': 'Premier League', 'EN2': 'Championship',
            'DE1': 'Bundesliga', 'DE2': '2. Bundesliga', 'ES1': 'La Liga', 'ES2': 'Segunda División',
            'IT1': 'Serie A', 'IT2': 'Serie B', 'FR1': 'Ligue 1', 'FR2': 'Ligue 2',
-           'NL1': 'Eredivisie', 'PT1': 'Primeira Liga', 'AT1': 'Austrian Bundesliga'}
+           'NL1': 'Eredivisie', 'PT1': 'Primeira Liga', 'AT1': 'Austrian Bundesliga',
+           'BE1': 'Belgian First Division A', 'GR1': 'Greek Super League', 'SC1': 'Scottish Premiership',
+           'EN3': 'English League One', 'EN4': 'English League Two', 'AT2': 'Austrian 2. Liga'}
 JSON_CODES = {c: c[:2].lower()+'.'+c[2:] for c in LEAGUES if c != 'TR1'}
+JSON_CODES['SC1']='sco.1'
 # Explicit identity aliases only; no fuzzy cross-club merges.
 ALIASES = {'kasimpasa sk': 'kasimpasa', 'kasimpasa': 'kasimpasa', 'konyaspor': 'atiker konyaspor',
            'alanyaspor': 'aytemiz alanyaspor', 'genclerbirligi': 'genclerbirligi'}
@@ -112,7 +115,9 @@ def parse_turkey(text, season, source, captured):
     return result
 
 
-def collect(first=2010, last=None, json_dir=None, europe_dir=None, root=ROOT, current_only=False):
+def collect(first=2010, last=None, json_dir=None, europe_dir=None, root=ROOT, current_only=False, leagues=None):
+    selected=set(LEAGUES if leagues is None else leagues)
+    if not selected or selected-set(LEAGUES): raise ValueError('Unknown football league selection')
     now = pd.Timestamp.now(tz='UTC'); active = now.year if now.month>=7 else now.year-1
     last = active if last is None else last
     if current_only: first=last=active
@@ -129,6 +134,7 @@ def collect(first=2010, last=None, json_dir=None, europe_dir=None, root=ROOT, cu
                 season=f'{year}-{str(year+1)[-2:]}'
                 candidates = [(c, directory/season/(token+'.json')) for c,token in JSON_CODES.items()] if repo=='football.json' else [('TR1', directory/'turkey'/(season+'_tr1.txt'))]
                 for code,path in candidates:
+                    if code not in selected: continue
                     if not path.exists():
                         if year==active: errors.append(dict(league=code,season=season,error='Source file unavailable'))
                         continue
@@ -137,8 +143,15 @@ def collect(first=2010, last=None, json_dir=None, europe_dir=None, root=ROOT, cu
                     try:
                         raw=path.read_text('utf8')
                         rows = parse_json(json.loads(raw),code,season,source,captured) if repo=='football.json' else parse_turkey(raw,season,source,captured)
-                        ids=[r['event_id'] for r in rows]
-                        if len(ids)!=len(set(ids)): raise ValueError('Duplicate fixture identity')
+                        unique={};duplicates=0
+                        for item in rows:
+                            previous=unique.get(item['event_id'])
+                            if previous:
+                                if any(item[k]!=previous[k] for k in ('date','home','away','status','home_goals','away_goals')):
+                                    raise ValueError('Conflicting duplicate fixture identity')
+                                duplicates+=1
+                            else: unique[item['event_id']]=item
+                        rows=list(unique.values())
                         # Per-source atomic validation: an invalid file never replaces prior data.
                         target=root/(code+'_'+season+'.json.gz')
                         if target.exists():
@@ -155,7 +168,7 @@ def collect(first=2010, last=None, json_dir=None, europe_dir=None, root=ROOT, cu
                         temp=target.with_suffix('.part')
                         temp.write_bytes(gzip.compress(json.dumps(payload,ensure_ascii=False,allow_nan=False).encode(),mtime=0))
                         temp.replace(target)
-                        files.append(dict(league=code,season=season,rows=len(rows),finals=sum(r['status']=='final' for r in rows),sha256=hashlib.sha256(raw.encode()).hexdigest()))
+                        files.append(dict(league=code,season=season,rows=len(rows),duplicate_rows_removed=duplicates,finals=sum(r['status']=='final' for r in rows),sha256=hashlib.sha256(raw.encode()).hexdigest()))
                     except Exception as exc: errors.append(dict(league=code,season=season,error=str(exc),retained_previous=True))
         except Exception as exc: errors.append(dict(repository=repo,error=str(exc),retained_previous=True))
     frame=load(root)
@@ -164,6 +177,22 @@ def collect(first=2010, last=None, json_dir=None, europe_dir=None, root=ROOT, cu
                 fixtures=int((frame.status=='scheduled').sum()) if len(frame) else 0,
                 leagues={c:int(((frame.league==c)&(frame.status=='final')).sum()) for c in LEAGUES} if len(frame) else {},
                 note='CC0 community archive, not official results. Partial/stale seasons are possible. Day precision; no same-day finals.')
+    coverage={}
+    if len(frame):
+        for code in LEAGUES:
+            subset=frame.loc[frame.league==code]
+            finals=subset.loc[subset.status=='final']
+            season_label=f'{active}-{str(active+1)[-2:]}'
+            current=subset.loc[subset.season==season_label]
+            coverage[code]=dict(finals=len(finals),seasons=sorted(finals.season.unique().tolist()),
+                latest_final_date=finals.date.max() if len(finals) else None,
+                active_season_finals=int((current.status=='final').sum()),
+                active_season_snapshot_available=len(current)>0,
+                upcoming_fixtures=int(((current.status=='scheduled')&(current.date>captured[:10])).sum()))
+            if current.empty and not any(e.get('league')==code and e.get('season')==season_label for e in errors):
+                errors.append(dict(league=code,season=season_label,error='No active-season snapshot; historical support only'))
+    report['league_coverage']=coverage
+    report['refreshed_leagues']=sorted(selected)
     write_json(root/'collection.json',report)
     if not files: raise RuntimeError('All football source imports failed; prior snapshots retained')
     return report
