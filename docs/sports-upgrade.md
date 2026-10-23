@@ -12,7 +12,8 @@ publisher cohorts, not a claim that all five seasons are complete. No active
 
 Sources are pinned to OpenFootball `football.json` commit
 `e6744429ee395bc86f247348c6184bb08d4eb361` (CC0). Each compressed snapshot retains
-the immutable source URL, capture timestamp and source SHA-256. Exact counts and
+the immutable source URL, capture timestamp, verified upstream Git blob identity
+and exact original-source SHA-256 (including original line endings). Exact counts and
 gaps are in [expansion evidence](../data/football/expansion_20261023.json).
 The collector now recognizes all three codes, including the explicit `sco.1`
 filename mapping. Unknown/mixed leagues, duplicate natural fixture identities,

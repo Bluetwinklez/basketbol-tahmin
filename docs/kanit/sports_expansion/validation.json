@@ -8,6 +8,9 @@
   "football_comparison": {"games": 229, "variants": 3, "same_monthly_cohorts": true, "prospective": false},
   "added_football_finals": 3133,
   "added_basketball_finals": 0,
+  "ci_verified_commit": "3db9a98360bc4ccb3fc76f174c4309585e678de0",
+  "ci_verified_run": "https://github.com/Bluetwinklez/basketbol-tahmin/actions/runs/40016016045",
+  "ci": {"python_passed": 278, "dom_passed": 9, "rendered_viewports_passed": [1440, 390, 320], "real_http_exports_passed": true},
   "basketball_backfill_executed": false,
   "note": "CI results are authoritative for full-suite and rendered-fixture execution. No local visual pass or general success-rate improvement is claimed."
 }
