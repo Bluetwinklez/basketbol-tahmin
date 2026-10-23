@@ -33,10 +33,13 @@ def _takim_kodu(ad):
     return None
 
 
-def ayristir(metin):
+def ayristir(metin, include_dates=False):
     """PDF metninden (mac, takim, oyuncu, durum, neden) satırları."""
     satirlar, mac, takim = [], None, None
+    game_date=None
     for satir in metin.splitlines():
+        date=re.search(r'(?<![0-9])(\d{2}/\d{2}/\d{4})(?![0-9])',satir)
+        if date:game_date=pd.to_datetime(date[1],format='%m/%d/%Y').strftime('%Y-%m-%d')
         m = MAC.search(satir)
         if m:
             mac = f'{RAPOR_KODU.get(m.group(1), m.group(1))}@{RAPOR_KODU.get(m.group(2), m.group(2))}'
@@ -48,9 +51,10 @@ def ayristir(metin):
             satir = parca[1] if len(parca) > 1 else ''
         o = SATIR.search(satir)
         if o and mac and takim:
-            satirlar.append(dict(mac=mac, takim=takim, oyuncu=o.group('oyuncu'), durum=o.group('durum'),
-                                 neden=o.group('neden').strip()))
-    return pd.DataFrame(satirlar, columns=['mac', 'takim', 'oyuncu', 'durum', 'neden'])
+            row=dict(mac=mac,takim=takim,oyuncu=o.group('oyuncu'),durum=o.group('durum'),neden=o.group('neden').strip())
+            if include_dates:row['game_date']=game_date
+            satirlar.append(row)
+    return pd.DataFrame(satirlar, columns=['mac', 'takim', 'oyuncu', 'durum', 'neden']+(['game_date'] if include_dates else []))
 
 
 def _saat_adi(t):
@@ -81,7 +85,9 @@ def son_rapor(an, geriye_saat=30):
             yol.write_bytes(veri)
         with pdfplumber.open(yol) as pdf:
             metin = '\n'.join(p.extract_text() or '' for p in pdf.pages)
-        tablo = ayristir(metin)
+        tablo = ayristir(metin,include_dates=True)
+        import hashlib
+        tablo.attrs['source_pdf_sha256']=hashlib.sha256(yol.read_bytes()).hexdigest()
         tablo.attrs['rapor'] = f'{ad} ET'
         tablo.attrs['published_at_utc'] = t.tz_convert('UTC').isoformat()
         return tablo

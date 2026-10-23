@@ -22,6 +22,7 @@ def main():
     prediction.add_argument('maclar',nargs='+',help='"Ev - Deplasman" biçiminde bir ya da daha çok maç')
     prediction.add_argument('--lig',choices=['E','U','NBA','NBL','CBA','ECW','FEC','VTB'],help='Verilmezse takım adlarından bulunur')
     prediction.add_argument('--tarih',help='Maç zamanı, ör. 2026-10-23T20:45 (saat dilimi yoksa İstanbul). Varsayılan: şimdi')
+    prediction.add_argument('--hierarchical',action='store_true',help='Research-only linked senior-women attack/defence model; ECW only')
     prediction.add_argument('--adaptive-form',action='store_true',help='Deneysel: önceki sezonun testine göre aylık model güncellemesi; yalnız ECW/FEC/VTB')
     prediction.add_argument('--json',action='store_true',help='Çıktıyı JSON olarak ver')
     prediction.add_argument('--kaydet',action='store_true',help='Tahminleri defter/tahminler.csv dosyasına ekle')
@@ -61,6 +62,20 @@ def main():
     settled=sub.add_parser('sonuc-kontrol',help='Score verified final results without rewriting frozen forecasts')
     settled.add_argument('--record',required=True);settled.add_argument('--results',required=True)
     settled.add_argument('--output',required=True)
+    feed=sub.add_parser('canli-veri-topla',help='Archive NBA scoreboard observations; no validated live predictor')
+    feed.add_argument('--provider',choices=['espn','nba'],default='espn')
+    sub.add_parser('bolgesel-topla',help='Collect official Bulgarian women and public Parnu domestic observations')
+    sub.add_parser('slovenya-topla',help='Collect verified senior-women first-league official results')
+    sub.add_parser('finlandiya-topla',help='Collect dated senior-women Finnish league results')
+    sub.add_parser('girona-topla',help='Collect Girona senior-women match facts with actual FEB tipoff times')
+    sub.add_parser('waba-topla',help='Collect verified senior WABA results with conservative day precision')
+    injuries=sub.add_parser('sakatlik-arsivle',help='Archive an actual timestamped official NBA report')
+    injuries.add_argument('--hours',type=float,default=2)
+    players=sub.add_parser('oyuncu-baglam',help='Lagged NBA rotation and genuinely observed dated injury context')
+    players.add_argument('--ev',required=True);players.add_argument('--dep',required=True)
+    players.add_argument('--tarih',required=True);players.add_argument('--asof')
+    travel=sub.add_parser('seyahat-baglam',help='Observed venue-to-venue schedule proxies; no inferred actual itinerary')
+    travel.add_argument('--event-id',required=True);travel.add_argument('--asof',required=True)
     args=parser.parse_args()
     if args.command in ('veri-denetle','baglam-aktar','prospektif','sonuc-kontrol'):
         import json
@@ -81,6 +96,34 @@ def main():
             target=Path(args.output);target.parent.mkdir(parents=True,exist_ok=True)
             with target.open('x') as f:json.dump(result,f,indent=2,allow_nan=False)
         print(json.dumps(result,ensure_ascii=False,indent=2,allow_nan=False))
+    elif args.command=='canli-veri-topla':
+        import json
+        from .live_feed import capture
+        print(json.dumps(capture(args.provider),indent=2))
+    elif args.command in ('finlandiya-topla','girona-topla','waba-topla'):
+        if args.command=='finlandiya-topla':from .veri.finland import collect
+        elif args.command=='waba-topla':from .veri.waba import collect
+        else:from .veri.spain import collect
+        collect()
+    elif args.command=='bolgesel-topla':
+        from .veri.regional import bulgaria,parnu
+        bulgaria();parnu()
+    elif args.command=='slovenya-topla':
+        from .veri.slovenia import collect
+        collect()
+    elif args.command=='sakatlik-arsivle':
+        import json
+        from .player_context import archive_injuries
+        if not 0<args.hours<=6:parser.error('--hours must be >0 and <=6')
+        print(json.dumps(archive_injuries(hours=args.hours),indent=2))
+    elif args.command=='seyahat-baglam':
+        import json
+        from .travel import local_context
+        print(json.dumps(local_context(args.event_id,args.asof),indent=2,allow_nan=False))
+    elif args.command=='oyuncu-baglam':
+        import json
+        from .player_context import context
+        print(json.dumps(context(args.ev,args.dep,args.tarih,args.asof),indent=2,allow_nan=False))
     elif args.command=='yerel-topla':
         from .veri.domestic import collect
         collect()
@@ -146,5 +189,5 @@ def main():
         run()
     else:
         from .tahmin import run
-        run(args.lig,args.maclar,args.tarih,args.json,args.kaydet,args.sakatlik,args.min_guven,args.adaptive_form)
+        run(args.lig,args.maclar,args.tarih,args.json,args.kaydet,args.sakatlik,args.min_guven,args.adaptive_form,args.hierarchical)
 if __name__=='__main__':main()

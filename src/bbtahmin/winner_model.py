@@ -11,7 +11,7 @@ from sklearn.metrics import log_loss,brier_score_loss
 from . import competition_model as base
 from .ozellik import build_features,FEATURES
 
-SPEC='winner-prior-selection-v1'
+SPEC='winner-prior-selection-v2-disjoint-calibration'
 
 
 def women_history(g):
@@ -46,8 +46,12 @@ def _candidate(g,x,season,previous,kind):
     inner=estimator().fit(x.loc[train,cols],target[train] if kind=='ridge' else y[train])
     final=estimator().fit(x.loc[train|val,cols],target[train|val] if kind=='ridge' else y[train|val])
     if kind=='ridge':
-        pv=inner.predict(x.loc[val,cols]);sigma=max(float(np.std(target[val]-pv,ddof=1)),1.)
-        return norm.cdf(pv/sigma),norm.cdf(final.predict(x.loc[test,cols])/sigma)
+        pv=inner.predict(x.loc[val,cols]);residual=target[val]-pv
+        days=g.loc[val,'tarih_utc'].dt.floor('D');unique=sorted(days.unique());boundary=unique[len(unique)//2]
+        calibration=(days<boundary).to_numpy()
+        selection_sigma=max(float(np.std(residual[calibration],ddof=1)),1.)
+        final_sigma=max(float(np.std(residual,ddof=1)),1.)
+        return norm.cdf(pv/selection_sigma),norm.cdf(final.predict(x.loc[test,cols])/final_sigma)
     return inner.predict_proba(x.loc[val,cols])[:,1],final.predict_proba(x.loc[test,cols])[:,1]
 
 
@@ -57,12 +61,19 @@ def prepare(code,g=None):
     result=dict(base=(g,build_features(g)),exposure=g)
     if code=='ECW':
         extended,x,combined=women_history(g);result['women']=(extended,x);result['exposure']=combined
-    domestic=Path('data/domestic/CZ_W_ZBL.parquet')
-    if code=='ECW' and domestic.exists():
+    domestic=[]
+    for path in sorted(Path('data/domestic').glob('*.parquet')):
+        if path.name.endswith('_fixtures.parquet'):continue
+        p=pd.read_parquet(path)
+        if 'gender' in p and set(p.gender)=={'Women'}:domestic.append(p)
+    if code=='ECW' and domestic:
         from .domestic_features import features
         base_features=result['base'][1].reset_index(drop=True)
-        extra=features(g,pd.read_parquet(domestic)).drop(columns='mac_id')
+        extra=features(g,pd.concat(domestic,ignore_index=True)).drop(columns='mac_id')
         result['domestic']=(g,pd.concat([base_features,extra],axis=1))
+    if code=='ECW':
+        from .hierarchical import observations
+        result['hierarchical']=observations(g)
     return result
 
 
@@ -74,7 +85,10 @@ def _metrics(y,p):
 def fold(code,prepared,season):
     g,x=prepared['base'];previous=sorted(s for s in g.sezon.unique() if s<season)[-1]
     val=g.sezon==previous;test=g.sezon==season
-    y=(g.loc[val,'ev_skor'].to_numpy()>g.loc[val,'dep_skor'].to_numpy()).astype(int)
+    full_y=(g.loc[val,'ev_skor'].to_numpy()>g.loc[val,'dep_skor'].to_numpy()).astype(int)
+    days=g.loc[val,'tarih_utc'].dt.floor('D');unique=sorted(days.unique());boundary=unique[len(unique)//2]
+    selection=(days>=boundary).to_numpy();y=full_y[selection]
+    if len(y)<30 or (~selection).sum()<30:raise ValueError('Disjoint calibration and selection windows need 30 games each')
     candidates={};validation={}
     specs=[('score','base','ridge'),('logistic','base','logistic'),('elo','base','elo')]
     if code=='ECW':specs += [('women_score','women','ridge'),('women_logistic','women','logistic')]
@@ -85,17 +99,21 @@ def fold(code,prepared,season):
         # Validation and target season rows must be identical across representations.
         assert data.loc[data.sezon==previous,'mac_id'].tolist()==g.loc[val,'mac_id'].tolist()
         assert data.loc[data.sezon==season,'mac_id'].tolist()==g.loc[test,'mac_id'].tolist()
-        candidates[name]=pt;validation[name]=_metrics(y,pv)
+        candidates[name]=pt;validation[name]=_metrics(y,pv[selection])
     if code=='ECW':
         from .club_strength import candidate
         pv,pt=candidate(prepared,season,previous)
-        candidates['club_strength']=pt;validation['club_strength']=_metrics(y,pv)
+        candidates['club_strength']=pt;validation['club_strength']=_metrics(y,pv[selection])
+        from .hierarchical import fold as hierarchical_fold
+        hg,exposure,groups=prepared['hierarchical']
+        pv,pt,_=hierarchical_fold(hg,exposure,groups,season)
+        candidates['hierarchical']=pt;validation['hierarchical']=_metrics(y,pv[selection])
     reference=validation['score'];minimum_gain=math.ceil(len(y)*.01)
     eligible=[name for name,m in validation.items() if name!='score' and
         m['correct']>=reference['correct']+minimum_gain and m['log_loss']<=reference['log_loss']-.005 and m['brier']<=reference['brier']]
     selected=min(eligible,key=lambda name:(-validation[name]['correct'],validation[name]['log_loss'],name)) if eligible else 'score'
-    info=dict(league=code,season=season,selection_season=previous,validation_games=len(y),selected=selected,validation=validation,
-        rule='At least ceil(1% of validation games) extra correct, log loss lower by >=0.005 and no worse Brier; select by correct then log loss. Earlier season only.')
+    info=dict(league=code,season=season,selection_season=previous,validation_games=len(y),calibration_games=int((~selection).sum()),selection_window_start_utc=boundary.isoformat(),selected=selected,validation=validation,
+        rule='At least ceil(1% of validation games) extra correct, log loss lower by >=0.005 and no worse Brier; select by correct then log loss. Earlier season only; its first UTC-day half calibrates, second disjoint half selects.')
     return candidates,info
 
 

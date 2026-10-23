@@ -196,8 +196,15 @@ def _tahmin_et(lig, eslesmeler, tarih, veri='data/maclar.parquet', rapor=None, a
     return sonuc
 
 
-def tahmin_et(lig, eslesmeler, tarih, veri='data/maclar.parquet', rapor=None, adaptive_form=False):
-    results=_tahmin_et(lig,eslesmeler,tarih,veri,rapor,adaptive_form)
+def tahmin_et(lig, eslesmeler, tarih, veri='data/maclar.parquet', rapor=None, adaptive_form=False, hierarchical=False):
+    if hierarchical:
+        if lig!='ECW' or adaptive_form:raise ValueError('Hierarchical research requires ECW and cannot combine with adaptive form')
+        from .hierarchical import predict
+        date=pd.Timestamp(tarih)
+        date=(date.tz_localize('Europe/Istanbul') if date.tzinfo is None else date).tz_convert('UTC')
+        results=[predict(h,a,date) for h,a in eslesmeler]
+    else:
+        results=_tahmin_et(lig,eslesmeler,tarih,veri,rapor,adaptive_form)
     from .quality import assess
     path=('data/cba_games.parquet' if lig=='CBA' else
           f'data/competitions/{lig}.parquet' if lig in ('ECW','FEC','VTB') else veri)
@@ -264,7 +271,8 @@ def oran_ayir(mac):
     return metin.strip(), *values
 
 
-def run(lig, maclar, tarih, json_cikti=False, kaydet=False, injury_report=False, confidence_threshold=None, adaptive_form=False):
+def run(lig, maclar, tarih, json_cikti=False, kaydet=False, injury_report=False, confidence_threshold=None, adaptive_form=False, hierarchical=False):
+    if hierarchical and (lig!='ECW' or adaptive_form):raise ValueError('--hierarchical requires ECW and cannot combine with --adaptive-form')
     if adaptive_form and lig not in ('ECW','FEC','VTB'):
         raise ValueError('--adaptive-form requires an explicit ECW, FEC or VTB league')
     if confidence_threshold is not None and (not np.isfinite(confidence_threshold) or not .5<=confidence_threshold<=1):
@@ -304,7 +312,7 @@ def run(lig, maclar, tarih, json_cikti=False, kaydet=False, injury_report=False,
         except Exception as e:  # rapor alınamazsa tahmin eksiksiz kadro varsayımıyla verilir
             import sys
             print(f'[!] Sakatlık raporu alınamadı: {e}',file=sys.stderr)
-    sonuclar = [t for l, es in gruplar.items() for t in tahmin_et(l, es, tarih, rapor=rapor if l == 'NBA' else None, adaptive_form=adaptive_form)]
+    sonuclar = [t for l, es in gruplar.items() for t in tahmin_et(l, es, tarih, rapor=rapor if l == 'NBA' else None, adaptive_form=adaptive_form,hierarchical=hierarchical)]
     for t in sonuclar:
         if confidence_threshold is not None:
             t['guven_esigi']=confidence_threshold

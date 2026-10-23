@@ -58,3 +58,13 @@ def test_conflicting_fixture_identity_or_same_instant_price_fails(tmp_path,chang
 def test_invalid_asof_is_rejected(tmp_path,cutoff):
     with pytest.raises(ValueError,match='as_of'):
         history('123',tmp_path,cutoff)
+
+
+def test_scheduled_odds_archive_merges_without_duplicate_latest(tmp_path):
+    value=snapshot('2020-01-01T10:00Z')
+    write(tmp_path,'iddaa_a.json',value)
+    folder=tmp_path/'data/observations/odds';folder.mkdir(parents=True)
+    (folder/'iddaa_b.json').write_text(json.dumps(snapshot('2020-01-01T11:00Z',1.5)))
+    (folder/'latest.json').write_text((folder/'iddaa_b.json').read_text())
+    result=history('123',tmp_path,'2020-01-01T12:00Z')
+    assert result['observations']==2 and result['latest_observed']['home_odds']==1.5
