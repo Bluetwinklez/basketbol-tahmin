@@ -13,12 +13,14 @@ from .kutu_ozellik import kutu_ozellikleri, yukle, KUTU_FEATURES, KUTU_LIGLERI
 from .eksik_ozellik import eksik_ozellikleri, rapor_eslestir, EKSIK_FEATURES, EKSIK_LIGLERI, yukle as eksik_yukle
 from .model import fit_predict, regression
 from .takim_ad import coz
+from .veri.asia import CODES as ASIA_CODES,NAMES as ASIA_NAMES
 
 Z80 = norm.ppf(.9)  # %80 aralığın yarı genişliği (standart sapma cinsinden)
 MODELLER = ('logistic', 'mov_elo', 'skor', 'topluluk', 'hist_gradient_boosting')
-LIGLER = ('E', 'U', 'NBA', 'NBL', 'CBA','ECW','FEC','VTB')
+LIGLER = ('E', 'U', 'NBA', 'NBL', 'CBA','ECW','FEC','VTB',*ASIA_CODES)
 LIG_ADI = {'E': 'EuroLeague', 'U': 'EuroCup', 'NBA': 'NBA', 'NBL': 'Avustralya NBL','CBA':'Chinese CBA',
            'ECW':'EuroCup Women','FEC':'FIBA Europe Cup','VTB':'VTB United League'}
+LIG_ADI.update(ASIA_NAMES)
 
 
 def sezon_adi(tarih):
@@ -100,6 +102,9 @@ def _tahmin_et(lig, eslesmeler, tarih, veri='data/maclar.parquet', rapor=None, a
     tarih = pd.Timestamp(tarih)
     tarih = tarih.tz_localize('Europe/Istanbul') if tarih.tzinfo is None else tarih
     tarih = tarih.tz_convert('UTC')
+    if lig in ASIA_CODES:
+        from .asia_model import predict
+        return [predict(lig,ev,dep,tarih) for ev,dep in eslesmeler]
     if lig=='CBA':
         from .cba_model import predict
         return [predict(ev,dep,tarih) for ev,dep in eslesmeler]
@@ -207,6 +212,7 @@ def tahmin_et(lig, eslesmeler, tarih, veri='data/maclar.parquet', rapor=None, ad
         results=_tahmin_et(lig,eslesmeler,tarih,veri,rapor,adaptive_form)
     from .quality import assess
     path=('data/cba_games.parquet' if lig=='CBA' else
+          f'data/asia/{lig}.parquet' if lig in ASIA_CODES else
           f'data/competitions/{lig}.parquet' if lig in ('ECW','FEC','VTB') else veri)
     from .runtime_history import load as load_history
     history=load_history(path)
@@ -282,6 +288,9 @@ def run(lig, maclar, tarih, json_cikti=False, kaydet=False, injury_report=False,
         gecmis=pd.concat([gecmis,pd.read_parquet('data/cba_games.parquet')],ignore_index=True)
     for code in ('ECW','FEC','VTB'):
         path=Path(f'data/competitions/{code}.parquet')
+        if path.exists():gecmis=pd.concat([gecmis,pd.read_parquet(path)],ignore_index=True)
+    for code in ASIA_CODES:
+        path=Path(f'data/asia/{code}.parquet')
         if path.exists():gecmis=pd.concat([gecmis,pd.read_parquet(path)],ignore_index=True)
     tarih = tarih or pd.Timestamp.now(tz='Europe/Istanbul').isoformat()
     an = pd.Timestamp(tarih)
