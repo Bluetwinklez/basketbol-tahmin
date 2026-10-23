@@ -6,7 +6,10 @@
     "https://www.bleague.jp/schedule/?year=2023&mon=all&day=&tab=2&event=7",
     "https://www.bleague.jp/schedule/?year=2024&mon=all&day=&tab=2&event=7",
     "https://www.bleague.jp/schedule/?year=2025&mon=all&day=&tab=2&event=7",
-    "https://www.bleague.jp/schedule/?year=2026&mon=all&day=&tab=2&event=7"
+    "https://www.bleague.jp/schedule/?year=2026&mon=all&day=&tab=2&event=7",
+    "https://www.bleague.jp/schedule/?year=2016&mon=all&day=&tab=2&event=7",
+    "https://www.bleague.jp/schedule/?year=2017&mon=all&day=&tab=2&event=7",
+    "https://www.bleague.jp/schedule/?year=2018&mon=all&day=&tab=2&event=7"
   ],
   "counts": [
     {
@@ -44,15 +47,36 @@
       "accepted": 108,
       "pages": 37,
       "excluded": 1028
+    },
+    {
+      "year": 2016,
+      "accepted": 540,
+      "pages": 28,
+      "excluded": 7
+    },
+    {
+      "year": 2017,
+      "accepted": 540,
+      "pages": 28,
+      "excluded": 10
+    },
+    {
+      "year": 2018,
+      "accepted": 540,
+      "pages": 28,
+      "excluded": 12
     }
   ],
-  "captured_at_utc": "2026-10-23T08:03:22.000606+00:00",
+  "captured_at_utc": "2026-10-23T11:29:57.515667+00:00",
   "refresh_current_requested": false,
   "cache_reparse_only": true,
   "limitations": "Regular-season event only; playoffs/cups excluded. All advertised pages requested, not an independent completeness proof. Logo codes are source identities; reorganisations, renamed clubs and 2026 league changes require caution. Historical publication, neutral venues and overtime unverified. No blocked detailed-context endpoint used.",
-  "games": 2149,
-  "teams": 33,
+  "games": 3769,
+  "teams": 45,
   "seasons": {
+    "2016-17": 540,
+    "2017-18": 540,
+    "2018-19": 540,
     "2021-22": 361,
     "2022-23": 420,
     "2023-24": 420,
@@ -60,6 +84,6 @@
     "2025-26": 420,
     "2026-27": 108
   },
-  "dataset_sha256": "9b849f7b7bf796c8dc182c763a29c84e21b196c39ea2a15574beac357d5bd200",
+  "dataset_sha256": "a54aa7ec1069ae2f9253f3e93d88ad33909f5e6a7a33be9ed7880f5a894a55e7",
   "trained": false
 }

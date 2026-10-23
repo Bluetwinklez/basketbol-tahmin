@@ -9,20 +9,8 @@ URL='https://api-live.euroleague.net/v2/competitions/E/seasons/E2026/games'
 
 
 def facts(payload,captured):
- if payload.get('total',len(payload.get('data',[])))!=len(payload.get('data',[])):raise ValueError('Incomplete official schedule')
- fixtures=[];results=[]
- for row in payload['data']:
-  if row['season']['code']!='E2026':raise ValueError('Wrong season')
-  start=pd.Timestamp(row['utcDate']);home=row['local']['club'];away=row['road']['club']
-  common=dict(event_id=row['identifier'],source_url=URL,captured_at=captured,start_utc=start.isoformat(),
-   league='E',home=home['code'],away=away['code'],home_name=home['name'],away_name=away['name'])
-  if row.get('played'):
-   h,a=row['local']['score'],row['road']['score']
-   if type(h) is int and type(a) is int and min(h,a)>0 and h!=a and start<pd.Timestamp(captured):
-    results.append(dict(common,status='final',home_score=h,away_score=a))
-  elif row.get('confirmedDate') and row.get('confirmedHour') and row.get('gameStatus')=='Confirmed' and start>pd.Timestamp(captured):
-   fixtures.append(dict(common,status='scheduled'))
- return fixtures,results
+ from bbtahmin.euro_facts import facts as official_facts
+ return official_facts(payload,captured,'E2026',URL)
 
 
 def main():

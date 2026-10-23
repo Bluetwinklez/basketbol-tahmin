@@ -73,6 +73,15 @@ def main():
     asia=sub.add_parser('asya-topla',help='Collect separate KBL/Japan/PBA-conference archives')
     asia.add_argument('--kaynaklar',nargs='+',choices=['KBL','Japan','PBA'],default=['KBL','Japan','PBA'])
     asia.add_argument('--current-only',action='store_true',help='Refresh current schedules without repeating historical backfills')
+    asia.add_argument('--baslangic',type=int,help='First source year (Japanese season start, PBA season end, KBL calendar year)')
+    asia.add_argument('--bitis',type=int,help='Last source year, inclusive; requires --baslangic')
+    daily=sub.add_parser('gunluk',help='Refresh fixtures, freeze pregame forecasts and report separate final-result errors')
+    daily.add_argument('--ligler',nargs='+',choices=['E','KBL','JP_B1','JP_B2','PBA_GOV'],default=['E','KBL','JP_B1','JP_B2','PBA_GOV'])
+    daily.add_argument('--guncelle',action='store_true',help='Refresh public schedules and current results; failures remain visible')
+    daily.add_argument('--saat',type=int,default=48,help='Upcoming fixture horizon, 1..168 hours')
+    daily.add_argument('--min-guven',type=float,default=.65,help='Probability filter, not an observed accuracy guarantee')
+    daily.add_argument('--cikti',default='rapor/daily',help='Persistent local record directory; reuse it to retain prospective history')
+    daily.add_argument('--json',action='store_true',help='Machine-readable report instead of the console Markdown table')
     injuries=sub.add_parser('sakatlik-arsivle',help='Archive an actual timestamped official NBA report')
     injuries.add_argument('--hours',type=float,default=2)
     players=sub.add_parser('oyuncu-baglam',help='Lagged NBA rotation and genuinely observed dated injury context')
@@ -81,7 +90,12 @@ def main():
     travel=sub.add_parser('seyahat-baglam',help='Observed venue-to-venue schedule proxies; no inferred actual itinerary')
     travel.add_argument('--event-id',required=True);travel.add_argument('--asof',required=True)
     args=parser.parse_args()
-    if args.command in ('veri-denetle','baglam-aktar','prospektif','sonuc-kontrol'):
+    if args.command=='gunluk':
+        import json
+        from .daily import run,markdown
+        result=run(args.ligler,args.cikti,args.guncelle,args.saat,args.min_guven)
+        print(json.dumps(result,ensure_ascii=False,indent=2,allow_nan=False) if args.json else markdown(result))
+    elif args.command in ('veri-denetle','baglam-aktar','prospektif','sonuc-kontrol'):
         import json
         from pathlib import Path
         if args.command=='veri-denetle':
@@ -107,6 +121,12 @@ def main():
     elif args.command=='asya-topla':
         import pandas as pd
         today=pd.Timestamp.now(tz='UTC');year=today.year if today.month>=7 else today.year-1
+        if args.current_only and (args.baslangic is not None or args.bitis is not None):
+            parser.error('--current-only cannot be combined with historical year bounds')
+        if args.bitis is not None and args.baslangic is None:parser.error('--bitis requires --baslangic')
+        last=args.bitis if args.bitis is not None else today.year
+        if args.baslangic is not None and not 1990<=args.baslangic<=last<=today.year+1:
+            parser.error('Invalid historical source-year bounds')
         for source in args.kaynaklar:
             if source=='KBL':from .veri.korea import collect
             elif source=='Japan':from .veri.japan import collect
@@ -115,6 +135,9 @@ def main():
                 if source=='KBL':collect(first=today.year,last=today.year)
                 elif source=='Japan':collect(years=(year,))
                 # PBA's current publisher is refreshed below; do not assume a July campaign boundary.
+            elif args.baslangic is not None:
+                if source=='Japan':collect(years=tuple(range(args.baslangic,last+1)))
+                else:collect(first=args.baslangic,last=last)
             else:collect()
             if source=='PBA':
                 from .veri.pba_current import collect as current_pba

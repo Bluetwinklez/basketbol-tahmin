@@ -2,16 +2,18 @@
 
 A Python research package for pregame basketball probabilities, score margins and totals. It combines a reproducible historical archive, chronological model evaluation, an experimental Iddaa bulletin reader and a read-only local MCP server.
 
-**The core archive contains 54,808 games; the separate Asian extension adds 9,243 results. More data has not established a general increase in prediction accuracy.** Results below distinguish full coverage from confidence-filtered subsets, and historical tests from live performance.
+**The core archive contains 54,808 games; the separate Asian archives contain 12,850 results. More data has not established a general increase in prediction accuracy.** Results below distinguish full coverage from confidence-filtered subsets, and historical tests from live performance.
 
 ## What works
+
+For daily use, run **`python -m bbtahmin gunluk --guncelle`** after installation. It refreshes supported schedules, preserves the earliest pregame forecasts, and writes a separate final-result/error report to `rapor/daily/latest.md`. Source failures and rejected forecasts remain visible. See [daily workflow, historical backfill and measurement limits](docs/daily-workflow.md).
 
 | Capability | Status |
 |---|---|
 | EuroLeague, EuroCup, NBA and Australian NBL history | Available; 54,808 stored games |
 | Chinese CBA | Separate 2,386-game archive, 20 teams; experimental CBA-only score model |
 | EuroCup Women (ECW), FIBA Europe Cup men (FEC), VTB men | Separate experimental archives: 674 / 651 / 860 games; independent pregame models |
-| KBL, Japan B1/B2, PBA conferences | 9,243 separate results; KBL/Japan and Governors Cup experimental models; other PBA cups have insufficient training folds |
+| KBL, Japan B1/B2, PBA conferences | 12,850 separate results; KBL/Japan and Governors Cup experimental models; other PBA cups have insufficient training folds |
 | CBA in-play state | Experimental manual score/period/remaining-clock projection; regulation only, no automatic live scoreboard |
 | Home-win probability, score, margin and total; 80% score intervals | Available; uncertainty estimates need continued validation |
 | Home baseline, Elo, MOV Elo, logistic regression, gradient boosting, score regression, ensemble | Chronological evaluation; parameters selected using earlier seasons |
@@ -34,7 +36,9 @@ A Python research package for pregame basketball probabilities, score margins an
 
 ## Asian data extension
 
-Added **9,243 distinct final results**: KBL **2,549**, Japan B1 **3,657**, Japan B2 **2,149**, PBA Governors Cup **322**, Commissioners Cup **291**, Philippine Cup **275**. These archives are independent of the existing 54,808-game core; player/fixture rows are not counted as extra completed games. There are also **1,018 validated PBA player-match observations**, currently excluded from default model inputs.
+The latest backfill adds **3,607 official Japanese finals**. Broader history reduces log loss but lowers completed matched-cohort winner accuracy from **1,523/2,219 to 1,517/2,219** in B1 and **886/1,260 to 878/1,260** in B2. The established 2021–22 onward default is retained. [Exact comparisons and source limits](docs/kanit/history_expansion/README.md).
+
+Stored **12,850 distinct final results**: KBL **2,549**, Japan B1 **5,644**, Japan B2 **3,769**, PBA Governors Cup **322**, Commissioners Cup **291**, Philippine Cup **275**. These archives are independent of the existing 54,808-game core; player/fixture rows are not counted as extra completed games. There are also **1,018 validated PBA player-match observations**, currently excluded from default model inputs.
 
 The extension fits fixed league-specific score/logistic/Elo/ensemble candidates using earlier-season training and calibration. It never silently borrows NBA/NBL models for these leagues. PBA conferences stay separate, the current Governors Cup campaign is explicitly matched rather than inferred from July, and Japanese 2026 league-format changes are recorded. Missing coverage, rejected player rows and skipped model folds are visible. See [Asian sources, training, limitations and refresh commands](docs/asian-data-and-models.md).
 

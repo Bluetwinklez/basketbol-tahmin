@@ -1,0 +1,265 @@
+{
+  "generated_at_utc": "2026-10-23T11:31:10.737263+00:00",
+  "source_sha256": "aa475b06836a0dc46ed15ecb617ec0969d96463e07b1f741f0efad7ef460d3b2",
+  "datasets": {
+    "data/asia/JP_B2.parquet": "a54aa7ec1069ae2f9253f3e93d88ad33909f5e6a7a33be9ed7880f5a894a55e7"
+  },
+  "leagues": {
+    "JP_B2": {
+      "default_games": 2149,
+      "expanded_games": 3769,
+      "added_games": 1620,
+      "added_seasons": [
+        "2016-17",
+        "2017-18",
+        "2018-19"
+      ],
+      "comparison": {
+        "selected_policy": {
+          "completed_matched_cohort": {
+            "control": {
+              "correct": 886,
+              "n": 1260,
+              "accuracy": 0.7031746031746032,
+              "log_loss": 0.5699422756032104,
+              "brier": 0.19471558963191324,
+              "score_mae": 8.650797428840969,
+              "total_mae": 13.839806094516739,
+              "margin_mae": 10.464038876694037
+            },
+            "expanded": {
+              "correct": 878,
+              "n": 1260,
+              "accuracy": 0.6968253968253968,
+              "log_loss": 0.5659199155353466,
+              "brier": 0.19323975547895786,
+              "score_mae": 8.661530176759403,
+              "total_mae": 13.774753980710363,
+              "margin_mae": 10.499312194798389
+            },
+            "log_loss_delta_expanded_minus_control": -0.004022360067863892,
+            "paired_day_bootstrap_95_interval": [
+              -0.009660917171064726,
+              0.0020997724168267716
+            ]
+          },
+          "partial_2026_27": {
+            "control": {
+              "correct": 72,
+              "n": 108,
+              "accuracy": 0.6666666666666666,
+              "log_loss": 0.6431894584169346,
+              "brier": 0.22356505000611798,
+              "score_mae": 9.080756228561965,
+              "total_mae": 12.959367721191265,
+              "margin_mae": 12.319321133951588
+            },
+            "expanded": {
+              "correct": 70,
+              "n": 108,
+              "accuracy": 0.6481481481481481,
+              "log_loss": 0.6363170607045897,
+              "brier": 0.2205741597936036,
+              "score_mae": 8.943193670679106,
+              "total_mae": 12.701382166169424,
+              "margin_mae": 12.156489999637124
+            },
+            "log_loss_delta_expanded_minus_control": -0.006872397712344812,
+            "paired_day_bootstrap_95_interval": [
+              -0.020021001975104185,
+              0.00378251627790943
+            ]
+          }
+        },
+        "score": {
+          "completed_matched_cohort": {
+            "control": {
+              "correct": 897,
+              "n": 1260,
+              "accuracy": 0.7119047619047619,
+              "log_loss": 0.5601452498184549,
+              "brier": 0.1905046406819376,
+              "score_mae": 8.650797428840969,
+              "total_mae": 13.839806094516739,
+              "margin_mae": 10.464038876694037
+            },
+            "expanded": {
+              "correct": 887,
+              "n": 1260,
+              "accuracy": 0.703968253968254,
+              "log_loss": 0.5635830987879654,
+              "brier": 0.19205019626759876,
+              "score_mae": 8.661530176759403,
+              "total_mae": 13.774753980710363,
+              "margin_mae": 10.499312194798389
+            },
+            "log_loss_delta_expanded_minus_control": 0.0034378489695104336,
+            "paired_day_bootstrap_95_interval": [
+              -0.0024171401063637016,
+              0.009589252507453246
+            ]
+          },
+          "partial_2026_27": {
+            "control": {
+              "correct": 69,
+              "n": 108,
+              "accuracy": 0.6388888888888888,
+              "log_loss": 0.6507892690386781,
+              "brier": 0.22670538004978588,
+              "score_mae": 9.080756228561965,
+              "total_mae": 12.959367721191265,
+              "margin_mae": 12.319321133951588
+            },
+            "expanded": {
+              "correct": 72,
+              "n": 108,
+              "accuracy": 0.6666666666666666,
+              "log_loss": 0.6440314954922557,
+              "brier": 0.22399333376315533,
+              "score_mae": 8.943193670679106,
+              "total_mae": 12.701382166169424,
+              "margin_mae": 12.156489999637124
+            },
+            "log_loss_delta_expanded_minus_control": -0.0067577735464221375,
+            "paired_day_bootstrap_95_interval": [
+              -0.023307872544910208,
+              0.006952021245435109
+            ]
+          }
+        }
+      },
+      "expanded_folds": [
+        {
+          "season": "2018-19",
+          "previous_season": "2017-18",
+          "training_games": 540,
+          "calibration_games": 250,
+          "final_training_games": 1080,
+          "calibration_season_gap": 1,
+          "selection_games": 290,
+          "selection_window_start_utc": "2018-01-01T00:00:00+00:00",
+          "selected": "ensemble",
+          "selection_log_loss": {
+            "score": 0.5604350179403208,
+            "logistic": 0.5605401118960618,
+            "elo": 0.5639987845785285,
+            "ensemble": 0.5581928515110448
+          },
+          "rule": "Lowest log loss on the second UTC-day half of the preceding season. Score probabilities calibrate on its first half. Fixed learners; test outcomes never select a candidate."
+        },
+        {
+          "season": "2021-22",
+          "previous_season": "2018-19",
+          "training_games": 1080,
+          "calibration_games": 275,
+          "final_training_games": 1620,
+          "calibration_season_gap": 3,
+          "selection_games": 265,
+          "selection_window_start_utc": "2019-01-15T00:00:00+00:00",
+          "selected": "score",
+          "selection_log_loss": {
+            "score": 0.6014065020987088,
+            "logistic": 0.6058520645256371,
+            "elo": 0.6066744320054325,
+            "ensemble": 0.6018582796192894
+          },
+          "rule": "Lowest log loss on the second UTC-day half of the preceding season. Score probabilities calibrate on its first half. Fixed learners; test outcomes never select a candidate."
+        },
+        {
+          "season": "2022-23",
+          "previous_season": "2021-22",
+          "training_games": 1620,
+          "calibration_games": 196,
+          "final_training_games": 1981,
+          "calibration_season_gap": 1,
+          "selection_games": 165,
+          "selection_window_start_utc": "2022-01-07T00:00:00+00:00",
+          "selected": "elo",
+          "selection_log_loss": {
+            "score": 0.5380277886950311,
+            "logistic": 0.4893430385802974,
+            "elo": 0.475016965903139,
+            "ensemble": 0.48743236767363135
+          },
+          "rule": "Lowest log loss on the second UTC-day half of the preceding season. Score probabilities calibrate on its first half. Fixed learners; test outcomes never select a candidate."
+        },
+        {
+          "season": "2023-24",
+          "previous_season": "2022-23",
+          "training_games": 1981,
+          "calibration_games": 198,
+          "final_training_games": 2401,
+          "calibration_season_gap": 1,
+          "selection_games": 222,
+          "selection_window_start_utc": "2023-01-07T00:00:00+00:00",
+          "selected": "elo",
+          "selection_log_loss": {
+            "score": 0.6255915766634988,
+            "logistic": 0.6308154393529898,
+            "elo": 0.6190935712862664,
+            "ensemble": 0.6229694975691134
+          },
+          "rule": "Lowest log loss on the second UTC-day half of the preceding season. Score probabilities calibrate on its first half. Fixed learners; test outcomes never select a candidate."
+        },
+        {
+          "season": "2024-25",
+          "previous_season": "2023-24",
+          "training_games": 2401,
+          "calibration_games": 205,
+          "final_training_games": 2821,
+          "calibration_season_gap": 1,
+          "selection_games": 215,
+          "selection_window_start_utc": "2024-01-07T00:00:00+00:00",
+          "selected": "score",
+          "selection_log_loss": {
+            "score": 0.5846641521284917,
+            "logistic": 0.5848854952379186,
+            "elo": 0.5961300973014367,
+            "ensemble": 0.5857347382612527
+          },
+          "rule": "Lowest log loss on the second UTC-day half of the preceding season. Score probabilities calibrate on its first half. Fixed learners; test outcomes never select a candidate."
+        },
+        {
+          "season": "2025-26",
+          "previous_season": "2024-25",
+          "training_games": 2821,
+          "calibration_games": 223,
+          "final_training_games": 3241,
+          "calibration_season_gap": 1,
+          "selection_games": 197,
+          "selection_window_start_utc": "2025-01-13T00:00:00+00:00",
+          "selected": "ensemble",
+          "selection_log_loss": {
+            "score": 0.5708501406710111,
+            "logistic": 0.5747570373887151,
+            "elo": 0.5725039820750853,
+            "ensemble": 0.5697719493277521
+          },
+          "rule": "Lowest log loss on the second UTC-day half of the preceding season. Score probabilities calibrate on its first half. Fixed learners; test outcomes never select a candidate."
+        },
+        {
+          "season": "2026-27",
+          "previous_season": "2025-26",
+          "training_games": 3241,
+          "calibration_games": 202,
+          "final_training_games": 3661,
+          "calibration_season_gap": 1,
+          "selection_games": 218,
+          "selection_window_start_utc": "2026-01-04T00:00:00+00:00",
+          "selected": "logistic",
+          "selection_log_loss": {
+            "score": 0.5217486064431315,
+            "logistic": 0.5169922158729732,
+            "elo": 0.5274616972347429,
+            "ensemble": 0.5197152176265855
+          },
+          "rule": "Lowest log loss on the second UTC-day half of the preceding season. Score probabilities calibrate on its first half. Fixed learners; test outcomes never select a candidate."
+        }
+      ],
+      "skipped_folds": [],
+      "default_changed": false
+    }
+  },
+  "method": "Same fixed learners and preceding-season selection; compare 2021+ control against older-history challenger on identical fixture IDs. Earlier outcomes only. Completed matched and partial current cohorts separate. 2000 paired day-block bootstrap draws, fixed seed.",
+  "decision": "Keep the established 2021+ default. Expanded history is exploratory; retrospective comparisons do not establish prospective improvement."
+}
