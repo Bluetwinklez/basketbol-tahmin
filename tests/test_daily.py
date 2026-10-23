@@ -37,6 +37,7 @@ def test_daily_freezes_once_and_keeps_first_prediction(tmp_path, monkeypatch):
     path = Path(first['upcoming'][0]['record'])
     original = path.read_bytes()
     p['ev_skor'], p['dep_skor'] = 100., 70.
+    f['start_utc']='2026-10-23T17:00:00+00:00'  # Same instant, different serialization.
     again = daily.run(['JP_B1'], now='2026-10-23T13:00Z')
     assert path.read_bytes() == original
     assert verify(json.loads(original))

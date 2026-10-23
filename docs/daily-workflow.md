@@ -10,6 +10,8 @@ python -m bbtahmin gunluk --guncelle
 
 This command refreshes public EuroLeague, KBL, Japanese B1/B2 and current PBA Governors Cup schedules/results. It generates forecasts for confirmed fixtures within the next 48 hours, keeps the first forecast for each event, checks available finals, and prints a readable table. A probability filter defaults to 65%; passing it is not a validated recommendation or a guaranteed success rate.
 
+Source progress is printed separately on stderr, so `--json` remains machine-readable. A Japanese refresh checks every page of the active season and can take several minutes; use `--ligler` to request only the competitions you need.
+
 The report is written to `rapor/daily/latest.md`. Timestamped JSON checks and exclusive-create forecast files retain the detailed evidence. The directory is local and ignored by Git: back it up if you use it as your prospective record. Always reuse the same `--cikti` directory. The original checked-in EuroLeague forecasts under `docs/kanit/prospective/` are also reused automatically, ahead of any later prediction of the same event. Each fixture is counted once, using its earliest known record.
 
 ```bash

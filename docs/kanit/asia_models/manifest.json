@@ -1,20 +1,24 @@
 {
   "spec": "asia-separate-prior-policy-v1",
-  "generated_at_utc": "2026-10-23T08:09:02.923012+00:00",
+  "generated_at_utc": "2026-10-23T11:30:34.611268+00:00",
   "files": {
     "data/asia/KBL.parquet": "9e09a0ebac480fc13986b381787b1dfd5d1266dfed9856cc44167fb8ecb13278",
-    "data/asia/JP_B1.parquet": "ff4e19f1f6098166cc1fff8c7faf92620f947f2665251937a7e4c620b98467dd",
-    "data/asia/JP_B2.parquet": "9b849f7b7bf796c8dc182c763a29c84e21b196c39ea2a15574beac357d5bd200",
+    "data/asia/JP_B1.parquet": "c2537d3e547f2b02eed057b7ba5ef6f7822b23e83e06df5f23986075d90f8233",
+    "data/asia/JP_B2.parquet": "a54aa7ec1069ae2f9253f3e93d88ad33909f5e6a7a33be9ed7880f5a894a55e7",
     "data/asia/PBA_GOV.parquet": "44e05154637d3d5c01f7bc19ff6929c75e1605cd4e0edd82afc12bcb9547ad3c",
     "data/asia/PBA_COM.parquet": "e69325ce46706aaf79ed34327e525eb39769858e0a76c32e2a70314a4340c21c",
     "data/asia/PBA_PHI.parquet": "6b86ee459c474989e9a4059650ed1aed201ada33e533a6dd2d9a0a4b8cad0ad9"
   },
-  "source_code_sha256": "6adccda140f96b07ea985f9e9364adb374156f238172db4f673442b6d3148c01",
+  "source_code_sha256": "aa475b06836a0dc46ed15ecb617ec0969d96463e07b1f741f0efad7ef460d3b2",
   "packages": {
     "numpy": "2.2.6",
     "pandas": "2.2.3",
     "scipy": "1.15.3",
     "scikit-learn": "1.6.1"
+  },
+  "default_history_start": {
+    "JP_B1": "2021-22",
+    "JP_B2": "2021-22"
   },
   "method": "Independent divisions/conferences. Fixed Ridge alpha=10 and logistic C=1; Elo and equal ensemble. Earlier seasons train, preceding season first UTC-day half calibrates score scale, second half selects by log loss, refit on all preceding seasons. No target-season tuning; same-day features withheld.",
   "limitations": "Retrospectively collected numeric results; publication-time history and independently complete coverage unavailable. PBA nominal sides are not verified home court. League reorganisation, imports and rule changes are not fully modeled. Historical accuracy is not a prospective or guaranteed rate. Intervals are not conditional coverage guarantees. Small/partial seasons and selected coverage are separate."
