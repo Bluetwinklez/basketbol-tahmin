@@ -56,6 +56,9 @@ def assess(p,g,now=None):
         if h['recent_400d_games']<5:reasons.append(f'{team}: fewer than five observed games in 400 days')
         if h['days_since_last'] is None or h['days_since_last']>60:reasons.append(f'{team}: missing or stale recent results')
     blocking=list(reasons)
+    if p.get('calibration_regime_gap'):
+        issue='Prior calibration season is not adjacent; current-regime calibration is unverified'
+        reasons.append(issue);blocking.append(issue)
     if p.get('artifact_status',{}).get('dataset_matches_evaluation') is False:
         reasons.append('Prediction dataset differs from the historical benchmark dataset')
     if ((p['ev_kazanir']>.5 and p['fark']<0) or (p['ev_kazanir']<.5 and p['fark']>0)):
@@ -73,6 +76,7 @@ def inventory(root=Path('.')):
     root=Path(root);report=[]
     archives=dict(ARCHIVES)
     archives.update({p.stem:str(p.relative_to(root)) for p in (root/'data/domestic').glob('*.parquet') if not p.name.endswith('_fixtures.parquet')})
+    archives.update({p.stem:str(p.relative_to(root)) for p in (root/'data/asia').glob('*.parquet') if p.stem in ('KBL','JP_B1','JP_B2','PBA_GOV','PBA_COM','PBA_PHI')})
     for name,rel in archives.items():
         path=root/rel
         if not path.exists():continue

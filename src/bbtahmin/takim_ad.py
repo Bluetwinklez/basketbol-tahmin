@@ -23,7 +23,7 @@ EK_ADLAR = {
 def anahtar(metin):
     """Büyük/küçük harf, Türkçe karakter ve noktalama farkını yok sayar."""
     metin = str(metin).replace('ı', 'i').replace('İ', 'i')
-    metin = unicodedata.normalize('NFKD', metin).encode('ascii', 'ignore').decode()
+    metin = ''.join(c for c in unicodedata.normalize('NFKD',metin) if not unicodedata.combining(c))
     return ' '.join(''.join(c if c.isalnum() else ' ' for c in metin.casefold()).split())
 
 
@@ -67,6 +67,10 @@ def aday_adlari(lig, kodlar):
             adlar |= set(specific.get(kod,[]))
         elif lig == 'CBA':
             path=Path('data/cba_teams.json')
+            entry=json.loads(path.read_text('utf8')).get(kod,{}) if path.exists() else {}
+            adlar |= {entry.get('name','')} | set(entry.get('aliases',[]))
+        elif lig in ('KBL','JP_B1','JP_B2','PBA_GOV','PBA_COM','PBA_PHI'):
+            path=Path(f'data/asia/{lig}_teams.json')
             entry=json.loads(path.read_text('utf8')).get(kod,{}) if path.exists() else {}
             adlar |= {entry.get('name','')} | set(entry.get('aliases',[]))
         elif lig == 'NBL':
