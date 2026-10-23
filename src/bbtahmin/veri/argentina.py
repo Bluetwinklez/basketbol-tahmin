@@ -69,7 +69,7 @@ def _base(home,away,when,season,captured,source,identifier,precision):
                 date_precision=precision,regulation_minutes=40,tarafsiz_saha=False)
 
 
-def parse_history(html,year,captured,source):
+def parse_history(html,year,captured,source,rejected=None):
     soup=BeautifulSoup(html,'html.parser');season=f'{year}-{str(year+1)[-2:]}'
     for field,value in [('comp','LNB'),('season',season)]:
         selected=soup.select_one(f'input[name="{field}"]')
@@ -91,7 +91,9 @@ def parse_history(html,year,captured,source):
             if when.normalize()>=pd.Timestamp(captured).tz_convert(ZONE).normalize():continue
             hs,ds=[c.get_text(' ',strip=True) for c in cells[2:4]]
             if not hs.isdecimal() or not ds.isdecimal() or not 0<int(hs)<=250 or not 0<int(ds)<=250 or hs==ds:
-                raise ValueError('Invalid historical final score')
+                if rejected is None:raise ValueError('Invalid historical final score')
+                rejected.append(dict(season=season,date=date,home=cells[1].get_text(' ',strip=True),away=cells[4].get_text(' ',strip=True),home_score=hs,away_score=ds,reason='Invalid historical final score',source_url=source))
+                continue
             home,away=cells[1].get_text(' ',strip=True),cells[4].get_text(' ',strip=True)
             link=cells[6].find('a',href=True)
             identity=f'{season}:{date}:{team(home)}:{team(away)}'
@@ -99,7 +101,7 @@ def parse_history(html,year,captured,source):
             row.update(ev_skor=int(hs),dep_skor=int(ds),source_kind='publisher_history_not_official',
                        publisher_match_url=link['href'] if link else None)
             rows.append(row)
-    if eligible<50:raise ValueError('History page has too few final rows or an unexpected schema')
+    if len(rows)<50:raise ValueError('History page has too few valid final rows or an unexpected schema')
     return rows
 
 
@@ -148,7 +150,7 @@ def collect(first=2022,last=None):
     if not 2022<=first<=last<=active:raise ValueError('Argentina source coverage starts in 2022')
     root=Path('data/competitions');root.mkdir(parents=True,exist_ok=True)
     path=root/f'{CODE}.parquet';previous=pd.read_parquet(path) if path.exists() else pd.DataFrame()
-    records=[];fixtures=[];errors=[];sources=[];counts=[];official_ok=False
+    records=[];fixtures=[];errors=[];sources=[];counts=[];rejected=[];official_ok=False
     for year in range(first,last+1):
         if year<active:
             url=HISTORY+'?'+urlencode(dict(comp='LNB',season=f'{year}-{str(year+1)[-2:]}'))
@@ -156,7 +158,7 @@ def collect(first=2022,last=None):
             url=BASE+'/laliga/fixture?'+urlencode(dict(handler='ProximosPartidos',fechaInicio=f'{year}-07-01',fechaFin=(now+pd.Timedelta(days=30)).strftime('%Y-%m-%d')))
         try:
             html=fetch(url,refresh=year==active);sources.append(dict(url=url,sha256=hashlib.sha256(html.encode()).hexdigest()))
-            if year<active:rows=parse_history(html,year,now.isoformat(),url)
+            if year<active:rows=parse_history(html,year,now.isoformat(),url,rejected)
             else:
                 rows,fixtures=parse_official(html,year,now.isoformat(),url)
                 # Positive listing scores alone cannot certify a completed match.
@@ -168,20 +170,26 @@ def collect(first=2022,last=None):
                 if unresolved:errors.append(dict(year=year,error=f'{unresolved} listing scores lacked explicit final confirmation'))
                 rows=[row for row in checked if row is not None];official_ok=True
             records+=rows;counts.append(dict(season=f'{year}-{str(year+1)[-2:]}',finals=len(rows)))
-        except Exception as exc:errors.append(dict(year=year,error=f'{type(exc).__name__}: {exc}',retained_previous=True))
+        except Exception as exc:
+            errors.append(dict(year=year,error=f'{type(exc).__name__}: {exc}',retained_previous=True))
+            print(json.dumps(errors[-1],ensure_ascii=False),flush=True)
     combined=merge_results(previous,records)
     # Prepare validated outputs before replacing persisted files.
-    temp=path.with_suffix('.part');combined.to_parquet(temp,index=False);temp.replace(path)
-    (root/f'{CODE}_teams.json').write_text(json.dumps(catalog(),ensure_ascii=False,indent=2),encoding='utf8')
+    frame=None
     if official_ok:
         target=root/f'{CODE}_fixtures.parquet'
         columns=['mac_id','lig','sezon','tarih_utc','ev','dep','home_name','away_name','source_url','captured_at_utc','date_precision','status']
         frame=pd.DataFrame(fixtures,columns=columns+['provider_event_token','source_kind','listing_url','regulation_minutes','tarafsiz_saha'])
         if frame.mac_id.duplicated().any():raise ValueError('Duplicate official Argentina fixtures')
-        temporary=target.with_suffix('.part');frame.to_parquet(temporary,index=False);temporary.replace(target)
+    temp=path.with_suffix('.part');combined.to_parquet(temp,index=False)
+    if frame is not None:
+        temporary=target.with_suffix('.part');frame.to_parquet(temporary,index=False)
+    temp.replace(path)
+    if frame is not None:temporary.replace(target)
+    (root/f'{CODE}_teams.json').write_text(json.dumps(catalog(),ensure_ascii=False,indent=2),encoding='utf8')
     report=dict(captured_at_utc=now.isoformat(),league=CODE,games=len(combined),seasons=combined.groupby('sezon').size().to_dict(),
                 teams=int(pd.concat([combined.ev,combined.dep]).nunique()),counts=counts,fixtures=len(fixtures),errors=errors,sources=sources,
-                official_current_refresh=official_ok,timezone=ZONE,
+                official_current_refresh=official_ok,timezone=ZONE,rejected_results=rejected,
                 limitations='Publisher historical finals have day precision and unknown historical availability. Official old-season handler returned no history. Current positive scores require a separate Finalizado match page and prior local day. No other Argentine divisions or cups. Full season coverage and venue neutrality not certified.')
     evidence=Path('docs/kanit/competitions');evidence.mkdir(parents=True,exist_ok=True)
     (evidence/f'{CODE}_collection.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf8')
