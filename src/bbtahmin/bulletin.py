@@ -69,7 +69,7 @@ def predict_event(event_id,root='.'):
         raise ValueError('This competition has no trained model in this project')
     if snapshot['stale']:
         raise ValueError('Bulletin is older than 15 minutes; refresh before comparing odds')
-    path=(f'data/competitions/{league}.parquet' if league in ('ECW','FEC','VTB','ABA') else
+    path=(f'data/competitions/{league}.parquet' if league in ('ECW','FEC','VTB','ABA','UKR','TR_BSL') else
           f'data/asia/{league}.parquet' if league in ('KBL','JP_B1','JP_B2','PBA_GOV','PBA_COM','PBA_PHI') else
           'data/cba_games.parquet' if league=='CBA' else 'data/maclar.parquet')
     games=pd.read_parquet(root/path)

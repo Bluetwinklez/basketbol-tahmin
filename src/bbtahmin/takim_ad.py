@@ -58,11 +58,11 @@ def aday_adlari(lig, kodlar):
         adlar = {kod} | set(EK_ADLAR.get(kod, []))
         if lig == 'NBA':
             adlar |= set(ALIASES.get(kod, []))
-        elif lig in ('ECW','FEC','VTB','ABA'):
+        elif lig in ('ECW','FEC','VTB','ABA','UKR','TR_BSL'):
             path=Path(f'data/competitions/{lig}_teams.json')
             entry=json.loads(path.read_text('utf8')).get(kod,{}) if path.exists() else {}
             adlar |= {entry.get('name','')} | set(entry.get('aliases',[]))
-            specific={'ABA_CLU':['Cluj','Cluj Napoca','U-BT Cluj-Napoca'],'ABA_SCD':['Studentski Centar','SC Derby'],'ECW_892':['BK Zabiny Brno'],'ECW_58477':['ZKK Celje'],
+            specific={'UKR_21058':['BC Cherkaski Mavpy','Cherkaski Mavpy'],'UKR_2233':['BK Rivne','Rivne'],'UKR_2226':['BC Goverla','Hoverla'],'UKR_4656005':['Kharkivski Sokoly'],'TR_BSL_94':['Cayirova Bld','Cayirova','Çayırova Belediyesi'],'TR_BSL_79':['Bursaspor'],'ABA_CLU':['Cluj','Cluj Napoca','U-BT Cluj-Napoca'],'ABA_SCD':['Studentski Centar','SC Derby'],'ECW_892':['BK Zabiny Brno'],'ECW_58477':['ZKK Celje'],
                       'ECW_813':['Montana 2003'],'FEC_58616':['KK Parnu']}
             adlar |= set(specific.get(kod,[]))
         elif lig == 'CBA':

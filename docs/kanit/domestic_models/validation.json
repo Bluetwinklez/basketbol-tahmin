@@ -1,0 +1,28 @@
+{
+  "python_tests": 258,
+  "ui_tests": 8,
+  "app_http_job_status": "succeeded",
+  "leagues": [
+    "E",
+    "KBL",
+    "JP_B1",
+    "JP_B2",
+    "PBA_GOV",
+    "ABA",
+    "ECW",
+    "FEC",
+    "UKR",
+    "TR_BSL"
+  ],
+  "actual_future_forecasts": 12,
+  "performance": {
+    "settled_games": 0,
+    "pending_games": 12,
+    "winner_accuracy": null,
+    "mean_score_mae": null,
+    "mean_total_absolute_error": null,
+    "mean_margin_absolute_error": null
+  },
+  "csv_export": "passed",
+  "visual_browser_verification": false
+}

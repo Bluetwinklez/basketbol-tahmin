@@ -1,0 +1,700 @@
+{
+  "spec": "daily-research-v1",
+  "checked_at_utc": "2026-10-23T16:17:42.543502+00:00",
+  "sources": {},
+  "probability_threshold": 0.65,
+  "upcoming": [
+    {
+      "fixture": {
+        "event_id": "UKR_2026_N30_UKR_2228_UKR_334833",
+        "league": "UKR",
+        "home": "UKR_2228",
+        "away": "UKR_334833",
+        "start_utc": "2026-10-24T10:00:00+00:00",
+        "captured_at": "2026-10-23T14:15:49.239655+00:00",
+        "source_url": "https://widgets.baskethotel.com/widget-service/export/view/schedule_and_results?api=aaed6059969d182ff2a08e7d61458ce2d1a372c1&season_id=133338&lang=en&type=schedule_only",
+        "home_name": "DNIPRO (Dnipro)",
+        "away_name": "ZAPORIZHZHYA (Zaporizhzhya)",
+        "status": "scheduled"
+      },
+      "record_status": "new_immutable",
+      "prediction": {
+        "lig": "UKR",
+        "ev": "UKR_2228",
+        "dep": "UKR_334833",
+        "tarih_utc": "2026-10-24T10:00:00+00:00",
+        "model": "regional-prior-policy-v1/elo",
+        "ev_kazanir": 0.8295049740018895,
+        "ev_skor": 82.19606574248186,
+        "dep_skor": 72.75777612288516,
+        "fark": 9.43828961959671,
+        "toplam": 154.95384186536702,
+        "fark_80": [
+          -6.935954861880699,
+          25.812534101074117
+        ],
+        "toplam_80": [
+          134.6294149812691,
+          175.27826874946496
+        ],
+        "tum_modeller": {
+          "score": 0.7699554152600843,
+          "logistic": 0.8426435119171941,
+          "elo": 0.8295049740018895,
+          "ensemble": 0.8140346337263892
+        },
+        "az_veri": [],
+        "recent_games": {
+          "UKR_2228": 34,
+          "UKR_334833": 32
+        },
+        "uzatma": null,
+        "training_cutoff": "2026-10-24T00:00:00+00:00",
+        "selection": {
+          "season": "2026-27",
+          "previous_season": "2025-26",
+          "training_games": 849,
+          "calibration_games": 73,
+          "final_training_games": 976,
+          "calibration_season_gap": 1,
+          "selection_games": 54,
+          "selection_window_start_utc": "2026-02-06T00:00:00+00:00",
+          "selected": "elo",
+          "selection_log_loss": {
+            "score": 0.5843780066122024,
+            "logistic": 0.6135656353655172,
+            "elo": 0.5792626730138868,
+            "ensemble": 0.5872785311676038
+          },
+          "rule": "Lowest log loss on the second UTC-day half of the preceding season. Score probabilities calibrate on its first half. Fixed learners; test outcomes never select a candidate."
+        },
+        "calibration_regime_gap": false,
+        "dataset_sha256": "2eefa6ae89cefd76d4faf37dd22797b30a1de52329590a5f54537ab05c4b6cf1",
+        "experimental": true,
+        "note": "Separate senior league, retrospectively collected results. Unverified same-day scores excluded. Nominal home court and historical publication times not independently verified. Intervals are not conditional guarantees.",
+        "data_quality": {
+          "status": "observed_history_available",
+          "issues": [],
+          "blocking_issues": [],
+          "diagnostic_gate_passed": true,
+          "team_history": {
+            "UKR_2228": {
+              "all_prior_games": 212,
+              "recent_400d_games": 34,
+              "days_since_last": 4.541666666666667,
+              "effective_games_180d_half_life": 18.512997802384316,
+              "opponents": 9,
+              "seasons": [
+                "2020-21",
+                "2021-22",
+                "2022-23",
+                "2023-24",
+                "2024-25",
+                "2025-26",
+                "2026-27"
+              ]
+            },
+            "UKR_334833": {
+              "all_prior_games": 206,
+              "recent_400d_games": 32,
+              "days_since_last": 4.583333333333333,
+              "effective_games_180d_half_life": 17.69699972925664,
+              "opponents": 9,
+              "seasons": [
+                "2020-21",
+                "2021-22",
+                "2022-23",
+                "2023-24",
+                "2024-25",
+                "2025-26",
+                "2026-27"
+              ]
+            }
+          },
+          "information_cutoff_utc": "2026-10-23T00:00:00+00:00",
+          "recommendation_validated": false,
+          "thresholds": "Five games / 400 days and 60-day staleness are diagnostic flags, not validated selection thresholds.",
+          "unknowns": [
+            "Full domestic schedule coverage",
+            "Expected roster and injuries",
+            "Historical publication times for retrospectively collected results"
+          ],
+          "note": "Data adequacy is separate from win probability; no validated recommendation or accuracy guarantee."
+        },
+        "recommendation_validated": false,
+        "selection_eligible": true
+      },
+      "record": "docs/kanit/domestic_runtime/forecasts/28bea5b1c471abb023533ff9ed234f1111fa2743e5e67883f280c1fe0d3be334.json",
+      "threshold_passed": true,
+      "source_confirmation_fresh": true,
+      "selected": true
+    },
+    {
+      "fixture": {
+        "event_id": "UKR_2026_N31_UKR_4638193_UKR_2233",
+        "league": "UKR",
+        "home": "UKR_4638193",
+        "away": "UKR_2233",
+        "start_utc": "2026-10-25T12:00:00+00:00",
+        "captured_at": "2026-10-23T14:15:49.239655+00:00",
+        "source_url": "https://widgets.baskethotel.com/widget-service/export/view/schedule_and_results?api=aaed6059969d182ff2a08e7d61458ce2d1a372c1&season_id=133338&lang=en&type=schedule_only",
+        "home_name": "NIKO-BASKET (Mykolaiv)",
+        "away_name": "RIVNE (Rivne)",
+        "status": "scheduled"
+      },
+      "record_status": "new_immutable",
+      "prediction": {
+        "lig": "UKR",
+        "ev": "UKR_4638193",
+        "dep": "UKR_2233",
+        "tarih_utc": "2026-10-25T12:00:00+00:00",
+        "model": "regional-prior-policy-v1/elo",
+        "ev_kazanir": 0.40090213156376847,
+        "ev_skor": 75.85057519184082,
+        "dep_skor": 84.41854475340472,
+        "fark": -8.567969561563888,
+        "toplam": 160.26911994524554,
+        "fark_80": [
+          -24.942214043041297,
+          7.80627491991352
+        ],
+        "toplam_80": [
+          139.9446930611476,
+          180.59354682934347
+        ],
+        "tum_modeller": {
+          "score": 0.25124301389155634,
+          "logistic": 0.23284094242064024,
+          "elo": 0.40090213156376847,
+          "ensemble": 0.29499536262532167
+        },
+        "az_veri": [],
+        "recent_games": {
+          "UKR_4638193": 29,
+          "UKR_2233": 37
+        },
+        "uzatma": null,
+        "training_cutoff": "2026-10-25T00:00:00+00:00",
+        "selection": {
+          "season": "2026-27",
+          "previous_season": "2025-26",
+          "training_games": 849,
+          "calibration_games": 73,
+          "final_training_games": 976,
+          "calibration_season_gap": 1,
+          "selection_games": 54,
+          "selection_window_start_utc": "2026-02-06T00:00:00+00:00",
+          "selected": "elo",
+          "selection_log_loss": {
+            "score": 0.5843780066122024,
+            "logistic": 0.6135656353655172,
+            "elo": 0.5792626730138868,
+            "ensemble": 0.5872785311676038
+          },
+          "rule": "Lowest log loss on the second UTC-day half of the preceding season. Score probabilities calibrate on its first half. Fixed learners; test outcomes never select a candidate."
+        },
+        "calibration_regime_gap": false,
+        "dataset_sha256": "2eefa6ae89cefd76d4faf37dd22797b30a1de52329590a5f54537ab05c4b6cf1",
+        "experimental": true,
+        "note": "Separate senior league, retrospectively collected results. Unverified same-day scores excluded. Nominal home court and historical publication times not independently verified. Intervals are not conditional guarantees.",
+        "data_quality": {
+          "status": "observed_history_available",
+          "issues": [],
+          "blocking_issues": [],
+          "diagnostic_gate_passed": true,
+          "team_history": {
+            "UKR_4638193": {
+              "all_prior_games": 29,
+              "recent_400d_games": 29,
+              "days_since_last": 4.5,
+              "effective_games_180d_half_life": 11.367021776066062,
+              "opponents": 8,
+              "seasons": [
+                "2025-26",
+                "2026-27"
+              ]
+            },
+            "UKR_2233": {
+              "all_prior_games": 107,
+              "recent_400d_games": 37,
+              "days_since_last": 4.541666666666667,
+              "effective_games_180d_half_life": 20.26624954356552,
+              "opponents": 8,
+              "seasons": [
+                "2023-24",
+                "2024-25",
+                "2025-26",
+                "2026-27"
+              ]
+            }
+          },
+          "information_cutoff_utc": "2026-10-23T00:00:00+00:00",
+          "recommendation_validated": false,
+          "thresholds": "Five games / 400 days and 60-day staleness are diagnostic flags, not validated selection thresholds.",
+          "unknowns": [
+            "Full domestic schedule coverage",
+            "Expected roster and injuries",
+            "Historical publication times for retrospectively collected results"
+          ],
+          "note": "Data adequacy is separate from win probability; no validated recommendation or accuracy guarantee."
+        },
+        "recommendation_validated": false,
+        "selection_eligible": true
+      },
+      "record": "docs/kanit/domestic_runtime/forecasts/902f62d60da3917ac5848b26dc0e9e69cb81dbe03635ea2755b09244346f8661.json",
+      "threshold_passed": false,
+      "source_confirmation_fresh": true,
+      "selected": false
+    },
+    {
+      "fixture": {
+        "event_id": "UKR_2026_N32_UKR_21058_UKR_4657261",
+        "league": "UKR",
+        "home": "UKR_21058",
+        "away": "UKR_4657261",
+        "start_utc": "2026-10-25T12:00:00+00:00",
+        "captured_at": "2026-10-23T14:15:49.239655+00:00",
+        "source_url": "https://widgets.baskethotel.com/widget-service/export/view/schedule_and_results?api=aaed6059969d182ff2a08e7d61458ce2d1a372c1&season_id=133338&lang=en&type=schedule_only",
+        "home_name": "CHERKASKI MAVPY (Cherkasy)",
+        "away_name": "VOLYN (Lutsk)",
+        "status": "scheduled"
+      },
+      "record_status": "new_immutable",
+      "prediction": {
+        "lig": "UKR",
+        "ev": "UKR_21058",
+        "dep": "UKR_4657261",
+        "tarih_utc": "2026-10-25T12:00:00+00:00",
+        "model": "regional-prior-policy-v1/elo",
+        "ev_kazanir": 0.6570904768076684,
+        "ev_skor": 80.81497299048131,
+        "dep_skor": 75.6639396687875,
+        "fark": 5.151033321693809,
+        "toplam": 156.47891265926881,
+        "fark_80": [
+          -11.223211159783599,
+          21.525277803171218
+        ],
+        "toplam_80": [
+          136.15448577517088,
+          176.80333954336675
+        ],
+        "tum_modeller": {
+          "score": 0.6565819171596634,
+          "logistic": 0.6981032021758596,
+          "elo": 0.6570904768076684,
+          "ensemble": 0.670591865381064
+        },
+        "az_veri": [],
+        "recent_games": {
+          "UKR_21058": 29,
+          "UKR_4657261": 29
+        },
+        "uzatma": null,
+        "training_cutoff": "2026-10-25T00:00:00+00:00",
+        "selection": {
+          "season": "2026-27",
+          "previous_season": "2025-26",
+          "training_games": 849,
+          "calibration_games": 73,
+          "final_training_games": 976,
+          "calibration_season_gap": 1,
+          "selection_games": 54,
+          "selection_window_start_utc": "2026-02-06T00:00:00+00:00",
+          "selected": "elo",
+          "selection_log_loss": {
+            "score": 0.5843780066122024,
+            "logistic": 0.6135656353655172,
+            "elo": 0.5792626730138868,
+            "ensemble": 0.5872785311676038
+          },
+          "rule": "Lowest log loss on the second UTC-day half of the preceding season. Score probabilities calibrate on its first half. Fixed learners; test outcomes never select a candidate."
+        },
+        "calibration_regime_gap": false,
+        "dataset_sha256": "2eefa6ae89cefd76d4faf37dd22797b30a1de52329590a5f54537ab05c4b6cf1",
+        "experimental": true,
+        "note": "Separate senior league, retrospectively collected results. Unverified same-day scores excluded. Nominal home court and historical publication times not independently verified. Intervals are not conditional guarantees.",
+        "data_quality": {
+          "status": "observed_history_available",
+          "issues": [],
+          "blocking_issues": [],
+          "diagnostic_gate_passed": true,
+          "team_history": {
+            "UKR_21058": {
+              "all_prior_games": 204,
+              "recent_400d_games": 29,
+              "days_since_last": 4.625,
+              "effective_games_180d_half_life": 15.486185124931763,
+              "opponents": 8,
+              "seasons": [
+                "2020-21",
+                "2021-22",
+                "2022-23",
+                "2023-24",
+                "2024-25",
+                "2025-26",
+                "2026-27"
+              ]
+            },
+            "UKR_4657261": {
+              "all_prior_games": 120,
+              "recent_400d_games": 29,
+              "days_since_last": 4.583333333333333,
+              "effective_games_180d_half_life": 15.641570488547686,
+              "opponents": 8,
+              "seasons": [
+                "2022-23",
+                "2023-24",
+                "2024-25",
+                "2025-26",
+                "2026-27"
+              ]
+            }
+          },
+          "information_cutoff_utc": "2026-10-23T00:00:00+00:00",
+          "recommendation_validated": false,
+          "thresholds": "Five games / 400 days and 60-day staleness are diagnostic flags, not validated selection thresholds.",
+          "unknowns": [
+            "Full domestic schedule coverage",
+            "Expected roster and injuries",
+            "Historical publication times for retrospectively collected results"
+          ],
+          "note": "Data adequacy is separate from win probability; no validated recommendation or accuracy guarantee."
+        },
+        "recommendation_validated": false,
+        "selection_eligible": true
+      },
+      "record": "docs/kanit/domestic_runtime/forecasts/b2d11ee85aa7809f6be234cfb8ee9ee228c0c320bfa448aefdff11d84d8e086e.json",
+      "threshold_passed": true,
+      "source_confirmation_fresh": true,
+      "selected": true
+    },
+    {
+      "fixture": {
+        "event_id": "UKR_2026_N28_UKR_2226_UKR_4680419",
+        "league": "UKR",
+        "home": "UKR_2226",
+        "away": "UKR_4680419",
+        "start_utc": "2026-10-25T13:00:00+00:00",
+        "captured_at": "2026-10-23T14:15:49.239655+00:00",
+        "source_url": "https://widgets.baskethotel.com/widget-service/export/view/schedule_and_results?api=aaed6059969d182ff2a08e7d61458ce2d1a372c1&season_id=133338&lang=en&type=schedule_only",
+        "home_name": "PRYKARPATTIA-GOVERLA-KFV (Iv-Frankivsk)",
+        "away_name": "KYIV-BASKET (Kyiv)",
+        "status": "scheduled"
+      },
+      "record_status": "new_immutable",
+      "prediction": {
+        "lig": "UKR",
+        "ev": "UKR_2226",
+        "dep": "UKR_4680419",
+        "tarih_utc": "2026-10-25T13:00:00+00:00",
+        "model": "regional-prior-policy-v1/elo",
+        "ev_kazanir": 0.3597643527427751,
+        "ev_skor": 72.17606213921157,
+        "dep_skor": 81.44806286597948,
+        "fark": -9.272000726767919,
+        "toplam": 153.62412500519105,
+        "fark_80": [
+          -25.646245208245325,
+          7.102243754709489
+        ],
+        "toplam_80": [
+          133.29969812109312,
+          173.94855188928898
+        ],
+        "tum_modeller": {
+          "score": 0.2340158852838965,
+          "logistic": 0.27034429733574256,
+          "elo": 0.3597643527427751,
+          "ensemble": 0.2880415117874714
+        },
+        "az_veri": [],
+        "recent_games": {
+          "UKR_2226": 30,
+          "UKR_4680419": 36
+        },
+        "uzatma": null,
+        "training_cutoff": "2026-10-25T00:00:00+00:00",
+        "selection": {
+          "season": "2026-27",
+          "previous_season": "2025-26",
+          "training_games": 849,
+          "calibration_games": 73,
+          "final_training_games": 976,
+          "calibration_season_gap": 1,
+          "selection_games": 54,
+          "selection_window_start_utc": "2026-02-06T00:00:00+00:00",
+          "selected": "elo",
+          "selection_log_loss": {
+            "score": 0.5843780066122024,
+            "logistic": 0.6135656353655172,
+            "elo": 0.5792626730138868,
+            "ensemble": 0.5872785311676038
+          },
+          "rule": "Lowest log loss on the second UTC-day half of the preceding season. Score probabilities calibrate on its first half. Fixed learners; test outcomes never select a candidate."
+        },
+        "calibration_regime_gap": false,
+        "dataset_sha256": "2eefa6ae89cefd76d4faf37dd22797b30a1de52329590a5f54537ab05c4b6cf1",
+        "experimental": true,
+        "note": "Separate senior league, retrospectively collected results. Unverified same-day scores excluded. Nominal home court and historical publication times not independently verified. Intervals are not conditional guarantees.",
+        "data_quality": {
+          "status": "observed_history_available",
+          "issues": [],
+          "blocking_issues": [],
+          "diagnostic_gate_passed": true,
+          "team_history": {
+            "UKR_2226": {
+              "all_prior_games": 121,
+              "recent_400d_games": 30,
+              "days_since_last": 6.354166666666667,
+              "effective_games_180d_half_life": 15.19276601656031,
+              "opponents": 9,
+              "seasons": [
+                "2022-23",
+                "2023-24",
+                "2024-25",
+                "2025-26",
+                "2026-27"
+              ]
+            },
+            "UKR_4680419": {
+              "all_prior_games": 214,
+              "recent_400d_games": 36,
+              "days_since_last": 4.5,
+              "effective_games_180d_half_life": 19.995498355698267,
+              "opponents": 8,
+              "seasons": [
+                "2020-21",
+                "2021-22",
+                "2022-23",
+                "2023-24",
+                "2024-25",
+                "2025-26",
+                "2026-27"
+              ]
+            }
+          },
+          "information_cutoff_utc": "2026-10-23T00:00:00+00:00",
+          "recommendation_validated": false,
+          "thresholds": "Five games / 400 days and 60-day staleness are diagnostic flags, not validated selection thresholds.",
+          "unknowns": [
+            "Full domestic schedule coverage",
+            "Expected roster and injuries",
+            "Historical publication times for retrospectively collected results"
+          ],
+          "note": "Data adequacy is separate from win probability; no validated recommendation or accuracy guarantee."
+        },
+        "recommendation_validated": false,
+        "selection_eligible": true
+      },
+      "record": "docs/kanit/domestic_runtime/forecasts/2e4fa023038e7164ed6de1fa57ec20111bbd992158a11002da325e3e20129867.json",
+      "threshold_passed": false,
+      "source_confirmation_fresh": true,
+      "selected": false
+    },
+    {
+      "fixture": {
+        "event_id": "UKR_2026_N29_UKR_4704541_UKR_4656005",
+        "league": "UKR",
+        "home": "UKR_4704541",
+        "away": "UKR_4656005",
+        "start_utc": "2026-10-25T14:00:00+00:00",
+        "captured_at": "2026-10-23T14:15:49.239655+00:00",
+        "source_url": "https://widgets.baskethotel.com/widget-service/export/view/schedule_and_results?api=aaed6059969d182ff2a08e7d61458ce2d1a372c1&season_id=133338&lang=en&type=schedule_only",
+        "home_name": "KHMELNYTSKYI (Khmelnytskyi)",
+        "away_name": "KHARKIVSKI SOKOLY (Kharkiv)",
+        "status": "scheduled"
+      },
+      "record_status": "new_immutable",
+      "prediction": {
+        "lig": "UKR",
+        "ev": "UKR_4704541",
+        "dep": "UKR_4656005",
+        "tarih_utc": "2026-10-25T14:00:00+00:00",
+        "model": "regional-prior-policy-v1/elo",
+        "ev_kazanir": 0.48482417609811346,
+        "ev_skor": 76.99600890089008,
+        "dep_skor": 79.73165884939712,
+        "fark": -2.7356499485070507,
+        "toplam": 156.7276677502872,
+        "fark_80": [
+          -19.109894429984458,
+          13.638594532970357
+        ],
+        "toplam_80": [
+          136.40324086618926,
+          177.05209463438513
+        ],
+        "tum_modeller": {
+          "score": 0.4152309487066278,
+          "logistic": 0.4645201206555139,
+          "elo": 0.48482417609811346,
+          "ensemble": 0.45485841515341835
+        },
+        "az_veri": [
+          "UKR_4704541"
+        ],
+        "recent_games": {
+          "UKR_4704541": 3,
+          "UKR_4656005": 37
+        },
+        "uzatma": null,
+        "training_cutoff": "2026-10-25T00:00:00+00:00",
+        "selection": {
+          "season": "2026-27",
+          "previous_season": "2025-26",
+          "training_games": 849,
+          "calibration_games": 73,
+          "final_training_games": 976,
+          "calibration_season_gap": 1,
+          "selection_games": 54,
+          "selection_window_start_utc": "2026-02-06T00:00:00+00:00",
+          "selected": "elo",
+          "selection_log_loss": {
+            "score": 0.5843780066122024,
+            "logistic": 0.6135656353655172,
+            "elo": 0.5792626730138868,
+            "ensemble": 0.5872785311676038
+          },
+          "rule": "Lowest log loss on the second UTC-day half of the preceding season. Score probabilities calibrate on its first half. Fixed learners; test outcomes never select a candidate."
+        },
+        "calibration_regime_gap": false,
+        "dataset_sha256": "2eefa6ae89cefd76d4faf37dd22797b30a1de52329590a5f54537ab05c4b6cf1",
+        "experimental": true,
+        "note": "Separate senior league, retrospectively collected results. Unverified same-day scores excluded. Nominal home court and historical publication times not independently verified. Intervals are not conditional guarantees.",
+        "data_quality": {
+          "status": "limited",
+          "issues": [
+            "UKR_4704541: fewer than five observed games in 400 days"
+          ],
+          "blocking_issues": [
+            "UKR_4704541: fewer than five observed games in 400 days"
+          ],
+          "diagnostic_gate_passed": false,
+          "team_history": {
+            "UKR_4704541": {
+              "all_prior_games": 3,
+              "recent_400d_games": 3,
+              "days_since_last": 6.354166666666667,
+              "effective_games_180d_half_life": 2.831604056026835,
+              "opponents": 3,
+              "seasons": [
+                "2026-27"
+              ]
+            },
+            "UKR_4656005": {
+              "all_prior_games": 106,
+              "recent_400d_games": 37,
+              "days_since_last": 4.625,
+              "effective_games_180d_half_life": 16.425776012992735,
+              "opponents": 8,
+              "seasons": [
+                "2020-21",
+                "2021-22",
+                "2025-26",
+                "2026-27"
+              ]
+            }
+          },
+          "information_cutoff_utc": "2026-10-23T00:00:00+00:00",
+          "recommendation_validated": false,
+          "thresholds": "Five games / 400 days and 60-day staleness are diagnostic flags, not validated selection thresholds.",
+          "unknowns": [
+            "Full domestic schedule coverage",
+            "Expected roster and injuries",
+            "Historical publication times for retrospectively collected results"
+          ],
+          "note": "Data adequacy is separate from win probability; no validated recommendation or accuracy guarantee."
+        },
+        "recommendation_validated": false,
+        "selection_eligible": false
+      },
+      "record": "docs/kanit/domestic_runtime/forecasts/584bf0e2912eec1d99f3678f5e7f2c664ddd538e75f7e6329f925272393e8834.json",
+      "threshold_passed": false,
+      "source_confirmation_fresh": true,
+      "selected": false
+    }
+  ],
+  "skipped": [],
+  "settlements": [
+    {
+      "record": "docs/kanit/domestic_runtime/forecasts/28bea5b1c471abb023533ff9ed234f1111fa2743e5e67883f280c1fe0d3be334.json",
+      "forecast_sha256": "ae11d68133b85bc5bc6b44684661b5c104b80f35c6647f29a23de010431d433d",
+      "checked_at_utc": "2026-10-23T16:17:44.273764+00:00",
+      "games": [
+        {
+          "event_id": "UKR_2026_N30_UKR_2228_UKR_334833",
+          "home": "UKR_2228",
+          "away": "UKR_334833",
+          "status": "pending"
+        }
+      ],
+      "note": "Percentage errors use actual positive scores as denominator. Signed errors = prediction minus actual. Winner accuracy is separate from score accuracy; this small batch is not a general benchmark."
+    },
+    {
+      "record": "docs/kanit/domestic_runtime/forecasts/2e4fa023038e7164ed6de1fa57ec20111bbd992158a11002da325e3e20129867.json",
+      "forecast_sha256": "d6808587ac065a1daaf0f4e4ba7b5db6acc3370294882ffee179e8d74cd69e28",
+      "checked_at_utc": "2026-10-23T16:17:44.274258+00:00",
+      "games": [
+        {
+          "event_id": "UKR_2026_N28_UKR_2226_UKR_4680419",
+          "home": "UKR_2226",
+          "away": "UKR_4680419",
+          "status": "pending"
+        }
+      ],
+      "note": "Percentage errors use actual positive scores as denominator. Signed errors = prediction minus actual. Winner accuracy is separate from score accuracy; this small batch is not a general benchmark."
+    },
+    {
+      "record": "docs/kanit/domestic_runtime/forecasts/584bf0e2912eec1d99f3678f5e7f2c664ddd538e75f7e6329f925272393e8834.json",
+      "forecast_sha256": "8b792ea9e8aff7ab7787ba3c679d464b9128da795ebfdfdd8a639fa9ec03ae83",
+      "checked_at_utc": "2026-10-23T16:17:44.274727+00:00",
+      "games": [
+        {
+          "event_id": "UKR_2026_N29_UKR_4704541_UKR_4656005",
+          "home": "UKR_4704541",
+          "away": "UKR_4656005",
+          "status": "pending"
+        }
+      ],
+      "note": "Percentage errors use actual positive scores as denominator. Signed errors = prediction minus actual. Winner accuracy is separate from score accuracy; this small batch is not a general benchmark."
+    },
+    {
+      "record": "docs/kanit/domestic_runtime/forecasts/902f62d60da3917ac5848b26dc0e9e69cb81dbe03635ea2755b09244346f8661.json",
+      "forecast_sha256": "5cdc1397916f05f2add5b0230abdcd289cad4798b48eb0b1bb5fbafe0d05a387",
+      "checked_at_utc": "2026-10-23T16:17:44.275043+00:00",
+      "games": [
+        {
+          "event_id": "UKR_2026_N31_UKR_4638193_UKR_2233",
+          "home": "UKR_4638193",
+          "away": "UKR_2233",
+          "status": "pending"
+        }
+      ],
+      "note": "Percentage errors use actual positive scores as denominator. Signed errors = prediction minus actual. Winner accuracy is separate from score accuracy; this small batch is not a general benchmark."
+    },
+    {
+      "record": "docs/kanit/domestic_runtime/forecasts/b2d11ee85aa7809f6be234cfb8ee9ee228c0c320bfa448aefdff11d84d8e086e.json",
+      "forecast_sha256": "706aaeceb7b5732017b589fe982f5804cd82f400d4205bfbad6132463e4c1539",
+      "checked_at_utc": "2026-10-23T16:17:44.275241+00:00",
+      "games": [
+        {
+          "event_id": "UKR_2026_N32_UKR_21058_UKR_4657261",
+          "home": "UKR_21058",
+          "away": "UKR_4657261",
+          "status": "pending"
+        }
+      ],
+      "note": "Percentage errors use actual positive scores as denominator. Signed errors = prediction minus actual. Winner accuracy is separate from score accuracy; this small batch is not a general benchmark."
+    }
+  ],
+  "performance": {
+    "settled_games": 0,
+    "pending_games": 5,
+    "winner_accuracy": null,
+    "mean_score_mae": null,
+    "mean_total_absolute_error": null,
+    "mean_margin_absolute_error": null
+  },
+  "note": "Model probabilities are not measured accuracy. Rejected/low-probability forecasts remain visible. Only source-confirmed timestamped finals settle. No live predictor. Small batches do not establish general accuracy."
+}

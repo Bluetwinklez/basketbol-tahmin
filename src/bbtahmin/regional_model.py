@@ -10,12 +10,13 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 from scipy.stats import norm
+from threadpoolctl import threadpool_limits
 
 from .asia_model import fit_fold, walk_forward as evaluate_folds
 from .ozellik import build_features
 
-CODES = ('ABA',)
-NAMES = {'ABA': "ABA League (senior men)"}
+CODES = ('ABA', 'UKR', 'TR_BSL')
+NAMES = {'ABA': "ABA League (senior men)", 'UKR': "Ukraine SuperLeague men", 'TR_BSL': "Turkish BSL men"}
 SPEC = 'regional-prior-policy-v1'
 
 
@@ -24,7 +25,7 @@ def load(code):
         raise ValueError('Unsupported regional league')
     path = Path(f'data/competitions/{code}.parquet')
     if not path.exists():
-        raise ValueError('Run python -m bbtahmin aba-topla first')
+        raise ValueError('Collect the requested regional league archive first')
     g = pd.read_parquet(path).sort_values(['tarih_utc', 'mac_id']).reset_index(drop=True)
     values = g[['ev_skor', 'dep_skor']].to_numpy(float)
     if (set(g.lig) != {code} or g.mac_id.duplicated().any() or (g.ev == g.dep).any()
@@ -52,7 +53,8 @@ def predict(code, home, away, when):
     query = dict(mac_id=f'{code}_QUERY', lig=code, sezon=season, tarih_utc=date,
                  ev=home, dep=away, ev_skor=np.nan, dep_skor=np.nan, tarafsiz_saha=False)
     all_g = pd.concat([g, pd.DataFrame([query])], ignore_index=True)
-    probs, scores, errors, info = fit_fold(all_g, build_features(all_g), season)
+    with threadpool_limits(limits=1):
+        probs, scores, errors, info = fit_fold(all_g, build_features(all_g), season)
     index = all_g[all_g.sezon == season].mac_id.tolist().index(query['mac_id'])
     total = max(0., float(scores[1][index] + errors[1]['bias']))
     margin = float(np.clip(scores[0][index], -total, total))
