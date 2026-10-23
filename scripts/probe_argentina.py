@@ -7,9 +7,9 @@ from pathlib import Path
 from bs4 import BeautifulSoup
 
 BASE='https://basketball.realgm.com/international/league/58/Argentinian-Liga-A'
-urls=['https://www.laliganacional.com.ar/laliga/fixture',
-      'https://www.laliganacional.com.ar/js/funciones.js',
-      'https://www.laliganacional.com.ar/laliga/tabla-posiciones']
+urls=['https://www.laliganacional.com.ar/laliga/fixture?handler=ProximosPartidos&fechaInicio=2026-07-01&fechaFin=2026-11-10',
+      'https://www.laliganacional.com.ar/laliga/fixture?handler=ProximosPartidos&fechaInicio=2025-07-01&fechaFin=2026-07-01',
+      'https://www.laliganacional.com.ar/laliga/fixture?handler=ProximosPartidos&fechaInicio=2022-07-01&fechaFin=2023-07-01']
 results=[]
 for url in urls:
     item=dict(url=url,captured_at_utc=datetime.now(timezone.utc).isoformat())
