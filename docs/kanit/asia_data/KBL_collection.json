@@ -93,11 +93,12 @@
       "returned": 307,
       "accepted": 170,
       "excluded": {
-        "other_competitions": 42
+        "other_competitions": 42,
+        "not_final": 1
       }
     }
   ],
-  "captured_at_utc": "2026-10-23T07:22:37.086227+00:00",
+  "captured_at_utc": "2026-10-23T11:02:09.801607+00:00",
   "limitations": "Senior men regular season only, exact source season/game identities; D-League/cups/playoffs excluded. Calendar-window responses are unpaginated in the observed client; independent completeness is unverified. Historical publication, relocations/ownership continuity and neutral venues require caution. Public web routing headers only; no authentication.",
   "games": 2549,
   "teams": 13,

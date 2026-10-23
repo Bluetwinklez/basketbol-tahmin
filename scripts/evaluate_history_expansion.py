@@ -67,7 +67,7 @@ def main():
         for variant in ('selected_policy','score'):
             result,rows=paired(a[a.variant==variant],b[b.variant==variant])
             results[variant]=result
-            rows.to_csv(root/f'{code}_{variant}_matched.csv',index=False)
+            rows.to_csv(root/f'{code}_{variant}_matched.csv.gz',index=False,compression={'method':'gzip','mtime':0})
         report[code]=dict(default_games=len(control),expanded_games=len(expanded),added_games=len(expanded)-len(control),
                           added_seasons=sorted(set(expanded.sezon)-set(control.sezon)),comparison=results,
                           expanded_folds=folds,skipped_folds=skipped,default_changed=False)

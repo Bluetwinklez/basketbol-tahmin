@@ -2,6 +2,8 @@
 
 This extension adds separate senior men's archives for KBL, Japan B1/B2 (including the source's 2026 B.PREMIER/B.ONE reorganisation), and three PBA conferences. These are new cohorts, not extra rows silently mixed into NBA, NBL or European training.
 
+The archives now contain **12,850 distinct finals**, including **3,607** older Japanese results added after the initial 9,243-game extension. The Japanese default still uses 2021–22 onward; [matched broader-history comparisons](kanit/history_expansion/README.md) retain the mixed results and explain why the challenger is not promoted.
+
 ## Sources and identity checks
 
 - **KBL:** official public website API at `https://api.kbl.or.kr/`. Public website routing headers are required. Exact senior regular-season catalog/game keys, season windows, final flags and positive non-tied scores are checked. D-League, cups, playoffs and all-stars are excluded. Calendar responses were collected from 2017 through 2026; initial and current seasons are partial. Independent completeness is unknown.

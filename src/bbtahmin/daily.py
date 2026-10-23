@@ -7,6 +7,7 @@ import contextlib
 import hashlib
 import io
 import json
+import sys
 from pathlib import Path
 
 import pandas as pd
@@ -29,6 +30,7 @@ def refresh(leagues):
         codes = [c for c in codes if c in leagues]
         if not codes:
             continue
+        print(f'Refreshing {source} schedules/results...', file=sys.stderr, flush=True)
         try:
             # Collectors' progress belongs on stderr/inside the report, not JSON stdout.
             with contextlib.redirect_stdout(io.StringIO()) as log:
@@ -55,9 +57,11 @@ def refresh(leagues):
                     collect()
             for code in codes:
                 outcomes[code] = dict(status='refreshed', log=log.getvalue())
+            print(f'{source}: refreshed.', file=sys.stderr, flush=True)
         except Exception as exc:
             for code in codes:
                 outcomes[code] = dict(status='failed', error=f'{type(exc).__name__}: {exc}')
+            print(f'{source}: refresh failed ({type(exc).__name__}). See report.', file=sys.stderr, flush=True)
     return outcomes
 
 
@@ -155,7 +159,8 @@ def run(leagues=LEAGUES, output='rapor/daily', update=False, hours=48, threshold
                 if key in known:
                     path, record, item = known[key]
                     old = item['fixture']
-                    if any(old[k] != f[k] for k in ('event_id', 'league', 'home', 'away', 'start_utc')):
+                    if (any(old[k] != f[k] for k in ('event_id', 'league', 'home', 'away')) or
+                            timestamp(old['start_utc']) != timestamp(f['start_utc'])):
                         raise ValueError('Fixture changed; original forecast retained, manual review required')
                     p = item['prediction']
                     entry['record_status'] = 'existing_immutable'
