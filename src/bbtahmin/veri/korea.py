@@ -73,7 +73,7 @@ def collect(first=2017,last=2026):
             entry=teams.setdefault(key,dict(name=sorted(names)[0],aliases=[]));entry['aliases']=sorted(set(entry['aliases'])|names)
         records+=g;fixtures+=f;sources.append(url);counts.append(dict(calendar_year=year,returned=len(rows),accepted=len(g),excluded=excluded))
         save('KBL',records,teams,dict(source='Official KBL API public website',sources=sources,counts=counts,captured_at_utc=captured,
-            limitations='Senior men regular season only, exact source season/game identities; D-League/cups/playoffs excluded. Calendar-window responses are unpaginated in the observed client; independent completeness is unverified. Historical publication, relocations/ownership continuity and neutral venues require caution. Public web routing headers only; no authentication.'),fixtures)
+            limitations='Senior men regular season only, exact source season/game identities; D-League/cups/playoffs excluded. Calendar-window responses are unpaginated in the observed client; independent completeness is unverified. Historical publication, relocations/ownership continuity and neutral venues require caution. Public web routing headers only; no authentication.'),fixtures if year>=pd.Timestamp.now(tz='UTC').year else None)
         print('KBL',year,len(g),flush=True)
 
 
