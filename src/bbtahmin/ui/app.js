@@ -1,5 +1,6 @@
 "use strict";
 const names = {
+  ARG_LNB: 'Argentina Liga Nacional',
   ABA: 'ABA League',
   UKR: 'Ukraine SuperLeague',
   TR_BSL: 'Turkish BSL',

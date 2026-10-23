@@ -34,13 +34,13 @@ def create_server(root):
         return dict(coverage_inventory=coverage,auxiliary_club_games=len(pd.read_parquet(context)) if context.exists() else 0,games=len(g),leagues={str(k):int(v) for k,v in g.groupby('lig').size().items()},
                     asian_archives={p.stem:len(pd.read_parquet(p)) for p in (root/'data/asia').glob('*.parquet') if p.stem in ('KBL','JP_B1','JP_B2','PBA_GOV','PBA_COM','PBA_PHI')},
                     cba_games=len(pd.read_parquet(cba)) if cba.exists() else 0,
-                    experimental_competitions={code:len(pd.read_parquet(path)) for code in ('ECW','FEC','VTB','ABA','UKR','TR_BSL') if (path:=root/f'data/competitions/{code}.parquet').exists()},
+                    experimental_competitions={code:len(pd.read_parquet(path)) for code in ('ECW','FEC','VTB','ABA','UKR','TR_BSL','ARG_LNB') if (path:=root/f'data/competitions/{code}.parquet').exists()},
                     latest_game_utc=g.tarih_utc.max().isoformat(),bulletin_available=(root/'data/bulten/latest.json').exists())
 
     @server.tool(annotations=readonly)
     def bulletin_events(league: str | None = None,limit: int = 30) -> dict:
         """List future fixtures from the local bulletin with capture age; does not refresh."""
-        if league is not None and league not in ('E','U','NBA','NBL','CBA','ECW','FEC','VTB','ABA','UKR','TR_BSL','KBL','JP_B1','JP_B2','PBA_GOV','PBA_COM','PBA_PHI'):
+        if league is not None and league not in ('E','U','NBA','NBL','CBA','ECW','FEC','VTB','ABA','UKR','TR_BSL','ARG_LNB','KBL','JP_B1','JP_B2','PBA_GOV','PBA_COM','PBA_PHI'):
             raise ValueError('Unknown supported model league')
         return list_events(root,league,limit)
 
@@ -124,3 +124,4 @@ def main():
 
 if __name__=='__main__':
     main()
+
