@@ -77,6 +77,32 @@ def synthetic():
     return pd.DataFrame(rows)
 
 
+def test_older_japanese_history_is_explicit_challenger_not_silent_default(tmp_path,monkeypatch):
+    from bbtahmin.asia_model import load
+    monkeypatch.chdir(tmp_path)
+    path=tmp_path/'data/asia';path.mkdir(parents=True)
+    g=synthetic();g=g[g.ev_skor!=g.dep_skor].reset_index(drop=True)
+    g['lig']='JP_B1';g.loc[0,'sezon']='2016-17'
+    g.to_parquet(path/'JP_B1.parquet')
+    default=load('JP_B1');expanded=load('JP_B1',expanded_history=True)
+    assert len(expanded)==len(default)+1
+    assert default.sezon.min()=='2021-22' and expanded.sezon.min()=='2016-17'
+
+
+def test_successful_empty_schedule_revokes_old_fixtures_but_history_only_keeps_them(tmp_path,monkeypatch):
+    from bbtahmin.veri.asia import save
+    monkeypatch.chdir(tmp_path)
+    row=dict(mac_id='KBL_1',lig='KBL',sezon='2025-26',tarih_utc=pd.Timestamp('2025-10-01T00:00Z'),
+             ev='H',dep='A',ev_skor=80,dep_skor=75)
+    f=dict(row,mac_id='KBL_F',status='scheduled')
+    save('KBL',[row],{}, {},[f])
+    path=tmp_path/'data/asia/KBL_fixtures.parquet'
+    save('KBL',[row],{}, {},None)
+    assert len(pd.read_parquet(path))==1
+    save('KBL',[row],{}, {},[])
+    assert pd.read_parquet(path).empty
+
+
 def test_asian_prior_selection_and_calibration_never_use_target_outcomes():
     from bbtahmin.asia_model import fit_fold
     from bbtahmin.ozellik import build_features

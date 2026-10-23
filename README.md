@@ -6,6 +6,8 @@ A Python research package for pregame basketball probabilities, score margins an
 
 ## What works
 
+For daily use, run **`python -m bbtahmin gunluk --guncelle`** after installation. It refreshes supported schedules, preserves the earliest pregame forecasts, and writes a separate final-result/error report to `rapor/daily/latest.md`. Source failures and rejected forecasts remain visible. See [daily workflow, historical backfill and measurement limits](docs/daily-workflow.md).
+
 | Capability | Status |
 |---|---|
 | EuroLeague, EuroCup, NBA and Australian NBL history | Available; 54,808 stored games |

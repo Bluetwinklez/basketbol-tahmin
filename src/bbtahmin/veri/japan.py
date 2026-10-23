@@ -101,7 +101,10 @@ def collect(years=(2021,2022,2023,2024,2025,2026),divisions=(1,2),refresh_curren
             report=dict(source='Official B.LEAGUE public schedule',sources=sources,counts=counts,captured_at_utc=captured,
                 refresh_current_requested=refresh_current,cache_reparse_only=not refresh_current,
                 limitations='Regular-season event only; playoffs/cups excluded. All advertised pages requested, not an independent completeness proof. Logo codes are source identities; reorganisations, renamed clubs and 2026 league changes require caution. Historical publication, neutral venues and overtime unverified. No blocked detailed-context endpoint used.')
-            save(f'JP_B{division}',records,teams,report,fixtures)
+            active=pd.Timestamp.now(tz='UTC');active_year=active.year if active.month>=7 else active.year-1
+            # Historical-only backfills must not erase the current schedule.
+            # A freshly observed empty CURRENT schedule must revoke old fixtures.
+            save(f'JP_B{division}',records,teams,report,fixtures if year>=active_year else None)
             print('Japan',division,year,len(records)-before,'pages',pages,flush=True)
 
 

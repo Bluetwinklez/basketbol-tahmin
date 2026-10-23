@@ -40,6 +40,7 @@ def main():
     (root/'folds.json').write_text(json.dumps(dict(folds=folds,skipped=skipped),indent=2))
     (root/'manifest.json').write_text(json.dumps(dict(spec=model.SPEC,generated_at_utc=now.isoformat(),files=hashes,
         source_code_sha256=source,packages={n:importlib.metadata.version(n) for n in ['numpy','pandas','scipy','scikit-learn']},
+        default_history_start=model.DEFAULT_HISTORY_START,
         method='Independent divisions/conferences. Fixed Ridge alpha=10 and logistic C=1; Elo and equal ensemble. Earlier seasons train, preceding season first UTC-day half calibrates score scale, second half selects by log loss, refit on all preceding seasons. No target-season tuning; same-day features withheld.',
         limitations='Retrospectively collected numeric results; publication-time history and independently complete coverage unavailable. PBA nominal sides are not verified home court. League reorganisation, imports and rule changes are not fully modeled. Historical accuracy is not a prospective or guaranteed rate. Intervals are not conditional coverage guarantees. Small/partial seasons and selected coverage are separate.'),indent=2))
     print(pd.DataFrame(summaries).to_string(index=False))
