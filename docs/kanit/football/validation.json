@@ -1,0 +1,15 @@
+{
+  "python_tests": 266,
+  "ui_tests": 9,
+  "http_checks": {
+    "/football": 200,
+    "/football.js": 200,
+    "/api/football": 200
+  },
+  "finals": 59240,
+  "frozen_pending_forecasts": 95,
+  "official_verified_games": 0,
+  "duplicates": 0,
+  "rendered_browser_verification": false,
+  "note": "Local CLI import/evaluate/daily, actual local HTTP and DOM tests. Workflow scheduling becomes active only after merge; first hosted refresh unverified."
+}

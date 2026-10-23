@@ -1,0 +1,554 @@
+{
+  "spec": "football-retrospective-v1",
+  "season": "2025-26",
+  "summaries": [
+    {
+      "league": "AT1",
+      "season": "2025-26",
+      "model": {
+        "games": 71,
+        "winner_accuracy": 0.43661971830985913,
+        "log_loss": 1.0708388636925261,
+        "brier": 0.6496768697967545,
+        "total_mae": 1.264912133575912,
+        "margin_mae": 1.3821945563055051,
+        "total_in_80": 0.9014084507042254,
+        "goal_markets": {
+          "over_1.5": {
+            "accuracy": 0.7605633802816901,
+            "brier": 0.18151575820600466
+          },
+          "over_2.5": {
+            "accuracy": 0.5774647887323944,
+            "brier": 0.24655377198394302
+          },
+          "over_3.5": {
+            "accuracy": 0.676056338028169,
+            "brier": 0.23123438288205111
+          },
+          "both_teams_score": {
+            "accuracy": 0.5211267605633803,
+            "brier": 0.2532171014055127
+          }
+        }
+      },
+      "league_frequency_baseline": {
+        "games": 71,
+        "winner_accuracy": 0.36619718309859156,
+        "log_loss": 1.0879070143414695,
+        "brier": 0.6610693860846881
+      },
+      "skipped": [],
+      "coverage": "Available publisher finals only; season completeness not certified"
+    },
+    {
+      "league": "DE1",
+      "season": "2025-26",
+      "model": {
+        "games": 306,
+        "winner_accuracy": 0.5130718954248366,
+        "log_loss": 0.9968995113084841,
+        "brier": 0.5926797951040005,
+        "total_mae": 1.3703008517450734,
+        "margin_mae": 1.380945558704962,
+        "total_in_80": 0.8921568627450981,
+        "goal_markets": {
+          "over_1.5": {
+            "accuracy": 0.8366013071895425,
+            "brier": 0.13748855732086254
+          },
+          "over_2.5": {
+            "accuracy": 0.6503267973856209,
+            "brier": 0.23021743950553852
+          },
+          "over_3.5": {
+            "accuracy": 0.5849673202614379,
+            "brier": 0.24183803453623148
+          },
+          "both_teams_score": {
+            "accuracy": 0.6013071895424836,
+            "brier": 0.2406243356348725
+          }
+        }
+      },
+      "league_frequency_baseline": {
+        "games": 306,
+        "winner_accuracy": 0.43790849673202614,
+        "log_loss": 1.0755700844488474,
+        "brier": 0.6513499452567754
+      },
+      "skipped": [],
+      "coverage": "Available publisher finals only; season completeness not certified"
+    },
+    {
+      "league": "DE2",
+      "season": "2025-26",
+      "model": {
+        "games": 99,
+        "winner_accuracy": 0.47474747474747475,
+        "log_loss": 1.0198103245820405,
+        "brier": 0.6128786062477369,
+        "total_mae": 1.290831865968997,
+        "margin_mae": 1.3094821702050965,
+        "total_in_80": 0.9191919191919192,
+        "goal_markets": {
+          "over_1.5": {
+            "accuracy": 0.8080808080808081,
+            "brier": 0.16537309328734798
+          },
+          "over_2.5": {
+            "accuracy": 0.5656565656565656,
+            "brier": 0.25621639620228237
+          },
+          "over_3.5": {
+            "accuracy": 0.7171717171717171,
+            "brier": 0.21495170258653093
+          },
+          "both_teams_score": {
+            "accuracy": 0.5454545454545454,
+            "brier": 0.2570748653589132
+          }
+        }
+      },
+      "league_frequency_baseline": {
+        "games": 99,
+        "winner_accuracy": 0.46464646464646464,
+        "log_loss": 1.056546345930008,
+        "brier": 0.6384867930256681
+      },
+      "skipped": [],
+      "coverage": "Available publisher finals only; season completeness not certified"
+    },
+    {
+      "league": "EN1",
+      "season": "2025-26",
+      "model": {
+        "games": 380,
+        "winner_accuracy": 0.4868421052631579,
+        "log_loss": 1.0385160925765669,
+        "brier": 0.6237456897746705,
+        "total_mae": 1.2537101249377256,
+        "margin_mae": 1.2209572530723203,
+        "total_in_80": 0.8868421052631579,
+        "goal_markets": {
+          "over_1.5": {
+            "accuracy": 0.7894736842105263,
+            "brier": 0.1672436395180036
+          },
+          "over_2.5": {
+            "accuracy": 0.5236842105263158,
+            "brier": 0.25232134200613276
+          },
+          "over_3.5": {
+            "accuracy": 0.7105263157894737,
+            "brier": 0.20892000896181787
+          },
+          "both_teams_score": {
+            "accuracy": 0.531578947368421,
+            "brier": 0.24895443388761235
+          }
+        }
+      },
+      "league_frequency_baseline": {
+        "games": 380,
+        "winner_accuracy": 0.4263157894736842,
+        "log_loss": 1.0857629716419082,
+        "brier": 0.6572481798303087
+      },
+      "skipped": [],
+      "coverage": "Available publisher finals only; season completeness not certified"
+    },
+    {
+      "league": "EN2",
+      "season": "2025-26",
+      "model": {
+        "games": 557,
+        "winner_accuracy": 0.4236983842010772,
+        "log_loss": 1.0705308464150183,
+        "brier": 0.6479869289047183,
+        "total_mae": 1.1968764141676316,
+        "margin_mae": 1.2508500181593245,
+        "total_in_80": 0.8850987432675045,
+        "goal_markets": {
+          "over_1.5": {
+            "accuracy": 0.7594254937163375,
+            "brier": 0.18580358557651203
+          },
+          "over_2.5": {
+            "accuracy": 0.5278276481149012,
+            "brier": 0.25415345988861987
+          },
+          "over_3.5": {
+            "accuracy": 0.7522441651705566,
+            "brier": 0.18702682971473847
+          },
+          "both_teams_score": {
+            "accuracy": 0.5224416517055656,
+            "brier": 0.248543193273374
+          }
+        }
+      },
+      "league_frequency_baseline": {
+        "games": 557,
+        "winner_accuracy": 0.414721723518851,
+        "log_loss": 1.0867648063107784,
+        "brier": 0.6585490259515079
+      },
+      "skipped": [],
+      "coverage": "Available publisher finals only; season completeness not certified"
+    },
+    {
+      "league": "ES1",
+      "season": "2025-26",
+      "model": {
+        "games": 380,
+        "winner_accuracy": 0.5289473684210526,
+        "log_loss": 0.987153723029107,
+        "brier": 0.5870242443858161,
+        "total_mae": 1.1744553074655515,
+        "margin_mae": 1.1387418856693132,
+        "total_in_80": 0.9105263157894737,
+        "goal_markets": {
+          "over_1.5": {
+            "accuracy": 0.781578947368421,
+            "brier": 0.1672173696443798
+          },
+          "over_2.5": {
+            "accuracy": 0.5657894736842105,
+            "brier": 0.2432404073911981
+          },
+          "over_3.5": {
+            "accuracy": 0.7447368421052631,
+            "brier": 0.18779186986847554
+          },
+          "both_teams_score": {
+            "accuracy": 0.5184210526315789,
+            "brier": 0.2486614985645998
+          }
+        }
+      },
+      "league_frequency_baseline": {
+        "games": 380,
+        "winner_accuracy": 0.48947368421052634,
+        "log_loss": 1.0488974936114972,
+        "brier": 0.6316148498309165
+      },
+      "skipped": [],
+      "coverage": "Available publisher finals only; season completeness not certified"
+    },
+    {
+      "league": "ES2",
+      "season": "2025-26",
+      "model": {
+        "games": 131,
+        "winner_accuracy": 0.3969465648854962,
+        "log_loss": 1.1002677862050612,
+        "brier": 0.6672811499685591,
+        "total_mae": 1.5091090156212776,
+        "margin_mae": 1.1777684479523332,
+        "total_in_80": 0.8015267175572519,
+        "goal_markets": {
+          "over_1.5": {
+            "accuracy": 0.6335877862595419,
+            "brier": 0.24519965439849517
+          },
+          "over_2.5": {
+            "accuracy": 0.5343511450381679,
+            "brier": 0.252500868933568
+          },
+          "over_3.5": {
+            "accuracy": 0.7251908396946565,
+            "brier": 0.19930589272967994
+          },
+          "both_teams_score": {
+            "accuracy": 0.5267175572519084,
+            "brier": 0.2524819666627453
+          }
+        }
+      },
+      "league_frequency_baseline": {
+        "games": 131,
+        "winner_accuracy": 0.4198473282442748,
+        "log_loss": 1.0898617608283823,
+        "brier": 0.6607203110128059
+      },
+      "skipped": [],
+      "coverage": "Available publisher finals only; season completeness not certified"
+    },
+    {
+      "league": "FR1",
+      "season": "2025-26",
+      "model": {
+        "games": 305,
+        "winner_accuracy": 0.5180327868852459,
+        "log_loss": 1.0182174977851675,
+        "brier": 0.609083966243483,
+        "total_mae": 1.5019097484173662,
+        "margin_mae": 1.3295878362982267,
+        "total_in_80": 0.8426229508196721,
+        "goal_markets": {
+          "over_1.5": {
+            "accuracy": 0.7278688524590164,
+            "brier": 0.20509922451960091
+          },
+          "over_2.5": {
+            "accuracy": 0.5278688524590164,
+            "brier": 0.25401141753730716
+          },
+          "over_3.5": {
+            "accuracy": 0.659016393442623,
+            "brier": 0.22054691459745
+          },
+          "both_teams_score": {
+            "accuracy": 0.49508196721311476,
+            "brier": 0.2584830381464167
+          }
+        }
+      },
+      "league_frequency_baseline": {
+        "games": 305,
+        "winner_accuracy": 0.46229508196721314,
+        "log_loss": 1.0668709714770968,
+        "brier": 0.6440580448979023
+      },
+      "skipped": [],
+      "coverage": "Available publisher finals only; season completeness not certified"
+    },
+    {
+      "league": "FR2",
+      "season": "2025-26",
+      "model": {
+        "games": 116,
+        "winner_accuracy": 0.3793103448275862,
+        "log_loss": 1.1098670854461252,
+        "brier": 0.6759689100452939,
+        "total_mae": 1.427889120897921,
+        "margin_mae": 1.2748087135666966,
+        "total_in_80": 0.8793103448275862,
+        "goal_markets": {
+          "over_1.5": {
+            "accuracy": 0.6551724137931034,
+            "brier": 0.23033245568806926
+          },
+          "over_2.5": {
+            "accuracy": 0.5517241379310345,
+            "brier": 0.2468781415961341
+          },
+          "over_3.5": {
+            "accuracy": 0.6982758620689655,
+            "brier": 0.2080748887063528
+          },
+          "both_teams_score": {
+            "accuracy": 0.47413793103448276,
+            "brier": 0.25338627308239464
+          }
+        }
+      },
+      "league_frequency_baseline": {
+        "games": 116,
+        "winner_accuracy": 0.3706896551724138,
+        "log_loss": 1.1239428481121292,
+        "brier": 0.6830097769744679
+      },
+      "skipped": [],
+      "coverage": "Available publisher finals only; season completeness not certified"
+    },
+    {
+      "league": "IT1",
+      "season": "2025-26",
+      "model": {
+        "games": 380,
+        "winner_accuracy": 0.4921052631578947,
+        "log_loss": 1.0182328950429638,
+        "brier": 0.6090134321817315,
+        "total_mae": 1.2583380422577721,
+        "margin_mae": 1.1747483496673257,
+        "total_in_80": 0.8657894736842106,
+        "goal_markets": {
+          "over_1.5": {
+            "accuracy": 0.7,
+            "brier": 0.21162102388401946
+          },
+          "over_2.5": {
+            "accuracy": 0.5131578947368421,
+            "brier": 0.2527982819298881
+          },
+          "over_3.5": {
+            "accuracy": 0.7789473684210526,
+            "brier": 0.1724873768950233
+          },
+          "both_teams_score": {
+            "accuracy": 0.5078947368421053,
+            "brier": 0.2485122647709044
+          }
+        }
+      },
+      "league_frequency_baseline": {
+        "games": 380,
+        "winner_accuracy": 0.3894736842105263,
+        "log_loss": 1.0885698626573599,
+        "brier": 0.6601312801520217
+      },
+      "skipped": [],
+      "coverage": "Available publisher finals only; season completeness not certified"
+    },
+    {
+      "league": "IT2",
+      "season": "2025-26",
+      "model": {
+        "games": 309,
+        "winner_accuracy": 0.42718446601941745,
+        "log_loss": 1.064763106531944,
+        "brier": 0.6427996320277195,
+        "total_mae": 1.2349325771128905,
+        "margin_mae": 1.1592482513002267,
+        "total_in_80": 0.8802588996763754,
+        "goal_markets": {
+          "over_1.5": {
+            "accuracy": 0.7475728155339806,
+            "brier": 0.19243717286088718
+          },
+          "over_2.5": {
+            "accuracy": 0.48220064724919093,
+            "brier": 0.26079940168827953
+          },
+          "over_3.5": {
+            "accuracy": 0.7443365695792881,
+            "brier": 0.19690509721854127
+          },
+          "both_teams_score": {
+            "accuracy": 0.4692556634304207,
+            "brier": 0.25464856873305686
+          }
+        }
+      },
+      "league_frequency_baseline": {
+        "games": 309,
+        "winner_accuracy": 0.43042071197411,
+        "log_loss": 1.0763086403636513,
+        "brier": 0.6516571243262121
+      },
+      "skipped": [],
+      "coverage": "Available publisher finals only; season completeness not certified"
+    },
+    {
+      "league": "NL1",
+      "season": "2025-26",
+      "model": {
+        "games": 305,
+        "winner_accuracy": 0.49836065573770494,
+        "log_loss": 1.0110491364427616,
+        "brier": 0.6025290610959176,
+        "total_mae": 1.3020084275323627,
+        "margin_mae": 1.3225994333074822,
+        "total_in_80": 0.9049180327868852,
+        "goal_markets": {
+          "over_1.5": {
+            "accuracy": 0.8655737704918033,
+            "brier": 0.1174134996250907
+          },
+          "over_2.5": {
+            "accuracy": 0.5967213114754099,
+            "brier": 0.2331006309515637
+          },
+          "over_3.5": {
+            "accuracy": 0.6491803278688525,
+            "brier": 0.2328651361181573
+          },
+          "both_teams_score": {
+            "accuracy": 0.6032786885245902,
+            "brier": 0.2299110400886244
+          }
+        }
+      },
+      "league_frequency_baseline": {
+        "games": 305,
+        "winner_accuracy": 0.4426229508196721,
+        "log_loss": 1.0731205461075821,
+        "brier": 0.6490061374538711
+      },
+      "skipped": [],
+      "coverage": "Available publisher finals only; season completeness not certified"
+    },
+    {
+      "league": "PT1",
+      "season": "2025-26",
+      "model": {
+        "games": 306,
+        "winner_accuracy": 0.5294117647058824,
+        "log_loss": 0.96690466736356,
+        "brier": 0.5740919041178723,
+        "total_mae": 1.2308239279889432,
+        "margin_mae": 1.2245057189393043,
+        "total_in_80": 0.8954248366013072,
+        "goal_markets": {
+          "over_1.5": {
+            "accuracy": 0.7483660130718954,
+            "brier": 0.18829723018754974
+          },
+          "over_2.5": {
+            "accuracy": 0.5424836601307189,
+            "brier": 0.24333485539301633
+          },
+          "over_3.5": {
+            "accuracy": 0.6895424836601307,
+            "brier": 0.2094182139938755
+          },
+          "both_teams_score": {
+            "accuracy": 0.5196078431372549,
+            "brier": 0.2505359636032718
+          }
+        }
+      },
+      "league_frequency_baseline": {
+        "games": 306,
+        "winner_accuracy": 0.4150326797385621,
+        "log_loss": 1.0845882388800945,
+        "brier": 0.6572740530784329
+      },
+      "skipped": [],
+      "coverage": "Available publisher finals only; season completeness not certified"
+    },
+    {
+      "league": "TR1",
+      "season": "2025-26",
+      "model": {
+        "games": 99,
+        "winner_accuracy": 0.45454545454545453,
+        "log_loss": 1.0339537547844966,
+        "brier": 0.6196103536142202,
+        "total_mae": 1.306020861198007,
+        "margin_mae": 1.1481315504765273,
+        "total_in_80": 0.8888888888888888,
+        "goal_markets": {
+          "over_1.5": {
+            "accuracy": 0.7373737373737373,
+            "brier": 0.1983360711289451
+          },
+          "over_2.5": {
+            "accuracy": 0.48484848484848486,
+            "brier": 0.26116202545584494
+          },
+          "over_3.5": {
+            "accuracy": 0.7272727272727273,
+            "brier": 0.20238680932386396
+          },
+          "both_teams_score": {
+            "accuracy": 0.5555555555555556,
+            "brier": 0.25201302671598425
+          }
+        }
+      },
+      "league_frequency_baseline": {
+        "games": 99,
+        "winner_accuracy": 0.37373737373737376,
+        "log_loss": 1.1104307082356615,
+        "brier": 0.6756923292290837
+      },
+      "skipped": [],
+      "coverage": "Available publisher finals only; season completeness not certified"
+    }
+  ],
+  "note": "Retrospective monthly holdout; unknown historical publication times. No tuning on target outcomes. Not prospective accuracy. Fixed 180-day half-life, 1095-day window and 8-game shrinkage. No general accuracy improvement established.",
+  "predictions_file": "predictions.json.gz"
+}

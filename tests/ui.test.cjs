@@ -253,3 +253,19 @@ test("saved verification and failed provider outcomes are visibly distinct", asy
   assert.match(a.doc.querySelector("#issues").textContent, /HTTP 403/);
   assert.match(a.doc.querySelector("#source-checks").textContent, /failed/);
 });
+
+test('football board separates draws, goal markets and unverified results', async (t) => {
+  const html=fs.readFileSync('src/bbtahmin/ui/football.html','utf8').replace('__CSRF_TOKEN__','test-token');
+  const script=fs.readFileSync('src/bbtahmin/ui/football.js','utf8');
+  const dom=new JSDOM(html,{url:'http://127.0.0.1:8765/football',runScripts:'outside-only'});t.after(()=>dom.window.close());
+  const w=dom.window;w.setInterval=()=>1;
+  w.fetch=async()=>({ok:true,json:async()=>({sample:true,job:{status:'idle',message:'Ready'},report:{
+    checked_at_utc:'2026-10-23T12:00Z',pending:1,publisher_performance:{games:0},source_errors:[],skipped:[],
+    forecasts:[{fixture:{league:'TR1',date:'2026-10-25',home_name:'<img src=x onerror=alert(1)>',away_name:'B',source_url:'javascript:alert(1)'},prediction:{expected_home_goals:1.5,expected_away_goals:1,probabilities:{home:.45,draw:.3,away:.25},over:{'1.5':.7,'2.5':.4,'3.5':.2},both_teams_score:.5,total_goals_80:[0,5],issues:[]},result:null}]
+  }})});w.eval(script);await new Promise(setImmediate);
+  const text=w.document.body.textContent;
+  assert.match(text,/Draw 30.0%/);assert.match(text,/Over 2.5 40.0%/);assert.match(text,/Pending · no final result/);
+  assert.match(text,/0 officially verified/);assert.match(text,/Saved demonstration/);
+  assert.equal(w.document.querySelectorAll('#cards img').length,0);
+  assert.equal(w.document.querySelector('#cards a').getAttribute('href'),'#');
+});

@@ -96,6 +96,7 @@ def export_csv(report, rows):
 class AppState:
     def __init__(self, directory='rapor/daily', runner=run):
         self.directory, self.runner = str(directory), runner
+        self.football_directory = str(Path(directory).parent/'football')
         self.token = secrets.token_urlsafe(32)
         self.lock = threading.Lock()
         self.pool = ThreadPoolExecutor(max_workers=1, thread_name_prefix='basketball-research')
@@ -135,6 +136,40 @@ class AppState:
         except Exception as exc:
             with self.lock:
                 self.job.update(status='failed', message=f'{type(exc).__name__}: {exc}', finished_at=utc_now())
+
+    def submit_football(self, payload):
+        if not isinstance(payload, dict) or set(payload)-{'refresh','days'}:
+            raise ValueError('Unknown football options')
+        refresh,days=payload.get('refresh',False),payload.get('days',7)
+        if type(refresh) is not bool or type(days) is not int or not 1<=days<=14:
+            raise ValueError('Choose refresh true/false and 1..14 days')
+        with self.lock:
+            if self.job['status']=='running': raise RuntimeError('A run is already in progress')
+            self.job=dict(status='running',message='Processing football sources',started_at=utc_now(),finished_at=None)
+        self.pool.submit(self._football_work,refresh,days)
+
+    def _football_work(self, refresh, days):
+        try:
+            from .football.data import collect
+            from .football.daily import run as football_run
+            if refresh: collect(current_only=True)
+            report=football_run(days,self.football_directory)
+            with self.lock:
+                self.job.update(status='partial' if report['source_errors'] or report['skipped'] else 'succeeded',
+                                message='Football report saved',finished_at=utc_now())
+        except Exception as exc:
+            with self.lock:
+                self.job.update(status='failed',message=f'{type(exc).__name__}: {exc}',finished_at=utc_now())
+
+    def football_snapshot(self):
+        report=None
+        path=Path(self.football_directory)/'latest.json'
+        sample=False
+        if not path.exists():
+            path=Path('data/football_ledger/latest.json');sample=True
+        if path.exists(): report=json.loads(path.read_text('utf8'))
+        with self.lock: job=dict(self.job)
+        return dict(report=report,job=job,sample=sample)
 
     def close(self):
         self.pool.shutdown(wait=True)
@@ -180,15 +215,19 @@ class Handler(BaseHTTPRequestHandler):
         if not self.allowed():
             return self.send(dict(error='Invalid local host'), status=403)
         path = urlsplit(self.path).path
-        assets = {'/': ('index.html', 'text/html; charset=utf-8'),
+        assets = {'/football': ('football.html', 'text/html; charset=utf-8'),
+                  '/football.js': ('football.js', 'text/javascript; charset=utf-8'),
+                  '/': ('index.html', 'text/html; charset=utf-8'),
                   '/app.js': ('app.js', 'text/javascript; charset=utf-8'),
                   '/app.css': ('app.css', 'text/css; charset=utf-8')}
         if path in assets:
             name, kind = assets[path]
             raw = files('bbtahmin').joinpath('ui', name).read_text('utf8')
-            if name == 'index.html':
+            if name in ('index.html','football.html'):
                 raw = raw.replace('__CSRF_TOKEN__', self.server.state.token)
             return self.send(raw.encode('utf8'), kind)
+        if path == '/api/football':
+            return self.send(self.server.state.football_snapshot())
         snapshot = self.server.state.snapshot()
         if path == '/api/state':
             return self.send(snapshot)
@@ -209,14 +248,16 @@ class Handler(BaseHTTPRequestHandler):
         if (not self.allowed() or origin not in (None, f'http://127.0.0.1:{port}', f'http://localhost:{port}') or
                 not secrets.compare_digest(self.headers.get('X-App-Token', ''), self.server.state.token)):
             return self.send(dict(error='Invalid local request'), status=403)
-        if urlsplit(self.path).path != '/api/run':
+        path=urlsplit(self.path).path
+        if path not in ('/api/run','/api/football/run'):
             return self.send(dict(error='Not found'), status=404)
         try:
             size = int(self.headers.get('Content-Length', '0'))
             if not 0 < size <= 8192 or self.headers.get_content_type() != 'application/json':
                 raise ValueError('A JSON request of at most 8 KB is required')
             payload = json.loads(self.rfile.read(size))
-            self.server.state.submit(payload)
+            if path == '/api/football/run': self.server.state.submit_football(payload)
+            else: self.server.state.submit(payload)
         except (ValueError, TypeError) as exc:
             return self.send(dict(error=str(exc)), status=400)
         except RuntimeError as exc:

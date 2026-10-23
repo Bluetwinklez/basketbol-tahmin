@@ -1,0 +1,62 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-10-23T16:48:20.082045+00:00",
+  "fixture": {
+    "event_id": "ES1_163f05018c216224bca82899",
+    "league": "ES1",
+    "season": "2026-27",
+    "date": "2026-10-25",
+    "home": "deportivo alaves",
+    "away": "malaga cf",
+    "home_name": "Deportivo Alavés",
+    "away_name": "Málaga CF",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/es.1.json",
+    "captured_at_utc": "2026-10-23T16:45:36.284530+00:00",
+    "source_kind": "community_CC0_not_official"
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "ES1",
+    "home": "deportivo alaves",
+    "away": "malaga cf",
+    "expected_home_goals": 1.6377723322169384,
+    "expected_away_goals": 0.8917552810278909,
+    "probabilities": {
+      "home": 0.5496121977422027,
+      "draw": 0.2461564329790068,
+      "away": 0.20423136927879046
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      1,
+      0
+    ],
+    "over": {
+      "1.5": 0.7187084412302471,
+      "2.5": 0.46373850845407044,
+      "3.5": 0.2487540132858979
+    },
+    "both_teams_score": 0.475348443240618,
+    "total_goals_80": [
+      1,
+      5
+    ],
+    "training_cutoff_exclusive": "2026-10-23",
+    "training_games": 1100,
+    "prior_team_games": {
+      "deportivo alaves": 110,
+      "malaga cf": 7
+    },
+    "issues": [
+      "malaga cf: fewer than 10 prior matches"
+    ],
+    "recommendation_validated": false,
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "642c2d1ebc22894173cfb47d62dac1b947fc017859d7ed42caf8f239fa5fd3b7",
+  "payload_sha256": "353a2fcf6b9ea1415cd30eab07c7db5eb53be03d64d24c00e89884efb4671641"
+}

@@ -1,0 +1,60 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-10-23T16:48:20.082045+00:00",
+  "fixture": {
+    "event_id": "TR1_808816cb3ab0a2d30f173889",
+    "league": "TR1",
+    "season": "2026-27",
+    "date": "2026-10-25",
+    "home": "besiktas",
+    "away": "istanbul basaksehir",
+    "home_name": "Beşiktaş",
+    "away_name": "İstanbul Başakşehir",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/europe/blob/63df627f3c87ce71708f016522ea236cf74332c3/turkey/2026-27_tr1.txt",
+    "captured_at_utc": "2026-10-23T16:45:36.284530+00:00",
+    "source_kind": "community_CC0_not_official"
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "TR1",
+    "home": "besiktas",
+    "away": "istanbul basaksehir",
+    "expected_home_goals": 1.8675103172581213,
+    "expected_away_goals": 1.3280688623618915,
+    "probabilities": {
+      "home": 0.501174099890482,
+      "draw": 0.2257781861955507,
+      "away": 0.2730477139139673
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.8282212186571121,
+      "2.5": 0.6191728581140171,
+      "3.5": 0.39649599528561297
+    },
+    "both_teams_score": 0.621446449599513,
+    "total_goals_80": [
+      1,
+      6
+    ],
+    "training_cutoff_exclusive": "2026-10-23",
+    "training_games": 763,
+    "prior_team_games": {
+      "besiktas": 79,
+      "istanbul basaksehir": 80
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "642c2d1ebc22894173cfb47d62dac1b947fc017859d7ed42caf8f239fa5fd3b7",
+  "payload_sha256": "7bc172620951c0fb25ffec63b9c09a54f37199cb20beee871447092adb709d8c"
+}
