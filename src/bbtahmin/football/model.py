@@ -36,13 +36,17 @@ class GoalModel:
         self.base_probs=np.array([self.baseline.get(1,0)+1,self.baseline.get(0,0)+1,self.baseline.get(-1,0)+1])
         self.base_probs=self.base_probs/self.base_probs.sum()
 
-    def predict(self, home, away):
-        home,away=key(home),key(away)
-        if home==away: raise ValueError('Teams must differ')
+    def goal_rates(self,home,away):
         ha,hd=self.ratings.get(('home',home),(1.,1.))
         aa,ad=self.ratings.get(('away',away),(1.,1.))
         lh=float(np.clip(self.home_mean*ha*ad,.1,6))
         la=float(np.clip(self.away_mean*aa*hd,.1,6))
+        return lh,la
+
+    def predict(self, home, away):
+        home,away=key(home),key(away)
+        if home==away: raise ValueError('Teams must differ')
+        lh,la=self.goal_rates(home,away)
         grid=np.outer(poisson.pmf(np.arange(41),lh),poisson.pmf(np.arange(41),la))
         probs=[float(np.tril(grid,-1).sum()),float(np.trace(grid)),float(np.triu(grid,1).sum())]
         goals=lh+la
@@ -54,7 +58,7 @@ class GoalModel:
             elif (self.cutoff-pd.Timestamp(recent[team])).days>90: issues.append(f'{team}: history older than 90 days')
             if ('home',team) not in self.ratings or ('away',team) not in self.ratings:
                 issues.append(f'{team}: missing venue history; league prior used')
-        return dict(model='football-poisson-v1',league=self.league,home=home,away=away,
+        return dict(model=getattr(self,'model_name','football-poisson-v1'),league=self.league,home=home,away=away,
                     expected_home_goals=lh,expected_away_goals=la,
                     probabilities=dict(zip(['home','draw','away'],probs)),
                     predicted_outcome=['home','draw','away'][int(np.argmax(probs))],

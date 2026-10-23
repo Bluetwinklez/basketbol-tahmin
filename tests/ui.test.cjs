@@ -268,4 +268,10 @@ test('football board separates draws, goal markets and unverified results', asyn
   assert.match(text,/0 officially verified/);assert.match(text,/Saved demonstration/);
   assert.equal(w.document.querySelectorAll('#cards img').length,0);
   assert.equal(w.document.querySelector('#cards a').getAttribute('href'),'#');
+  let requested='';w.fetch=async path=>{requested=path;return {ok:true,json:async()=>({report:null,job:{status:'idle'}})};};
+  const selector=w.document.getElementById('model');selector.value='opponent';selector.dispatchEvent(new w.Event('change'));
+  await new Promise(setImmediate);
+  assert.match(requested,/model=opponent/);
+  assert.equal(w.document.querySelectorAll('#cards article').length,0);
+  assert.match(w.document.getElementById('summary').textContent,/No saved forecasts for this model/);
 });

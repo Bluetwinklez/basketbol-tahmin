@@ -104,3 +104,36 @@ def test_collection_retains_conflicting_finals(tmp_path):
     r=json.loads((root/'collection.json').read_text())
     assert any('Conflicting' in e['error'] for e in r['errors'])
     assert load(root).iloc[0].home_goals==1
+
+
+def test_opponent_model_is_causal_and_has_unknown_team_warning():
+    from bbtahmin.football.opponent import OpponentGoalModel
+    h=history();p=OpponentGoalModel(h,'TR1','2025-07-01').predict('a','b')
+    future=h.iloc[:1].copy();future.date='2025-07-01';future.home_goals=30
+    q=OpponentGoalModel(pd.concat([h,future]),'TR1','2025-07-01').predict('a','b')
+    assert p==q and p['model']=='football-opponent-poisson-v1'
+    assert sum(p['probabilities'].values())==pytest.approx(1)
+    assert OpponentGoalModel(h,'TR1','2025-07-01').predict('new team','b')['issues']
+
+
+def test_shadow_model_never_rewrites_baseline(tmp_path,monkeypatch):
+    from bbtahmin.football import daily
+    h=history();h['date']=(pd.to_datetime(h.date)+pd.Timedelta(days=365)).dt.strftime('%Y-%m-%d')
+    h['event_id']=['h'+str(i) for i in range(len(h))]
+    fixture=row('TR1','2026-27','2026-10-25','A','B',None,'source','2026-10-23T12:00Z')
+    f=pd.concat([h,pd.DataFrame([fixture])],ignore_index=True)
+    monkeypatch.setattr(daily,'load',lambda root:f)
+    write_json(tmp_path/'collection.json',dict(checked_at_utc='2026-10-23T12:00Z',errors=[]))
+    baseline=daily.run(output=tmp_path/'ledger',root=tmp_path,now='2026-10-23T13:00Z')
+    file=next((tmp_path/'ledger'/'forecasts').glob('*.json'));before=file.read_bytes()
+    shadow=daily.run(output=tmp_path/'ledger',root=tmp_path,now='2026-10-23T13:00Z',model='opponent')
+    assert file.read_bytes()==before
+    assert shadow['forecasts'][0]['prediction']['model']=='football-opponent-poisson-v1'
+    assert baseline['forecasts'][0]['prediction']['model']=='football-poisson-v1'
+
+
+def test_opponent_fitting_failure_is_explicit(monkeypatch):
+    from bbtahmin.football import opponent
+    from types import SimpleNamespace
+    monkeypatch.setattr(opponent,'minimize',lambda *args,**kwargs:SimpleNamespace(success=False))
+    with pytest.raises(ValueError,match='converge'):opponent.OpponentGoalModel(history(),'TR1','2025-07-01')

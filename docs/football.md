@@ -4,6 +4,8 @@ Football runs separately from basketball: distinct archives, league models, draw
 
 ## Available data
 
+The follow-up expansion brings the stored archive to **76,277 finals across 20 leagues** (+17,037 distinct finals), adding Belgium, Greece, Scotland, English League One/Two and Austrian 2. Liga history. These six additions currently have no active-season snapshots; historical model support is separate from upcoming fixture support. See [the model and data follow-up](football-challenger.md).
+
 The initial import stores **59,240 distinct regulation final scores across 14 leagues**, including **1,884 Turkish Süper Lig scores**. There are 2,511 scheduled rows across all source seasons; that number is not the number of usable upcoming games. The actual seven-day run froze **95 future forecasts**, including 9 Turkish fixtures. All 95 are pending; no prospective accuracy is available. The historical basketball datasets and previously frozen forecasts are unchanged.
 
 Sources are [OpenFootball football.json](https://github.com/openfootball/football.json) and [OpenFootball Europe / Turkey](https://github.com/openfootball/europe/tree/master/turkey), both CC0. This is a community-maintained archive, **not an official federation feed**. Sources, immutable upstream commit links, source hashes, capture times and season counts are retained in `data/football/collection.json` and compressed per-season snapshots. Day precision is retained even when the source includes a clock without verified timezone semantics.
@@ -27,7 +29,7 @@ python -m bbtahmin futbol evaluate --season 2025-26 --output rapor/football
 python scripts/refresh_sports.py --sport all
 ```
 
-League codes: TR1, EN1, EN2, DE1, DE2, ES1, ES2, IT1, IT2, FR1, FR2, NL1, PT1, AT1. Team names use source identities; known Turkish spelling/sponsor aliases are explicit. Unknown teams receive league priors with a warning, not fuzzy identity guesses. Read-only MCP exposes `football_status` and `predict_football`; it does not refresh or place bets.
+League codes: TR1, EN1, EN2, DE1, DE2, ES1, ES2, IT1, IT2, FR1, FR2, NL1, PT1, AT1, BE1, GR1, SC1, EN3, EN4, AT2. Team names use source identities; known Turkish spelling/sponsor aliases are explicit. Unknown teams receive league priors with a warning, not fuzzy identity guesses. Read-only MCP exposes `football_status` and `predict_football`; it does not refresh or place bets.
 
 ## Model and measurement
 
