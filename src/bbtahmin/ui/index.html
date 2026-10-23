@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="app-token" content="__CSRF_TOKEN__" />
+    <title>CourtSignal · Basketball Research</title>
+    <link rel="stylesheet" href="/app.css" />
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <aside class="sidebar">
+      <a class="brand" href="/"
+        ><span class="brand-mark">◉</span
+        ><span>CourtSignal<small>BASKETBALL RESEARCH</small></span></a
+      >
+      <div class="nav-label">WORKSPACE</div>
+      <a class="nav active" href="#forecasts"><span>▦</span> Match board</a>
+      <a class="nav" href="#results"><span>≋</span> Results & errors</a>
+      <a class="nav" href="#checks"><span>◎</span> Input checks</a>
+      <div class="sidebar-bottom">
+        <span class="connection-dot"></span> Local workspace<small
+          >Forecasts stay in your local ledger.</small
+        >
+      </div>
+    </aside>
+    <main>
+      <header class="topbar">
+        <span>Research workspace <span class="slash">/</span> Match board</span
+        ><span id="today">Europe / Istanbul</span>
+      </header>
+      <section class="heading">
+        <div>
+          <div class="eyebrow">PREGAME · RECORD · REVIEW</div>
+          <h1>Your match board.</h1>
+          <p>Every prediction recorded. Every result accounted for.</p>
+        </div>
+        <div class="actions">
+          <button id="local-run" class="button secondary">
+            Use saved sources</button
+          ><button id="refresh-run" class="button primary">
+            <span>↻</span> Refresh & run
+          </button>
+        </div>
+      </section>
+      <div
+        id="notice"
+        class="notice"
+        role="status"
+        aria-live="polite"
+        hidden
+      ></div>
+      <details class="run-settings">
+        <summary>
+          Run settings
+          <span id="settings-summary"
+            >5 leagues · next 48 hours · 65% filter</span
+          >
+        </summary>
+        <div class="settings-content">
+          <fieldset>
+            <legend>Leagues to process</legend>
+            <div id="run-leagues" class="league-options"></div>
+          </fieldset>
+          <label
+            >Next hours<input
+              id="hours"
+              type="number"
+              min="1"
+              max="168"
+              value="48" /></label
+          ><label
+            >Probability filter (%)<input
+              id="threshold"
+              type="number"
+              min="50"
+              max="100"
+              step="1"
+              value="65"
+          /></label>
+        </div>
+        <p class="muted setting-note">
+          The filter is a model-probability threshold, not measured accuracy.
+          Japanese source refreshes can take several minutes.
+        </p>
+      </details>
+      <section class="metrics" aria-label="Report metrics">
+        <article>
+          <div class="metric-label">RECORDED MATCHES <span>↗</span></div>
+          <strong id="metric-upcoming">—</strong
+          ><small id="metric-pending">No report loaded</small>
+        </article>
+        <article>
+          <div class="metric-label">VERIFIED FINALS <span>✓</span></div>
+          <strong id="metric-finals">—</strong
+          ><small>Pending results are excluded</small>
+        </article>
+        <article>
+          <div class="metric-label">SETTLED WINNER ACCURACY <span>◎</span></div>
+          <strong id="metric-accuracy">—</strong
+          ><small id="accuracy-note">Needs verified final results</small>
+        </article>
+        <article>
+          <div class="metric-label">TEAM SCORE ERROR <span>≈</span></div>
+          <strong id="metric-error">—</strong
+          ><small>Mean absolute error · points per team</small>
+        </article>
+      </section>
+      <section id="forecasts" class="board-section">
+        <div class="section-heading">
+          <div>
+            <h2>
+              Recorded forecasts <span id="visible-count" class="count">0</span>
+            </h2>
+            <p id="report-time">
+              Load saved fixtures or refresh sources to start.
+            </p>
+          </div>
+          <div class="exports">
+            <span>Export</span><a href="/api/export.json" download>JSON</a
+            ><a href="/api/export.csv" download>CSV</a
+            ><a href="/api/export.md" download>Report</a>
+          </div>
+        </div>
+        <div class="filters">
+          <label class="search"
+            ><span>⌕</span
+            ><input
+              id="search"
+              type="search"
+              placeholder="Search teams…"
+              aria-label="Search teams" /></label
+          ><select id="league-filter" aria-label="Filter displayed league">
+            <option value="">All leagues</option></select
+          ><label class="toggle"
+            ><input id="passed-only" type="checkbox" /> Passed recorded filter
+            only</label
+          >
+        </div>
+        <div id="forecast-grid" class="forecast-grid"></div>
+        <div id="empty" class="empty" hidden>
+          <span>◎</span>
+          <h3>No matches in this view</h3>
+          <p>
+            Change the filters or run a fixture check. Unsupported or unresolved
+            inputs appear below.
+          </p>
+        </div>
+      </section>
+      <section id="results" class="results-section">
+        <div class="section-heading">
+          <div>
+            <h2>Results & point errors</h2>
+            <p>Only verified finals enter the accuracy calculation.</p>
+          </div>
+          <span class="neutral-pill">PROSPECTIVE RECORD</span>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Match</th>
+                <th>Forecast</th>
+                <th>Final</th>
+                <th>Winner</th>
+                <th>Home / away error</th>
+                <th>Total error</th>
+                <th>Margin error</th>
+                <th>80% total / margin</th>
+              </tr>
+            </thead>
+            <tbody id="results-body"></tbody>
+          </table>
+        </div>
+        <p id="results-empty" class="table-empty">
+          No settled or pending records yet.
+        </p>
+      </section>
+      <section id="checks" class="checks-section">
+        <div class="section-heading">
+          <div>
+            <h2>Input checks</h2>
+            <p>Missing sources and rejected fixtures remain visible.</p>
+          </div>
+        </div>
+        <div id="source-checks" class="source-checks"></div>
+        <ul id="issues" class="issues"></ul>
+      </section>
+      <footer>
+        Research estimates, not guaranteed outcomes. Small samples do not
+        establish general accuracy. <span>Times shown in Europe/Istanbul.</span>
+      </footer>
+    </main>
+  </body>
+</html>
