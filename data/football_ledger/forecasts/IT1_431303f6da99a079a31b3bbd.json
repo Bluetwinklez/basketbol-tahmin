@@ -1,0 +1,60 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-10-23T16:48:20.082045+00:00",
+  "fixture": {
+    "event_id": "IT1_431303f6da99a079a31b3bbd",
+    "league": "IT1",
+    "season": "2026-27",
+    "date": "2026-10-27",
+    "home": "torino fc",
+    "away": "como 1907",
+    "home_name": "Torino FC",
+    "away_name": "Como 1907",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/it.1.json",
+    "captured_at_utc": "2026-10-23T16:45:36.284530+00:00",
+    "source_kind": "community_CC0_not_official"
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "IT1",
+    "home": "torino fc",
+    "away": "como 1907",
+    "expected_home_goals": 1.072973726469838,
+    "expected_away_goals": 1.6163083418646778,
+    "probabilities": {
+      "home": 0.25220694138523486,
+      "draw": 0.24780112121658746,
+      "away": 0.49999193739817754
+    },
+    "predicted_outcome": "away",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.7493882100247387,
+      "2.5": 0.503746363192725,
+      "3.5": 0.2835462918867554
+    },
+    "both_teams_score": 0.527309048113796,
+    "total_goals_80": [
+      1,
+      5
+    ],
+    "training_cutoff_exclusive": "2026-10-23",
+    "training_games": 1090,
+    "prior_team_games": {
+      "torino fc": 109,
+      "como 1907": 80
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "642c2d1ebc22894173cfb47d62dac1b947fc017859d7ed42caf8f239fa5fd3b7",
+  "payload_sha256": "8a040b29b0fb66d6cb1877114f9b81670a2305531d38c2c43e7d04875a020b88"
+}

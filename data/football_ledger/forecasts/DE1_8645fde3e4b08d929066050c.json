@@ -1,0 +1,60 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-10-23T16:48:20.082045+00:00",
+  "fixture": {
+    "event_id": "DE1_8645fde3e4b08d929066050c",
+    "league": "DE1",
+    "season": "2026-27",
+    "date": "2026-10-24",
+    "home": "1. fsv mainz 05",
+    "away": "sv werder bremen",
+    "home_name": "1. FSV Mainz 05",
+    "away_name": "SV Werder Bremen",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/de.1.json",
+    "captured_at_utc": "2026-10-23T16:45:36.284530+00:00",
+    "source_kind": "community_CC0_not_official"
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "DE1",
+    "home": "1. fsv mainz 05",
+    "away": "sv werder bremen",
+    "expected_home_goals": 1.4828677281238454,
+    "expected_away_goals": 1.292364618002298,
+    "probabilities": {
+      "home": 0.4169104965988619,
+      "draw": 0.2527918128308406,
+      "away": 0.3302976905702976
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.7646709229890989,
+      "2.5": 0.5246215323856543,
+      "3.5": 0.30255725456213833
+    },
+    "both_teams_score": 0.5607285293823248,
+    "total_goals_80": [
+      1,
+      5
+    ],
+    "training_cutoff_exclusive": "2026-10-23",
+    "training_games": 882,
+    "prior_team_games": {
+      "1. fsv mainz 05": 98,
+      "sv werder bremen": 98
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "642c2d1ebc22894173cfb47d62dac1b947fc017859d7ed42caf8f239fa5fd3b7",
+  "payload_sha256": "38a7b82c7689633cc7e691861d74e730660cac3cfe1a6282ac524d92c4d016fe"
+}

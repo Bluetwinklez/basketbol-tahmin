@@ -1,0 +1,60 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-10-23T16:48:20.082045+00:00",
+  "fixture": {
+    "event_id": "IT1_ec7e5b5ae5bdad2d796d6883",
+    "league": "IT1",
+    "season": "2026-27",
+    "date": "2026-10-29",
+    "home": "frosinone calcio",
+    "away": "us lecce",
+    "home_name": "Frosinone Calcio",
+    "away_name": "US Lecce",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/it.1.json",
+    "captured_at_utc": "2026-10-23T16:45:36.284530+00:00",
+    "source_kind": "community_CC0_not_official"
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "IT1",
+    "home": "frosinone calcio",
+    "away": "us lecce",
+    "expected_home_goals": 1.4419860151255346,
+    "expected_away_goals": 0.9418811431546525,
+    "probabilities": {
+      "home": 0.4868433213589992,
+      "draw": 0.2669160749247051,
+      "away": 0.24624060371629555
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      1,
+      0
+    ],
+    "over": {
+      "1.5": 0.6880299137378567,
+      "2.5": 0.4260706549009008,
+      "3.5": 0.21791196358462123
+    },
+    "both_teams_score": 0.46584197821335727,
+    "total_goals_80": [
+      1,
+      4
+    ],
+    "training_cutoff_exclusive": "2026-10-23",
+    "training_games": 1090,
+    "prior_team_games": {
+      "frosinone calcio": 34,
+      "us lecce": 109
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "642c2d1ebc22894173cfb47d62dac1b947fc017859d7ed42caf8f239fa5fd3b7",
+  "payload_sha256": "9b0a9b13b80aaa33e3e920e36e362e188e0f00b8b986823becf6a5903fb30b9a"
+}

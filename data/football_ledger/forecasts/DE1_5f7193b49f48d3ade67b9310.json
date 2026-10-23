@@ -1,0 +1,60 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-10-23T16:48:20.082045+00:00",
+  "fixture": {
+    "event_id": "DE1_5f7193b49f48d3ade67b9310",
+    "league": "DE1",
+    "season": "2026-27",
+    "date": "2026-10-25",
+    "home": "sc freiburg",
+    "away": "fc bayern munchen",
+    "home_name": "SC Freiburg",
+    "away_name": "FC Bayern München",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/de.1.json",
+    "captured_at_utc": "2026-10-23T16:45:36.284530+00:00",
+    "source_kind": "community_CC0_not_official"
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "DE1",
+    "home": "sc freiburg",
+    "away": "fc bayern munchen",
+    "expected_home_goals": 1.588791787231157,
+    "expected_away_goals": 1.9149271089582574,
+    "probabilities": {
+      "home": 0.3234707453652161,
+      "draw": 0.21984072324182535,
+      "away": 0.4566885313929586
+    },
+    "predicted_outcome": "away",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.8645043062128255,
+      "2.5": 0.6798400962455434,
+      "3.5": 0.4641696022747919
+    },
+    "both_teams_score": 0.6785605720048199,
+    "total_goals_80": [
+      1,
+      6
+    ],
+    "training_cutoff_exclusive": "2026-10-23",
+    "training_games": 882,
+    "prior_team_games": {
+      "sc freiburg": 98,
+      "fc bayern munchen": 98
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "642c2d1ebc22894173cfb47d62dac1b947fc017859d7ed42caf8f239fa5fd3b7",
+  "payload_sha256": "bef9a4d4071a34d8d7f33ef677d71323946c05962a7c934295ddfbff759a982b"
+}

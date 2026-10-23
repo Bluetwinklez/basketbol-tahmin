@@ -1,0 +1,60 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-10-23T16:48:20.082045+00:00",
+  "fixture": {
+    "event_id": "FR1_b69eefb9dd9b44291e59f58a",
+    "league": "FR1",
+    "season": "2026-27",
+    "date": "2026-10-25",
+    "home": "paris saint-germain fc",
+    "away": "olympique lyonnais",
+    "home_name": "Paris Saint-Germain FC",
+    "away_name": "Olympique Lyonnais",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/fr.1.json",
+    "captured_at_utc": "2026-10-23T16:45:36.284530+00:00",
+    "source_kind": "community_CC0_not_official"
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "FR1",
+    "home": "paris saint-germain fc",
+    "away": "olympique lyonnais",
+    "expected_home_goals": 1.6340892830873728,
+    "expected_away_goals": 1.1516862899825109,
+    "probabilities": {
+      "home": 0.4859824898214804,
+      "draw": 0.24524815497121355,
+      "away": 0.2687693552073061
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.7664886979244137,
+      "2.5": 0.5271486921969901,
+      "3.5": 0.3048995116590356
+    },
+    "both_teams_score": 0.5504479556759891,
+    "total_goals_80": [
+      1,
+      5
+    ],
+    "training_cutoff_exclusive": "2026-10-23",
+    "training_games": 882,
+    "prior_team_games": {
+      "paris saint-germain fc": 98,
+      "olympique lyonnais": 98
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "642c2d1ebc22894173cfb47d62dac1b947fc017859d7ed42caf8f239fa5fd3b7",
+  "payload_sha256": "640f1781f45cf5d857ff5ba9aaf8f3561b61208549e6208399b3f8d40860a664"
+}

@@ -86,6 +86,30 @@ def create_server(root):
                 t=pd.read_csv(path)
                 result[name]=json.loads(t.to_json(orient='records'))
         return dict(exploratory=True,reports=result)
+    @server.tool(annotations=readonly)
+    def football_status() -> dict:
+        """Read CC0 football coverage and frozen forecasts; no network or writes."""
+        collection=root/'data/football/collection.json'
+        report=root/'data/football_ledger/latest.json'
+        return dict(collection=json.loads(collection.read_text()) if collection.exists() else None,
+                    saved_report=json.loads(report.read_text()) if report.exists() else None,
+                    note='Separate football model; community results are not official confirmation.')
+
+    @server.tool(annotations=readonly)
+    def predict_football(league: str, home: str, away: str, fixture_date: str) -> dict:
+        """Read-only manual regulation goal forecast, with 1/X/2 and goal markets.
+
+        Fixture identity is not verified by a manual request. No provider refresh.
+        """
+        from .football.data import LEAGUES,load
+        from .football.model import GoalModel
+        if league not in LEAGUES: raise ValueError('Unknown football league')
+        today=pd.Timestamp.now(tz='UTC').date()
+        if pd.Timestamp(fixture_date).date()<today: raise ValueError('Past fixture; use retrospective evaluation')
+        result=GoalModel(load(root/'data/football'),league,str(today)).predict(home,away)
+        result.update(fixture_date=fixture_date,fixture_verified=False)
+        return result
+
     return server
 
 

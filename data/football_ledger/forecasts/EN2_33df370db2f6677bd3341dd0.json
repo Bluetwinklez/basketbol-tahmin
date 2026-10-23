@@ -1,0 +1,62 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-10-23T16:48:20.082045+00:00",
+  "fixture": {
+    "event_id": "EN2_33df370db2f6677bd3341dd0",
+    "league": "EN2",
+    "season": "2026-27",
+    "date": "2026-10-24",
+    "home": "west ham united fc",
+    "away": "southampton fc",
+    "home_name": "West Ham United FC",
+    "away_name": "Southampton FC",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/en.2.json",
+    "captured_at_utc": "2026-10-23T16:45:36.284530+00:00",
+    "source_kind": "community_CC0_not_official"
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "EN2",
+    "home": "west ham united fc",
+    "away": "southampton fc",
+    "expected_home_goals": 2.052657402345069,
+    "expected_away_goals": 1.3791134458397967,
+    "probabilities": {
+      "home": 0.5306410256445336,
+      "draw": 0.21303923749629344,
+      "away": 0.2563197368591729
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      2,
+      1
+    ],
+    "over": {
+      "1.5": 0.856722447599283,
+      "2.5": 0.6663485404512006,
+      "3.5": 0.4485753321825871
+    },
+    "both_teams_score": 0.6521346918993751,
+    "total_goals_80": [
+      1,
+      6
+    ],
+    "training_cutoff_exclusive": "2026-10-23",
+    "training_games": 1623,
+    "prior_team_games": {
+      "west ham united fc": 8,
+      "southampton fc": 93
+    },
+    "issues": [
+      "west ham united fc: fewer than 10 prior matches"
+    ],
+    "recommendation_validated": false,
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "642c2d1ebc22894173cfb47d62dac1b947fc017859d7ed42caf8f239fa5fd3b7",
+  "payload_sha256": "77649140f5198cbb289bb4aa0d83b66ff75c525653c315346ce9af533d12d96a"
+}

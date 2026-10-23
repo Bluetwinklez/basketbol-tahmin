@@ -1,0 +1,60 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-10-23T16:48:20.082045+00:00",
+  "fixture": {
+    "event_id": "FR1_8ead32901fbedaa810fbc68c",
+    "league": "FR1",
+    "season": "2026-27",
+    "date": "2026-10-30",
+    "home": "lille osc",
+    "away": "racing club de lens",
+    "home_name": "Lille OSC",
+    "away_name": "Racing Club de Lens",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/fr.1.json",
+    "captured_at_utc": "2026-10-23T16:45:36.284530+00:00",
+    "source_kind": "community_CC0_not_official"
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "FR1",
+    "home": "lille osc",
+    "away": "racing club de lens",
+    "expected_home_goals": 1.4857869674932367,
+    "expected_away_goals": 1.3301239898409625,
+    "probabilities": {
+      "home": 0.40961695010933613,
+      "draw": 0.25111984817708854,
+      "away": 0.33926320171357544
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.7716170692591462,
+      "2.5": 0.5343304495862192,
+      "3.5": 0.31160445213095606
+    },
+    "both_teams_score": 0.5690815412890106,
+    "total_goals_80": [
+      1,
+      5
+    ],
+    "training_cutoff_exclusive": "2026-10-23",
+    "training_games": 882,
+    "prior_team_games": {
+      "lille osc": 98,
+      "racing club de lens": 98
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "642c2d1ebc22894173cfb47d62dac1b947fc017859d7ed42caf8f239fa5fd3b7",
+  "payload_sha256": "45e17ca21b1ee2a250d7c89ffe2eb41a8c417a0f76432f8858297533065b6b5a"
+}

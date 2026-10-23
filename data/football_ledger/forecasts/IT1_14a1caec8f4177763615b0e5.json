@@ -1,0 +1,60 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-10-23T16:48:20.082045+00:00",
+  "fixture": {
+    "event_id": "IT1_14a1caec8f4177763615b0e5",
+    "league": "IT1",
+    "season": "2026-27",
+    "date": "2026-10-28",
+    "home": "ac monza",
+    "away": "ssc napoli",
+    "home_name": "AC Monza",
+    "away_name": "SSC Napoli",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/it.1.json",
+    "captured_at_utc": "2026-10-23T16:45:36.284530+00:00",
+    "source_kind": "community_CC0_not_official"
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "IT1",
+    "home": "ac monza",
+    "away": "ssc napoli",
+    "expected_home_goals": 1.133378005699853,
+    "expected_away_goals": 1.5439032377478927,
+    "probabilities": {
+      "home": 0.27915850779630347,
+      "draw": 0.2531092345356269,
+      "away": 0.4677322576680696
+    },
+    "predicted_outcome": "away",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.7471875973632962,
+      "2.5": 0.5007939396837165,
+      "3.5": 0.28090556694704255
+    },
+    "both_teams_score": 0.5332599731114417,
+    "total_goals_80": [
+      1,
+      5
+    ],
+    "training_cutoff_exclusive": "2026-10-23",
+    "training_games": 1090,
+    "prior_team_games": {
+      "ac monza": 71,
+      "ssc napoli": 109
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "642c2d1ebc22894173cfb47d62dac1b947fc017859d7ed42caf8f239fa5fd3b7",
+  "payload_sha256": "b1fa92208d6ae13bf0c4a7b81cf389267703831e733ea0b4d17052048b9fd1fe"
+}

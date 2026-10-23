@@ -1,0 +1,60 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-10-23T16:48:20.082045+00:00",
+  "fixture": {
+    "event_id": "DE1_4f24ca22334f147e0d527b84",
+    "league": "DE1",
+    "season": "2026-27",
+    "date": "2026-10-24",
+    "home": "fc augsburg",
+    "away": "1. fc union berlin",
+    "home_name": "FC Augsburg",
+    "away_name": "1. FC Union Berlin",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/de.1.json",
+    "captured_at_utc": "2026-10-23T16:45:36.284530+00:00",
+    "source_kind": "community_CC0_not_official"
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "DE1",
+    "home": "fc augsburg",
+    "away": "1. fc union berlin",
+    "expected_home_goals": 2.0515813306258477,
+    "expected_away_goals": 1.1152784603295085,
+    "probabilities": {
+      "home": 0.5895149501744114,
+      "draw": 0.2099155982919038,
+      "away": 0.20056945153368477
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      2,
+      1
+    ],
+    "over": {
+      "1.5": 0.8244264238412835,
+      "2.5": 0.6131369099273307,
+      "3.5": 0.39009548797246446
+    },
+    "both_teams_score": 0.5857802330652407,
+    "total_goals_80": [
+      1,
+      6
+    ],
+    "training_cutoff_exclusive": "2026-10-23",
+    "training_games": 882,
+    "prior_team_games": {
+      "fc augsburg": 98,
+      "1. fc union berlin": 98
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "642c2d1ebc22894173cfb47d62dac1b947fc017859d7ed42caf8f239fa5fd3b7",
+  "payload_sha256": "8a98a462382aa05c449b87a384cf658e421321f75765efee688704bdebdfeb1d"
+}

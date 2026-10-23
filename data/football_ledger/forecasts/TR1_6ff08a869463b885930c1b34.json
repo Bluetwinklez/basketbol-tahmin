@@ -1,0 +1,62 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-10-23T16:48:20.082045+00:00",
+  "fixture": {
+    "event_id": "TR1_6ff08a869463b885930c1b34",
+    "league": "TR1",
+    "season": "2026-27",
+    "date": "2026-10-25",
+    "home": "gaziantep fk",
+    "away": "bb erzurumspor",
+    "home_name": "Gaziantep FK",
+    "away_name": "BB Erzurumspor",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/europe/blob/63df627f3c87ce71708f016522ea236cf74332c3/turkey/2026-27_tr1.txt",
+    "captured_at_utc": "2026-10-23T16:45:36.284530+00:00",
+    "source_kind": "community_CC0_not_official"
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "TR1",
+    "home": "gaziantep fk",
+    "away": "bb erzurumspor",
+    "expected_home_goals": 1.5094506690215355,
+    "expected_away_goals": 1.2115615770169765,
+    "probabilities": {
+      "home": 0.4412917236033537,
+      "draw": 0.25373807492176625,
+      "away": 0.30497020147488
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.7551272290627044,
+      "2.5": 0.5115086569580529,
+      "3.5": 0.2905456176049952
+    },
+    "both_teams_score": 0.5470447579105542,
+    "total_goals_80": [
+      1,
+      5
+    ],
+    "training_cutoff_exclusive": "2026-10-23",
+    "training_games": 763,
+    "prior_team_games": {
+      "gaziantep fk": 79,
+      "bb erzurumspor": 4
+    },
+    "issues": [
+      "bb erzurumspor: fewer than 10 prior matches"
+    ],
+    "recommendation_validated": false,
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "642c2d1ebc22894173cfb47d62dac1b947fc017859d7ed42caf8f239fa5fd3b7",
+  "payload_sha256": "20fda3a2bba0ce4a4cf26fe5a0bbdec12392838f6de5634cff16d175567aea2b"
+}

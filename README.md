@@ -1,10 +1,12 @@
-# Basketball Pregame Research
+# Basketball and Football Pregame Research
 
 A Python research package for pregame basketball probabilities, score margins and totals. It combines a reproducible historical archive, chronological model evaluation, an experimental Iddaa bulletin reader and a read-only local MCP server.
 
 **The core archive contains 54,808 games; the separate Asian archives contain 12,850 results. More data has not established a general increase in prediction accuracy.** Results below distinguish full coverage from confidence-filtered subsets, and historical tests from live performance.
 
 ## What works
+
+**Football is now a separate supported research workflow:** 59,240 community-source finals across 14 leagues, including 1,884 Turkish Süper Lig results; regulation 1/X/2, goal totals and both-teams-score probabilities; a local Football screen and read-only MCP tools. A seven-day run froze 95 pending forecasts. Daily football and basketball refresh is scheduled through GitHub Actions. [Commands, partial coverage, chronological results and limitations](docs/football.md). Football observed prospective accuracy is unavailable.
 
 The daily application now supports **10 competitions**. The newest expansion adds **3,520 results** from Turkish BSL and Ukrainian SuperLeague, separate models, and 12 pending future forecasts. [Measured results and source limitations](docs/domestic-expansion.md). The earlier expansion included ABA senior men, EuroCup Women and FIBA Europe Cup. A real 7-day run froze **58 additional future fixtures** (9 ABA / 25 ECW / 24 FEC), with 11 passing the configured diagnostic/probability filters. All 58 are pending, so prospective accuracy is unavailable. [New league coverage, validation and measured limits](docs/regional-expansion.md).
 
