@@ -53,3 +53,8 @@ npm run test:ui
 The Python suite covers local HTTP routing, exports, request validation, concurrent-job rejection and failure preservation. DOM tests cover search/filter behavior, input escaping, pending versus observed accuracy, separate error columns, request errors, and keeping details expanded across polling. These are software/DOM tests, not rendered-browser visual verification. Both Python and UI suites run in GitHub Actions.
 
 The integration check exercised the actual local server with saved-source and refreshed EuroLeague runs. A remote test browser could not reach the isolated loopback server, so rendered desktop/mobile visual verification remains incomplete. The responsive styles are included, but a visual pass on the user's local browser is still needed. [Recorded validation](kanit/local_app/validation.json).
+
+
+## Added competitions
+
+The league selector now includes senior ABA League, EuroCup Women and FIBA Europe Cup alongside the original five daily competitions. Choose a 168-hour horizon to include next week's European cup fixtures. Data refresh and failures follow the same background workflow. Ukraine, Sweden and Turkey are still outside this trained daily model; the application does not substitute another league's weights for them.

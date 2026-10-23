@@ -1,0 +1,10 @@
+{
+  "spec": "regional-prior-policy-v1",
+  "generated_at_utc": "2026-10-23T13:21:21.542728+00:00",
+  "source_code_sha256": "256a91479e89c597f0611dc36c311a3295e10bf67cb79ab97c05db31e8fb2a1b",
+  "datasets": {
+    "data/competitions/ABA.parquet": "556ba7f2f2d2c7c8bf07bdcd6068f9f66cd9eea7af474357f04b9ea77bc934dd"
+  },
+  "method": "Earlier seasons train; previous season first UTC-day half calibrates score scale; second half selects lowest log loss among score/logistic/Elo/equal ensemble. Refit on all prior seasons. Same-day outcomes withheld. All variants use identical target games.",
+  "limitations": "Retrospective collection; missing/undated fixtures excluded; nominal home court; unverified historical publication times. Completed and partial seasons separate. No prospective success claim or conditional interval guarantee."
+}

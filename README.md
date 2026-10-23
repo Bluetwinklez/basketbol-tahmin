@@ -6,6 +6,8 @@ A Python research package for pregame basketball probabilities, score margins an
 
 ## What works
 
+The daily application now supports **8 competitions**, including ABA senior men, EuroCup Women and FIBA Europe Cup. A real 7-day run froze **58 additional future fixtures** (9 ABA / 25 ECW / 24 FEC), with 11 passing the configured diagnostic/probability filters. All 58 are pending, so prospective accuracy is unavailable. [New league coverage, validation and measured limits](docs/regional-expansion.md).
+
 Open the new **local browser application** with **`python -m bbtahmin app`**: match cards, search/league filters, uncertainty details, background source refresh, separate final-result errors and report downloads. It shares the existing local forecast ledger. [Start and use the application](docs/local-app.md).
 
 For daily use, run **`python -m bbtahmin gunluk --guncelle`** after installation. It refreshes supported schedules, preserves the earliest pregame forecasts, and writes a separate final-result/error report to `rapor/daily/latest.md`. Source failures and rejected forecasts remain visible. See [daily workflow, historical backfill and measurement limits](docs/daily-workflow.md).
@@ -14,7 +16,8 @@ For daily use, run **`python -m bbtahmin gunluk --guncelle`** after installation
 |---|---|
 | EuroLeague, EuroCup, NBA and Australian NBL history | Available; 54,808 stored games |
 | Chinese CBA | Separate 2,386-game archive, 20 teams; experimental CBA-only score model |
-| EuroCup Women (ECW), FIBA Europe Cup men (FEC), VTB men | Separate experimental archives: 674 / 651 / 860 games; independent pregame models |
+| EuroCup Women (ECW), FIBA Europe Cup men (FEC), VTB men | Separate experimental archives: 678 / 651 / 860 games; independent pregame models |
+| ABA League senior men | New official 3,023-result archive, 2010–2026; separate prior-season model and daily fixtures |
 | KBL, Japan B1/B2, PBA conferences | 12,850 separate results; KBL/Japan and Governors Cup experimental models; other PBA cups have insufficient training folds |
 | CBA in-play state | Experimental manual score/period/remaining-clock projection; regulation only, no automatic live scoreboard |
 | Home-win probability, score, margin and total; 80% score intervals | Available; uncertainty estimates need continued validation |

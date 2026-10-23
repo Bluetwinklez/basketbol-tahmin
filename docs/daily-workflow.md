@@ -8,7 +8,7 @@ python -m pip install --no-deps -e .
 python -m bbtahmin gunluk --guncelle
 ```
 
-This command refreshes public EuroLeague, KBL, Japanese B1/B2 and current PBA Governors Cup schedules/results. It generates forecasts for confirmed fixtures within the next 48 hours, keeps the first forecast for each event, checks available finals, and prints a readable table. A probability filter defaults to 65%; passing it is not a validated recommendation or a guaranteed success rate.
+This command refreshes public EuroLeague, KBL, Japanese B1/B2, current PBA Governors Cup, senior ABA, EuroCup Women and FIBA Europe Cup schedules/results. It generates forecasts for confirmed fixtures within the next 48 hours, keeps the first forecast for each event, checks available finals, and prints a readable table. A probability filter defaults to 65%; passing it is not a validated recommendation or a guaranteed success rate.
 
 Source progress is printed separately on stderr, so `--json` remains machine-readable. A Japanese refresh checks every page of the active season and can take several minutes; use `--ligler` to request only the competitions you need.
 
@@ -54,3 +54,18 @@ python -m bbtahmin veri-denetle
 For KBL, explicit source-year bounds refer to calendar years; for RealGM PBA, they refer to source season-end years. The current PBA publisher is separately refreshed because its campaign is explicitly identified, not inferred from July.
 
 The expansion comparison reports matched winner accuracy, log loss, Brier score, team/total/margin MAE and paired day-bootstrap log-loss differences. Completed observed cohorts and partial 2026–27 results are separate. More rows alone do not establish completeness or predictive improvement. Retrospective source publication times, roster histories and the Japanese league reorganisation remain limitations.
+
+
+## Regional expansion
+
+```bash
+python -m bbtahmin aba-topla --baslangic 2010
+python -m bbtahmin gunluk --ligler ABA ECW FEC --guncelle --saat 168
+python -m bbtahmin tahmin "Cluj Napoca - Studentski Centar" --lig ABA --tarih 2026-10-23T18:00:00+03:00 --json
+```
+
+ABA summer wall clocks are interpreted in Europe/Belgrade although the official calendar labels them CET. TBA and undrawn playoff placeholders are excluded. Same-day ABA calendar scores remain unverified; automatic settlement waits until a subsequent UTC day and a refreshed archive. This deliberately delays results rather than accepting a running score as a final. The 2019–20 interruption and missing/undated games are not fabricated.
+
+EuroCup Women and FIBA Europe Cup keep separate gender/competition archives. Refresh supplies fixture names, source URLs and capture timestamps; older snapshots without provenance must be refreshed before they can create prospective records.
+
+The checked-in demonstration is `docs/kanit/regional_runtime`; reuse this exact output directory to retain its first 58 forecasts. These records are pending and do not establish success. See [the expansion report](regional-expansion.md).
