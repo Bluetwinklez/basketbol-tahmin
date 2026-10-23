@@ -13,7 +13,9 @@ def digest(payload):
     return hashlib.sha256(json.dumps(payload,sort_keys=True,ensure_ascii=False,allow_nan=False).encode()).hexdigest()
 
 
-def run(days=7, output='rapor/football', root=ROOT, now=None):
+def run(days=7, output='rapor/football', root=ROOT, now=None, model_variant='baseline'):
+    from .challenger import fit, VARIANTS
+    if model_variant not in VARIANTS: raise ValueError('Unknown football model candidate')
     if type(days) is not int or not 1<=days<=14: raise ValueError('Horizon must be 1..14 days')
     now=pd.Timestamp(now or pd.Timestamp.now(tz='UTC'))
     if now.tzinfo is None: raise ValueError('Timezone required')
@@ -32,7 +34,7 @@ def run(days=7, output='rapor/football', root=ROOT, now=None):
             # A future fixture is valid only if actually captured before its date.
             if g['captured_at_utc'][:10]>=g['date']: raise ValueError('Not a pregame source capture')
             if (now-pd.Timestamp(g['captured_at_utc'])).total_seconds()>72*3600: raise ValueError('Fixture snapshot older than 72 hours; refresh required')
-            if g['league'] not in models: models[g['league']]=GoalModel(frame,g['league'],today)
+            if g['league'] not in models: models[g['league']]=fit(frame,g['league'],today,model_variant)
             prediction=models[g['league']].predict(g['home'],g['away'])
             payload=dict(spec='football-prospective-v1',recorded_at_utc=now.isoformat(),fixture=g,prediction=prediction,
                          archive_sha256=archive_sha)
@@ -59,7 +61,9 @@ def run(days=7, output='rapor/football', root=ROOT, now=None):
                               status='publisher_final' if result else 'pending',result=result))
     report=dict(spec='football-daily-v1',checked_at_utc=now.isoformat(),collection_checked_at_utc=collection['checked_at_utc'],
                 source_errors=collection['errors'],forecasts=forecasts,skipped=skipped,pending=pending,
+                requested_model_variant=model_variant,
                 publisher_performance=metrics(settled),official_verified_games=0,official_winner_accuracy=None,
                 note='Community CC0 source; publisher finals are not official confirmation. Official accuracy is unavailable. Day-only fixtures exclude today. Small samples cannot establish accuracy. Expected goals are model means, not observed xG.')
     write_json(output/'latest.json',report)
     return report
+

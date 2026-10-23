@@ -3,6 +3,7 @@ on:
   workflow_dispatch:
   schedule:
     - cron: '30 6 * * *'
+    - cron: '45 4 * * 0'
 permissions:
   contents: write
 concurrency:
@@ -11,7 +12,7 @@ concurrency:
 jobs:
   refresh:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 60
     steps:
       - uses: actions/checkout@v4
         with:
@@ -25,7 +26,7 @@ jobs:
       - name: Refresh independent football and basketball sources
         id: collect
         continue-on-error: true
-        run: python scripts/refresh_sports.py
+        run: python scripts/refresh_sports.py ${{ github.event.schedule == '45 4 * * 0' && '--backfill' || '' }}
       - name: Preserve data and earliest forecasts even on partial failure
         if: always() && steps.collect.outcome != 'skipped'
         run: |
@@ -39,3 +40,4 @@ jobs:
       - name: Surface incomplete source refresh
         if: steps.collect.outcome == 'failure'
         run: exit 1
+
