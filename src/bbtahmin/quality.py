@@ -6,7 +6,7 @@ import numpy as np
 import pandas as pd
 
 ARCHIVES={'core':'data/maclar.parquet','CBA':'data/cba_games.parquet',
-          **{c:f'data/competitions/{c}.parquet' for c in ('ECW','FEC','VTB','ELW','ABA','UKR','TR_BSL')},
+          **{c:f'data/competitions/{c}.parquet' for c in ('ECW','FEC','VTB','ELW','ABA','UKR','TR_BSL','ARG_LNB')},
           'CZ_W_ZBL':'data/domestic/CZ_W_ZBL.parquet','E_recent':'data/recent/E.parquet'}
 
 
@@ -56,6 +56,9 @@ def assess(p,g,now=None):
         if h['recent_400d_games']<5:reasons.append(f'{team}: fewer than five observed games in 400 days')
         if h['days_since_last'] is None or h['days_since_last']>60:reasons.append(f'{team}: missing or stale recent results')
     blocking=list(reasons)
+    for team in p.get('prior_season_missing', []):
+        issue=f'{team}: no earlier-season observations in the same league; promoted-team uncertainty'
+        reasons.append(issue);blocking.append(issue)
     if p.get('calibration_regime_gap'):
         issue='Prior calibration season is not adjacent; current-regime calibration is unverified'
         reasons.append(issue);blocking.append(issue)
@@ -98,3 +101,4 @@ def write_inventory(destination='docs/kanit/governance'):
     report=inventory();pd.DataFrame(report).to_csv(root/'coverage.csv',index=False)
     (root/'coverage.json').write_text(json.dumps(report,indent=2))
     return report
+
