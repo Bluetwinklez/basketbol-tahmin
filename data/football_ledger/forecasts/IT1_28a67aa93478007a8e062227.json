@@ -1,0 +1,60 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-10-23T16:48:20.082045+00:00",
+  "fixture": {
+    "event_id": "IT1_28a67aa93478007a8e062227",
+    "league": "IT1",
+    "season": "2026-27",
+    "date": "2026-10-25",
+    "home": "us lecce",
+    "away": "juventus fc",
+    "home_name": "US Lecce",
+    "away_name": "Juventus FC",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/it.1.json",
+    "captured_at_utc": "2026-10-23T16:45:36.284530+00:00",
+    "source_kind": "community_CC0_not_official"
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "IT1",
+    "home": "us lecce",
+    "away": "juventus fc",
+    "expected_home_goals": 0.9304387857379393,
+    "expected_away_goals": 1.5337577683675048,
+    "probabilities": {
+      "home": 0.22894822323625766,
+      "draw": 0.25732064533066196,
+      "away": 0.5137311314330802
+    },
+    "predicted_outcome": "away",
+    "most_likely_score": [
+      0,
+      1
+    ],
+    "over": {
+      "1.5": 0.7052759614691224,
+      "2.5": 0.4469704157435805,
+      "3.5": 0.23479853718251112
+    },
+    "both_teams_score": 0.47497304266210166,
+    "total_goals_80": [
+      1,
+      5
+    ],
+    "training_cutoff_exclusive": "2026-10-23",
+    "training_games": 1090,
+    "prior_team_games": {
+      "us lecce": 109,
+      "juventus fc": 109
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "642c2d1ebc22894173cfb47d62dac1b947fc017859d7ed42caf8f239fa5fd3b7",
+  "payload_sha256": "4635af6b96097647bbf17b91cdc14ff57b3c77f2233b9397eaa19983bc736843"
+}

@@ -1,0 +1,60 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-10-23T16:48:20.082045+00:00",
+  "fixture": {
+    "event_id": "EN2_6255af74555a97321c53cfd6",
+    "league": "EN2",
+    "season": "2026-27",
+    "date": "2026-10-24",
+    "home": "blackburn rovers fc",
+    "away": "wrexham afc",
+    "home_name": "Blackburn Rovers FC",
+    "away_name": "Wrexham AFC",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/en.2.json",
+    "captured_at_utc": "2026-10-23T16:45:36.284530+00:00",
+    "source_kind": "community_CC0_not_official"
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "EN2",
+    "home": "blackburn rovers fc",
+    "away": "wrexham afc",
+    "expected_home_goals": 1.245840867124645,
+    "expected_away_goals": 1.1614146437538697,
+    "probabilities": {
+      "home": 0.38253424108259754,
+      "draw": 0.27582088296059626,
+      "away": 0.34164487595680626
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.6931353104349804,
+      "2.5": 0.43218573257522874,
+      "3.5": 0.22279496278712546
+    },
+    "both_teams_score": 0.4893202172369926,
+    "total_goals_80": [
+      1,
+      4
+    ],
+    "training_cutoff_exclusive": "2026-10-23",
+    "training_games": 1623,
+    "prior_team_games": {
+      "blackburn rovers fc": 134,
+      "wrexham afc": 54
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "642c2d1ebc22894173cfb47d62dac1b947fc017859d7ed42caf8f239fa5fd3b7",
+  "payload_sha256": "38c0b1c2832cdde08ae287420378c770b8937d5d5ca52a95dd1a2333e2a8f91f"
+}

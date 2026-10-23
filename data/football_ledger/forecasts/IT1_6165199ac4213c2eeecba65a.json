@@ -1,0 +1,60 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-10-23T16:48:20.082045+00:00",
+  "fixture": {
+    "event_id": "IT1_6165199ac4213c2eeecba65a",
+    "league": "IT1",
+    "season": "2026-27",
+    "date": "2026-10-24",
+    "home": "ss lazio",
+    "away": "parma calcio 1913",
+    "home_name": "SS Lazio",
+    "away_name": "Parma Calcio 1913",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/it.1.json",
+    "captured_at_utc": "2026-10-23T16:45:36.284530+00:00",
+    "source_kind": "community_CC0_not_official"
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "IT1",
+    "home": "ss lazio",
+    "away": "parma calcio 1913",
+    "expected_home_goals": 1.391025112171864,
+    "expected_away_goals": 0.9528213742856658,
+    "probabilities": {
+      "home": 0.47042984006179184,
+      "draw": 0.27203046832790645,
+      "away": 0.2575396916103019
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      1,
+      0
+    ],
+    "over": {
+      "1.5": 0.6791317574465537,
+      "2.5": 0.41555401377716733,
+      "3.5": 0.20962542430786887
+    },
+    "both_teams_score": 0.46148630154808085,
+    "total_goals_80": [
+      1,
+      4
+    ],
+    "training_cutoff_exclusive": "2026-10-23",
+    "training_games": 1090,
+    "prior_team_games": {
+      "ss lazio": 109,
+      "parma calcio 1913": 80
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "642c2d1ebc22894173cfb47d62dac1b947fc017859d7ed42caf8f239fa5fd3b7",
+  "payload_sha256": "492bdb107bba5f3ea875936d9d3fb31c8aeda4f507731e26cd097af12aaa9503"
+}

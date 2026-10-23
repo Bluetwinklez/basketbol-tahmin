@@ -1,0 +1,60 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-10-23T16:48:20.082045+00:00",
+  "fixture": {
+    "event_id": "IT1_e9136611bd33ece7108c32e8",
+    "league": "IT1",
+    "season": "2026-27",
+    "date": "2026-10-25",
+    "home": "fc internazionale milano",
+    "away": "acf fiorentina",
+    "home_name": "FC Internazionale Milano",
+    "away_name": "ACF Fiorentina",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/it.1.json",
+    "captured_at_utc": "2026-10-23T16:45:36.284530+00:00",
+    "source_kind": "community_CC0_not_official"
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "IT1",
+    "home": "fc internazionale milano",
+    "away": "acf fiorentina",
+    "expected_home_goals": 2.5400024562761114,
+    "expected_away_goals": 1.2295882696829956,
+    "probabilities": {
+      "home": 0.6578678158051345,
+      "draw": 0.17516639340396478,
+      "away": 0.16696579079090035
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      2,
+      1
+    ],
+    "over": {
+      "1.5": 0.8900060842876913,
+      "2.5": 0.7261562699386961,
+      "3.5": 0.520274023065332
+    },
+    "both_teams_score": 0.6517823455810768,
+    "total_goals_80": [
+      1,
+      6
+    ],
+    "training_cutoff_exclusive": "2026-10-23",
+    "training_games": 1090,
+    "prior_team_games": {
+      "fc internazionale milano": 109,
+      "acf fiorentina": 109
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "642c2d1ebc22894173cfb47d62dac1b947fc017859d7ed42caf8f239fa5fd3b7",
+  "payload_sha256": "a78bb578073d9a38dafd43031c7b77956cd52788573e8871469ad9aa695752fa"
+}

@@ -1,0 +1,60 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-10-23T16:48:20.082045+00:00",
+  "fixture": {
+    "event_id": "ES1_d63ccf2723d460d5f6c03ee6",
+    "league": "ES1",
+    "season": "2026-27",
+    "date": "2026-10-25",
+    "home": "rc celta de vigo",
+    "away": "real betis balompie",
+    "home_name": "RC Celta de Vigo",
+    "away_name": "Real Betis Balompié",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/es.1.json",
+    "captured_at_utc": "2026-10-23T16:45:36.284530+00:00",
+    "source_kind": "community_CC0_not_official"
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "ES1",
+    "home": "rc celta de vigo",
+    "away": "real betis balompie",
+    "expected_home_goals": 1.6745016930109768,
+    "expected_away_goals": 1.4397773163108676,
+    "probabilities": {
+      "home": 0.4325664544693256,
+      "draw": 0.23617513191472422,
+      "away": 0.33125841361594993
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.8172827496231077,
+      "2.5": 0.6019198684792685,
+      "3.5": 0.37835316843482447
+    },
+    "both_teams_score": 0.620028450954511,
+    "total_goals_80": [
+      1,
+      5
+    ],
+    "training_cutoff_exclusive": "2026-10-23",
+    "training_games": 1100,
+    "prior_team_games": {
+      "rc celta de vigo": 110,
+      "real betis balompie": 110
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "642c2d1ebc22894173cfb47d62dac1b947fc017859d7ed42caf8f239fa5fd3b7",
+  "payload_sha256": "6c1fafd9839fbff4cbb6f917a05aeb8ae44952c141fd9660d568d67562843f9f"
+}

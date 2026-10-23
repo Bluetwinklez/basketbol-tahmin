@@ -1,0 +1,60 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-10-23T16:48:20.082045+00:00",
+  "fixture": {
+    "event_id": "ES1_cac5196900d198454c368b03",
+    "league": "ES1",
+    "season": "2026-27",
+    "date": "2026-10-25",
+    "home": "rayo vallecano de madrid",
+    "away": "elche cf",
+    "home_name": "Rayo Vallecano de Madrid",
+    "away_name": "Elche CF",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/es.1.json",
+    "captured_at_utc": "2026-10-23T16:45:36.284530+00:00",
+    "source_kind": "community_CC0_not_official"
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "ES1",
+    "home": "rayo vallecano de madrid",
+    "away": "elche cf",
+    "expected_home_goals": 1.6686373165837254,
+    "expected_away_goals": 1.1223743565768156,
+    "probabilities": {
+      "home": 0.5012105794987797,
+      "draw": 0.24268948210037075,
+      "away": 0.25609993840084977
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.7673869085678128,
+      "2.5": 0.5284009739540244,
+      "3.5": 0.3060634628779363
+    },
+    "both_teams_score": 0.5473493364595655,
+    "total_goals_80": [
+      1,
+      5
+    ],
+    "training_cutoff_exclusive": "2026-10-23",
+    "training_games": 1100,
+    "prior_team_games": {
+      "rayo vallecano de madrid": 110,
+      "elche cf": 45
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "642c2d1ebc22894173cfb47d62dac1b947fc017859d7ed42caf8f239fa5fd3b7",
+  "payload_sha256": "c0952e843cadeae9c5b15094823d5c5cdc759a45609046600f5c77fbc2d14787"
+}
