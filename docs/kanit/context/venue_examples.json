@@ -1,0 +1,56 @@
+[
+  {
+    "event_id": "E2026_68",
+    "as_of_utc": "2026-10-23T06:23:25.458539+00:00",
+    "venue_id": "ATJ",
+    "teams": {
+      "ZAL": {
+        "known": true,
+        "previous_event_id": "E2026_57",
+        "previous_venue_id": "ATJ",
+        "elapsed_tipoff_hours": 168.0,
+        "scheduled_leg_km": 0.0,
+        "timezone_shift_hours": 0.0
+      },
+      "ASV": {
+        "known": true,
+        "previous_event_id": "E2026_53",
+        "previous_venue_id": "ATI7",
+        "elapsed_tipoff_hours": 190.0,
+        "scheduled_leg_km": 2589.690715116421,
+        "timezone_shift_hours": 1.0
+      }
+    },
+    "source_url": "https://api-live.euroleague.net/v2/competitions/E/seasons/E2026/games",
+    "source_freshness_verified": false,
+    "used_in_default_model": false,
+    "note": "Straight-line distance from last observed venue to scheduled venue, not actual travel, flights or full recovery time. Unknown coordinates remain null. Cached schedules require current confirmation. No accuracy gain established."
+  },
+  {
+    "event_id": "E2026_70",
+    "as_of_utc": "2026-10-23T06:23:25.458539+00:00",
+    "venue_id": "AVT1",
+    "teams": {
+      "OLY": {
+        "known": true,
+        "previous_event_id": "E2026_58",
+        "previous_venue_id": "AMH",
+        "elapsed_tipoff_hours": 167.75,
+        "scheduled_leg_km": 1875.2061973175173,
+        "timezone_shift_hours": 1.0
+      },
+      "ULK": {
+        "known": true,
+        "previous_event_id": "E2026_54",
+        "previous_venue_id": "AMY",
+        "elapsed_tipoff_hours": 192.5,
+        "scheduled_leg_km": 566.1075569741381,
+        "timezone_shift_hours": 0.0
+      }
+    },
+    "source_url": "https://api-live.euroleague.net/v2/competitions/E/seasons/E2026/games",
+    "source_freshness_verified": false,
+    "used_in_default_model": false,
+    "note": "Straight-line distance from last observed venue to scheduled venue, not actual travel, flights or full recovery time. Unknown coordinates remain null. Cached schedules require current confirmation. No accuracy gain established."
+  }
+]

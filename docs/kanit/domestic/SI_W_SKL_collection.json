@@ -1,0 +1,58 @@
+{
+  "source": "Košarkarska zveza Slovenije public API",
+  "sources": [
+    "https://api.kzs.si/api/v1/public/matches/?competitionId=32",
+    "https://api.kzs.si/api/v1/public/matches/?competitionId=479",
+    "https://api.kzs.si/api/v1/public/matches/?competitionId=523",
+    "https://api.kzs.si/api/v1/public/matches/?competitionId=585",
+    "https://api.kzs.si/api/v1/public/matches/?competitionId=612"
+  ],
+  "captured_at_utc": "2026-10-22T21:50:30.791995+00:00",
+  "counts": [
+    {
+      "year": 2022,
+      "competition_id": 32,
+      "listed": 105,
+      "finished": 91
+    },
+    {
+      "year": 2023,
+      "competition_id": 479,
+      "listed": 92,
+      "finished": 92
+    },
+    {
+      "year": 2024,
+      "competition_id": 523,
+      "listed": 71,
+      "finished": 71
+    },
+    {
+      "year": 2025,
+      "competition_id": 585,
+      "listed": 68,
+      "finished": 68
+    },
+    {
+      "year": 2026,
+      "competition_id": 612,
+      "listed": 60,
+      "finished": 9
+    }
+  ],
+  "explicit_mapping": {
+    "Cinkarna Celje": "ECW_58477"
+  },
+  "coverage": "Discovered official senior-women first league, all returned fixtures. API count=0/limit=0 does not independently certify completeness. Only necessary match facts retained; referee/contact/administrative metadata excluded. Publication time, neutral venue and overtime unverified.",
+  "games": 331,
+  "teams": 12,
+  "seasons": {
+    "2022-23": 91,
+    "2023-24": 92,
+    "2024-25": 71,
+    "2025-26": 68,
+    "2026-27": 9
+  },
+  "sha256": "3944e1f13c5ce4fb5fea6373c054e3998b9a2b2f2353c15da44d8a3cd1552b2b",
+  "used_in_default_model": false
+}

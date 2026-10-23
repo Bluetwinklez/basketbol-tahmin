@@ -7,6 +7,9 @@ COLUMNS=['dom_margin_diff','dom_total_mean','dom_home_missing','dom_away_missing
 
 def features(g,domestic,point_in_time=False):
     d=domestic.copy();d['tarih_utc']=pd.to_datetime(d.tarih_utc,utc=True)
+    if 'model_time_utc' in d:
+        d['tarih_utc']=pd.to_datetime(d.model_time_utc,utc=True).fillna(d.tarih_utc)
+    d=d.sort_values('tarih_utc',kind='stable').reset_index(drop=True)
     rows=[]
     for game in g.itertuples():
         cutoff=pd.Timestamp(game.tarih_utc).floor('D');past=d[d.tarih_utc<cutoff]

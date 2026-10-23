@@ -1,0 +1,56 @@
+{
+  "source": "Finnish Basketball Association public statistics backend",
+  "sources": [
+    "https://basket.fi/wp-json/basket/v1/pena-api/api/v1/competitions/3b2332fd-e6d2-5154-ab94-43756f6e651d/seasons/edd30c8e-7089-58b3-8c54-7486ccd6013f/games",
+    "https://basket.fi/wp-json/basket/v1/pena-api/api/v1/competitions/3b2332fd-e6d2-5154-ab94-43756f6e651d/seasons/5fab3585-6cf9-5d0a-a42b-ec9e4bff1a54/games",
+    "https://basket.fi/wp-json/basket/v1/pena-api/api/v1/competitions/3b2332fd-e6d2-5154-ab94-43756f6e651d/seasons/a90d3dfc-ce4a-5d09-af7a-d8c79d6e7e1d/games",
+    "https://basket.fi/wp-json/basket/v1/pena-api/api/v1/competitions/3b2332fd-e6d2-5154-ab94-43756f6e651d/seasons/7f0ec05e-857f-5aae-835d-81a2fd610441/games",
+    "https://basket.fi/wp-json/basket/v1/pena-api/api/v1/competitions/3b2332fd-e6d2-5154-ab94-43756f6e651d/seasons/2a90b034-a8a1-55e5-ba60-2d0cebe8fbb4/games"
+  ],
+  "captured_at_utc": "2026-10-23T06:24:03.104885+00:00",
+  "counts": [
+    {
+      "year": 2022,
+      "listed": 151,
+      "accepted": 0,
+      "excluded": 151
+    },
+    {
+      "year": 2023,
+      "listed": 135,
+      "accepted": 0,
+      "excluded": 135
+    },
+    {
+      "year": 2024,
+      "listed": 165,
+      "accepted": 156,
+      "excluded": 9
+    },
+    {
+      "year": 2025,
+      "listed": 145,
+      "accepted": 138,
+      "excluded": 7
+    },
+    {
+      "year": 2026,
+      "listed": 108,
+      "accepted": 16,
+      "excluded": 92
+    }
+  ],
+  "explicit_mapping": {
+    "HBA-Märsky": "ECW_66458"
+  },
+  "coverage": "All returned dated, confirmed, positive non-tied senior-women results. Undated playoff series totals excluded. Response counts checked; independent completeness, historical publication time, overtime and neutral venues unverified.",
+  "games": 310,
+  "teams": 10,
+  "seasons": {
+    "2024-25": 156,
+    "2025-26": 138,
+    "2026-27": 16
+  },
+  "sha256": "7014e2fc40e3b5a4a083967749517a94835738d95cf91a88ed614d64cdbef6db",
+  "used_in_default_model": false
+}

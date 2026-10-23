@@ -1,6 +1,6 @@
 {
-  "spec": "winner-prior-selection-v1",
-  "generated_at_utc": "2026-10-22T21:27:26.218795+00:00",
+  "spec": "winner-prior-selection-v2-disjoint-calibration",
+  "generated_at_utc": "2026-10-23T06:30:57.614357+00:00",
   "packages": {
     "numpy": "2.2.6",
     "pandas": "2.2.3",
@@ -12,7 +12,15 @@
     "data/competitions/FEC.parquet": "56771b499724c5d6164b02103cc349224a19704fe9625736e5b4aa9a8cd7d9c2",
     "data/competitions/VTB.parquet": "b1c55c4f80374ca74d07bb1ab639750bf1742beaa53341fd3c621f955c0199a1",
     "data/competitions/ELW.parquet": "1ef58d649d8ddb1a502d2f4625dfd76f9c66a624a5b28f5d881e878aea9e5119",
-    "data/competitions/ECW_early.parquet": "8ee1cd6fb04ce492d472573fbbdc8e681a8807a424beac06ea6a60e11218d6ff"
+    "data/competitions/ECW_early.parquet": "8ee1cd6fb04ce492d472573fbbdc8e681a8807a424beac06ea6a60e11218d6ff",
+    "data/domestic/BG_W_A.parquet": "a3a753b012959f41b398a5164bb25d419f9019b43632d9a6f7fb8e06f994920c",
+    "data/domestic/CZ_W_ZBL.parquet": "1ba3b7c2dbfafb99ed3e7caf878cbc63a3183cb5d9fb35d1fd371d47424ed2e2",
+    "data/domestic/FI_W_KL.parquet": "7014e2fc40e3b5a4a083967749517a94835738d95cf91a88ed614d64cdbef6db",
+    "data/domestic/GIRONA_LFE.parquet": "f4247582bdcb6a79af5bc3bb5988694bae9a12b7252f5c3cb4806337a6a42d57",
+    "data/domestic/PARNU_DOMESTIC.parquet": "9cb5b790c771aa3062497ebb5ee01dedae3b3ddb4d03d0724e93a6803e47a990",
+    "data/domestic/SI_W_SKL.parquet": "3944e1f13c5ce4fb5fea6373c054e3998b9a2b2f2353c15da44d8a3cd1552b2b",
+    "data/domestic/WABA_W.parquet": "666268b573361e46bb7e2061a1f48430a4b1bfe521eb10f6d0aaa44ff88ffe15"
   },
-  "limitations": "Historical exploratory reuse of already inspected seasons, not a new untouched holdout. Current-season rows include the four known matches; never use their outcomes to choose parameters. All variants reported, including failures. Eligibility is coverage filtering, not model accuracy improvement."
+  "source_code_sha256": "0438537cd52f94c906a37ac5afc97ae656f21022900c73fff8a9f591f8f245bf",
+  "limitations": "Historical exploratory reuse of already inspected seasons, not a new untouched holdout. Prior season uses disjoint UTC-day halves for residual calibration and candidate selection. Current-season rows include the four known matches; never use their outcomes to choose parameters. All variants reported, including failures. Eligibility is coverage filtering, not model accuracy improvement."
 }
