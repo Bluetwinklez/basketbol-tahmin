@@ -6,7 +6,7 @@ A Python research package for pregame basketball probabilities, score margins an
 
 ## What works
 
-The daily application now supports **8 competitions**, including ABA senior men, EuroCup Women and FIBA Europe Cup. A real 7-day run froze **58 additional future fixtures** (9 ABA / 25 ECW / 24 FEC), with 11 passing the configured diagnostic/probability filters. All 58 are pending, so prospective accuracy is unavailable. [New league coverage, validation and measured limits](docs/regional-expansion.md).
+The daily application now supports **10 competitions**. The newest expansion adds **3,520 results** from Turkish BSL and Ukrainian SuperLeague, separate models, and 12 pending future forecasts. [Measured results and source limitations](docs/domestic-expansion.md). The earlier expansion included ABA senior men, EuroCup Women and FIBA Europe Cup. A real 7-day run froze **58 additional future fixtures** (9 ABA / 25 ECW / 24 FEC), with 11 passing the configured diagnostic/probability filters. All 58 are pending, so prospective accuracy is unavailable. [New league coverage, validation and measured limits](docs/regional-expansion.md).
 
 Open the new **local browser application** with **`python -m bbtahmin app`**: match cards, search/league filters, uncertainty details, background source refresh, separate final-result errors and report downloads. It shares the existing local forecast ledger. [Start and use the application](docs/local-app.md).
 
@@ -36,7 +36,8 @@ For daily use, run **`python -m bbtahmin gunluk --guncelle`** after installation
 | Venue/travel context | Five verified-coordinate venues and cached schedule proxies; no actual itinerary inference |
 | Retrospective player-absence feature | **Disabled by default:** actual participants are postgame knowledge |
 | Four-factor/shooting profiles | Implemented and tested as an experiment; **not enabled by default** |
-| Turkish BSL, other unsupported leagues, non-CBA in-play prediction | No trained model; bulletin presence does not imply model support |
+| Turkish BSL / Ukrainian SuperLeague men | Separate 2,523 / 997-result archives, trained models, daily fixtures and application filters |
+| Swedish SBL, other unsupported leagues, non-CBA in-play prediction | No enabled model; bulletin presence does not imply model support |
 | Betting execution, guaranteed returns | Not provided |
 
 ## Asian data extension
