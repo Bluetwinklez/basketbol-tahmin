@@ -1,0 +1,3049 @@
+{
+  "captured_at_utc": "2026-10-23T06:20:25.483752+00:00",
+  "source_url": "https://api-live.euroleague.net/v2/competitions/E/seasons/E2026/games",
+  "source_freshness_verified": false,
+  "cache_sha256": "47e93dc320f1a45948496a646663fb277c07424ecd8e85f6613ebab8d37a8344",
+  "note": "Read from previously fetched official schedule cache. Latest direct refresh returned HTTP 403; this snapshot is not certified current. Only necessary schedule facts retained.",
+  "games": [
+    {
+      "event_id": "E2026_379",
+      "start_utc": "2027-04-16T18:30:00Z",
+      "home": "BAR",
+      "away": "PAR",
+      "venue_id": "AMH",
+      "played": false
+    },
+    {
+      "event_id": "E2026_380",
+      "start_utc": "2027-04-16T18:15:00Z",
+      "home": "OLY",
+      "away": "PAM",
+      "venue_id": "ASF6",
+      "played": false
+    },
+    {
+      "event_id": "E2026_377",
+      "start_utc": "2027-04-16T17:00:00Z",
+      "home": "BES",
+      "away": "VIR",
+      "venue_id": "AVG2",
+      "played": false
+    },
+    {
+      "event_id": "E2026_378",
+      "start_utc": "2027-04-16T16:00:00Z",
+      "home": "DUB",
+      "away": "ASV",
+      "venue_id": "ACA4",
+      "played": false
+    },
+    {
+      "event_id": "E2026_375",
+      "start_utc": "2027-04-15T18:45:00Z",
+      "home": "PRS",
+      "away": "MUN",
+      "venue_id": "AVB11",
+      "played": false
+    },
+    {
+      "event_id": "E2026_376",
+      "start_utc": "2027-04-15T18:15:00Z",
+      "home": "PAN",
+      "away": "MAD",
+      "venue_id": "AUM6",
+      "played": false
+    },
+    {
+      "event_id": "E2026_373",
+      "start_utc": "2027-04-15T18:05:00Z",
+      "home": "TEL",
+      "away": "BAS",
+      "venue_id": "AUF4",
+      "played": false
+    },
+    {
+      "event_id": "E2026_372",
+      "start_utc": "2027-04-15T18:00:00Z",
+      "home": "RED",
+      "away": "MIL",
+      "venue_id": "ATM8",
+      "played": false
+    },
+    {
+      "event_id": "E2026_374",
+      "start_utc": "2027-04-15T17:30:00Z",
+      "home": "IST",
+      "away": "HTA",
+      "venue_id": "AVG2",
+      "played": false
+    },
+    {
+      "event_id": "E2026_371",
+      "start_utc": "2027-04-15T17:00:00Z",
+      "home": "ZAL",
+      "away": "ULK",
+      "venue_id": "ATJ",
+      "played": false
+    },
+    {
+      "event_id": "E2026_369",
+      "start_utc": "2027-04-09T18:45:00Z",
+      "home": "PAR",
+      "away": "DUB",
+      "venue_id": "ATM8",
+      "played": false
+    },
+    {
+      "event_id": "E2026_370",
+      "start_utc": "2027-04-09T18:15:00Z",
+      "home": "OLY",
+      "away": "ZAL",
+      "venue_id": "ASF6",
+      "played": false
+    },
+    {
+      "event_id": "E2026_368",
+      "start_utc": "2027-04-09T17:00:00Z",
+      "home": "BES",
+      "away": "TEL",
+      "venue_id": "AVG2",
+      "played": false
+    },
+    {
+      "event_id": "E2026_366",
+      "start_utc": "2027-04-08T18:45:00Z",
+      "home": "PRS",
+      "away": "BAR",
+      "venue_id": "AVB11",
+      "played": false
+    },
+    {
+      "event_id": "E2026_365",
+      "start_utc": "2027-04-08T18:30:00Z",
+      "home": "PAM",
+      "away": "IST",
+      "venue_id": "AVJ1",
+      "played": false
+    },
+    {
+      "event_id": "E2026_363",
+      "start_utc": "2027-04-08T18:30:00Z",
+      "home": "MIL",
+      "away": "BAS",
+      "venue_id": "ASX8",
+      "played": false
+    },
+    {
+      "event_id": "E2026_367",
+      "start_utc": "2027-04-08T18:15:00Z",
+      "home": "PAN",
+      "away": "VIR",
+      "venue_id": "AUM6",
+      "played": false
+    },
+    {
+      "event_id": "E2026_364",
+      "start_utc": "2027-04-08T18:00:00Z",
+      "home": "MUN",
+      "away": "ULK",
+      "venue_id": "AVE1",
+      "played": false
+    },
+    {
+      "event_id": "E2026_362",
+      "start_utc": "2027-04-08T18:00:00Z",
+      "home": "ASV",
+      "away": "MAD",
+      "venue_id": "AUZ1",
+      "played": false
+    },
+    {
+      "event_id": "E2026_361",
+      "start_utc": "2027-04-08T17:00:00Z",
+      "home": "HTA",
+      "away": "RED",
+      "venue_id": "AVK1",
+      "played": false
+    },
+    {
+      "event_id": "E2026_360",
+      "start_utc": "2027-04-07T16:00:00Z",
+      "home": "TEL",
+      "away": "PAR",
+      "venue_id": "AUF4",
+      "played": false
+    },
+    {
+      "event_id": "E2026_359",
+      "start_utc": "2027-04-07T16:00:00Z",
+      "home": "DUB",
+      "away": "ZAL",
+      "venue_id": "ACA4",
+      "played": false
+    },
+    {
+      "event_id": "E2026_358",
+      "start_utc": "2027-04-06T18:45:00Z",
+      "home": "MAD",
+      "away": "MIL",
+      "venue_id": "ATI7",
+      "played": false
+    },
+    {
+      "event_id": "E2026_357",
+      "start_utc": "2027-04-06T18:45:00Z",
+      "home": "PRS",
+      "away": "IST",
+      "venue_id": "AVB11",
+      "played": false
+    },
+    {
+      "event_id": "E2026_354",
+      "start_utc": "2027-04-06T18:45:00Z",
+      "home": "BAR",
+      "away": "MUN",
+      "venue_id": "AMH",
+      "played": false
+    },
+    {
+      "event_id": "E2026_355",
+      "start_utc": "2027-04-06T18:30:00Z",
+      "home": "VIR",
+      "away": "PAM",
+      "venue_id": "AUK3",
+      "played": false
+    },
+    {
+      "event_id": "E2026_353",
+      "start_utc": "2027-04-06T18:30:00Z",
+      "home": "BAS",
+      "away": "ASV",
+      "venue_id": "AUC",
+      "played": false
+    },
+    {
+      "event_id": "E2026_352",
+      "start_utc": "2027-04-06T18:30:00Z",
+      "home": "RED",
+      "away": "PAN",
+      "venue_id": "ATM8",
+      "played": false
+    },
+    {
+      "event_id": "E2026_356",
+      "start_utc": "2027-04-06T17:45:00Z",
+      "home": "ULK",
+      "away": "OLY",
+      "venue_id": "AMY",
+      "played": false
+    },
+    {
+      "event_id": "E2026_351",
+      "start_utc": "2027-04-06T17:00:00Z",
+      "home": "BES",
+      "away": "HTA",
+      "venue_id": "AVG2",
+      "played": false
+    },
+    {
+      "event_id": "E2026_350",
+      "start_utc": "2027-04-02T18:45:00Z",
+      "home": "PAR",
+      "away": "ASV",
+      "venue_id": "ATM8",
+      "played": false
+    },
+    {
+      "event_id": "E2026_349",
+      "start_utc": "2027-04-02T18:30:00Z",
+      "home": "BAR",
+      "away": "PAN",
+      "venue_id": "AMH",
+      "played": false
+    },
+    {
+      "event_id": "E2026_348",
+      "start_utc": "2027-04-02T18:30:00Z",
+      "home": "BAS",
+      "away": "MUN",
+      "venue_id": "AUC",
+      "played": false
+    },
+    {
+      "event_id": "E2026_347",
+      "start_utc": "2027-04-01T18:45:00Z",
+      "home": "PRS",
+      "away": "DUB",
+      "venue_id": "AVB11",
+      "played": false
+    },
+    {
+      "event_id": "E2026_346",
+      "start_utc": "2027-04-01T18:30:00Z",
+      "home": "PAM",
+      "away": "MAD",
+      "venue_id": "AVJ1",
+      "played": false
+    },
+    {
+      "event_id": "E2026_345",
+      "start_utc": "2027-04-01T18:30:00Z",
+      "home": "MIL",
+      "away": "BES",
+      "venue_id": "ASX8",
+      "played": false
+    },
+    {
+      "event_id": "E2026_344",
+      "start_utc": "2027-04-01T18:05:00Z",
+      "home": "TEL",
+      "away": "ULK",
+      "venue_id": "AUF4",
+      "played": false
+    },
+    {
+      "event_id": "E2026_342",
+      "start_utc": "2027-03-31T18:30:00Z",
+      "home": "VIR",
+      "away": "RED",
+      "venue_id": "AUK3",
+      "played": false
+    },
+    {
+      "event_id": "E2026_341",
+      "start_utc": "2027-03-31T18:00:00Z",
+      "home": "ZAL",
+      "away": "HTA",
+      "venue_id": "ATJ",
+      "played": false
+    },
+    {
+      "event_id": "E2026_343",
+      "start_utc": "2027-03-31T17:30:00Z",
+      "home": "IST",
+      "away": "OLY",
+      "venue_id": "AVG2",
+      "played": false
+    },
+    {
+      "event_id": "E2026_339",
+      "start_utc": "2027-03-26T19:45:00Z",
+      "home": "MAD",
+      "away": "BES",
+      "venue_id": "ATI7",
+      "played": false
+    },
+    {
+      "event_id": "E2026_336",
+      "start_utc": "2027-03-26T19:30:00Z",
+      "home": "MIL",
+      "away": "TEL",
+      "venue_id": "ASX8",
+      "played": false
+    },
+    {
+      "event_id": "E2026_340",
+      "start_utc": "2027-03-26T19:15:00Z",
+      "home": "OLY",
+      "away": "VIR",
+      "venue_id": "ASF6",
+      "played": false
+    },
+    {
+      "event_id": "E2026_337",
+      "start_utc": "2027-03-26T19:00:00Z",
+      "home": "MUN",
+      "away": "ZAL",
+      "venue_id": "AVE1",
+      "played": false
+    },
+    {
+      "event_id": "E2026_335",
+      "start_utc": "2027-03-26T19:00:00Z",
+      "home": "RED",
+      "away": "PAM",
+      "venue_id": "ATM8",
+      "played": false
+    },
+    {
+      "event_id": "E2026_338",
+      "start_utc": "2027-03-26T17:45:00Z",
+      "home": "ULK",
+      "away": "BAR",
+      "venue_id": "AMY",
+      "played": false
+    },
+    {
+      "event_id": "E2026_334",
+      "start_utc": "2027-03-25T19:15:00Z",
+      "home": "PAN",
+      "away": "PAR",
+      "venue_id": "AUM6",
+      "played": false
+    },
+    {
+      "event_id": "E2026_332",
+      "start_utc": "2027-03-25T19:00:00Z",
+      "home": "ASV",
+      "away": "PRS",
+      "venue_id": "AUZ1",
+      "played": false
+    },
+    {
+      "event_id": "E2026_331",
+      "start_utc": "2027-03-25T18:00:00Z",
+      "home": "HTA",
+      "away": "DUB",
+      "venue_id": "AVK1",
+      "played": false
+    },
+    {
+      "event_id": "E2026_333",
+      "start_utc": "2027-03-25T17:30:00Z",
+      "home": "IST",
+      "away": "BAS",
+      "venue_id": "AVG2",
+      "played": false
+    },
+    {
+      "event_id": "E2026_329",
+      "start_utc": "2027-03-24T19:30:00Z",
+      "home": "PAM",
+      "away": "BES",
+      "venue_id": "AVJ1",
+      "played": false
+    },
+    {
+      "event_id": "E2026_330",
+      "start_utc": "2027-03-24T19:15:00Z",
+      "home": "OLY",
+      "away": "BAR",
+      "venue_id": "ASF6",
+      "played": false
+    },
+    {
+      "event_id": "E2026_328",
+      "start_utc": "2027-03-24T19:00:00Z",
+      "home": "MUN",
+      "away": "MAD",
+      "venue_id": "AVE1",
+      "played": false
+    },
+    {
+      "event_id": "E2026_327",
+      "start_utc": "2027-03-24T18:00:00Z",
+      "home": "ZAL",
+      "away": "TEL",
+      "venue_id": "ATJ",
+      "played": false
+    },
+    {
+      "event_id": "E2026_326",
+      "start_utc": "2027-03-23T19:45:00Z",
+      "home": "PAR",
+      "away": "VIR",
+      "venue_id": "ATM8",
+      "played": false
+    },
+    {
+      "event_id": "E2026_325",
+      "start_utc": "2027-03-23T19:45:00Z",
+      "home": "PRS",
+      "away": "MIL",
+      "venue_id": "AVB11",
+      "played": false
+    },
+    {
+      "event_id": "E2026_323",
+      "start_utc": "2027-03-23T19:00:00Z",
+      "home": "ASV",
+      "away": "PAN",
+      "venue_id": "AUZ1",
+      "played": false
+    },
+    {
+      "event_id": "E2026_322",
+      "start_utc": "2027-03-23T18:00:00Z",
+      "home": "HTA",
+      "away": "ULK",
+      "venue_id": "AVK1",
+      "played": false
+    },
+    {
+      "event_id": "E2026_324",
+      "start_utc": "2027-03-23T17:30:00Z",
+      "home": "IST",
+      "away": "RED",
+      "venue_id": "AVG2",
+      "played": false
+    },
+    {
+      "event_id": "E2026_321",
+      "start_utc": "2027-03-23T16:00:00Z",
+      "home": "DUB",
+      "away": "BAS",
+      "venue_id": "ACA4",
+      "played": false
+    },
+    {
+      "event_id": "E2026_320",
+      "start_utc": "2027-03-19T19:30:00Z",
+      "home": "BAR",
+      "away": "HTA",
+      "venue_id": "AMH",
+      "played": false
+    },
+    {
+      "event_id": "E2026_319",
+      "start_utc": "2027-03-19T19:00:00Z",
+      "home": "ASV",
+      "away": "VIR",
+      "venue_id": "ASR",
+      "played": false
+    },
+    {
+      "event_id": "E2026_317",
+      "start_utc": "2027-03-19T19:00:00Z",
+      "home": "RED",
+      "away": "OLY",
+      "venue_id": "ATM8",
+      "played": false
+    },
+    {
+      "event_id": "E2026_316",
+      "start_utc": "2027-03-19T17:00:00Z",
+      "home": "BES",
+      "away": "IST",
+      "venue_id": "AVG2",
+      "played": false
+    },
+    {
+      "event_id": "E2026_318",
+      "start_utc": "2027-03-19T16:00:00Z",
+      "home": "DUB",
+      "away": "MIL",
+      "venue_id": "ACA4",
+      "played": false
+    },
+    {
+      "event_id": "E2026_314",
+      "start_utc": "2027-03-18T19:45:00Z",
+      "home": "MAD",
+      "away": "BAS",
+      "venue_id": "ATI7",
+      "played": false
+    },
+    {
+      "event_id": "E2026_312",
+      "start_utc": "2027-03-18T19:45:00Z",
+      "home": "PAR",
+      "away": "MUN",
+      "venue_id": "ATM8",
+      "played": false
+    },
+    {
+      "event_id": "E2026_315",
+      "start_utc": "2027-03-18T19:15:00Z",
+      "home": "PAN",
+      "away": "ZAL",
+      "venue_id": "AUM6",
+      "played": false
+    },
+    {
+      "event_id": "E2026_311",
+      "start_utc": "2027-03-18T19:05:00Z",
+      "home": "TEL",
+      "away": "PAM",
+      "venue_id": "AUF4",
+      "played": false
+    },
+    {
+      "event_id": "E2026_313",
+      "start_utc": "2027-03-18T17:45:00Z",
+      "home": "ULK",
+      "away": "PRS",
+      "venue_id": "AMY",
+      "played": false
+    },
+    {
+      "event_id": "E2026_308",
+      "start_utc": "2027-03-12T19:30:00Z",
+      "home": "BAR",
+      "away": "BAS",
+      "venue_id": "AMH",
+      "played": false
+    },
+    {
+      "event_id": "E2026_310",
+      "start_utc": "2027-03-12T19:15:00Z",
+      "home": "OLY",
+      "away": "BES",
+      "venue_id": "ASF6",
+      "played": false
+    },
+    {
+      "event_id": "E2026_306",
+      "start_utc": "2027-03-12T19:00:00Z",
+      "home": "RED",
+      "away": "DUB",
+      "venue_id": "ATM8",
+      "played": false
+    },
+    {
+      "event_id": "E2026_307",
+      "start_utc": "2027-03-12T18:00:00Z",
+      "home": "ZAL",
+      "away": "MIL",
+      "venue_id": "ATJ",
+      "played": false
+    },
+    {
+      "event_id": "E2026_309",
+      "start_utc": "2027-03-12T17:45:00Z",
+      "home": "ULK",
+      "away": "PAM",
+      "venue_id": "AMY",
+      "played": false
+    },
+    {
+      "event_id": "E2026_305",
+      "start_utc": "2027-03-11T19:45:00Z",
+      "home": "MAD",
+      "away": "VIR",
+      "venue_id": "ATI7",
+      "played": false
+    },
+    {
+      "event_id": "E2026_304",
+      "start_utc": "2027-03-11T19:45:00Z",
+      "home": "PRS",
+      "away": "PAN",
+      "venue_id": "AVB11",
+      "played": false
+    },
+    {
+      "event_id": "E2026_302",
+      "start_utc": "2027-03-11T19:45:00Z",
+      "home": "PAR",
+      "away": "IST",
+      "venue_id": "ATM8",
+      "played": false
+    },
+    {
+      "event_id": "E2026_301",
+      "start_utc": "2027-03-11T19:05:00Z",
+      "home": "TEL",
+      "away": "ASV",
+      "venue_id": "AUF4",
+      "played": false
+    },
+    {
+      "event_id": "E2026_303",
+      "start_utc": "2027-03-11T19:00:00Z",
+      "home": "MUN",
+      "away": "HTA",
+      "venue_id": "AVE1",
+      "played": false
+    },
+    {
+      "event_id": "E2026_300",
+      "start_utc": "2027-03-10T19:30:00Z",
+      "home": "MIL",
+      "away": "OLY",
+      "venue_id": "ASX8",
+      "played": false
+    },
+    {
+      "event_id": "E2026_299",
+      "start_utc": "2027-03-10T16:00:00Z",
+      "home": "DUB",
+      "away": "PAM",
+      "venue_id": "ACA4",
+      "played": false
+    },
+    {
+      "event_id": "E2026_298",
+      "start_utc": "2027-03-09T19:45:00Z",
+      "home": "MAD",
+      "away": "HTA",
+      "venue_id": "ATI7",
+      "played": false
+    },
+    {
+      "event_id": "E2026_297",
+      "start_utc": "2027-03-09T19:45:00Z",
+      "home": "PAR",
+      "away": "PRS",
+      "venue_id": "ATM8",
+      "played": false
+    },
+    {
+      "event_id": "E2026_296",
+      "start_utc": "2027-03-09T19:30:00Z",
+      "home": "VIR",
+      "away": "ULK",
+      "venue_id": "AUK3",
+      "played": false
+    },
+    {
+      "event_id": "E2026_294",
+      "start_utc": "2027-03-09T19:30:00Z",
+      "home": "BAS",
+      "away": "PAN",
+      "venue_id": "AUC",
+      "played": false
+    },
+    {
+      "event_id": "E2026_293",
+      "start_utc": "2027-03-09T19:05:00Z",
+      "home": "TEL",
+      "away": "RED",
+      "venue_id": "AUF4",
+      "played": false
+    },
+    {
+      "event_id": "E2026_295",
+      "start_utc": "2027-03-09T19:00:00Z",
+      "home": "MUN",
+      "away": "IST",
+      "venue_id": "AVE1",
+      "played": false
+    },
+    {
+      "event_id": "E2026_292",
+      "start_utc": "2027-03-09T18:00:00Z",
+      "home": "ZAL",
+      "away": "BAR",
+      "venue_id": "ATJ",
+      "played": false
+    },
+    {
+      "event_id": "E2026_291",
+      "start_utc": "2027-03-09T17:00:00Z",
+      "home": "BES",
+      "away": "ASV",
+      "venue_id": "AVG2",
+      "played": false
+    },
+    {
+      "event_id": "E2026_289",
+      "start_utc": "2027-03-05T19:30:00Z",
+      "home": "BAR",
+      "away": "MAD",
+      "venue_id": "AMH",
+      "played": false
+    },
+    {
+      "event_id": "E2026_288",
+      "start_utc": "2027-03-05T19:30:00Z",
+      "home": "MIL",
+      "away": "IST",
+      "venue_id": "ASX8",
+      "played": false
+    },
+    {
+      "event_id": "E2026_290",
+      "start_utc": "2027-03-05T19:00:00Z",
+      "home": "MUN",
+      "away": "ASV",
+      "venue_id": "AVE1",
+      "played": false
+    },
+    {
+      "event_id": "E2026_286",
+      "start_utc": "2027-03-05T19:00:00Z",
+      "home": "RED",
+      "away": "ULK",
+      "venue_id": "ATM8",
+      "played": false
+    },
+    {
+      "event_id": "E2026_287",
+      "start_utc": "2027-03-05T16:00:00Z",
+      "home": "DUB",
+      "away": "OLY",
+      "venue_id": "ACA4",
+      "played": false
+    },
+    {
+      "event_id": "E2026_284",
+      "start_utc": "2027-03-04T19:45:00Z",
+      "home": "PRS",
+      "away": "TEL",
+      "venue_id": "AVB11",
+      "played": false
+    },
+    {
+      "event_id": "E2026_281",
+      "start_utc": "2027-03-04T19:45:00Z",
+      "home": "BAS",
+      "away": "PAR",
+      "venue_id": "AUC",
+      "played": false
+    },
+    {
+      "event_id": "E2026_283",
+      "start_utc": "2027-03-04T19:30:00Z",
+      "home": "VIR",
+      "away": "HTA",
+      "venue_id": "AUK3",
+      "played": false
+    },
+    {
+      "event_id": "E2026_282",
+      "start_utc": "2027-03-04T19:30:00Z",
+      "home": "PAM",
+      "away": "ZAL",
+      "venue_id": "AVJ1",
+      "played": false
+    },
+    {
+      "event_id": "E2026_285",
+      "start_utc": "2027-03-04T19:15:00Z",
+      "home": "PAN",
+      "away": "BES",
+      "venue_id": "AUM6",
+      "played": false
+    },
+    {
+      "event_id": "E2026_280",
+      "start_utc": "2027-02-12T19:15:00Z",
+      "home": "OLY",
+      "away": "PAN",
+      "venue_id": "ASF6",
+      "played": false
+    },
+    {
+      "event_id": "E2026_278",
+      "start_utc": "2027-02-12T18:00:00Z",
+      "home": "ZAL",
+      "away": "MAD",
+      "venue_id": "ATJ",
+      "played": false
+    },
+    {
+      "event_id": "E2026_279",
+      "start_utc": "2027-02-12T17:45:00Z",
+      "home": "ULK",
+      "away": "MIL",
+      "venue_id": "AMY",
+      "played": false
+    },
+    {
+      "event_id": "E2026_277",
+      "start_utc": "2027-02-11T19:30:00Z",
+      "home": "VIR",
+      "away": "MUN",
+      "venue_id": "AUK3",
+      "played": false
+    },
+    {
+      "event_id": "E2026_276",
+      "start_utc": "2027-02-11T19:30:00Z",
+      "home": "PAM",
+      "away": "PRS",
+      "venue_id": "AVJ1",
+      "played": false
+    },
+    {
+      "event_id": "E2026_275",
+      "start_utc": "2027-02-11T19:05:00Z",
+      "home": "TEL",
+      "away": "BAR",
+      "venue_id": "AUF4",
+      "played": false
+    },
+    {
+      "event_id": "E2026_274",
+      "start_utc": "2027-02-11T19:00:00Z",
+      "home": "RED",
+      "away": "PAR",
+      "venue_id": "ATM8",
+      "played": false
+    },
+    {
+      "event_id": "E2026_273",
+      "start_utc": "2027-02-11T17:00:00Z",
+      "home": "BES",
+      "away": "DUB",
+      "venue_id": "AVG2",
+      "played": false
+    },
+    {
+      "event_id": "E2026_272",
+      "start_utc": "2027-02-10T19:00:00Z",
+      "home": "ASV",
+      "away": "IST",
+      "venue_id": "AUZ1",
+      "played": false
+    },
+    {
+      "event_id": "E2026_271",
+      "start_utc": "2027-02-10T18:00:00Z",
+      "home": "HTA",
+      "away": "BAS",
+      "venue_id": "AVK1",
+      "played": false
+    },
+    {
+      "event_id": "E2026_269",
+      "start_utc": "2027-02-05T19:45:00Z",
+      "home": "PAR",
+      "away": "HTA",
+      "venue_id": "ATM8",
+      "played": false
+    },
+    {
+      "event_id": "E2026_268",
+      "start_utc": "2027-02-05T19:45:00Z",
+      "home": "PAM",
+      "away": "BAR",
+      "venue_id": "AVJ1",
+      "played": false
+    },
+    {
+      "event_id": "E2026_267",
+      "start_utc": "2027-02-05T19:30:00Z",
+      "home": "MIL",
+      "away": "PAN",
+      "venue_id": "ASX8",
+      "played": false
+    },
+    {
+      "event_id": "E2026_266",
+      "start_utc": "2027-02-05T19:30:00Z",
+      "home": "BAS",
+      "away": "RED",
+      "venue_id": "AUC",
+      "played": false
+    },
+    {
+      "event_id": "E2026_265",
+      "start_utc": "2027-02-05T19:00:00Z",
+      "home": "ASV",
+      "away": "ULK",
+      "venue_id": "ASR",
+      "played": false
+    },
+    {
+      "event_id": "E2026_270",
+      "start_utc": "2027-02-05T18:30:00Z",
+      "home": "OLY",
+      "away": "MUN",
+      "venue_id": "ASF6",
+      "played": false
+    },
+    {
+      "event_id": "E2026_264",
+      "start_utc": "2027-02-04T19:45:00Z",
+      "home": "MAD",
+      "away": "PRS",
+      "venue_id": "ATI7",
+      "played": false
+    },
+    {
+      "event_id": "E2026_262",
+      "start_utc": "2027-02-04T18:00:00Z",
+      "home": "ZAL",
+      "away": "BES",
+      "venue_id": "ATJ",
+      "played": false
+    },
+    {
+      "event_id": "E2026_263",
+      "start_utc": "2027-02-04T17:30:00Z",
+      "home": "IST",
+      "away": "TEL",
+      "venue_id": "AVG2",
+      "played": false
+    },
+    {
+      "event_id": "E2026_261",
+      "start_utc": "2027-02-04T16:00:00Z",
+      "home": "DUB",
+      "away": "VIR",
+      "venue_id": "ACA4",
+      "played": false
+    },
+    {
+      "event_id": "E2026_260",
+      "start_utc": "2027-02-03T19:45:00Z",
+      "home": "PAM",
+      "away": "MIL",
+      "venue_id": "AVJ1",
+      "played": false
+    },
+    {
+      "event_id": "E2026_258",
+      "start_utc": "2027-02-03T19:30:00Z",
+      "home": "BAR",
+      "away": "ASV",
+      "venue_id": "AMH",
+      "played": false
+    },
+    {
+      "event_id": "E2026_259",
+      "start_utc": "2027-02-03T19:00:00Z",
+      "home": "MUN",
+      "away": "RED",
+      "venue_id": "AVE1",
+      "played": false
+    },
+    {
+      "event_id": "E2026_257",
+      "start_utc": "2027-02-03T18:00:00Z",
+      "home": "HTA",
+      "away": "OLY",
+      "venue_id": "AVK1",
+      "played": false
+    },
+    {
+      "event_id": "E2026_255",
+      "start_utc": "2027-02-02T19:45:00Z",
+      "home": "PAR",
+      "away": "MAD",
+      "venue_id": "ATM8",
+      "played": false
+    },
+    {
+      "event_id": "E2026_254",
+      "start_utc": "2027-02-02T19:45:00Z",
+      "home": "PRS",
+      "away": "BES",
+      "venue_id": "AVB11",
+      "played": false
+    },
+    {
+      "event_id": "E2026_253",
+      "start_utc": "2027-02-02T19:30:00Z",
+      "home": "BAS",
+      "away": "ULK",
+      "venue_id": "AUC",
+      "played": false
+    },
+    {
+      "event_id": "E2026_256",
+      "start_utc": "2027-02-02T19:15:00Z",
+      "home": "PAN",
+      "away": "DUB",
+      "venue_id": "AUM6",
+      "played": false
+    },
+    {
+      "event_id": "E2026_251",
+      "start_utc": "2027-02-02T19:05:00Z",
+      "home": "TEL",
+      "away": "VIR",
+      "venue_id": "AUF4",
+      "played": false
+    },
+    {
+      "event_id": "E2026_252",
+      "start_utc": "2027-02-02T17:30:00Z",
+      "home": "IST",
+      "away": "ZAL",
+      "venue_id": "AVG2",
+      "played": false
+    },
+    {
+      "event_id": "E2026_248",
+      "start_utc": "2027-01-29T19:30:00Z",
+      "home": "BAR",
+      "away": "DUB",
+      "venue_id": "AMH",
+      "played": false
+    },
+    {
+      "event_id": "E2026_247",
+      "start_utc": "2027-01-29T19:30:00Z",
+      "home": "MIL",
+      "away": "PAR",
+      "venue_id": "ASX8",
+      "played": false
+    },
+    {
+      "event_id": "E2026_250",
+      "start_utc": "2027-01-29T19:15:00Z",
+      "home": "PAN",
+      "away": "IST",
+      "venue_id": "AUM6",
+      "played": false
+    },
+    {
+      "event_id": "E2026_246",
+      "start_utc": "2027-01-29T19:00:00Z",
+      "home": "ASV",
+      "away": "HTA",
+      "venue_id": "ASR",
+      "played": false
+    },
+    {
+      "event_id": "E2026_249",
+      "start_utc": "2027-01-29T17:45:00Z",
+      "home": "ULK",
+      "away": "MAD",
+      "venue_id": "AMY",
+      "played": false
+    },
+    {
+      "event_id": "E2026_244",
+      "start_utc": "2027-01-28T19:30:00Z",
+      "home": "VIR",
+      "away": "PRS",
+      "venue_id": "AUK3",
+      "played": false
+    },
+    {
+      "event_id": "E2026_242",
+      "start_utc": "2027-01-28T19:30:00Z",
+      "home": "BAS",
+      "away": "ZAL",
+      "venue_id": "AUC",
+      "played": false
+    },
+    {
+      "event_id": "E2026_245",
+      "start_utc": "2027-01-28T19:15:00Z",
+      "home": "OLY",
+      "away": "TEL",
+      "venue_id": "ASF6",
+      "played": false
+    },
+    {
+      "event_id": "E2026_243",
+      "start_utc": "2027-01-28T19:00:00Z",
+      "home": "MUN",
+      "away": "PAM",
+      "venue_id": "AVE1",
+      "played": false
+    },
+    {
+      "event_id": "E2026_241",
+      "start_utc": "2027-01-28T17:00:00Z",
+      "home": "BES",
+      "away": "RED",
+      "venue_id": "AVG2",
+      "played": false
+    },
+    {
+      "event_id": "E2026_237",
+      "start_utc": "2027-01-22T19:00:00Z",
+      "home": "RED",
+      "away": "BAR",
+      "venue_id": "ATM8",
+      "played": false
+    },
+    {
+      "event_id": "E2026_238",
+      "start_utc": "2027-01-22T18:00:00Z",
+      "home": "ZAL",
+      "away": "VIR",
+      "venue_id": "ATJ",
+      "played": false
+    },
+    {
+      "event_id": "E2026_239",
+      "start_utc": "2027-01-22T17:30:00Z",
+      "home": "IST",
+      "away": "DUB",
+      "venue_id": "AVG2",
+      "played": false
+    },
+    {
+      "event_id": "E2026_236",
+      "start_utc": "2027-01-21T19:45:00Z",
+      "home": "MAD",
+      "away": "TEL",
+      "venue_id": "ATI7",
+      "played": false
+    },
+    {
+      "event_id": "E2026_235",
+      "start_utc": "2027-01-21T19:45:00Z",
+      "home": "PAR",
+      "away": "OLY",
+      "venue_id": "ATM8",
+      "played": false
+    },
+    {
+      "event_id": "E2026_234",
+      "start_utc": "2027-01-21T19:45:00Z",
+      "home": "PRS",
+      "away": "BAS",
+      "venue_id": "AVB11",
+      "played": false
+    },
+    {
+      "event_id": "E2026_240",
+      "start_utc": "2027-01-21T19:00:00Z",
+      "home": "PAM",
+      "away": "ASV",
+      "venue_id": "AVJ1",
+      "played": false
+    },
+    {
+      "event_id": "E2026_232",
+      "start_utc": "2027-01-21T19:00:00Z",
+      "home": "MUN",
+      "away": "MIL",
+      "venue_id": "AVE1",
+      "played": false
+    },
+    {
+      "event_id": "E2026_233",
+      "start_utc": "2027-01-21T17:45:00Z",
+      "home": "ULK",
+      "away": "BES",
+      "venue_id": "AMY",
+      "played": false
+    },
+    {
+      "event_id": "E2026_231",
+      "start_utc": "2027-01-21T17:00:00Z",
+      "home": "HTA",
+      "away": "PAN",
+      "venue_id": "AVK1",
+      "played": false
+    },
+    {
+      "event_id": "E2026_229",
+      "start_utc": "2027-01-15T19:45:00Z",
+      "home": "PAR",
+      "away": "ULK",
+      "venue_id": "ATM8",
+      "played": false
+    },
+    {
+      "event_id": "E2026_228",
+      "start_utc": "2027-01-15T19:30:00Z",
+      "home": "VIR",
+      "away": "BAR",
+      "venue_id": "AUK3",
+      "played": false
+    },
+    {
+      "event_id": "E2026_230",
+      "start_utc": "2027-01-15T19:15:00Z",
+      "home": "OLY",
+      "away": "PRS",
+      "venue_id": "ASF6",
+      "played": false
+    },
+    {
+      "event_id": "E2026_226",
+      "start_utc": "2027-01-15T17:00:00Z",
+      "home": "BES",
+      "away": "BAS",
+      "venue_id": "AVG2",
+      "played": false
+    },
+    {
+      "event_id": "E2026_227",
+      "start_utc": "2027-01-15T16:00:00Z",
+      "home": "DUB",
+      "away": "TEL",
+      "venue_id": "ACA4",
+      "played": false
+    },
+    {
+      "event_id": "E2026_224",
+      "start_utc": "2027-01-14T19:45:00Z",
+      "home": "MAD",
+      "away": "IST",
+      "venue_id": "ATI7",
+      "played": false
+    },
+    {
+      "event_id": "E2026_223",
+      "start_utc": "2027-01-14T19:30:00Z",
+      "home": "MIL",
+      "away": "ASV",
+      "venue_id": "ASX8",
+      "played": false
+    },
+    {
+      "event_id": "E2026_225",
+      "start_utc": "2027-01-14T19:15:00Z",
+      "home": "PAN",
+      "away": "MUN",
+      "venue_id": "AUM6",
+      "played": false
+    },
+    {
+      "event_id": "E2026_222",
+      "start_utc": "2027-01-14T18:00:00Z",
+      "home": "ZAL",
+      "away": "RED",
+      "venue_id": "ATJ",
+      "played": false
+    },
+    {
+      "event_id": "E2026_221",
+      "start_utc": "2027-01-14T18:00:00Z",
+      "home": "HTA",
+      "away": "PAM",
+      "venue_id": "AVK1",
+      "played": false
+    },
+    {
+      "event_id": "E2026_220",
+      "start_utc": "2027-01-13T19:15:00Z",
+      "home": "OLY",
+      "away": "BAS",
+      "venue_id": "ASF6",
+      "played": false
+    },
+    {
+      "event_id": "E2026_219",
+      "start_utc": "2027-01-13T17:00:00Z",
+      "home": "BES",
+      "away": "PAR",
+      "venue_id": "AVG2",
+      "played": false
+    },
+    {
+      "event_id": "E2026_216",
+      "start_utc": "2027-01-12T19:30:00Z",
+      "home": "VIR",
+      "away": "IST",
+      "venue_id": "AUK3",
+      "played": false
+    },
+    {
+      "event_id": "E2026_215",
+      "start_utc": "2027-01-12T19:30:00Z",
+      "home": "BAR",
+      "away": "MIL",
+      "venue_id": "AMH",
+      "played": false
+    },
+    {
+      "event_id": "E2026_214",
+      "start_utc": "2027-01-12T19:30:00Z",
+      "home": "TEL",
+      "away": "MUN",
+      "venue_id": "AUF4",
+      "played": false
+    },
+    {
+      "event_id": "E2026_218",
+      "start_utc": "2027-01-12T19:15:00Z",
+      "home": "PAN",
+      "away": "PAM",
+      "venue_id": "AUM6",
+      "played": false
+    },
+    {
+      "event_id": "E2026_213",
+      "start_utc": "2027-01-12T19:00:00Z",
+      "home": "ASV",
+      "away": "ZAL",
+      "venue_id": "AUZ1",
+      "played": false
+    },
+    {
+      "event_id": "E2026_211",
+      "start_utc": "2027-01-12T19:00:00Z",
+      "home": "RED",
+      "away": "MAD",
+      "venue_id": "ATM8",
+      "played": false
+    },
+    {
+      "event_id": "E2026_212",
+      "start_utc": "2027-01-12T17:00:00Z",
+      "home": "HTA",
+      "away": "PRS",
+      "venue_id": "AVK1",
+      "played": false
+    },
+    {
+      "event_id": "E2026_217",
+      "start_utc": "2027-01-12T16:00:00Z",
+      "home": "DUB",
+      "away": "ULK",
+      "venue_id": "ACA4",
+      "played": false
+    },
+    {
+      "event_id": "E2026_209",
+      "start_utc": "2027-01-08T19:30:00Z",
+      "home": "BAS",
+      "away": "VIR",
+      "venue_id": "AUC",
+      "played": false
+    },
+    {
+      "event_id": "E2026_207",
+      "start_utc": "2027-01-08T19:00:00Z",
+      "home": "RED",
+      "away": "ASV",
+      "venue_id": "ATM8",
+      "played": false
+    },
+    {
+      "event_id": "E2026_208",
+      "start_utc": "2027-01-08T16:00:00Z",
+      "home": "DUB",
+      "away": "MUN",
+      "venue_id": "ACA4",
+      "played": false
+    },
+    {
+      "event_id": "E2026_210",
+      "start_utc": "2027-01-07T19:45:00Z",
+      "home": "MAD",
+      "away": "OLY",
+      "venue_id": "ATI7",
+      "played": false
+    },
+    {
+      "event_id": "E2026_206",
+      "start_utc": "2027-01-07T19:30:00Z",
+      "home": "PAM",
+      "away": "PAR",
+      "venue_id": "AVJ1",
+      "played": false
+    },
+    {
+      "event_id": "E2026_205",
+      "start_utc": "2027-01-07T19:30:00Z",
+      "home": "MIL",
+      "away": "HTA",
+      "venue_id": "ASX8",
+      "played": false
+    },
+    {
+      "event_id": "E2026_202",
+      "start_utc": "2027-01-07T18:00:00Z",
+      "home": "ZAL",
+      "away": "PRS",
+      "venue_id": "ATJ",
+      "played": false
+    },
+    {
+      "event_id": "E2026_204",
+      "start_utc": "2027-01-07T17:30:00Z",
+      "home": "IST",
+      "away": "ULK",
+      "venue_id": "AVG2",
+      "played": false
+    },
+    {
+      "event_id": "E2026_203",
+      "start_utc": "2027-01-07T17:00:00Z",
+      "home": "TEL",
+      "away": "PAN",
+      "venue_id": "AUF4",
+      "played": false
+    },
+    {
+      "event_id": "E2026_201",
+      "start_utc": "2027-01-06T19:30:00Z",
+      "home": "BAR",
+      "away": "BES",
+      "venue_id": "AMH",
+      "played": false
+    },
+    {
+      "event_id": "E2026_200",
+      "start_utc": "2026-12-30T19:45:00Z",
+      "home": "PRS",
+      "away": "RED",
+      "venue_id": "AKW2",
+      "played": false
+    },
+    {
+      "event_id": "E2026_199",
+      "start_utc": "2026-12-30T19:30:00Z",
+      "home": "VIR",
+      "away": "MIL",
+      "venue_id": "AUK3",
+      "played": false
+    },
+    {
+      "event_id": "E2026_198",
+      "start_utc": "2026-12-30T19:00:00Z",
+      "home": "MUN",
+      "away": "BES",
+      "venue_id": "AVE1",
+      "played": false
+    },
+    {
+      "event_id": "E2026_196",
+      "start_utc": "2026-12-30T19:00:00Z",
+      "home": "ASV",
+      "away": "OLY",
+      "venue_id": "AUZ1",
+      "played": false
+    },
+    {
+      "event_id": "E2026_197",
+      "start_utc": "2026-12-30T17:30:00Z",
+      "home": "IST",
+      "away": "BAR",
+      "venue_id": "AVG2",
+      "played": false
+    },
+    {
+      "event_id": "E2026_195",
+      "start_utc": "2026-12-29T20:00:00Z",
+      "home": "MAD",
+      "away": "DUB",
+      "venue_id": "ATI7",
+      "played": false
+    },
+    {
+      "event_id": "E2026_194",
+      "start_utc": "2026-12-29T19:45:00Z",
+      "home": "PAR",
+      "away": "ZAL",
+      "venue_id": "ATM8",
+      "played": false
+    },
+    {
+      "event_id": "E2026_192",
+      "start_utc": "2026-12-29T19:30:00Z",
+      "home": "BAS",
+      "away": "PAM",
+      "venue_id": "AUC",
+      "played": false
+    },
+    {
+      "event_id": "E2026_191",
+      "start_utc": "2026-12-29T18:00:00Z",
+      "home": "HTA",
+      "away": "TEL",
+      "venue_id": "AVK1",
+      "played": false
+    },
+    {
+      "event_id": "E2026_193",
+      "start_utc": "2026-12-29T17:45:00Z",
+      "home": "ULK",
+      "away": "PAN",
+      "venue_id": "AMY",
+      "played": false
+    },
+    {
+      "event_id": "E2026_190",
+      "start_utc": "2026-12-23T19:30:00Z",
+      "home": "MIL",
+      "away": "PRS",
+      "venue_id": "ASX8",
+      "played": false
+    },
+    {
+      "event_id": "E2026_189",
+      "start_utc": "2026-12-23T19:05:00Z",
+      "home": "TEL",
+      "away": "IST",
+      "venue_id": "AUF4",
+      "played": false
+    },
+    {
+      "event_id": "E2026_186",
+      "start_utc": "2026-12-23T19:00:00Z",
+      "home": "RED",
+      "away": "BAS",
+      "venue_id": "ATM8",
+      "played": false
+    },
+    {
+      "event_id": "E2026_188",
+      "start_utc": "2026-12-23T18:00:00Z",
+      "home": "ZAL",
+      "away": "PAM",
+      "venue_id": "ATJ",
+      "played": false
+    },
+    {
+      "event_id": "E2026_187",
+      "start_utc": "2026-12-23T16:00:00Z",
+      "home": "DUB",
+      "away": "PAN",
+      "venue_id": "ACA4",
+      "played": false
+    },
+    {
+      "event_id": "E2026_185",
+      "start_utc": "2026-12-22T19:30:00Z",
+      "home": "VIR",
+      "away": "MAD",
+      "venue_id": "AUK3",
+      "played": false
+    },
+    {
+      "event_id": "E2026_184",
+      "start_utc": "2026-12-22T19:00:00Z",
+      "home": "MUN",
+      "away": "OLY",
+      "venue_id": "AVE1",
+      "played": false
+    },
+    {
+      "event_id": "E2026_183",
+      "start_utc": "2026-12-22T19:00:00Z",
+      "home": "ASV",
+      "away": "BAR",
+      "venue_id": "AUZ1",
+      "played": false
+    },
+    {
+      "event_id": "E2026_182",
+      "start_utc": "2026-12-22T18:00:00Z",
+      "home": "HTA",
+      "away": "PAR",
+      "venue_id": "AVK1",
+      "played": false
+    },
+    {
+      "event_id": "E2026_181",
+      "start_utc": "2026-12-22T17:00:00Z",
+      "home": "BES",
+      "away": "ULK",
+      "venue_id": "AVG2",
+      "played": false
+    },
+    {
+      "event_id": "E2026_178",
+      "start_utc": "2026-12-18T19:45:00Z",
+      "home": "BAR",
+      "away": "VIR",
+      "venue_id": "AMH",
+      "played": false
+    },
+    {
+      "event_id": "E2026_177",
+      "start_utc": "2026-12-18T19:30:00Z",
+      "home": "BAS",
+      "away": "PRS",
+      "venue_id": "AUC",
+      "played": false
+    },
+    {
+      "event_id": "E2026_175",
+      "start_utc": "2026-12-18T19:30:00Z",
+      "home": "RED",
+      "away": "BES",
+      "venue_id": "ATM8",
+      "played": false
+    },
+    {
+      "event_id": "E2026_179",
+      "start_utc": "2026-12-18T19:00:00Z",
+      "home": "MUN",
+      "away": "PAN",
+      "venue_id": "AVE1",
+      "played": false
+    },
+    {
+      "event_id": "E2026_180",
+      "start_utc": "2026-12-18T18:30:00Z",
+      "home": "OLY",
+      "away": "PAR",
+      "venue_id": "AVT1",
+      "played": false
+    },
+    {
+      "event_id": "E2026_176",
+      "start_utc": "2026-12-18T17:30:00Z",
+      "home": "IST",
+      "away": "MIL",
+      "venue_id": "AVG2",
+      "played": false
+    },
+    {
+      "event_id": "E2026_174",
+      "start_utc": "2026-12-17T19:45:00Z",
+      "home": "MAD",
+      "away": "PAM",
+      "venue_id": "ATI7",
+      "played": false
+    },
+    {
+      "event_id": "E2026_172",
+      "start_utc": "2026-12-17T19:00:00Z",
+      "home": "ASV",
+      "away": "DUB",
+      "venue_id": "ASR",
+      "played": false
+    },
+    {
+      "event_id": "E2026_171",
+      "start_utc": "2026-12-17T18:00:00Z",
+      "home": "HTA",
+      "away": "ZAL",
+      "venue_id": "AVK1",
+      "played": false
+    },
+    {
+      "event_id": "E2026_173",
+      "start_utc": "2026-12-17T17:45:00Z",
+      "home": "ULK",
+      "away": "TEL",
+      "venue_id": "AMY",
+      "played": false
+    },
+    {
+      "event_id": "E2026_168",
+      "start_utc": "2026-12-16T19:30:00Z",
+      "home": "BAS",
+      "away": "BAR",
+      "venue_id": "AUC",
+      "played": false
+    },
+    {
+      "event_id": "E2026_170",
+      "start_utc": "2026-12-16T19:15:00Z",
+      "home": "PAN",
+      "away": "RED",
+      "venue_id": "AUM6",
+      "played": false
+    },
+    {
+      "event_id": "E2026_167",
+      "start_utc": "2026-12-16T17:00:00Z",
+      "home": "BES",
+      "away": "MIL",
+      "venue_id": "AVG2",
+      "played": false
+    },
+    {
+      "event_id": "E2026_161",
+      "start_utc": "2026-12-15T20:00:00Z",
+      "home": "TEL",
+      "away": "ZAL",
+      "venue_id": "AUF4",
+      "played": false
+    },
+    {
+      "event_id": "E2026_166",
+      "start_utc": "2026-12-15T19:45:00Z",
+      "home": "MAD",
+      "away": "MUN",
+      "venue_id": "ATI7",
+      "played": false
+    },
+    {
+      "event_id": "E2026_165",
+      "start_utc": "2026-12-15T19:45:00Z",
+      "home": "PRS",
+      "away": "OLY",
+      "venue_id": "AVB11",
+      "played": false
+    },
+    {
+      "event_id": "E2026_163",
+      "start_utc": "2026-12-15T19:30:00Z",
+      "home": "VIR",
+      "away": "ASV",
+      "venue_id": "AUK3",
+      "played": false
+    },
+    {
+      "event_id": "E2026_162",
+      "start_utc": "2026-12-15T19:30:00Z",
+      "home": "PAM",
+      "away": "DUB",
+      "venue_id": "AVJ1",
+      "played": false
+    },
+    {
+      "event_id": "E2026_164",
+      "start_utc": "2026-12-15T17:45:00Z",
+      "home": "ULK",
+      "away": "HTA",
+      "venue_id": "AMY",
+      "played": false
+    },
+    {
+      "event_id": "E2026_169",
+      "start_utc": "2026-12-15T17:30:00Z",
+      "home": "IST",
+      "away": "PAR",
+      "venue_id": "AVG2",
+      "played": false
+    },
+    {
+      "event_id": "E2026_159",
+      "start_utc": "2026-12-11T19:45:00Z",
+      "home": "PAR",
+      "away": "BAR",
+      "venue_id": "AUF4",
+      "played": false
+    },
+    {
+      "event_id": "E2026_158",
+      "start_utc": "2026-12-11T19:30:00Z",
+      "home": "VIR",
+      "away": "TEL",
+      "venue_id": "AUK3",
+      "played": false
+    },
+    {
+      "event_id": "E2026_160",
+      "start_utc": "2026-12-11T19:15:00Z",
+      "home": "PAN",
+      "away": "OLY",
+      "venue_id": "AUM6",
+      "played": false
+    },
+    {
+      "event_id": "E2026_156",
+      "start_utc": "2026-12-11T16:00:00Z",
+      "home": "DUB",
+      "away": "BES",
+      "venue_id": "ACA4",
+      "played": false
+    },
+    {
+      "event_id": "E2026_154",
+      "start_utc": "2026-12-10T19:45:00Z",
+      "home": "PRS",
+      "away": "MAD",
+      "venue_id": "AVB11",
+      "played": false
+    },
+    {
+      "event_id": "E2026_157",
+      "start_utc": "2026-12-10T19:30:00Z",
+      "home": "PAM",
+      "away": "RED",
+      "venue_id": "AVJ1",
+      "played": false
+    },
+    {
+      "event_id": "E2026_153",
+      "start_utc": "2026-12-10T19:30:00Z",
+      "home": "MIL",
+      "away": "MUN",
+      "venue_id": "ASX8",
+      "played": false
+    },
+    {
+      "event_id": "E2026_152",
+      "start_utc": "2026-12-10T18:00:00Z",
+      "home": "ZAL",
+      "away": "BAS",
+      "venue_id": "ATJ",
+      "played": false
+    },
+    {
+      "event_id": "E2026_151",
+      "start_utc": "2026-12-10T18:00:00Z",
+      "home": "HTA",
+      "away": "ASV",
+      "venue_id": "AVK1",
+      "played": false
+    },
+    {
+      "event_id": "E2026_155",
+      "start_utc": "2026-12-10T17:45:00Z",
+      "home": "ULK",
+      "away": "IST",
+      "venue_id": "AMY",
+      "played": false
+    },
+    {
+      "event_id": "E2026_149",
+      "start_utc": "2026-12-04T19:30:00Z",
+      "home": "VIR",
+      "away": "PAR",
+      "venue_id": "AIG",
+      "played": false
+    },
+    {
+      "event_id": "E2026_148",
+      "start_utc": "2026-12-04T19:30:00Z",
+      "home": "BAS",
+      "away": "TEL",
+      "venue_id": "AUC",
+      "played": false
+    },
+    {
+      "event_id": "E2026_150",
+      "start_utc": "2026-12-04T19:15:00Z",
+      "home": "OLY",
+      "away": "ASV",
+      "venue_id": "AVT1",
+      "played": false
+    },
+    {
+      "event_id": "E2026_147",
+      "start_utc": "2026-12-04T18:00:00Z",
+      "home": "ZAL",
+      "away": "DUB",
+      "venue_id": "ATJ",
+      "played": false
+    },
+    {
+      "event_id": "E2026_146",
+      "start_utc": "2026-12-04T17:00:00Z",
+      "home": "BES",
+      "away": "PAN",
+      "venue_id": "AVG2",
+      "played": false
+    },
+    {
+      "event_id": "E2026_145",
+      "start_utc": "2026-12-03T19:45:00Z",
+      "home": "MAD",
+      "away": "BAR",
+      "venue_id": "ATI7",
+      "played": false
+    },
+    {
+      "event_id": "E2026_143",
+      "start_utc": "2026-12-03T19:00:00Z",
+      "home": "MUN",
+      "away": "PRS",
+      "venue_id": "AVE1",
+      "played": false
+    },
+    {
+      "event_id": "E2026_141",
+      "start_utc": "2026-12-03T18:00:00Z",
+      "home": "HTA",
+      "away": "MIL",
+      "venue_id": "AVN2",
+      "played": false
+    },
+    {
+      "event_id": "E2026_144",
+      "start_utc": "2026-12-03T17:45:00Z",
+      "home": "ULK",
+      "away": "RED",
+      "venue_id": "AMY",
+      "played": false
+    },
+    {
+      "event_id": "E2026_142",
+      "start_utc": "2026-12-03T17:30:00Z",
+      "home": "IST",
+      "away": "PAM",
+      "venue_id": "AVG2",
+      "played": false
+    },
+    {
+      "event_id": "E2026_139",
+      "start_utc": "2026-11-25T19:45:00Z",
+      "home": "MAD",
+      "away": "ZAL",
+      "venue_id": "ATI7",
+      "played": false
+    },
+    {
+      "event_id": "E2026_138",
+      "start_utc": "2026-11-25T19:30:00Z",
+      "home": "BAS",
+      "away": "IST",
+      "venue_id": "AUC",
+      "played": false
+    },
+    {
+      "event_id": "E2026_140",
+      "start_utc": "2026-11-25T19:15:00Z",
+      "home": "OLY",
+      "away": "HTA",
+      "venue_id": "AVT1",
+      "played": false
+    },
+    {
+      "event_id": "E2026_137",
+      "start_utc": "2026-11-25T16:00:00Z",
+      "home": "DUB",
+      "away": "PAR",
+      "venue_id": "ACA4",
+      "played": false
+    },
+    {
+      "event_id": "E2026_133",
+      "start_utc": "2026-11-24T20:00:00Z",
+      "home": "BAR",
+      "away": "ULK",
+      "venue_id": "AMH",
+      "played": false
+    },
+    {
+      "event_id": "E2026_136",
+      "start_utc": "2026-11-24T19:45:00Z",
+      "home": "ASV",
+      "away": "MIL",
+      "venue_id": "AUZ1",
+      "played": false
+    },
+    {
+      "event_id": "E2026_135",
+      "start_utc": "2026-11-24T19:30:00Z",
+      "home": "PAM",
+      "away": "PAN",
+      "venue_id": "AVJ1",
+      "played": false
+    },
+    {
+      "event_id": "E2026_134",
+      "start_utc": "2026-11-24T19:00:00Z",
+      "home": "MUN",
+      "away": "TEL",
+      "venue_id": "AVE1",
+      "played": false
+    },
+    {
+      "event_id": "E2026_131",
+      "start_utc": "2026-11-24T18:00:00Z",
+      "home": "RED",
+      "away": "VIR",
+      "venue_id": "ATM8",
+      "played": false
+    },
+    {
+      "event_id": "E2026_132",
+      "start_utc": "2026-11-24T17:00:00Z",
+      "home": "BES",
+      "away": "PRS",
+      "venue_id": "AVG2",
+      "played": false
+    },
+    {
+      "event_id": "E2026_129",
+      "start_utc": "2026-11-20T19:45:00Z",
+      "home": "PAR",
+      "away": "BES",
+      "venue_id": "AUF4",
+      "played": false
+    },
+    {
+      "event_id": "E2026_128",
+      "start_utc": "2026-11-20T19:30:00Z",
+      "home": "BAR",
+      "away": "RED",
+      "venue_id": "AMH",
+      "played": false
+    },
+    {
+      "event_id": "E2026_130",
+      "start_utc": "2026-11-20T19:15:00Z",
+      "home": "OLY",
+      "away": "MAD",
+      "venue_id": "AVT1",
+      "played": false
+    },
+    {
+      "event_id": "E2026_127",
+      "start_utc": "2026-11-20T17:30:00Z",
+      "home": "IST",
+      "away": "ASV",
+      "venue_id": "AVG2",
+      "played": false
+    },
+    {
+      "event_id": "E2026_125",
+      "start_utc": "2026-11-19T20:00:00Z",
+      "home": "PAM",
+      "away": "VIR",
+      "venue_id": "AVJ1",
+      "played": false
+    },
+    {
+      "event_id": "E2026_126",
+      "start_utc": "2026-11-19T19:45:00Z",
+      "home": "PRS",
+      "away": "HTA",
+      "venue_id": "AVB11",
+      "played": false
+    },
+    {
+      "event_id": "E2026_123",
+      "start_utc": "2026-11-19T19:30:00Z",
+      "home": "MIL",
+      "away": "ULK",
+      "venue_id": "ASX8",
+      "played": false
+    },
+    {
+      "event_id": "E2026_124",
+      "start_utc": "2026-11-19T19:00:00Z",
+      "home": "MUN",
+      "away": "BAS",
+      "venue_id": "AVE1",
+      "played": false
+    },
+    {
+      "event_id": "E2026_121",
+      "start_utc": "2026-11-19T18:00:00Z",
+      "home": "ZAL",
+      "away": "PAN",
+      "venue_id": "ATJ",
+      "played": false
+    },
+    {
+      "event_id": "E2026_122",
+      "start_utc": "2026-11-19T17:30:00Z",
+      "home": "TEL",
+      "away": "DUB",
+      "venue_id": "AUF4",
+      "played": false
+    },
+    {
+      "event_id": "E2026_120",
+      "start_utc": "2026-11-18T17:00:00Z",
+      "home": "BES",
+      "away": "MAD",
+      "venue_id": "AVG2",
+      "played": false
+    },
+    {
+      "event_id": "E2026_119",
+      "start_utc": "2026-11-17T20:00:00Z",
+      "home": "VIR",
+      "away": "PAN",
+      "venue_id": "AIG",
+      "played": false
+    },
+    {
+      "event_id": "E2026_118",
+      "start_utc": "2026-11-17T19:45:00Z",
+      "home": "PAR",
+      "away": "PAM",
+      "venue_id": "ATM8",
+      "played": false
+    },
+    {
+      "event_id": "E2026_116",
+      "start_utc": "2026-11-17T19:30:00Z",
+      "home": "BAR",
+      "away": "PRS",
+      "venue_id": "AMH",
+      "played": false
+    },
+    {
+      "event_id": "E2026_115",
+      "start_utc": "2026-11-17T19:30:00Z",
+      "home": "MIL",
+      "away": "RED",
+      "venue_id": "ASX8",
+      "played": false
+    },
+    {
+      "event_id": "E2026_114",
+      "start_utc": "2026-11-17T19:30:00Z",
+      "home": "BAS",
+      "away": "HTA",
+      "venue_id": "AUC",
+      "played": false
+    },
+    {
+      "event_id": "E2026_117",
+      "start_utc": "2026-11-17T18:00:00Z",
+      "home": "ULK",
+      "away": "ASV",
+      "venue_id": "AMY",
+      "played": false
+    },
+    {
+      "event_id": "E2026_112",
+      "start_utc": "2026-11-17T18:00:00Z",
+      "home": "ZAL",
+      "away": "MUN",
+      "venue_id": "ATJ",
+      "played": false
+    },
+    {
+      "event_id": "E2026_113",
+      "start_utc": "2026-11-17T17:00:00Z",
+      "home": "TEL",
+      "away": "OLY",
+      "venue_id": "AUF4",
+      "played": false
+    },
+    {
+      "event_id": "E2026_111",
+      "start_utc": "2026-11-17T16:00:00Z",
+      "home": "DUB",
+      "away": "IST",
+      "venue_id": "ACA4",
+      "played": false
+    },
+    {
+      "event_id": "E2026_108",
+      "start_utc": "2026-11-13T19:30:00Z",
+      "home": "ASV",
+      "away": "BES",
+      "venue_id": "AUZ1",
+      "played": false
+    },
+    {
+      "event_id": "E2026_110",
+      "start_utc": "2026-11-13T19:15:00Z",
+      "home": "PAN",
+      "away": "BAR",
+      "venue_id": "AUM6",
+      "played": false
+    },
+    {
+      "event_id": "E2026_109",
+      "start_utc": "2026-11-13T17:30:00Z",
+      "home": "IST",
+      "away": "VIR",
+      "venue_id": "AVG2",
+      "played": false
+    },
+    {
+      "event_id": "E2026_106",
+      "start_utc": "2026-11-12T20:00:00Z",
+      "home": "MAD",
+      "away": "RED",
+      "venue_id": "ATI7",
+      "played": false
+    },
+    {
+      "event_id": "E2026_105",
+      "start_utc": "2026-11-12T19:30:00Z",
+      "home": "PAM",
+      "away": "MUN",
+      "venue_id": "AVJ1",
+      "played": false
+    },
+    {
+      "event_id": "E2026_104",
+      "start_utc": "2026-11-12T19:30:00Z",
+      "home": "MIL",
+      "away": "ZAL",
+      "venue_id": "ASX8",
+      "played": false
+    },
+    {
+      "event_id": "E2026_107",
+      "start_utc": "2026-11-12T19:15:00Z",
+      "home": "OLY",
+      "away": "DUB",
+      "venue_id": "AVT1",
+      "played": false
+    },
+    {
+      "event_id": "E2026_103",
+      "start_utc": "2026-11-12T19:05:00Z",
+      "home": "TEL",
+      "away": "HTA",
+      "venue_id": "AUF4",
+      "played": false
+    },
+    {
+      "event_id": "E2026_102",
+      "start_utc": "2026-11-11T19:45:00Z",
+      "home": "PAR",
+      "away": "BAS",
+      "venue_id": "ATM8",
+      "played": false
+    },
+    {
+      "event_id": "E2026_101",
+      "start_utc": "2026-11-11T19:45:00Z",
+      "home": "PRS",
+      "away": "ULK",
+      "venue_id": "AKW2",
+      "played": false
+    },
+    {
+      "event_id": "E2026_99",
+      "start_utc": "2026-11-06T19:45:00Z",
+      "home": "PAR",
+      "away": "TEL",
+      "venue_id": "ATM8",
+      "played": false
+    },
+    {
+      "event_id": "E2026_98",
+      "start_utc": "2026-11-06T19:30:00Z",
+      "home": "VIR",
+      "away": "DUB",
+      "venue_id": "AIG",
+      "played": false
+    },
+    {
+      "event_id": "E2026_100",
+      "start_utc": "2026-11-06T19:15:00Z",
+      "home": "OLY",
+      "away": "RED",
+      "venue_id": "AVT1",
+      "played": false
+    },
+    {
+      "event_id": "E2026_97",
+      "start_utc": "2026-11-06T17:00:00Z",
+      "home": "BES",
+      "away": "ZAL",
+      "venue_id": "AVG2",
+      "played": false
+    },
+    {
+      "event_id": "E2026_96",
+      "start_utc": "2026-11-05T19:30:00Z",
+      "home": "MIL",
+      "away": "PAM",
+      "venue_id": "ASX8",
+      "played": false
+    },
+    {
+      "event_id": "E2026_94",
+      "start_utc": "2026-11-05T19:00:00Z",
+      "home": "ASV",
+      "away": "MUN",
+      "venue_id": "AUZ1",
+      "played": false
+    },
+    {
+      "event_id": "E2026_93",
+      "start_utc": "2026-11-05T18:00:00Z",
+      "home": "HTA",
+      "away": "BAR",
+      "venue_id": "AVK1",
+      "played": false
+    },
+    {
+      "event_id": "E2026_92",
+      "start_utc": "2026-11-05T18:00:00Z",
+      "home": "ULK",
+      "away": "BAS",
+      "venue_id": "AMY",
+      "played": false
+    },
+    {
+      "event_id": "E2026_95",
+      "start_utc": "2026-11-05T17:15:00Z",
+      "home": "IST",
+      "away": "PRS",
+      "venue_id": "AVG2",
+      "played": false
+    },
+    {
+      "event_id": "E2026_91",
+      "start_utc": "2026-11-04T19:45:00Z",
+      "home": "MAD",
+      "away": "PAN",
+      "venue_id": "ATI7",
+      "played": false
+    },
+    {
+      "event_id": "E2026_89",
+      "start_utc": "2026-10-30T19:30:00Z",
+      "home": "VIR",
+      "away": "BES",
+      "venue_id": "AIG",
+      "played": false
+    },
+    {
+      "event_id": "E2026_87",
+      "start_utc": "2026-10-30T19:30:00Z",
+      "home": "BAR",
+      "away": "PAM",
+      "venue_id": "AMH",
+      "played": false
+    },
+    {
+      "event_id": "E2026_90",
+      "start_utc": "2026-10-30T19:15:00Z",
+      "home": "OLY",
+      "away": "MIL",
+      "venue_id": "AVT1",
+      "played": false
+    },
+    {
+      "event_id": "E2026_85",
+      "start_utc": "2026-10-30T19:00:00Z",
+      "home": "ASV",
+      "away": "BAS",
+      "venue_id": "AUZ1",
+      "played": false
+    },
+    {
+      "event_id": "E2026_86",
+      "start_utc": "2026-10-30T18:00:00Z",
+      "home": "ZAL",
+      "away": "PAR",
+      "venue_id": "ATJ",
+      "played": false
+    },
+    {
+      "event_id": "E2026_88",
+      "start_utc": "2026-10-30T17:30:00Z",
+      "home": "IST",
+      "away": "PAN",
+      "venue_id": "AVG2",
+      "played": false
+    },
+    {
+      "event_id": "E2026_84",
+      "start_utc": "2026-10-30T16:00:00Z",
+      "home": "DUB",
+      "away": "HTA",
+      "venue_id": "ACA4",
+      "played": false
+    },
+    {
+      "event_id": "E2026_83",
+      "start_utc": "2026-10-29T19:45:00Z",
+      "home": "MAD",
+      "away": "ULK",
+      "venue_id": "ATI7",
+      "played": false
+    },
+    {
+      "event_id": "E2026_82",
+      "start_utc": "2026-10-29T19:05:00Z",
+      "home": "TEL",
+      "away": "PRS",
+      "venue_id": "AUF4",
+      "played": false
+    },
+    {
+      "event_id": "E2026_81",
+      "start_utc": "2026-10-29T19:00:00Z",
+      "home": "RED",
+      "away": "MUN",
+      "venue_id": "ATM8",
+      "played": false
+    },
+    {
+      "event_id": "E2026_80",
+      "start_utc": "2026-10-28T19:30:00Z",
+      "home": "VIR",
+      "away": "ZAL",
+      "venue_id": "AIG",
+      "played": false
+    },
+    {
+      "event_id": "E2026_78",
+      "start_utc": "2026-10-28T19:00:00Z",
+      "home": "ASV",
+      "away": "PAR",
+      "venue_id": "AUZ1",
+      "played": false
+    },
+    {
+      "event_id": "E2026_77",
+      "start_utc": "2026-10-28T18:00:00Z",
+      "home": "HTA",
+      "away": "IST",
+      "venue_id": "AVN2",
+      "played": false
+    },
+    {
+      "event_id": "E2026_79",
+      "start_utc": "2026-10-28T17:30:00Z",
+      "home": "BES",
+      "away": "OLY",
+      "venue_id": "AVG2",
+      "played": false
+    },
+    {
+      "event_id": "E2026_73",
+      "start_utc": "2026-10-27T20:00:00Z",
+      "home": "BAS",
+      "away": "MAD",
+      "venue_id": "AUC",
+      "played": false
+    },
+    {
+      "event_id": "E2026_75",
+      "start_utc": "2026-10-27T19:30:00Z",
+      "home": "PAM",
+      "away": "ULK",
+      "venue_id": "AVJ1",
+      "played": false
+    },
+    {
+      "event_id": "E2026_76",
+      "start_utc": "2026-10-27T19:15:00Z",
+      "home": "PAN",
+      "away": "MIL",
+      "venue_id": "AUM6",
+      "played": false
+    },
+    {
+      "event_id": "E2026_74",
+      "start_utc": "2026-10-27T19:00:00Z",
+      "home": "MUN",
+      "away": "BAR",
+      "venue_id": "AVE1",
+      "played": false
+    },
+    {
+      "event_id": "E2026_71",
+      "start_utc": "2026-10-27T19:00:00Z",
+      "home": "RED",
+      "away": "TEL",
+      "venue_id": "AUF4",
+      "played": false
+    },
+    {
+      "event_id": "E2026_72",
+      "start_utc": "2026-10-27T16:00:00Z",
+      "home": "DUB",
+      "away": "PRS",
+      "venue_id": "ACA4",
+      "played": false
+    },
+    {
+      "event_id": "E2026_69",
+      "start_utc": "2026-10-23T18:45:00Z",
+      "home": "PRS",
+      "away": "PAM",
+      "venue_id": "AVB11",
+      "played": false
+    },
+    {
+      "event_id": "E2026_70",
+      "start_utc": "2026-10-23T18:15:00Z",
+      "home": "OLY",
+      "away": "ULK",
+      "venue_id": "AVT1",
+      "played": false
+    },
+    {
+      "event_id": "E2026_68",
+      "start_utc": "2026-10-23T17:00:00Z",
+      "home": "ZAL",
+      "away": "ASV",
+      "venue_id": "ATJ",
+      "played": false
+    },
+    {
+      "event_id": "E2026_66",
+      "start_utc": "2026-10-22T18:45:00Z",
+      "home": "PAR",
+      "away": "RED",
+      "venue_id": "ATM8",
+      "played": true
+    },
+    {
+      "event_id": "E2026_63",
+      "start_utc": "2026-10-22T18:30:00Z",
+      "home": "MIL",
+      "away": "BAR",
+      "venue_id": "ASX8",
+      "played": true
+    },
+    {
+      "event_id": "E2026_67",
+      "start_utc": "2026-10-22T18:15:00Z",
+      "home": "PAN",
+      "away": "BAS",
+      "venue_id": "AUM6",
+      "played": true
+    },
+    {
+      "event_id": "E2026_62",
+      "start_utc": "2026-10-22T18:05:00Z",
+      "home": "TEL",
+      "away": "MAD",
+      "venue_id": "AUF4",
+      "played": true
+    },
+    {
+      "event_id": "E2026_65",
+      "start_utc": "2026-10-22T18:00:00Z",
+      "home": "MUN",
+      "away": "DUB",
+      "venue_id": "AVE1",
+      "played": true
+    },
+    {
+      "event_id": "E2026_64",
+      "start_utc": "2026-10-22T17:30:00Z",
+      "home": "IST",
+      "away": "BES",
+      "venue_id": "AVG2",
+      "played": true
+    },
+    {
+      "event_id": "E2026_61",
+      "start_utc": "2026-10-21T16:00:00Z",
+      "home": "HTA",
+      "away": "VIR",
+      "venue_id": "AVK1",
+      "played": true
+    },
+    {
+      "event_id": "E2026_59",
+      "start_utc": "2026-10-16T18:30:00Z",
+      "home": "VIR",
+      "away": "BAS",
+      "venue_id": "AIG",
+      "played": true
+    },
+    {
+      "event_id": "E2026_58",
+      "start_utc": "2026-10-16T18:30:00Z",
+      "home": "BAR",
+      "away": "OLY",
+      "venue_id": "AMH",
+      "played": true
+    },
+    {
+      "event_id": "E2026_60",
+      "start_utc": "2026-10-16T18:15:00Z",
+      "home": "PAN",
+      "away": "HTA",
+      "venue_id": "AUM6",
+      "played": true
+    },
+    {
+      "event_id": "E2026_56",
+      "start_utc": "2026-10-16T18:00:00Z",
+      "home": "RED",
+      "away": "PRS",
+      "venue_id": "ATM8",
+      "played": true
+    },
+    {
+      "event_id": "E2026_57",
+      "start_utc": "2026-10-16T17:00:00Z",
+      "home": "ZAL",
+      "away": "IST",
+      "venue_id": "ATJ",
+      "played": true
+    },
+    {
+      "event_id": "E2026_55",
+      "start_utc": "2026-10-16T17:00:00Z",
+      "home": "BES",
+      "away": "MUN",
+      "venue_id": "AVG2",
+      "played": true
+    },
+    {
+      "event_id": "E2026_53",
+      "start_utc": "2026-10-15T19:00:00Z",
+      "home": "MAD",
+      "away": "ASV",
+      "venue_id": "ATI7",
+      "played": true
+    },
+    {
+      "event_id": "E2026_52",
+      "start_utc": "2026-10-15T18:30:00Z",
+      "home": "PAM",
+      "away": "TEL",
+      "venue_id": "AVJ1",
+      "played": true
+    },
+    {
+      "event_id": "E2026_51",
+      "start_utc": "2026-10-15T18:30:00Z",
+      "home": "MIL",
+      "away": "DUB",
+      "venue_id": "ASX8",
+      "played": true
+    },
+    {
+      "event_id": "E2026_54",
+      "start_utc": "2026-10-15T17:45:00Z",
+      "home": "ULK",
+      "away": "PAR",
+      "venue_id": "AMY",
+      "played": true
+    },
+    {
+      "event_id": "E2026_50",
+      "start_utc": "2026-10-14T18:45:00Z",
+      "home": "PRS",
+      "away": "VIR",
+      "venue_id": "AVB11",
+      "played": true
+    },
+    {
+      "event_id": "E2026_49",
+      "start_utc": "2026-10-14T17:30:00Z",
+      "home": "IST",
+      "away": "MUN",
+      "venue_id": "AVG2",
+      "played": true
+    },
+    {
+      "event_id": "E2026_48",
+      "start_utc": "2026-10-14T16:00:00Z",
+      "home": "HTA",
+      "away": "BES",
+      "venue_id": "AVK1",
+      "played": true
+    },
+    {
+      "event_id": "E2026_45",
+      "start_utc": "2026-10-13T19:00:00Z",
+      "home": "PAM",
+      "away": "OLY",
+      "venue_id": "AVJ1",
+      "played": true
+    },
+    {
+      "event_id": "E2026_47",
+      "start_utc": "2026-10-13T18:30:00Z",
+      "home": "PAR",
+      "away": "PAN",
+      "venue_id": "ATM8",
+      "played": true
+    },
+    {
+      "event_id": "E2026_44",
+      "start_utc": "2026-10-13T18:30:00Z",
+      "home": "BAR",
+      "away": "TEL",
+      "venue_id": "AMH",
+      "played": true
+    },
+    {
+      "event_id": "E2026_43",
+      "start_utc": "2026-10-13T18:30:00Z",
+      "home": "MIL",
+      "away": "MAD",
+      "venue_id": "ASX8",
+      "played": true
+    },
+    {
+      "event_id": "E2026_42",
+      "start_utc": "2026-10-13T18:30:00Z",
+      "home": "BAS",
+      "away": "DUB",
+      "venue_id": "AUC",
+      "played": true
+    },
+    {
+      "event_id": "E2026_41",
+      "start_utc": "2026-10-13T18:00:00Z",
+      "home": "ASV",
+      "away": "RED",
+      "venue_id": "ASR",
+      "played": true
+    },
+    {
+      "event_id": "E2026_46",
+      "start_utc": "2026-10-13T17:45:00Z",
+      "home": "ULK",
+      "away": "ZAL",
+      "venue_id": "AMY",
+      "played": true
+    },
+    {
+      "event_id": "E2026_39",
+      "start_utc": "2026-10-09T18:30:00Z",
+      "home": "BAR",
+      "away": "ZAL",
+      "venue_id": "AMH",
+      "played": true
+    },
+    {
+      "event_id": "E2026_38",
+      "start_utc": "2026-10-09T18:30:00Z",
+      "home": "BAS",
+      "away": "BES",
+      "venue_id": "AUC",
+      "played": true
+    },
+    {
+      "event_id": "E2026_40",
+      "start_utc": "2026-10-09T18:15:00Z",
+      "home": "OLY",
+      "away": "IST",
+      "venue_id": "AVT1",
+      "played": true
+    },
+    {
+      "event_id": "E2026_35",
+      "start_utc": "2026-10-08T18:45:00Z",
+      "home": "MAD",
+      "away": "PAR",
+      "venue_id": "ATI7",
+      "played": true
+    },
+    {
+      "event_id": "E2026_34",
+      "start_utc": "2026-10-08T18:30:00Z",
+      "home": "PAM",
+      "away": "HTA",
+      "venue_id": "AVJ1",
+      "played": true
+    },
+    {
+      "event_id": "E2026_36",
+      "start_utc": "2026-10-08T18:15:00Z",
+      "home": "PAN",
+      "away": "ULK",
+      "venue_id": "AUM6",
+      "played": true
+    },
+    {
+      "event_id": "E2026_33",
+      "start_utc": "2026-10-08T18:00:00Z",
+      "home": "MUN",
+      "away": "VIR",
+      "venue_id": "AVE1",
+      "played": true
+    },
+    {
+      "event_id": "E2026_37",
+      "start_utc": "2026-10-08T16:00:00Z",
+      "home": "DUB",
+      "away": "RED",
+      "venue_id": "ACA4",
+      "played": true
+    },
+    {
+      "event_id": "E2026_32",
+      "start_utc": "2026-10-08T16:00:00Z",
+      "home": "TEL",
+      "away": "MIL",
+      "venue_id": "AUF4",
+      "played": true
+    },
+    {
+      "event_id": "E2026_31",
+      "start_utc": "2026-10-07T18:45:00Z",
+      "home": "PRS",
+      "away": "ASV",
+      "venue_id": "AVB11",
+      "played": true
+    },
+    {
+      "event_id": "E2026_27",
+      "start_utc": "2026-10-02T18:30:00Z",
+      "home": "BAS",
+      "away": "MIL",
+      "venue_id": "AUC",
+      "played": true
+    },
+    {
+      "event_id": "E2026_30",
+      "start_utc": "2026-10-02T18:15:00Z",
+      "home": "PAN",
+      "away": "TEL",
+      "venue_id": "AUM6",
+      "played": true
+    },
+    {
+      "event_id": "E2026_28",
+      "start_utc": "2026-10-02T18:00:00Z",
+      "home": "MUN",
+      "away": "PAR",
+      "venue_id": "AVE1",
+      "played": true
+    },
+    {
+      "event_id": "E2026_26",
+      "start_utc": "2026-10-02T18:00:00Z",
+      "home": "ASV",
+      "away": "PAM",
+      "venue_id": "AUZ1",
+      "played": true
+    },
+    {
+      "event_id": "E2026_29",
+      "start_utc": "2026-10-02T17:45:00Z",
+      "home": "ULK",
+      "away": "DUB",
+      "venue_id": "AMY",
+      "played": true
+    },
+    {
+      "event_id": "E2026_25",
+      "start_utc": "2026-10-02T17:00:00Z",
+      "home": "BES",
+      "away": "BAR",
+      "venue_id": "AVG2",
+      "played": true
+    },
+    {
+      "event_id": "E2026_24",
+      "start_utc": "2026-10-01T18:45:00Z",
+      "home": "PRS",
+      "away": "ZAL",
+      "venue_id": "AVB11",
+      "played": true
+    },
+    {
+      "event_id": "E2026_23",
+      "start_utc": "2026-10-01T18:30:00Z",
+      "home": "VIR",
+      "away": "OLY",
+      "venue_id": "AIG",
+      "played": true
+    },
+    {
+      "event_id": "E2026_21",
+      "start_utc": "2026-10-01T18:00:00Z",
+      "home": "RED",
+      "away": "IST",
+      "venue_id": "ATM8",
+      "played": true
+    },
+    {
+      "event_id": "E2026_22",
+      "start_utc": "2026-10-01T16:00:00Z",
+      "home": "HTA",
+      "away": "MAD",
+      "venue_id": "AVK1",
+      "played": true
+    },
+    {
+      "event_id": "E2026_20",
+      "start_utc": "2026-09-30T18:15:00Z",
+      "home": "PAN",
+      "away": "ASV",
+      "venue_id": "AUM6",
+      "played": true
+    },
+    {
+      "event_id": "E2026_19",
+      "start_utc": "2026-09-30T18:05:00Z",
+      "home": "TEL",
+      "away": "BES",
+      "venue_id": "AUF4",
+      "played": true
+    },
+    {
+      "event_id": "E2026_18",
+      "start_utc": "2026-09-29T18:45:00Z",
+      "home": "PRS",
+      "away": "PAR",
+      "venue_id": "AVB11",
+      "played": true
+    },
+    {
+      "event_id": "E2026_16",
+      "start_utc": "2026-09-29T18:30:00Z",
+      "home": "MIL",
+      "away": "VIR",
+      "venue_id": "ASX8",
+      "played": true
+    },
+    {
+      "event_id": "E2026_15",
+      "start_utc": "2026-09-29T18:30:00Z",
+      "home": "PAM",
+      "away": "BAS",
+      "venue_id": "AVJ1",
+      "played": true
+    },
+    {
+      "event_id": "E2026_12",
+      "start_utc": "2026-09-29T18:00:00Z",
+      "home": "RED",
+      "away": "HTA",
+      "venue_id": "ATM8",
+      "played": true
+    },
+    {
+      "event_id": "E2026_17",
+      "start_utc": "2026-09-29T17:45:00Z",
+      "home": "ULK",
+      "away": "MUN",
+      "venue_id": "AMY",
+      "played": true
+    },
+    {
+      "event_id": "E2026_14",
+      "start_utc": "2026-09-29T17:00:00Z",
+      "home": "ZAL",
+      "away": "OLY",
+      "venue_id": "ATJ",
+      "played": true
+    },
+    {
+      "event_id": "E2026_11",
+      "start_utc": "2026-09-29T17:00:00Z",
+      "home": "IST",
+      "away": "MAD",
+      "venue_id": "AVG2",
+      "played": true
+    },
+    {
+      "event_id": "E2026_13",
+      "start_utc": "2026-09-29T16:00:00Z",
+      "home": "DUB",
+      "away": "BAR",
+      "venue_id": "ACA4",
+      "played": true
+    },
+    {
+      "event_id": "E2026_10",
+      "start_utc": "2026-09-25T18:45:00Z",
+      "home": "PAR",
+      "away": "MIL",
+      "venue_id": "ATM8",
+      "played": true
+    },
+    {
+      "event_id": "E2026_9",
+      "start_utc": "2026-09-25T17:45:00Z",
+      "home": "ULK",
+      "away": "VIR",
+      "venue_id": "AMY",
+      "played": true
+    },
+    {
+      "event_id": "E2026_8",
+      "start_utc": "2026-09-25T17:00:00Z",
+      "home": "BES",
+      "away": "PAM",
+      "venue_id": "AVG2",
+      "played": true
+    },
+    {
+      "event_id": "E2026_6",
+      "start_utc": "2026-09-24T18:45:00Z",
+      "home": "ASV",
+      "away": "TEL",
+      "venue_id": "AUZ1",
+      "played": true
+    },
+    {
+      "event_id": "E2026_5",
+      "start_utc": "2026-09-24T18:30:00Z",
+      "home": "BAS",
+      "away": "OLY",
+      "venue_id": "AUC",
+      "played": true
+    },
+    {
+      "event_id": "E2026_4",
+      "start_utc": "2026-09-24T18:30:00Z",
+      "home": "BAR",
+      "away": "IST",
+      "venue_id": "AMH",
+      "played": true
+    },
+    {
+      "event_id": "E2026_7",
+      "start_utc": "2026-09-24T18:15:00Z",
+      "home": "PAN",
+      "away": "PRS",
+      "venue_id": "AUM6",
+      "played": true
+    },
+    {
+      "event_id": "E2026_1",
+      "start_utc": "2026-09-24T18:00:00Z",
+      "home": "RED",
+      "away": "ZAL",
+      "venue_id": "ATM8",
+      "played": true
+    },
+    {
+      "event_id": "E2026_3",
+      "start_utc": "2026-09-24T16:00:00Z",
+      "home": "HTA",
+      "away": "MUN",
+      "venue_id": "AVK1",
+      "played": true
+    },
+    {
+      "event_id": "E2026_2",
+      "start_utc": "2026-09-24T16:00:00Z",
+      "home": "DUB",
+      "away": "MAD",
+      "venue_id": "ACA4",
+      "played": true
+    }
+  ]
+}

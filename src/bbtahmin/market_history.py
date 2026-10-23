@@ -23,6 +23,9 @@ def history(event_id, root='.', as_of=None, limit=200):
     paths = sorted(folder.glob('iddaa_*.json'))
     if (folder/'latest.json').exists():
         paths.append(folder/'latest.json')
+    observed=Path(root)/'data/observations/odds'
+    paths+=sorted(observed.glob('iddaa_*.json'))
+    if (observed/'latest.json').exists():paths.append(observed/'latest.json')
     # The timestamp is read from content, never trusted from the filename.
     observations, skipped = {}, 0
     identity = None

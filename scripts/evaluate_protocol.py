@@ -7,6 +7,11 @@ from bbtahmin.evaluation import paired,metrics,equal_coverage
 
 
 def main():
+ manifest=json.loads(Path('docs/kanit/winner/manifest.json').read_text())
+ from bbtahmin.prospective import fingerprint
+ if manifest.get('source_code_sha256')!=fingerprint():raise ValueError('Winner evaluation code fingerprint is stale; rerun evaluate_winners.py')
+ for path,digest in manifest['files'].items():
+  if hashlib.sha256(Path(path).read_bytes()).hexdigest()!=digest:raise ValueError('Winner evaluation data fingerprint is stale; rerun evaluate_winners.py')
  root=Path('docs/kanit/protocol');root.mkdir(parents=True,exist_ok=True);results=[];strata=[];curves=[]
  for code in base.CODES:
   g=base.load(code);meta=g[['mac_id','tarih_utc']].copy();meta['day']=meta.tarih_utc.dt.strftime('%Y-%m-%d')
@@ -25,7 +30,7 @@ def main():
  (root/'manifest.json').write_text(json.dumps(dict(generated_at_utc=pd.Timestamp.now(tz='UTC').isoformat(),
   files={str(p):hashlib.sha256(p.read_bytes()).hexdigest() for p in files},
   runtime_policy='Default model retained. Every challenger and failed prior-season selection policy remains research-only.',
-  limitations='Previously inspected historical seasons; no fresh holdout. Domestic form covers explicitly mapped Czech senior women only, retrospective availability unverified. Confidence-based filtering does not demonstrate higher all-game accuracy. Bootstrap intervals are exploratory, not multiple-testing corrected.'),indent=2))
+  limitations='Previously inspected historical seasons; no fresh holdout. Domestic form uses explicitly linked senior-women archives recorded in the winner input manifest; historical publication availability unverified. Confidence-based filtering does not demonstrate higher all-game accuracy. Bootstrap intervals are exploratory, not multiple-testing corrected.'),indent=2))
  print('Paired comparisons:',len(results),'strata:',len(strata),'coverage rows:',len(curves))
 
 if __name__=='__main__':main()

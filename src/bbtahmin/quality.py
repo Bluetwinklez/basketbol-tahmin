@@ -71,7 +71,9 @@ def assess(p,g,now=None):
 
 def inventory(root=Path('.')):
     root=Path(root);report=[]
-    for name,rel in ARCHIVES.items():
+    archives=dict(ARCHIVES)
+    archives.update({p.stem:str(p.relative_to(root)) for p in (root/'data/domestic').glob('*.parquet') if not p.name.endswith('_fixtures.parquet')})
+    for name,rel in archives.items():
         path=root/rel
         if not path.exists():continue
         g=pd.read_parquet(path)

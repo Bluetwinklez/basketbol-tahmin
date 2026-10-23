@@ -21,7 +21,11 @@ A Python research package for pregame basketball probabilities, score margins an
 | Adaptive form experiment | Optional earlier-season-gated monthly refits for ECW/FEC/VTB; default model remains fixed |
 | Auxiliary domestic/ABA workload | 39 official-club observations; partial coverage, diagnostic only, explicit missingness |
 | Confidence threshold and coverage report | Available; rejected predictions remain visible |
-| NBA injury PDF display | Optional `--sakatlik`; informational only |
+| NBA injury reports and lagged rotation | Timestamped report archive, exact fixture-date joins, prior-game minute estimates; not a validated player-impact model |
+| Additional domestic/regional history | 1,878 separately stored results; explicit senior/gender links and source reports |
+| Hierarchical attack/defence | Optional ECW research model; rejected as a default after mixed/worse evaluation |
+| NBA/ESPN scoreboard observations | Actual observations archived separately; no validated NBA live predictor |
+| Venue/travel context | Five verified-coordinate venues and cached schedule proxies; no actual itinerary inference |
 | Retrospective player-absence feature | **Disabled by default:** actual participants are postgame knowledge |
 | Four-factor/shooting profiles | Implemented and tested as an experiment; **not enabled by default** |
 | Turkish BSL, other unsupported leagues, non-CBA in-play prediction | No trained model; bulletin presence does not imply model support |
@@ -29,9 +33,9 @@ A Python research package for pregame basketball probabilities, score margins an
 
 ## Reliability development and prospective verification
 
-The latest implementation adds **561 Czech senior women’s results**, **359 EuroLeague Women results** and **two early ECW results** in separate archives. A fresh official EuroLeague runtime overlay preserves the frozen benchmark dataset. See [implementation, measured failures and remaining source gaps](docs/improvement-implementation.md).
+The reliability releases add **1,878 separately stored domestic/regional results**: Czech women 561, Bulgarian women 249, Slovenian women 331, Finnish women 310, Girona women 123, WABA women 261 and Pärnu men 43. There are also **359 EuroLeague Women results** and **two early ECW results**. These are separate archives/cohorts, not a claim of complete league coverage. This follow-up adds 1,317 results beyond the preceding release. A fresh official EuroLeague runtime overlay preserves the frozen benchmark dataset. See [implementation, measured failures and remaining source gaps](docs/improvement-implementation.md).
 
-Domestic-form research changes ECW winner picks from **150/214 to 152/214**, but worsens log loss from **0.604484 to 0.612621**. It is **not activated**. All candidates, failed selection policies, low-history strata and equal-coverage comparisons are retained. No general accuracy increase is claimed.
+On the same **214 ECW 2025–26 games**, the baseline and expanded domestic-form candidate both get **150 correct (70.09%)**; their log losses are **0.604484 and 0.607545**. The new hierarchical attack/defence candidate gets **143/214 (66.82%)**, log loss **0.626473**. Neither replaces the default. The earlier Czech-only 152/214 result belongs to the [preceding release](https://github.com/Bluetwinklez/basketbol-tahmin/blob/ba29b1cf503040cecfdc8f8a65bfb4115c8e51f5/docs/kanit/winner/summary.csv), not the expanded-input experiment. All variants, failed selection policies and day-block uncertainty intervals remain visible. **No general accuracy increase is established.**
 
 Predictions now expose data adequacy independently of estimated win probability. Sparse/stale history and score/winner disagreements can block confidence-filtered selection. Diagnostic thresholds are not validated success guarantees. Immutable future-fixture records and separate final-result checks report both point and percentage errors.
 
@@ -41,6 +45,25 @@ python scripts/evaluate_winners.py
 python scripts/evaluate_protocol.py
 python scripts/evaluate_intervals.py
 ```
+
+## Additional data and context commands
+
+```bash
+python -m bbtahmin bolgesel-topla
+python -m bbtahmin slovenya-topla
+python -m bbtahmin finlandiya-topla
+python -m bbtahmin girona-topla
+python -m bbtahmin waba-topla
+python -m bbtahmin sakatlik-arsivle --hours 2
+python -m bbtahmin canli-veri-topla --provider espn
+python scripts/collect_observations.py
+# Hypothetical fixture for inspecting lagged context, not a verified schedule:
+python -m bbtahmin oyuncu-baglam --ev BOS --dep PHI --tarih 2026-10-24T00:00:00Z
+```
+
+The collection workflow archives actual injury reports, ESPN observations and experimental Iddaa quotes at **20:15 and 23:15 UTC** and supports manual dispatch. Partial failures remain visible; total failure fails the job. Scheduling is not a guarantee of provider availability. Locally observed odds are readable with `bulten --gecmis EVENT_ID`; they are not verified opening/closing prices. No betting orders or paid API subscriptions are created.
+
+`--hierarchical` is an **ECW-only research option**, incompatible with `--adaptive-form`; it is not the default. `seyahat-baglam --event-id EVENT_ID --asof UTC_TIMESTAMP` reads a local venue snapshot and exposes unknowns. The included schedule cache could not be freshly confirmed after an HTTP 403; its freshness remains explicitly unverified. Straight-line venue distances are not actual team travel. See [context evidence](docs/kanit/context/venue_examples.json).
 
 ## Frozen two-game prospective demonstration
 
@@ -225,7 +248,7 @@ python -m pytest -q
 
 Tests are offline. Install the MCP extra to include its protocol test; otherwise that optional test skips. GitHub Actions installs the extra and runs the suite.
 
-Latest local verification (2026-10-22): **163 tests passed**, including monthly refit causality, auxiliary club workload, competition/gender checks, cold starts and ledger recording; see [latest test evidence](docs/kanit/adaptive/tests.xml). Earlier [151-test evidence](docs/kanit/competitions/tests.xml), [CBA tests](docs/kanit/cba/tests.xml), [review tests](docs/kanit/review_tests.xml) and [stdio checks](docs/kanit/mcp_smoke.json) are retained. The server exposes six read-only tools.
+Latest local verification (2026-10-23): **205 tests passed**, including the optional MCP protocol test, source identity/final-score boundaries, date-only embargoes, archive-order invariance, future-result isolation, player-report availability and travel unknowns. See [test evidence](docs/kanit/remaining_tests.xml). Earlier reports remain historical snapshots. The server exposes six read-only tools.
 
 A [fresh runtime verification](docs/kanit/runtime_validation/README.md) retrained all seven models for 2025–26 and partial 2026–27, reproduced 15,932 archived prediction rows within 2.04e-14, exercised a real bulletin fixture, and documented the rejection of unsupported live CBA games. It also reports the chronological **model-selection policy** separately from the fixed-model tables above: NBA 65.81% and NBL 59.22% across five completed seasons.
 
