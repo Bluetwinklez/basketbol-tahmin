@@ -34,7 +34,7 @@ function render() {
       el('p', `Home ${pct(p.probabilities.home)} · Draw ${pct(p.probabilities.draw)} · Away ${pct(p.probabilities.away)}`),
       el('p', `Over 1.5 ${pct(p.over['1.5'])} · Over 2.5 ${pct(p.over['2.5'])} · Over 3.5 ${pct(p.over['3.5'])}`),
       el('p', `Both teams score ${pct(p.both_teams_score)} · Total 80% range ${p.total_goals_80.join('-')}`),
-      el('p', item.result ? `Community final ${item.result.actual_home}-${item.result.actual_away}; outcome ${item.result.winner_correct ? 'correct' : 'incorrect'}; total error ${item.result.total_absolute_error.toFixed(2)}; margin error ${item.result.margin_absolute_error.toFixed(2)}` : 'Pending — no final result'));
+      el('p', item.result ? `Community final ${item.result.actual_home}-${item.result.actual_away}; outcome ${item.result.winner_correct ? 'correct' : 'incorrect'}; total error ${item.result.total_absolute_error.toFixed(2)}; margin error ${item.result.margin_absolute_error.toFixed(2)}` : 'Pending · no final result'));
     const details = el('details'); details.open = opened.has(card.dataset.event);
     details.append(el('summary', 'Model and source details'), el('p', `Model: ${p.model || 'saved model'} · recorded ${item.recorded_at_utc || 'time unavailable'}`));
     if (p.most_likely_score) details.append(el('p', `Most likely score ${p.most_likely_score.join('-')} · not an exact-score guarantee`));

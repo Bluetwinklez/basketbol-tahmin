@@ -179,18 +179,19 @@ def collect(first=2016, last=None):
         print('Turkey',year,len(r),flush=True)
     scheduled = []
     registry_path=Path('data/competitions/TR_BSL_fixture_ids.json')
-    registry=json.loads(registry_path.read_text()) if registry_path.exists() else {}
+    registry={}
     previous_path=Path('data/competitions/TR_BSL_fixtures.parquet')
-    if previous_path.exists():
-        previous=pd.read_parquet(previous_path)
-        if 'source_event_id' in previous:
-            for item in previous.to_dict('records'):
-                provider=str(item['source_event_id']);season_year=str(item['sezon'])[:4]
-                registry.setdefault(f'{season_year}:{provider}',item['mac_id'])
     if first <= active <= last:
         try:
             current = next_data(fetch(CURRENT+'fikstur',refresh=True),active)
             standings = next_data(fetch(CURRENT+'puan-durumu',refresh=True),active)
+            registry=json.loads(registry_path.read_text()) if registry_path.exists() else {}
+            if previous_path.exists():
+                previous=pd.read_parquet(previous_path)
+                if 'source_event_id' in previous:
+                    for item in previous.to_dict('records'):
+                        provider=str(item['source_event_id']);season_year=str(item['sezon'])[:4]
+                        registry.setdefault(f'{season_year}:{provider}',item['mac_id'])
             records += recent_results(standings,active,now.isoformat())
             scheduled=fixtures(current,active,now.isoformat(),registry);sources += [CURRENT+'fikstur',CURRENT+'puan-durumu']
             for row in scheduled:
