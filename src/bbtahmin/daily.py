@@ -142,6 +142,7 @@ def run(leagues=LEAGUES, output='rapor/daily', update=False, hours=48, threshold
     # ledger. The earliest known forecast wins, even after models/data change.
     records, known = {}, {}
     paths = sorted(set((root / 'forecasts').glob('*.json')) |
+                   set(Path('data/argentina_ledger/forecasts').glob('*.json')) |
                    set(Path('docs/kanit/prospective').glob('*.json')))
     for path in paths:
         try:

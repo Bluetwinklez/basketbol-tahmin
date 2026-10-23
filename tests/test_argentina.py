@@ -56,6 +56,38 @@ def test_persisted_scores_conflicts_fail_instead_of_overwrite():
     with pytest.raises(ValueError,match='Conflicting'):a.merge_results(previous,[dict(rows[0],ev_skor=81)])
 
 
+def test_invalid_publisher_score_is_quarantined_with_provenance():
+    rejected=[]
+    page=history().replace('<td>80</td>','<td>0</td>',1)
+    rows=a.parse_history(page,2022,'2026-10-23T20:00Z','publisher',rejected)
+    assert len(rows)==59 and len(rejected)==1
+    assert rejected[0]['home_score']=='0' and rejected[0]['source_url']=='publisher'
+
+
+def test_day_only_history_cannot_settle_exact_time_forecasts(tmp_path,monkeypatch):
+    from bbtahmin.daily import source_facts
+    monkeypatch.chdir(tmp_path)
+    root=tmp_path/'data/competitions';root.mkdir(parents=True)
+    rows=a.parse_history(history(),2022,'2026-10-23T20:00Z','publisher')
+    pd.DataFrame(rows).to_parquet(root/'ARG_LNB.parquet')
+    _,fixtures=a.parse_official(official(),2026,'2026-10-23T20:00Z','public')
+    pd.DataFrame(fixtures).to_parquet(root/'ARG_LNB_fixtures.parquet')
+    future,finals=source_facts('ARG_LNB')
+    assert len(future)==1 and not finals
+
+
+def test_promoted_club_is_not_selected_despite_five_current_games():
+    from bbtahmin.quality import assess
+    p=dict(lig='ARG_LNB',ev='ARG_LNB_LANUS',dep='ARG_LNB_ATENAS',tarih_utc='2026-10-25T00:00Z',
+           ev_kazanir=.7,ev_skor=90,dep_skor=80,toplam=170,fark=10,toplam_80=[140,200],fark_80=[-5,25],
+           prior_season_missing=['ARG_LNB_LANUS'])
+    rows=[dict(lig='ARG_LNB',sezon='2026-27',ev=p['ev'],dep=p['dep'],tarih_utc=pd.Timestamp(day,tz='UTC'))
+          for day in pd.date_range('2026-10-01',periods=6)]
+    quality=assess(p,pd.DataFrame(rows),now='2026-10-23T20:00Z')
+    assert not quality['diagnostic_gate_passed']
+    assert any('promoted-team' in issue for issue in quality['blocking_issues'])
+
+
 def test_source_failure_preserves_results_and_fixtures(tmp_path,monkeypatch):
     monkeypatch.chdir(tmp_path)
     root=tmp_path/'data/competitions';root.mkdir(parents=True)
@@ -77,3 +109,12 @@ def test_independent_model_route(monkeypatch):
     monkeypatch.setattr(regional_model,'predict',lambda *args:dict(route=args))
     assert _tahmin_et('ARG_LNB',[('ARG_LNB_ARGENTINO','ARG_LNB_QUIMSA')],'2026-10-25T00:00Z')[0]['route'][0]=='ARG_LNB'
     assert 'ARG_LNB' in LEAGUES
+
+
+def test_published_argentina_forecasts_reused_in_new_local_ledger(tmp_path,monkeypatch):
+    from bbtahmin import daily
+    def no_recalculation(*args,**kwargs):raise AssertionError('Frozen forecast must be reused')
+    monkeypatch.setattr(daily,'tahmin_et',no_recalculation)
+    report=daily.run(['ARG_LNB'],str(tmp_path/'new-ledger'),hours=168,now='2026-10-23T21:00Z')
+    assert len(report['upcoming'])==10
+    assert all(row['record_status']=='existing_immutable' for row in report['upcoming'])
