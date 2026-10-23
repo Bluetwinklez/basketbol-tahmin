@@ -14,11 +14,14 @@ const football={sample:true,job:{status:'idle',message:'Ready'},leagues:{TR1:'Tu
  const evidence={browser:browser.version(),api:'deterministic intercepted fixtures',live_server_verified:false,viewports:[],checks:[]};
  try{
   for(const viewport of [{width:1440,height:900},{width:390,height:844},{width:320,height:844}]){
-   const page=await browser.newPage({viewport});const errors=[];page.on('pageerror',e=>errors.push(e.message));
+   const page=await browser.newPage({viewport});const errors=[];let failFootballPoll=false;page.on('pageerror',e=>errors.push(e.message));
    await page.route('http://127.0.0.1:8765/**',async route=>{
     const url=new URL(route.request().url());let body,type='application/json';
     if(url.pathname==='/api/state')body=JSON.stringify(basketball);
-    else if(url.pathname==='/api/football')body=JSON.stringify(football);
+    else if(url.pathname==='/api/football'){
+      if(failFootballPoll)return route.fulfill({status:503,contentType:type,body:'{}'});
+      body=JSON.stringify(football);
+    }
     else if(url.pathname==='/api/football/run'){body=JSON.stringify({error:'Controlled request error'});return route.fulfill({status:409,contentType:type,body});}
     else {const name=url.pathname==='/'?'index.html':url.pathname==='/football'?'football.html':url.pathname.slice(1);const file=path.join('src/bbtahmin/ui',name);if(!fs.existsSync(file))return route.fulfill({status:404,body:'Not found'});body=fs.readFileSync(file,'utf8').replace('__CSRF_TOKEN__','test');type=name.endsWith('.css')?'text/css':name.endsWith('.js')?'text/javascript':'text/html';}
     return route.fulfill({status:200,contentType:type,body});
@@ -36,13 +39,15 @@ const football={sample:true,job:{status:'idle',message:'Ready'},leagues:{TR1:'Tu
    await page.selectOption('#result-status','pending');assert.equal(await page.locator('.forecast-card').count(),1);
    await page.selectOption('#result-status','publisher_final');assert.equal(await page.locator('.forecast-card').count(),1);
    await page.selectOption('#result-status','');await page.locator('.forecast-card details summary').first().click();
+   failFootballPoll=true;await page.evaluate(()=>poll());assert.match(await page.locator('#status').innerText(),/Connection unavailable/);
+   failFootballPoll=false;await page.evaluate(()=>poll());assert.equal(await page.locator('#status').innerText(),'Ready');
    await page.locator('#saved').click();await page.waitForTimeout(3200);assert.match(await page.locator('#status').innerText(),/Controlled request error/);
    assert.equal(await page.locator('#saved').isDisabled(),false);
    await page.screenshot({path:path.join(directory,`football-${viewport.width}.png`),fullPage:true});
    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);assert.deepEqual(errors,[]);
    evidence.viewports.push(viewport);await page.close();
   }
-  evidence.checks=['10 basketball leagues and both domestic filters','selected and empty views','expanded details across polling','pending and final results','football status filters','persistent request errors','no page overflow at 1440/390/320'];
+  evidence.checks=['10 basketball leagues and both domestic filters','selected and empty views','expanded details across polling','pending and final results','football status filters','persistent request errors','polling errors clear after recovery','no page overflow at 1440/390/320'];
   fs.writeFileSync(path.join(directory,'validation.json'),JSON.stringify(evidence,null,2));console.log(JSON.stringify(evidence));
  }finally{await browser.close();}
 })().catch(error=>{console.error(error);process.exitCode=1;});

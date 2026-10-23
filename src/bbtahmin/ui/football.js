@@ -1,15 +1,15 @@
 "use strict";
 const $ = id => document.getElementById(id);
 const token = document.querySelector('meta[name="app-token"]').content;
-let state = null, busy = false, fetching = false, interactionError = null, renderedKey = null;
+let state = null, busy = false, fetching = false, interactionError = null, pollingError = null, renderedKey = null;
 const pct = n => typeof n === 'number' && Number.isFinite(n) ? `${(100*n).toFixed(1)}%` : '—';
 function el(tag, text) { const n = document.createElement(tag); if (text !== undefined) n.textContent = text; return n; }
 function controls() {
   const running = busy || state?.job?.status === 'running';
   $('saved').disabled = running; $('refresh').disabled = running;
-  const message = interactionError || state?.job?.message || 'Ready';
+  const message = pollingError || interactionError || state?.job?.message || 'Ready';
   if ($('status').textContent !== message) $('status').textContent = message;
-  $('status').className = `notice ${interactionError || state?.job?.status === 'failed' ? 'error' : ''}`;
+  $('status').className = `notice ${pollingError || interactionError || state?.job?.status === 'failed' ? 'error' : ''}`;
   for (const link of document.querySelectorAll('.exports a')) {
     link.setAttribute('aria-disabled', String(!state?.report));
     if (!state?.report) link.removeAttribute('href'); else link.href = link.dataset.export;
@@ -53,6 +53,7 @@ async function poll() {
     const res = await fetch('/api/football', {cache:'no-store'});
     if (!res.ok) throw Error('Could not load report');
     state = await res.json();
+    pollingError = null;
     const leagues = state.leagues || Object.fromEntries([...new Set((state.report?.forecasts || []).map(x => x.fixture.league))].map(c => [c, c]));
     const value = $('league').value, key = JSON.stringify(Object.keys(leagues));
     if ($('league').dataset.options !== key) {
@@ -62,7 +63,7 @@ async function poll() {
     }
     const reportKey = `${state.report?.checked_at_utc}:${state.sample}`;
     if (reportKey !== renderedKey) { renderedKey = reportKey; render(); } else controls();
-  } catch (e) { interactionError = `Connection unavailable: ${e.message}`; controls(); }
+  } catch (e) { pollingError = `Connection unavailable: ${e.message}`; controls(); }
   finally { fetching = false; }
 }
 async function run(refresh) {
