@@ -1,0 +1,60 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-10-23T16:48:20.082045+00:00",
+  "fixture": {
+    "event_id": "TR1_27e3ae8e3dede207b9895576",
+    "league": "TR1",
+    "season": "2026-27",
+    "date": "2026-10-25",
+    "home": "atiker konyaspor",
+    "away": "genclerbirligi",
+    "home_name": "Atiker Konyaspor",
+    "away_name": "Gençlerbirligi",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/europe/blob/63df627f3c87ce71708f016522ea236cf74332c3/turkey/2026-27_tr1.txt",
+    "captured_at_utc": "2026-10-23T16:45:36.284530+00:00",
+    "source_kind": "community_CC0_not_official"
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "TR1",
+    "home": "atiker konyaspor",
+    "away": "genclerbirligi",
+    "expected_home_goals": 1.5040723571645631,
+    "expected_away_goals": 1.1673169851739096,
+    "probabilities": {
+      "home": 0.4498505785771562,
+      "draw": 0.25549216135626596,
+      "away": 0.2946572600665779
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.7461011156961935,
+      "2.5": 0.4993411325339041,
+      "3.5": 0.27961046948878343
+    },
+    "both_teams_score": 0.5357319564597944,
+    "total_goals_80": [
+      1,
+      5
+    ],
+    "training_cutoff_exclusive": "2026-10-23",
+    "training_games": 763,
+    "prior_team_games": {
+      "atiker konyaspor": 80,
+      "genclerbirligi": 15
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "642c2d1ebc22894173cfb47d62dac1b947fc017859d7ed42caf8f239fa5fd3b7",
+  "payload_sha256": "e4841cc9ab2ab1597b7f04895f364890214d91f3ee197c9c1dcba98c82c32e20"
+}

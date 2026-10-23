@@ -1,0 +1,60 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-10-23T16:48:20.082045+00:00",
+  "fixture": {
+    "event_id": "EN1_2e707fbb31a586bbfb5cbe0d",
+    "league": "EN1",
+    "season": "2026-27",
+    "date": "2026-10-25",
+    "home": "crystal palace fc",
+    "away": "newcastle united fc",
+    "home_name": "Crystal Palace FC",
+    "away_name": "Newcastle United FC",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/en.1.json",
+    "captured_at_utc": "2026-10-23T16:45:36.284530+00:00",
+    "source_kind": "community_CC0_not_official"
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "EN1",
+    "home": "crystal palace fc",
+    "away": "newcastle united fc",
+    "expected_home_goals": 1.3437347234624062,
+    "expected_away_goals": 1.3570516338291658,
+    "probabilities": {
+      "home": 0.36786674597571206,
+      "draw": 0.2581298525174651,
+      "away": 0.3740034015068227
+    },
+    "predicted_outcome": "away",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.7514822559146815,
+      "2.5": 0.5065681185881609,
+      "3.5": 0.28608119832172635
+    },
+    "both_teams_score": 0.5488644911268276,
+    "total_goals_80": [
+      1,
+      5
+    ],
+    "training_cutoff_exclusive": "2026-10-23",
+    "training_games": 1100,
+    "prior_team_games": {
+      "crystal palace fc": 110,
+      "newcastle united fc": 110
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "642c2d1ebc22894173cfb47d62dac1b947fc017859d7ed42caf8f239fa5fd3b7",
+  "payload_sha256": "7efefdd7501f322fe5a252023317b278039b2e607c32431aaad3f485fc88ddfa"
+}

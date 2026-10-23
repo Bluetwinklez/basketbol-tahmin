@@ -1,0 +1,60 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-10-23T16:48:20.082045+00:00",
+  "fixture": {
+    "event_id": "DE1_5d2cd66e2fd0f8a4cdf4c7ae",
+    "league": "DE1",
+    "season": "2026-27",
+    "date": "2026-10-25",
+    "home": "tsg 1899 hoffenheim",
+    "away": "bayer 04 leverkusen",
+    "home_name": "TSG 1899 Hoffenheim",
+    "away_name": "Bayer 04 Leverkusen",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/de.1.json",
+    "captured_at_utc": "2026-10-23T16:45:36.284530+00:00",
+    "source_kind": "community_CC0_not_official"
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "DE1",
+    "home": "tsg 1899 hoffenheim",
+    "away": "bayer 04 leverkusen",
+    "expected_home_goals": 1.7877998572244898,
+    "expected_away_goals": 1.667786043345289,
+    "probabilities": {
+      "home": 0.4127462212166999,
+      "draw": 0.2240000514128971,
+      "away": 0.363253727370403
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.8593424875378252,
+      "2.5": 0.6708597839536337,
+      "3.5": 0.45375372628469846
+    },
+    "both_teams_score": 0.6755765943069404,
+    "total_goals_80": [
+      1,
+      6
+    ],
+    "training_cutoff_exclusive": "2026-10-23",
+    "training_games": 882,
+    "prior_team_games": {
+      "tsg 1899 hoffenheim": 98,
+      "bayer 04 leverkusen": 98
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "642c2d1ebc22894173cfb47d62dac1b947fc017859d7ed42caf8f239fa5fd3b7",
+  "payload_sha256": "fad996d43571b808cc24ad94eb9bdef122a7b00219f4d2c84933134b644cdd58"
+}

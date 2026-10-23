@@ -1,0 +1,62 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-10-23T16:48:20.082045+00:00",
+  "fixture": {
+    "event_id": "EN2_4057e0fdf2ca10638c51dcd4",
+    "league": "EN2",
+    "season": "2026-27",
+    "date": "2026-10-24",
+    "home": "wolverhampton wanderers fc",
+    "away": "watford fc",
+    "home_name": "Wolverhampton Wanderers FC",
+    "away_name": "Watford FC",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/en.2.json",
+    "captured_at_utc": "2026-10-23T16:45:36.284530+00:00",
+    "source_kind": "community_CC0_not_official"
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "EN2",
+    "home": "wolverhampton wanderers fc",
+    "away": "watford fc",
+    "expected_home_goals": 1.764561500422814,
+    "expected_away_goals": 0.9106107748093655,
+    "probabilities": {
+      "home": 0.5752431444958797,
+      "draw": 0.2328577651852224,
+      "away": 0.1918990903188979
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      1,
+      0
+    ],
+    "over": {
+      "1.5": 0.7467991587010362,
+      "2.5": 0.5002741647576536,
+      "3.5": 0.28044188844128093
+    },
+    "both_teams_score": 0.4953546427562263,
+    "total_goals_80": [
+      1,
+      5
+    ],
+    "training_cutoff_exclusive": "2026-10-23",
+    "training_games": 1623,
+    "prior_team_games": {
+      "wolverhampton wanderers fc": 7,
+      "watford fc": 134
+    },
+    "issues": [
+      "wolverhampton wanderers fc: fewer than 10 prior matches"
+    ],
+    "recommendation_validated": false,
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "642c2d1ebc22894173cfb47d62dac1b947fc017859d7ed42caf8f239fa5fd3b7",
+  "payload_sha256": "d8f291e01623510f25f133e10ea4f127ddb474a4cccd0fbc60620c7fe5553b35"
+}

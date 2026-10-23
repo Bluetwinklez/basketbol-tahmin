@@ -1,0 +1,62 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-10-23T16:48:20.082045+00:00",
+  "fixture": {
+    "event_id": "FR1_b73fd186f53e202be18c8f42",
+    "league": "FR1",
+    "season": "2026-27",
+    "date": "2026-10-24",
+    "home": "toulouse fc",
+    "away": "es troyes ac",
+    "home_name": "Toulouse FC",
+    "away_name": "ES Troyes AC",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/fr.1.json",
+    "captured_at_utc": "2026-10-23T16:45:36.284530+00:00",
+    "source_kind": "community_CC0_not_official"
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "FR1",
+    "home": "toulouse fc",
+    "away": "es troyes ac",
+    "expected_home_goals": 1.4190260742559238,
+    "expected_away_goals": 1.2215943324307916,
+    "probabilities": {
+      "home": 0.41584818095368503,
+      "draw": 0.26003742264525875,
+      "away": 0.32411439640105605
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.7403618370366567,
+      "2.5": 0.4917194976413124,
+      "3.5": 0.27286281918342226
+    },
+    "both_teams_score": 0.5346076202865085,
+    "total_goals_80": [
+      1,
+      5
+    ],
+    "training_cutoff_exclusive": "2026-10-23",
+    "training_games": 882,
+    "prior_team_games": {
+      "toulouse fc": 97,
+      "es troyes ac": 5
+    },
+    "issues": [
+      "es troyes ac: fewer than 10 prior matches"
+    ],
+    "recommendation_validated": false,
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "642c2d1ebc22894173cfb47d62dac1b947fc017859d7ed42caf8f239fa5fd3b7",
+  "payload_sha256": "8308245687281d14464f9321c1fef7a608cf4aac0651eb0bed846ec91b12fbf0"
+}

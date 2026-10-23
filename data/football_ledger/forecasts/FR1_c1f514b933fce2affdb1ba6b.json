@@ -1,0 +1,60 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-10-23T16:48:20.082045+00:00",
+  "fixture": {
+    "event_id": "FR1_c1f514b933fce2affdb1ba6b",
+    "league": "FR1",
+    "season": "2026-27",
+    "date": "2026-10-30",
+    "home": "le havre ac",
+    "away": "paris saint-germain fc",
+    "home_name": "Le Havre AC",
+    "away_name": "Paris Saint-Germain FC",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/fr.1.json",
+    "captured_at_utc": "2026-10-23T16:45:36.284530+00:00",
+    "source_kind": "community_CC0_not_official"
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "FR1",
+    "home": "le havre ac",
+    "away": "paris saint-germain fc",
+    "expected_home_goals": 0.9760348174828122,
+    "expected_away_goals": 1.685090020296095,
+    "probabilities": {
+      "home": 0.21817615346256963,
+      "draw": 0.2416184277342923,
+      "away": 0.5402054188031382
+    },
+    "predicted_outcome": "away",
+    "most_likely_score": [
+      0,
+      1
+    ],
+    "over": {
+      "1.5": 0.7441987248386279,
+      "2.5": 0.4968050061970786,
+      "3.5": 0.27735648306790694
+    },
+    "both_teams_score": 0.50763961642301,
+    "total_goals_80": [
+      1,
+      5
+    ],
+    "training_cutoff_exclusive": "2026-10-23",
+    "training_games": 882,
+    "prior_team_games": {
+      "le havre ac": 98,
+      "paris saint-germain fc": 98
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "642c2d1ebc22894173cfb47d62dac1b947fc017859d7ed42caf8f239fa5fd3b7",
+  "payload_sha256": "44ee84b8d0c5338379074b48270c8211ae1adf022cc7dbe29fd3761d64f1c12f"
+}

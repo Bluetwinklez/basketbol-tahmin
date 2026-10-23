@@ -1,0 +1,62 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-10-23T16:48:20.082045+00:00",
+  "fixture": {
+    "event_id": "NL1_3a3cbeed4b12fe927d6ea723",
+    "league": "NL1",
+    "season": "2026-27",
+    "date": "2026-10-24",
+    "home": "ado den haag",
+    "away": "sc heerenveen",
+    "home_name": "ADO Den Haag",
+    "away_name": "SC Heerenveen",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/nl.1.json",
+    "captured_at_utc": "2026-10-23T16:45:36.284530+00:00",
+    "source_kind": "community_CC0_not_official"
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "NL1",
+    "home": "ado den haag",
+    "away": "sc heerenveen",
+    "expected_home_goals": 1.6231349301629168,
+    "expected_away_goals": 1.9024945048972195,
+    "probabilities": {
+      "home": 0.33313007928641425,
+      "draw": 0.21983883921938108,
+      "away": 0.4470310814942048
+    },
+    "predicted_outcome": "away",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.8667959033757185,
+      "2.5": 0.6838671721222914,
+      "3.5": 0.46888753231386215
+    },
+    "both_teams_score": 0.6829580187492983,
+    "total_goals_80": [
+      1,
+      6
+    ],
+    "training_cutoff_exclusive": "2026-10-23",
+    "training_games": 901,
+    "prior_team_games": {
+      "ado den haag": 7,
+      "sc heerenveen": 99
+    },
+    "issues": [
+      "ado den haag: fewer than 10 prior matches"
+    ],
+    "recommendation_validated": false,
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "642c2d1ebc22894173cfb47d62dac1b947fc017859d7ed42caf8f239fa5fd3b7",
+  "payload_sha256": "132093166554cf1021061a89bae73f906accdb98985d6aafde44a9d3229bfc6a"
+}
