@@ -1,0 +1,1383 @@
+{
+  "spec": "daily-research-v1",
+  "checked_at_utc": "2026-10-23T20:24:37.473245+00:00",
+  "sources": {},
+  "probability_threshold": 0.65,
+  "upcoming": [
+    {
+      "fixture": {
+        "event_id": "ARG_LNB_9324c7c7a56e38eb2fb05393",
+        "league": "ARG_LNB",
+        "home": "ARG_LNB_ARGENTINO",
+        "away": "ARG_LNB_QUIMSA",
+        "start_utc": "2026-10-24T00:00:00+00:00",
+        "captured_at": "2026-10-23T20:24:02.944302+00:00",
+        "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2YustDzqgfhIPaEEeqLXwdArtqCdJg6m77xG2RC7CxHXktX5WqFxeyQ==/argentino-j-vs-quimsa",
+        "home_name": "ARGENTINO (J)",
+        "away_name": "QUIMSA",
+        "status": "scheduled"
+      },
+      "record_status": "new_immutable",
+      "prediction": {
+        "lig": "ARG_LNB",
+        "ev": "ARG_LNB_ARGENTINO",
+        "dep": "ARG_LNB_QUIMSA",
+        "tarih_utc": "2026-10-24T00:00:00+00:00",
+        "model": "regional-prior-policy-v1/ensemble",
+        "ev_kazanir": 0.2484375604798957,
+        "ev_skor": 75.7916675815303,
+        "dep_skor": 84.56629093878257,
+        "fark": -8.77462335725226,
+        "toplam": 160.35795852031288,
+        "fark_80": [
+          -24.763714536164613,
+          7.214467821660094
+        ],
+        "toplam_80": [
+          140.48943804816932,
+          180.22647899245644
+        ],
+        "tum_modeller": {
+          "score": 0.24093431817023087,
+          "logistic": 0.26125275212460025,
+          "elo": 0.243125611144856,
+          "ensemble": 0.2484375604798957
+        },
+        "az_veri": [],
+        "recent_games": {
+          "ARG_LNB_ARGENTINO": 44,
+          "ARG_LNB_QUIMSA": 54
+        },
+        "uzatma": null,
+        "training_cutoff": "2026-10-24T00:00:00+00:00",
+        "selection": {
+          "season": "2026-27",
+          "previous_season": "2025-26",
+          "training_games": 1288,
+          "calibration_games": 197,
+          "final_training_games": 1683,
+          "calibration_season_gap": 1,
+          "selection_games": 198,
+          "selection_window_start_utc": "2026-01-29T00:00:00+00:00",
+          "selected": "ensemble",
+          "selection_log_loss": {
+            "score": 0.6345053936467441,
+            "logistic": 0.633281292676965,
+            "elo": 0.6374910103397221,
+            "ensemble": 0.6324699576784331
+          },
+          "rule": "Lowest log loss on the second UTC-day half of the preceding season. Score probabilities calibrate on its first half. Fixed learners; test outcomes never select a candidate."
+        },
+        "calibration_regime_gap": false,
+        "prior_season_missing": [],
+        "dataset_sha256": "ea2a4679f9b561ae1b09adfdbb58338603cc2026c5dc3eb1934a708126c31d10",
+        "experimental": true,
+        "note": "Separate senior league, retrospectively collected results. Unverified same-day scores excluded. Nominal home court and historical publication times not independently verified. Intervals are not conditional guarantees.",
+        "data_quality": {
+          "status": "observed_history_available",
+          "issues": [],
+          "blocking_issues": [],
+          "diagnostic_gate_passed": true,
+          "team_history": {
+            "ARG_LNB_ARGENTINO": {
+              "all_prior_games": 165,
+              "recent_400d_games": 44,
+              "days_since_last": 1.0,
+              "effective_games_180d_half_life": 23.53912416402976,
+              "opponents": 18,
+              "seasons": [
+                "2022-23",
+                "2023-24",
+                "2024-25",
+                "2025-26",
+                "2026-27"
+              ]
+            },
+            "ARG_LNB_QUIMSA": {
+              "all_prior_games": 195,
+              "recent_400d_games": 54,
+              "days_since_last": 11.996527777777779,
+              "effective_games_180d_half_life": 29.563825724938532,
+              "opponents": 18,
+              "seasons": [
+                "2022-23",
+                "2023-24",
+                "2024-25",
+                "2025-26",
+                "2026-27"
+              ]
+            }
+          },
+          "information_cutoff_utc": "2026-10-23T00:00:00+00:00",
+          "recommendation_validated": false,
+          "thresholds": "Five games / 400 days and 60-day staleness are diagnostic flags, not validated selection thresholds.",
+          "unknowns": [
+            "Full domestic schedule coverage",
+            "Expected roster and injuries",
+            "Historical publication times for retrospectively collected results"
+          ],
+          "note": "Data adequacy is separate from win probability; no validated recommendation or accuracy guarantee."
+        },
+        "recommendation_validated": false,
+        "selection_eligible": true
+      },
+      "record": "data/argentina_ledger/forecasts/3106036546afdd9305346fba2bc3fee033e92c7e33a65c806c2086679592b99b.json",
+      "threshold_passed": true,
+      "source_confirmation_fresh": true,
+      "selected": true
+    },
+    {
+      "fixture": {
+        "event_id": "ARG_LNB_ce57cb5a5f9dfe30999a108e",
+        "league": "ARG_LNB",
+        "home": "ARG_LNB_ATENAS",
+        "away": "ARG_LNB_LANUS",
+        "start_utc": "2026-10-24T00:30:00+00:00",
+        "captured_at": "2026-10-23T20:24:02.944302+00:00",
+        "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2KvNtpO6-HuArfFNPL8-6bO-k_yk-H2D7TAOr3nPEsoewkYqc7k2uNg==/atenas-c-vs-lanus",
+        "home_name": "ATENAS (C)",
+        "away_name": "LANÚS",
+        "status": "scheduled"
+      },
+      "record_status": "new_immutable",
+      "prediction": {
+        "lig": "ARG_LNB",
+        "ev": "ARG_LNB_ATENAS",
+        "dep": "ARG_LNB_LANUS",
+        "tarih_utc": "2026-10-24T00:30:00+00:00",
+        "model": "regional-prior-policy-v1/ensemble",
+        "ev_kazanir": 0.546086143280479,
+        "ev_skor": 82.31913400723212,
+        "dep_skor": 79.93329631716534,
+        "fark": 2.3858376900667837,
+        "toplam": 162.25243032439747,
+        "fark_80": [
+          -13.60325348884557,
+          18.374928868979136
+        ],
+        "toplam_80": [
+          142.3839098522539,
+          182.12095079654102
+        ],
+        "tum_modeller": {
+          "score": 0.5758268126298921,
+          "logistic": 0.5502743695752975,
+          "elo": 0.5121572476362476,
+          "ensemble": 0.546086143280479
+        },
+        "az_veri": [],
+        "recent_games": {
+          "ARG_LNB_ATENAS": 43,
+          "ARG_LNB_LANUS": 5
+        },
+        "uzatma": null,
+        "training_cutoff": "2026-10-24T00:00:00+00:00",
+        "selection": {
+          "season": "2026-27",
+          "previous_season": "2025-26",
+          "training_games": 1288,
+          "calibration_games": 197,
+          "final_training_games": 1683,
+          "calibration_season_gap": 1,
+          "selection_games": 198,
+          "selection_window_start_utc": "2026-01-29T00:00:00+00:00",
+          "selected": "ensemble",
+          "selection_log_loss": {
+            "score": 0.6345053936467441,
+            "logistic": 0.633281292676965,
+            "elo": 0.6374910103397221,
+            "ensemble": 0.6324699576784331
+          },
+          "rule": "Lowest log loss on the second UTC-day half of the preceding season. Score probabilities calibrate on its first half. Fixed learners; test outcomes never select a candidate."
+        },
+        "calibration_regime_gap": false,
+        "prior_season_missing": [
+          "ARG_LNB_LANUS"
+        ],
+        "dataset_sha256": "ea2a4679f9b561ae1b09adfdbb58338603cc2026c5dc3eb1934a708126c31d10",
+        "experimental": true,
+        "note": "Separate senior league, retrospectively collected results. Unverified same-day scores excluded. Nominal home court and historical publication times not independently verified. Intervals are not conditional guarantees.",
+        "data_quality": {
+          "status": "limited",
+          "issues": [
+            "ARG_LNB_LANUS: no earlier-season observations in the same league; promoted-team uncertainty"
+          ],
+          "blocking_issues": [
+            "ARG_LNB_LANUS: no earlier-season observations in the same league; promoted-team uncertainty"
+          ],
+          "diagnostic_gate_passed": false,
+          "team_history": {
+            "ARG_LNB_ATENAS": {
+              "all_prior_games": 127,
+              "recent_400d_games": 43,
+              "days_since_last": 10.0,
+              "effective_games_180d_half_life": 21.212239735439244,
+              "opponents": 18,
+              "seasons": [
+                "2022-23",
+                "2024-25",
+                "2025-26",
+                "2026-27"
+              ]
+            },
+            "ARG_LNB_LANUS": {
+              "all_prior_games": 5,
+              "recent_400d_games": 5,
+              "days_since_last": 0.9756944444444444,
+              "effective_games_180d_half_life": 4.817325632521665,
+              "opponents": 5,
+              "seasons": [
+                "2026-27"
+              ]
+            }
+          },
+          "information_cutoff_utc": "2026-10-23T00:00:00+00:00",
+          "recommendation_validated": false,
+          "thresholds": "Five games / 400 days and 60-day staleness are diagnostic flags, not validated selection thresholds.",
+          "unknowns": [
+            "Full domestic schedule coverage",
+            "Expected roster and injuries",
+            "Historical publication times for retrospectively collected results"
+          ],
+          "note": "Data adequacy is separate from win probability; no validated recommendation or accuracy guarantee."
+        },
+        "recommendation_validated": false,
+        "selection_eligible": false
+      },
+      "record": "data/argentina_ledger/forecasts/9d35349542533881c73cbc30407da4195f6be756c44f87dd846a6beca150a61c.json",
+      "threshold_passed": false,
+      "source_confirmation_fresh": true,
+      "selected": false
+    },
+    {
+      "fixture": {
+        "event_id": "ARG_LNB_37806c608a637044008a6185",
+        "league": "ARG_LNB",
+        "home": "ARG_LNB_RACING",
+        "away": "ARG_LNB_BOCA",
+        "start_utc": "2026-10-24T01:05:00+00:00",
+        "captured_at": "2026-10-23T20:24:02.944302+00:00",
+        "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2QX5SaR2_WVIJLKgXPZQzGsr9gmrjXkxSzQmLQbqnEplEx6PdjPnR7g==/racing-ch-vs-boca",
+        "home_name": "RACING (CH)",
+        "away_name": "BOCA",
+        "status": "scheduled"
+      },
+      "record_status": "new_immutable",
+      "prediction": {
+        "lig": "ARG_LNB",
+        "ev": "ARG_LNB_RACING",
+        "dep": "ARG_LNB_BOCA",
+        "tarih_utc": "2026-10-24T01:05:00+00:00",
+        "model": "regional-prior-policy-v1/ensemble",
+        "ev_kazanir": 0.4791341058076659,
+        "ev_skor": 83.64640400045974,
+        "dep_skor": 83.41102936526633,
+        "fark": 0.23537463519339674,
+        "toplam": 167.05743336572607,
+        "fark_80": [
+          -15.753716543718957,
+          16.22446581410575
+        ],
+        "toplam_80": [
+          147.1889128935825,
+          186.92595383786963
+        ],
+        "tum_modeller": {
+          "score": 0.5075258623531129,
+          "logistic": 0.4611851733077866,
+          "elo": 0.4686912817620984,
+          "ensemble": 0.4791341058076659
+        },
+        "az_veri": [],
+        "recent_games": {
+          "ARG_LNB_RACING": 40,
+          "ARG_LNB_BOCA": 50
+        },
+        "uzatma": null,
+        "training_cutoff": "2026-10-24T00:00:00+00:00",
+        "selection": {
+          "season": "2026-27",
+          "previous_season": "2025-26",
+          "training_games": 1288,
+          "calibration_games": 197,
+          "final_training_games": 1683,
+          "calibration_season_gap": 1,
+          "selection_games": 198,
+          "selection_window_start_utc": "2026-01-29T00:00:00+00:00",
+          "selected": "ensemble",
+          "selection_log_loss": {
+            "score": 0.6345053936467441,
+            "logistic": 0.633281292676965,
+            "elo": 0.6374910103397221,
+            "ensemble": 0.6324699576784331
+          },
+          "rule": "Lowest log loss on the second UTC-day half of the preceding season. Score probabilities calibrate on its first half. Fixed learners; test outcomes never select a candidate."
+        },
+        "calibration_regime_gap": false,
+        "prior_season_missing": [],
+        "dataset_sha256": "ea2a4679f9b561ae1b09adfdbb58338603cc2026c5dc3eb1934a708126c31d10",
+        "experimental": true,
+        "note": "Separate senior league, retrospectively collected results. Unverified same-day scores excluded. Nominal home court and historical publication times not independently verified. Intervals are not conditional guarantees.",
+        "data_quality": {
+          "status": "limited",
+          "issues": [
+            "Winner model and score model favor different teams"
+          ],
+          "blocking_issues": [
+            "Winner model and score model favor different teams"
+          ],
+          "diagnostic_gate_passed": false,
+          "team_history": {
+            "ARG_LNB_RACING": {
+              "all_prior_games": 40,
+              "recent_400d_games": 40,
+              "days_since_last": 7.0,
+              "effective_games_180d_half_life": 16.13850316241871,
+              "opponents": 18,
+              "seasons": [
+                "2025-26",
+                "2026-27"
+              ]
+            },
+            "ARG_LNB_BOCA": {
+              "all_prior_games": 210,
+              "recent_400d_games": 50,
+              "days_since_last": 1.0,
+              "effective_games_180d_half_life": 28.931123616246136,
+              "opponents": 18,
+              "seasons": [
+                "2022-23",
+                "2023-24",
+                "2024-25",
+                "2025-26",
+                "2026-27"
+              ]
+            }
+          },
+          "information_cutoff_utc": "2026-10-23T00:00:00+00:00",
+          "recommendation_validated": false,
+          "thresholds": "Five games / 400 days and 60-day staleness are diagnostic flags, not validated selection thresholds.",
+          "unknowns": [
+            "Full domestic schedule coverage",
+            "Expected roster and injuries",
+            "Historical publication times for retrospectively collected results"
+          ],
+          "note": "Data adequacy is separate from win probability; no validated recommendation or accuracy guarantee."
+        },
+        "recommendation_validated": false,
+        "selection_eligible": false
+      },
+      "record": "data/argentina_ledger/forecasts/9311785bef96895ab41b978bdb70e5b84e858afbec9eb7388f074457e0508338.json",
+      "threshold_passed": false,
+      "source_confirmation_fresh": true,
+      "selected": false
+    },
+    {
+      "fixture": {
+        "event_id": "ARG_LNB_948031aef52b0920727968d8",
+        "league": "ARG_LNB",
+        "home": "ARG_LNB_RACING",
+        "away": "ARG_LNB_QUIMSA",
+        "start_utc": "2026-10-25T23:30:00+00:00",
+        "captured_at": "2026-10-23T20:24:02.944302+00:00",
+        "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2WtsIp1UqIeFugCfTCdbTay7ow0-drOktEhdUmk9567j_Ib51S9o-HQ==/racing-ch-vs-quimsa",
+        "home_name": "RACING (CH)",
+        "away_name": "QUIMSA",
+        "status": "scheduled"
+      },
+      "record_status": "new_immutable",
+      "prediction": {
+        "lig": "ARG_LNB",
+        "ev": "ARG_LNB_RACING",
+        "dep": "ARG_LNB_QUIMSA",
+        "tarih_utc": "2026-10-25T23:30:00+00:00",
+        "model": "regional-prior-policy-v1/ensemble",
+        "ev_kazanir": 0.39361804204043055,
+        "ev_skor": 81.06707614571725,
+        "dep_skor": 83.58424018823182,
+        "fark": -2.51716404251456,
+        "toplam": 164.65131633394907,
+        "fark_80": [
+          -18.506255221426912,
+          13.471927136397793
+        ],
+        "toplam_80": [
+          144.7827958618055,
+          184.51983680609263
+        ],
+        "tum_modeller": {
+          "score": 0.42005421872720883,
+          "logistic": 0.38309616011858244,
+          "elo": 0.37770374727550043,
+          "ensemble": 0.39361804204043055
+        },
+        "az_veri": [],
+        "recent_games": {
+          "ARG_LNB_RACING": 40,
+          "ARG_LNB_QUIMSA": 54
+        },
+        "uzatma": null,
+        "training_cutoff": "2026-10-25T00:00:00+00:00",
+        "selection": {
+          "season": "2026-27",
+          "previous_season": "2025-26",
+          "training_games": 1288,
+          "calibration_games": 197,
+          "final_training_games": 1683,
+          "calibration_season_gap": 1,
+          "selection_games": 198,
+          "selection_window_start_utc": "2026-01-29T00:00:00+00:00",
+          "selected": "ensemble",
+          "selection_log_loss": {
+            "score": 0.6345053936467441,
+            "logistic": 0.633281292676965,
+            "elo": 0.6374910103397221,
+            "ensemble": 0.6324699576784331
+          },
+          "rule": "Lowest log loss on the second UTC-day half of the preceding season. Score probabilities calibrate on its first half. Fixed learners; test outcomes never select a candidate."
+        },
+        "calibration_regime_gap": false,
+        "prior_season_missing": [],
+        "dataset_sha256": "ea2a4679f9b561ae1b09adfdbb58338603cc2026c5dc3eb1934a708126c31d10",
+        "experimental": true,
+        "note": "Separate senior league, retrospectively collected results. Unverified same-day scores excluded. Nominal home court and historical publication times not independently verified. Intervals are not conditional guarantees.",
+        "data_quality": {
+          "status": "observed_history_available",
+          "issues": [],
+          "blocking_issues": [],
+          "diagnostic_gate_passed": true,
+          "team_history": {
+            "ARG_LNB_RACING": {
+              "all_prior_games": 40,
+              "recent_400d_games": 40,
+              "days_since_last": 7.0,
+              "effective_games_180d_half_life": 16.13850316241871,
+              "opponents": 18,
+              "seasons": [
+                "2025-26",
+                "2026-27"
+              ]
+            },
+            "ARG_LNB_QUIMSA": {
+              "all_prior_games": 195,
+              "recent_400d_games": 54,
+              "days_since_last": 11.996527777777779,
+              "effective_games_180d_half_life": 29.563825724938532,
+              "opponents": 18,
+              "seasons": [
+                "2022-23",
+                "2023-24",
+                "2024-25",
+                "2025-26",
+                "2026-27"
+              ]
+            }
+          },
+          "information_cutoff_utc": "2026-10-23T00:00:00+00:00",
+          "recommendation_validated": false,
+          "thresholds": "Five games / 400 days and 60-day staleness are diagnostic flags, not validated selection thresholds.",
+          "unknowns": [
+            "Full domestic schedule coverage",
+            "Expected roster and injuries",
+            "Historical publication times for retrospectively collected results"
+          ],
+          "note": "Data adequacy is separate from win probability; no validated recommendation or accuracy guarantee."
+        },
+        "recommendation_validated": false,
+        "selection_eligible": true
+      },
+      "record": "data/argentina_ledger/forecasts/94177daea4a66cf9981da6c566cbc18aa3488a0d846143c8a2cd7a70949b4641.json",
+      "threshold_passed": false,
+      "source_confirmation_fresh": true,
+      "selected": false
+    },
+    {
+      "fixture": {
+        "event_id": "ARG_LNB_02f55b4e3130a1f40b8bf1c9",
+        "league": "ARG_LNB",
+        "home": "ARG_LNB_LANUS",
+        "away": "ARG_LNB_REGATAS",
+        "start_utc": "2026-10-26T23:30:00+00:00",
+        "captured_at": "2026-10-23T20:24:02.944302+00:00",
+        "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2H_zc3nVUgd51yA2Zax7bHrJjp6LsgBELu49wuCkpEtWDebJ5wIHgVg==/lanus-vs-regatas-c",
+        "home_name": "LANÚS",
+        "away_name": "REGATAS (C)",
+        "status": "scheduled"
+      },
+      "record_status": "new_immutable",
+      "prediction": {
+        "lig": "ARG_LNB",
+        "ev": "ARG_LNB_LANUS",
+        "dep": "ARG_LNB_REGATAS",
+        "tarih_utc": "2026-10-26T23:30:00+00:00",
+        "model": "regional-prior-policy-v1/ensemble",
+        "ev_kazanir": 0.4637146301687909,
+        "ev_skor": 80.51691693201248,
+        "dep_skor": 81.33608161040884,
+        "fark": -0.8191646783963717,
+        "toplam": 161.85299854242132,
+        "fark_80": [
+          -16.808255857308726,
+          15.169926500515981
+        ],
+        "toplam_80": [
+          141.98447807027776,
+          181.72151901456488
+        ],
+        "tum_modeller": {
+          "score": 0.47382530397198247,
+          "logistic": 0.4549858107142707,
+          "elo": 0.46233277582011933,
+          "ensemble": 0.4637146301687909
+        },
+        "az_veri": [],
+        "recent_games": {
+          "ARG_LNB_LANUS": 5,
+          "ARG_LNB_REGATAS": 43
+        },
+        "uzatma": null,
+        "training_cutoff": "2026-10-26T00:00:00+00:00",
+        "selection": {
+          "season": "2026-27",
+          "previous_season": "2025-26",
+          "training_games": 1288,
+          "calibration_games": 197,
+          "final_training_games": 1683,
+          "calibration_season_gap": 1,
+          "selection_games": 198,
+          "selection_window_start_utc": "2026-01-29T00:00:00+00:00",
+          "selected": "ensemble",
+          "selection_log_loss": {
+            "score": 0.6345053936467441,
+            "logistic": 0.633281292676965,
+            "elo": 0.6374910103397221,
+            "ensemble": 0.6324699576784331
+          },
+          "rule": "Lowest log loss on the second UTC-day half of the preceding season. Score probabilities calibrate on its first half. Fixed learners; test outcomes never select a candidate."
+        },
+        "calibration_regime_gap": false,
+        "prior_season_missing": [
+          "ARG_LNB_LANUS"
+        ],
+        "dataset_sha256": "ea2a4679f9b561ae1b09adfdbb58338603cc2026c5dc3eb1934a708126c31d10",
+        "experimental": true,
+        "note": "Separate senior league, retrospectively collected results. Unverified same-day scores excluded. Nominal home court and historical publication times not independently verified. Intervals are not conditional guarantees.",
+        "data_quality": {
+          "status": "limited",
+          "issues": [
+            "ARG_LNB_LANUS: no earlier-season observations in the same league; promoted-team uncertainty"
+          ],
+          "blocking_issues": [
+            "ARG_LNB_LANUS: no earlier-season observations in the same league; promoted-team uncertainty"
+          ],
+          "diagnostic_gate_passed": false,
+          "team_history": {
+            "ARG_LNB_LANUS": {
+              "all_prior_games": 5,
+              "recent_400d_games": 5,
+              "days_since_last": 0.9756944444444444,
+              "effective_games_180d_half_life": 4.817325632521665,
+              "opponents": 5,
+              "seasons": [
+                "2026-27"
+              ]
+            },
+            "ARG_LNB_REGATAS": {
+              "all_prior_games": 186,
+              "recent_400d_games": 43,
+              "days_since_last": 4.020833333333333,
+              "effective_games_180d_half_life": 23.932672084311168,
+              "opponents": 18,
+              "seasons": [
+                "2022-23",
+                "2023-24",
+                "2024-25",
+                "2025-26",
+                "2026-27"
+              ]
+            }
+          },
+          "information_cutoff_utc": "2026-10-23T00:00:00+00:00",
+          "recommendation_validated": false,
+          "thresholds": "Five games / 400 days and 60-day staleness are diagnostic flags, not validated selection thresholds.",
+          "unknowns": [
+            "Full domestic schedule coverage",
+            "Expected roster and injuries",
+            "Historical publication times for retrospectively collected results"
+          ],
+          "note": "Data adequacy is separate from win probability; no validated recommendation or accuracy guarantee."
+        },
+        "recommendation_validated": false,
+        "selection_eligible": false
+      },
+      "record": "data/argentina_ledger/forecasts/81cdecc78e36873f9fbc93f5ef4b822a47fc326f62d9f710e2d224e830b65cc6.json",
+      "threshold_passed": false,
+      "source_confirmation_fresh": true,
+      "selected": false
+    },
+    {
+      "fixture": {
+        "event_id": "ARG_LNB_9b1a912dea58612618a7cb8d",
+        "league": "ARG_LNB",
+        "home": "ARG_LNB_PENAROL",
+        "away": "ARG_LNB_SAN_MARTIN",
+        "start_utc": "2026-10-28T00:00:00+00:00",
+        "captured_at": "2026-10-23T20:24:02.944302+00:00",
+        "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2Li8lk6Tq_he__sT93G88Sbs653_Ex_5PAaeA2jGl_wTGIgG32LvFZw==/penarol-mdp-vs-san-martin-c",
+        "home_name": "PEÑAROL (MDP)",
+        "away_name": "SAN MARTÍN (C)",
+        "status": "scheduled"
+      },
+      "record_status": "new_immutable",
+      "prediction": {
+        "lig": "ARG_LNB",
+        "ev": "ARG_LNB_PENAROL",
+        "dep": "ARG_LNB_SAN_MARTIN",
+        "tarih_utc": "2026-10-28T00:00:00+00:00",
+        "model": "regional-prior-policy-v1/ensemble",
+        "ev_kazanir": 0.7139570726912575,
+        "ev_skor": 85.66315903263211,
+        "dep_skor": 78.50933561724858,
+        "fark": 7.153823415383513,
+        "toplam": 164.1724946498807,
+        "fark_80": [
+          -8.83526776352884,
+          23.142914594295867
+        ],
+        "toplam_80": [
+          144.30397417773713,
+          184.04101512202425
+        ],
+        "tum_modeller": {
+          "score": 0.7168098523642383,
+          "logistic": 0.729107084267246,
+          "elo": 0.6959542814422882,
+          "ensemble": 0.7139570726912575
+        },
+        "az_veri": [],
+        "recent_games": {
+          "ARG_LNB_PENAROL": 43,
+          "ARG_LNB_SAN_MARTIN": 43
+        },
+        "uzatma": null,
+        "training_cutoff": "2026-10-28T00:00:00+00:00",
+        "selection": {
+          "season": "2026-27",
+          "previous_season": "2025-26",
+          "training_games": 1288,
+          "calibration_games": 197,
+          "final_training_games": 1683,
+          "calibration_season_gap": 1,
+          "selection_games": 198,
+          "selection_window_start_utc": "2026-01-29T00:00:00+00:00",
+          "selected": "ensemble",
+          "selection_log_loss": {
+            "score": 0.6345053936467441,
+            "logistic": 0.633281292676965,
+            "elo": 0.6374910103397221,
+            "ensemble": 0.6324699576784331
+          },
+          "rule": "Lowest log loss on the second UTC-day half of the preceding season. Score probabilities calibrate on its first half. Fixed learners; test outcomes never select a candidate."
+        },
+        "calibration_regime_gap": false,
+        "prior_season_missing": [],
+        "dataset_sha256": "ea2a4679f9b561ae1b09adfdbb58338603cc2026c5dc3eb1934a708126c31d10",
+        "experimental": true,
+        "note": "Separate senior league, retrospectively collected results. Unverified same-day scores excluded. Nominal home court and historical publication times not independently verified. Intervals are not conditional guarantees.",
+        "data_quality": {
+          "status": "observed_history_available",
+          "issues": [],
+          "blocking_issues": [],
+          "diagnostic_gate_passed": true,
+          "team_history": {
+            "ARG_LNB_PENAROL": {
+              "all_prior_games": 169,
+              "recent_400d_games": 43,
+              "days_since_last": 5.996527777777778,
+              "effective_games_180d_half_life": 22.206188030994994,
+              "opponents": 19,
+              "seasons": [
+                "2022-23",
+                "2023-24",
+                "2024-25",
+                "2025-26",
+                "2026-27"
+              ]
+            },
+            "ARG_LNB_SAN_MARTIN": {
+              "all_prior_games": 166,
+              "recent_400d_games": 43,
+              "days_since_last": 2.0,
+              "effective_games_180d_half_life": 23.097925825326374,
+              "opponents": 18,
+              "seasons": [
+                "2022-23",
+                "2023-24",
+                "2024-25",
+                "2025-26",
+                "2026-27"
+              ]
+            }
+          },
+          "information_cutoff_utc": "2026-10-23T00:00:00+00:00",
+          "recommendation_validated": false,
+          "thresholds": "Five games / 400 days and 60-day staleness are diagnostic flags, not validated selection thresholds.",
+          "unknowns": [
+            "Full domestic schedule coverage",
+            "Expected roster and injuries",
+            "Historical publication times for retrospectively collected results"
+          ],
+          "note": "Data adequacy is separate from win probability; no validated recommendation or accuracy guarantee."
+        },
+        "recommendation_validated": false,
+        "selection_eligible": true
+      },
+      "record": "data/argentina_ledger/forecasts/31874fbb59cfb788736c9fe0c0abcc9fcd24e13fdb45ea05a817b19768c20505.json",
+      "threshold_passed": true,
+      "source_confirmation_fresh": true,
+      "selected": true
+    },
+    {
+      "fixture": {
+        "event_id": "ARG_LNB_1960230c36b1dcfc538a81d6",
+        "league": "ARG_LNB",
+        "home": "ARG_LNB_SAN_LORENZO",
+        "away": "ARG_LNB_PLATENSE",
+        "start_utc": "2026-10-28T23:30:00+00:00",
+        "captured_at": "2026-10-23T20:24:02.944302+00:00",
+        "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2q8AtKfKbu_qozLM_jXOL5fKYgw9JRrrDdZuy05RCFrlbCqHHv6jfTg==/san-lorenzo-vs-platense",
+        "home_name": "SAN LORENZO",
+        "away_name": "PLATENSE",
+        "status": "scheduled"
+      },
+      "record_status": "new_immutable",
+      "prediction": {
+        "lig": "ARG_LNB",
+        "ev": "ARG_LNB_SAN_LORENZO",
+        "dep": "ARG_LNB_PLATENSE",
+        "tarih_utc": "2026-10-28T23:30:00+00:00",
+        "model": "regional-prior-policy-v1/ensemble",
+        "ev_kazanir": 0.6238044749555901,
+        "ev_skor": 84.74639050971629,
+        "dep_skor": 79.9560819109455,
+        "fark": 4.790308598770795,
+        "toplam": 164.7024724206618,
+        "fark_80": [
+          -11.198782580141557,
+          20.77939977768315
+        ],
+        "toplam_80": [
+          144.83395194851823,
+          184.57099289280535
+        ],
+        "tum_modeller": {
+          "score": 0.6494926158466112,
+          "logistic": 0.6407273854601749,
+          "elo": 0.5811934235599839,
+          "ensemble": 0.6238044749555901
+        },
+        "az_veri": [],
+        "recent_games": {
+          "ARG_LNB_SAN_LORENZO": 39,
+          "ARG_LNB_PLATENSE": 41
+        },
+        "uzatma": null,
+        "training_cutoff": "2026-10-28T00:00:00+00:00",
+        "selection": {
+          "season": "2026-27",
+          "previous_season": "2025-26",
+          "training_games": 1288,
+          "calibration_games": 197,
+          "final_training_games": 1683,
+          "calibration_season_gap": 1,
+          "selection_games": 198,
+          "selection_window_start_utc": "2026-01-29T00:00:00+00:00",
+          "selected": "ensemble",
+          "selection_log_loss": {
+            "score": 0.6345053936467441,
+            "logistic": 0.633281292676965,
+            "elo": 0.6374910103397221,
+            "ensemble": 0.6324699576784331
+          },
+          "rule": "Lowest log loss on the second UTC-day half of the preceding season. Score probabilities calibrate on its first half. Fixed learners; test outcomes never select a candidate."
+        },
+        "calibration_regime_gap": false,
+        "prior_season_missing": [],
+        "dataset_sha256": "ea2a4679f9b561ae1b09adfdbb58338603cc2026c5dc3eb1934a708126c31d10",
+        "experimental": true,
+        "note": "Separate senior league, retrospectively collected results. Unverified same-day scores excluded. Nominal home court and historical publication times not independently verified. Intervals are not conditional guarantees.",
+        "data_quality": {
+          "status": "observed_history_available",
+          "issues": [],
+          "blocking_issues": [],
+          "diagnostic_gate_passed": true,
+          "team_history": {
+            "ARG_LNB_SAN_LORENZO": {
+              "all_prior_games": 165,
+              "recent_400d_games": 39,
+              "days_since_last": 4.413194444444445,
+              "effective_games_180d_half_life": 20.105328326537794,
+              "opponents": 18,
+              "seasons": [
+                "2022-23",
+                "2023-24",
+                "2024-25",
+                "2025-26",
+                "2026-27"
+              ]
+            },
+            "ARG_LNB_PLATENSE": {
+              "all_prior_games": 168,
+              "recent_400d_games": 41,
+              "days_since_last": 1.9791666666666667,
+              "effective_games_180d_half_life": 22.123977966352122,
+              "opponents": 18,
+              "seasons": [
+                "2022-23",
+                "2023-24",
+                "2024-25",
+                "2025-26",
+                "2026-27"
+              ]
+            }
+          },
+          "information_cutoff_utc": "2026-10-23T00:00:00+00:00",
+          "recommendation_validated": false,
+          "thresholds": "Five games / 400 days and 60-day staleness are diagnostic flags, not validated selection thresholds.",
+          "unknowns": [
+            "Full domestic schedule coverage",
+            "Expected roster and injuries",
+            "Historical publication times for retrospectively collected results"
+          ],
+          "note": "Data adequacy is separate from win probability; no validated recommendation or accuracy guarantee."
+        },
+        "recommendation_validated": false,
+        "selection_eligible": true
+      },
+      "record": "data/argentina_ledger/forecasts/86cf7ce2641ce6ac0449ebf5d6430beb1c88f55c4df42d6bf7e6c5cd78e25f6d.json",
+      "threshold_passed": false,
+      "source_confirmation_fresh": true,
+      "selected": false
+    },
+    {
+      "fixture": {
+        "event_id": "ARG_LNB_66531a495580310d081e18b6",
+        "league": "ARG_LNB",
+        "home": "ARG_LNB_BOCA",
+        "away": "ARG_LNB_REGATAS",
+        "start_utc": "2026-10-28T23:35:00+00:00",
+        "captured_at": "2026-10-23T20:24:02.944302+00:00",
+        "source_url": "https://www.laliganacional.com.ar/laliga/partido/v21KIcJ-ITbWLAh2kDAiEdtJete_eU3SieZkyAiVi7N5NvyDiSNZsh0Q==/boca-vs-regatas-c",
+        "home_name": "BOCA",
+        "away_name": "REGATAS (C)",
+        "status": "scheduled"
+      },
+      "record_status": "new_immutable",
+      "prediction": {
+        "lig": "ARG_LNB",
+        "ev": "ARG_LNB_BOCA",
+        "dep": "ARG_LNB_REGATAS",
+        "tarih_utc": "2026-10-28T23:35:00+00:00",
+        "model": "regional-prior-policy-v1/ensemble",
+        "ev_kazanir": 0.6143521329989005,
+        "ev_skor": 86.19823784158908,
+        "dep_skor": 81.40490660147572,
+        "fark": 4.7933312401133525,
+        "toplam": 167.6031444430648,
+        "fark_80": [
+          -11.195759938799,
+          20.782422419025707
+        ],
+        "toplam_80": [
+          147.73462397092123,
+          187.47166491520835
+        ],
+        "tum_modeller": {
+          "score": 0.6495823953700075,
+          "logistic": 0.5906161251739951,
+          "elo": 0.6028578784526987,
+          "ensemble": 0.6143521329989005
+        },
+        "az_veri": [],
+        "recent_games": {
+          "ARG_LNB_BOCA": 50,
+          "ARG_LNB_REGATAS": 43
+        },
+        "uzatma": null,
+        "training_cutoff": "2026-10-28T00:00:00+00:00",
+        "selection": {
+          "season": "2026-27",
+          "previous_season": "2025-26",
+          "training_games": 1288,
+          "calibration_games": 197,
+          "final_training_games": 1683,
+          "calibration_season_gap": 1,
+          "selection_games": 198,
+          "selection_window_start_utc": "2026-01-29T00:00:00+00:00",
+          "selected": "ensemble",
+          "selection_log_loss": {
+            "score": 0.6345053936467441,
+            "logistic": 0.633281292676965,
+            "elo": 0.6374910103397221,
+            "ensemble": 0.6324699576784331
+          },
+          "rule": "Lowest log loss on the second UTC-day half of the preceding season. Score probabilities calibrate on its first half. Fixed learners; test outcomes never select a candidate."
+        },
+        "calibration_regime_gap": false,
+        "prior_season_missing": [],
+        "dataset_sha256": "ea2a4679f9b561ae1b09adfdbb58338603cc2026c5dc3eb1934a708126c31d10",
+        "experimental": true,
+        "note": "Separate senior league, retrospectively collected results. Unverified same-day scores excluded. Nominal home court and historical publication times not independently verified. Intervals are not conditional guarantees.",
+        "data_quality": {
+          "status": "observed_history_available",
+          "issues": [],
+          "blocking_issues": [],
+          "diagnostic_gate_passed": true,
+          "team_history": {
+            "ARG_LNB_BOCA": {
+              "all_prior_games": 210,
+              "recent_400d_games": 50,
+              "days_since_last": 1.0,
+              "effective_games_180d_half_life": 28.931123616246136,
+              "opponents": 18,
+              "seasons": [
+                "2022-23",
+                "2023-24",
+                "2024-25",
+                "2025-26",
+                "2026-27"
+              ]
+            },
+            "ARG_LNB_REGATAS": {
+              "all_prior_games": 186,
+              "recent_400d_games": 43,
+              "days_since_last": 4.020833333333333,
+              "effective_games_180d_half_life": 23.932672084311168,
+              "opponents": 18,
+              "seasons": [
+                "2022-23",
+                "2023-24",
+                "2024-25",
+                "2025-26",
+                "2026-27"
+              ]
+            }
+          },
+          "information_cutoff_utc": "2026-10-23T00:00:00+00:00",
+          "recommendation_validated": false,
+          "thresholds": "Five games / 400 days and 60-day staleness are diagnostic flags, not validated selection thresholds.",
+          "unknowns": [
+            "Full domestic schedule coverage",
+            "Expected roster and injuries",
+            "Historical publication times for retrospectively collected results"
+          ],
+          "note": "Data adequacy is separate from win probability; no validated recommendation or accuracy guarantee."
+        },
+        "recommendation_validated": false,
+        "selection_eligible": true
+      },
+      "record": "data/argentina_ledger/forecasts/8139716fbc7bd97b0980793caf48379ea130c0fdda38777a96147574e0bc025b.json",
+      "threshold_passed": false,
+      "source_confirmation_fresh": true,
+      "selected": false
+    },
+    {
+      "fixture": {
+        "event_id": "ARG_LNB_811d4583aa343eebdc0ddc79",
+        "league": "ARG_LNB",
+        "home": "ARG_LNB_GIMNASIA",
+        "away": "ARG_LNB_FERRO",
+        "start_utc": "2026-10-29T00:00:00+00:00",
+        "captured_at": "2026-10-23T20:24:02.944302+00:00",
+        "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2a55ZS1RIyEXny36B3m__JKy3yodXYMqhQY1CLu-mXgJ-rr-0SalrZw==/gimnasia-cr-vs-ferro",
+        "home_name": "GIMNASIA (CR)",
+        "away_name": "FERRO",
+        "status": "scheduled"
+      },
+      "record_status": "new_immutable",
+      "prediction": {
+        "lig": "ARG_LNB",
+        "ev": "ARG_LNB_GIMNASIA",
+        "dep": "ARG_LNB_FERRO",
+        "tarih_utc": "2026-10-29T00:00:00+00:00",
+        "model": "regional-prior-policy-v1/ensemble",
+        "ev_kazanir": 0.7408744681102221,
+        "ev_skor": 85.47124660608279,
+        "dep_skor": 76.06906204167734,
+        "fark": 9.402184564405438,
+        "toplam": 161.54030864776013,
+        "fark_80": [
+          -6.5869066145069155,
+          25.39127574331779
+        ],
+        "toplam_80": [
+          141.67178817561657,
+          181.4088291199037
+        ],
+        "tum_modeller": {
+          "score": 0.7744553761712137,
+          "logistic": 0.7589142748881992,
+          "elo": 0.689253753271253,
+          "ensemble": 0.7408744681102221
+        },
+        "az_veri": [],
+        "recent_games": {
+          "ARG_LNB_GIMNASIA": 58,
+          "ARG_LNB_FERRO": 55
+        },
+        "uzatma": null,
+        "training_cutoff": "2026-10-29T00:00:00+00:00",
+        "selection": {
+          "season": "2026-27",
+          "previous_season": "2025-26",
+          "training_games": 1288,
+          "calibration_games": 197,
+          "final_training_games": 1683,
+          "calibration_season_gap": 1,
+          "selection_games": 198,
+          "selection_window_start_utc": "2026-01-29T00:00:00+00:00",
+          "selected": "ensemble",
+          "selection_log_loss": {
+            "score": 0.6345053936467441,
+            "logistic": 0.633281292676965,
+            "elo": 0.6374910103397221,
+            "ensemble": 0.6324699576784331
+          },
+          "rule": "Lowest log loss on the second UTC-day half of the preceding season. Score probabilities calibrate on its first half. Fixed learners; test outcomes never select a candidate."
+        },
+        "calibration_regime_gap": false,
+        "prior_season_missing": [],
+        "dataset_sha256": "ea2a4679f9b561ae1b09adfdbb58338603cc2026c5dc3eb1934a708126c31d10",
+        "experimental": true,
+        "note": "Separate senior league, retrospectively collected results. Unverified same-day scores excluded. Nominal home court and historical publication times not independently verified. Intervals are not conditional guarantees.",
+        "data_quality": {
+          "status": "observed_history_available",
+          "issues": [],
+          "blocking_issues": [],
+          "diagnostic_gate_passed": true,
+          "team_history": {
+            "ARG_LNB_GIMNASIA": {
+              "all_prior_games": 187,
+              "recent_400d_games": 58,
+              "days_since_last": 10.020833333333334,
+              "effective_games_180d_half_life": 32.444704481679956,
+              "opponents": 19,
+              "seasons": [
+                "2022-23",
+                "2023-24",
+                "2024-25",
+                "2025-26",
+                "2026-27"
+              ]
+            },
+            "ARG_LNB_FERRO": {
+              "all_prior_games": 179,
+              "recent_400d_games": 55,
+              "days_since_last": 1.9791666666666667,
+              "effective_games_180d_half_life": 30.862536855340945,
+              "opponents": 18,
+              "seasons": [
+                "2022-23",
+                "2023-24",
+                "2024-25",
+                "2025-26",
+                "2026-27"
+              ]
+            }
+          },
+          "information_cutoff_utc": "2026-10-23T00:00:00+00:00",
+          "recommendation_validated": false,
+          "thresholds": "Five games / 400 days and 60-day staleness are diagnostic flags, not validated selection thresholds.",
+          "unknowns": [
+            "Full domestic schedule coverage",
+            "Expected roster and injuries",
+            "Historical publication times for retrospectively collected results"
+          ],
+          "note": "Data adequacy is separate from win probability; no validated recommendation or accuracy guarantee."
+        },
+        "recommendation_validated": false,
+        "selection_eligible": true
+      },
+      "record": "data/argentina_ledger/forecasts/9ea915b38c032f9bedf506e56ec10e56b02fed564819c01ccf1db33b08172185.json",
+      "threshold_passed": true,
+      "source_confirmation_fresh": true,
+      "selected": true
+    },
+    {
+      "fixture": {
+        "event_id": "ARG_LNB_605664aaaf5cb52de37dec39",
+        "league": "ARG_LNB",
+        "home": "ARG_LNB_LANUS",
+        "away": "ARG_LNB_SAN_MARTIN",
+        "start_utc": "2026-10-30T01:05:00+00:00",
+        "captured_at": "2026-10-23T20:24:02.944302+00:00",
+        "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2YXCIRkKT8NbiElMwp1Zj8Tuolc8RcKB8_U4-BjaAnqMubPsgZdlNAw==/lanus-vs-san-martin-c",
+        "home_name": "LANÚS",
+        "away_name": "SAN MARTÍN (C)",
+        "status": "scheduled"
+      },
+      "record_status": "new_immutable",
+      "prediction": {
+        "lig": "ARG_LNB",
+        "ev": "ARG_LNB_LANUS",
+        "dep": "ARG_LNB_SAN_MARTIN",
+        "tarih_utc": "2026-10-30T01:05:00+00:00",
+        "model": "regional-prior-policy-v1/ensemble",
+        "ev_kazanir": 0.6326663654790831,
+        "ev_skor": 84.60942753701669,
+        "dep_skor": 80.1303747503202,
+        "fark": 4.479052786696495,
+        "toplam": 164.7398022873369,
+        "fark_80": [
+          -11.510038392215858,
+          20.46814396560885
+        ],
+        "toplam_80": [
+          144.87128181519333,
+          184.60832275948044
+        ],
+        "tum_modeller": {
+          "score": 0.6402037040680456,
+          "logistic": 0.640512842804931,
+          "elo": 0.6172825495642725,
+          "ensemble": 0.6326663654790831
+        },
+        "az_veri": [],
+        "recent_games": {
+          "ARG_LNB_LANUS": 5,
+          "ARG_LNB_SAN_MARTIN": 43
+        },
+        "uzatma": null,
+        "training_cutoff": "2026-10-30T00:00:00+00:00",
+        "selection": {
+          "season": "2026-27",
+          "previous_season": "2025-26",
+          "training_games": 1288,
+          "calibration_games": 197,
+          "final_training_games": 1683,
+          "calibration_season_gap": 1,
+          "selection_games": 198,
+          "selection_window_start_utc": "2026-01-29T00:00:00+00:00",
+          "selected": "ensemble",
+          "selection_log_loss": {
+            "score": 0.6345053936467441,
+            "logistic": 0.633281292676965,
+            "elo": 0.6374910103397221,
+            "ensemble": 0.6324699576784331
+          },
+          "rule": "Lowest log loss on the second UTC-day half of the preceding season. Score probabilities calibrate on its first half. Fixed learners; test outcomes never select a candidate."
+        },
+        "calibration_regime_gap": false,
+        "prior_season_missing": [
+          "ARG_LNB_LANUS"
+        ],
+        "dataset_sha256": "ea2a4679f9b561ae1b09adfdbb58338603cc2026c5dc3eb1934a708126c31d10",
+        "experimental": true,
+        "note": "Separate senior league, retrospectively collected results. Unverified same-day scores excluded. Nominal home court and historical publication times not independently verified. Intervals are not conditional guarantees.",
+        "data_quality": {
+          "status": "limited",
+          "issues": [
+            "ARG_LNB_LANUS: no earlier-season observations in the same league; promoted-team uncertainty"
+          ],
+          "blocking_issues": [
+            "ARG_LNB_LANUS: no earlier-season observations in the same league; promoted-team uncertainty"
+          ],
+          "diagnostic_gate_passed": false,
+          "team_history": {
+            "ARG_LNB_LANUS": {
+              "all_prior_games": 5,
+              "recent_400d_games": 5,
+              "days_since_last": 0.9756944444444444,
+              "effective_games_180d_half_life": 4.817325632521665,
+              "opponents": 5,
+              "seasons": [
+                "2026-27"
+              ]
+            },
+            "ARG_LNB_SAN_MARTIN": {
+              "all_prior_games": 166,
+              "recent_400d_games": 43,
+              "days_since_last": 2.0,
+              "effective_games_180d_half_life": 23.097925825326374,
+              "opponents": 18,
+              "seasons": [
+                "2022-23",
+                "2023-24",
+                "2024-25",
+                "2025-26",
+                "2026-27"
+              ]
+            }
+          },
+          "information_cutoff_utc": "2026-10-23T00:00:00+00:00",
+          "recommendation_validated": false,
+          "thresholds": "Five games / 400 days and 60-day staleness are diagnostic flags, not validated selection thresholds.",
+          "unknowns": [
+            "Full domestic schedule coverage",
+            "Expected roster and injuries",
+            "Historical publication times for retrospectively collected results"
+          ],
+          "note": "Data adequacy is separate from win probability; no validated recommendation or accuracy guarantee."
+        },
+        "recommendation_validated": false,
+        "selection_eligible": false
+      },
+      "record": "data/argentina_ledger/forecasts/67b646f03820132a740cc3dd606cc4c95724fc1bbf2b5d3642de6a1f066fc205.json",
+      "threshold_passed": false,
+      "source_confirmation_fresh": true,
+      "selected": false
+    }
+  ],
+  "skipped": [],
+  "settlements": [
+    {
+      "record": "data/argentina_ledger/forecasts/3106036546afdd9305346fba2bc3fee033e92c7e33a65c806c2086679592b99b.json",
+      "forecast_sha256": "74a334c252daa1c17c39de1989dde93c5274fbd151260dc35535c2d1dcf32bb7",
+      "checked_at_utc": "2026-10-23T20:24:39.942874+00:00",
+      "games": [
+        {
+          "event_id": "ARG_LNB_9324c7c7a56e38eb2fb05393",
+          "home": "ARG_LNB_ARGENTINO",
+          "away": "ARG_LNB_QUIMSA",
+          "status": "pending"
+        }
+      ],
+      "note": "Percentage errors use actual positive scores as denominator. Signed errors = prediction minus actual. Winner accuracy is separate from score accuracy; this small batch is not a general benchmark."
+    },
+    {
+      "record": "data/argentina_ledger/forecasts/31874fbb59cfb788736c9fe0c0abcc9fcd24e13fdb45ea05a817b19768c20505.json",
+      "forecast_sha256": "27edbc8c144a278f270202a5d4842d56abc34b68a635bb0e8e92ad722199c894",
+      "checked_at_utc": "2026-10-23T20:24:39.943099+00:00",
+      "games": [
+        {
+          "event_id": "ARG_LNB_9b1a912dea58612618a7cb8d",
+          "home": "ARG_LNB_PENAROL",
+          "away": "ARG_LNB_SAN_MARTIN",
+          "status": "pending"
+        }
+      ],
+      "note": "Percentage errors use actual positive scores as denominator. Signed errors = prediction minus actual. Winner accuracy is separate from score accuracy; this small batch is not a general benchmark."
+    },
+    {
+      "record": "data/argentina_ledger/forecasts/67b646f03820132a740cc3dd606cc4c95724fc1bbf2b5d3642de6a1f066fc205.json",
+      "forecast_sha256": "30e58b5338a5ea718cedbcf2fa1819461603bbae701cb2bc76c5cce2fb155d1b",
+      "checked_at_utc": "2026-10-23T20:24:39.943273+00:00",
+      "games": [
+        {
+          "event_id": "ARG_LNB_605664aaaf5cb52de37dec39",
+          "home": "ARG_LNB_LANUS",
+          "away": "ARG_LNB_SAN_MARTIN",
+          "status": "pending"
+        }
+      ],
+      "note": "Percentage errors use actual positive scores as denominator. Signed errors = prediction minus actual. Winner accuracy is separate from score accuracy; this small batch is not a general benchmark."
+    },
+    {
+      "record": "data/argentina_ledger/forecasts/8139716fbc7bd97b0980793caf48379ea130c0fdda38777a96147574e0bc025b.json",
+      "forecast_sha256": "748e0ee86c9aebecdef4c3588b00dc9755bc7c652bece46abd5c340c0ac7fbe4",
+      "checked_at_utc": "2026-10-23T20:24:39.943424+00:00",
+      "games": [
+        {
+          "event_id": "ARG_LNB_66531a495580310d081e18b6",
+          "home": "ARG_LNB_BOCA",
+          "away": "ARG_LNB_REGATAS",
+          "status": "pending"
+        }
+      ],
+      "note": "Percentage errors use actual positive scores as denominator. Signed errors = prediction minus actual. Winner accuracy is separate from score accuracy; this small batch is not a general benchmark."
+    },
+    {
+      "record": "data/argentina_ledger/forecasts/81cdecc78e36873f9fbc93f5ef4b822a47fc326f62d9f710e2d224e830b65cc6.json",
+      "forecast_sha256": "c1aaca1cdcdec55397909dc7e71dbb584e2f7d7f8b89a2399bb94e58541727f6",
+      "checked_at_utc": "2026-10-23T20:24:39.943565+00:00",
+      "games": [
+        {
+          "event_id": "ARG_LNB_02f55b4e3130a1f40b8bf1c9",
+          "home": "ARG_LNB_LANUS",
+          "away": "ARG_LNB_REGATAS",
+          "status": "pending"
+        }
+      ],
+      "note": "Percentage errors use actual positive scores as denominator. Signed errors = prediction minus actual. Winner accuracy is separate from score accuracy; this small batch is not a general benchmark."
+    },
+    {
+      "record": "data/argentina_ledger/forecasts/86cf7ce2641ce6ac0449ebf5d6430beb1c88f55c4df42d6bf7e6c5cd78e25f6d.json",
+      "forecast_sha256": "793d3da488a99d87f4fbe34274f334bd63c72a60bcfbb3541bc5ffe9fc786d4d",
+      "checked_at_utc": "2026-10-23T20:24:39.943715+00:00",
+      "games": [
+        {
+          "event_id": "ARG_LNB_1960230c36b1dcfc538a81d6",
+          "home": "ARG_LNB_SAN_LORENZO",
+          "away": "ARG_LNB_PLATENSE",
+          "status": "pending"
+        }
+      ],
+      "note": "Percentage errors use actual positive scores as denominator. Signed errors = prediction minus actual. Winner accuracy is separate from score accuracy; this small batch is not a general benchmark."
+    },
+    {
+      "record": "data/argentina_ledger/forecasts/9311785bef96895ab41b978bdb70e5b84e858afbec9eb7388f074457e0508338.json",
+      "forecast_sha256": "cd29f43fc51ca5e2350ebec33bf7f23998a1d5e231bcbc46cc3b33b574a4db19",
+      "checked_at_utc": "2026-10-23T20:24:39.943851+00:00",
+      "games": [
+        {
+          "event_id": "ARG_LNB_37806c608a637044008a6185",
+          "home": "ARG_LNB_RACING",
+          "away": "ARG_LNB_BOCA",
+          "status": "pending"
+        }
+      ],
+      "note": "Percentage errors use actual positive scores as denominator. Signed errors = prediction minus actual. Winner accuracy is separate from score accuracy; this small batch is not a general benchmark."
+    },
+    {
+      "record": "data/argentina_ledger/forecasts/94177daea4a66cf9981da6c566cbc18aa3488a0d846143c8a2cd7a70949b4641.json",
+      "forecast_sha256": "38703a26050542b8fd457c93d19f539a4013bb13f441770c2cf5fd4066179bff",
+      "checked_at_utc": "2026-10-23T20:24:39.944004+00:00",
+      "games": [
+        {
+          "event_id": "ARG_LNB_948031aef52b0920727968d8",
+          "home": "ARG_LNB_RACING",
+          "away": "ARG_LNB_QUIMSA",
+          "status": "pending"
+        }
+      ],
+      "note": "Percentage errors use actual positive scores as denominator. Signed errors = prediction minus actual. Winner accuracy is separate from score accuracy; this small batch is not a general benchmark."
+    },
+    {
+      "record": "data/argentina_ledger/forecasts/9d35349542533881c73cbc30407da4195f6be756c44f87dd846a6beca150a61c.json",
+      "forecast_sha256": "b6b76ce8235e59202c8ec971e1b8767dd72c8e3db1ccb161d6314fec68e93733",
+      "checked_at_utc": "2026-10-23T20:24:39.944137+00:00",
+      "games": [
+        {
+          "event_id": "ARG_LNB_ce57cb5a5f9dfe30999a108e",
+          "home": "ARG_LNB_ATENAS",
+          "away": "ARG_LNB_LANUS",
+          "status": "pending"
+        }
+      ],
+      "note": "Percentage errors use actual positive scores as denominator. Signed errors = prediction minus actual. Winner accuracy is separate from score accuracy; this small batch is not a general benchmark."
+    },
+    {
+      "record": "data/argentina_ledger/forecasts/9ea915b38c032f9bedf506e56ec10e56b02fed564819c01ccf1db33b08172185.json",
+      "forecast_sha256": "700a47ab8863f199cf89541f6e3c6353fedb7f84d88ce0036338634f83380cf2",
+      "checked_at_utc": "2026-10-23T20:24:39.944282+00:00",
+      "games": [
+        {
+          "event_id": "ARG_LNB_811d4583aa343eebdc0ddc79",
+          "home": "ARG_LNB_GIMNASIA",
+          "away": "ARG_LNB_FERRO",
+          "status": "pending"
+        }
+      ],
+      "note": "Percentage errors use actual positive scores as denominator. Signed errors = prediction minus actual. Winner accuracy is separate from score accuracy; this small batch is not a general benchmark."
+    }
+  ],
+  "performance": {
+    "settled_games": 0,
+    "pending_games": 10,
+    "winner_accuracy": null,
+    "mean_score_mae": null,
+    "mean_total_absolute_error": null,
+    "mean_margin_absolute_error": null
+  },
+  "note": "Model probabilities are not measured accuracy. Rejected/low-probability forecasts remain visible. Only source-confirmed timestamped finals settle. No live predictor. Small batches do not establish general accuracy."
+}
