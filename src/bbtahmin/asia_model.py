@@ -15,9 +15,12 @@ from .ozellik import build_features,FEATURES
 from .veri.asia import CODES,NAMES
 
 SPEC='asia-separate-prior-policy-v1'
+# Older Japanese seasons are retained for measured expansion research. Keep the
+# established training cohort until the broader-history challenger is validated.
+DEFAULT_HISTORY_START={'JP_B1':'2021-22','JP_B2':'2021-22'}
 
 
-def load(code):
+def load(code,expanded_history=False):
     if code not in CODES:raise ValueError('Unsupported Asian league')
     path=Path(f'data/asia/{code}.parquet')
     if not path.exists():raise ValueError('No collected archive for '+code)
@@ -26,6 +29,8 @@ def load(code):
             or not np.isfinite(g[['ev_skor','dep_skor']].to_numpy(float)).all()
             or (g[['ev_skor','dep_skor']]<=0).any().any() or (g.ev_skor==g.dep_skor).any()):
         raise ValueError('Invalid or mixed Asian league dataset')
+    if not expanded_history and code in DEFAULT_HISTORY_START:
+        g=g[g.sezon>=DEFAULT_HISTORY_START[code]].reset_index(drop=True)
     return g
 
 
@@ -128,4 +133,5 @@ def predict(code,home,away,when):
         recent_games=counts,uzatma=None,experimental=True,training_cutoff=cutoff.isoformat(),selection=info,
         dataset_sha256=hashlib.sha256(Path(f'data/asia/{code}.parquet').read_bytes()).hexdigest(),
         calibration_regime_gap=info['calibration_season_gap']>1,
+        history_start_season=DEFAULT_HISTORY_START.get(code),
         note='Separate-league pregame research, not validated live/score certainty. Models fit on earlier seasons, features withhold the entire UTC day. Cup rules, promotions, historical publication and neutral venues are not fully modeled.')

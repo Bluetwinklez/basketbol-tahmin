@@ -46,9 +46,9 @@ def save(code,records,teams,report,fixtures=None):
         entry['aliases']=sorted(set(entry.get('aliases',[])+previous.get('aliases',[])+([previous['name']] if previous.get('name') else [])))
         old[key]=entry
     catalog.write_text(json.dumps(old,ensure_ascii=False,indent=2))
-    if fixtures:
+    if fixtures is not None:
         f=pd.DataFrame(fixtures)
-        if f.mac_id.duplicated().any():raise ValueError('Duplicate current fixtures')
+        if not f.empty and f.mac_id.duplicated().any():raise ValueError('Duplicate current fixtures')
         f.to_parquet(root/f'{code}_fixtures.parquet',index=False)
     report.update(games=len(g),teams=len(set(g.ev)|set(g.dep)),seasons=g.groupby('sezon').size().to_dict(),
         dataset_sha256=hashlib.sha256(path.read_bytes()).hexdigest(),trained=False)
