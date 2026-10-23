@@ -15,7 +15,7 @@ import pandas as pd
 from .prospective import freeze, settle, verify
 from .quality import timestamp
 
-LEAGUES = ('E', 'KBL', 'JP_B1', 'JP_B2', 'PBA_GOV')
+LEAGUES = ('E', 'KBL', 'JP_B1', 'JP_B2', 'PBA_GOV', 'ABA', 'ECW', 'FEC')
 EURO_URL = 'https://api-live.euroleague.net/v2/competitions/E/seasons/{season}/games'
 
 
@@ -23,7 +23,8 @@ def refresh(leagues):
     """Refresh requested public sources independently; retain per-source errors."""
     outcomes = {}
     groups = [('E', ['E']), ('KBL', ['KBL']),
-              ('Japan', [c for c in leagues if c.startswith('JP_')]), ('PBA', ['PBA_GOV'])]
+              ('Japan', [c for c in leagues if c.startswith('JP_')]), ('PBA', ['PBA_GOV']), ('ABA', ['ABA']),
+              ('ECW', ['ECW']), ('FEC', ['FEC'])]
     today = pd.Timestamp.now(tz='UTC')
     year = today.year if today.month >= 7 else today.year - 1
     for source, codes in groups:
@@ -52,6 +53,12 @@ def refresh(leagues):
                 elif source == 'Japan':
                     from .veri.japan import collect
                     collect(years=(year,), divisions=tuple(int(c[-1]) for c in codes))
+                elif source == 'ABA':
+                    from .veri.aba import collect
+                    collect(first=year, last=year, refresh=True)
+                elif source in ('ECW', 'FEC'):
+                    from .veri.competitions import collect_fiba
+                    collect_fiba(source)
                 else:
                     from .veri.pba_current import collect
                     collect()
@@ -73,17 +80,20 @@ def source_facts(code):
             raise ValueError('No EuroLeague schedule snapshot; run with --guncelle')
         payload = json.loads(path.read_text())
         return payload['fixtures'], payload['results']
-    root = Path('data/asia')
+    root = Path('data/competitions' if code in ('ABA', 'ECW', 'FEC') else 'data/asia')
     fixtures_path = root / f'{code}_fixtures.parquet'
     archive_path = root / f'{code}.parquet'
     if not archive_path.exists() or not fixtures_path.exists():
         raise ValueError(f'No fixture/archive snapshot for {code}; run with --guncelle')
+    catalog_path = root / f'{code}_teams.json'
+    catalog = json.loads(catalog_path.read_text()) if catalog_path.exists() else {}
     def convert(row, final=False):
         result = dict(event_id=row['mac_id'], league=code, home=row['ev'], away=row['dep'],
                       start_utc=timestamp(row['tarih_utc']).isoformat(),
                       captured_at=timestamp(row['captured_at_utc']).isoformat(),
                       source_url=row['source_url'],
-                      home_name=row.get('home_name') or row['ev'], away_name=row.get('away_name') or row['dep'],
+                      home_name=row.get('home_name') or catalog.get(row['ev'], {}).get('name', row['ev']),
+                      away_name=row.get('away_name') or catalog.get(row['dep'], {}).get('name', row['dep']),
                       status='final' if final else row['status'])
         if final:
             result.update(home_score=int(row['ev_skor']), away_score=int(row['dep_skor']))
@@ -92,8 +102,12 @@ def source_facts(code):
     # exact-time prospective fixture using a guessed midnight result timestamp.
     archive = pd.read_parquet(archive_path)
     finals = [convert(r, True) for r in archive.to_dict('records')
-              if r.get('date_precision') == 'timestamp']
-    fixtures = [convert(r) for r in pd.read_parquet(fixtures_path).to_dict('records')]
+              if r.get('date_precision') == 'timestamp' and
+              isinstance(r.get('source_url'), str) and pd.notna(r.get('captured_at_utc'))]
+    fixtures = [convert(r) for r in pd.read_parquet(fixtures_path).to_dict('records')
+                if isinstance(r.get('source_url'), str) and pd.notna(r.get('captured_at_utc'))]
+    if not fixtures:
+        raise ValueError(f'No timestamped fixture provenance for {code}; refresh first')
     return fixtures, finals
 
 

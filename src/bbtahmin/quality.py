@@ -6,7 +6,7 @@ import numpy as np
 import pandas as pd
 
 ARCHIVES={'core':'data/maclar.parquet','CBA':'data/cba_games.parquet',
-          **{c:f'data/competitions/{c}.parquet' for c in ('ECW','FEC','VTB','ELW')},
+          **{c:f'data/competitions/{c}.parquet' for c in ('ECW','FEC','VTB','ELW','ABA')},
           'CZ_W_ZBL':'data/domestic/CZ_W_ZBL.parquet','E_recent':'data/recent/E.parquet'}
 
 
