@@ -82,6 +82,10 @@ def main():
     daily.add_argument('--min-guven',type=float,default=.65,help='Probability filter, not an observed accuracy guarantee')
     daily.add_argument('--cikti',default='rapor/daily',help='Persistent local record directory; reuse it to retain prospective history')
     daily.add_argument('--json',action='store_true',help='Machine-readable report instead of the console Markdown table')
+    app=sub.add_parser('app',help='Open the local browser application for forecasts and result tracking')
+    app.add_argument('--port',type=int,default=8765)
+    app.add_argument('--cikti',default='rapor/daily',help='Reuse the same local forecast ledger as gunluk')
+    app.add_argument('--no-browser',action='store_true',help='Print the local address without opening a browser')
     injuries=sub.add_parser('sakatlik-arsivle',help='Archive an actual timestamped official NBA report')
     injuries.add_argument('--hours',type=float,default=2)
     players=sub.add_parser('oyuncu-baglam',help='Lagged NBA rotation and genuinely observed dated injury context')
@@ -90,7 +94,10 @@ def main():
     travel=sub.add_parser('seyahat-baglam',help='Observed venue-to-venue schedule proxies; no inferred actual itinerary')
     travel.add_argument('--event-id',required=True);travel.add_argument('--asof',required=True)
     args=parser.parse_args()
-    if args.command=='gunluk':
+    if args.command=='app':
+        from .app import serve
+        serve(args.port,args.cikti,not args.no_browser)
+    elif args.command=='gunluk':
         import json
         from .daily import run,markdown
         result=run(args.ligler,args.cikti,args.guncelle,args.saat,args.min_guven)

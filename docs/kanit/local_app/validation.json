@@ -1,0 +1,51 @@
+{
+  "checked_at_utc": "2026-10-23T12:12:18.584088+00:00",
+  "base_revision": "446176d5f27b7b1e904bd8224a60cedc2b1ab50b",
+  "python_tests": {
+    "passed": 245,
+    "failed": 0,
+    "skipped": 0,
+    "existing_pandas_warnings": 13
+  },
+  "dom_tests": {
+    "passed": 8,
+    "failed": 0,
+    "skipped": 0,
+    "runtime_dependency": false
+  },
+  "integration": {
+    "tested_at": "2026-10-23T12:09:37.673Z",
+    "real_local_api": true,
+    "dom_simulation": true,
+    "visual_browser_verified": false,
+    "upcoming": 3,
+    "performance": {
+      "settled_games": 0,
+      "pending_games": 3,
+      "winner_accuracy": null,
+      "mean_score_mae": null,
+      "mean_total_absolute_error": null,
+      "mean_margin_absolute_error": null
+    },
+    "sources": "refreshed",
+    "exports": [
+      "json",
+      "csv",
+      "md"
+    ],
+    "immutable_reuse": true,
+    "details_preserved": true
+  },
+  "package_ui_assets_verified": true,
+  "hashes": {
+    "src/bbtahmin/app.py": "e46eda04f6c4ecb4790f34d440ef1d591e884956e998d76716ab0c2261e6e516",
+    "src/bbtahmin/ui/app.css": "6c1576e1518c1fc259512006987afc977b8218c57d58e5502ffd962430253636",
+    "src/bbtahmin/ui/app.js": "80d99f576e8f317265c52eebe7a34f132b41380edd6b9d11729fe0ff0a2f6a10",
+    "src/bbtahmin/ui/index.html": "eec46fb3e491274604848b636d163dd53bedc48effb32b18a77a372233d6b523"
+  },
+  "visual_browser_verification": {
+    "completed": false,
+    "reason": "The remote browser could not reach the isolated loopback HTTP server. DOM and real local HTTP checks passed; rendered desktop/mobile visual checks remain incomplete."
+  },
+  "model_policy_changed": false
+}
