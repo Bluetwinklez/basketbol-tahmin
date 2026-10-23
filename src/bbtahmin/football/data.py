@@ -13,8 +13,10 @@ ROOT = Path('data/football')
 LEAGUES = {'TR1': 'Turkish Süper Lig', 'EN1': 'Premier League', 'EN2': 'Championship',
            'DE1': 'Bundesliga', 'DE2': '2. Bundesliga', 'ES1': 'La Liga', 'ES2': 'Segunda División',
            'IT1': 'Serie A', 'IT2': 'Serie B', 'FR1': 'Ligue 1', 'FR2': 'Ligue 2',
-           'NL1': 'Eredivisie', 'PT1': 'Primeira Liga', 'AT1': 'Austrian Bundesliga'}
+           'NL1': 'Eredivisie', 'PT1': 'Primeira Liga', 'AT1': 'Austrian Bundesliga',
+           'BE1': 'Belgian Pro League', 'GR1': 'Greek Super League', 'SC1': 'Scottish Premiership'}
 JSON_CODES = {c: c[:2].lower()+'.'+c[2:] for c in LEAGUES if c != 'TR1'}
+JSON_CODES['SC1'] = 'sco.1'
 # Explicit identity aliases only; no fuzzy cross-club merges.
 ALIASES = {'kasimpasa sk': 'kasimpasa', 'kasimpasa': 'kasimpasa', 'konyaspor': 'atiker konyaspor',
            'alanyaspor': 'aytemiz alanyaspor', 'genclerbirligi': 'genclerbirligi'}
@@ -174,5 +176,15 @@ def load(root=ROOT):
     for path in sorted(Path(root).glob('*_20*.json.gz')):
         rows.extend(json.loads(gzip.decompress(path.read_bytes()).decode('utf8'))['rows'])
     frame=pd.DataFrame(rows)
-    if len(frame) and frame.event_id.duplicated().any(): raise ValueError('Duplicate archive fixtures')
+    if len(frame):
+        if frame.event_id.duplicated().any(): raise ValueError('Duplicate archive fixtures')
+        if frame.duplicated(['league','date','home','away']).any():
+            raise ValueError('Duplicate natural fixture identity')
+        if not set(frame.league) <= set(LEAGUES) or (frame.home == frame.away).any():
+            raise ValueError('Invalid archive league or teams')
+        finals=frame.loc[frame.status == 'final']
+        values=finals[['home_goals','away_goals']].apply(pd.to_numeric,errors='coerce')
+        if values.isna().any().any() or ((values < 0) | (values > 30) | (values % 1 != 0)).any().any():
+            raise ValueError('Invalid archive regulation scores')
     return frame
+

@@ -200,6 +200,8 @@ function render() {
   }
 }
 function renderCards() {
+  const opened = new Set([...document.querySelectorAll('.match-card[data-event]')]
+    .filter(el => el.querySelector('details')?.open).map(el => el.dataset.event));
   const r = snapshot?.report,
     query = $("search").value.trim().toLocaleLowerCase(),
     league = $("league-filter").value,
@@ -215,11 +217,14 @@ function renderCards() {
   $("visible-count").textContent = entries.length;
   $("empty").hidden = entries.length > 0;
   $("forecast-grid").replaceChildren(...entries.map(card));
+  for (const el of document.querySelectorAll('.match-card[data-event]'))
+    if (opened.has(el.dataset.event)) el.querySelector('details').open = true;
 }
 function card(entry) {
   const f = entry.fixture,
     p = entry.prediction,
     el = node("article", "match-card");
+  el.dataset.event = `${f.league}:${f.event_id}`;
   const top = node("div", "card-top");
   top.append(
     node("span", "league-tag", (names[f.league] || f.league).toUpperCase()),
@@ -328,6 +333,11 @@ function card(entry) {
     }
   } catch {}
   details.append(summary, body);
+  if (entry.total_estimates?.length) {
+    body.append(node('p', '', 'Estimated totals · normal interval approximation, not separately calibrated'));
+    for (const estimate of entry.total_estimates)
+      body.append(node('div', '', `${estimate.line} points: Over ${percent(estimate.over)} / Under ${percent(estimate.under)}`));
+  }
   el.append(details);
   return el;
 }
@@ -420,3 +430,4 @@ function renderChecks() {
   $("issues").replaceChildren(...issues.map((text) => node("li", "", text)));
 }
 init();
+

@@ -1,0 +1,13 @@
+{
+  "base_commit": "53f0caa83ad878fe26600fc45581536179b9467c",
+  "local_unit_tests": {"passed": 11, "not_run_in_successful_subset": 1},
+  "local_http_test": {"completed": false, "reason": "Windows socket policy denied the client connection (WinError 10013). The test remains enabled in CI."},
+  "local_rendered_test": {"completed": false, "reason": "Chromium exited during launch under the local application policy. The rendered fixture job remains enabled in CI."},
+  "python_compile": "passed",
+  "javascript_syntax": "passed",
+  "football_comparison": {"games": 229, "variants": 3, "same_monthly_cohorts": true, "prospective": false},
+  "added_football_finals": 3133,
+  "added_basketball_finals": 0,
+  "basketball_backfill_executed": false,
+  "note": "CI results are authoritative for full-suite and rendered-fixture execution. No local visual pass or general success-rate improvement is claimed."
+}

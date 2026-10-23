@@ -103,7 +103,7 @@ def identity(home, away, when):
     return f'TR_BSL_B{day}_{home}_{away}'
 
 
-def fixtures(payload, year, captured):
+def fixtures(payload, year, captured, identities=None):
     result = []
     for row in payload['data']:
         if row['league']['id'] != 393 or row['league']['sportId'] != 23: raise ValueError('Mixed beIN competition')
@@ -115,7 +115,11 @@ def fixtures(payload, year, captured):
         when = pd.Timestamp(row['matchDate'])
         when = when.tz_localize('UTC') if when.tzinfo is None else when.tz_convert('UTC')
         if not year <= when.year <= year+1: raise ValueError('beIN date outside season')
-        result.append(dict(mac_id=identity(home,away,when), lig='TR_BSL', sezon=f'{year}-{str(year+1)[-2:]}',
+        provider_id=str(row['id'])
+        if not provider_id.isdecimal(): raise ValueError('Invalid beIN fixture ID')
+        stable_key=f'{year}:{provider_id}'
+        event_id=(identities or {}).get(stable_key, f'TR_BSL_BID{year}_{provider_id}')
+        result.append(dict(mac_id=event_id, lig='TR_BSL', sezon=f'{year}-{str(year+1)[-2:]}',
             tarih_utc=when, ev=home, dep=away, home_name=h['name'].strip(), away_name=a['name'].strip(),
             source_url=CURRENT+'fikstur', source_event_id=str(row['id']), captured_at_utc=captured,
             date_precision='timestamp', regulation_minutes=40, tarafsiz_saha=False,
@@ -174,12 +178,21 @@ def collect(first=2016, last=None):
             teams[key]=dict(name=name,aliases=sorted(set(old.get('aliases',[])+[old.get('name',name)])))
         print('Turkey',year,len(r),flush=True)
     scheduled = []
+    registry_path=Path('data/competitions/TR_BSL_fixture_ids.json')
+    registry=json.loads(registry_path.read_text()) if registry_path.exists() else {}
+    previous_path=Path('data/competitions/TR_BSL_fixtures.parquet')
+    if previous_path.exists():
+        previous=pd.read_parquet(previous_path)
+        if 'source_event_id' in previous:
+            for item in previous.to_dict('records'):
+                provider=str(item['source_event_id']);season_year=str(item['sezon'])[:4]
+                registry.setdefault(f'{season_year}:{provider}',item['mac_id'])
     if first <= active <= last:
         try:
             current = next_data(fetch(CURRENT+'fikstur',refresh=True),active)
             standings = next_data(fetch(CURRENT+'puan-durumu',refresh=True),active)
             records += recent_results(standings,active,now.isoformat())
-            scheduled=fixtures(current,active,now.isoformat());sources += [CURRENT+'fikstur',CURRENT+'puan-durumu']
+            scheduled=fixtures(current,active,now.isoformat(),registry);sources += [CURRENT+'fikstur',CURRENT+'puan-durumu']
             for row in scheduled:
                 for key,name in [(row['ev'],row['home_name']),(row['dep'],row['away_name'])]:
                     old=teams.get(key,{})
@@ -187,6 +200,10 @@ def collect(first=2016, last=None):
         except Exception as exc:
             errors.append(dict(source=CURRENT, error=f'{type(exc).__name__}: {exc}', retained_previous_snapshot=True))
     result=save('TR_BSL',records,scheduled,teams,sources,errors)
+    if scheduled:
+        for item in scheduled: registry[f"{item['sezon'][:4]}:{item['source_event_id']}"]=item['mac_id']
+        temporary=registry_path.with_suffix('.part')
+        temporary.write_text(json.dumps(registry,indent=2));temporary.replace(registry_path)
     target=Path('docs/kanit/competitions/TR_BSL_collection.json');report=json.loads(target.read_text())
     report.update(current_sources='beIN publisher fixtures and standings; historical TBLStat numerical facts',
         source_team_identity_map=BEIN_IDS, unknown_provider_teams=[12998],
@@ -194,3 +211,4 @@ def collect(first=2016, last=None):
         current_coverage='Current published fixture week; standings lastMatches can be a rolling window. Historical coverage not guaranteed complete.')
     target.write_text(json.dumps(report,indent=2))
     return result
+
