@@ -6,6 +6,8 @@ A Python research package for pregame basketball probabilities, score margins an
 
 ## What works
 
+Open the new **local browser application** with **`python -m bbtahmin app`**: match cards, search/league filters, uncertainty details, background source refresh, separate final-result errors and report downloads. It shares the existing local forecast ledger. [Start and use the application](docs/local-app.md).
+
 For daily use, run **`python -m bbtahmin gunluk --guncelle`** after installation. It refreshes supported schedules, preserves the earliest pregame forecasts, and writes a separate final-result/error report to `rapor/daily/latest.md`. Source failures and rejected forecasts remain visible. See [daily workflow, historical backfill and measurement limits](docs/daily-workflow.md).
 
 | Capability | Status |
