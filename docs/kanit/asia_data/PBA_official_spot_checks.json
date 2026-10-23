@@ -1,0 +1,34 @@
+{
+  "checked_at_utc": "2026-10-23T07:40:32.208101+00:00",
+  "sources": [
+    "https://pba.ph/",
+    "https://www.sportsmetric.ph/leagues/pba"
+  ],
+  "method": "Three numeric score pairs read from the official PBA homepage and compared by team identity/date; no claim that every game or clock is independently verified.",
+  "games": [
+    {
+      "official_calendar_date": "2026-10-21",
+      "team_scores": {
+        "PBA_938": 103,
+        "PBA_1241": 107
+      },
+      "matched_event_id": "PBA_R544799"
+    },
+    {
+      "official_calendar_date": "2026-10-21",
+      "team_scores": {
+        "PBA_937": 135,
+        "PBA_1644": 133
+      },
+      "matched_event_id": "PBA_R544798"
+    },
+    {
+      "official_calendar_date": "2026-10-18",
+      "team_scores": {
+        "PBA_432": 106,
+        "PBA_1744": 89
+      },
+      "matched_event_id": "PBA_R544797"
+    }
+  ]
+}

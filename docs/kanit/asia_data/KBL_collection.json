@@ -1,0 +1,119 @@
+{
+  "source": "Official KBL API public website",
+  "sources": [
+    "https://api.kbl.or.kr/match/list?fromDate=20170101&toDate=20171231&seasonGrade=1",
+    "https://api.kbl.or.kr/match/list?fromDate=20180101&toDate=20181231&seasonGrade=1",
+    "https://api.kbl.or.kr/match/list?fromDate=20190101&toDate=20191231&seasonGrade=1",
+    "https://api.kbl.or.kr/match/list?fromDate=20200101&toDate=20201231&seasonGrade=1",
+    "https://api.kbl.or.kr/match/list?fromDate=20210101&toDate=20211231&seasonGrade=1",
+    "https://api.kbl.or.kr/match/list?fromDate=20220101&toDate=20221231&seasonGrade=1",
+    "https://api.kbl.or.kr/match/list?fromDate=20230101&toDate=20231231&seasonGrade=1",
+    "https://api.kbl.or.kr/match/list?fromDate=20240101&toDate=20241231&seasonGrade=1",
+    "https://api.kbl.or.kr/match/list?fromDate=20250101&toDate=20251231&seasonGrade=1",
+    "https://api.kbl.or.kr/match/list?fromDate=20260101&toDate=20261231&seasonGrade=1"
+  ],
+  "counts": [
+    {
+      "calendar_year": 2017,
+      "returned": 321,
+      "accepted": 292,
+      "excluded": {
+        "other_competitions": 29
+      }
+    },
+    {
+      "calendar_year": 2018,
+      "returned": 291,
+      "accepted": 267,
+      "excluded": {
+        "other_competitions": 24
+      }
+    },
+    {
+      "calendar_year": 2019,
+      "returned": 287,
+      "accepted": 265,
+      "excluded": {
+        "other_competitions": 22
+      }
+    },
+    {
+      "calendar_year": 2020,
+      "returned": 216,
+      "accepted": 201,
+      "excluded": {
+        "other_competitions": 15
+      }
+    },
+    {
+      "calendar_year": 2021,
+      "returned": 311,
+      "accepted": 278,
+      "excluded": {
+        "other_competitions": 33
+      }
+    },
+    {
+      "calendar_year": 2022,
+      "returned": 302,
+      "accepted": 269,
+      "excluded": {
+        "other_competitions": 33
+      }
+    },
+    {
+      "calendar_year": 2023,
+      "returned": 307,
+      "accepted": 269,
+      "excluded": {
+        "other_competitions": 37,
+        "not_final": 1
+      }
+    },
+    {
+      "calendar_year": 2024,
+      "returned": 289,
+      "accepted": 252,
+      "excluded": {
+        "other_competitions": 36,
+        "not_final": 1
+      }
+    },
+    {
+      "calendar_year": 2025,
+      "returned": 329,
+      "accepted": 286,
+      "excluded": {
+        "not_final": 1,
+        "other_competitions": 42
+      }
+    },
+    {
+      "calendar_year": 2026,
+      "returned": 307,
+      "accepted": 170,
+      "excluded": {
+        "other_competitions": 42
+      }
+    }
+  ],
+  "captured_at_utc": "2026-10-23T07:22:37.086227+00:00",
+  "limitations": "Senior men regular season only, exact source season/game identities; D-League/cups/playoffs excluded. Calendar-window responses are unpaginated in the observed client; independent completeness is unverified. Historical publication, relocations/ownership continuity and neutral venues require caution. Public web routing headers only; no authentication.",
+  "games": 2549,
+  "teams": 13,
+  "seasons": {
+    "2016-17": 147,
+    "2017-18": 270,
+    "2018-19": 270,
+    "2019-20": 213,
+    "2020-21": 270,
+    "2021-22": 270,
+    "2022-23": 270,
+    "2023-24": 269,
+    "2024-25": 268,
+    "2025-26": 270,
+    "2026-27": 32
+  },
+  "dataset_sha256": "9e09a0ebac480fc13986b381787b1dfd5d1266dfed9856cc44167fb8ecb13278",
+  "trained": false
+}

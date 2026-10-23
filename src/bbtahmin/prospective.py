@@ -20,7 +20,7 @@ def fingerprint(root=Path('.')):
 def dataset_hashes():
     """Conservatively fingerprint all local model inputs, including new side data."""
     paths={Path(p) for p in ARCHIVES.values() if Path(p).exists()}
-    for folder in ('data/competitions','data/domestic','data/context','data/observations'):
+    for folder in ('data/competitions','data/domestic','data/context','data/observations','data/asia'):
         paths.update(Path(folder).rglob('*.parquet'))
         paths.update(Path(folder).rglob('*.json'))
     paths.update(Path('data').glob('*.parquet'))

@@ -1,0 +1,25 @@
+{
+  "first": 2015,
+  "last": 2018,
+  "counts": [],
+  "errors": [
+    {
+      "year": 2015,
+      "reason": "Incomplete or missing team selector"
+    },
+    {
+      "year": 2016,
+      "reason": "Incomplete or missing team selector"
+    },
+    {
+      "year": 2017,
+      "reason": "Incomplete or missing team selector"
+    },
+    {
+      "year": 2018,
+      "reason": "Incomplete or missing team selector"
+    }
+  ],
+  "captured_at_utc": "2026-10-23T07:41:10.677019+00:00",
+  "note": "Failed/missing selectors are unknown coverage, not proof of zero games."
+}

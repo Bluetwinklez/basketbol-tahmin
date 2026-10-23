@@ -1,0 +1,97 @@
+{
+  "archives": [
+    {
+      "league": "KBL",
+      "games": 2549,
+      "seasons": {
+        "2016-17": 147,
+        "2017-18": 270,
+        "2018-19": 270,
+        "2019-20": 213,
+        "2020-21": 270,
+        "2021-22": 270,
+        "2022-23": 270,
+        "2023-24": 269,
+        "2024-25": 268,
+        "2025-26": 270,
+        "2026-27": 32
+      },
+      "duplicate_ids": 0,
+      "invalid_scores": 0,
+      "dataset_sha256": "9e09a0ebac480fc13986b381787b1dfd5d1266dfed9856cc44167fb8ecb13278"
+    },
+    {
+      "league": "JP_B1",
+      "games": 3657,
+      "seasons": {
+        "2021-22": 604,
+        "2022-23": 718,
+        "2023-24": 720,
+        "2024-25": 719,
+        "2025-26": 780,
+        "2026-27": 116
+      },
+      "duplicate_ids": 0,
+      "invalid_scores": 0,
+      "dataset_sha256": "ff4e19f1f6098166cc1fff8c7faf92620f947f2665251937a7e4c620b98467dd"
+    },
+    {
+      "league": "JP_B2",
+      "games": 2149,
+      "seasons": {
+        "2021-22": 361,
+        "2022-23": 420,
+        "2023-24": 420,
+        "2024-25": 420,
+        "2025-26": 420,
+        "2026-27": 108
+      },
+      "duplicate_ids": 0,
+      "invalid_scores": 0,
+      "dataset_sha256": "9b849f7b7bf796c8dc182c763a29c84e21b196c39ea2a15574beac357d5bd200"
+    },
+    {
+      "league": "PBA_GOV",
+      "games": 322,
+      "seasons": {
+        "2018-19": 79,
+        "2021-22": 88,
+        "2022-23": 83,
+        "2024-25": 2,
+        "2025-26": 70
+      },
+      "duplicate_ids": 0,
+      "invalid_scores": 0,
+      "dataset_sha256": "44e05154637d3d5c01f7bc19ff6929c75e1605cd4e0edd82afc12bcb9547ad3c"
+    },
+    {
+      "league": "PBA_COM",
+      "games": 291,
+      "seasons": {
+        "2018-19": 89,
+        "2022-23": 99,
+        "2025-26": 103
+      },
+      "duplicate_ids": 0,
+      "invalid_scores": 0,
+      "dataset_sha256": "e69325ce46706aaf79ed34327e525eb39769858e0a76c32e2a70314a4340c21c"
+    },
+    {
+      "league": "PBA_PHI",
+      "games": 275,
+      "seasons": {
+        "2018-19": 93,
+        "2022-23": 94,
+        "2025-26": 88
+      },
+      "duplicate_ids": 0,
+      "invalid_scores": 0,
+      "dataset_sha256": "6b86ee459c474989e9a4059650ed1aed201ada33e533a6dd2d9a0a4b8cad0ad9"
+    }
+  ],
+  "new_games": 9243,
+  "validated_player_rows": 1018,
+  "checks": "No duplicate fixture IDs, invalid scores, cross-division fixture overlap or orphaned/duplicated player rows. Existing frozen EuroLeague file bytes unchanged.",
+  "frozen_euroleague_file_sha256": "55b784951cee428f8109458ea45081decd8039b8ee789d550d6ab6170209872e",
+  "completeness": "Unknown; counts are collected observations, not a complete season certification."
+}

@@ -2,7 +2,7 @@
 
 A Python research package for pregame basketball probabilities, score margins and totals. It combines a reproducible historical archive, chronological model evaluation, an experimental Iddaa bulletin reader and a read-only local MCP server.
 
-**The archive contains 54,808 games. More data has not established a general increase in prediction accuracy.** Results below distinguish full coverage from confidence-filtered subsets, and historical tests from live performance.
+**The core archive contains 54,808 games; the separate Asian extension adds 9,243 results. More data has not established a general increase in prediction accuracy.** Results below distinguish full coverage from confidence-filtered subsets, and historical tests from live performance.
 
 ## What works
 
@@ -11,6 +11,7 @@ A Python research package for pregame basketball probabilities, score margins an
 | EuroLeague, EuroCup, NBA and Australian NBL history | Available; 54,808 stored games |
 | Chinese CBA | Separate 2,386-game archive, 20 teams; experimental CBA-only score model |
 | EuroCup Women (ECW), FIBA Europe Cup men (FEC), VTB men | Separate experimental archives: 674 / 651 / 860 games; independent pregame models |
+| KBL, Japan B1/B2, PBA conferences | 9,243 separate results; KBL/Japan and Governors Cup experimental models; other PBA cups have insufficient training folds |
 | CBA in-play state | Experimental manual score/period/remaining-clock projection; regulation only, no automatic live scoreboard |
 | Home-win probability, score, margin and total; 80% score intervals | Available; uncertainty estimates need continued validation |
 | Home baseline, Elo, MOV Elo, logistic regression, gradient boosting, score regression, ensemble | Chronological evaluation; parameters selected using earlier seasons |
@@ -30,6 +31,14 @@ A Python research package for pregame basketball probabilities, score margins an
 | Four-factor/shooting profiles | Implemented and tested as an experiment; **not enabled by default** |
 | Turkish BSL, other unsupported leagues, non-CBA in-play prediction | No trained model; bulletin presence does not imply model support |
 | Betting execution, guaranteed returns | Not provided |
+
+## Asian data extension
+
+Added **9,243 distinct final results**: KBL **2,549**, Japan B1 **3,657**, Japan B2 **2,149**, PBA Governors Cup **322**, Commissioners Cup **291**, Philippine Cup **275**. These archives are independent of the existing 54,808-game core; player/fixture rows are not counted as extra completed games. There are also **1,018 validated PBA player-match observations**, currently excluded from default model inputs.
+
+The extension fits fixed league-specific score/logistic/Elo/ensemble candidates using earlier-season training and calibration. It never silently borrows NBA/NBL models for these leagues. PBA conferences stay separate, the current Governors Cup campaign is explicitly matched rather than inferred from July, and Japanese 2026 league-format changes are recorded. Missing coverage, rejected player rows and skipped model folds are visible. See [Asian sources, training, limitations and refresh commands](docs/asian-data-and-models.md).
+
+Full-cohort historical winner accuracy for the prior-selected policy is **64.14% (864/1,347)** on the last five KBL archive seasons, **68.63% (1,523/2,219)** across three Japanese B1 seasons, and **70.32% (886/1,260)** across three B2 seasons. Fixed score candidates score 62.14%, 68.81% and 71.19% respectively: model selection is not uniformly better. Partial current KBL is only **15/32 (46.88%)**. Governors Cup is 45/70 in its partial campaign, with an old calibration regime and no eligible selections; the other two cups lack a qualifying training fold. These are retrospective observations, not promised live success rates. [All variants, errors and partial cohorts](docs/kanit/asia_models/summary.csv).
 
 ## Reliability development and prospective verification
 
@@ -248,7 +257,7 @@ python -m pytest -q
 
 Tests are offline. Install the MCP extra to include its protocol test; otherwise that optional test skips. GitHub Actions installs the extra and runs the suite.
 
-Latest local verification (2026-10-23): **205 tests passed**, including the optional MCP protocol test, source identity/final-score boundaries, date-only embargoes, archive-order invariance, future-result isolation, player-report availability and travel unknowns. See [test evidence](docs/kanit/remaining_tests.xml). Earlier reports remain historical snapshots. The server exposes six read-only tools.
+Latest local verification (2026-10-23): **213 tests passed**, including the optional MCP protocol test, source identity/final-score boundaries, date-only embargoes, archive-order invariance, future-result isolation, player-report availability and travel unknowns. See [latest test evidence](docs/kanit/asia_tests.xml). Earlier reports remain historical snapshots. The server exposes six read-only tools.
 
 A [fresh runtime verification](docs/kanit/runtime_validation/README.md) retrained all seven models for 2025–26 and partial 2026–27, reproduced 15,932 archived prediction rows within 2.04e-14, exercised a real bulletin fixture, and documented the rejection of unsupported live CBA games. It also reports the chronological **model-selection policy** separately from the fixed-model tables above: NBA 65.81% and NBL 59.22% across five completed seasons.
 

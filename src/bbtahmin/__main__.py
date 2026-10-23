@@ -1,5 +1,6 @@
 import argparse
 def main():
+    from .veri.asia import CODES as ASIA_CODES
     parser=argparse.ArgumentParser(description='Sızıntısız basketbol tahmin sistemi')
     sub=parser.add_subparsers(dest='command',required=True)
     collect=sub.add_parser('topla')
@@ -20,7 +21,7 @@ def main():
     bt.add_argument('--ilk-test',type=int,help='İlk değerlendirilecek sezonun başlangıç yılı; eğitim geçmişi korunur')
     prediction=sub.add_parser('tahmin',help='Gelecek maçları tahmin et: tahmin "Fenerbahçe - Real Madrid" "Celtics - Lakers"')
     prediction.add_argument('maclar',nargs='+',help='"Ev - Deplasman" biçiminde bir ya da daha çok maç')
-    prediction.add_argument('--lig',choices=['E','U','NBA','NBL','CBA','ECW','FEC','VTB'],help='Verilmezse takım adlarından bulunur')
+    prediction.add_argument('--lig',choices=['E','U','NBA','NBL','CBA','ECW','FEC','VTB',*ASIA_CODES],help='Verilmezse takım adlarından bulunur')
     prediction.add_argument('--tarih',help='Maç zamanı, ör. 2026-10-23T20:45 (saat dilimi yoksa İstanbul). Varsayılan: şimdi')
     prediction.add_argument('--hierarchical',action='store_true',help='Research-only linked senior-women attack/defence model; ECW only')
     prediction.add_argument('--adaptive-form',action='store_true',help='Deneysel: önceki sezonun testine göre aylık model güncellemesi; yalnız ECW/FEC/VTB')
@@ -45,7 +46,7 @@ def main():
     live.add_argument('--replay',action='store_true',help='Eski durumun tarihsel tekrarını açıkça etiketle')
     bulletin=sub.add_parser('bulten',help='Deneysel İddaa web bültenini oku; varsayılan yerel snapshot')
     bulletin.add_argument('--guncelle',action='store_true',help='Web backendinden üç salt-okunur GET isteği yap')
-    bulletin.add_argument('--lig',choices=['E','U','NBA','NBL','CBA','ECW','FEC','VTB'])
+    bulletin.add_argument('--lig',choices=['E','U','NBA','NBL','CBA','ECW','FEC','VTB',*ASIA_CODES])
     bulletin.add_argument('--limit',type=int,default=30)
     action=bulletin.add_mutually_exclusive_group()
     action.add_argument('--tahmin',help='Yerel bültendeki bir etkinlik kimliği için model/piyasa karşılaştırması')
@@ -69,6 +70,9 @@ def main():
     sub.add_parser('finlandiya-topla',help='Collect dated senior-women Finnish league results')
     sub.add_parser('girona-topla',help='Collect Girona senior-women match facts with actual FEB tipoff times')
     sub.add_parser('waba-topla',help='Collect verified senior WABA results with conservative day precision')
+    asia=sub.add_parser('asya-topla',help='Collect separate KBL/Japan/PBA-conference archives')
+    asia.add_argument('--kaynaklar',nargs='+',choices=['KBL','Japan','PBA'],default=['KBL','Japan','PBA'])
+    asia.add_argument('--current-only',action='store_true',help='Refresh current schedules without repeating historical backfills')
     injuries=sub.add_parser('sakatlik-arsivle',help='Archive an actual timestamped official NBA report')
     injuries.add_argument('--hours',type=float,default=2)
     players=sub.add_parser('oyuncu-baglam',help='Lagged NBA rotation and genuinely observed dated injury context')
@@ -100,6 +104,21 @@ def main():
         import json
         from .live_feed import capture
         print(json.dumps(capture(args.provider),indent=2))
+    elif args.command=='asya-topla':
+        import pandas as pd
+        today=pd.Timestamp.now(tz='UTC');year=today.year if today.month>=7 else today.year-1
+        for source in args.kaynaklar:
+            if source=='KBL':from .veri.korea import collect
+            elif source=='Japan':from .veri.japan import collect
+            else:from .veri.philippines import collect
+            if args.current_only:
+                if source=='KBL':collect(first=today.year,last=today.year)
+                elif source=='Japan':collect(years=(year,))
+                # PBA's current publisher is refreshed below; do not assume a July campaign boundary.
+            else:collect()
+            if source=='PBA':
+                from .veri.pba_current import collect as current_pba
+                current_pba()
     elif args.command in ('finlandiya-topla','girona-topla','waba-topla'):
         if args.command=='finlandiya-topla':from .veri.finland import collect
         elif args.command=='waba-topla':from .veri.waba import collect

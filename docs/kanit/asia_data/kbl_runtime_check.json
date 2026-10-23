@@ -1,0 +1,166 @@
+{
+  "checked_at_utc": "2026-10-23T08:03:07.205681+00:00",
+  "kind": "Integration smoke check, not a prospective accuracy measurement",
+  "source_code_sha256": "3cb0b44495ae272efe56b85d651fa83ed70bc5312fae45db642ba1c8256ae235",
+  "event": {
+    "event_id": "3229882",
+    "home": "KT Sonicboom",
+    "away": "Dongbu Promy",
+    "start_utc": "2026-10-23T10:00:00+00:00",
+    "league_name": "G. Kore G\u00fcney Kore Basketbol Ligi",
+    "model_league": "KBL",
+    "competition_id": "28409",
+    "source": "iddaa-web-experimental",
+    "captured_at_utc": "2026-10-23T08:00:36.051269+00:00",
+    "pre_match": true,
+    "minimum_combination_count": 2,
+    "promotion_flag": true,
+    "moneyline": {
+      "market_id": "1_2",
+      "market_name": "Ma\u00e7 Sonucu (Uzt.Dahil)",
+      "price_field": "odd",
+      "includes_overtime": true,
+      "minimum_combination_count": 2,
+      "home_odds": 1.94,
+      "away_odds": 1.48,
+      "home_alternative_price": 1.87,
+      "away_alternative_price": 1.42
+    },
+    "totals": [
+      {
+        "market_id": "2_114",
+        "market_name": "Toplam Say\u0131 Alt/\u00dcst (Uzt.Dahil)  {0}",
+        "price_field": "odd",
+        "includes_overtime": true,
+        "minimum_combination_count": 2,
+        "line": 175.5,
+        "under_odds": 1.64,
+        "over_odds": 1.72,
+        "push_possible": false
+      }
+    ]
+  },
+  "prediction": {
+    "lig": "KBL",
+    "ev": "KBL_06",
+    "dep": "KBL_16",
+    "tarih_utc": "2026-10-23T10:00:00+00:00",
+    "model": "asia-separate-prior-policy-v1/elo",
+    "ev_kazanir": 0.5034654034704239,
+    "ev_skor": 81.65861815819687,
+    "dep_skor": 83.41418068485027,
+    "fark": -1.7555625266534027,
+    "toplam": 165.07279884304714,
+    "fark_80": [
+      -17.741375821085274,
+      14.23025076777847
+    ],
+    "toplam_80": [
+      143.1607796017454,
+      186.9848180843489
+    ],
+    "tum_modeller": {
+      "score": 0.4440376586974702,
+      "logistic": 0.4169305818056842,
+      "elo": 0.5034654034704239,
+      "ensemble": 0.4548112146578595
+    },
+    "az_veri": [],
+    "recent_games": {
+      "KBL_06": 61,
+      "KBL_16": 60
+    },
+    "uzatma": null,
+    "experimental": true,
+    "training_cutoff": "2026-10-23T00:00:00+00:00",
+    "selection": {
+      "season": "2026-27",
+      "previous_season": "2025-26",
+      "training_games": 2247,
+      "calibration_games": 134,
+      "final_training_games": 2517,
+      "calibration_season_gap": 1,
+      "selection_games": 136,
+      "selection_window_start_utc": "2026-01-02T00:00:00+00:00",
+      "selected": "elo",
+      "selection_log_loss": {
+        "score": 0.6535251221056223,
+        "logistic": 0.6575069087166779,
+        "elo": 0.6289965293543216,
+        "ensemble": 0.6448875034714635
+      },
+      "rule": "Lowest log loss on the second UTC-day half of the preceding season. Score probabilities calibrate on its first half. Fixed learners; test outcomes never select a candidate."
+    },
+    "dataset_sha256": "9e09a0ebac480fc13986b381787b1dfd5d1266dfed9856cc44167fb8ecb13278",
+    "calibration_regime_gap": false,
+    "note": "Separate-league pregame research, not validated live/score certainty. Models fit on earlier seasons, features withhold the entire UTC day. Cup rules, promotions, historical publication and neutral venues are not fully modeled.",
+    "data_quality": {
+      "status": "limited",
+      "issues": [
+        "Winner model and score model favor different teams"
+      ],
+      "blocking_issues": [
+        "Winner model and score model favor different teams"
+      ],
+      "diagnostic_gate_passed": false,
+      "team_history": {
+        "KBL_06": {
+          "all_prior_games": 510,
+          "recent_400d_games": 61,
+          "days_since_last": 4.791666666666667,
+          "effective_games_180d_half_life": 30.387361564706566,
+          "opponents": 9,
+          "seasons": [
+            "2016-17",
+            "2017-18",
+            "2018-19",
+            "2019-20",
+            "2020-21",
+            "2021-22",
+            "2022-23",
+            "2023-24",
+            "2024-25",
+            "2025-26",
+            "2026-27"
+          ]
+        },
+        "KBL_16": {
+          "all_prior_games": 509,
+          "recent_400d_games": 60,
+          "days_since_last": 3.5833333333333335,
+          "effective_games_180d_half_life": 29.556049052448714,
+          "opponents": 9,
+          "seasons": [
+            "2016-17",
+            "2017-18",
+            "2018-19",
+            "2019-20",
+            "2020-21",
+            "2021-22",
+            "2022-23",
+            "2023-24",
+            "2024-25",
+            "2025-26",
+            "2026-27"
+          ]
+        }
+      },
+      "information_cutoff_utc": "2026-10-23T00:00:00+00:00",
+      "recommendation_validated": false,
+      "thresholds": "Five games / 400 days and 60-day staleness are diagnostic flags, not validated selection thresholds.",
+      "unknowns": [
+        "Full domestic schedule coverage",
+        "Expected roster and injuries",
+        "Historical publication times for retrospectively collected results"
+      ],
+      "note": "Data adequacy is separate from win probability; no validated recommendation or accuracy guarantee."
+    },
+    "recommendation_validated": false,
+    "selection_eligible": false
+  },
+  "assertions": {
+    "correct_league": true,
+    "finite_scores": true,
+    "diagnostic_rejection_visible": true
+  }
+}
