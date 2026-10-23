@@ -1,0 +1,264 @@
+{
+  "UKR": {
+    "policies": [
+      {
+        "season": "2022-23",
+        "previous_season": "2021-22",
+        "training_games": 246,
+        "calibration_games": 93,
+        "final_training_games": 422,
+        "calibration_season_gap": 1,
+        "selection_games": 83,
+        "selection_window_start_utc": "2021-12-02T00:00:00+00:00",
+        "selected": "ensemble",
+        "selection_log_loss": {
+          "score": 0.5505528313990825,
+          "logistic": 0.5626273980324846,
+          "elo": 0.5414879869470743,
+          "ensemble": 0.539414533028087
+        },
+        "rule": "Lowest log loss on the second UTC-day half of the preceding season. Score probabilities calibrate on its first half. Fixed learners; test outcomes never select a candidate."
+      },
+      {
+        "season": "2023-24",
+        "previous_season": "2022-23",
+        "training_games": 422,
+        "calibration_games": 66,
+        "final_training_games": 564,
+        "calibration_season_gap": 1,
+        "selection_games": 76,
+        "selection_window_start_utc": "2023-01-24T00:00:00+00:00",
+        "selected": "score",
+        "selection_log_loss": {
+          "score": 0.44584815096668495,
+          "logistic": 0.4670388434338022,
+          "elo": 0.4533134028800681,
+          "ensemble": 0.4466628882328022
+        },
+        "rule": "Lowest log loss on the second UTC-day half of the preceding season. Score probabilities calibrate on its first half. Fixed learners; test outcomes never select a candidate."
+      },
+      {
+        "season": "2024-25",
+        "previous_season": "2023-24",
+        "training_games": 564,
+        "calibration_games": 77,
+        "final_training_games": 717,
+        "calibration_season_gap": 1,
+        "selection_games": 76,
+        "selection_window_start_utc": "2024-01-12T00:00:00+00:00",
+        "selected": "logistic",
+        "selection_log_loss": {
+          "score": 0.46605427635849206,
+          "logistic": 0.4570971383786513,
+          "elo": 0.4913329328156463,
+          "ensemble": 0.4638682759461137
+        },
+        "rule": "Lowest log loss on the second UTC-day half of the preceding season. Score probabilities calibrate on its first half. Fixed learners; test outcomes never select a candidate."
+      },
+      {
+        "season": "2025-26",
+        "previous_season": "2024-25",
+        "training_games": 717,
+        "calibration_games": 69,
+        "final_training_games": 849,
+        "calibration_season_gap": 1,
+        "selection_games": 63,
+        "selection_window_start_utc": "2025-01-24T00:00:00+00:00",
+        "selected": "score",
+        "selection_log_loss": {
+          "score": 0.4997059515966626,
+          "logistic": 0.5164576144769745,
+          "elo": 0.5087090577174427,
+          "ensemble": 0.5034874600000179
+        },
+        "rule": "Lowest log loss on the second UTC-day half of the preceding season. Score probabilities calibrate on its first half. Fixed learners; test outcomes never select a candidate."
+      },
+      {
+        "season": "2026-27",
+        "previous_season": "2025-26",
+        "training_games": 849,
+        "calibration_games": 73,
+        "final_training_games": 976,
+        "calibration_season_gap": 1,
+        "selection_games": 54,
+        "selection_window_start_utc": "2026-02-06T00:00:00+00:00",
+        "selected": "elo",
+        "selection_log_loss": {
+          "score": 0.5843780066122024,
+          "logistic": 0.6135656353655172,
+          "elo": 0.5792626730138868,
+          "ensemble": 0.5872785311676038
+        },
+        "rule": "Lowest log loss on the second UTC-day half of the preceding season. Score probabilities calibrate on its first half. Fixed learners; test outcomes never select a candidate."
+      }
+    ],
+    "skipped": []
+  },
+  "TR_BSL": {
+    "policies": [
+      {
+        "season": "2018-19",
+        "previous_season": "2017-18",
+        "training_games": 259,
+        "calibration_games": 153,
+        "final_training_games": 517,
+        "calibration_season_gap": 1,
+        "selection_games": 105,
+        "selection_window_start_utc": "2018-03-11T00:00:00+00:00",
+        "selected": "score",
+        "selection_log_loss": {
+          "score": 0.5179532331462138,
+          "logistic": 0.5742985102269539,
+          "elo": 0.5316202013978273,
+          "ensemble": 0.5210612779035276
+        },
+        "rule": "Lowest log loss on the second UTC-day half of the preceding season. Score probabilities calibrate on its first half. Fixed learners; test outcomes never select a candidate."
+      },
+      {
+        "season": "2019-20",
+        "previous_season": "2018-19",
+        "training_games": 517,
+        "calibration_games": 133,
+        "final_training_games": 749,
+        "calibration_season_gap": 1,
+        "selection_games": 99,
+        "selection_window_start_utc": "2019-03-09T00:00:00+00:00",
+        "selected": "logistic",
+        "selection_log_loss": {
+          "score": 0.4458686003538306,
+          "logistic": 0.44418820933442765,
+          "elo": 0.49385365507480955,
+          "ensemble": 0.45053506100722057
+        },
+        "rule": "Lowest log loss on the second UTC-day half of the preceding season. Score probabilities calibrate on its first half. Fixed learners; test outcomes never select a candidate."
+      },
+      {
+        "season": "2020-21",
+        "previous_season": "2019-20",
+        "training_games": 749,
+        "calibration_games": 87,
+        "final_training_games": 930,
+        "calibration_season_gap": 1,
+        "selection_games": 94,
+        "selection_window_start_utc": "2019-12-09T00:00:00+00:00",
+        "selected": "logistic",
+        "selection_log_loss": {
+          "score": 0.46225581936063737,
+          "logistic": 0.44912795612551815,
+          "elo": 0.49331577364536516,
+          "ensemble": 0.4592337188467826
+        },
+        "rule": "Lowest log loss on the second UTC-day half of the preceding season. Score probabilities calibrate on its first half. Fixed learners; test outcomes never select a candidate."
+      },
+      {
+        "season": "2021-22",
+        "previous_season": "2020-21",
+        "training_games": 930,
+        "calibration_games": 150,
+        "final_training_games": 1188,
+        "calibration_season_gap": 1,
+        "selection_games": 108,
+        "selection_window_start_utc": "2021-02-03T00:00:00+00:00",
+        "selected": "score",
+        "selection_log_loss": {
+          "score": 0.5256079512395995,
+          "logistic": 0.5449015737442076,
+          "elo": 0.5498306790527383,
+          "ensemble": 0.5287883074896702
+        },
+        "rule": "Lowest log loss on the second UTC-day half of the preceding season. Score probabilities calibrate on its first half. Fixed learners; test outcomes never select a candidate."
+      },
+      {
+        "season": "2022-23",
+        "previous_season": "2021-22",
+        "training_games": 1188,
+        "calibration_games": 163,
+        "final_training_games": 1451,
+        "calibration_season_gap": 1,
+        "selection_games": 100,
+        "selection_window_start_utc": "2022-02-16T00:00:00+00:00",
+        "selected": "score",
+        "selection_log_loss": {
+          "score": 0.6095592170063435,
+          "logistic": 0.6536191824933002,
+          "elo": 0.6217196828013963,
+          "ensemble": 0.6171615253304762
+        },
+        "rule": "Lowest log loss on the second UTC-day half of the preceding season. Score probabilities calibrate on its first half. Fixed learners; test outcomes never select a candidate."
+      },
+      {
+        "season": "2023-24",
+        "previous_season": "2022-23",
+        "training_games": 1451,
+        "calibration_games": 128,
+        "final_training_games": 1709,
+        "calibration_season_gap": 1,
+        "selection_games": 130,
+        "selection_window_start_utc": "2023-01-28T00:00:00+00:00",
+        "selected": "logistic",
+        "selection_log_loss": {
+          "score": 0.5633108857326301,
+          "logistic": 0.5418906161109692,
+          "elo": 0.5677090805969276,
+          "ensemble": 0.55424602506876
+        },
+        "rule": "Lowest log loss on the second UTC-day half of the preceding season. Score probabilities calibrate on its first half. Fixed learners; test outcomes never select a candidate."
+      },
+      {
+        "season": "2024-25",
+        "previous_season": "2023-24",
+        "training_games": 1709,
+        "calibration_games": 147,
+        "final_training_games": 1966,
+        "calibration_season_gap": 1,
+        "selection_games": 110,
+        "selection_window_start_utc": "2024-02-04T00:00:00+00:00",
+        "selected": "elo",
+        "selection_log_loss": {
+          "score": 0.6154134464803033,
+          "logistic": 0.6273500840840894,
+          "elo": 0.5829199336458297,
+          "ensemble": 0.5997757414751379
+        },
+        "rule": "Lowest log loss on the second UTC-day half of the preceding season. Score probabilities calibrate on its first half. Fixed learners; test outcomes never select a candidate."
+      },
+      {
+        "season": "2025-26",
+        "previous_season": "2024-25",
+        "training_games": 1966,
+        "calibration_games": 151,
+        "final_training_games": 2230,
+        "calibration_season_gap": 1,
+        "selection_games": 113,
+        "selection_window_start_utc": "2025-03-08T00:00:00+00:00",
+        "selected": "logistic",
+        "selection_log_loss": {
+          "score": 0.575843608037266,
+          "logistic": 0.57240368698878,
+          "elo": 0.5826881784929718,
+          "ensemble": 0.5730623819428
+        },
+        "rule": "Lowest log loss on the second UTC-day half of the preceding season. Score probabilities calibrate on its first half. Fixed learners; test outcomes never select a candidate."
+      },
+      {
+        "season": "2026-27",
+        "previous_season": "2025-26",
+        "training_games": 2230,
+        "calibration_games": 144,
+        "final_training_games": 2491,
+        "calibration_season_gap": 1,
+        "selection_games": 117,
+        "selection_window_start_utc": "2026-02-07T00:00:00+00:00",
+        "selected": "elo",
+        "selection_log_loss": {
+          "score": 0.6000526177268679,
+          "logistic": 0.6027350314848924,
+          "elo": 0.5832060225206073,
+          "ensemble": 0.5903360476003454
+        },
+        "rule": "Lowest log loss on the second UTC-day half of the preceding season. Score probabilities calibrate on its first half. Fixed learners; test outcomes never select a candidate."
+      }
+    ],
+    "skipped": []
+  }
+}

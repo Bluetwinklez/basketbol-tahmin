@@ -1,4 +1,5 @@
 """Compare a fixed prior-season selection policy with its unchanged baselines."""
+import argparse
 import hashlib
 import json
 from pathlib import Path
@@ -12,10 +13,14 @@ from bbtahmin.prospective import fingerprint
 
 
 def main():
-    root = Path('docs/kanit/regional_models'); root.mkdir(parents=True, exist_ok=True)
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--ligler', nargs='+', choices=regional_model.CODES, default=list(regional_model.CODES))
+    parser.add_argument('--cikti', default='docs/kanit/regional_models')
+    args = parser.parse_args()
+    root = Path(args.cikti); root.mkdir(parents=True, exist_ok=True)
     now = pd.Timestamp.now(tz='UTC'); active = now.year if now.month >= 7 else now.year-1
     source = fingerprint(); summaries, folds, hashes = [], {}, {}
-    for code in regional_model.CODES:
+    for code in args.ligler:
         path = Path(f'data/competitions/{code}.parquet')
         hashes[str(path)] = hashlib.sha256(path.read_bytes()).hexdigest()
         with threadpool_limits(limits=1):

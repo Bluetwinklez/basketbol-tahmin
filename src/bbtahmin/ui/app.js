@@ -1,6 +1,8 @@
 "use strict";
 const names = {
   ABA: 'ABA League',
+  UKR: 'Ukraine SuperLeague',
+  TR_BSL: 'Turkish BSL',
   ECW: 'EuroCup Women',
   FEC: 'FIBA Europe Cup',
   E: "EuroLeague",
