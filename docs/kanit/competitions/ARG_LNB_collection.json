@@ -1,0 +1,74 @@
+{
+  "captured_at_utc": "2026-10-23T20:24:02.944302+00:00",
+  "league": "ARG_LNB",
+  "games": 1718,
+  "seasons": {
+    "2022-23": 428,
+    "2023-24": 431,
+    "2024-25": 429,
+    "2025-26": 395,
+    "2026-27": 35
+  },
+  "teams": 23,
+  "counts": [
+    {
+      "season": "2022-23",
+      "finals": 428
+    },
+    {
+      "season": "2023-24",
+      "finals": 431
+    },
+    {
+      "season": "2024-25",
+      "finals": 429
+    },
+    {
+      "season": "2025-26",
+      "finals": 395
+    },
+    {
+      "season": "2026-27",
+      "finals": 35
+    }
+  ],
+  "fixtures": 48,
+  "errors": [],
+  "sources": [
+    {
+      "url": "https://pickandroll.com.ar/pnr-fixture/?comp=LNB&season=2022-23",
+      "sha256": "f74c051c3cd2556aa2f36657b8aa4aa8250a68c3ccaa71dfbe517b7b5bf7c965"
+    },
+    {
+      "url": "https://pickandroll.com.ar/pnr-fixture/?comp=LNB&season=2023-24",
+      "sha256": "1c3e01f0c822a5e2473d5ac8b2c26dae1995c1c26f47be9bd367f9f622f79f79"
+    },
+    {
+      "url": "https://pickandroll.com.ar/pnr-fixture/?comp=LNB&season=2024-25",
+      "sha256": "875ef3c84567daac103934017f2a3c7ed1b6624e7b1e48fea49a2489c8487a5f"
+    },
+    {
+      "url": "https://pickandroll.com.ar/pnr-fixture/?comp=LNB&season=2025-26",
+      "sha256": "b303f5c5ae017df7e04e2112a045407ec836546a9ffe05c2eaaf1fa98fffddc6"
+    },
+    {
+      "url": "https://www.laliganacional.com.ar/laliga/fixture?handler=ProximosPartidos&fechaInicio=2026-07-01&fechaFin=2026-11-22",
+      "sha256": "0ded135c4f82dc6bddf60d3447dcef9a450aca675dadef7b6f42d5dc760f2dc9"
+    }
+  ],
+  "official_current_refresh": true,
+  "timezone": "America/Argentina/Buenos_Aires",
+  "rejected_results": [
+    {
+      "season": "2024-25",
+      "date": "2025-01-23",
+      "home": "Zárate Basket",
+      "away": "Instituto (Córdoba)",
+      "home_score": "0",
+      "away_score": "20",
+      "reason": "Invalid historical final score",
+      "source_url": "https://pickandroll.com.ar/pnr-fixture/?comp=LNB&season=2024-25"
+    }
+  ],
+  "limitations": "Publisher historical finals have day precision and unknown historical availability. Official old-season handler returned no history. Current positive scores require a separate Finalizado match page and prior local day. No other Argentine divisions or cups. Full season coverage and venue neutrality not certified."
+}
