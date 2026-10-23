@@ -86,6 +86,9 @@ def save(code,records,fixtures,teams,sources,errors):
     fields=['lig','sezon','tarih_utc','ev','dep','ev_skor','dep_skor']
     for _,part in g.groupby('mac_id'):
         if len(part[fields].drop_duplicates())!=1:raise ValueError('Conflicting persisted competition results')
+    if code == 'TR_BSL':
+        from ..archive_checks import reconcile_results
+        g=reconcile_results(g)
     g=g.drop_duplicates('mac_id',keep='last').sort_values(['tarih_utc','mac_id']).reset_index(drop=True)
     temp=path.with_suffix('.part');g.to_parquet(temp,index=False);temp.replace(path)
     catalog=root/f'{code}_teams.json'
@@ -176,3 +179,4 @@ def collect(codes=('ECW','FEC','VTB')):
 
 
 if __name__=='__main__':collect()
+

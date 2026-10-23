@@ -5,7 +5,7 @@ this is a research baseline, not an asserted accuracy improvement.
 """
 import numpy as np
 import pandas as pd
-from scipy.stats import poisson
+from .distributions import poisson
 
 from .data import key
 
@@ -124,3 +124,4 @@ def evaluate(frame, season=None):
         summaries.append(dict(league=league,season=season,model=metrics(cohort),league_frequency_baseline={k:v for k,v in metrics(baseline).items() if k in ('games','winner_accuracy','log_loss','brier')},skipped=skipped,coverage='Available publisher finals only; season completeness not certified'))
     return dict(spec='football-retrospective-v1',season=season,summaries=summaries,predictions=output,
                 note='Retrospective monthly holdout; unknown historical publication times. No tuning on target outcomes. Not prospective accuracy. Fixed 180-day half-life, 1095-day window and 8-game shrinkage. No general accuracy improvement established.')
+

@@ -1,0 +1,145 @@
+{
+  "upstream_revision": "e6744429ee395bc86f247348c6184bb08d4eb361",
+  "captured_at_utc": "2026-10-23T20:02:49.066714+00:00",
+  "license": "CC0-1.0",
+  "files": [
+    {
+      "path": "data/football/BE1_2018-19.json.gz",
+      "league": "BE1",
+      "season": "2018-19",
+      "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2018-19/be.1.json",
+      "source_sha256": "b76939b92fdb36aa423585517cdf054afe432a99fb15df88cdbc2da87d6f6caf",
+      "games": 270,
+      "scheduled": 0
+    },
+    {
+      "path": "data/football/GR1_2018-19.json.gz",
+      "league": "GR1",
+      "season": "2018-19",
+      "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2018-19/gr.1.json",
+      "source_sha256": "3cca41e84454607f08865f7e18c4514aa783be3d0d3636f5a879e8ba334e034e",
+      "games": 240,
+      "scheduled": 0
+    },
+    {
+      "path": "data/football/SC1_2018-19.json.gz",
+      "league": "SC1",
+      "season": "2018-19",
+      "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2018-19/sco.1.json",
+      "source_sha256": "98a6e19402b3aa8ced4bae86fb10b6de5362618de834450022c0db7845877b29",
+      "games": 198,
+      "scheduled": 0
+    },
+    {
+      "path": "data/football/BE1_2019-20.json.gz",
+      "league": "BE1",
+      "season": "2019-20",
+      "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2019-20/be.1.json",
+      "source_sha256": "1e2f1b956977bcc95dc2c53c2c74520e0c787d7a85d137b235616bc15c2c7f1b",
+      "games": 232,
+      "scheduled": 0
+    },
+    {
+      "path": "data/football/GR1_2019-20.json.gz",
+      "league": "GR1",
+      "season": "2019-20",
+      "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2019-20/gr.1.json",
+      "source_sha256": "2be136c3aaca11aa0ebc0471f11552dd7999ea798a71c5fbba225e2d064be02c",
+      "games": 240,
+      "scheduled": 0
+    },
+    {
+      "path": "data/football/SC1_2019-20.json.gz",
+      "league": "SC1",
+      "season": "2019-20",
+      "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2019-20/sco.1.json",
+      "source_sha256": "cdae163de9222307f2f31556227ef3671700f538f4877f2cba98b07391be7d03",
+      "games": 179,
+      "scheduled": 0
+    },
+    {
+      "path": "data/football/BE1_2020-21.json.gz",
+      "league": "BE1",
+      "season": "2020-21",
+      "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2020-21/be.1.json",
+      "source_sha256": "04965757506f0ebb3326de89e034281ff821516d76455fcdfe9bf38f82c25363",
+      "games": 330,
+      "scheduled": 0
+    },
+    {
+      "path": "data/football/GR1_2020-21.json.gz",
+      "league": "GR1",
+      "season": "2020-21",
+      "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2020-21/gr.1.json",
+      "source_sha256": "99eb0d1fd45da8c032a0100b34458d494ce849cb1084947968add469ce3667df",
+      "games": 240,
+      "scheduled": 0
+    },
+    {
+      "path": "data/football/SC1_2020-21.json.gz",
+      "league": "SC1",
+      "season": "2020-21",
+      "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2020-21/sco.1.json",
+      "source_sha256": "07912d6240d3036f2ca08133b2da1e90a606888a06e5ff381ac6bf89218d2fb4",
+      "games": 198,
+      "scheduled": 0
+    },
+    {
+      "path": "data/football/BE1_2024-25.json.gz",
+      "league": "BE1",
+      "season": "2024-25",
+      "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2024-25/be.1.json",
+      "source_sha256": "0b5dafcee9be61a256451d136cbb6e74051cc9ba5412eb1ba7a9961945ed37b2",
+      "games": 313,
+      "scheduled": 0
+    },
+    {
+      "path": "data/football/GR1_2024-25.json.gz",
+      "league": "GR1",
+      "season": "2024-25",
+      "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2024-25/gr.1.json",
+      "source_sha256": "1348c90e2e0ac32bc3fcc588597fc1d63a0eda1a05a39750ba566ebc2cddc142",
+      "games": 236,
+      "scheduled": 0
+    },
+    {
+      "path": "data/football/SC1_2024-25.json.gz",
+      "league": "SC1",
+      "season": "2024-25",
+      "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2024-25/sco.1.json",
+      "source_sha256": "18315197d5ec78f81928cd14ed8ab90bb09e1745907e1636ae89c07079dc8501",
+      "games": 228,
+      "scheduled": 0
+    },
+    {
+      "path": "data/football/BE1_2025-26.json.gz",
+      "league": "BE1",
+      "season": "2025-26",
+      "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2025-26/be.1.json",
+      "source_sha256": "12026263f17f5e34af3f618df2094734071d23e7460e97fdc8a5c948f0087ab5",
+      "games": 104,
+      "scheduled": 0
+    },
+    {
+      "path": "data/football/GR1_2025-26.json.gz",
+      "league": "GR1",
+      "season": "2025-26",
+      "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2025-26/gr.1.json",
+      "source_sha256": "efd9a83eb46ecaea5ba2acc719e7b724be57311cf96ff9587622209d475f7f62",
+      "games": 62,
+      "scheduled": 0
+    },
+    {
+      "path": "data/football/SC1_2025-26.json.gz",
+      "league": "SC1",
+      "season": "2025-26",
+      "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2025-26/sco.1.json",
+      "source_sha256": "484463f1546edae948cc12c329c8cc02d8c1a00826ea47c8776c27d5a2c3df5a",
+      "games": 63,
+      "scheduled": 0
+    }
+  ],
+  "added_finals": 3133,
+  "active_schedule_support": false,
+  "limitations": "Community source, not federation confirmation. Available 2018-21 and 2024-26 cohorts only; 2021-24 and current 2026-27 schedules absent. No completeness or historical publication claim."
+}

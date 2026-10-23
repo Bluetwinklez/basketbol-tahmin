@@ -27,6 +27,9 @@ def load(code):
     if not path.exists():
         raise ValueError('Collect the requested regional league archive first')
     g = pd.read_parquet(path).sort_values(['tarih_utc', 'mac_id']).reset_index(drop=True)
+    if code == 'TR_BSL':
+        from .archive_checks import reconcile_results
+        g = reconcile_results(g)
     values = g[['ev_skor', 'dep_skor']].to_numpy(float)
     if (set(g.lig) != {code} or g.mac_id.duplicated().any() or (g.ev == g.dep).any()
             or not np.isfinite(values).all() or (values <= 0).any()
@@ -72,3 +75,4 @@ def predict(code, home, away, when):
                 calibration_regime_gap=info['calibration_season_gap'] > 1,
                 dataset_sha256=hashlib.sha256(Path(f'data/competitions/{code}.parquet').read_bytes()).hexdigest(),
                 experimental=True, note='Separate senior league, retrospectively collected results. Unverified same-day scores excluded. Nominal home court and historical publication times not independently verified. Intervals are not conditional guarantees.')
+

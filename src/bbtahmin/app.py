@@ -106,6 +106,10 @@ class AppState:
     def snapshot(self):
         with self.lock:
             report, sample, job = copy.deepcopy(self.report), self.sample, dict(self.job)
+        if report:
+            from .market_estimates import total_estimates
+            for entry in report.get('upcoming', []):
+                entry['total_estimates'] = total_estimates(entry['prediction'])
         age = None
         if report:
             try:
@@ -169,7 +173,8 @@ class AppState:
             path=Path('data/football_ledger/latest.json');sample=True
         if path.exists(): report=json.loads(path.read_text('utf8'))
         with self.lock: job=dict(self.job)
-        return dict(report=report,job=job,sample=sample)
+        from .football.data import LEAGUES as FOOTBALL_LEAGUES
+        return dict(report=report,job=job,sample=sample,leagues=FOOTBALL_LEAGUES)
 
     def close(self):
         self.pool.shutdown(wait=True)
@@ -228,6 +233,17 @@ class Handler(BaseHTTPRequestHandler):
             return self.send(raw.encode('utf8'), kind)
         if path == '/api/football':
             return self.send(self.server.state.football_snapshot())
+        if path in ('/api/football/export.json','/api/football/export.csv','/api/football/export.md'):
+            football = self.server.state.football_snapshot()
+            report = football['report']
+            if not report:
+                return self.send(dict(error='No football report available'), status=404)
+            from .football.exports import export_csv as football_csv, markdown as football_markdown
+            if path.endswith('.csv'):
+                return self.send(football_csv(report), 'text/csv; charset=utf-8', filename='football-results.csv')
+            if path.endswith('.md'):
+                return self.send(football_markdown(report), 'text/markdown; charset=utf-8', filename='football-report.md')
+            return self.send(football, filename='football-report.json')
         snapshot = self.server.state.snapshot()
         if path == '/api/state':
             return self.send(snapshot)
@@ -279,3 +295,4 @@ def serve(port=8765, directory='rapor/daily', open_browser=True):
         pass
     finally:
         server.server_close()
+

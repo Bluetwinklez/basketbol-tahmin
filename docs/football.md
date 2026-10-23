@@ -27,7 +27,7 @@ python -m bbtahmin futbol evaluate --season 2025-26 --output rapor/football
 python scripts/refresh_sports.py --sport all
 ```
 
-League codes: TR1, EN1, EN2, DE1, DE2, ES1, ES2, IT1, IT2, FR1, FR2, NL1, PT1, AT1. Team names use source identities; known Turkish spelling/sponsor aliases are explicit. Unknown teams receive league priors with a warning, not fuzzy identity guesses. Read-only MCP exposes `football_status` and `predict_football`; it does not refresh or place bets.
+League codes: TR1, EN1, EN2, DE1, DE2, ES1, ES2, IT1, IT2, FR1, FR2, NL1, PT1, AT1, BE1, GR1, SC1. The three additions contribute 3,133 stored finals but have no active source schedules; see [sports expansion](sports-upgrade.md) for coverage and explicit research model candidates. Team names use source identities; known Turkish spelling/sponsor aliases are explicit. Unknown teams receive league priors with a warning, not fuzzy identity guesses. Read-only MCP exposes `football_status` and `predict_football`; it does not refresh or place bets.
 
 ## Model and measurement
 
@@ -42,3 +42,4 @@ Per-league accuracy, log loss, multiclass Brier score, goal-market accuracy/Brie
 `data/football_ledger/forecasts/` contains earliest future day-level forecasts with payload hashes, capture times, model cutoffs and archive fingerprints. Re-runs reuse them. Settlement reports are separate; pending, stale, unknown and same-day results do not become finals. A postponed fixture with a changed date is not automatically joined to an old forecast. Only earlier-date finals with matching competition/date/teams can produce a publisher-result comparison. Community-source results are explicitly labeled **not officially verified**, and official accuracy remains unavailable. An independent official final-confirmation adapter is not implemented in this release.
 
 The `Refresh sports data and frozen forecasts` workflow runs daily at **06:30 UTC / 09:30 Europe/Istanbul**, plus manual dispatch. Football and the 10 existing daily basketball competitions refresh independently. Earlier season backfills are not repeated every day. Compressed source snapshots, source failures and both sports' forecast ledgers are persisted to the repository. Frozen forecasts are never regenerated using their outcome. Partial refreshes are persisted but mark the job failed; missing provider data cannot become a successful empty refresh. GitHub scheduling/provider availability is not guaranteed. This is scheduled data collection and forecasting, not autonomous model promotion: changes must pass evaluation and tests.
+
