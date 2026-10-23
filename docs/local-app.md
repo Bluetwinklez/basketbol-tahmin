@@ -57,4 +57,4 @@ The integration check exercised the actual local server with saved-source and re
 
 ## Added competitions
 
-The league selector now includes senior ABA League, EuroCup Women and FIBA Europe Cup alongside the original five daily competitions. Choose a 168-hour horizon to include next week's European cup fixtures. Data refresh and failures follow the same background workflow. Ukraine, Sweden and Turkey are still outside this trained daily model; the application does not substitute another league's weights for them.
+The league selector now includes senior ABA League, EuroCup Women and FIBA Europe Cup alongside the original five daily competitions. Choose a 168-hour horizon to include next week's European cup fixtures. Data refresh and failures follow the same background workflow. The selector also includes Ukrainian SuperLeague and Turkish BSL, with separate historical archives and trained models. Swedish SBL remains unavailable because full-league history has not been verified. [Domestic sources, evaluation and pending forecasts](domestic-expansion.md).

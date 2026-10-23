@@ -69,3 +69,5 @@ ABA summer wall clocks are interpreted in Europe/Belgrade although the official 
 EuroCup Women and FIBA Europe Cup keep separate gender/competition archives. Refresh supplies fixture names, source URLs and capture timestamps; older snapshots without provenance must be refreshed before they can create prospective records.
 
 The checked-in demonstration is `docs/kanit/regional_runtime`; reuse this exact output directory to retain its first 58 forecasts. These records are pending and do not establish success. See [the expansion report](regional-expansion.md).
+
+The daily selector additionally supports `UKR` and `TR_BSL`. Use `python -m bbtahmin gunluk --ligler UKR TR_BSL --guncelle --saat 168`. Historical backfill is available with `ulke-topla`; active-season refresh preserves it. Turkish day-precision results do not automatically settle timestamped predictions. Current-provider failures retain previous snapshots and remain visible. [Source and evaluation details](domestic-expansion.md).
