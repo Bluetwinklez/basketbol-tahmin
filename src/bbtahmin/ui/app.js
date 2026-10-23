@@ -1,5 +1,8 @@
 "use strict";
 const names = {
+  ABA: 'ABA League',
+  ECW: 'EuroCup Women',
+  FEC: 'FIBA Europe Cup',
   E: "EuroLeague",
   KBL: "Korean Basketball League",
   JP_B1: "Japan B1",

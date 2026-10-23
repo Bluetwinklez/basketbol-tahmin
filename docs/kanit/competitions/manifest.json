@@ -1,15 +1,15 @@
 {
-  "timestamp_utc": "2026-10-22T19:26:02.252619+00:00",
+  "timestamp_utc": "2026-10-23T13:18:13.957607+00:00",
   "spec": "separate-competition-ridge-v1",
   "files": {
-    "data/competitions/ECW.parquet": "96a0ba7dcd86d05a196d6b4f1dec6c7b901927171f1042d847452715d946c0b4",
-    "data/competitions/FEC.parquet": "56771b499724c5d6164b02103cc349224a19704fe9625736e5b4aa9a8cd7d9c2",
+    "data/competitions/ECW.parquet": "fadf66b1fd22a8a1e2a2678e053ba64afa8e6732d5ddf386bd789722e1cac5dd",
+    "data/competitions/FEC.parquet": "023c86ffdb1c41f8cd4f26045e562e027dd279beb9759146c7c1c92e4d0d3658",
     "data/competitions/VTB.parquet": "b1c55c4f80374ca74d07bb1ab639750bf1742beaa53341fd3c621f955c0199a1"
   },
   "packages": {
-    "numpy": "2.2.6",
+    "numpy": "2.3.5",
     "pandas": "2.2.3",
-    "scipy": "1.15.3",
+    "scipy": "1.17.0",
     "scikit-learn": "1.6.1"
   },
   "method": "Fixed Ridge alpha=10. Earlier seasons train; preceding season calibrates residuals; refit on both. Features update only after UTC day ends. No test-season tuning.",

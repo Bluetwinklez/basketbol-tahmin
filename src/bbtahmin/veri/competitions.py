@@ -79,13 +79,14 @@ def normalize_fiba(rows,code,year):
 def save(code,records,fixtures,teams,sources,errors):
     root=Path('data/competitions');root.mkdir(parents=True,exist_ok=True)
     g=pd.DataFrame(records)
-    if g.empty:raise ValueError(f'No finished {code} games')
     path=root/f'{code}.parquet'
+    if g.empty and path.exists():g=pd.read_parquet(path)
+    if g.empty:raise ValueError(f'No finished {code} games')
     if path.exists():g=pd.concat([pd.read_parquet(path),g],ignore_index=True)
     fields=['lig','sezon','tarih_utc','ev','dep','ev_skor','dep_skor']
     for _,part in g.groupby('mac_id'):
         if len(part[fields].drop_duplicates())!=1:raise ValueError('Conflicting persisted competition results')
-    g=g.drop_duplicates('mac_id').sort_values(['tarih_utc','mac_id']).reset_index(drop=True)
+    g=g.drop_duplicates('mac_id',keep='last').sort_values(['tarih_utc','mac_id']).reset_index(drop=True)
     temp=path.with_suffix('.part');g.to_parquet(temp,index=False);temp.replace(path)
     catalog=root/f'{code}_teams.json'
     previous=json.loads(catalog.read_text()) if catalog.exists() else {}
@@ -117,6 +118,12 @@ def collect_fiba(code):
         current=pd.Timestamp.now(tz='UTC');active=current.year+(current.month>=7)
         html=local.read_text() if local.exists() and year<active else fetch(url,refresh=year>=active)
         rows=fiba_games(html,code,year);r,f,t=normalize_fiba(rows,code,year)
+        captured=pd.Timestamp.now(tz='UTC').isoformat()
+        for row in r+f:
+            row.update(captured_at_utc=captured,source_url=url)
+        final_ids={row['mac_id'] for row in r}
+        for row in f:
+            row['status']='final' if row['mac_id'] in final_ids else ('scheduled' if row['tarih_utc']>pd.Timestamp.now(tz='UTC') else 'unverified')
         records+=r;fixtures+=f;sources.append(url)
         for key,entry in t.items():
             previous=teams.setdefault(key,entry)

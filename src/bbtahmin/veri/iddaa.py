@@ -20,6 +20,7 @@ LATEST = Path('data/bulten/latest.json')
 LEAGUES = {'abd amerika basketbol ligi':'NBA','abd amerikan basketbol ligi':'NBA','nba':'NBA','euroleague':'E',
            'eurocup':'U','avustralya nbl':'NBL','cin cba':'CBA',
            'eurocup kadinlar':'ECW','vtb birlesik ligi':'VTB','fiba avrupa kupasi':'FEC'}
+LEAGUES.update({'aba liga':'ABA','aba liga, grup a':'ABA','aba liga, grup b':'ABA'})
 LEAGUES.update({'g. kore guney kore basketbol ligi':'KBL','japonya b.ligi':'JP_B1','japonya b2.ligi':'JP_B2',
     'filipinler pba, governors cup, group a':'PBA_GOV','filipinler pba, governors cup, group b':'PBA_GOV',
     'filipinler pba, governors cup':'PBA_GOV','filipinler pba, commissioners cup':'PBA_COM',

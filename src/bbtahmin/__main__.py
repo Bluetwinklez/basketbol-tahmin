@@ -1,6 +1,7 @@
 import argparse
 def main():
     from .veri.asia import CODES as ASIA_CODES
+    from .daily import LEAGUES as DAILY_LEAGUES
     parser=argparse.ArgumentParser(description='Sızıntısız basketbol tahmin sistemi')
     sub=parser.add_subparsers(dest='command',required=True)
     collect=sub.add_parser('topla')
@@ -21,7 +22,7 @@ def main():
     bt.add_argument('--ilk-test',type=int,help='İlk değerlendirilecek sezonun başlangıç yılı; eğitim geçmişi korunur')
     prediction=sub.add_parser('tahmin',help='Gelecek maçları tahmin et: tahmin "Fenerbahçe - Real Madrid" "Celtics - Lakers"')
     prediction.add_argument('maclar',nargs='+',help='"Ev - Deplasman" biçiminde bir ya da daha çok maç')
-    prediction.add_argument('--lig',choices=['E','U','NBA','NBL','CBA','ECW','FEC','VTB',*ASIA_CODES],help='Verilmezse takım adlarından bulunur')
+    prediction.add_argument('--lig',choices=['E','U','NBA','NBL','CBA','ECW','FEC','VTB','ABA',*ASIA_CODES],help='Verilmezse takım adlarından bulunur')
     prediction.add_argument('--tarih',help='Maç zamanı, ör. 2026-10-23T20:45 (saat dilimi yoksa İstanbul). Varsayılan: şimdi')
     prediction.add_argument('--hierarchical',action='store_true',help='Research-only linked senior-women attack/defence model; ECW only')
     prediction.add_argument('--adaptive-form',action='store_true',help='Deneysel: önceki sezonun testine göre aylık model güncellemesi; yalnız ECW/FEC/VTB')
@@ -46,7 +47,7 @@ def main():
     live.add_argument('--replay',action='store_true',help='Eski durumun tarihsel tekrarını açıkça etiketle')
     bulletin=sub.add_parser('bulten',help='Deneysel İddaa web bültenini oku; varsayılan yerel snapshot')
     bulletin.add_argument('--guncelle',action='store_true',help='Web backendinden üç salt-okunur GET isteği yap')
-    bulletin.add_argument('--lig',choices=['E','U','NBA','NBL','CBA','ECW','FEC','VTB',*ASIA_CODES])
+    bulletin.add_argument('--lig',choices=['E','U','NBA','NBL','CBA','ECW','FEC','VTB','ABA',*ASIA_CODES])
     bulletin.add_argument('--limit',type=int,default=30)
     action=bulletin.add_mutually_exclusive_group()
     action.add_argument('--tahmin',help='Yerel bültendeki bir etkinlik kimliği için model/piyasa karşılaştırması')
@@ -70,13 +71,17 @@ def main():
     sub.add_parser('finlandiya-topla',help='Collect dated senior-women Finnish league results')
     sub.add_parser('girona-topla',help='Collect Girona senior-women match facts with actual FEB tipoff times')
     sub.add_parser('waba-topla',help='Collect verified senior WABA results with conservative day precision')
+    aba=sub.add_parser('aba-topla',help='Collect official senior ABA seasons separately')
+    aba.add_argument('--baslangic',type=int,default=2010)
+    aba.add_argument('--bitis',type=int)
+    aba.add_argument('--guncelle',action='store_true')
     asia=sub.add_parser('asya-topla',help='Collect separate KBL/Japan/PBA-conference archives')
     asia.add_argument('--kaynaklar',nargs='+',choices=['KBL','Japan','PBA'],default=['KBL','Japan','PBA'])
     asia.add_argument('--current-only',action='store_true',help='Refresh current schedules without repeating historical backfills')
     asia.add_argument('--baslangic',type=int,help='First source year (Japanese season start, PBA season end, KBL calendar year)')
     asia.add_argument('--bitis',type=int,help='Last source year, inclusive; requires --baslangic')
     daily=sub.add_parser('gunluk',help='Refresh fixtures, freeze pregame forecasts and report separate final-result errors')
-    daily.add_argument('--ligler',nargs='+',choices=['E','KBL','JP_B1','JP_B2','PBA_GOV'],default=['E','KBL','JP_B1','JP_B2','PBA_GOV'])
+    daily.add_argument('--ligler',nargs='+',choices=DAILY_LEAGUES,default=list(DAILY_LEAGUES))
     daily.add_argument('--guncelle',action='store_true',help='Refresh public schedules and current results; failures remain visible')
     daily.add_argument('--saat',type=int,default=48,help='Upcoming fixture horizon, 1..168 hours')
     daily.add_argument('--min-guven',type=float,default=.65,help='Probability filter, not an observed accuracy guarantee')
@@ -125,6 +130,9 @@ def main():
         import json
         from .live_feed import capture
         print(json.dumps(capture(args.provider),indent=2))
+    elif args.command=='aba-topla':
+        from .veri.aba import collect
+        collect(args.baslangic,args.bitis,args.guncelle)
     elif args.command=='asya-topla':
         import pandas as pd
         today=pd.Timestamp.now(tz='UTC');year=today.year if today.month>=7 else today.year-1
