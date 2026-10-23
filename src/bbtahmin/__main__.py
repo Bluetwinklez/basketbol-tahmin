@@ -103,7 +103,8 @@ def main():
     travel=sub.add_parser('seyahat-baglam',help='Observed venue-to-venue schedule proxies; no inferred actual itinerary')
     travel.add_argument('--event-id',required=True);travel.add_argument('--asof',required=True)
     football=sub.add_parser('futbol',help='Separate football data, goal forecasts and chronological evaluation')
-    football.add_argument('action',choices=['collect','daily','predict','evaluate'])
+    football.add_argument('action',choices=['collect','daily','predict','evaluate','compare'])
+    football.add_argument('--model',choices=['baseline','opponent','opponent_dc'],default='baseline')
     football.add_argument('--first',type=int,default=2010)
     football.add_argument('--last',type=int)
     football.add_argument('--current-only',action='store_true')
@@ -124,22 +125,27 @@ def main():
         elif args.action=='daily':
             from .football.daily import run as football_run
             if args.refresh: collect(current_only=True)
-            result=football_run(args.days,args.output)
-        elif args.action=='evaluate':
+            result=football_run(args.days,args.output,model_variant=args.model)
+        elif args.action in ('evaluate','compare'):
             import gzip
-            result=evaluate(load(),args.season)
+            if args.action == 'compare':
+                from .football.challenger import compare
+                if not args.season: parser.error('compare requires --season')
+                result=compare(load(),args.season)
+            else: result=evaluate(load(),args.season)
             predictions=result.pop('predictions')
             target=Path(args.output);target.mkdir(parents=True,exist_ok=True)
             (target/'predictions.json.gz').write_bytes(gzip.compress(json.dumps(predictions,ensure_ascii=False,allow_nan=False).encode(),mtime=0))
             result['predictions_file']='predictions.json.gz'
-            write_json(target/'evaluation.json',result)
+            write_json(target/('comparison.json' if args.action == 'compare' else 'evaluation.json'),result)
         else:
             if not all((args.league,args.home,args.away,args.date)):
                 parser.error('predict requires --league, --home, --away and --date')
             if pd.Timestamp(args.date).date()<pd.Timestamp.now(tz='UTC').date():
                 parser.error('Use evaluate for historical predictions')
             cutoff=min(pd.Timestamp(args.date).date(),pd.Timestamp.now(tz='UTC').date())
-            result=GoalModel(load(),args.league,str(cutoff)).predict(args.home,args.away)
+            from .football.challenger import fit
+            result=fit(load(),args.league,str(cutoff),args.model).predict(args.home,args.away)
             result['fixture_date']=args.date
             result['fixture_verified']=False
         print(json.dumps(result,ensure_ascii=False,indent=2,allow_nan=False))
@@ -297,3 +303,4 @@ def main():
         from .tahmin import run
         run(args.lig,args.maclar,args.tarih,args.json,args.kaydet,args.sakatlik,args.min_guven,args.adaptive_form,args.hierarchical)
 if __name__=='__main__':main()
+

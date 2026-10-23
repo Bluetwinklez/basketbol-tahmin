@@ -1,0 +1,270 @@
+{
+  "spec": "football-candidate-comparison-v1",
+  "season": "2025-26",
+  "summaries": [
+    {
+      "league": "BE1",
+      "candidates": {
+        "baseline": {
+          "games": 104,
+          "winner_accuracy": 0.46153846153846156,
+          "log_loss": 1.0490769986889041,
+          "brier": 0.6324882417371401,
+          "total_mae": 1.2780770415774039,
+          "margin_mae": 1.2183972846287163,
+          "total_in_80": 0.8942307692307693,
+          "goal_markets": {
+            "over_1.5": {
+              "accuracy": 0.7596153846153846,
+              "brier": 0.179084066792533
+            },
+            "over_2.5": {
+              "accuracy": 0.5096153846153846,
+              "brier": 0.25086144344162287
+            },
+            "over_3.5": {
+              "accuracy": 0.7307692307692307,
+              "brier": 0.1954665744236253
+            },
+            "both_teams_score": {
+              "accuracy": 0.6153846153846154,
+              "brier": 0.23900604141270188
+            }
+          }
+        },
+        "opponent": {
+          "games": 104,
+          "winner_accuracy": 0.4807692307692308,
+          "log_loss": 1.0099677966255054,
+          "brier": 0.6050708461429626,
+          "total_mae": 1.314790390230431,
+          "margin_mae": 1.1660246942365062,
+          "total_in_80": 0.9038461538461539,
+          "goal_markets": {
+            "over_1.5": {
+              "accuracy": 0.7596153846153846,
+              "brier": 0.18326208620653214
+            },
+            "over_2.5": {
+              "accuracy": 0.4807692307692308,
+              "brier": 0.2649395886647653
+            },
+            "over_3.5": {
+              "accuracy": 0.75,
+              "brier": 0.19504841710451779
+            },
+            "both_teams_score": {
+              "accuracy": 0.5096153846153846,
+              "brier": 0.25105141863048774
+            }
+          }
+        },
+        "opponent_dc": {
+          "games": 104,
+          "winner_accuracy": 0.4807692307692308,
+          "log_loss": 1.007702989926558,
+          "brier": 0.6041787246076715,
+          "total_mae": 1.314790390230431,
+          "margin_mae": 1.1660246942365062,
+          "total_in_80": 0.9038461538461539,
+          "goal_markets": {
+            "over_1.5": {
+              "accuracy": 0.7596153846153846,
+              "brier": 0.18319662738319978
+            },
+            "over_2.5": {
+              "accuracy": 0.4807692307692308,
+              "brier": 0.2649395886647653
+            },
+            "over_3.5": {
+              "accuracy": 0.75,
+              "brier": 0.19504841710451779
+            },
+            "both_teams_score": {
+              "accuracy": 0.5384615384615384,
+              "brier": 0.2505915369645035
+            }
+          }
+        }
+      },
+      "skipped": []
+    },
+    {
+      "league": "GR1",
+      "candidates": {
+        "baseline": {
+          "games": 62,
+          "winner_accuracy": 0.5645161290322581,
+          "log_loss": 0.9677486666608287,
+          "brier": 0.5736293287212395,
+          "total_mae": 1.1437112360192154,
+          "margin_mae": 1.239033874009794,
+          "total_in_80": 0.9193548387096774,
+          "goal_markets": {
+            "over_1.5": {
+              "accuracy": 0.8225806451612904,
+              "brier": 0.16313655198492424
+            },
+            "over_2.5": {
+              "accuracy": 0.6290322580645161,
+              "brier": 0.24108156994251526
+            },
+            "over_3.5": {
+              "accuracy": 0.7419354838709677,
+              "brier": 0.18361666529069573
+            },
+            "both_teams_score": {
+              "accuracy": 0.4838709677419355,
+              "brier": 0.2556392338446201
+            }
+          }
+        },
+        "opponent": {
+          "games": 62,
+          "winner_accuracy": 0.5645161290322581,
+          "log_loss": 0.9521689990529706,
+          "brier": 0.5624910544470761,
+          "total_mae": 1.1587069010991062,
+          "margin_mae": 1.2037168763824009,
+          "total_in_80": 0.9354838709677419,
+          "goal_markets": {
+            "over_1.5": {
+              "accuracy": 0.8225806451612904,
+              "brier": 0.1672404460929974
+            },
+            "over_2.5": {
+              "accuracy": 0.6290322580645161,
+              "brier": 0.24341542028211433
+            },
+            "over_3.5": {
+              "accuracy": 0.7419354838709677,
+              "brier": 0.18862699513698655
+            },
+            "both_teams_score": {
+              "accuracy": 0.5161290322580645,
+              "brier": 0.25325294265800047
+            }
+          }
+        },
+        "opponent_dc": {
+          "games": 62,
+          "winner_accuracy": 0.5645161290322581,
+          "log_loss": 0.9543197479284827,
+          "brier": 0.5635466671717286,
+          "total_mae": 1.1587069010991062,
+          "margin_mae": 1.2037168763824009,
+          "total_in_80": 0.9354838709677419,
+          "goal_markets": {
+            "over_1.5": {
+              "accuracy": 0.8225806451612904,
+              "brier": 0.1678848426169086
+            },
+            "over_2.5": {
+              "accuracy": 0.6290322580645161,
+              "brier": 0.24341542028211433
+            },
+            "over_3.5": {
+              "accuracy": 0.7419354838709677,
+              "brier": 0.18862699513698655
+            },
+            "both_teams_score": {
+              "accuracy": 0.5161290322580645,
+              "brier": 0.25400272120299905
+            }
+          }
+        }
+      },
+      "skipped": []
+    },
+    {
+      "league": "SC1",
+      "candidates": {
+        "baseline": {
+          "games": 63,
+          "winner_accuracy": 0.42857142857142855,
+          "log_loss": 1.0912879494482393,
+          "brier": 0.6602675467480575,
+          "total_mae": 1.2713841860357604,
+          "margin_mae": 1.2153575402570216,
+          "total_in_80": 0.8888888888888888,
+          "goal_markets": {
+            "over_1.5": {
+              "accuracy": 0.8095238095238095,
+              "brier": 0.15411928524740032
+            },
+            "over_2.5": {
+              "accuracy": 0.5238095238095238,
+              "brier": 0.2631386305989775
+            },
+            "over_3.5": {
+              "accuracy": 0.6507936507936508,
+              "brier": 0.23751329315328473
+            },
+            "both_teams_score": {
+              "accuracy": 0.5873015873015873,
+              "brier": 0.24094063599326854
+            }
+          }
+        },
+        "opponent": {
+          "games": 63,
+          "winner_accuracy": 0.42857142857142855,
+          "log_loss": 1.0839484109792554,
+          "brier": 0.6561148633323202,
+          "total_mae": 1.2602447906754994,
+          "margin_mae": 1.218602539253021,
+          "total_in_80": 0.873015873015873,
+          "goal_markets": {
+            "over_1.5": {
+              "accuracy": 0.8095238095238095,
+              "brier": 0.15700933139843126
+            },
+            "over_2.5": {
+              "accuracy": 0.5238095238095238,
+              "brier": 0.25854415658722685
+            },
+            "over_3.5": {
+              "accuracy": 0.6190476190476191,
+              "brier": 0.2387864924835813
+            },
+            "both_teams_score": {
+              "accuracy": 0.5555555555555556,
+              "brier": 0.24380506290217285
+            }
+          }
+        },
+        "opponent_dc": {
+          "games": 63,
+          "winner_accuracy": 0.42857142857142855,
+          "log_loss": 1.0940418164250525,
+          "brier": 0.6609514095498874,
+          "total_mae": 1.2602447906754994,
+          "margin_mae": 1.218602539253021,
+          "total_in_80": 0.873015873015873,
+          "goal_markets": {
+            "over_1.5": {
+              "accuracy": 0.8095238095238095,
+              "brier": 0.15681181776174088
+            },
+            "over_2.5": {
+              "accuracy": 0.5238095238095238,
+              "brier": 0.2585441565872269
+            },
+            "over_3.5": {
+              "accuracy": 0.6190476190476191,
+              "brier": 0.2387864924835813
+            },
+            "both_teams_score": {
+              "accuracy": 0.5714285714285714,
+              "brier": 0.2442250898034268
+            }
+          }
+        }
+      },
+      "skipped": []
+    }
+  ],
+  "default_changed": false,
+  "note": "Identical monthly cohorts. Earlier dates only; historical publication times unknown. Exploratory historical comparison, not prospective success. No automatic model promotion.",
+  "predictions_file": "football_predictions.json.gz"
+}
