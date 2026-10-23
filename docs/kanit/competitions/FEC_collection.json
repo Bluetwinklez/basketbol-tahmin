@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-10-22T19:20:55.502577+00:00",
+  "timestamp_utc": "2026-10-23T13:17:26.763832+00:00",
   "league": "FEC",
   "games": 651,
   "teams": 127,
@@ -17,6 +17,6 @@
   ],
   "errors": [],
   "gender": "Men",
-  "note": "Normalized numeric facts from public pages; no supported developer API contract. Nominal home/away, neutral venues not independently verified.",
-  "coverage": "Finished non-tied games with positive scores from public pages; not a completeness guarantee. Aggregate-leg ties and unplayed games excluded."
+  "coverage": "Finished non-tied games with positive scores from public pages; not a completeness guarantee. Aggregate-leg ties and unplayed games excluded.",
+  "note": "Normalized numeric facts from public pages; no supported developer API contract. Nominal home/away, neutral venues not independently verified."
 }

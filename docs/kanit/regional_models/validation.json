@@ -1,0 +1,31 @@
+{
+  "tested_at_utc": "2026-10-23T13:19:58.214641+00:00",
+  "python_tests": {
+    "name": "pytest",
+    "errors": "0",
+    "failures": "0",
+    "skipped": "0",
+    "tests": "251",
+    "time": "6.732",
+    "timestamp": "2026-10-23T09:23:07.092400-04:00",
+    "hostname": "12d097797dc8"
+  },
+  "ui_tests": 8,
+  "frozen_forecasts": 58,
+  "fixture_leagues": {
+    "ABA": 9,
+    "ECW": 25,
+    "FEC": 24
+  },
+  "reused_without_replacement": 58,
+  "prospective": {
+    "settled_games": 0,
+    "pending_games": 58,
+    "winner_accuracy": null,
+    "mean_score_mae": null,
+    "mean_total_absolute_error": null,
+    "mean_margin_absolute_error": null
+  },
+  "source_code_sha256": "256a91479e89c597f0611dc36c311a3295e10bf67cb79ab97c05db31e8fb2a1b",
+  "original_euroleague_file_sha256": "55b784951cee428f8109458ea45081decd8039b8ee789d550d6ab6170209872e"
+}
