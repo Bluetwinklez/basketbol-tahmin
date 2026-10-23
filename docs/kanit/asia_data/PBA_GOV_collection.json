@@ -1,0 +1,3786 @@
+{
+  "source": "Independent public Sportsmetric publisher",
+  "sources": [
+    "https://basketball.realgm.com/international/league/132/PBA--Governors-Cup/team/1744/Phoenix-Fuel-Masters/schedule/2019",
+    "https://basketball.realgm.com/international/league/132/PBA--Governors-Cup/team/1744/Phoenix-Fuel-Masters/schedule/2022",
+    "https://basketball.realgm.com/international/league/132/PBA--Governors-Cup/team/1744/Phoenix-Fuel-Masters/schedule/2023",
+    "https://basketball.realgm.com/international/league/132/PBA--Governors-Cup/team/1744/Phoenix-Fuel-Masters/schedule/2025",
+    "https://basketball.realgm.com/international/league/132/PBA--Governors-Cup/team/1744/Phoenix-Fuel-Masters/schedule/2026",
+    "https://basketball.realgm.com/international/league/132/PBA--Governors-Cup/team/1744/Phoenix-Fuel-Masters/schedule/2027",
+    "https://www.sportsmetric.ph/leagues/pba"
+  ],
+  "captured_at_utc": "2026-10-23T07:57:22.489277+00:00",
+  "current_model_season": "2025-26",
+  "identity_evidence": "Within source season 50 only, Macau Giant Pandas is linked to RealGM team 2827 (displayed as Macau Black Knights): eleven unique date/opponent/score pairs agree. This is not an inferred cross-season ownership history.",
+  "current_publisher_final_games": 70,
+  "cross_source_duplicates": [
+    {
+      "publisher_id": "pba-pba-gov-cup-50-ros-vs-mag-2026-10-21",
+      "publisher_mac_id": "PBA_SM_baf2630b6179441ae29e",
+      "existing_id": "PBA_R544799"
+    },
+    {
+      "publisher_id": "pba-pba-gov-cup-50-smb-vs-nlx-2026-10-21",
+      "publisher_mac_id": "PBA_SM_8fc3ea4fa52b3bbfe77a",
+      "existing_id": "PBA_R544798"
+    },
+    {
+      "publisher_id": "pba-pba-gov-cup-50-gin-vs-phx-2026-10-18",
+      "publisher_mac_id": "PBA_SM_5757c625389f7f6e1fd4",
+      "existing_id": "PBA_R544797"
+    },
+    {
+      "publisher_id": "pba-pba-gov-cup-50-tnt-vs-con-2026-10-18",
+      "publisher_mac_id": "PBA_SM_95970cad354289714092",
+      "existing_id": "PBA_R544796"
+    },
+    {
+      "publisher_id": "pba-pba-gov-cup-50-bwb-vs-ros-2026-10-17",
+      "publisher_mac_id": "PBA_SM_2f40076e7276fdf95705",
+      "existing_id": "PBA_R544795"
+    },
+    {
+      "publisher_id": "pba-pba-gov-cup-50-tgr-vs-ter-2026-10-17",
+      "publisher_mac_id": "PBA_SM_1641aa885ec8f204b5a6",
+      "existing_id": "PBA_R544794"
+    },
+    {
+      "publisher_id": "pba-pba-gov-cup-50-phx-vs-mer-2026-10-16",
+      "publisher_mac_id": "PBA_SM_a900374d07cdeaaa6270",
+      "existing_id": "PBA_R544793"
+    },
+    {
+      "publisher_id": "pba-pba-gov-cup-50-con-vs-mgp-2026-10-16",
+      "publisher_mac_id": "PBA_SM_1b5bb76d5c237cf250cc",
+      "existing_id": "PBA_R544792"
+    },
+    {
+      "publisher_id": "pba-pba-gov-cup-50-nlx-vs-tgr-2026-10-14",
+      "publisher_mac_id": "PBA_SM_0b55a5869ed7ee3c15d8",
+      "existing_id": "PBA_R544791"
+    },
+    {
+      "publisher_id": "pba-pba-gov-cup-50-ter-vs-smb-2026-10-14",
+      "publisher_mac_id": "PBA_SM_9b3a5761227200530fc4",
+      "existing_id": "PBA_R544790"
+    },
+    {
+      "publisher_id": "pba-pba-gov-cup-50-mgp-vs-tnt-2026-10-13",
+      "publisher_mac_id": "PBA_SM_c926dc84b045530d1e25",
+      "existing_id": "PBA_R544788"
+    },
+    {
+      "publisher_id": "pba-pba-gov-cup-50-mer-vs-bwb-2026-10-13",
+      "publisher_mac_id": "PBA_SM_320530961c699378b9ea",
+      "existing_id": "PBA_R544789"
+    },
+    {
+      "publisher_id": "pba-pba-gov-cup-50-mag-vs-gin-2026-10-11",
+      "publisher_mac_id": "PBA_SM_5ea084e60351bd41621a",
+      "existing_id": "PBA_R544787"
+    },
+    {
+      "publisher_id": "pba-pba-gov-cup-50-tgr-vs-con-2026-10-11",
+      "publisher_mac_id": "PBA_SM_1f0e05b36639b7f9092b",
+      "existing_id": "PBA_R544786"
+    },
+    {
+      "publisher_id": "pba-pba-gov-cup-50-tnt-vs-smb-2026-10-10",
+      "publisher_mac_id": "PBA_SM_76e8b416e021c29d8da6",
+      "existing_id": "PBA_R544785"
+    },
+    {
+      "publisher_id": "pba-pba-gov-cup-50-gin-vs-ros-2026-10-09",
+      "publisher_mac_id": "PBA_SM_6d7e955b7d6cb6e997e7",
+      "existing_id": "PBA_R526227"
+    },
+    {
+      "publisher_id": "pba-pba-gov-cup-50-bwb-vs-mag-2026-10-09",
+      "publisher_mac_id": "PBA_SM_2ed57fed94129d53ee97",
+      "existing_id": "PBA_R526228"
+    },
+    {
+      "publisher_id": "pba-pba-gov-cup-50-ter-vs-tnt-2026-10-07",
+      "publisher_mac_id": "PBA_SM_4d8794aba2a719c04a4b",
+      "existing_id": "PBA_R526226"
+    },
+    {
+      "publisher_id": "pba-pba-gov-cup-50-nlx-vs-mgp-2026-10-07",
+      "publisher_mac_id": "PBA_SM_0d26378b7c7ed3958b70",
+      "existing_id": "PBA_R526225"
+    },
+    {
+      "publisher_id": "pba-pba-gov-cup-50-mer-vs-gin-2026-08-14",
+      "publisher_mac_id": "PBA_SM_c271d7dfca71bbeb108f",
+      "existing_id": "PBA_R526234"
+    },
+    {
+      "publisher_id": "pba-pba-gov-cup-50-con-vs-nlx-2026-08-14",
+      "publisher_mac_id": "PBA_SM_04c1750cd973c1df8fd6",
+      "existing_id": "PBA_R526233"
+    },
+    {
+      "publisher_id": "pba-pba-gov-cup-50-mag-vs-phx-2026-08-12",
+      "publisher_mac_id": "PBA_SM_0cce03a7d550ddb307ac",
+      "existing_id": "PBA_R526232"
+    },
+    {
+      "publisher_id": "pba-pba-gov-cup-50-tgr-vs-smb-2026-08-12",
+      "publisher_mac_id": "PBA_SM_3bbf8e78c12362b1b563",
+      "existing_id": "PBA_R526231"
+    },
+    {
+      "publisher_id": "pba-pba-gov-cup-50-nlx-vs-tnt-2026-08-11",
+      "publisher_mac_id": "PBA_SM_e321165569877f004a3e",
+      "existing_id": "PBA_R526230"
+    },
+    {
+      "publisher_id": "pba-pba-gov-cup-50-con-vs-ter-2026-08-11",
+      "publisher_mac_id": "PBA_SM_363b8154cf2f43147538",
+      "existing_id": "PBA_R526229"
+    },
+    {
+      "publisher_id": "pba-pba-gov-cup-50-mgp-vs-smb-2026-08-08",
+      "publisher_mac_id": "PBA_SM_1889f6cf18d709564b77",
+      "existing_id": "PBA_R526224"
+    },
+    {
+      "publisher_id": "pba-pba-gov-cup-50-tnt-vs-tgr-2026-08-08",
+      "publisher_mac_id": "PBA_SM_e2175f6250e3cdce7531",
+      "existing_id": "PBA_R526223"
+    },
+    {
+      "publisher_id": "pba-pba-gov-cup-50-mag-vs-mer-2026-08-07",
+      "publisher_mac_id": "PBA_SM_e896ce342dd81e3cf6f6",
+      "existing_id": "PBA_R526222"
+    },
+    {
+      "publisher_id": "pba-pba-gov-cup-50-ter-vs-nlx-2026-08-07",
+      "publisher_mac_id": "PBA_SM_aefbff34f0f8f862261f",
+      "existing_id": "PBA_R526221"
+    },
+    {
+      "publisher_id": "pba-pba-gov-cup-50-smb-vs-con-2026-08-05",
+      "publisher_mac_id": "PBA_SM_1a4936e5790babd15bb1",
+      "existing_id": "PBA_R526220"
+    },
+    {
+      "publisher_id": "pba-pba-gov-cup-50-bwb-vs-phx-2026-08-05",
+      "publisher_mac_id": "PBA_SM_a7e43bc86a98f6a760e1",
+      "existing_id": "PBA_R526219"
+    },
+    {
+      "publisher_id": "pba-pba-gov-cup-50-nlx-vs-tnt-2026-08-04",
+      "publisher_mac_id": "PBA_SM_5c9ad650d96a82906d7b",
+      "existing_id": "PBA_R526218"
+    },
+    {
+      "publisher_id": "pba-pba-gov-cup-50-tgr-vs-mgp-2026-08-04",
+      "publisher_mac_id": "PBA_SM_f7a26e670d83beff0e74",
+      "existing_id": "PBA_R526217"
+    },
+    {
+      "publisher_id": "pba-pba-gov-cup-50-gin-vs-mag-2026-08-02",
+      "publisher_mac_id": "PBA_SM_0bd58110854b720784c5",
+      "existing_id": "PBA_R526216"
+    },
+    {
+      "publisher_id": "pba-pba-gov-cup-50-ros-vs-mer-2026-08-02",
+      "publisher_mac_id": "PBA_SM_9ea1501605c384e4826b",
+      "existing_id": "PBA_R526215"
+    },
+    {
+      "publisher_id": "pba-pba-gov-cup-50-tnt-vs-smb-2026-08-01",
+      "publisher_mac_id": "PBA_SM_109f29bb8289652aa32e",
+      "existing_id": "PBA_R526214"
+    },
+    {
+      "publisher_id": "pba-pba-gov-cup-50-con-vs-nlx-2026-08-01",
+      "publisher_mac_id": "PBA_SM_5b3f1489ca5ffd8e39bb",
+      "existing_id": "PBA_R526213"
+    },
+    {
+      "publisher_id": "pba-gov-g552",
+      "publisher_mac_id": "PBA_SM_cc956d08e0499cb58984",
+      "existing_id": "PBA_R526212"
+    },
+    {
+      "publisher_id": "pba-gov-g551",
+      "publisher_mac_id": "PBA_SM_02da5392b94941334776",
+      "existing_id": "PBA_R526211"
+    },
+    {
+      "publisher_id": "pba-gov-g550",
+      "publisher_mac_id": "PBA_SM_a8bc4f8d780589ed604f",
+      "existing_id": "PBA_R526210"
+    },
+    {
+      "publisher_id": "pba-gov-g549",
+      "publisher_mac_id": "PBA_SM_54eea078a60831f9c57a",
+      "existing_id": "PBA_R526209"
+    },
+    {
+      "publisher_id": "pba-gov-g548",
+      "publisher_mac_id": "PBA_SM_03ecaf7eef04fea07f47",
+      "existing_id": "PBA_R526208"
+    },
+    {
+      "publisher_id": "pba-gov-g547",
+      "publisher_mac_id": "PBA_SM_4575898d7fa1530f0799",
+      "existing_id": "PBA_R526207"
+    },
+    {
+      "publisher_id": "pba-gov-g546",
+      "publisher_mac_id": "PBA_SM_6ea7bf9b90c0e5012e6b",
+      "existing_id": "PBA_R526206"
+    },
+    {
+      "publisher_id": "pba-gov-g545",
+      "publisher_mac_id": "PBA_SM_a009d1cf299bf28f3600",
+      "existing_id": "PBA_R526205"
+    },
+    {
+      "publisher_id": "pba-gov-g544",
+      "publisher_mac_id": "PBA_SM_056609bb87071d3cfd86",
+      "existing_id": "PBA_R526204"
+    },
+    {
+      "publisher_id": "pba-gov-g543",
+      "publisher_mac_id": "PBA_SM_36fab39f28d8ba2e9206",
+      "existing_id": "PBA_R526203"
+    },
+    {
+      "publisher_id": "pba-gov-g542",
+      "publisher_mac_id": "PBA_SM_184c28a578531ec8f020",
+      "existing_id": "PBA_R526202"
+    },
+    {
+      "publisher_id": "pba-gov-g541",
+      "publisher_mac_id": "PBA_SM_4ed30c1601e5446f9816",
+      "existing_id": "PBA_R526201"
+    },
+    {
+      "publisher_id": "pba-gov-g540",
+      "publisher_mac_id": "PBA_SM_3c5a978992e1d23453e3",
+      "existing_id": "PBA_R526200"
+    },
+    {
+      "publisher_id": "pba-gov-g539",
+      "publisher_mac_id": "PBA_SM_f9898b3b360ceb5d635d",
+      "existing_id": "PBA_R526199"
+    },
+    {
+      "publisher_id": "pba-gov-g538",
+      "publisher_mac_id": "PBA_SM_e985d437378eddce9e76",
+      "existing_id": "PBA_R526198"
+    },
+    {
+      "publisher_id": "pba-gov-g537",
+      "publisher_mac_id": "PBA_SM_94d463213146b89d882f",
+      "existing_id": "PBA_R526197"
+    },
+    {
+      "publisher_id": "pba-gov-g536",
+      "publisher_mac_id": "PBA_SM_40f3e94a14767e2c18f4",
+      "existing_id": "PBA_R526196"
+    },
+    {
+      "publisher_id": "pba-gov-g535",
+      "publisher_mac_id": "PBA_SM_f9e618ed3e3b8ed9e226",
+      "existing_id": "PBA_R526195"
+    },
+    {
+      "publisher_id": "pba-gov-g534",
+      "publisher_mac_id": "PBA_SM_57300f1787864d123f72",
+      "existing_id": "PBA_R526194"
+    },
+    {
+      "publisher_id": "pba-gov-g533",
+      "publisher_mac_id": "PBA_SM_72c96a6684bb04461f83",
+      "existing_id": "PBA_R526193"
+    },
+    {
+      "publisher_id": "pba-gov-g532",
+      "publisher_mac_id": "PBA_SM_ce0866a750921b81738d",
+      "existing_id": "PBA_R526192"
+    },
+    {
+      "publisher_id": "pba-gov-g531",
+      "publisher_mac_id": "PBA_SM_aeb223f23deaf18034ea",
+      "existing_id": "PBA_R526191"
+    },
+    {
+      "publisher_id": "pba-gov-g530",
+      "publisher_mac_id": "PBA_SM_70dcf9203d1c4a7f4468",
+      "existing_id": "PBA_R526190"
+    },
+    {
+      "publisher_id": "pba-gov-g529",
+      "publisher_mac_id": "PBA_SM_0a8a3dc728062e534b07",
+      "existing_id": "PBA_R526189"
+    },
+    {
+      "publisher_id": "pba-gov-g528",
+      "publisher_mac_id": "PBA_SM_a0bcbbb50d0d59a4cada",
+      "existing_id": "PBA_R526188"
+    },
+    {
+      "publisher_id": "pba-gov-g527",
+      "publisher_mac_id": "PBA_SM_96210acd61c593c1f901",
+      "existing_id": "PBA_R526187"
+    },
+    {
+      "publisher_id": "pba-gov-g526",
+      "publisher_mac_id": "PBA_SM_97f29ae8b7bdb01026c8",
+      "existing_id": "PBA_R526186"
+    },
+    {
+      "publisher_id": "pba-gov-g525",
+      "publisher_mac_id": "PBA_SM_b508cacda781a04fb90d",
+      "existing_id": "PBA_R526185"
+    },
+    {
+      "publisher_id": "pba-gov-g524",
+      "publisher_mac_id": "PBA_SM_1d69fed04b9c14f76875",
+      "existing_id": "PBA_R526184"
+    },
+    {
+      "publisher_id": "pba-gov-g523",
+      "publisher_mac_id": "PBA_SM_5c41c04ecd99922fc439",
+      "existing_id": "PBA_R526183"
+    },
+    {
+      "publisher_id": "pba-gov-g522",
+      "publisher_mac_id": "PBA_SM_903dec08874d25b4dcd7",
+      "existing_id": "PBA_R526182"
+    },
+    {
+      "publisher_id": "pba-gov-g521",
+      "publisher_mac_id": "PBA_SM_bec6fe314193b9a555b4",
+      "existing_id": "PBA_R526181"
+    }
+  ],
+  "rejected_boxes": [
+    {
+      "event_id": "pba-pba-gov-cup-50-ros-vs-mag-2026-10-21",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-ros-vs-mag-2026-10-21",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-ros-vs-mag-2026-10-21",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-ros-vs-mag-2026-10-21",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-ros-vs-mag-2026-10-21",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-ros-vs-mag-2026-10-21",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-ros-vs-mag-2026-10-21",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-ros-vs-mag-2026-10-21",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-ros-vs-mag-2026-10-21",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-ros-vs-mag-2026-10-21",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-smb-vs-nlx-2026-10-21",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-smb-vs-nlx-2026-10-21",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-smb-vs-nlx-2026-10-21",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-smb-vs-nlx-2026-10-21",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-smb-vs-nlx-2026-10-21",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-smb-vs-nlx-2026-10-21",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-smb-vs-nlx-2026-10-21",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-smb-vs-nlx-2026-10-21",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-smb-vs-nlx-2026-10-21",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-smb-vs-nlx-2026-10-21",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-gin-vs-phx-2026-10-18",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-gin-vs-phx-2026-10-18",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-gin-vs-phx-2026-10-18",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-gin-vs-phx-2026-10-18",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-gin-vs-phx-2026-10-18",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-gin-vs-phx-2026-10-18",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-gin-vs-phx-2026-10-18",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-gin-vs-phx-2026-10-18",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-gin-vs-phx-2026-10-18",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-gin-vs-phx-2026-10-18",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-gin-vs-phx-2026-10-18",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tnt-vs-con-2026-10-18",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tnt-vs-con-2026-10-18",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tnt-vs-con-2026-10-18",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tnt-vs-con-2026-10-18",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tnt-vs-con-2026-10-18",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tnt-vs-con-2026-10-18",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tnt-vs-con-2026-10-18",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tnt-vs-con-2026-10-18",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tnt-vs-con-2026-10-18",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-bwb-vs-ros-2026-10-17",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-bwb-vs-ros-2026-10-17",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-bwb-vs-ros-2026-10-17",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-bwb-vs-ros-2026-10-17",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-bwb-vs-ros-2026-10-17",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-bwb-vs-ros-2026-10-17",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-bwb-vs-ros-2026-10-17",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-bwb-vs-ros-2026-10-17",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-bwb-vs-ros-2026-10-17",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-bwb-vs-ros-2026-10-17",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tgr-vs-ter-2026-10-17",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tgr-vs-ter-2026-10-17",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tgr-vs-ter-2026-10-17",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tgr-vs-ter-2026-10-17",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tgr-vs-ter-2026-10-17",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tgr-vs-ter-2026-10-17",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tgr-vs-ter-2026-10-17",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tgr-vs-ter-2026-10-17",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tgr-vs-ter-2026-10-17",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tgr-vs-ter-2026-10-17",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tgr-vs-ter-2026-10-17",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tgr-vs-ter-2026-10-17",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tgr-vs-ter-2026-10-17",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-phx-vs-mer-2026-10-16",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-phx-vs-mer-2026-10-16",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-phx-vs-mer-2026-10-16",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-phx-vs-mer-2026-10-16",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-phx-vs-mer-2026-10-16",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-phx-vs-mer-2026-10-16",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-phx-vs-mer-2026-10-16",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-phx-vs-mer-2026-10-16",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-con-vs-mgp-2026-10-16",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-con-vs-mgp-2026-10-16",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-con-vs-mgp-2026-10-16",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-con-vs-mgp-2026-10-16",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-con-vs-mgp-2026-10-16",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-con-vs-mgp-2026-10-16",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-con-vs-mgp-2026-10-16",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-con-vs-mgp-2026-10-16",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-con-vs-mgp-2026-10-16",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-con-vs-mgp-2026-10-16",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-con-vs-mgp-2026-10-16",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-con-vs-mgp-2026-10-16",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-con-vs-mgp-2026-10-16",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-con-vs-mgp-2026-10-16",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-con-vs-mgp-2026-10-16",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-nlx-vs-tgr-2026-10-14",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-nlx-vs-tgr-2026-10-14",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-nlx-vs-tgr-2026-10-14",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-nlx-vs-tgr-2026-10-14",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-nlx-vs-tgr-2026-10-14",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-nlx-vs-tgr-2026-10-14",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-nlx-vs-tgr-2026-10-14",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-nlx-vs-tgr-2026-10-14",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-nlx-vs-tgr-2026-10-14",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-nlx-vs-tgr-2026-10-14",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-nlx-vs-tgr-2026-10-14",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-nlx-vs-tgr-2026-10-14",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-nlx-vs-tgr-2026-10-14",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-nlx-vs-tgr-2026-10-14",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-ter-vs-smb-2026-10-14",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-ter-vs-smb-2026-10-14",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-ter-vs-smb-2026-10-14",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-ter-vs-smb-2026-10-14",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-ter-vs-smb-2026-10-14",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-ter-vs-smb-2026-10-14",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-ter-vs-smb-2026-10-14",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-ter-vs-smb-2026-10-14",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-ter-vs-smb-2026-10-14",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mgp-vs-tnt-2026-10-13",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mgp-vs-tnt-2026-10-13",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mgp-vs-tnt-2026-10-13",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mgp-vs-tnt-2026-10-13",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mgp-vs-tnt-2026-10-13",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mgp-vs-tnt-2026-10-13",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mgp-vs-tnt-2026-10-13",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mgp-vs-tnt-2026-10-13",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mgp-vs-tnt-2026-10-13",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mgp-vs-tnt-2026-10-13",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mgp-vs-tnt-2026-10-13",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mer-vs-bwb-2026-10-13",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mer-vs-bwb-2026-10-13",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mer-vs-bwb-2026-10-13",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mer-vs-bwb-2026-10-13",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mer-vs-bwb-2026-10-13",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mer-vs-bwb-2026-10-13",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mer-vs-bwb-2026-10-13",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mer-vs-bwb-2026-10-13",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mag-vs-gin-2026-10-11",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mag-vs-gin-2026-10-11",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mag-vs-gin-2026-10-11",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mag-vs-gin-2026-10-11",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mag-vs-gin-2026-10-11",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mag-vs-gin-2026-10-11",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mag-vs-gin-2026-10-11",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mag-vs-gin-2026-10-11",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mag-vs-gin-2026-10-11",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mag-vs-gin-2026-10-11",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mag-vs-gin-2026-10-11",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mag-vs-gin-2026-10-11",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mag-vs-gin-2026-10-11",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tgr-vs-con-2026-10-11",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tgr-vs-con-2026-10-11",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tgr-vs-con-2026-10-11",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tgr-vs-con-2026-10-11",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tgr-vs-con-2026-10-11",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tgr-vs-con-2026-10-11",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tgr-vs-con-2026-10-11",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tgr-vs-con-2026-10-11",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tgr-vs-con-2026-10-11",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tgr-vs-con-2026-10-11",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tgr-vs-con-2026-10-11",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tgr-vs-con-2026-10-11",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tnt-vs-smb-2026-10-10",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tnt-vs-smb-2026-10-10",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tnt-vs-smb-2026-10-10",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tnt-vs-smb-2026-10-10",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tnt-vs-smb-2026-10-10",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tnt-vs-smb-2026-10-10",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tnt-vs-smb-2026-10-10",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tnt-vs-smb-2026-10-10",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tnt-vs-smb-2026-10-10",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mgp-vs-ter-2026-10-10",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mgp-vs-ter-2026-10-10",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mgp-vs-ter-2026-10-10",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mgp-vs-ter-2026-10-10",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mgp-vs-ter-2026-10-10",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mgp-vs-ter-2026-10-10",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mgp-vs-ter-2026-10-10",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mgp-vs-ter-2026-10-10",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mgp-vs-ter-2026-10-10",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mgp-vs-ter-2026-10-10",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mgp-vs-ter-2026-10-10",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mgp-vs-ter-2026-10-10",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-gin-vs-ros-2026-10-09",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-gin-vs-ros-2026-10-09",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-gin-vs-ros-2026-10-09",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-gin-vs-ros-2026-10-09",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-gin-vs-ros-2026-10-09",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-gin-vs-ros-2026-10-09",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-gin-vs-ros-2026-10-09",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-gin-vs-ros-2026-10-09",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-gin-vs-ros-2026-10-09",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-gin-vs-ros-2026-10-09",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-gin-vs-ros-2026-10-09",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-gin-vs-ros-2026-10-09",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-gin-vs-ros-2026-10-09",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-bwb-vs-mag-2026-10-09",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-bwb-vs-mag-2026-10-09",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-bwb-vs-mag-2026-10-09",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-bwb-vs-mag-2026-10-09",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-bwb-vs-mag-2026-10-09",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-bwb-vs-mag-2026-10-09",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-bwb-vs-mag-2026-10-09",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-bwb-vs-mag-2026-10-09",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-ter-vs-tnt-2026-10-07",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-ter-vs-tnt-2026-10-07",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-ter-vs-tnt-2026-10-07",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-ter-vs-tnt-2026-10-07",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-ter-vs-tnt-2026-10-07",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-ter-vs-tnt-2026-10-07",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-ter-vs-tnt-2026-10-07",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-ter-vs-tnt-2026-10-07",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-ter-vs-tnt-2026-10-07",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-nlx-vs-mgp-2026-10-07",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-nlx-vs-mgp-2026-10-07",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-nlx-vs-mgp-2026-10-07",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-nlx-vs-mgp-2026-10-07",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-nlx-vs-mgp-2026-10-07",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-nlx-vs-mgp-2026-10-07",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-nlx-vs-mgp-2026-10-07",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-nlx-vs-mgp-2026-10-07",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-nlx-vs-mgp-2026-10-07",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-nlx-vs-mgp-2026-10-07",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mer-vs-gin-2026-08-14",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mer-vs-gin-2026-08-14",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mer-vs-gin-2026-08-14",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mer-vs-gin-2026-08-14",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mer-vs-gin-2026-08-14",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mer-vs-gin-2026-08-14",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mer-vs-gin-2026-08-14",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mer-vs-gin-2026-08-14",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mer-vs-gin-2026-08-14",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mer-vs-gin-2026-08-14",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mer-vs-gin-2026-08-14",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mer-vs-gin-2026-08-14",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-con-vs-nlx-2026-08-14",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-con-vs-nlx-2026-08-14",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-con-vs-nlx-2026-08-14",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-con-vs-nlx-2026-08-14",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-con-vs-nlx-2026-08-14",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-con-vs-nlx-2026-08-14",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-con-vs-nlx-2026-08-14",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-con-vs-nlx-2026-08-14",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-con-vs-nlx-2026-08-14",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-con-vs-nlx-2026-08-14",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-con-vs-nlx-2026-08-14",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mag-vs-phx-2026-08-12",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mag-vs-phx-2026-08-12",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mag-vs-phx-2026-08-12",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mag-vs-phx-2026-08-12",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mag-vs-phx-2026-08-12",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tgr-vs-smb-2026-08-12",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tgr-vs-smb-2026-08-12",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tgr-vs-smb-2026-08-12",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tgr-vs-smb-2026-08-12",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tgr-vs-smb-2026-08-12",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tgr-vs-smb-2026-08-12",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tgr-vs-smb-2026-08-12",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tgr-vs-smb-2026-08-12",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tgr-vs-smb-2026-08-12",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tgr-vs-smb-2026-08-12",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tgr-vs-smb-2026-08-12",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tgr-vs-smb-2026-08-12",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tgr-vs-smb-2026-08-12",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tgr-vs-smb-2026-08-12",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tgr-vs-smb-2026-08-12",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tgr-vs-smb-2026-08-12",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-nlx-vs-tnt-2026-08-11",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-nlx-vs-tnt-2026-08-11",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-nlx-vs-tnt-2026-08-11",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-nlx-vs-tnt-2026-08-11",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-nlx-vs-tnt-2026-08-11",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-nlx-vs-tnt-2026-08-11",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-nlx-vs-tnt-2026-08-11",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-con-vs-ter-2026-08-11",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-con-vs-ter-2026-08-11",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-con-vs-ter-2026-08-11",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-con-vs-ter-2026-08-11",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-con-vs-ter-2026-08-11",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-con-vs-ter-2026-08-11",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-con-vs-ter-2026-08-11",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-con-vs-ter-2026-08-11",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mgp-vs-smb-2026-08-08",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mgp-vs-smb-2026-08-08",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mgp-vs-smb-2026-08-08",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mgp-vs-smb-2026-08-08",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mgp-vs-smb-2026-08-08",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mgp-vs-smb-2026-08-08",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mgp-vs-smb-2026-08-08",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mgp-vs-smb-2026-08-08",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tnt-vs-tgr-2026-08-08",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tnt-vs-tgr-2026-08-08",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tnt-vs-tgr-2026-08-08",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tnt-vs-tgr-2026-08-08",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tnt-vs-tgr-2026-08-08",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tnt-vs-tgr-2026-08-08",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tnt-vs-tgr-2026-08-08",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tnt-vs-tgr-2026-08-08",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tnt-vs-tgr-2026-08-08",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tnt-vs-tgr-2026-08-08",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tnt-vs-tgr-2026-08-08",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mag-vs-mer-2026-08-07",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mag-vs-mer-2026-08-07",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mag-vs-mer-2026-08-07",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mag-vs-mer-2026-08-07",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mag-vs-mer-2026-08-07",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mag-vs-mer-2026-08-07",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-mag-vs-mer-2026-08-07",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-ter-vs-nlx-2026-08-07",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-ter-vs-nlx-2026-08-07",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-ter-vs-nlx-2026-08-07",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-ter-vs-nlx-2026-08-07",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-ter-vs-nlx-2026-08-07",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-ter-vs-nlx-2026-08-07",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-ter-vs-nlx-2026-08-07",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-ter-vs-nlx-2026-08-07",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-ter-vs-nlx-2026-08-07",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-smb-vs-con-2026-08-05",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-smb-vs-con-2026-08-05",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-smb-vs-con-2026-08-05",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-smb-vs-con-2026-08-05",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-smb-vs-con-2026-08-05",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-smb-vs-con-2026-08-05",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-smb-vs-con-2026-08-05",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-smb-vs-con-2026-08-05",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-smb-vs-con-2026-08-05",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-smb-vs-con-2026-08-05",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-bwb-vs-phx-2026-08-05",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-bwb-vs-phx-2026-08-05",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-bwb-vs-phx-2026-08-05",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-bwb-vs-phx-2026-08-05",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-bwb-vs-phx-2026-08-05",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-bwb-vs-phx-2026-08-05",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-bwb-vs-phx-2026-08-05",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-bwb-vs-phx-2026-08-05",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-bwb-vs-phx-2026-08-05",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-nlx-vs-tnt-2026-08-04",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-nlx-vs-tnt-2026-08-04",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-nlx-vs-tnt-2026-08-04",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-nlx-vs-tnt-2026-08-04",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-nlx-vs-tnt-2026-08-04",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-nlx-vs-tnt-2026-08-04",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-nlx-vs-tnt-2026-08-04",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-nlx-vs-tnt-2026-08-04",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tgr-vs-mgp-2026-08-04",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tgr-vs-mgp-2026-08-04",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tgr-vs-mgp-2026-08-04",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tgr-vs-mgp-2026-08-04",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tgr-vs-mgp-2026-08-04",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tgr-vs-mgp-2026-08-04",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tgr-vs-mgp-2026-08-04",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tgr-vs-mgp-2026-08-04",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tgr-vs-mgp-2026-08-04",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tgr-vs-mgp-2026-08-04",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tgr-vs-mgp-2026-08-04",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-gin-vs-mag-2026-08-02",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-gin-vs-mag-2026-08-02",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-gin-vs-mag-2026-08-02",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-gin-vs-mag-2026-08-02",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-gin-vs-mag-2026-08-02",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-gin-vs-mag-2026-08-02",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-gin-vs-mag-2026-08-02",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-gin-vs-mag-2026-08-02",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-ros-vs-mer-2026-08-02",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-ros-vs-mer-2026-08-02",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-ros-vs-mer-2026-08-02",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-ros-vs-mer-2026-08-02",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-ros-vs-mer-2026-08-02",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-ros-vs-mer-2026-08-02",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-ros-vs-mer-2026-08-02",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-ros-vs-mer-2026-08-02",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tnt-vs-smb-2026-08-01",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tnt-vs-smb-2026-08-01",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tnt-vs-smb-2026-08-01",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tnt-vs-smb-2026-08-01",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tnt-vs-smb-2026-08-01",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tnt-vs-smb-2026-08-01",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tnt-vs-smb-2026-08-01",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tnt-vs-smb-2026-08-01",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-tnt-vs-smb-2026-08-01",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-con-vs-nlx-2026-08-01",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-con-vs-nlx-2026-08-01",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-con-vs-nlx-2026-08-01",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-con-vs-nlx-2026-08-01",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-con-vs-nlx-2026-08-01",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-pba-gov-cup-50-con-vs-nlx-2026-08-01",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g552",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g552",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g552",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g552",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g552",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g552",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g552",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g551",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g551",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g551",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g551",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g551",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g551",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g551",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g551",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g551",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g551",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g550",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g550",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g550",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g550",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g550",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g550",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g550",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g550",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g550",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g550",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g550",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g550",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g549",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g549",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g549",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g549",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g549",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g549",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g549",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g548",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g548",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g548",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g548",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g548",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g548",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g548",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g548",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g548",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g548",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g548",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g548",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g548",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g547",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g547",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g547",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g547",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g547",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g547",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g547",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g547",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g547",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g546",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g546",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g546",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g546",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g546",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g546",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g546",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g546",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g545",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g545",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g545",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g545",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g545",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g545",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g545",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g545",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g545",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g544",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g544",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g544",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g544",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g544",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g544",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g544",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g544",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g544",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g543",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g543",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g543",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g543",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g543",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g543",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g542",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g542",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g542",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g542",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g542",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g542",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g542",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g542",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g542",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g542",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g541",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g541",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g541",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g541",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g541",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g541",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g541",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g541",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g541",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g541",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g541",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g540",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g540",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g540",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g540",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g540",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g540",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g540",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g540",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g540",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g539",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g539",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g539",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g539",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g539",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g539",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g539",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g539",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g538",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g538",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g538",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g538",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g538",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g538",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g538",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g538",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g538",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g538",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g537",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g537",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g537",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g537",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g537",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g537",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g536",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g536",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g536",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g536",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g536",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g536",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g536",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g536",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g536",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g535",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g535",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g535",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g535",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g535",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g535",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g535",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g535",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g534",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g534",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g534",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g534",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g534",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g534",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g534",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g534",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g534",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g534",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g534",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g534",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g533",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g533",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g533",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g533",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g533",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g533",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g533",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g533",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g533",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g532",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g532",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g532",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g532",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g532",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g532",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g532",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g532",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g532",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g532",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g531",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g531",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g531",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g531",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g531",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g531",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g531",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g531",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g530",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g530",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g530",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g530",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g530",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g530",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g530",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g530",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g530",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g530",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g530",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g530",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g530",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g530",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g529",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g529",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g529",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g529",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g528",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g528",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g528",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g528",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g528",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g528",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g527",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g527",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g527",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g527",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g527",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g527",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g527",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g527",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g527",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g527",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g527",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g526",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g526",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g526",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g526",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g526",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g526",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g526",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g526",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g525",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g525",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g525",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g525",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g525",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g525",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g525",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g525",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g525",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g525",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g525",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g525",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g524",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g524",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g524",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g524",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g524",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g524",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g524",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g524",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g524",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g524",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g524",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g523",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g523",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g523",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g523",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g523",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g523",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g523",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g523",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g523",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g522",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g522",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g522",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g522",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g522",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g522",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g522",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g522",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g522",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g521",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g521",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g521",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g521",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g521",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g521",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g521",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g521",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g521",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "pba-gov-g521",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "PBA_SM_a900374d07cdeaaa6270",
+      "side": "PBA_1744",
+      "reason": "Conflicting duplicated player counting row"
+    },
+    {
+      "event_id": "PBA_SM_5757c625389f7f6e1fd4",
+      "side": "PBA_1744",
+      "reason": "Conflicting duplicated player counting row"
+    },
+    {
+      "event_id": "PBA_SM_5ea084e60351bd41621a",
+      "side": "PBA_1241",
+      "reason": "Conflicting duplicated player counting row"
+    }
+  ],
+  "validated_player_match_rows": 1018,
+  "limitations": "Current conference publisher data, not an official PBA API. Historic clocks unverified: day precision and whole-day feature withholding. Three recent score pairs were independently checked against the official PBA homepage; that does not verify all history. No provider box is a target-game pregame feature. Completeness and original publication times unknown.",
+  "games": 322,
+  "teams": 15,
+  "seasons": {
+    "2018-19": 79,
+    "2021-22": 88,
+    "2022-23": 83,
+    "2024-25": 2,
+    "2025-26": 70
+  },
+  "dataset_sha256": "44e05154637d3d5c01f7bc19ff6929c75e1605cd4e0edd82afc12bcb9547ad3c",
+  "trained": false,
+  "counts": [
+    {
+      "end_year": 2019,
+      "teams_requested": 12,
+      "source_rows": 441,
+      "excluded": 0
+    },
+    {
+      "end_year": 2022,
+      "teams_requested": 12,
+      "source_rows": 176,
+      "excluded": 12
+    },
+    {
+      "end_year": 2023,
+      "teams_requested": 12,
+      "source_rows": 528,
+      "excluded": 0
+    },
+    {
+      "end_year": 2025,
+      "teams_requested": 12,
+      "source_rows": 4,
+      "excluded": 184
+    },
+    {
+      "end_year": 2026,
+      "teams_requested": 13,
+      "source_rows": 520,
+      "excluded": 4
+    },
+    {
+      "end_year": 2027,
+      "teams_requested": 12,
+      "source_rows": 0,
+      "excluded": 0
+    }
+  ]
+}

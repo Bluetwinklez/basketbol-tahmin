@@ -1,0 +1,84 @@
+{
+  "source": "RealGM public team schedules",
+  "sources": [
+    "https://basketball.realgm.com/international/league/132/PBA--Governors-Cup/team/1744/Phoenix-Fuel-Masters/schedule/2019",
+    "https://basketball.realgm.com/international/league/132/PBA--Governors-Cup/team/1744/Phoenix-Fuel-Masters/schedule/2022",
+    "https://basketball.realgm.com/international/league/132/PBA--Governors-Cup/team/1744/Phoenix-Fuel-Masters/schedule/2023",
+    "https://basketball.realgm.com/international/league/132/PBA--Governors-Cup/team/1744/Phoenix-Fuel-Masters/schedule/2025",
+    "https://basketball.realgm.com/international/league/132/PBA--Governors-Cup/team/1744/Phoenix-Fuel-Masters/schedule/2026",
+    "https://basketball.realgm.com/international/league/132/PBA--Governors-Cup/team/1744/Phoenix-Fuel-Masters/schedule/2027"
+  ],
+  "counts": [
+    {
+      "end_year": 2019,
+      "teams_requested": 12,
+      "source_rows": 441,
+      "excluded": 0
+    },
+    {
+      "end_year": 2022,
+      "teams_requested": 12,
+      "source_rows": 176,
+      "excluded": 12
+    },
+    {
+      "end_year": 2023,
+      "teams_requested": 12,
+      "source_rows": 528,
+      "excluded": 0
+    },
+    {
+      "end_year": 2025,
+      "teams_requested": 12,
+      "source_rows": 4,
+      "excluded": 184
+    },
+    {
+      "end_year": 2026,
+      "teams_requested": 13,
+      "source_rows": 520,
+      "excluded": 4
+    },
+    {
+      "end_year": 2027,
+      "teams_requested": 12,
+      "source_rows": 0,
+      "excluded": 0
+    }
+  ],
+  "errors": [
+    {
+      "year": 2019,
+      "team": "432",
+      "error": "ValueError: Wrong PBA source season"
+    },
+    {
+      "year": 2019,
+      "team": "935",
+      "error": "ValueError: Wrong PBA source season"
+    },
+    {
+      "year": 2020,
+      "reason": "Incomplete or missing team selector"
+    },
+    {
+      "year": 2021,
+      "reason": "Incomplete or missing team selector"
+    },
+    {
+      "year": 2024,
+      "reason": "Incomplete or missing team selector"
+    }
+  ],
+  "captured_at_utc": "2026-10-23T07:29:45.651348+00:00",
+  "limitations": "Per-row conference labels checked; team-copy results deduplicated and W/L orientation crosschecked. Day precision; same-day results withheld. Current season/complete league coverage unverified. Neutral/home status and original publication time unknown. Imports/rules differ by conference and era; separate models required. No guarantee of current PBA coverage.",
+  "games": 275,
+  "teams": 14,
+  "seasons": {
+    "2018-19": 93,
+    "2022-23": 94,
+    "2025-26": 88
+  },
+  "dataset_sha256": "6b86ee459c474989e9a4059650ed1aed201ada33e533a6dd2d9a0a4b8cad0ad9",
+  "trained": false
+}

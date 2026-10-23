@@ -32,6 +32,7 @@ def create_server(root):
         governance=root/'docs/kanit/governance/coverage.json'
         coverage=json.loads(governance.read_text()) if governance.exists() else None
         return dict(coverage_inventory=coverage,auxiliary_club_games=len(pd.read_parquet(context)) if context.exists() else 0,games=len(g),leagues={str(k):int(v) for k,v in g.groupby('lig').size().items()},
+                    asian_archives={p.stem:len(pd.read_parquet(p)) for p in (root/'data/asia').glob('*.parquet') if p.stem in ('KBL','JP_B1','JP_B2','PBA_GOV','PBA_COM','PBA_PHI')},
                     cba_games=len(pd.read_parquet(cba)) if cba.exists() else 0,
                     experimental_competitions={code:len(pd.read_parquet(path)) for code in ('ECW','FEC','VTB') if (path:=root/f'data/competitions/{code}.parquet').exists()},
                     latest_game_utc=g.tarih_utc.max().isoformat(),bulletin_available=(root/'data/bulten/latest.json').exists())
@@ -39,7 +40,7 @@ def create_server(root):
     @server.tool(annotations=readonly)
     def bulletin_events(league: str | None = None,limit: int = 30) -> dict:
         """List future fixtures from the local bulletin with capture age; does not refresh."""
-        if league is not None and league not in ('E','U','NBA','NBL','CBA','ECW','FEC','VTB'):
+        if league is not None and league not in ('E','U','NBA','NBL','CBA','ECW','FEC','VTB','KBL','JP_B1','JP_B2','PBA_GOV','PBA_COM','PBA_PHI'):
             raise ValueError('Unknown supported model league')
         return list_events(root,league,limit)
 
@@ -79,7 +80,7 @@ def create_server(root):
         result={}
         for name,filename in [('pregame_verified','completed_seasons.csv'),
                               ('data_expansion_model','summary.csv'),('feature_research','summary.csv'),
-                              ('calibration_research','summary.csv'),('competitions','summary.csv'),('adaptive','summary.csv'),('winner','summary.csv'),('protocol','strata.csv')]:
+                              ('calibration_research','summary.csv'),('competitions','summary.csv'),('adaptive','summary.csv'),('winner','summary.csv'),('protocol','strata.csv'),('asia_models','summary.csv')]:
             path=root/f'docs/kanit/{name}/{filename}'
             if path.exists():
                 t=pd.read_csv(path)
