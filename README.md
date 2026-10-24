@@ -6,6 +6,8 @@ A Python research package for pregame basketball probabilities, score margins an
 
 ## What works
 
+**Football probability research:** a fixed joint-score ensemble, consistent goal markets and per-market reliability reports now complement the existing candidates. Same-cohort historical 1/X/2 is 48.78% versus baseline 47.80% on 3,973 games; other candidates perform better on some measures. Defaults and frozen forecasts remain unchanged. [Comparison and usage](docs/football-ensemble.md).
+
 **Sports reliability expansion:** 3,133 additional football results across Belgium, Greece and Scotland (62,373 stored finals / 17 leagues including the preceding archive), explicit opponent-adjusted and low-score research candidates, same-cohort comparisons, football result filters and JSON/CSV/Markdown exports. Basketball adds Turkish provider-duplicate safeguards, stable postponed-fixture identities and display-only totals estimates. Weekly historical backfills and rendered Chromium fixture checks complement daily refresh. [Changes, measured results and remaining limits](docs/sports-upgrade.md).
 
 **Football is now a separate supported research workflow:** 59,240 community-source finals across 14 leagues, including 1,884 Turkish Süper Lig results; regulation 1/X/2, goal totals and both-teams-score probabilities; a local Football screen and read-only MCP tools. A seven-day run froze 95 pending forecasts. Daily football and basketball refresh is scheduled through GitHub Actions. [Commands, partial coverage, chronological results and limitations](docs/football.md). Football observed prospective accuracy is unavailable.
