@@ -96,17 +96,18 @@ def create_server(root):
                     note='Separate football model; community results are not official confirmation.')
 
     @server.tool(annotations=readonly)
-    def predict_football(league: str, home: str, away: str, fixture_date: str) -> dict:
+    def predict_football(league: str, home: str, away: str, fixture_date: str, model_variant: str='baseline') -> dict:
         """Read-only manual regulation goal forecast, with 1/X/2 and goal markets.
 
         Fixture identity is not verified by a manual request. No provider refresh.
         """
         from .football.data import LEAGUES,load
-        from .football.model import GoalModel
+        from .football.challenger import fit, VARIANTS
         if league not in LEAGUES: raise ValueError('Unknown football league')
         today=pd.Timestamp.now(tz='UTC').date()
         if pd.Timestamp(fixture_date).date()<today: raise ValueError('Past fixture; use retrospective evaluation')
-        result=GoalModel(load(root/'data/football'),league,str(today)).predict(home,away)
+        if model_variant not in VARIANTS: raise ValueError('Unknown football model candidate')
+        result=fit(load(root/'data/football'),league,str(today),model_variant).predict(home,away)
         result.update(fixture_date=fixture_date,fixture_verified=False)
         return result
 

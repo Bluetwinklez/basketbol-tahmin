@@ -104,7 +104,7 @@ def main():
     travel.add_argument('--event-id',required=True);travel.add_argument('--asof',required=True)
     football=sub.add_parser('futbol',help='Separate football data, goal forecasts and chronological evaluation')
     football.add_argument('action',choices=['collect','daily','predict','evaluate','compare'])
-    football.add_argument('--model',choices=['baseline','opponent','opponent_dc'],default='baseline')
+    football.add_argument('--model',choices=['baseline','opponent','opponent_dc','ensemble'],default='baseline')
     football.add_argument('--first',type=int,default=2010)
     football.add_argument('--last',type=int)
     football.add_argument('--current-only',action='store_true')
