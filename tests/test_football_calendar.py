@@ -47,3 +47,10 @@ def test_collector_retains_conflicts_and_reports_missing_source(tmp_path):
     assert target.read_bytes()==original
     report=collect(2025,2025,directory=source,json_directory=source,root=root)
     assert report['errors'] and target.read_bytes()==original
+
+
+def test_serie_a_separate_from_serie_b():
+    text='= Brasileiro Série A 2025\nSat Jan 4\n  A  v  B    1-0\n'
+    a=parse_text(text,'BR1','2025','source','2026-10-25')
+    assert a[0]['league']=='BR1'
+    with pytest.raises(ValueError): parse_text(text,'BR2','2025','source','2026-10-25')
