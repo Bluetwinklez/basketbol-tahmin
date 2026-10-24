@@ -22,7 +22,7 @@ def main():
     bt.add_argument('--ilk-test',type=int,help='İlk değerlendirilecek sezonun başlangıç yılı; eğitim geçmişi korunur')
     prediction=sub.add_parser('tahmin',help='Gelecek maçları tahmin et: tahmin "Fenerbahçe - Real Madrid" "Celtics - Lakers"')
     prediction.add_argument('maclar',nargs='+',help='"Ev - Deplasman" biçiminde bir ya da daha çok maç')
-    prediction.add_argument('--lig',choices=['E','U','NBA','NBL','CBA','ECW','FEC','VTB','ABA','UKR','TR_BSL',*ASIA_CODES],help='Verilmezse takım adlarından bulunur')
+    prediction.add_argument('--lig',choices=['E','U','NBA','NBL','CBA','ECW','FEC','VTB','ABA','UKR','TR_BSL','ARG_LNB',*ASIA_CODES],help='Verilmezse takım adlarından bulunur')
     prediction.add_argument('--tarih',help='Maç zamanı, ör. 2026-10-23T20:45 (saat dilimi yoksa İstanbul). Varsayılan: şimdi')
     prediction.add_argument('--hierarchical',action='store_true',help='Research-only linked senior-women attack/defence model; ECW only')
     prediction.add_argument('--adaptive-form',action='store_true',help='Deneysel: önceki sezonun testine göre aylık model güncellemesi; yalnız ECW/FEC/VTB')
@@ -47,7 +47,7 @@ def main():
     live.add_argument('--replay',action='store_true',help='Eski durumun tarihsel tekrarını açıkça etiketle')
     bulletin=sub.add_parser('bulten',help='Deneysel İddaa web bültenini oku; varsayılan yerel snapshot')
     bulletin.add_argument('--guncelle',action='store_true',help='Web backendinden üç salt-okunur GET isteği yap')
-    bulletin.add_argument('--lig',choices=['E','U','NBA','NBL','CBA','ECW','FEC','VTB','ABA','UKR','TR_BSL',*ASIA_CODES])
+    bulletin.add_argument('--lig',choices=['E','U','NBA','NBL','CBA','ECW','FEC','VTB','ABA','UKR','TR_BSL','ARG_LNB',*ASIA_CODES])
     bulletin.add_argument('--limit',type=int,default=30)
     action=bulletin.add_mutually_exclusive_group()
     action.add_argument('--tahmin',help='Yerel bültendeki bir etkinlik kimliği için model/piyasa karşılaştırması')
@@ -71,8 +71,8 @@ def main():
     sub.add_parser('finlandiya-topla',help='Collect dated senior-women Finnish league results')
     sub.add_parser('girona-topla',help='Collect Girona senior-women match facts with actual FEB tipoff times')
     sub.add_parser('waba-topla',help='Collect verified senior WABA results with conservative day precision')
-    domestic=sub.add_parser('ulke-topla',help='Collect separate senior Ukraine and Turkish BSL archives')
-    domestic.add_argument('--ligler',nargs='+',choices=['UKR','TR_BSL'],default=['UKR','TR_BSL'])
+    domestic=sub.add_parser('ulke-topla',help='Collect separate Ukraine, Turkish BSL or Argentina LNB archives (Argentina starts in 2022)')
+    domestic.add_argument('--ligler',nargs='+',choices=['UKR','TR_BSL','ARG_LNB'],default=['UKR','TR_BSL'])
     domestic.add_argument('--baslangic',type=int,default=2020)
     domestic.add_argument('--bitis',type=int)
     aba=sub.add_parser('aba-topla',help='Collect official senior ABA seasons separately')
@@ -183,7 +183,7 @@ def main():
     elif args.command=='ulke-topla':
         from importlib import import_module
         for code in args.ligler:
-            module={'UKR':'ukraine','TR_BSL':'turkey'}[code]
+            module={'UKR':'ukraine','TR_BSL':'turkey','ARG_LNB':'argentina'}[code]
             import_module('.veri.'+module,'bbtahmin').collect(args.baslangic,args.bitis)
     elif args.command=='aba-topla':
         from .veri.aba import collect

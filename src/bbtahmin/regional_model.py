@@ -15,8 +15,8 @@ from threadpoolctl import threadpool_limits
 from .asia_model import fit_fold, walk_forward as evaluate_folds
 from .ozellik import build_features
 
-CODES = ('ABA', 'UKR', 'TR_BSL')
-NAMES = {'ABA': "ABA League (senior men)", 'UKR': "Ukraine SuperLeague men", 'TR_BSL': "Turkish BSL men"}
+CODES = ('ABA', 'UKR', 'TR_BSL', 'ARG_LNB')
+NAMES = {'ABA': "ABA League (senior men)", 'UKR': "Ukraine SuperLeague men", 'TR_BSL': "Turkish BSL men", 'ARG_LNB': 'Argentina Liga Nacional men'}
 SPEC = 'regional-prior-policy-v1'
 
 
@@ -73,6 +73,7 @@ def predict(code, home, away, when):
                 az_veri=[t for t, n in counts.items() if n < 5], recent_games=counts, uzatma=None,
                 training_cutoff=cutoff.isoformat(), selection=info,
                 calibration_regime_gap=info['calibration_season_gap'] > 1,
+                prior_season_missing=([t for t in (home,away) if not ((g.sezon < season) & ((g.ev == t) | (g.dep == t))).any()] if code == 'ARG_LNB' else []),
                 dataset_sha256=hashlib.sha256(Path(f'data/competitions/{code}.parquet').read_bytes()).hexdigest(),
                 experimental=True, note='Separate senior league, retrospectively collected results. Unverified same-day scores excluded. Nominal home court and historical publication times not independently verified. Intervals are not conditional guarantees.')
 

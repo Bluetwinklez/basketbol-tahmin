@@ -58,7 +58,7 @@ def aday_adlari(lig, kodlar):
         adlar = {kod} | set(EK_ADLAR.get(kod, []))
         if lig == 'NBA':
             adlar |= set(ALIASES.get(kod, []))
-        elif lig in ('ECW','FEC','VTB','ABA','UKR','TR_BSL'):
+        elif lig in ('ECW','FEC','VTB','ABA','UKR','TR_BSL','ARG_LNB'):
             path=Path(f'data/competitions/{lig}_teams.json')
             entry=json.loads(path.read_text('utf8')).get(kod,{}) if path.exists() else {}
             adlar |= {entry.get('name','')} | set(entry.get('aliases',[]))
@@ -101,3 +101,4 @@ def coz(lig, metin, kodlar):
         return kodlar_yakin[0]
     oneriler = sorted(set(tam + kismi + kodlar_yakin))
     raise ValueError(f'"{metin}" {lig} liginde bulunamadı' + (f'; adaylar: {", ".join(oneriler)}' if oneriler else ''))
+
