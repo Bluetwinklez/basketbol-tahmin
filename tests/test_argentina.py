@@ -114,7 +114,11 @@ def test_independent_model_route(monkeypatch):
 def test_published_argentina_forecasts_reused_in_new_local_ledger(tmp_path,monkeypatch):
     from bbtahmin import daily
     def no_recalculation(*args,**kwargs):raise AssertionError('Frozen forecast must be reused')
-    monkeypatch.setattr(daily,'tahmin_et',no_recalculation)
+    monkeypatch.setattr('bbtahmin.tahmin.tahmin_et',no_recalculation)
+    from pathlib import Path
+    originals={p:p.read_bytes() for p in Path('data/argentina_ledger/forecasts').glob('*.json')}
+    assert len(originals)==10
     report=daily.run(['ARG_LNB'],str(tmp_path/'new-ledger'),hours=168,now='2026-10-23T21:00Z')
     assert len(report['upcoming'])==10
     assert all(row['record_status']=='existing_immutable' for row in report['upcoming'])
+    assert all(p.read_bytes()==raw for p,raw in originals.items())
