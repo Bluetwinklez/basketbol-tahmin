@@ -41,3 +41,18 @@ The archive contains **1,718 valid finals / 23 clubs**: 428 (2022–23), 431 (20
 On 824 completed-season target games (2024–25 and 2025–26), the selected prior-season policy gets **537/824 (65.17%)**, against a home-team baseline of **61.53%**. Log loss is 0.636758; mean team-score error is 8.12 points and total-score error 12.78. The current partial season is weaker: **18/35 (51.43%)**, below its home baseline of 57.14%. This does not establish improved current-season accuracy. The current policy chooses the equal ensemble using only the previous season; no candidate was promoted based on these current outcomes.
 
 Ten future fixtures were frozen before tipoff; three pass the existing probability/diagnostic filters, and all ten remain pending. Argentino–Quimsa has Quimsa 75.16%, expected score 75.8–84.6 and total 160.4. Atenas–Lanus has Atenas 54.6%, expected score 82.3–79.9 and total 162.2, with a blocking missing-prior-league-history diagnostic for Lanus. These are uncertain model estimates; no prospective accuracy is available. The daily command reuses the checked-in original Argentina ledger even when a new local output directory is selected.
+
+## CI and immutable-ledger verification (24 October 2026)
+
+The final published-forecast regression test originally patched a nonexistent
+`daily.tahmin_et` attribute. The daily runner imports the function locally from
+`bbtahmin.tahmin`, so the test now patches that real dependency. Its guard still
+raises if prediction is attempted; it is not disabled or weakened. The test also
+checks that all ten original forecast files remain byte-for-byte unchanged
+after opening a new output ledger. No model parameters, source data or frozen
+forecasts were changed by this repair.
+
+Local validation on the branch including the latest main: **289 Python tests
+and 9 DOM UI tests passed**. The previous hosted failure is retained at
+[run 40019201245](https://github.com/Bluetwinklez/basketbol-tahmin/actions/runs/40019201245);
+new hosted checks must pass before merging PR #10.
