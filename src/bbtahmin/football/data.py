@@ -14,8 +14,8 @@ LEAGUES = {'TR1': 'Turkish Süper Lig', 'EN1': 'Premier League', 'EN2': 'Champio
            'DE1': 'Bundesliga', 'DE2': '2. Bundesliga', 'ES1': 'La Liga', 'ES2': 'Segunda División',
            'IT1': 'Serie A', 'IT2': 'Serie B', 'FR1': 'Ligue 1', 'FR2': 'Ligue 2',
            'NL1': 'Eredivisie', 'PT1': 'Primeira Liga', 'AT1': 'Austrian Bundesliga',
-           'BR1': 'Brazilian Série A', 'AR1': 'Argentine Primera División', 'CO1': 'Colombian Primera A', 'BR2': 'Brazilian Série B', 'BE1': 'Belgian Pro League', 'GR1': 'Greek Super League', 'SC1': 'Scottish Premiership'}
-JSON_CODES = {c: c[:2].lower()+'.'+c[2:] for c in LEAGUES if c not in ('TR1', 'BR2', 'BR1', 'AR1', 'CO1')}
+           'US1': 'Major League Soccer', 'JP1': 'Japan J1 League', 'CN1': 'Chinese Super League', 'BR1': 'Brazilian Série A', 'AR1': 'Argentine Primera División', 'CO1': 'Colombian Primera A', 'BR2': 'Brazilian Série B', 'BE1': 'Belgian Pro League', 'GR1': 'Greek Super League', 'SC1': 'Scottish Premiership'}
+JSON_CODES = {c: c[:2].lower()+'.'+c[2:] for c in LEAGUES if c not in ('TR1', 'BR2', 'BR1', 'AR1', 'CO1', 'US1', 'JP1', 'CN1')}
 JSON_CODES['SC1'] = 'sco.1'
 # Explicit identity aliases only; no fuzzy cross-club merges.
 ALIASES = {'kasimpasa sk': 'kasimpasa', 'kasimpasa': 'kasimpasa', 'konyaspor': 'atiker konyaspor',

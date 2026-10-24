@@ -9,7 +9,7 @@ from .data import ROOT, git_source, parse_text, parse_json, write_json
 
 
 def collect(first=2018, last=None, directory=None, root=ROOT, current_only=False, json_directory=None, code="BR2"):
-    if code not in ("BR2", "BR1", "AR1", "CO1"): raise ValueError("Unsupported calendar league")
+    if code not in ("BR2", "BR1", "AR1", "CO1", "US1", "JP1", "CN1"): raise ValueError("Unsupported calendar league")
     now=pd.Timestamp.now(tz='UTC'); last=now.year if last is None else last
     if current_only: first=last=now.year
     if not 2018 <= first <= last <= now.year: raise ValueError('Invalid calendar years')
@@ -22,7 +22,7 @@ def collect(first=2018, last=None, directory=None, root=ROOT, current_only=False
     root=Path(root); root.mkdir(parents=True,exist_ok=True); files=[]; errors=[]
     for year in range(first,last+1):
         source=directory/'brazil'/f'{year}_{code.lower()}.txt'
-        json_source=json_directory/str(year)/(code[:2].lower()+'.'+code[2:]+'.json')
+        json_source=json_directory/str(year)/('mls.json' if code=='US1' else code[:2].lower()+'.'+code[2:]+'.json')
         if json_source.exists(): source=json_source
         if not source.exists():
             errors.append(dict(league=code,season=str(year),error='Source file unavailable; historical data is not current coverage'))
