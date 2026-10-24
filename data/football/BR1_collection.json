@@ -1,0 +1,72 @@
+{
+  "checked_at_utc": "2026-10-24T21:05:48.488014+00:00",
+  "revision": "f51b2dcf5e0fab9f0abd5206ab8c24a413e67277",
+  "license": "CC0-1.0",
+  "files": [
+    {
+      "season": "2018",
+      "rows": 380,
+      "finals": 380,
+      "source_sha256": "dd2222862f84fb047848b042b6fa4ad24c2a835c87bd39d61be1341102705cf2",
+      "source_url": "https://github.com/openfootball/south-america/blob/f51b2dcf5e0fab9f0abd5206ab8c24a413e67277/brazil/2018_br1.txt"
+    },
+    {
+      "season": "2019",
+      "rows": 380,
+      "finals": 380,
+      "source_sha256": "b21a7a875de99d75dc01e91fc0eed1df89dbb21a4c1d3e45d40c7e2771b82d58",
+      "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2019/br.1.json"
+    },
+    {
+      "season": "2021",
+      "rows": 380,
+      "finals": 380,
+      "source_sha256": "12bc973a3bf6c089f75acc4298d86b72817e9c6d8c36dc338f5bafeedbadce0e",
+      "source_url": "https://github.com/openfootball/south-america/blob/f51b2dcf5e0fab9f0abd5206ab8c24a413e67277/brazil/2021_br1.txt"
+    },
+    {
+      "season": "2022",
+      "rows": 380,
+      "finals": 380,
+      "source_sha256": "d632c78896f35cdc80379b9f957af8b5ef2993497384efff00f7445ad44b016b",
+      "source_url": "https://github.com/openfootball/south-america/blob/f51b2dcf5e0fab9f0abd5206ab8c24a413e67277/brazil/2022_br1.txt"
+    },
+    {
+      "season": "2023",
+      "rows": 380,
+      "finals": 380,
+      "source_sha256": "41527c2ce79a47988dc7a8d1db632c823d53e71763e304d9ed2abc185cc38598",
+      "source_url": "https://github.com/openfootball/south-america/blob/f51b2dcf5e0fab9f0abd5206ab8c24a413e67277/brazil/2023_br1.txt"
+    },
+    {
+      "season": "2024",
+      "rows": 380,
+      "finals": 380,
+      "source_sha256": "0c03ae175bb3b7dfa1e8b7403ddd6181d7b1c7845e9cb837fb2df7fb852a9aa6",
+      "source_url": "https://github.com/openfootball/south-america/blob/f51b2dcf5e0fab9f0abd5206ab8c24a413e67277/brazil/2024_br1.txt"
+    },
+    {
+      "season": "2025",
+      "rows": 380,
+      "finals": 380,
+      "source_sha256": "0fcc4647256b2e1f58b50f1372b751aeb7e6aacb5b8cd747579dd7ab71303fbb",
+      "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2025/br.1.json"
+    },
+    {
+      "season": "2026",
+      "rows": 380,
+      "finals": 277,
+      "source_sha256": "828be04070293393096d88f13c9e7f06784516963843ff09ba47fedd08c4e171",
+      "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026/br.1.json"
+    }
+  ],
+  "errors": [
+    {
+      "league": "BR1",
+      "season": "2020",
+      "error": "Date outside source season",
+      "retained_previous": true
+    }
+  ],
+  "note": "Community results, not official verification; day precision. No inferred current season."
+}
