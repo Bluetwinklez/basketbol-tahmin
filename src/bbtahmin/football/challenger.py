@@ -10,7 +10,7 @@ from .data import key
 from .distributions import poisson
 from .model import GoalModel, metrics, score
 
-VARIANTS = ('baseline', 'opponent', 'opponent_dc')
+VARIANTS = ('baseline', 'opponent', 'opponent_dc', 'ensemble')
 
 
 class OpponentGoalModel(GoalModel):
@@ -90,6 +90,9 @@ class OpponentGoalModel(GoalModel):
 def fit(history, league, cutoff, variant='baseline'):
     if variant not in VARIANTS:
         raise ValueError('Unknown football model candidate')
+    if variant=='ensemble':
+        from .ensemble import EnsembleGoalModel
+        return EnsembleGoalModel(history,league,cutoff)
     return (GoalModel(history, league, cutoff) if variant == 'baseline' else
             OpponentGoalModel(history, league, cutoff, low_score=variant == 'opponent_dc'))
 
