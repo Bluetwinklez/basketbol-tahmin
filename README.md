@@ -279,3 +279,5 @@ A [fresh runtime verification](docs/kanit/runtime_validation/README.md) retraine
 
 The highest-priority research additions are point-in-time injury/lineup history, timestamped market snapshots, stronger player/rotation value estimates, domestic-league workload and travel, and chronological calibration/interval checks. The implemented shooting-profile experiment did not consistently improve outcomes and remains disabled. Detailed priorities, reviewed repositories, provider limitations and measured ablations are in [research-and-roadmap.md](docs/research-and-roadmap.md).
 
+
+Screenshot competition support is audited explicitly in [requested football coverage](docs/requested-football-coverage.md). Brazil Série B adds 2,716 CC0 historical finals, but missing 2026 data blocks current recommendations; unsupported leagues never receive invented model outputs. Same-cohort retrospective evidence includes goal-market calibration and simple baselines.

@@ -9,6 +9,7 @@ import pandas as pd
 from bbtahmin.daily import LEAGUES, run as basketball_run
 from bbtahmin.football.data import collect, write_json
 from bbtahmin.football.daily import run as football_run
+from bbtahmin.football.calendar import collect as calendar_collect
 
 
 def main():
@@ -21,8 +22,9 @@ def main():
         try:
             if sport=='football':
                 collection=collect(current_only=not args.backfill)
+                calendar=calendar_collect(current_only=not args.backfill)
                 report=football_run(output='data/football_ledger')
-                errors=collection['errors']
+                errors=collection['errors']+calendar['errors']
             else:
                 backfill_errors=[]
                 if args.backfill:
