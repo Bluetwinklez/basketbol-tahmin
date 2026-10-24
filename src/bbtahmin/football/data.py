@@ -14,8 +14,8 @@ LEAGUES = {'TR1': 'Turkish Süper Lig', 'EN1': 'Premier League', 'EN2': 'Champio
            'DE1': 'Bundesliga', 'DE2': '2. Bundesliga', 'ES1': 'La Liga', 'ES2': 'Segunda División',
            'IT1': 'Serie A', 'IT2': 'Serie B', 'FR1': 'Ligue 1', 'FR2': 'Ligue 2',
            'NL1': 'Eredivisie', 'PT1': 'Primeira Liga', 'AT1': 'Austrian Bundesliga',
-           'US1': 'Major League Soccer', 'JP1': 'Japan J1 League', 'CN1': 'Chinese Super League', 'BR1': 'Brazilian Série A', 'AR1': 'Argentine Primera División', 'CO1': 'Colombian Primera A', 'BR2': 'Brazilian Série B', 'BE1': 'Belgian Pro League', 'GR1': 'Greek Super League', 'SC1': 'Scottish Premiership'}
-JSON_CODES = {c: c[:2].lower()+'.'+c[2:] for c in LEAGUES if c not in ('TR1', 'BR2', 'BR1', 'AR1', 'CO1', 'US1', 'JP1', 'CN1')}
+           'AR2': 'Argentine Primera Nacional', 'MX2': 'Liga de Expansión MX', 'US1': 'Major League Soccer', 'JP1': 'Japan J1 League', 'CN1': 'Chinese Super League', 'BR1': 'Brazilian Série A', 'AR1': 'Argentine Primera División', 'CO1': 'Colombian Primera A', 'BR2': 'Brazilian Série B', 'BE1': 'Belgian Pro League', 'GR1': 'Greek Super League', 'SC1': 'Scottish Premiership'}
+JSON_CODES = {c: c[:2].lower()+'.'+c[2:] for c in LEAGUES if c not in ('TR1', 'BR2', 'BR1', 'AR1', 'CO1', 'US1', 'JP1', 'CN1', 'AR2', 'MX2')}
 JSON_CODES['SC1'] = 'sco.1'
 # Explicit identity aliases only; no fuzzy cross-club merges.
 ALIASES = {'kasimpasa sk': 'kasimpasa', 'kasimpasa': 'kasimpasa', 'konyaspor': 'atiker konyaspor',
@@ -88,7 +88,8 @@ def parse_turkey(text, season, source, captured):
 def parse_text(text, code, season, source, captured):
     """Two documented Football.TXT layouts; reject unparsed match-like lines."""
     label = r'(?:Süper Lig|Super Lig)' if code == 'TR1' else (r'Brasileiro Série A' if code == 'BR1' else r'Brasileiro Série B')
-    if code not in ('TR1', 'BR2', 'BR1') or not re.search(label, text.splitlines()[0]) or season[:4] not in text.splitlines()[0]:
+    if code=='MX2': label=r'(?:Liga de Expansión MX|Ascenso MX)'
+    if code not in ('TR1', 'BR2', 'BR1', 'MX2') or not re.search(label, text.splitlines()[0]) or season[:4] not in text.splitlines()[0]:
         raise ValueError('Wrong competition/season')
     result, day, year, previous_month = [], None, int(season[:4]), 0
     months = {m: i+1 for i,m in enumerate('Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec'.split())}

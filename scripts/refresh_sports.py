@@ -21,6 +21,8 @@ def main():
         if args.sport not in (sport,'all'): continue
         try:
             if sport=='football':
+                from refresh_screenshot_leagues import run as screenshot_refresh
+                screenshot_refresh(args.backfill)
                 collection=collect(current_only=not args.backfill)
                 calendar=calendar_collect(current_only=not args.backfill)
                 for code in ('BR1','AR1','CO1','US1','JP1','CN1'):
