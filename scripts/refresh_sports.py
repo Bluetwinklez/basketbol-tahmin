@@ -23,7 +23,7 @@ def main():
             if sport=='football':
                 collection=collect(current_only=not args.backfill)
                 calendar=calendar_collect(current_only=not args.backfill)
-                for code in ('BR1','AR1','CO1'):
+                for code in ('BR1','AR1','CO1','US1','JP1','CN1'):
                     extra=calendar_collect(current_only=not args.backfill,code=code)
                     calendar['errors'].extend(extra['errors'])
                 report=football_run(output='data/football_ledger')

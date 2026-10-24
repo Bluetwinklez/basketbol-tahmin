@@ -1,0 +1,61 @@
+{
+  "checked_at_utc": "2026-10-24T21:10:50.015907+00:00",
+  "revision": "f51b2dcf5e0fab9f0abd5206ab8c24a413e67277",
+  "license": "CC0-1.0",
+  "files": [
+    {
+      "season": "2019",
+      "rows": 306,
+      "finals": 306,
+      "source_sha256": "379a3805121acf48b0379a0b5f0f41bccacbc14c03eb022e1684745dfcf589ea",
+      "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2019/jp.1.json"
+    },
+    {
+      "season": "2020",
+      "rows": 306,
+      "finals": 306,
+      "source_sha256": "4f6085d15f2077d18ecb22fd1608d1d42ec74236d9539bb9099125aa173034db",
+      "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2020/jp.1.json"
+    },
+    {
+      "season": "2025",
+      "rows": 380,
+      "finals": 136,
+      "source_sha256": "8f912edcbb2f350557d687833e8dda0dddf4bcfadcdd3006552598ac609b4f7a",
+      "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2025/jp.1.json"
+    }
+  ],
+  "errors": [
+    {
+      "league": "JP1",
+      "season": "2018",
+      "error": "Source file unavailable; historical data is not current coverage"
+    },
+    {
+      "league": "JP1",
+      "season": "2021",
+      "error": "Source file unavailable; historical data is not current coverage"
+    },
+    {
+      "league": "JP1",
+      "season": "2022",
+      "error": "Source file unavailable; historical data is not current coverage"
+    },
+    {
+      "league": "JP1",
+      "season": "2023",
+      "error": "Source file unavailable; historical data is not current coverage"
+    },
+    {
+      "league": "JP1",
+      "season": "2024",
+      "error": "Source file unavailable; historical data is not current coverage"
+    },
+    {
+      "league": "JP1",
+      "season": "2026",
+      "error": "Source file unavailable; historical data is not current coverage"
+    }
+  ],
+  "note": "Community results, not official verification; day precision. No inferred current season."
+}
