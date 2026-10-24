@@ -1,0 +1,163 @@
+{
+  "revision": "6ba5e7e8f8657b6ccdeb0e89778765423f8d5aaf",
+  "source_url": "https://github.com/schochastics/football-data/blob/6ba5e7e8f8657b6ccdeb0e89778765423f8d5aaf/data/results/games.parquet",
+  "source_sha256": "a3f4ec5d922179bd15a7fba889471e71cffa4800cb5109982e956610e658db8d",
+  "files": [
+    {
+      "league": "SV1",
+      "season": "2018",
+      "rows": 291
+    },
+    {
+      "league": "HN1",
+      "season": "2018",
+      "rows": 199
+    },
+    {
+      "league": "BO1",
+      "season": "2018",
+      "rows": 305
+    },
+    {
+      "league": "VE1",
+      "season": "2018",
+      "rows": 336
+    },
+    {
+      "league": "UY1",
+      "season": "2018",
+      "rows": 260
+    },
+    {
+      "league": "SV1",
+      "season": "2019",
+      "rows": 285
+    },
+    {
+      "league": "HN1",
+      "season": "2019",
+      "rows": 203
+    },
+    {
+      "league": "BO1",
+      "season": "2019",
+      "rows": 363
+    },
+    {
+      "league": "VE1",
+      "season": "2019",
+      "rows": 388
+    },
+    {
+      "league": "UY1",
+      "season": "2019",
+      "rows": 298
+    },
+    {
+      "league": "HN1",
+      "season": "2020",
+      "rows": 142
+    },
+    {
+      "league": "SV1",
+      "season": "2020",
+      "rows": 150
+    },
+    {
+      "league": "BO1",
+      "season": "2020",
+      "rows": 182
+    },
+    {
+      "league": "UY1",
+      "season": "2020",
+      "rows": 174
+    },
+    {
+      "league": "VE1",
+      "season": "2020",
+      "rows": 130
+    },
+    {
+      "league": "SV1",
+      "season": "2021",
+      "rows": 273
+    },
+    {
+      "league": "HN1",
+      "season": "2021",
+      "rows": 186
+    },
+    {
+      "league": "UY1",
+      "season": "2021",
+      "rows": 364
+    },
+    {
+      "league": "BO1",
+      "season": "2021",
+      "rows": 210
+    },
+    {
+      "league": "VE1",
+      "season": "2021",
+      "rows": 302
+    },
+    {
+      "league": "SV1",
+      "season": "2022",
+      "rows": 214
+    },
+    {
+      "league": "HN1",
+      "season": "2022",
+      "rows": 200
+    },
+    {
+      "league": "BO1",
+      "season": "2022",
+      "rows": 290
+    },
+    {
+      "league": "UY1",
+      "season": "2022",
+      "rows": 297
+    },
+    {
+      "league": "VE1",
+      "season": "2022",
+      "rows": 276
+    },
+    {
+      "league": "HN1",
+      "season": "2023",
+      "rows": 202
+    },
+    {
+      "league": "SV1",
+      "season": "2023",
+      "rows": 283
+    },
+    {
+      "league": "VE1",
+      "season": "2023",
+      "rows": 195
+    },
+    {
+      "league": "BO1",
+      "season": "2023",
+      "rows": 240
+    },
+    {
+      "league": "UY1",
+      "season": "2023",
+      "rows": 300
+    }
+  ],
+  "errors": [],
+  "license": "ODC-By-1.0",
+  "attribution": "David Schoch / schochastics/football-data",
+  "license_url": "https://opendatacommons.org/licenses/by/1-0/",
+  "checked_at_utc": "2026-10-24T21:23:54.403806+00:00",
+  "note": "2018–2023 only; historical publisher data, not official verification or current coverage. Full-time F only; E/P excluded."
+}
