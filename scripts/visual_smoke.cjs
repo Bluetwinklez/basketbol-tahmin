@@ -3,7 +3,7 @@ const { chromium } = require('playwright');
 const fs = require('node:fs');
 const assert = require('node:assert/strict');
 const path = require('node:path');
-const codes = ['E','KBL','JP_B1','JP_B2','PBA_GOV','ABA','ECW','FEC','UKR','TR_BSL'];
+const codes = ['E','KBL','JP_B1','JP_B2','PBA_GOV','ABA','ECW','FEC','UKR','TR_BSL','ARG_LNB'];
 const entry = (code, i) => ({fixture:{event_id:code+'_1',league:code,home:'H',away:'A',home_name:code==='UKR'?'PRYKARPATTIA-GOVERLA-KFV (Iv-Frankivsk)':'Türk Telekom Basketbol',away_name:'Yukatel Denizli Basket',start_utc:'2099-10-25T15:00Z',captured_at:new Date().toISOString(),source_url:'https://example.org'},prediction:{ev_kazanir:.7,ev_skor:90,dep_skor:80,toplam:170,fark:10,toplam_80:[140,200],fark_80:[-5,25],model:'fixture model',data_quality:{issues:[]}},selected:i%2===0,threshold_passed:true,source_confirmation_fresh:true,record_status:'existing_immutable',total_estimates:[{line:170.5,over:.49,under:.51}]});
 const basketball = {sample:false,job:{status:'idle',message:'Ready'},report_age_minutes:1,results:[],report:{checked_at_utc:'2026-10-23T12:00Z',upcoming:codes.map(entry),performance:{settled_games:1,pending_games:1,winner_accuracy:1,mean_score_mae:3.5},sources:{TR_BSL:{status:'failed',error:'Fixture source unavailable; prior snapshot retained'}},skipped:[]}};
 basketball.results=[{fixture:entry('TR_BSL',0).fixture,prediction:entry('TR_BSL',0).prediction,game:{status:'final',actual_home:85,actual_away:82,winner_correct:true,home_absolute_error:5,away_absolute_error:2,total_absolute_error:3,margin_absolute_error:7,total_in_80:true,margin_in_80:false}},{fixture:entry('UKR',0).fixture,prediction:entry('UKR',0).prediction,game:{status:'pending'}}];
@@ -27,12 +27,12 @@ const football={sample:true,job:{status:'idle',message:'Ready'},leagues:{TR1:'Tu
     return route.fulfill({status:200,contentType:type,body});
    });
    await page.goto('http://127.0.0.1:8765/');await page.waitForSelector('.match-card');
-   assert.equal(await page.locator('#run-leagues input').count(),10);assert.equal(await page.locator('#league-filter option').count(),11);
+   assert.equal(await page.locator('#run-leagues input').count(),11);assert.equal(await page.locator('#league-filter option').count(),12);
    for(const code of codes){await page.selectOption('#league-filter',code);assert.equal(await page.locator('.match-card').count(),1);}
    await page.selectOption('#league-filter','UKR');await page.locator('.match-card summary').click();await page.waitForTimeout(2200);assert.equal(await page.locator('.match-card details').getAttribute('open'),'');
    await page.screenshot({path:path.join(directory,`basketball-${viewport.width}.png`),fullPage:true});
    await page.fill('#search','no matching team');assert.equal(await page.locator('#empty').isVisible(),true);await page.fill('#search','');
-   await page.selectOption('#league-filter','');await page.check('#passed-only');assert.equal(await page.locator('.match-card').count(),5);
+   await page.selectOption('#league-filter','');await page.check('#passed-only');assert.equal(await page.locator('.match-card').count(),6);
    assert.match(await page.locator('#results-body').innerText(),/85.*82/);assert.match(await page.locator('#results-body').innerText(),/Pending/);
    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);
    await page.goto('http://127.0.0.1:8765/football');await page.waitForSelector('.forecast-card');
@@ -47,7 +47,7 @@ const football={sample:true,job:{status:'idle',message:'Ready'},leagues:{TR1:'Tu
    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),true);assert.deepEqual(errors,[]);
    evidence.viewports.push(viewport);await page.close();
   }
-  evidence.checks=['10 basketball leagues and both domestic filters','selected and empty views','expanded details across polling','pending and final results','football status filters','persistent request errors','polling errors clear after recovery','no page overflow at 1440/390/320'];
+  evidence.checks=['11 basketball leagues and both domestic filters','selected and empty views','expanded details across polling','pending and final results','football status filters','persistent request errors','polling errors clear after recovery','no page overflow at 1440/390/320'];
   fs.writeFileSync(path.join(directory,'validation.json'),JSON.stringify(evidence,null,2));console.log(JSON.stringify(evidence));
  }finally{await browser.close();}
 })().catch(error=>{console.error(error);process.exitCode=1;});

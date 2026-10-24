@@ -15,7 +15,7 @@ import pandas as pd
 from .prospective import freeze, settle, verify
 from .quality import timestamp
 
-LEAGUES = ('E', 'KBL', 'JP_B1', 'JP_B2', 'PBA_GOV', 'ABA', 'ECW', 'FEC', 'UKR', 'TR_BSL')
+LEAGUES = ('E', 'KBL', 'JP_B1', 'JP_B2', 'PBA_GOV', 'ABA', 'ECW', 'FEC', 'UKR', 'TR_BSL', 'ARG_LNB')
 EURO_URL = 'https://api-live.euroleague.net/v2/competitions/E/seasons/{season}/games'
 
 
@@ -24,7 +24,7 @@ def refresh(leagues):
     outcomes = {}
     groups = [('E', ['E']), ('KBL', ['KBL']),
               ('Japan', [c for c in leagues if c.startswith('JP_')]), ('PBA', ['PBA_GOV']), ('ABA', ['ABA']),
-              ('ECW', ['ECW']), ('FEC', ['FEC']), ('UKR', ['UKR']), ('TR_BSL', ['TR_BSL'])]
+              ('ECW', ['ECW']), ('FEC', ['FEC']), ('UKR', ['UKR']), ('TR_BSL', ['TR_BSL']), ('ARG_LNB', ['ARG_LNB'])]
     today = pd.Timestamp.now(tz='UTC')
     year = today.year if today.month >= 7 else today.year - 1
     for source, codes in groups:
@@ -56,9 +56,9 @@ def refresh(leagues):
                 elif source == 'ABA':
                     from .veri.aba import collect
                     collect(first=year, last=year, refresh=True)
-                elif source in ('UKR','TR_BSL'):
+                elif source in ('UKR','TR_BSL','ARG_LNB'):
                     from importlib import import_module
-                    module={'UKR':'ukraine','TR_BSL':'turkey'}[source]
+                    module={'UKR':'ukraine','TR_BSL':'turkey','ARG_LNB':'argentina'}[source]
                     import_module('.veri.'+module,'bbtahmin').collect(first=year,last=year)
                     report = json.loads(Path(f'docs/kanit/competitions/{source}_collection.json').read_text())
                     if report.get('errors'):
@@ -87,7 +87,7 @@ def source_facts(code):
             raise ValueError('No EuroLeague schedule snapshot; run with --guncelle')
         payload = json.loads(path.read_text())
         return payload['fixtures'], payload['results']
-    root = Path('data/competitions' if code in ('ABA', 'ECW', 'FEC', 'UKR', 'TR_BSL') else 'data/asia')
+    root = Path('data/competitions' if code in ('ABA', 'ECW', 'FEC', 'UKR', 'TR_BSL', 'ARG_LNB') else 'data/asia')
     fixtures_path = root / f'{code}_fixtures.parquet'
     archive_path = root / f'{code}.parquet'
     if not archive_path.exists() or not fixtures_path.exists():
@@ -142,6 +142,7 @@ def run(leagues=LEAGUES, output='rapor/daily', update=False, hours=48, threshold
     # ledger. The earliest known forecast wins, even after models/data change.
     records, known = {}, {}
     paths = sorted(set((root / 'forecasts').glob('*.json')) |
+                   set(Path('data/argentina_ledger/forecasts').glob('*.json')) |
                    set(Path('docs/kanit/prospective').glob('*.json')))
     for path in paths:
         try:
@@ -286,3 +287,4 @@ def markdown(report):
         if outcome['status'] == 'failed':
             lines += ['', f"Source refresh failed ({code}): {cell(outcome['error'])}"]
     return '\n'.join(lines + ['', report['note'], ''])
+

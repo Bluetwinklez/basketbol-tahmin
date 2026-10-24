@@ -26,8 +26,8 @@ def main():
             else:
                 backfill_errors=[]
                 if args.backfill:
-                    from bbtahmin.veri import turkey,ukraine
-                    for name,collector,first in [('TR_BSL',turkey.collect,2010),('UKR',ukraine.collect,2016)]:
+                    from bbtahmin.veri import turkey,ukraine,argentina
+                    for name,collector,first in [('TR_BSL',turkey.collect,2010),('UKR',ukraine.collect,2016),('ARG_LNB',argentina.collect,2022)]:
                         try: collector(first=first)
                         except Exception as exc: backfill_errors.append(dict(league=name,error=str(exc),stage='historical_backfill'))
                 report=basketball_run(leagues=list(LEAGUES),output='data/basketball_ledger',update=True,hours=168)

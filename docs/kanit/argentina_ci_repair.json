@@ -1,0 +1,23 @@
+{
+  "date": "2026-10-24",
+  "python_tests_passed": 289,
+  "dom_ui_tests_passed": 9,
+  "archive_finals": 1718,
+  "archive_sha256": "ea2a4679f9b561ae1b09adfdbb58338603cc2026c5dc3eb1934a708126c31d10",
+  "original_forecast_hashes": {
+    "3106036546afdd9305346fba2bc3fee033e92c7e33a65c806c2086679592b99b.json": "9ffdd253cd79be32d40846feb83cc8fbf03bfa6920c926bf5f25050dbd6ad7bc",
+    "31874fbb59cfb788736c9fe0c0abcc9fcd24e13fdb45ea05a817b19768c20505.json": "c728d143788963e95f5dcf1ac2baa87497d739b28d6c2bfeb8b6ab1bb1bcafa8",
+    "67b646f03820132a740cc3dd606cc4c95724fc1bbf2b5d3642de6a1f066fc205.json": "5b5d8dbc69d94d179a437634b7068e186758f473969be9525578261c38c3fa6d",
+    "8139716fbc7bd97b0980793caf48379ea130c0fdda38777a96147574e0bc025b.json": "fb14a5ca3b2684aa30c3654cb2ad605b04dbf3f96ffecc4986510c7f31f69b6e",
+    "81cdecc78e36873f9fbc93f5ef4b822a47fc326f62d9f710e2d224e830b65cc6.json": "796d006a7cc646b02826490b3c962a480c05eade1965cb148caf8ee0ae323f01",
+    "86cf7ce2641ce6ac0449ebf5d6430beb1c88f55c4df42d6bf7e6c5cd78e25f6d.json": "305f4992e38e705c7c571e7171bfb92be9cf5a3f26b7af80db782c01413420e0",
+    "9311785bef96895ab41b978bdb70e5b84e858afbec9eb7388f074457e0508338.json": "16c2f19debab3991c60fb1d92113d6ff533facd135cd7284bc73bd8366704fc7",
+    "94177daea4a66cf9981da6c566cbc18aa3488a0d846143c8a2cd7a70949b4641.json": "f48663458ba1fa5e6738a74d56ec0251ade7cdc6565dedc178ac3cf471514158",
+    "9d35349542533881c73cbc30407da4195f6be756c44f87dd846a6beca150a61c.json": "a89215acf6efcab7e8cfc331a4baa03c8d2c7c85d1416d7f63cacd72123ea739",
+    "9ea915b38c032f9bedf506e56ec10e56b02fed564819c01ccf1db33b08172185.json": "3c49eb23ce9fc121d694c885010d7d831fc44fd2dbc3a5f3612229a78b202946"
+  },
+  "frozen_forecasts_unchanged": true,
+  "recalculation_forbidden_by_regression": true,
+  "prior_failure": "https://github.com/Bluetwinklez/basketbol-tahmin/actions/runs/40019201245",
+  "note": "Repairs the test target, not forecasting behavior. No model/data changes or new accuracy claim. Hosted checks run after upload."
+}
