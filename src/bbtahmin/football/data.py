@@ -14,12 +14,12 @@ LEAGUES = {'TR1': 'Turkish Süper Lig', 'EN1': 'Premier League', 'EN2': 'Champio
            'DE1': 'Bundesliga', 'DE2': '2. Bundesliga', 'ES1': 'La Liga', 'ES2': 'Segunda División',
            'IT1': 'Serie A', 'IT2': 'Serie B', 'FR1': 'Ligue 1', 'FR2': 'Ligue 2',
            'NL1': 'Eredivisie', 'PT1': 'Primeira Liga', 'AT1': 'Austrian Bundesliga',
-           'BE1': 'Belgian Pro League', 'GR1': 'Greek Super League', 'SC1': 'Scottish Premiership'}
-JSON_CODES = {c: c[:2].lower()+'.'+c[2:] for c in LEAGUES if c != 'TR1'}
+           'BR2': 'Brazilian Série B', 'BE1': 'Belgian Pro League', 'GR1': 'Greek Super League', 'SC1': 'Scottish Premiership'}
+JSON_CODES = {c: c[:2].lower()+'.'+c[2:] for c in LEAGUES if c not in ('TR1', 'BR2')}
 JSON_CODES['SC1'] = 'sco.1'
 # Explicit identity aliases only; no fuzzy cross-club merges.
 ALIASES = {'kasimpasa sk': 'kasimpasa', 'kasimpasa': 'kasimpasa', 'konyaspor': 'atiker konyaspor',
-           'alanyaspor': 'aytemiz alanyaspor', 'genclerbirligi': 'genclerbirligi'}
+           'alanyaspor': 'aytemiz alanyaspor', 'genclerbirligi': 'genclerbirligi', 'crb al': 'cr brasil al'}
 
 
 def key(name):
@@ -49,7 +49,8 @@ def git_source(name, refresh=True):
 
 def row(code, season, day, home, away, score, source, captured):
     day = pd.Timestamp(day).strftime('%Y-%m-%d')
-    if not (int(season[:4]) <= int(day[:4]) <= int(season[:4])+1):
+    pandemic_extension = code == 'BR2' and season == '2020' and '2021-01-01' <= day <= '2021-01-29'
+    if not pandemic_extension and not (int(season[:4]) <= int(day[:4]) <= int(season[:4])+(len(season)>4)):
         raise ValueError('Date outside source season')
     if not all(isinstance(t, str) and t.strip() for t in (home, away)) or key(home)==key(away):
         raise ValueError('Invalid teams')
@@ -81,9 +82,14 @@ def parse_json(payload, code, season, source, captured):
 
 
 def parse_turkey(text, season, source, captured):
+    return parse_text(text, 'TR1', season, source, captured)
+
+
+def parse_text(text, code, season, source, captured):
     """Two documented Football.TXT layouts; reject unparsed match-like lines."""
-    if not re.search(r'(?:Süper Lig|Super Lig)', text.splitlines()[0]) or season[:4] not in text.splitlines()[0]:
-        raise ValueError('Wrong Turkish competition/season')
+    label = r'(?:Süper Lig|Super Lig)' if code == 'TR1' else r'Brasileiro Série B'
+    if code not in ('TR1', 'BR2') or not re.search(label, text.splitlines()[0]) or season[:4] not in text.splitlines()[0]:
+        raise ValueError('Wrong competition/season')
     result, day, year, previous_month = [], None, int(season[:4]), 0
     months = {m: i+1 for i,m in enumerate('Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec'.split())}
     for raw in text.splitlines()[1:]:
@@ -91,7 +97,8 @@ def parse_turkey(text, season, source, captured):
         date = re.fullmatch(r'(?:Mon|Tue|Wed|Thu|Fri|Sat|Sun) ([A-Z][a-z]{2}) (\d{1,2})(?: (\d{4}))?', line)
         if date:
             month = months[date[1]]
-            year = int(date[3]) if date[3] else int(season[:4]) + (month < 7)
+            year = int(date[3]) if date[3] else int(season[:4]) + (len(season)>4 and month < 7)
+            if code == 'BR2' and season == '2020' and month == 1 and not date[3]: year = 2021
             day = f'{year:04d}-{month:02d}-{int(date[2]):02d}'; previous_month=month
             continue
         if not line or line.startswith(('#', '▪', '(', ')', '=')) or not raw[:1].isspace(): continue
@@ -106,11 +113,11 @@ def parse_turkey(text, season, source, captured):
             score = [int(new[2]),int(new[3])] if new[2] else None
         else:
             if re.search(r'\s(?:v|\d+-\d+)\s', line) and not re.search(r"\d+'", line):
-                raise ValueError(f'Unparsed Turkish fixture: {line}')
+                raise ValueError(f'Unparsed football fixture: {line}')
             continue
         if day is None: raise ValueError('Fixture without date')
-        result.append(row('TR1', season, day, home, away, score, source, captured))
-    if not result: raise ValueError('No Turkish fixtures parsed')
+        result.append(row(code, season, day, home, away, score, source, captured))
+    if not result: raise ValueError('No football fixtures parsed')
     return result
 
 
