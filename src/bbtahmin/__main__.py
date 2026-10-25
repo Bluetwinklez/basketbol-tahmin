@@ -127,7 +127,10 @@ def main():
             result=collect(args.first,args.last,current_only=args.current_only)
         elif args.action=='daily':
             from .football.daily import run as football_run
-            if args.refresh: collect(current_only=True)
+            if args.refresh:
+                collect(current_only=True)
+                from .football.fixture_confirmation import refresh as confirm_fixtures
+                confirm_fixtures()
             result=football_run(args.days,args.output,model_variant=args.model)
         elif args.action in ('evaluate','compare'):
             import gzip

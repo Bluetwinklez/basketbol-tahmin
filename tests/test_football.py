@@ -68,14 +68,14 @@ def test_frozen_ledger_reuses_forecast_and_checks_integrity(tmp_path,monkeypatch
     monkeypatch.setattr(daily,'load',lambda root:f)
     write_json(tmp_path/'collection.json',dict(checked_at_utc='2026-10-23T12:00Z',errors=[]))
     out=tmp_path/'ledger'
-    r=daily.run(output=out,root=tmp_path,now='2026-10-23T13:00Z')
+    r=daily.run(require_fixture_confirmation=False, output=out,root=tmp_path,now='2026-10-23T13:00Z')
     assert r['pending']==1 and r['official_winner_accuracy'] is None
     file=next((out/'forecasts').glob('*.json'));original=file.read_bytes()
-    daily.run(output=out,root=tmp_path,now='2026-10-24T13:00Z')
+    daily.run(require_fixture_confirmation=False, output=out,root=tmp_path,now='2026-10-24T13:00Z')
     assert file.read_bytes()==original
     tamper=json.loads(original);tamper['prediction']['expected_home_goals']=20
     file.write_text(json.dumps(tamper))
-    with pytest.raises(ValueError,match='hash'):daily.run(output=out,root=tmp_path,now='2026-10-24T13:00Z')
+    with pytest.raises(ValueError,match='hash'):daily.run(require_fixture_confirmation=False, output=out,root=tmp_path,now='2026-10-24T13:00Z')
 
 
 def test_stale_future_fixture_is_not_frozen(tmp_path,monkeypatch):
@@ -83,7 +83,7 @@ def test_stale_future_fixture_is_not_frozen(tmp_path,monkeypatch):
     f=pd.DataFrame([row('TR1','2026-27','2026-10-25','A','B',None,'source','2026-10-01T12:00Z')])
     monkeypatch.setattr(daily,'load',lambda root:f)
     write_json(tmp_path/'collection.json',dict(checked_at_utc='2026-10-01T12:00Z',errors=[]))
-    r=daily.run(output=tmp_path/'ledger',root=tmp_path,now='2026-10-23T13:00Z')
+    r=daily.run(require_fixture_confirmation=False, output=tmp_path/'ledger',root=tmp_path,now='2026-10-23T13:00Z')
     assert not r['forecasts'] and '72 hours' in r['skipped'][0]['reason']
 
 

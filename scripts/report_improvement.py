@@ -39,10 +39,41 @@ def main():
                     if name=='baseline':continue
                     candidate=values['all']
                     lines.append(f"| {report['league']} | {season} | {name} | {base['games']} | {base['accuracy']:.2%} | {candidate['accuracy']:.2%} | {candidate['log_loss']-base['log_loss']:+.5f} |")
+    ablation=root/'football-data-ablation-v2/summary.json'
+    if ablation.exists():
+        data=json.loads(ablation.read_text())
+        lines+=['','## Futbol: yalnız veri değişiminin etkisi','',
+                f"{data['scored_fixture_count']} yeni lisanslı finalin tamamı, aynı Poisson modeli ve aynı maçlarla karşılaştırıldı. "
+                'Yeni doğrulanmış sonuçlar ve açık tarih düzeltmeleri veri değişikliğidir. Hedef UTC gününün tamamı eğitimden çıkarıldı. '
+                'Tarihsel yayın erişimi bilinmediğinden bu çalışma ileri dönem başarısı değildir.','',
+                '| Lig | Maç | Eski veri isabeti | Ek veri isabeti | Eski / yeni log loss |',
+                '|---|---:|---:|---:|---:|']
+        for row in data['summaries']:
+            a=row['variants']['old_data'];b=row['variants']['expanded_data']
+            lines.append(f"| {row['league']} | {a['games']} | {a['winner_accuracy']:.2%} | {b['winner_accuracy']:.2%} | {a['log_loss']:.5f} / {b['log_loss']:.5f} |")
+    calibration=root/'calibration/summary.json'
+    if calibration.exists():
+        report=json.loads(calibration.read_text());n=sum(len(r['reports']) for r in report['reports'])
+        lines+=['','## Önceki dönem olasılık kalibrasyonu','',
+                f'{len(report["reports"])} ligde {n} karşılaştırma kaydedildi. Sıcaklık parametresi yalnız daha önceki sezonun '
+                'örneklem dışı tahminlerinde seçildi; hedef sezon etiketleri seçime katılmadı. Skor ortalamaları ve aralıkları değiştirilmedi.']
+    shadow=Path('data/improvement_shadow/latest.json')
+    if shadow.exists():
+        forward=json.loads(shadow.read_text());identities=set()
+        for path in Path('data/improvement_shadow/experiments').glob('*/forecasts/*.json'):
+            fixture=json.loads(path.read_text(encoding='utf8'))['fixture'];identities.add((fixture['league'],fixture['event_id']))
+        lines+=['','## Sonuç öncesi paralel kayıt','',
+                f"{len(identities)} benzersiz maç için tahmin çifti bulunuyor. Kod/politika sürümleri ayrı deneylerdir; "
+                'aynı maçın farklı sürümleri bağımsız maç gibi toplanmaz. İlk deneme sürümleri tam kaynak paketi içermediğinden yükseltme değerlendirmesine uygun değildir. '
+                'Yeni sürümler kaynak kodunu, paket sürümlerini ve veri karmalarını saklar.','',
+                '| Deney | Aktif | Sonuçlandı | Bekliyor | Kaynak paketi doğrulandı |',
+                '|---|---|---:|---:|---|']
+        for experiment in forward['experiments']:
+            lines.append(f"| {experiment['experiment_id'][:12]} | {experiment.get('active_experiment',False)} | {experiment['settled_games']} | {experiment['pending']} | {experiment.get('source_snapshot_verified',False)} |")
     lines+=['','## Henüz tamamlanmayan doğrulama','',
-            'Gelecekteki maçlardan bağımsız örneklem birikmesi, paralel aday kayıt akışının tamamlanması, '
-            'bağımsız güncel fikstür doğrulamasının genişletilmesi ve kalan kaynak boşluklarının giderilmesi ayrı kabul koşullarıdır. '
-            'Bu koşullar tamamlanmadan canlı başarı iyileşti denmez.']
+            'Bağımsız gelecek sonuçlarının birikmesi ve kalan kaynak/takvim boşluklarının giderilmesi sürüyor. '
+            'Yeni model otomatik olarak yayımlanmaz. Yeterli örneklem, gün sayısı, iki zaman diliminde tutarlılık, '
+            'olasılık hatası ve seçim kapsamı koşulları birlikte incelenir. Bu koşullar tamamlanmadan canlı başarı iyileşti denmez.']
     target=Path(args.output);target.parent.mkdir(parents=True,exist_ok=True)
     target.write_text('\n'.join(lines)+'\n',encoding='utf8')
     print(target)

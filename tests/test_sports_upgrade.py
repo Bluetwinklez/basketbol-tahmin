@@ -103,9 +103,9 @@ class SportsUpgradeTests(unittest.TestCase):
         frame=pd.concat([h,pd.DataFrame([fixture])],ignore_index=True)
         with tempfile.TemporaryDirectory() as folder,patch.object(daily,'load',return_value=frame):
             root=Path(folder);write_json(root/'collection.json',dict(checked_at_utc='2026-10-23T12:00Z',errors=[]))
-            daily.run(output=root/'ledger',root=root,now='2026-10-23T13:00Z')
+            daily.run(require_fixture_confirmation=False, output=root/'ledger',root=root,now='2026-10-23T13:00Z')
             path=next((root/'ledger/forecasts').glob('*.json'));original=path.read_bytes()
-            daily.run(output=root/'ledger',root=root,now='2026-10-24T13:00Z',model_variant='opponent_dc')
+            daily.run(require_fixture_confirmation=False, output=root/'ledger',root=root,now='2026-10-24T13:00Z',model_variant='opponent_dc')
             self.assertEqual(path.read_bytes(),original)
 
     def test_football_exports_preserve_pending_and_escape_names(self):

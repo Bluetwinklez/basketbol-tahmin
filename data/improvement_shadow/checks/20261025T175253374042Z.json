@@ -1,0 +1,257 @@
+{
+  "checked_at_utc": "2026-10-25T17:52:53.371073+00:00",
+  "experiment_id": "3ca8c864cb8f30c78072ee9b7a96bb0466ae706f4a9262e6d1d0a0fc83723af4",
+  "new_pairs": 149,
+  "reused_pairs": 0,
+  "skipped": [
+    {
+      "league": "E",
+      "event_id": "E2026_72",
+      "reason": "ValueError: Invalid challenger basketball finals"
+    },
+    {
+      "league": "E",
+      "event_id": "E2026_71",
+      "reason": "ValueError: Invalid challenger basketball finals"
+    },
+    {
+      "league": "E",
+      "event_id": "E2026_74",
+      "reason": "ValueError: Invalid challenger basketball finals"
+    },
+    {
+      "league": "E",
+      "event_id": "E2026_76",
+      "reason": "ValueError: Invalid challenger basketball finals"
+    },
+    {
+      "league": "E",
+      "event_id": "E2026_75",
+      "reason": "ValueError: Invalid challenger basketball finals"
+    },
+    {
+      "league": "E",
+      "event_id": "E2026_73",
+      "reason": "ValueError: Invalid challenger basketball finals"
+    },
+    {
+      "league": "E",
+      "event_id": "E2026_79",
+      "reason": "ValueError: Invalid challenger basketball finals"
+    },
+    {
+      "league": "E",
+      "event_id": "E2026_77",
+      "reason": "ValueError: Invalid challenger basketball finals"
+    },
+    {
+      "league": "E",
+      "event_id": "E2026_78",
+      "reason": "ValueError: Invalid challenger basketball finals"
+    },
+    {
+      "league": "E",
+      "event_id": "E2026_80",
+      "reason": "ValueError: Invalid challenger basketball finals"
+    },
+    {
+      "league": "E",
+      "event_id": "E2026_81",
+      "reason": "ValueError: Invalid challenger basketball finals"
+    },
+    {
+      "league": "E",
+      "event_id": "E2026_82",
+      "reason": "ValueError: Invalid challenger basketball finals"
+    },
+    {
+      "league": "E",
+      "event_id": "E2026_83",
+      "reason": "ValueError: Invalid challenger basketball finals"
+    },
+    {
+      "league": "E",
+      "event_id": "E2026_84",
+      "reason": "ValueError: Invalid challenger basketball finals"
+    },
+    {
+      "league": "E",
+      "event_id": "E2026_88",
+      "reason": "ValueError: Invalid challenger basketball finals"
+    },
+    {
+      "league": "E",
+      "event_id": "E2026_86",
+      "reason": "ValueError: Invalid challenger basketball finals"
+    },
+    {
+      "league": "E",
+      "event_id": "E2026_85",
+      "reason": "ValueError: Invalid challenger basketball finals"
+    },
+    {
+      "league": "E",
+      "event_id": "E2026_90",
+      "reason": "ValueError: Invalid challenger basketball finals"
+    },
+    {
+      "league": "E",
+      "event_id": "E2026_87",
+      "reason": "ValueError: Invalid challenger basketball finals"
+    },
+    {
+      "league": "E",
+      "event_id": "E2026_89",
+      "reason": "ValueError: Invalid challenger basketball finals"
+    },
+    {
+      "league": "EN1",
+      "event_id": "EN1_921a9c9d9b2fee0f6fbc96e0",
+      "reason": "Insufficient team history"
+    },
+    {
+      "league": "EN1",
+      "event_id": "EN1_bfe4b7a91f6928736d098fb4",
+      "reason": "Insufficient team history"
+    },
+    {
+      "league": "DE1",
+      "event_id": "DE1_de822da6643d147151b1b57f",
+      "reason": "Insufficient team history"
+    },
+    {
+      "league": "DE1",
+      "event_id": "DE1_e6430434f8f97d05f4bbc6f7",
+      "reason": "Insufficient team history"
+    },
+    {
+      "league": "DE1",
+      "event_id": "DE1_d1bdef1ce224c3a546340975",
+      "reason": "Insufficient team history"
+    },
+    {
+      "league": "ES1",
+      "event_id": "ES1_c38b4ed70323e599488fc599",
+      "reason": "Quarantined fixture conflict"
+    },
+    {
+      "league": "ES1",
+      "event_id": "ES1_cea3d29c0110401c5593cc82",
+      "reason": "rayo vallecano de madrid: 1 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "FR1",
+      "event_id": "FR1_b69eefb9dd9b44291e59f58a",
+      "reason": "Quarantined fixture conflict"
+    },
+    {
+      "league": "FR1",
+      "event_id": "FR1_5bbc5bd83a0448a53d6cf4bf",
+      "reason": "Insufficient team history"
+    },
+    {
+      "league": "PT1",
+      "event_id": "PT1_46dc30b0445b2364af01d7d7",
+      "reason": "sporting clube de braga: 1 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "PT1",
+      "event_id": "PT1_874b119521591ed3f5ce9ac6",
+      "reason": "Insufficient team history"
+    },
+    {
+      "league": "TR1",
+      "event_id": "TR1_808816cb3ab0a2d30f173889",
+      "reason": "Quarantined fixture conflict"
+    },
+    {
+      "league": "TR1",
+      "event_id": "TR1_ae441500fbef903f8450411b",
+      "reason": "Quarantined fixture conflict"
+    },
+    {
+      "league": "TR1",
+      "event_id": "TR1_f0ee178e6d9659a498cebfb7",
+      "reason": "Quarantined fixture conflict"
+    },
+    {
+      "league": "TR1",
+      "event_id": "TR1_a4f75489f9c2d770fc0d9fa8",
+      "reason": "kocaelispor: 1 unresolved past fixtures; refresh/review required; caykur rizespor: 2 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "TR1",
+      "event_id": "TR1_dc32b8cc90e23784d22cf7b9",
+      "reason": "amed: 1 unresolved past fixtures; refresh/review required; eyupspor: 1 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "TR1",
+      "event_id": "TR1_80f7e0e888b95520aee60527",
+      "reason": "istanbul basaksehir: 1 unresolved past fixtures; refresh/review required; samsunspor: 1 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "TR1",
+      "event_id": "TR1_40fddab08e8ed45fec251d93",
+      "reason": "fenerbahce: 1 unresolved past fixtures; refresh/review required; goztepe: 1 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "TR1",
+      "event_id": "TR1_15f4dd4d63910ac64eef3cfc",
+      "reason": "trabzonspor: 1 unresolved past fixtures; refresh/review required; gaziantep fk: 1 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "TR1",
+      "event_id": "TR1_9502691714972a5e45face4d",
+      "reason": "kasimpasa: 1 unresolved past fixtures; refresh/review required; besiktas: 1 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "TR1",
+      "event_id": "TR1_b1d2161a5e77b7f8afb9ecff",
+      "reason": "atiker konyaspor: 1 unresolved past fixtures; refresh/review required; galatasaray: 1 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "TR1",
+      "event_id": "TR1_d49aa0662c0c19796216bc4b",
+      "reason": "bb erzurumspor: 1 unresolved past fixtures; refresh/review required; corum: 2 unresolved past fixtures; refresh/review required"
+    }
+  ],
+  "experiments": [
+    {
+      "experiment_id": "3ca8c864cb8f30c78072ee9b7a96bb0466ae706f4a9262e6d1d0a0fc83723af4",
+      "spec": "paired-forward-report-v1",
+      "checked_at_utc": "2026-10-25T17:52:52.887259+00:00",
+      "pending": 149,
+      "settled_games": 0,
+      "rejected": [],
+      "leagues": [],
+      "rows": [],
+      "source_snapshot_verified": true,
+      "production_default_changed": false
+    },
+    {
+      "experiment_id": "51ffcc22a4b196c2b6a46b1ccaff7986d8b85dec47496f7c5da070e8679a9df6",
+      "spec": "paired-forward-report-v1",
+      "checked_at_utc": "2026-10-25T17:52:53.117370+00:00",
+      "pending": 77,
+      "settled_games": 0,
+      "rejected": [],
+      "leagues": [],
+      "rows": [],
+      "source_snapshot_verified": false,
+      "production_default_changed": false
+    },
+    {
+      "experiment_id": "756cfe7cebbd46381df8e4c94ce0867b59fd864092b0cb6e81c8e4f163233a3f",
+      "spec": "paired-forward-report-v1",
+      "checked_at_utc": "2026-10-25T17:52:53.233008+00:00",
+      "pending": 97,
+      "settled_games": 0,
+      "rejected": [],
+      "leagues": [],
+      "rows": [],
+      "source_snapshot_verified": false,
+      "production_default_changed": false
+    }
+  ],
+  "production_default_changed": false
+}

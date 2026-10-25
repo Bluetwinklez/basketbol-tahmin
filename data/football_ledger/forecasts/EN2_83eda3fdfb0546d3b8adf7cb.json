@@ -1,0 +1,123 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-10-25T17:50:31.963087+00:00",
+  "fixture": {
+    "event_id": "EN2_83eda3fdfb0546d3b8adf7cb",
+    "league": "EN2",
+    "season": "2026-27",
+    "date": "2026-10-31",
+    "home": "bolton wanderers fc",
+    "away": "bristol city fc",
+    "home_name": "Bolton Wanderers FC",
+    "away_name": "Bristol City FC",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/en.2.json",
+    "captured_at_utc": "2026-10-25T13:34:40.964414+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null,
+    "original_date": null,
+    "date_correction_verified": null,
+    "license_url": null,
+    "source_sha256": null,
+    "fixture_verification_url": null,
+    "actual_start_utc": null,
+    "source_original_date": "2026-10-31",
+    "verified_start_utc": "2026-10-31T15:00:00+00:00",
+    "independent_fixture": {
+      "provider_event_id": "401880196",
+      "league": "EN2",
+      "season_year": 2026,
+      "start_utc": "2026-10-31T15:00:00+00:00",
+      "captured_at": "2026-10-25T17:34:21.368871+00:00",
+      "home_name": "Bolton Wanderers",
+      "away_name": "Bristol City",
+      "provider_home_id": "358",
+      "provider_away_id": "333",
+      "source_url": "https://www.espn.com/soccer/game/_/gameId/401880196",
+      "status": "scheduled",
+      "event_id": "EN2_83eda3fdfb0546d3b8adf7cb",
+      "home": "bolton wanderers fc",
+      "away": "bristol city fc"
+    }
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "EN2",
+    "home": "bolton wanderers fc",
+    "away": "bristol city fc",
+    "expected_home_goals": 1.2908959772981417,
+    "expected_away_goals": 1.5308389299239447,
+    "probabilities": {
+      "home": 0.3210782652566203,
+      "draw": 0.24964364802368064,
+      "away": 0.4292780867196991
+    },
+    "predicted_outcome": "away",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.7725967540339818,
+      "2.5": 0.5357112276477011,
+      "3.5": 0.31290184137441895
+    },
+    "both_teams_score": 0.5681242791630282,
+    "total_goals_80": [
+      1,
+      5
+    ],
+    "training_cutoff_exclusive": "2026-10-25",
+    "training_games": 1660,
+    "prior_team_games": {
+      "bolton wanderers fc": 12,
+      "bristol city fc": 139
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "settings": {
+      "half_life_days": 180.0,
+      "shrinkage_games": 8.0,
+      "window_days": 1095
+    },
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "92154092da5bbe09c4551d8b0af3617a82087fbe2fae439b9becd267a7691dd9",
+  "source_code_sha256": "2da6862be574f580cf8ca67fb2e45e1856a507ce88f3695a5e9fe39b7305e958",
+  "requested_model_variant": "baseline",
+  "history_health": {
+    "spec": "football-history-health-v1",
+    "checked_at_utc": "2026-10-25T17:50:29.288785+00:00",
+    "information_cutoff_exclusive": "2026-10-25",
+    "teams": {
+      "bolton wanderers fc": {
+        "prior_finals": 12,
+        "active_season_finals": 12,
+        "last_final_date": "2026-10-23",
+        "days_since_last_final": 2,
+        "unresolved_past_fixture_ids": []
+      },
+      "bristol city fc": {
+        "prior_finals": 290,
+        "active_season_finals": 12,
+        "last_final_date": "2026-10-24",
+        "days_since_last_final": 1,
+        "unresolved_past_fixture_ids": []
+      }
+    },
+    "diagnostic_gate_passed": true,
+    "blocking_issues": [],
+    "max_history_age_days": 30,
+    "calendar_completeness_verified": false,
+    "note": "Diagnostic policy, not a validated success threshold. Unresolved fixtures may be postponed or missing results. Fresh source captures do not make old histories current."
+  },
+  "selection_policy": "Current-history diagnostic gate plus existing model issues; research only, no validated recommendation.",
+  "payload_sha256": "5cef7bf32a4884ff657405ae4950284fa77f14544a116e8f7f647ed1d88f892a"
+}

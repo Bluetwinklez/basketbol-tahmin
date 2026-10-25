@@ -1,0 +1,62 @@
+{
+  "checked_at_utc": "2026-10-25T18:33:00.698872+00:00",
+  "experiment_id": "29d9f51a7ae193495934c846455910ac2c11d06a4349e864dc5b2f3064e05d96",
+  "new_pairs": 0,
+  "reused_pairs": 0,
+  "skipped": [],
+  "experiments": [
+    {
+      "experiment_id": "29d9f51a7ae193495934c846455910ac2c11d06a4349e864dc5b2f3064e05d96",
+      "spec": "paired-forward-report-v1",
+      "checked_at_utc": "2026-10-25T18:33:00.340715+00:00",
+      "pending": 149,
+      "settled_games": 0,
+      "rejected": [],
+      "leagues": [],
+      "rows": [],
+      "source_snapshot_verified": true,
+      "active_experiment": true,
+      "production_default_changed": false
+    },
+    {
+      "experiment_id": "3ca8c864cb8f30c78072ee9b7a96bb0466ae706f4a9262e6d1d0a0fc83723af4",
+      "spec": "paired-forward-report-v1",
+      "checked_at_utc": "2026-10-25T18:33:00.461830+00:00",
+      "pending": 149,
+      "settled_games": 0,
+      "rejected": [],
+      "leagues": [],
+      "rows": [],
+      "source_snapshot_verified": true,
+      "active_experiment": false,
+      "production_default_changed": false
+    },
+    {
+      "experiment_id": "51ffcc22a4b196c2b6a46b1ccaff7986d8b85dec47496f7c5da070e8679a9df6",
+      "spec": "paired-forward-report-v1",
+      "checked_at_utc": "2026-10-25T18:33:00.573742+00:00",
+      "pending": 77,
+      "settled_games": 0,
+      "rejected": [],
+      "leagues": [],
+      "rows": [],
+      "source_snapshot_verified": false,
+      "active_experiment": false,
+      "production_default_changed": false
+    },
+    {
+      "experiment_id": "756cfe7cebbd46381df8e4c94ce0867b59fd864092b0cb6e81c8e4f163233a3f",
+      "spec": "paired-forward-report-v1",
+      "checked_at_utc": "2026-10-25T18:33:00.629090+00:00",
+      "pending": 97,
+      "settled_games": 0,
+      "rejected": [],
+      "leagues": [],
+      "rows": [],
+      "source_snapshot_verified": false,
+      "active_experiment": false,
+      "production_default_changed": false
+    }
+  ],
+  "production_default_changed": false
+}
