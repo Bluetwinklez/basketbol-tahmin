@@ -52,7 +52,7 @@ def freeze(predictions,fixtures,destination,now=None):
         note='Research predictions. Two games cannot establish general accuracy. Baseline and all limited-data flags remain visible.')
     payload['payload_sha256']=hashlib.sha256(canonical(payload)).hexdigest()
     target=Path(destination);target.parent.mkdir(parents=True,exist_ok=True)
-    with target.open('x') as f:json.dump(payload,f,ensure_ascii=False,indent=2,allow_nan=False)
+    with target.open('x',encoding='utf8') as f:json.dump(payload,f,ensure_ascii=False,indent=2,allow_nan=False)
     return payload
 
 
@@ -108,7 +108,7 @@ def settle(record,results,now=None):
 
 def generate(fixture_file,destination,limit=2):
     from .tahmin import tahmin_et
-    now=pd.Timestamp.now(tz='UTC');fixtures=json.loads(Path(fixture_file).read_text())
+    now=pd.Timestamp.now(tz='UTC');fixtures=json.loads(Path(fixture_file).read_text(encoding='utf8'))
     future=[f for f in fixtures if timestamp(f['start_utc'])>now+pd.Timedelta(minutes=10) and f['status']=='scheduled']
     future=sorted(future,key=lambda f:(timestamp(f['start_utc']),f['event_id']))[:limit]
     if len(future)!=limit:raise ValueError('Not enough verified upcoming fixtures')

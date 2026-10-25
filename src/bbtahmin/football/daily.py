@@ -26,7 +26,7 @@ def run(days=7, output='rapor/football', root=ROOT, now=None, model_variant='bas
     frame=frame.astype(object).where(pd.notna(frame),None)
     output=Path(output); ledger=output/'forecasts'; ledger.mkdir(parents=True,exist_ok=True)
     if frame.empty: raise ValueError('Collect football data first')
-    collection=json.loads((Path(root)/'collection.json').read_text())
+    collection=json.loads((Path(root)/'collection.json').read_text(encoding='utf8'))
     review_path=Path(root)/'fixture_reviews.json'
     reviews={}
     if review_path.exists():
@@ -125,7 +125,7 @@ def run(days=7, output='rapor/football', root=ROOT, now=None, model_variant='bas
                 rows[alias]=g
     settled=[]; pending=0
     for path in sorted(ledger.glob('*.json')):
-        record=json.loads(path.read_text()); sha=record.pop('payload_sha256')
+        record=json.loads(path.read_text(encoding='utf8')); sha=record.pop('payload_sha256')
         if digest(record)!=sha: raise ValueError('Frozen football forecast hash mismatch')
         if pd.Timestamp(record['recorded_at_utc'])>now:
             skipped.append(dict(record=str(path),reason='Forecast was recorded after requested clock'))
