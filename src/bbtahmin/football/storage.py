@@ -35,6 +35,13 @@ def save(rows, code, season, root, metadata=None):
                     merged[previous['event_id']] = previous
         rows = list(merged.values())
     validate(rows, code, season)
+    licensed_path=Path(root)/'licensed_overlays'/f'{code}_{season}.json.gz'
+    if licensed_path.exists():
+        # A new community snapshot must not invalidate an independently checked
+        # retained final. Check before the atomic replacement, not after it.
+        from .licensed import merge as verify_licensed
+        licensed_rows=json.loads(gzip.decompress(licensed_path.read_bytes()))['rows']
+        verify_licensed(rows,licensed_rows)
     target.parent.mkdir(parents=True, exist_ok=True)
     payload = dict(metadata or {}, rows=rows)
     encoded = gzip.compress(json.dumps(payload, ensure_ascii=False, allow_nan=False).encode(), mtime=0)

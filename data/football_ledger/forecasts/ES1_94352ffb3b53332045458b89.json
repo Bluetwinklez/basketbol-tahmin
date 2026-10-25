@@ -1,0 +1,123 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-10-25T17:50:32.330187+00:00",
+  "fixture": {
+    "event_id": "ES1_94352ffb3b53332045458b89",
+    "league": "ES1",
+    "season": "2026-27",
+    "date": "2026-10-31",
+    "home": "real betis balompie",
+    "away": "malaga cf",
+    "home_name": "Real Betis Balompié",
+    "away_name": "Málaga CF",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/es.1.json",
+    "captured_at_utc": "2026-10-25T13:34:40.964414+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null,
+    "original_date": null,
+    "date_correction_verified": null,
+    "license_url": null,
+    "source_sha256": null,
+    "fixture_verification_url": null,
+    "actual_start_utc": null,
+    "source_original_date": "2026-11-01",
+    "verified_start_utc": "2026-10-31T17:30:00+00:00",
+    "independent_fixture": {
+      "provider_event_id": "401882825",
+      "league": "ES1",
+      "season_year": 2026,
+      "start_utc": "2026-10-31T17:30:00+00:00",
+      "captured_at": "2026-10-25T17:34:30.227694+00:00",
+      "home_name": "Real Betis",
+      "away_name": "Málaga",
+      "provider_home_id": "244",
+      "provider_away_id": "99",
+      "source_url": "https://www.espn.com/soccer/game/_/gameId/401882825",
+      "status": "scheduled",
+      "event_id": "ES1_94352ffb3b53332045458b89",
+      "home": "real betis balompie",
+      "away": "malaga cf"
+    }
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "ES1",
+    "home": "real betis balompie",
+    "away": "malaga cf",
+    "expected_home_goals": 1.8264592598825702,
+    "expected_away_goals": 0.9248299348812299,
+    "probabilities": {
+      "home": 0.5859377674573293,
+      "draw": 0.22674714210635957,
+      "away": 0.18731509043631098
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      1,
+      0
+    ],
+    "over": {
+      "1.5": 0.7604970700493875,
+      "2.5": 0.5188548739586236,
+      "3.5": 0.29724568625745246
+    },
+    "both_teams_score": 0.5062640806148072,
+    "total_goals_80": [
+      1,
+      5
+    ],
+    "training_cutoff_exclusive": "2026-10-25",
+    "training_games": 1125,
+    "prior_team_games": {
+      "real betis balompie": 112,
+      "malaga cf": 10
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "settings": {
+      "half_life_days": 180.0,
+      "shrinkage_games": 8.0,
+      "window_days": 1095
+    },
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "92154092da5bbe09c4551d8b0af3617a82087fbe2fae439b9becd267a7691dd9",
+  "source_code_sha256": "2da6862be574f580cf8ca67fb2e45e1856a507ce88f3695a5e9fe39b7305e958",
+  "requested_model_variant": "baseline",
+  "history_health": {
+    "spec": "football-history-health-v1",
+    "checked_at_utc": "2026-10-25T17:50:29.288785+00:00",
+    "information_cutoff_exclusive": "2026-10-25",
+    "teams": {
+      "real betis balompie": {
+        "prior_finals": 236,
+        "active_season_finals": 9,
+        "last_final_date": "2026-10-17",
+        "days_since_last_final": 8,
+        "unresolved_past_fixture_ids": []
+      },
+      "malaga cf": {
+        "prior_finals": 238,
+        "active_season_finals": 10,
+        "last_final_date": "2026-10-23",
+        "days_since_last_final": 2,
+        "unresolved_past_fixture_ids": []
+      }
+    },
+    "diagnostic_gate_passed": true,
+    "blocking_issues": [],
+    "max_history_age_days": 30,
+    "calendar_completeness_verified": false,
+    "note": "Diagnostic policy, not a validated success threshold. Unresolved fixtures may be postponed or missing results. Fresh source captures do not make old histories current."
+  },
+  "selection_policy": "Current-history diagnostic gate plus existing model issues; research only, no validated recommendation.",
+  "payload_sha256": "9a5703717929debbaa24abf63c46787d0c51775c0f6be99f2c290b92652388cf"
+}

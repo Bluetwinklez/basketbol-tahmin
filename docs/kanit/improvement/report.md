@@ -97,6 +97,37 @@ Ortak önceki-sezon öğrenici politikası tüm liglerin mevcut üretim modeliyl
 | ARG_LNB | 2025-26 | without_opponent_ratings | 395 | 65.57% | 65.57% | +0.00000 |
 | ARG_LNB | 2025-26 | without_home | 395 | 65.57% | 65.57% | +0.00000 |
 
+## Futbol: yalnız veri değişiminin etkisi
+
+234 yeni lisanslı finalin tamamı, aynı Poisson modeli ve aynı maçlarla karşılaştırıldı. Yeni doğrulanmış sonuçlar ve açık tarih düzeltmeleri veri değişikliğidir. Hedef UTC gününün tamamı eğitimden çıkarıldı. Tarihsel yayın erişimi bilinmediğinden bu çalışma ileri dönem başarısı değildir.
+
+| Lig | Maç | Eski veri isabeti | Ek veri isabeti | Eski / yeni log loss |
+|---|---:|---:|---:|---:|
+| DE1 | 25 | 48.00% | 48.00% | 1.00894 / 1.00611 |
+| EN1 | 25 | 48.00% | 44.00% | 1.01754 / 1.03222 |
+| EN2 | 49 | 46.94% | 44.90% | 1.07686 / 1.07491 |
+| ES1 | 25 | 48.00% | 48.00% | 0.99020 / 0.99099 |
+| FR1 | 20 | 60.00% | 65.00% | 0.91080 / 0.91133 |
+| IT1 | 25 | 60.00% | 60.00% | 0.94270 / 0.93059 |
+| NL1 | 22 | 50.00% | 50.00% | 1.09571 / 1.09879 |
+| PT1 | 13 | 61.54% | 61.54% | 0.88358 / 0.88283 |
+| TR1 | 30 | 43.33% | 50.00% | 0.99820 / 0.96577 |
+
+## Önceki dönem olasılık kalibrasyonu
+
+8 ligde 36 karşılaştırma kaydedildi. Sıcaklık parametresi yalnız daha önceki sezonun örneklem dışı tahminlerinde seçildi; hedef sezon etiketleri seçime katılmadı. Skor ortalamaları ve aralıkları değiştirilmedi.
+
+## Sonuç öncesi paralel kayıt
+
+171 benzersiz maç için tahmin çifti bulunuyor. Kod/politika sürümleri ayrı deneylerdir; aynı maçın farklı sürümleri bağımsız maç gibi toplanmaz. İlk deneme sürümleri tam kaynak paketi içermediğinden yükseltme değerlendirmesine uygun değildir. Yeni sürümler kaynak kodunu, paket sürümlerini ve veri karmalarını saklar.
+
+| Deney | Aktif | Sonuçlandı | Bekliyor | Kaynak paketi doğrulandı |
+|---|---|---:|---:|---|
+| 29d9f51a7ae1 | True | 0 | 149 | True |
+| 3ca8c864cb8f | False | 0 | 149 | True |
+| 51ffcc22a4b1 | False | 0 | 77 | False |
+| 756cfe7cebbd | False | 0 | 97 | False |
+
 ## Henüz tamamlanmayan doğrulama
 
-Gelecekteki maçlardan bağımsız örneklem birikmesi, paralel aday kayıt akışının tamamlanması, bağımsız güncel fikstür doğrulamasının genişletilmesi ve kalan kaynak boşluklarının giderilmesi ayrı kabul koşullarıdır. Bu koşullar tamamlanmadan canlı başarı iyileşti denmez.
+Bağımsız gelecek sonuçlarının birikmesi ve kalan kaynak/takvim boşluklarının giderilmesi sürüyor. Yeni model otomatik olarak yayımlanmaz. Yeterli örneklem, gün sayısı, iki zaman diliminde tutarlılık, olasılık hatası ve seçim kapsamı koşulları birlikte incelenir. Bu koşullar tamamlanmadan canlı başarı iyileşti denmez.

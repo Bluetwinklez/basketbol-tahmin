@@ -1,0 +1,123 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-10-25T17:50:32.217798+00:00",
+  "fixture": {
+    "event_id": "NL1_43f338326ad680b40fc05a85",
+    "league": "NL1",
+    "season": "2026-27",
+    "date": "2026-10-31",
+    "home": "sc cambuur-leeuwarden",
+    "away": "go ahead eagles",
+    "home_name": "SC Cambuur-Leeuwarden",
+    "away_name": "Go Ahead Eagles",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/nl.1.json",
+    "captured_at_utc": "2026-10-25T13:34:40.964414+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null,
+    "original_date": null,
+    "date_correction_verified": null,
+    "license_url": null,
+    "source_sha256": null,
+    "fixture_verification_url": null,
+    "actual_start_utc": null,
+    "source_original_date": "2026-10-31",
+    "verified_start_utc": "2026-10-31T20:00:00+00:00",
+    "independent_fixture": {
+      "provider_event_id": "401875561",
+      "league": "NL1",
+      "season_year": 2026,
+      "start_utc": "2026-10-31T20:00:00+00:00",
+      "captured_at": "2026-10-25T17:34:43.290233+00:00",
+      "home_name": "SC Cambuur",
+      "away_name": "Go Ahead Eagles",
+      "provider_home_id": "3736",
+      "provider_away_id": "3706",
+      "source_url": "https://www.espn.com/soccer/game/_/gameId/401875561",
+      "status": "scheduled",
+      "event_id": "NL1_43f338326ad680b40fc05a85",
+      "home": "sc cambuur-leeuwarden",
+      "away": "go ahead eagles"
+    }
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "NL1",
+    "home": "sc cambuur-leeuwarden",
+    "away": "go ahead eagles",
+    "expected_home_goals": 1.95572507682276,
+    "expected_away_goals": 1.879224740984207,
+    "probabilities": {
+      "home": 0.4091956648649659,
+      "draw": 0.21169374612200134,
+      "away": 0.379110589013033
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.895553371269861,
+      "2.5": 0.7367016844753759,
+      "3.5": 0.5336389353650961
+    },
+    "both_teams_score": 0.7274321052436516,
+    "total_goals_80": [
+      1,
+      6
+    ],
+    "training_cutoff_exclusive": "2026-10-25",
+    "training_games": 923,
+    "prior_team_games": {
+      "sc cambuur-leeuwarden": 10,
+      "go ahead eagles": 103
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "settings": {
+      "half_life_days": 180.0,
+      "shrinkage_games": 8.0,
+      "window_days": 1095
+    },
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "92154092da5bbe09c4551d8b0af3617a82087fbe2fae439b9becd267a7691dd9",
+  "source_code_sha256": "2da6862be574f580cf8ca67fb2e45e1856a507ce88f3695a5e9fe39b7305e958",
+  "requested_model_variant": "baseline",
+  "history_health": {
+    "spec": "football-history-health-v1",
+    "checked_at_utc": "2026-10-25T17:50:29.288785+00:00",
+    "information_cutoff_exclusive": "2026-10-25",
+    "teams": {
+      "sc cambuur-leeuwarden": {
+        "prior_finals": 10,
+        "active_season_finals": 10,
+        "last_final_date": "2026-10-24",
+        "days_since_last_final": 1,
+        "unresolved_past_fixture_ids": []
+      },
+      "go ahead eagles": {
+        "prior_finals": 180,
+        "active_season_finals": 10,
+        "last_final_date": "2026-10-23",
+        "days_since_last_final": 2,
+        "unresolved_past_fixture_ids": []
+      }
+    },
+    "diagnostic_gate_passed": true,
+    "blocking_issues": [],
+    "max_history_age_days": 30,
+    "calendar_completeness_verified": false,
+    "note": "Diagnostic policy, not a validated success threshold. Unresolved fixtures may be postponed or missing results. Fresh source captures do not make old histories current."
+  },
+  "selection_policy": "Current-history diagnostic gate plus existing model issues; research only, no validated recommendation.",
+  "payload_sha256": "c67e2c9b559ca0e956d76da833e11833f38efe7505d41a7b1122d62f9e7aa442"
+}

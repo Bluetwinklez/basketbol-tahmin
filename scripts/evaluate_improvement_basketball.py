@@ -36,9 +36,14 @@ def load(code):
     return games,{p.as_posix():hashlib.sha256(p.read_bytes()).hexdigest() for p in paths}
 
 
-def evaluate(code,games):
-    active=pd.Timestamp.now(tz='UTC');year=active.year if active.month>=7 else active.year-1
-    seasons=sorted(s for s in games.sezon.unique() if int(s[:4])<year)[-2:]
+def target_seasons(games,as_of):
+    active=pd.Timestamp(as_of);year=active.year if active.month>=7 else active.year-1
+    return sorted(s for s in games.sezon.unique() if int(s[:4])<year)[-2:]
+
+
+def evaluate(code,games,seasons):
+    if not seasons or any(s not in set(games.sezon) for s in seasons):
+        raise ValueError('Explicit available target seasons required')
     rows=[];folds=[];skipped=[]
     for variant in VARIANTS:
         alpha=.1 if variant=='form_slow' else .35 if variant=='form_fast' else .2
@@ -87,24 +92,33 @@ def evaluate(code,games):
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--leagues',nargs='+',default=['KBL','E','ABA','ECW','FEC','TR_BSL','UKR','ARG_LNB'])
-    parser.add_argument('--output',default='docs/kanit/improvement/basketball')
+    parser.add_argument('--output',default='docs/kanit/improvement/basketball-v2')
+    parser.add_argument('--as-of',help='Season selection date, pinned in the protocol on first run')
     args=parser.parse_args();root=Path(args.output);root.mkdir(parents=True,exist_ok=True)
     loaded={code:load(code) for code in args.leagues};code_hash=fingerprint()
+    path=root/'protocol.json'
+    previous=json.loads(path.read_text()) if path.exists() else None
+    if previous and 'target_seasons' not in previous:
+        raise ValueError('Legacy protocol has no pinned seasons; preserve it and use a new output directory')
+    as_of=args.as_of or (previous['as_of_date'] if previous else pd.Timestamp.now(tz='UTC').strftime('%Y-%m-%d'))
+    targets={c:target_seasons(g,as_of) for c,(g,_) in loaded.items()}
     protocol=dict(variants=VARIANTS,leagues=args.leagues,source_code_sha256=code_hash,
+                  script_sha256=hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+                  as_of_date=as_of,target_seasons=targets,
                   inputs={c:v[1] for c,v in loaded.items()},selection_threshold=.65,
                   last_completed_seasons=2,predeclared_at_utc=pd.Timestamp.now(tz='UTC').isoformat(),
                   note='Fixed previous-season disjoint calibration/selection, last two available past seasons; completeness unverified. No promotion.')
-    path=root/'protocol.json'
     if path.exists():
-        previous=json.loads(path.read_text())
         if any(previous.get(k)!=json.loads(json.dumps(v)) for k,v in protocol.items() if k!='predeclared_at_utc'):
             raise ValueError('Inputs/policy changed; use a new output version')
     else: write_json(path,protocol)
     reports=[]
     with threadpool_limits(limits=1):
         for code,(games,hashes) in loaded.items():
-            report=evaluate(code,games)
+            report=evaluate(code,games,targets[code])
             if fingerprint()!=code_hash: raise ValueError('Source changed during evaluation')
+            if any(hashlib.sha256(Path(p).read_bytes()).hexdigest()!=h for p,h in hashes.items()):
+                raise ValueError('Input changed during evaluation')
             (root/(code+'.json.gz')).write_bytes(gzip.compress(json.dumps(report,allow_nan=False).encode(),mtime=0))
             reports.append({k:v for k,v in report.items() if k!='rows'})
             print(code,{s:{v:m['all'] for v,m in variants.items()} for s,variants in report['summaries'].items()},flush=True)

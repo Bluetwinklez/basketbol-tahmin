@@ -1,0 +1,24 @@
+{
+  "spec": "earlier-oos-temperature-v1",
+  "temperature_grid": [
+    0.75,
+    1.0,
+    1.25,
+    1.5,
+    2.0
+  ],
+  "input_hashes": {
+    "docs/kanit/improvement/basketball/ABA.json.gz": "a737c009dc3344639e3d764e2c31a9d1b362d00f007feaa351562b6eb49d5d52",
+    "docs/kanit/improvement/basketball/ARG_LNB.json.gz": "748f4676d2da0a5b0f92a50228a8cb618bde37ae25d7dacb5a5f650eb6424784",
+    "docs/kanit/improvement/basketball/E.json.gz": "378921cc0fe35cdedc594449139124bf70db983dbe0790c0d48102bf4b18923a",
+    "docs/kanit/improvement/basketball/ECW.json.gz": "c0e01d84b40b1a470f1349a3611456533d0dbb4d9a7e67e296ebc9447613eb23",
+    "docs/kanit/improvement/basketball/FEC.json.gz": "ae14a2d4cffee142199e0dfe506b7ea860ff106d97f21042ef84edb5678c006a",
+    "docs/kanit/improvement/basketball/KBL.json.gz": "8a9bf94d9425b98ba038dd18027f291ce80a2f9c62bcf01f9cb8c4ee09a95b16",
+    "docs/kanit/improvement/basketball/TR_BSL.json.gz": "0378fdbda90fcd9e9c2df7f4d9728fcb9fd663a372fc7dc0cfc7c213a8c9151d",
+    "docs/kanit/improvement/basketball/UKR.json.gz": "8bc4858a831cdaf24347c73968dd92a0f41040830bc9d6443f917292f23c3432"
+  },
+  "script_sha256": "a63acb16410a075e49e96f9096182eb50a07f035ef630f45e5dcea9ccd6cdf9e",
+  "selection": "Minimize log loss on strictly earlier OOS seasons only; no target tuning.",
+  "production_default_changed": false,
+  "evidence_kind": "exploratory_retrospective"
+}
