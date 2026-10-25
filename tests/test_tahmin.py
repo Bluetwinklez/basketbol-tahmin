@@ -29,3 +29,8 @@ def test_similar_or_ambiguous_names_are_suggestions_only(monkeypatch,catalog):
     monkeypatch.setattr('bbtahmin.takim_ad.aday_adlari',lambda league,codes:catalog)
     with pytest.raises(ValueError,match='No unique verified alias'):
         coz('test','united',set(catalog))
+
+
+def test_requested_legacy_kbl_names_have_explicit_separate_identities():
+    assert coz('KBL','Anyang KGC',{'KBL_70','KBL_16'})=='KBL_70'
+    assert coz('KBL','Dongbu Promy',{'KBL_70','KBL_16'})=='KBL_16'
