@@ -147,24 +147,9 @@ def collect(first=2010, last=None, json_dir=None, europe_dir=None, root=ROOT, cu
                     try:
                         raw=path.read_text('utf8')
                         rows = parse_json(json.loads(raw),code,season,source,captured) if repo=='football.json' else parse_turkey(raw,season,source,captured)
-                        ids=[r['event_id'] for r in rows]
-                        if len(ids)!=len(set(ids)): raise ValueError('Duplicate fixture identity')
-                        # Per-source atomic validation: an invalid file never replaces prior data.
-                        target=root/(code+'_'+season+'.json.gz')
-                        if target.exists():
-                            previous=json.loads(gzip.decompress(target.read_bytes()))['rows']
-                            current={r['event_id']:r for r in rows}
-                            for old in previous:
-                                if old['status']!='final': continue
-                                fresh=current.get(old['event_id'])
-                                if fresh and fresh['status']=='final' and any(fresh[k]!=old[k] for k in ('home_goals','away_goals')):
-                                    raise ValueError('Conflicting final score; retained previous snapshot for review')
-                                if not fresh or fresh['status']!='final': current[old['event_id']]=old
-                            rows=list(current.values())
-                        payload=dict(league=code,season=season,source_url=source,captured_at_utc=captured,rows=rows)
-                        temp=target.with_suffix('.part')
-                        temp.write_bytes(gzip.compress(json.dumps(payload,ensure_ascii=False,allow_nan=False).encode(),mtime=0))
-                        temp.replace(target)
+                        from .storage import save as save_snapshot
+                        rows = save_snapshot(rows, code, season, root, dict(
+                            league=code, season=season, source_url=source, captured_at_utc=captured))
                         files.append(dict(league=code,season=season,rows=len(rows),finals=sum(r['status']=='final' for r in rows),sha256=hashlib.sha256(raw.encode()).hexdigest()))
                     except Exception as exc: errors.append(dict(league=code,season=season,error=str(exc),retained_previous=True))
         except Exception as exc: errors.append(dict(repository=repo,error=str(exc),retained_previous=True))

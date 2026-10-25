@@ -59,6 +59,8 @@ def parse_topics(topics,year,division,captured,last_date=None):
                 captured_at_utc=captured,available_at_utc=None,source_division=division,
                 source_event=2 if division==1 else 7,
                 source_round_label=round_label,league_reorganisation=bool(year>=2026),
+                competition_code=('JP_PREMIER' if division==1 else 'JP_ONE') if year>=2026 else code,
+                legacy_storage_code=code,
                 venue_label=spans[-2].get_text(' ',strip=True) if len(spans)>=2 else None)
             state=node.select_one('.info-scorestate');state=state.get_text(strip=True) if state else ''
             if when>pd.Timestamp(captured):fixtures.append(dict(base,status='scheduled'));continue
