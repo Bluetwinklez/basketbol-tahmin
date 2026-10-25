@@ -13,6 +13,10 @@
           "total_mae": 1.1714758798929499,
           "margin_mae": 1.063365540806673,
           "total_in_80": 0.9052631578947369,
+          "team_score_games": 380,
+          "home_score_mae": 0.8634765777217561,
+          "away_score_mae": 0.7286965622139718,
+          "team_score_mae": 0.796086569967864,
           "goal_markets": {
             "over_1.5": {
               "accuracy": 0.6263157894736842,
@@ -40,6 +44,10 @@
           "total_mae": 1.1658716775705602,
           "margin_mae": 1.055100085863082,
           "total_in_80": 0.9026315789473685,
+          "team_score_games": 380,
+          "home_score_mae": 0.8619202357915006,
+          "away_score_mae": 0.7259562495254912,
+          "team_score_mae": 0.7939382426584958,
           "goal_markets": {
             "over_1.5": {
               "accuracy": 0.631578947368421,
@@ -67,6 +75,10 @@
           "total_mae": 1.1658716775705602,
           "margin_mae": 1.055100085863082,
           "total_in_80": 0.9052631578947369,
+          "team_score_games": 380,
+          "home_score_mae": 0.8619202357915006,
+          "away_score_mae": 0.7259562495254912,
+          "team_score_mae": 0.7939382426584958,
           "goal_markets": {
             "over_1.5": {
               "accuracy": 0.6263157894736842,
@@ -94,6 +106,10 @@
           "total_mae": 1.1662448327869448,
           "margin_mae": 1.057361392274204,
           "total_in_80": 0.9105263157894737,
+          "team_score_games": 380,
+          "home_score_mae": 0.8614859304875676,
+          "away_score_mae": 0.7248430167307024,
+          "team_score_mae": 0.7931644736091348,
           "goal_markets": {
             "over_1.5": {
               "accuracy": 0.6289473684210526,
@@ -1294,72 +1310,111 @@
       "league": "CO2",
       "home": "Bogotá",
       "away": "Real Santander",
-      "status": "unsupported",
-      "reason": "No licensed archive integrated for this competition"
+      "status": "missing_archive",
+      "historical_finals": 0,
+      "active_season_finals": 0,
+      "reason": "Archive coverage is not verified current fixture or team support",
+      "fixture_verified": false
     },
     {
       "league": "CO2",
       "home": "Real Cundinamarca",
       "away": "Independiente Yumbo",
-      "status": "unsupported",
-      "reason": "No licensed archive integrated for this competition"
+      "status": "missing_archive",
+      "historical_finals": 0,
+      "active_season_finals": 0,
+      "reason": "Archive coverage is not verified current fixture or team support",
+      "fixture_verified": false
     },
     {
       "league": "USL1",
       "home": "Portland Hearts of Pine",
       "away": "Charlotte Independence",
-      "status": "unsupported",
-      "reason": "No licensed archive integrated for this competition"
+      "status": "missing_archive",
+      "historical_finals": 0,
+      "active_season_finals": 0,
+      "reason": "Archive coverage is not verified current fixture or team support",
+      "fixture_verified": false
     },
     {
       "league": "USLC",
       "home": "Loudoun United",
       "away": "Brooklyn",
-      "status": "unsupported",
-      "reason": "No licensed archive integrated for this competition"
+      "status": "missing_archive",
+      "historical_finals": 0,
+      "active_season_finals": 0,
+      "reason": "Archive coverage is not verified current fixture or team support",
+      "fixture_verified": false
     },
     {
       "league": "SV1",
       "home": "Alianza",
       "away": "Metapán",
-      "status": "unsupported",
-      "reason": "No licensed archive integrated for this competition"
+      "status": "missing_active_season",
+      "historical_finals": 1496,
+      "active_season_finals": 0,
+      "reason": "Archive coverage is not verified current fixture or team support",
+      "fixture_verified": false,
+      "available_history": {
+        "Alianza": 0,
+        "Metapán": 0
+      }
     },
     {
       "league": "SV1",
       "home": "CD Águila",
       "away": "CD FAS",
-      "status": "unsupported",
-      "reason": "No licensed archive integrated for this competition"
+      "status": "missing_active_season",
+      "historical_finals": 1496,
+      "active_season_finals": 0,
+      "reason": "Archive coverage is not verified current fixture or team support",
+      "fixture_verified": false,
+      "available_history": {
+        "CD Águila": 0,
+        "CD FAS": 0
+      }
     },
     {
       "league": "HN1",
       "home": "CD Choloma",
       "away": "Genesis PN",
-      "status": "unsupported",
-      "reason": "No licensed archive integrated for this competition"
+      "status": "missing_active_season",
+      "historical_finals": 1132,
+      "active_season_finals": 0,
+      "reason": "Archive coverage is not verified current fixture or team support",
+      "fixture_verified": false,
+      "available_history": {
+        "CD Choloma": 0,
+        "Genesis PN": 0
+      }
     },
     {
       "league": "BO1",
       "home": "San Antonio Bulo Bulo",
       "away": "Real Potosí",
-      "status": "unsupported",
-      "reason": "No licensed archive integrated for this competition"
+      "status": "missing_active_season",
+      "historical_finals": 1590,
+      "active_season_finals": 0,
+      "reason": "Archive coverage is not verified current fixture or team support",
+      "fixture_verified": false,
+      "available_history": {
+        "San Antonio Bulo Bulo": 0,
+        "Real Potosí": 50
+      }
     },
     {
       "league": "BR2",
       "home": "CRB AL",
       "away": "Londrina PR",
-      "status": "blocked_stale_history",
-      "reason": "No 2026 source season; not a usable current forecast",
-      "prior_team_games": {
-        "cr brasil al": 48,
-        "londrina pr": 5
-      },
-      "issues": [
-        "cr brasil al: history older than 90 days",
-        "londrina pr: fewer than 10 prior matches"
-      ]
+      "status": "missing_active_season",
+      "historical_finals": 2716,
+      "active_season_finals": 0,
+      "reason": "Archive coverage is not verified current fixture or team support",
+      "fixture_verified": false,
+      "available_history": {
+        "CRB AL": 50,
+        "Londrina PR": 50
+      }
     }
   ],
   "imported_finals": 3040,

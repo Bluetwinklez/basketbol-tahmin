@@ -18,3 +18,14 @@ def test_coz_nba_alias():
 def test_coz_bilinmeyen_takim_hata_verir():
     with pytest.raises(ValueError):
         coz('E','Zenit Petersburg',{'ULK','IST'})
+
+
+@pytest.mark.parametrize('catalog',[
+    {'A':{'united'},'B':{'united'}},
+    {'A':{'united city'}},
+    {'A':{'untied'}},
+])
+def test_similar_or_ambiguous_names_are_suggestions_only(monkeypatch,catalog):
+    monkeypatch.setattr('bbtahmin.takim_ad.aday_adlari',lambda league,codes:catalog)
+    with pytest.raises(ValueError,match='No unique verified alias'):
+        coz('test','united',set(catalog))

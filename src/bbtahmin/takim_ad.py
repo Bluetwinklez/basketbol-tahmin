@@ -90,15 +90,14 @@ def coz(lig, metin, kodlar):
     tam = [k for k, adlar in adaylar.items() if hedef in adlar]
     if len(tam) == 1:
         return tam[0]
-    # Kısmi eşleşme: "real madrid" → "real madrid"; "zenit" gibi bilinmeyenler eşleşmez.
-    kismi = [k for k, adlar in adaylar.items() if any(hedef and (hedef in a.split() or a.startswith(hedef) or hedef.startswith(a + ' ')) for a in adlar)]
-    if len(kismi) == 1:
-        return kismi[0]
-    hepsi = {a: k for k, adlar in adaylar.items() for a in adlar}
-    yakin = difflib.get_close_matches(hedef, list(hepsi), n=3, cutoff=.8)
-    kodlar_yakin = sorted({hepsi[a] for a in yakin})
-    if len(kodlar_yakin) == 1:
-        return kodlar_yakin[0]
-    oneriler = sorted(set(tam + kismi + kodlar_yakin))
-    raise ValueError(f'"{metin}" {lig} liginde bulunamadı' + (f'; adaylar: {", ".join(oneriler)}' if oneriler else ''))
-
+    # Approximate names are suggestions, never identity evidence. In particular,
+    # a shared alias must not be collapsed by an alias-to-single-code dictionary.
+    suggestions = set(tam)
+    for code, names in adaylar.items():
+        if any(hedef and (hedef in name or name in hedef) for name in names):
+            suggestions.add(code)
+        if difflib.get_close_matches(hedef, sorted(names), n=1, cutoff=.8):
+            suggestions.add(code)
+    candidates = ', '.join(sorted(suggestions))
+    raise ValueError(f'No unique verified alias for "{metin}" in {lig}' +
+                     (f'; candidates: {candidates}' if candidates else ''))

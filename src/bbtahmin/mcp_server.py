@@ -88,10 +88,13 @@ def create_server(root):
         return dict(exploratory=True,reports=result)
     @server.tool(annotations=readonly)
     def football_status() -> dict:
-        """Read CC0 football coverage and frozen forecasts; no network or writes."""
+        """Read per-season football coverage and frozen forecasts; no network or writes."""
         collection=root/'data/football/collection.json'
         report=root/'data/football_ledger/latest.json'
-        return dict(collection=json.loads(collection.read_text()) if collection.exists() else None,
+        from .football.data import load
+        from .football.coverage import league_coverage
+        return dict(coverage=league_coverage(load(root/'data/football')),
+                    collection=json.loads(collection.read_text()) if collection.exists() else None,
                     saved_report=json.loads(report.read_text()) if report.exists() else None,
                     note='Separate football model; community results are not official confirmation.')
 

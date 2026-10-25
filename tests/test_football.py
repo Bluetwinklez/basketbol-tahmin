@@ -104,3 +104,19 @@ def test_collection_retains_conflicting_finals(tmp_path):
     r=json.loads((root/'collection.json').read_text())
     assert any('Conflicting' in e['error'] for e in r['errors'])
     assert load(root).iloc[0].home_goals==1
+
+
+def test_team_score_errors_have_explicit_sample_size():
+    from bbtahmin.football.model import metrics
+    p=GoalModel(history(),'TR1','2025-07-01').predict('a','b')
+    p.update(expected_home_goals=2.4,expected_away_goals=.8)
+    item=score(p,3,0)
+    measured=metrics([item])
+    assert measured['home_score_mae']==pytest.approx(.6)
+    assert measured['away_score_mae']==pytest.approx(.8)
+    assert measured['team_score_mae']==pytest.approx(.7)
+    assert measured['team_score_games']==1
+    legacy={k:v for k,v in item.items() if k not in ('home_absolute_error','away_absolute_error')}
+    assert metrics([legacy])['team_score_mae'] is None
+    assert metrics([legacy])['team_score_games']==0
+    assert metrics([])['team_score_games']==0
