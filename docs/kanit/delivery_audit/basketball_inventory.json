@@ -1,0 +1,900 @@
+{
+  "base": "0fafc2ef6345a19f447f36f2be046a9a26a41f29",
+  "checked_at_utc": "2026-10-25T12:16:50.415994+00:00",
+  "basketball_inventory": [
+    {
+      "path": "data/asia/JP_B1.parquet",
+      "competition": "JP_B1",
+      "season": "2016-17",
+      "stored_unique_finals": 540,
+      "new_unique_finals": 0,
+      "last_utc": "2017-05-07 09:00:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/asia/JP_B1.parquet",
+      "competition": "JP_B1",
+      "season": "2017-18",
+      "stored_unique_finals": 540,
+      "new_unique_finals": 0,
+      "last_utc": "2018-05-07 10:05:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/asia/JP_B1.parquet",
+      "competition": "JP_B1",
+      "season": "2018-19",
+      "stored_unique_finals": 540,
+      "new_unique_finals": 0,
+      "last_utc": "2019-04-21 09:05:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/asia/JP_B1.parquet",
+      "competition": "JP_B1",
+      "season": "2019-20",
+      "stored_unique_finals": 367,
+      "new_unique_finals": 0,
+      "last_utc": "2020-03-15 10:05:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/asia/JP_B1.parquet",
+      "competition": "JP_B1",
+      "season": "2021-22",
+      "stored_unique_finals": 604,
+      "new_unique_finals": 0,
+      "last_utc": "2022-05-08 09:05:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/asia/JP_B1.parquet",
+      "competition": "JP_B1",
+      "season": "2022-23",
+      "stored_unique_finals": 718,
+      "new_unique_finals": 0,
+      "last_utc": "2023-05-07 08:05:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/asia/JP_B1.parquet",
+      "competition": "JP_B1",
+      "season": "2023-24",
+      "stored_unique_finals": 720,
+      "new_unique_finals": 0,
+      "last_utc": "2024-05-06 05:05:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/asia/JP_B1.parquet",
+      "competition": "JP_B1",
+      "season": "2024-25",
+      "stored_unique_finals": 719,
+      "new_unique_finals": 0,
+      "last_utc": "2025-05-04 06:05:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/asia/JP_B1.parquet",
+      "competition": "JP_B1",
+      "season": "2025-26",
+      "stored_unique_finals": 780,
+      "new_unique_finals": 0,
+      "last_utc": "2026-05-03 07:05:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/asia/JP_B1.parquet",
+      "competition": "JP_PREMIER",
+      "season": "2026-27",
+      "stored_unique_finals": 127,
+      "new_unique_finals": 11,
+      "last_utc": "2026-10-24 06:05:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/asia/JP_B2.parquet",
+      "competition": "JP_B2",
+      "season": "2016-17",
+      "stored_unique_finals": 540,
+      "new_unique_finals": 0,
+      "last_utc": "2017-05-07 05:00:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/asia/JP_B2.parquet",
+      "competition": "JP_B2",
+      "season": "2017-18",
+      "stored_unique_finals": 540,
+      "new_unique_finals": 0,
+      "last_utc": "2018-05-06 06:30:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/asia/JP_B2.parquet",
+      "competition": "JP_B2",
+      "season": "2018-19",
+      "stored_unique_finals": 540,
+      "new_unique_finals": 0,
+      "last_utc": "2019-04-21 07:30:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/asia/JP_B2.parquet",
+      "competition": "JP_B2",
+      "season": "2021-22",
+      "stored_unique_finals": 361,
+      "new_unique_finals": 0,
+      "last_utc": "2022-05-02 09:00:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/asia/JP_B2.parquet",
+      "competition": "JP_B2",
+      "season": "2022-23",
+      "stored_unique_finals": 420,
+      "new_unique_finals": 0,
+      "last_utc": "2023-04-23 07:00:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/asia/JP_B2.parquet",
+      "competition": "JP_B2",
+      "season": "2023-24",
+      "stored_unique_finals": 420,
+      "new_unique_finals": 0,
+      "last_utc": "2024-04-21 05:10:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/asia/JP_B2.parquet",
+      "competition": "JP_B2",
+      "season": "2024-25",
+      "stored_unique_finals": 420,
+      "new_unique_finals": 0,
+      "last_utc": "2025-04-21 10:05:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/asia/JP_B2.parquet",
+      "competition": "JP_B2",
+      "season": "2025-26",
+      "stored_unique_finals": 420,
+      "new_unique_finals": 0,
+      "last_utc": "2026-04-26 06:05:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/asia/JP_B2.parquet",
+      "competition": "JP_ONE",
+      "season": "2026-27",
+      "stored_unique_finals": 121,
+      "new_unique_finals": 13,
+      "last_utc": "2026-10-24 06:35:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/asia/KBL.parquet",
+      "competition": "KBL",
+      "season": "2016-17",
+      "stored_unique_finals": 147,
+      "new_unique_finals": 0,
+      "last_utc": "2017-03-26 05:02:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/asia/KBL.parquet",
+      "competition": "KBL",
+      "season": "2017-18",
+      "stored_unique_finals": 270,
+      "new_unique_finals": 0,
+      "last_utc": "2018-03-13 10:00:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/asia/KBL.parquet",
+      "competition": "KBL",
+      "season": "2018-19",
+      "stored_unique_finals": 270,
+      "new_unique_finals": 0,
+      "last_utc": "2019-03-19 10:30:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/asia/KBL.parquet",
+      "competition": "KBL",
+      "season": "2019-20",
+      "stored_unique_finals": 213,
+      "new_unique_finals": 0,
+      "last_utc": "2020-02-29 08:00:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/asia/KBL.parquet",
+      "competition": "KBL",
+      "season": "2020-21",
+      "stored_unique_finals": 270,
+      "new_unique_finals": 0,
+      "last_utc": "2021-04-06 10:00:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/asia/KBL.parquet",
+      "competition": "KBL",
+      "season": "2021-22",
+      "stored_unique_finals": 270,
+      "new_unique_finals": 0,
+      "last_utc": "2022-04-05 10:00:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/asia/KBL.parquet",
+      "competition": "KBL",
+      "season": "2022-23",
+      "stored_unique_finals": 270,
+      "new_unique_finals": 0,
+      "last_utc": "2023-03-29 10:00:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/asia/KBL.parquet",
+      "competition": "KBL",
+      "season": "2023-24",
+      "stored_unique_finals": 269,
+      "new_unique_finals": 0,
+      "last_utc": "2024-03-31 09:00:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/asia/KBL.parquet",
+      "competition": "KBL",
+      "season": "2024-25",
+      "stored_unique_finals": 268,
+      "new_unique_finals": 0,
+      "last_utc": "2025-04-08 10:00:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/asia/KBL.parquet",
+      "competition": "KBL",
+      "season": "2025-26",
+      "stored_unique_finals": 270,
+      "new_unique_finals": 0,
+      "last_utc": "2026-04-08 10:00:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/asia/KBL.parquet",
+      "competition": "KBL",
+      "season": "2026-27",
+      "stored_unique_finals": 39,
+      "new_unique_finals": 7,
+      "last_utc": "2026-10-25 07:30:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/asia/PBA_COM.parquet",
+      "competition": "PBA_COM",
+      "season": "2018-19",
+      "stored_unique_finals": 89,
+      "new_unique_finals": 0,
+      "last_utc": "2019-08-16 00:00:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/asia/PBA_COM.parquet",
+      "competition": "PBA_COM",
+      "season": "2022-23",
+      "stored_unique_finals": 99,
+      "new_unique_finals": 0,
+      "last_utc": "2023-01-15 00:00:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/asia/PBA_COM.parquet",
+      "competition": "PBA_COM",
+      "season": "2025-26",
+      "stored_unique_finals": 103,
+      "new_unique_finals": 0,
+      "last_utc": "2026-06-17 00:00:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/asia/PBA_GOV.parquet",
+      "competition": "PBA_GOV",
+      "season": "2018-19",
+      "stored_unique_finals": 79,
+      "new_unique_finals": 0,
+      "last_utc": "2019-12-23 00:00:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/asia/PBA_GOV.parquet",
+      "competition": "PBA_GOV",
+      "season": "2021-22",
+      "stored_unique_finals": 88,
+      "new_unique_finals": 0,
+      "last_utc": "2022-04-22 00:00:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/asia/PBA_GOV.parquet",
+      "competition": "PBA_GOV",
+      "season": "2022-23",
+      "stored_unique_finals": 83,
+      "new_unique_finals": 0,
+      "last_utc": "2023-04-21 00:00:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/asia/PBA_GOV.parquet",
+      "competition": "PBA_GOV",
+      "season": "2024-25",
+      "stored_unique_finals": 2,
+      "new_unique_finals": 0,
+      "last_utc": "2024-08-24 00:00:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/asia/PBA_GOV.parquet",
+      "competition": "PBA_GOV",
+      "season": "2025-26",
+      "stored_unique_finals": 71,
+      "new_unique_finals": 1,
+      "last_utc": "2026-10-25 00:00:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/asia/PBA_PHI.parquet",
+      "competition": "PBA_PHI",
+      "season": "2018-19",
+      "stored_unique_finals": 93,
+      "new_unique_finals": 0,
+      "last_utc": "2019-05-15 00:00:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/asia/PBA_PHI.parquet",
+      "competition": "PBA_PHI",
+      "season": "2022-23",
+      "stored_unique_finals": 94,
+      "new_unique_finals": 0,
+      "last_utc": "2022-09-04 00:00:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/asia/PBA_PHI.parquet",
+      "competition": "PBA_PHI",
+      "season": "2025-26",
+      "stored_unique_finals": 88,
+      "new_unique_finals": 0,
+      "last_utc": "2026-02-01 00:00:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/competitions/ABA.parquet",
+      "competition": "ABA",
+      "season": "2010-11",
+      "stored_unique_finals": 185,
+      "new_unique_finals": 0,
+      "last_utc": "2011-04-21 18:45:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/competitions/ABA.parquet",
+      "competition": "ABA",
+      "season": "2011-12",
+      "stored_unique_finals": 184,
+      "new_unique_finals": 0,
+      "last_utc": "2012-04-30 18:15:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/competitions/ABA.parquet",
+      "competition": "ABA",
+      "season": "2012-13",
+      "stored_unique_finals": 185,
+      "new_unique_finals": 0,
+      "last_utc": "2013-04-27 18:30:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/competitions/ABA.parquet",
+      "competition": "ABA",
+      "season": "2013-14",
+      "stored_unique_finals": 184,
+      "new_unique_finals": 0,
+      "last_utc": "2014-04-27 18:00:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/competitions/ABA.parquet",
+      "competition": "ABA",
+      "season": "2014-15",
+      "stored_unique_finals": 194,
+      "new_unique_finals": 0,
+      "last_utc": "2015-04-30 18:30:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/competitions/ABA.parquet",
+      "competition": "ABA",
+      "season": "2015-16",
+      "stored_unique_finals": 189,
+      "new_unique_finals": 0,
+      "last_utc": "2016-05-02 18:30:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/competitions/ABA.parquet",
+      "competition": "ABA",
+      "season": "2016-17",
+      "stored_unique_finals": 191,
+      "new_unique_finals": 0,
+      "last_utc": "2017-04-13 17:00:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/competitions/ABA.parquet",
+      "competition": "ABA",
+      "season": "2017-18",
+      "stored_unique_finals": 142,
+      "new_unique_finals": 0,
+      "last_utc": "2018-04-14 19:00:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/competitions/ABA.parquet",
+      "competition": "ABA",
+      "season": "2018-19",
+      "stored_unique_finals": 143,
+      "new_unique_finals": 0,
+      "last_utc": "2019-04-22 17:00:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/competitions/ABA.parquet",
+      "competition": "ABA",
+      "season": "2019-20",
+      "stored_unique_finals": 125,
+      "new_unique_finals": 0,
+      "last_utc": "2020-03-09 20:00:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/competitions/ABA.parquet",
+      "competition": "ABA",
+      "season": "2020-21",
+      "stored_unique_finals": 166,
+      "new_unique_finals": 0,
+      "last_utc": "2021-05-28 18:30:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/competitions/ABA.parquet",
+      "competition": "ABA",
+      "season": "2021-22",
+      "stored_unique_finals": 197,
+      "new_unique_finals": 0,
+      "last_utc": "2022-06-06 18:00:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/competitions/ABA.parquet",
+      "competition": "ABA",
+      "season": "2022-23",
+      "stored_unique_finals": 202,
+      "new_unique_finals": 0,
+      "last_utc": "2023-06-22 18:00:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/competitions/ABA.parquet",
+      "competition": "ABA",
+      "season": "2023-24",
+      "stored_unique_finals": 198,
+      "new_unique_finals": 0,
+      "last_utc": "2024-05-19 18:30:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/competitions/ABA.parquet",
+      "competition": "ABA",
+      "season": "2024-25",
+      "stored_unique_finals": 259,
+      "new_unique_finals": 0,
+      "last_utc": "2025-06-12 18:00:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/competitions/ABA.parquet",
+      "competition": "ABA",
+      "season": "2025-26",
+      "stored_unique_finals": 248,
+      "new_unique_finals": 0,
+      "last_utc": "2026-06-12 18:00:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/competitions/ABA.parquet",
+      "competition": "ABA",
+      "season": "2026-27",
+      "stored_unique_finals": 39,
+      "new_unique_finals": 8,
+      "last_utc": "2026-10-24 18:30:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/competitions/ARG_LNB.parquet",
+      "competition": "ARG_LNB",
+      "season": "2022-23",
+      "stored_unique_finals": 428,
+      "new_unique_finals": 0,
+      "last_utc": "2023-06-16 03:00:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/competitions/ARG_LNB.parquet",
+      "competition": "ARG_LNB",
+      "season": "2023-24",
+      "stored_unique_finals": 431,
+      "new_unique_finals": 0,
+      "last_utc": "2024-07-19 03:00:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/competitions/ARG_LNB.parquet",
+      "competition": "ARG_LNB",
+      "season": "2024-25",
+      "stored_unique_finals": 429,
+      "new_unique_finals": 0,
+      "last_utc": "2025-07-18 03:00:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/competitions/ARG_LNB.parquet",
+      "competition": "ARG_LNB",
+      "season": "2025-26",
+      "stored_unique_finals": 395,
+      "new_unique_finals": 0,
+      "last_utc": "2026-06-20 03:00:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/competitions/ARG_LNB.parquet",
+      "competition": "ARG_LNB",
+      "season": "2026-27",
+      "stored_unique_finals": 38,
+      "new_unique_finals": 3,
+      "last_utc": "2026-10-24 01:05:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/competitions/ECW.parquet",
+      "competition": "ECW",
+      "season": "2023-24",
+      "stored_unique_finals": 198,
+      "new_unique_finals": 0,
+      "last_utc": "2024-04-10 18:00:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/competitions/ECW.parquet",
+      "competition": "ECW",
+      "season": "2024-25",
+      "stored_unique_finals": 211,
+      "new_unique_finals": 0,
+      "last_utc": "2025-04-02 18:30:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/competitions/ECW.parquet",
+      "competition": "ECW",
+      "season": "2025-26",
+      "stored_unique_finals": 214,
+      "new_unique_finals": 0,
+      "last_utc": "2026-04-09 17:00:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/competitions/ECW.parquet",
+      "competition": "ECW",
+      "season": "2026-27",
+      "stored_unique_finals": 56,
+      "new_unique_finals": 1,
+      "last_utc": "2026-10-24 17:30:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/competitions/ECW_early.parquet",
+      "competition": "ECW",
+      "season": "2022-23",
+      "stored_unique_finals": 2,
+      "new_unique_finals": 0,
+      "last_utc": "2022-12-07 17:00:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/competitions/ELW.parquet",
+      "competition": "ELW",
+      "season": "2023-24",
+      "stored_unique_finals": 133,
+      "new_unique_finals": 0,
+      "last_utc": "2024-04-14 16:00:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/competitions/ELW.parquet",
+      "competition": "ELW",
+      "season": "2024-25",
+      "stored_unique_finals": 92,
+      "new_unique_finals": 0,
+      "last_utc": "2025-04-13 18:00:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/competitions/ELW.parquet",
+      "competition": "ELW",
+      "season": "2025-26",
+      "stored_unique_finals": 110,
+      "new_unique_finals": 0,
+      "last_utc": "2026-04-19 18:00:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/competitions/ELW.parquet",
+      "competition": "ELW",
+      "season": "2026-27",
+      "stored_unique_finals": 24,
+      "new_unique_finals": 0,
+      "last_utc": "2026-10-22 18:30:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/competitions/FEC.parquet",
+      "competition": "FEC",
+      "season": "2023-24",
+      "stored_unique_finals": 188,
+      "new_unique_finals": 0,
+      "last_utc": "2024-04-24 16:00:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/competitions/FEC.parquet",
+      "competition": "FEC",
+      "season": "2024-25",
+      "stored_unique_finals": 192,
+      "new_unique_finals": 0,
+      "last_utc": "2025-04-23 17:15:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/competitions/FEC.parquet",
+      "competition": "FEC",
+      "season": "2025-26",
+      "stored_unique_finals": 195,
+      "new_unique_finals": 0,
+      "last_utc": "2026-04-29 18:00:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/competitions/FEC.parquet",
+      "competition": "FEC",
+      "season": "2026-27",
+      "stored_unique_finals": 76,
+      "new_unique_finals": 0,
+      "last_utc": "2026-10-22 17:00:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/competitions/TR_BSL.parquet",
+      "competition": "TR_BSL",
+      "season": "2016-17",
+      "stored_unique_finals": 259,
+      "new_unique_finals": 0,
+      "last_utc": "2017-06-16 00:00:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/competitions/TR_BSL.parquet",
+      "competition": "TR_BSL",
+      "season": "2017-18",
+      "stored_unique_finals": 258,
+      "new_unique_finals": 0,
+      "last_utc": "2018-06-13 00:00:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/competitions/TR_BSL.parquet",
+      "competition": "TR_BSL",
+      "season": "2018-19",
+      "stored_unique_finals": 232,
+      "new_unique_finals": 0,
+      "last_utc": "2019-06-21 00:00:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/competitions/TR_BSL.parquet",
+      "competition": "TR_BSL",
+      "season": "2019-20",
+      "stored_unique_finals": 181,
+      "new_unique_finals": 0,
+      "last_utc": "2020-03-17 00:00:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/competitions/TR_BSL.parquet",
+      "competition": "TR_BSL",
+      "season": "2020-21",
+      "stored_unique_finals": 258,
+      "new_unique_finals": 0,
+      "last_utc": "2021-06-07 00:00:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/competitions/TR_BSL.parquet",
+      "competition": "TR_BSL",
+      "season": "2021-22",
+      "stored_unique_finals": 263,
+      "new_unique_finals": 0,
+      "last_utc": "2022-06-13 00:00:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/competitions/TR_BSL.parquet",
+      "competition": "TR_BSL",
+      "season": "2022-23",
+      "stored_unique_finals": 258,
+      "new_unique_finals": 0,
+      "last_utc": "2023-06-17 00:00:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/competitions/TR_BSL.parquet",
+      "competition": "TR_BSL",
+      "season": "2023-24",
+      "stored_unique_finals": 257,
+      "new_unique_finals": 0,
+      "last_utc": "2024-06-12 00:00:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/competitions/TR_BSL.parquet",
+      "competition": "TR_BSL",
+      "season": "2024-25",
+      "stored_unique_finals": 264,
+      "new_unique_finals": 0,
+      "last_utc": "2025-06-25 00:00:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/competitions/TR_BSL.parquet",
+      "competition": "TR_BSL",
+      "season": "2025-26",
+      "stored_unique_finals": 261,
+      "new_unique_finals": 0,
+      "last_utc": "2026-06-19 00:00:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/competitions/TR_BSL.parquet",
+      "competition": "TR_BSL",
+      "season": "2026-27",
+      "stored_unique_finals": 36,
+      "new_unique_finals": 4,
+      "last_utc": "2026-10-24 00:00:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/competitions/UKR.parquet",
+      "competition": "UKR",
+      "season": "2020-21",
+      "stored_unique_finals": 246,
+      "new_unique_finals": 0,
+      "last_utc": "2021-06-14 15:00:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/competitions/UKR.parquet",
+      "competition": "UKR",
+      "season": "2021-22",
+      "stored_unique_finals": 176,
+      "new_unique_finals": 0,
+      "last_utc": "2022-02-18 18:00:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/competitions/UKR.parquet",
+      "competition": "UKR",
+      "season": "2022-23",
+      "stored_unique_finals": 142,
+      "new_unique_finals": 0,
+      "last_utc": "2023-04-09 15:00:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/competitions/UKR.parquet",
+      "competition": "UKR",
+      "season": "2023-24",
+      "stored_unique_finals": 153,
+      "new_unique_finals": 0,
+      "last_utc": "2024-04-24 16:00:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/competitions/UKR.parquet",
+      "competition": "UKR",
+      "season": "2024-25",
+      "stored_unique_finals": 132,
+      "new_unique_finals": 0,
+      "last_utc": "2025-05-03 10:00:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/competitions/UKR.parquet",
+      "competition": "UKR",
+      "season": "2025-26",
+      "stored_unique_finals": 127,
+      "new_unique_finals": 0,
+      "last_utc": "2026-05-02 12:00:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/competitions/UKR.parquet",
+      "competition": "UKR",
+      "season": "2026-27",
+      "stored_unique_finals": 26,
+      "new_unique_finals": 5,
+      "last_utc": "2026-10-24 10:00:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/competitions/VTB.parquet",
+      "competition": "VTB",
+      "season": "2023-24",
+      "stored_unique_finals": 283,
+      "new_unique_finals": 0,
+      "last_utc": "2024-06-05 00:00:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/competitions/VTB.parquet",
+      "competition": "VTB",
+      "season": "2024-25",
+      "stored_unique_finals": 294,
+      "new_unique_finals": 0,
+      "last_utc": "2025-06-09 00:00:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/competitions/VTB.parquet",
+      "competition": "VTB",
+      "season": "2025-26",
+      "stored_unique_finals": 254,
+      "new_unique_finals": 0,
+      "last_utc": "2026-06-12 00:00:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/competitions/VTB.parquet",
+      "competition": "VTB",
+      "season": "2026-27",
+      "stored_unique_finals": 29,
+      "new_unique_finals": 0,
+      "last_utc": "2026-10-21 00:00:00+00:00",
+      "completeness_verified": false
+    },
+    {
+      "path": "data/recent/E.parquet",
+      "competition": "E",
+      "season": "2026-27",
+      "stored_unique_finals": 70,
+      "new_unique_finals": 3,
+      "last_utc": "2026-10-23 18:45:00+00:00",
+      "completeness_verified": false
+    }
+  ],
+  "original_forecast_files": 105,
+  "changed_original_forecasts": [],
+  "comparison": "Parsed JSON payload equality; checkout newline translation excluded."
+}

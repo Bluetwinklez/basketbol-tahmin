@@ -1,0 +1,65 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+  "fixture": {
+    "event_id": "FR1_d0f03ec23774127a34071437",
+    "league": "FR1",
+    "season": "2026-27",
+    "date": "2026-10-31",
+    "home": "fc lorient",
+    "away": "stade brestois 29",
+    "home_name": "FC Lorient",
+    "away_name": "Stade Brestois 29",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/fr.1.json",
+    "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "FR1",
+    "home": "fc lorient",
+    "away": "stade brestois 29",
+    "expected_home_goals": 1.7876535946552778,
+    "expected_away_goals": 1.3030504926965771,
+    "probabilities": {
+      "home": 0.4884233109557266,
+      "draw": 0.2315890223088838,
+      "away": 0.2799876667353897
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.8139959783291157,
+      "2.5": 0.5968213299785449,
+      "3.5": 0.373080472203108
+    },
+    "both_teams_score": 0.606415838934818,
+    "total_goals_80": [
+      1,
+      5
+    ],
+    "training_cutoff_exclusive": "2026-10-25",
+    "training_games": 882,
+    "prior_team_games": {
+      "fc lorient": 64,
+      "stade brestois 29": 98
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "653f7bd855fde1275fd8db8739bfb6edd2be28d37870e466697f9df28d16186f",
+  "payload_sha256": "095100a3ea5d9cb5b52d57393008a1b4ad47d51ed9f540a1cde5368bb31ae9a5"
+}

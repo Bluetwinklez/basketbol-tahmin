@@ -1,0 +1,65 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+  "fixture": {
+    "event_id": "FR1_caaca3b578d56ac18ca1a6fc",
+    "league": "FR1",
+    "season": "2026-27",
+    "date": "2026-10-31",
+    "home": "ogc nice",
+    "away": "stade rennais fc 1901",
+    "home_name": "OGC Nice",
+    "away_name": "Stade Rennais FC 1901",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/fr.1.json",
+    "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "FR1",
+    "home": "ogc nice",
+    "away": "stade rennais fc 1901",
+    "expected_home_goals": 1.5885300760218293,
+    "expected_away_goals": 1.4744534756790095,
+    "probabilities": {
+      "home": 0.4049775610178939,
+      "draw": 0.23972890748916345,
+      "away": 0.35529353149294274
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.810063596831225,
+      "2.5": 0.5907717531094836,
+      "3.5": 0.3668759829955355
+    },
+    "both_teams_score": 0.6136186301830634,
+    "total_goals_80": [
+      1,
+      5
+    ],
+    "training_cutoff_exclusive": "2026-10-25",
+    "training_games": 882,
+    "prior_team_games": {
+      "ogc nice": 98,
+      "stade rennais fc 1901": 98
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "653f7bd855fde1275fd8db8739bfb6edd2be28d37870e466697f9df28d16186f",
+  "payload_sha256": "8d49a8f92cf5bf047428b82744393dac97bbf3523c6bff4b65f3a3170c124ad4"
+}

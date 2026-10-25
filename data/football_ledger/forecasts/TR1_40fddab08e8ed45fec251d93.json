@@ -1,0 +1,65 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+  "fixture": {
+    "event_id": "TR1_40fddab08e8ed45fec251d93",
+    "league": "TR1",
+    "season": "2026-27",
+    "date": "2026-11-01",
+    "home": "fenerbahce",
+    "away": "goztepe",
+    "home_name": "Fenerbahçe",
+    "away_name": "Göztepe",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/europe/blob/63df627f3c87ce71708f016522ea236cf74332c3/turkey/2026-27_tr1.txt",
+    "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "TR1",
+    "home": "fenerbahce",
+    "away": "goztepe",
+    "expected_home_goals": 2.035071576568094,
+    "expected_away_goals": 1.43773988246138,
+    "probabilities": {
+      "home": 0.5142767516232206,
+      "draw": 0.21427029607405026,
+      "away": 0.27145295230272926
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      2,
+      1
+    ],
+    "over": {
+      "1.5": 0.8612101397269828,
+      "2.5": 0.6740947266527394,
+      "3.5": 0.45748920975765095
+    },
+    "both_teams_score": 0.6628946912398578,
+    "total_goals_80": [
+      1,
+      6
+    ],
+    "training_cutoff_exclusive": "2026-10-25",
+    "training_games": 763,
+    "prior_team_games": {
+      "fenerbahce": 80,
+      "goztepe": 51
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "653f7bd855fde1275fd8db8739bfb6edd2be28d37870e466697f9df28d16186f",
+  "payload_sha256": "53ec4213884beb247124d86a18ee45dedf44152fc6cb3bc7ef27d15fdcaea5b9"
+}

@@ -2,7 +2,7 @@
 
 Audit started 25 October 2026 from main `0fafc2ef6345a19f447f36f2be046a9a26a41f29`. No open PR was returned. The latest code test run was successful (40134216022); both subsequent scheduled sports refresh runs failed. Run 40190799925 failed at `git pull --rebase`: the Asia collection reports were modified but not staged. Refresh also reported unavailable football seasons and an Argentina natural-identity conflict. These are separate failures.
 
-This is an active delivery ledger, **not a statement that the full requested project is complete**. `requested-matches.json` records 34 known pairings with unknown fixture attributes left null. Four original images were retrieved from accessible chats and visually inspected. The remaining original images were not supplied by chat retrieval. Prior assistant prose is a discovery lead, not independently verified evidence. Repeated pairings without verified dates are not counted as distinct fixtures.
+This is an active delivery ledger, **not a statement that the full requested project is complete**. `requested-matches.json` records 38 known pairings with unknown fixture attributes left null. Four original images were retrieved from accessible chats and visually inspected. The remaining original images were not supplied by chat retrieval. Prior assistant prose is a discovery lead, not independently verified evidence. Repeated pairings without verified dates are not counted as distinct fixtures.
 
 | Requirement | Current state / missing information | Next action | Validation / evidence |
 |---|---|---|---|
@@ -32,3 +32,22 @@ This is an active delivery ledger, **not a statement that the full requested pro
 Branch `fix/archive-integrity-and-scope` is a fresh isolated clone. Runtime files, virtual environment and logs are under `.runtime/` and `.venv/` (ignored). Run with Python 3.12 and UTF-8 on Windows. Source-refresh logs are `.runtime/live-refresh.log`; regression output `.runtime/full-tests.log`; XML `.runtime/tests.xml`. A live refresh succeeded for most basketball sources but retained an Argentina duplicate-identity failure and explicit missing football-source errors. Do not describe the refresh as successful overall. No new unique football finals were added in this refresh; capture timestamps and schedules were refreshed.
 
 Remaining immediate actions: finish final regression, examine Argentina duplicate groups before linking identities, complete inventory/coverage regeneration, review code/data diffs, publish PR with verified checks, merge, and continue the unresolved rows above. Do not silently promote the research model or rewrite earliest forecasts.
+
+
+## Verified follow-up
+
+PR #17 merged as c25335afc90b5b275db9a11feb4377bc2de4a4fa after push and PR test workflows succeeded (40191994720 / 40192052691), including rendered Chromium UI checks. Local validation passed 312 Python and 9 UI tests before the subsequent Argentina fix.
+
+Argentina investigation found 35 existing official finals with identical exact UTC tipoffs, ordered club IDs and scores, but 35 changed opaque URL tokens. The reconciliation only reuses a unique prior official timestamp identity, including prior scheduled fixtures. Changed times, ambiguous identities and day-only publisher results do not link. Score conflicts remain fatal. A fresh official collection completed with 1,721 finals (38 in 2026–27), 83 explicit identity links and no source errors. Three genuinely new finals were added; token rotations are not counted as new games. The local Argentina daily replay reports ten upcoming forecasts with no skipped source errors. Existing frozen records remain unchanged.
+
+The refreshed independent archives add 56 unique basketball finals against the pinned starting main: Japan B.PREMIER 11, Japan B.ONE 13 (legacy storage paths retained), KBL 7, PBA Governors Cup 1, ABA 8, ECW 1, BSL 4, Ukraine 5, EuroLeague runtime overlay 3 and Argentina LNB 3. All are partial coverage. Football adds zero new unique finals. `python scripts/audit_delivery.py` reproduces the league/season inventories and confirms all 105 original football/basketball/Argentina forecast payloads unchanged.
+
+The same 380-match 2024 BR2 chronological cohort was rerun. Winner accuracy remains baseline 51.58%, opponent 52.63%; no data or model accuracy increase is established. Floating point rounding differences across platforms are not improvements. KBL requested-fixture reconstructions, if generated, are explicitly post-result research and excluded from forward success rates.
+
+
+Source terms follow-up: https://football-data.co.uk/contact.php limits its free CSV use to personal/academic research with at most twice-weekly light downloads and explicitly declines AI/commercial usage requests. It was not used to fill or republish missing Turkish seasons. The CC0 evrimulgen/turkey archive stops at 2019–20 and cannot establish current latest-50 coverage. These source limits are recorded rather than silently bypassed.
+
+An additional replay leak was fixed: a historical requested clock cannot reuse a forecast recorded later. Regression coverage now explicitly verifies that exclusion while retaining original payloads. Argentina replay tests use recorded source fixtures, because a current refresh correctly moves some earlier fixtures into finals.
+
+
+The second validation passes 315 Python tests. A repeatable Windows early-POST rejection reset was fixed by consuming only bounded request bodies before returning authentication errors; host/origin/token checks remain enforced. Four additional repository-backed screenshot pairings (Helsinki–Brno, Pärnu–Vienna, Celje–Brno, Montana–Girona) bring the scope registry to 38. Additional durable-chat retrieval was attempted: one large prior turn exceeds the retrieval service response limit; it was not claimed reviewed.

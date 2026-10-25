@@ -1,0 +1,65 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+  "fixture": {
+    "event_id": "FR1_a876ad867144eec387a74449",
+    "league": "FR1",
+    "season": "2026-27",
+    "date": "2026-11-01",
+    "home": "rc strasbourg alsace",
+    "away": "aj auxerre",
+    "home_name": "RC Strasbourg Alsace",
+    "away_name": "AJ Auxerre",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/fr.1.json",
+    "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "FR1",
+    "home": "rc strasbourg alsace",
+    "away": "aj auxerre",
+    "expected_home_goals": 1.9186938938605922,
+    "expected_away_goals": 1.2517521217714258,
+    "probabilities": {
+      "home": 0.5296066829728557,
+      "draw": 0.22219820739424048,
+      "away": 0.24819510963290403
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.824904375285558,
+      "2.5": 0.613894140867805,
+      "3.5": 0.3908952885453575
+    },
+    "both_teams_score": 0.6091830512457413,
+    "total_goals_80": [
+      1,
+      6
+    ],
+    "training_cutoff_exclusive": "2026-10-25",
+    "training_games": 882,
+    "prior_team_games": {
+      "rc strasbourg alsace": 98,
+      "aj auxerre": 73
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "653f7bd855fde1275fd8db8739bfb6edd2be28d37870e466697f9df28d16186f",
+  "payload_sha256": "c8fddf965f4ddf1203fa4d352e81c0645da6320af51cbfa403d0bfbbe7272d5d"
+}

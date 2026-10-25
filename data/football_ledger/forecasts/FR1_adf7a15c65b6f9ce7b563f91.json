@@ -1,0 +1,65 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+  "fixture": {
+    "event_id": "FR1_adf7a15c65b6f9ce7b563f91",
+    "league": "FR1",
+    "season": "2026-27",
+    "date": "2026-11-01",
+    "home": "olympique de marseille",
+    "away": "toulouse fc",
+    "home_name": "Olympique de Marseille",
+    "away_name": "Toulouse FC",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/fr.1.json",
+    "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "FR1",
+    "home": "olympique de marseille",
+    "away": "toulouse fc",
+    "expected_home_goals": 1.971391270933889,
+    "expected_away_goals": 1.4668622991146612,
+    "probabilities": {
+      "home": 0.4943225532696162,
+      "draw": 0.21812173697264073,
+      "away": 0.2875557097577433
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.8574400421695887,
+      "2.5": 0.6675810126155499,
+      "3.5": 0.4499865172255077
+    },
+    "both_teams_score": 0.6622097085341916,
+    "total_goals_80": [
+      1,
+      6
+    ],
+    "training_cutoff_exclusive": "2026-10-25",
+    "training_games": 882,
+    "prior_team_games": {
+      "olympique de marseille": 98,
+      "toulouse fc": 97
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "653f7bd855fde1275fd8db8739bfb6edd2be28d37870e466697f9df28d16186f",
+  "payload_sha256": "5fd7108d0afd23fec898bab928c9e784d09c1277fef79f1b6ca12d19b95825b6"
+}
