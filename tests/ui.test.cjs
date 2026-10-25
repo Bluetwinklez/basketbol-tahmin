@@ -269,3 +269,19 @@ test('football board separates draws, goal markets and unverified results', asyn
   assert.equal(w.document.querySelectorAll('#cards img').length,0);
   assert.equal(w.document.querySelector('#cards a').getAttribute('href'),'#');
 });
+
+test('football date conflicts remain visible in pending and review filters', async (t) => {
+  const html=fs.readFileSync('src/bbtahmin/ui/football.html','utf8');
+  const dom=new JSDOM(html,{url:'http://127.0.0.1:8765/football',runScripts:'outside-only'});
+  t.after(()=>dom.window.close());const w=dom.window;w.setInterval=()=>1;
+  w.fetch=async()=>({ok:true,json:async()=>({job:{status:'idle'},report:{checked_at_utc:'2026-10-25T12:00Z',pending:1,publisher_performance:{games:0},source_errors:[],skipped:[],forecasts:[{
+    status:'fixture_review_required',fixture:{event_id:'x',league:'TR1',date:'2026-10-25',home_name:'A',away_name:'B',source_url:''},
+    prediction:{expected_home_goals:1,expected_away_goals:1,probabilities:{home:.4,draw:.3,away:.3},over:{'1.5':.6,'2.5':.4,'3.5':.2},both_teams_score:.5,total_goals_80:[0,4]},
+    fixture_review:{observed_start_utc:'2026-10-26T18:30Z',source_url:'https://www.espn.com/soccer/game/_/gameId/1'},result:null}]}})});
+  w.eval(fs.readFileSync('src/bbtahmin/ui/football.js','utf8'));await new Promise(setImmediate);
+  assert.match(w.document.querySelector('#cards').textContent,/Review required.*2026-10-26/);
+  for(const filter of ['pending','fixture_review_required']) {
+    const select=w.document.getElementById('result-status');select.value=filter;select.dispatchEvent(new w.Event('change'));
+    assert.equal(w.document.querySelectorAll('#cards article').length,1);
+  }
+});

@@ -153,7 +153,7 @@ def collect(first=2010, last=None, json_dir=None, europe_dir=None, root=ROOT, cu
                         files.append(dict(league=code,season=season,rows=len(rows),finals=sum(r['status']=='final' for r in rows),sha256=hashlib.sha256(raw.encode()).hexdigest()))
                     except Exception as exc: errors.append(dict(league=code,season=season,error=str(exc),retained_previous=True))
         except Exception as exc: errors.append(dict(repository=repo,error=str(exc),retained_previous=True))
-    frame=load(root)
+    frame=load(root,include_licensed=False)
     report=dict(checked_at_utc=captured,revisions=revisions,files=files,errors=errors,
                 finals=int((frame.status=='final').sum()) if len(frame) else 0,
                 fixtures=int((frame.status=='scheduled').sum()) if len(frame) else 0,
@@ -164,10 +164,17 @@ def collect(first=2010, last=None, json_dir=None, europe_dir=None, root=ROOT, cu
     return report
 
 
-def load(root=ROOT):
+def load(root=ROOT,include_licensed=True):
     rows=[]
     for path in sorted(Path(root).glob('*_20*.json.gz')):
         rows.extend(json.loads(gzip.decompress(path.read_bytes()).decode('utf8'))['rows'])
+    if include_licensed:
+        overlays=[]
+        for path in sorted((Path(root)/'licensed_overlays').glob('*.json.gz')):
+            overlays.extend(json.loads(gzip.decompress(path.read_bytes()))['rows'])
+        if overlays:
+            from .licensed import merge
+            rows=merge(rows,overlays)
     frame=pd.DataFrame(rows)
     if len(frame):
         if frame.event_id.duplicated().any(): raise ValueError('Duplicate archive fixtures')

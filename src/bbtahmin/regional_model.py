@@ -48,7 +48,7 @@ def predict(code, home, away, when):
         raise ValueError('Timezone-aware fixture required')
     date = date.tz_convert('UTC'); cutoff = date.floor('D')
     g = load(code); g = g[g.tarih_utc < cutoff]
-    catalog = json.loads(Path(f'data/competitions/{code}_teams.json').read_text())
+    catalog = json.loads(Path(f'data/competitions/{code}_teams.json').read_text(encoding='utf8'))
     if home == away or any(t not in catalog for t in (home, away)):
         raise ValueError('Unknown or identical regional team')
     year = date.year if date.month >= 7 else date.year-1

@@ -156,7 +156,10 @@ class AppState:
         try:
             from .football.data import collect
             from .football.daily import run as football_run
-            if refresh: collect(current_only=True)
+            if refresh:
+                collect(current_only=True)
+                from .football.fixture_confirmation import refresh as confirm_fixtures
+                confirm_fixtures()
             report=football_run(days,self.football_directory)
             with self.lock:
                 self.job.update(status='partial' if report['source_errors'] or report['skipped'] else 'succeeded',
