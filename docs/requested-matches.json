@@ -193,12 +193,18 @@
       "start_time": null,
       "timezone": null,
       "season": null,
-      "identity_status": "requires_fixture_verification",
-      "first_prediction": null,
+      "identity_status": "matched_exact_ordered_official_KBL_clubs_and_scheduled_start",
+      "first_prediction": {
+        "path": "docs/kanit/delivery_audit/reported_kbl_first_predictions.json",
+        "event_id": "KBL_S49G01N37",
+        "kind": "reported_chat_output_unverified_runtime"
+      },
       "observations": [],
       "screenshot_time": "08:00",
       "screenshot_relative_date": "Today",
-      "date_inference": "2026-10-25 from conversation timestamp; not independent fixture verification"
+      "date_inference": "2026-10-25 from conversation timestamp; not independent fixture verification",
+      "verified_event_id": "KBL_S49G01N37",
+      "fixture_start_utc": "2026-10-25T05:00:00+00:00"
     },
     {
       "request_id": "request-014",
@@ -211,12 +217,18 @@
       "start_time": null,
       "timezone": null,
       "season": null,
-      "identity_status": "requires_fixture_verification",
-      "first_prediction": null,
+      "identity_status": "matched_exact_ordered_official_KBL_clubs_and_scheduled_start",
+      "first_prediction": {
+        "path": "docs/kanit/delivery_audit/reported_kbl_first_predictions.json",
+        "event_id": "KBL_S49G01N38",
+        "kind": "reported_chat_output_unverified_runtime"
+      },
       "observations": [],
       "screenshot_time": "08:00",
       "screenshot_relative_date": "Today",
-      "date_inference": "2026-10-25 from conversation timestamp; not independent fixture verification"
+      "date_inference": "2026-10-25 from conversation timestamp; not independent fixture verification",
+      "verified_event_id": "KBL_S49G01N38",
+      "fixture_start_utc": "2026-10-25T05:00:00+00:00"
     },
     {
       "request_id": "request-015",

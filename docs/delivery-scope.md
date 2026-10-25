@@ -71,3 +71,6 @@ The current scope still requires independent source/fixture work: recover remain
 
 
 Requested KBL legacy spelling: `Anyang KGC` and `Anyang KGC Ginseng Corp` are explicit English aliases of KBL_70, matching the existing official-source Korean alias `안양 KGC`. They remain separate from Dongbu/Wonju KBL_16. The collector retains the mapping on future refresh; no fuzzy merge or cross-season match reassignment is used. PR #20 merged as ea1667bdfc6c22ebae4e7d3ddcb21faddd5eeda8 after both experiment PR and push CI succeeded.
+
+
+Original KBL chat outputs were recovered and preserved separately: Seoul SK–KT 64.7%, rounded 83–76; Anyang–Dongbu 65.1%, rounded 81–80. The original source answer's turn interval is retained, rather than inventing an exact model execution time. Those two pairings link to official KBL_S49G01N37/38 at 2026-10-25 05:00 UTC. Missing original model version/input cutoff prevents scoring them as verified project runtime forecasts. New reconstructions remain separate and do not replace the reported originals.

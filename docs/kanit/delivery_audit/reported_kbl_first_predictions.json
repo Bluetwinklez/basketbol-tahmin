@@ -1,0 +1,55 @@
+{
+  "spec": "reported-pregame-chat-observations-v1",
+  "records": [
+    {
+      "event_id": "KBL_S49G01N37",
+      "home_display": "Seoul SK Knights",
+      "away_display": "KT Sonicboom",
+      "reported_home_win_probability": 0.647,
+      "reported_rounded_score": [
+        83,
+        76
+      ],
+      "reported_total": 159,
+      "source_turn_interval_utc": [
+        "2026-10-24T21:36:28.413544178+00:00",
+        "2026-10-24T21:37:15.775916100+00:00"
+      ],
+      "prediction_time_precision": "source_turn_interval",
+      "source_chat_id": "6adb8d59-278c-83ed-af9b-970ba7c109ab",
+      "source_turn_id": "c04a2a03-89df-4b38-a8cf-f169366a5721",
+      "source_answer_id": "26d62361-eaf4-5585-9667-2164b0b43bab",
+      "reported_method": "Prior assistant described these as project model outputs; runtime/model/input provenance not recovered",
+      "model_version": null,
+      "input_data_cutoff": null,
+      "prospective_project_accuracy_eligible": false,
+      "reason": "Preserved reported pregame output, not a recovered verifiable runtime forecast artifact"
+    },
+    {
+      "event_id": "KBL_S49G01N38",
+      "home_display": "Anyang KGC",
+      "away_display": "Dongbu Promy",
+      "reported_home_win_probability": 0.651,
+      "reported_rounded_score": [
+        81,
+        80
+      ],
+      "reported_total": 161,
+      "source_turn_interval_utc": [
+        "2026-10-24T21:36:28.413544178+00:00",
+        "2026-10-24T21:37:15.775916100+00:00"
+      ],
+      "prediction_time_precision": "source_turn_interval",
+      "source_chat_id": "6adb8d59-278c-83ed-af9b-970ba7c109ab",
+      "source_turn_id": "c04a2a03-89df-4b38-a8cf-f169366a5721",
+      "source_answer_id": "26d62361-eaf4-5585-9667-2164b0b43bab",
+      "reported_method": "Prior assistant described these as project model outputs; runtime/model/input provenance not recovered",
+      "model_version": null,
+      "input_data_cutoff": null,
+      "prospective_project_accuracy_eligible": false,
+      "reason": "Preserved reported pregame output, not a recovered verifiable runtime forecast artifact"
+    }
+  ],
+  "note": "Copied from accessible original chat answer. Rounded values retained exactly; no full-precision probabilities or model version invented. These records are separate from verified runtime forecasts and new post-result reconstructions.",
+  "payload_sha256": "b8be5e75db73b74f0ceeea6ea32cf3505debeb22601c1e5055cd9f0d29e093a3"
+}
