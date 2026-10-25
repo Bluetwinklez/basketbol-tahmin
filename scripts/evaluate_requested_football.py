@@ -19,12 +19,16 @@ def main():
             report['calibration'][v]['over_'+line]=reliability([x['prediction']['over'][line] for x in items],[x['result']['actual_home']+x['result']['actual_away']>float(line) for x in items])
         report['calibration'][v]['both_teams_score']=reliability([x['prediction']['both_teams_score'] for x in items],[min(x['result']['actual_home'],x['result']['actual_away'])>0 for x in items])
     pairs=[('CO2','Bogotá','Real Santander'),('CO2','Real Cundinamarca','Independiente Yumbo'),('USL1','Portland Hearts of Pine','Charlotte Independence'),('USLC','Loudoun United','Brooklyn'),('SV1','Alianza','Metapán'),('SV1','CD Águila','CD FAS'),('HN1','CD Choloma','Genesis PN'),('BO1','San Antonio Bulo Bulo','Real Potosí'),('BR2','CRB AL','Londrina PR')]
+    from bbtahmin.football.coverage import league_coverage, last_matches
+    states={x['league']:x for x in league_coverage(frame)['leagues']}
     coverage=[]
     for league,home,away in pairs:
-        item=dict(league=league,home=home,away=away,status='unsupported',reason='No licensed archive integrated for this competition')
-        if league=='BR2':
-            p=fit(br,league,'2026-10-25','ensemble').predict(home,away)
-            item.update(status='blocked_stale_history',reason='No 2026 source season; not a usable current forecast',prior_team_games=p['prior_team_games'],issues=p['issues'])
+        state=states[league]
+        item=dict(league=league,home=home,away=away,status=state['status'],
+                  historical_finals=state['historical_finals'],active_season_finals=state['active_season_finals'],
+                  reason='Archive coverage is not verified current fixture or team support',fixture_verified=False)
+        if state['historical_finals']:
+            item['available_history']={team:last_matches(frame,league,team,'2026-10-25')['available'] for team in (home,away)}
         coverage.append(item)
     target_games=br.loc[(br.season=='2024') & (br.status=='final')]
     report['simple_baselines']={'always_home_accuracy':float((target_games.home_goals>target_games.away_goals).mean()),'always_under_2_5_accuracy':float(((target_games.home_goals+target_games.away_goals)<=2).mean()),'always_btts_no_accuracy':float(((target_games.home_goals==0)|(target_games.away_goals==0)).mean())}

@@ -68,12 +68,17 @@ class GoalModel:
 
 
 def metrics(items):
-    if not items: return dict(games=0,winner_accuracy=None,log_loss=None,brier=None,total_mae=None,margin_mae=None,total_in_80=None)
+    if not items: return dict(games=0,winner_accuracy=None,log_loss=None,brier=None,total_mae=None,margin_mae=None,total_in_80=None,home_score_mae=None,away_score_mae=None,team_score_mae=None,team_score_games=0)
     result=dict(games=len(items),winner_accuracy=float(np.mean([x['winner_correct'] for x in items])),
                 log_loss=float(np.mean([x['log_loss'] for x in items])),brier=float(np.mean([x['brier'] for x in items])),
                 total_mae=float(np.mean([x['total_absolute_error'] for x in items])),
                 margin_mae=float(np.mean([x['margin_absolute_error'] for x in items])),
                 total_in_80=float(np.mean([x['total_in_80'] for x in items])))
+    scored=[x for x in items if 'home_absolute_error' in x and 'away_absolute_error' in x]
+    result.update(team_score_games=len(scored),
+                  home_score_mae=float(np.mean([x['home_absolute_error'] for x in scored])) if scored else None,
+                  away_score_mae=float(np.mean([x['away_absolute_error'] for x in scored])) if scored else None,
+                  team_score_mae=float(np.mean([(x['home_absolute_error']+x['away_absolute_error'])/2 for x in scored])) if scored else None)
     result['goal_markets']={market:dict(accuracy=float(np.mean([x['goal_markets'][market]['correct'] for x in items])),
         brier=float(np.mean([x['goal_markets'][market]['brier'] for x in items])))
         for market in ('over_1.5','over_2.5','over_3.5','both_teams_score')}
@@ -93,6 +98,7 @@ def score(prediction, home, away):
     markets['both_teams_score']=dict(actual=actual,correct=(probability>=.5)==actual,brier=(probability-float(actual))**2)
     return dict(actual_home=home,actual_away=away,actual_outcome=outcome,goal_markets=markets,
                 winner_correct=prediction['predicted_outcome']==outcome,
+                home_absolute_error=abs(ph-home),away_absolute_error=abs(pa-away),
                 total_absolute_error=abs(ph+pa-home-away),margin_absolute_error=abs((ph-pa)-(home-away)),
                 total_in_80=prediction['total_goals_80'][0]<=home+away<=prediction['total_goals_80'][1],
                 log_loss=float(-np.log(max(probs[outcome],1e-15))),brier=float(np.sum((values-target)**2)))
