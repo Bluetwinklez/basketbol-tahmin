@@ -12,7 +12,8 @@ from .asia import save
 BASE='https://api.kbl.or.kr/'
 HEADERS={'User-Agent':'BasketballPregameResearch/0.5','Channel':'WEB','TeamCode':'XX',
          'X-Requested-With':'XMLHttpRequest','lang':'ko'}
-ALIASES={'06':['KT Sonicboom','Suwon KT Sonicboom','Busan KT Sonicboom'],
+ALIASES={'70':['Anyang KGC','Anyang KGC Ginseng Corp'],
+         '06':['KT Sonicboom','Suwon KT Sonicboom','Busan KT Sonicboom'],
          '16':['Dongbu Promy','Wonju DB Promy','Wonju Dongbu Promy']}
 
 
