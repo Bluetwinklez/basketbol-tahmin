@@ -1,0 +1,65 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+  "fixture": {
+    "event_id": "BR1_bc62b913de146768b02e0f13",
+    "league": "BR1",
+    "season": "2026",
+    "date": "2026-10-28",
+    "home": "clube do remo",
+    "away": "botafogo fr",
+    "home_name": "Clube do Remo",
+    "away_name": "Botafogo FR",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026/br.1.json",
+    "captured_at_utc": "2026-10-25T12:01:16.791819+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "BR1",
+    "home": "clube do remo",
+    "away": "botafogo fr",
+    "expected_home_goals": 1.317249299068675,
+    "expected_away_goals": 1.234551299841585,
+    "probabilities": {
+      "home": 0.38625669808652374,
+      "draw": 0.2665420172949669,
+      "away": 0.34720128461850935
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.7231684036390676,
+      "2.5": 0.4694040857544828,
+      "3.5": 0.2535521063011705
+    },
+    "both_teams_score": 0.5191047866482863,
+    "total_goals_80": [
+      1,
+      5
+    ],
+    "training_cutoff_exclusive": "2026-10-25",
+    "training_games": 1130,
+    "prior_team_games": {
+      "clube do remo": 28,
+      "botafogo fr": 114
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "653f7bd855fde1275fd8db8739bfb6edd2be28d37870e466697f9df28d16186f",
+  "payload_sha256": "5e8b1cf80fd73506e98500c79cadf86f8c79f3f4e904448a4d9c1e36ad0eefc0"
+}

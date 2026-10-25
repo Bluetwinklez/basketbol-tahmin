@@ -1,0 +1,206 @@
+{
+  "games": [
+    {
+      "event_id": "KBL_S49G01N37",
+      "source_url": "https://api.kbl.or.kr/match/S49G01N37",
+      "fixture_start_utc": "2026-10-25T05:00:00+00:00",
+      "recorded_at_utc": "2026-10-25T12:17:30.198431+00:00",
+      "kind": "retrospective_reconstruction_not_original_pregame_forecast",
+      "prospective_eligible": false,
+      "prediction": {
+        "lig": "KBL",
+        "ev": "KBL_55",
+        "dep": "KBL_06",
+        "tarih_utc": "2026-10-25T05:00:00+00:00",
+        "model": "asia-separate-prior-policy-v1/elo",
+        "ev_kazanir": 0.6622928766297352,
+        "ev_skor": 83.59929844367667,
+        "dep_skor": 76.4831676394314,
+        "fark": 7.116130804245278,
+        "toplam": 160.08246608310807,
+        "fark_80": [
+          -8.869682490186594,
+          23.10194409867715
+        ],
+        "toplam_80": [
+          138.17044684180632,
+          181.99448532440982
+        ],
+        "tum_modeller": {
+          "score": 0.7158260674472827,
+          "logistic": 0.7662991891413585,
+          "elo": 0.6622928766297352,
+          "ensemble": 0.7148060444061256
+        },
+        "az_veri": [],
+        "recent_games": {
+          "KBL_55": 57,
+          "KBL_06": 62
+        },
+        "uzatma": null,
+        "experimental": true,
+        "training_cutoff": "2026-10-25T00:00:00+00:00",
+        "selection": {
+          "season": "2026-27",
+          "previous_season": "2025-26",
+          "training_games": 2247,
+          "calibration_games": 134,
+          "final_training_games": 2517,
+          "calibration_season_gap": 1,
+          "selection_games": 136,
+          "selection_window_start_utc": "2026-01-02T00:00:00+00:00",
+          "selected": "elo",
+          "selection_log_loss": {
+            "score": 0.6535251221056223,
+            "logistic": 0.6575069087166779,
+            "elo": 0.6289965293543216,
+            "ensemble": 0.6448875034714635
+          },
+          "rule": "Lowest log loss on the second UTC-day half of the preceding season. Score probabilities calibrate on its first half. Fixed learners; test outcomes never select a candidate."
+        },
+        "dataset_sha256": "37e16ee91d06da4f56b3668deac424717c38c4f62ef1c80392a5acf55dca84ce",
+        "calibration_regime_gap": false,
+        "history_start_season": null,
+        "note": "Separate-league pregame research, not validated live/score certainty. Models fit on earlier seasons, features withhold the entire UTC day. Cup rules, promotions, historical publication and neutral venues are not fully modeled."
+      },
+      "actual_home": 90,
+      "actual_away": 79,
+      "included_in_forward_accuracy": false
+    },
+    {
+      "event_id": "KBL_S49G01N38",
+      "source_url": "https://api.kbl.or.kr/match/S49G01N38",
+      "fixture_start_utc": "2026-10-25T05:00:00+00:00",
+      "recorded_at_utc": "2026-10-25T12:17:30.198431+00:00",
+      "kind": "retrospective_reconstruction_not_original_pregame_forecast",
+      "prospective_eligible": false,
+      "prediction": {
+        "lig": "KBL",
+        "ev": "KBL_70",
+        "dep": "KBL_16",
+        "tarih_utc": "2026-10-25T05:00:00+00:00",
+        "model": "asia-separate-prior-policy-v1/elo",
+        "ev_kazanir": 0.6393916778208735,
+        "ev_skor": 82.69380685335908,
+        "dep_skor": 80.69480738234493,
+        "fark": 1.998999471014157,
+        "toplam": 163.388614235704,
+        "fark_80": [
+          -13.986813823417716,
+          17.98481276544603
+        ],
+        "toplam_80": [
+          141.47659499440226,
+          185.30063347700576
+        ],
+        "tum_modeller": {
+          "score": 0.5636602518606769,
+          "logistic": 0.5556749163749467,
+          "elo": 0.6393916778208735,
+          "ensemble": 0.5862422820188323
+        },
+        "az_veri": [],
+        "recent_games": {
+          "KBL_70": 62,
+          "KBL_16": 61
+        },
+        "uzatma": null,
+        "experimental": true,
+        "training_cutoff": "2026-10-25T00:00:00+00:00",
+        "selection": {
+          "season": "2026-27",
+          "previous_season": "2025-26",
+          "training_games": 2247,
+          "calibration_games": 134,
+          "final_training_games": 2517,
+          "calibration_season_gap": 1,
+          "selection_games": 136,
+          "selection_window_start_utc": "2026-01-02T00:00:00+00:00",
+          "selected": "elo",
+          "selection_log_loss": {
+            "score": 0.6535251221056223,
+            "logistic": 0.6575069087166779,
+            "elo": 0.6289965293543216,
+            "ensemble": 0.6448875034714635
+          },
+          "rule": "Lowest log loss on the second UTC-day half of the preceding season. Score probabilities calibrate on its first half. Fixed learners; test outcomes never select a candidate."
+        },
+        "dataset_sha256": "37e16ee91d06da4f56b3668deac424717c38c4f62ef1c80392a5acf55dca84ce",
+        "calibration_regime_gap": false,
+        "history_start_season": null,
+        "note": "Separate-league pregame research, not validated live/score certainty. Models fit on earlier seasons, features withhold the entire UTC day. Cup rules, promotions, historical publication and neutral venues are not fully modeled."
+      },
+      "actual_home": 93,
+      "actual_away": 95,
+      "included_in_forward_accuracy": false
+    },
+    {
+      "event_id": "KBL_S49G01N33",
+      "source_url": "https://api.kbl.or.kr/match/S49G01N33",
+      "fixture_start_utc": "2026-10-23T10:00:00+00:00",
+      "recorded_at_utc": "2026-10-25T12:17:30.198431+00:00",
+      "kind": "retrospective_reconstruction_not_original_pregame_forecast",
+      "prospective_eligible": false,
+      "prediction": {
+        "lig": "KBL",
+        "ev": "KBL_06",
+        "dep": "KBL_16",
+        "tarih_utc": "2026-10-23T10:00:00+00:00",
+        "model": "asia-separate-prior-policy-v1/elo",
+        "ev_kazanir": 0.5034654034704239,
+        "ev_skor": 81.65861815819689,
+        "dep_skor": 83.41418068485028,
+        "fark": -1.7555625266534,
+        "toplam": 165.07279884304717,
+        "fark_80": [
+          -17.741375821085274,
+          14.230250767778474
+        ],
+        "toplam_80": [
+          143.16077960174542,
+          186.98481808434892
+        ],
+        "tum_modeller": {
+          "score": 0.4440376586974703,
+          "logistic": 0.4169305818056843,
+          "elo": 0.5034654034704239,
+          "ensemble": 0.4548112146578595
+        },
+        "az_veri": [],
+        "recent_games": {
+          "KBL_06": 61,
+          "KBL_16": 60
+        },
+        "uzatma": null,
+        "experimental": true,
+        "training_cutoff": "2026-10-23T00:00:00+00:00",
+        "selection": {
+          "season": "2026-27",
+          "previous_season": "2025-26",
+          "training_games": 2247,
+          "calibration_games": 134,
+          "final_training_games": 2517,
+          "calibration_season_gap": 1,
+          "selection_games": 136,
+          "selection_window_start_utc": "2026-01-02T00:00:00+00:00",
+          "selected": "elo",
+          "selection_log_loss": {
+            "score": 0.6535251221056223,
+            "logistic": 0.6575069087166779,
+            "elo": 0.6289965293543216,
+            "ensemble": 0.6448875034714635
+          },
+          "rule": "Lowest log loss on the second UTC-day half of the preceding season. Score probabilities calibrate on its first half. Fixed learners; test outcomes never select a candidate."
+        },
+        "dataset_sha256": "37e16ee91d06da4f56b3668deac424717c38c4f62ef1c80392a5acf55dca84ce",
+        "calibration_regime_gap": false,
+        "history_start_season": null,
+        "note": "Separate-league pregame research, not validated live/score certainty. Models fit on earlier seasons, features withhold the entire UTC day. Cup rules, promotions, historical publication and neutral venues are not fully modeled."
+      },
+      "actual_home": 95,
+      "actual_away": 102,
+      "included_in_forward_accuracy": false
+    }
+  ],
+  "note": "Computed after results using whole-day feature withholding. These are new version reconstructions, not recovered earliest forecasts or prospective evidence."
+}

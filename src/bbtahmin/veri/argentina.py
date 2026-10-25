@@ -132,6 +132,37 @@ def parse_official(html,year,captured,source):
     return rows,fixtures
 
 
+def reconcile_official_ids(rows, previous_frames):
+    """Keep recorded identities when opaque official URL tokens rotate.
+
+    Only exact season, UTC tipoff and ordered club identities qualify. A date
+    change, day-only publisher observation or ambiguous match is never linked.
+    """
+    fields=('sezon','tarih_utc','ev','dep')
+    def identity(item):
+        return tuple(pd.Timestamp(item[k]).tz_convert('UTC') if k=='tarih_utc' else item[k] for k in fields)
+    registry={}
+    for frame in previous_frames:
+        for item in frame.to_dict('records'):
+            if item.get('source_kind')!='official_liga_nacional' or item.get('date_precision')!='timestamp':
+                continue
+            key=identity(item)
+            if key in registry and registry[key]!=item['mac_id']:
+                raise ValueError('Ambiguous persisted official Argentina identity')
+            registry[key]=item['mac_id']
+    result=[];seen=set();links=[]
+    for item in rows:
+        key=identity(item)
+        if key in seen:raise ValueError('Duplicate incoming official Argentina fixture')
+        seen.add(key)
+        canonical=registry.get(key,item['mac_id'])
+        if canonical!=item['mac_id']:
+            links.append(dict(observed_id=item['mac_id'],canonical_id=canonical,
+                              source_url=item['source_url'],basis='exact season/UTC tipoff/ordered clubs'))
+        result.append(dict(item,mac_id=canonical))
+    return result,links
+
+
 def merge_results(previous,rows):
     g=pd.concat([previous,pd.DataFrame(rows)],ignore_index=True)
     if g.empty:raise ValueError('No Argentina finals available')
@@ -173,6 +204,14 @@ def collect(first=2022,last=None):
         except Exception as exc:
             errors.append(dict(year=year,error=f'{type(exc).__name__}: {exc}',retained_previous=True))
             print(json.dumps(errors[-1],ensure_ascii=False),flush=True)
+    identity_links=[]
+    if official_ok:
+        fixture_path=root/f'{CODE}_fixtures.parquet'
+        old_fixtures=pd.read_parquet(fixture_path) if fixture_path.exists() else pd.DataFrame()
+        official=[r for r in records if r.get('source_kind')=='official_liga_nacional']
+        other=[r for r in records if r.get('source_kind')!='official_liga_nacional']
+        linked,identity_links=reconcile_official_ids(official+fixtures,[previous,old_fixtures])
+        records=other+linked[:len(official)];fixtures=linked[len(official):]
     combined=merge_results(previous,records)
     # Prepare validated outputs before replacing persisted files.
     frame=None
@@ -190,6 +229,7 @@ def collect(first=2022,last=None):
     report=dict(captured_at_utc=now.isoformat(),league=CODE,games=len(combined),seasons=combined.groupby('sezon').size().to_dict(),
                 teams=int(pd.concat([combined.ev,combined.dep]).nunique()),counts=counts,fixtures=len(fixtures),errors=errors,sources=sources,
                 official_current_refresh=official_ok,timezone=ZONE,rejected_results=rejected,
+                identity_links=identity_links,
                 limitations='Publisher historical finals have day precision and unknown historical availability. Official old-season handler returned no history. Current positive scores require a separate Finalizado match page and prior local day. No other Argentine divisions or cups. Full season coverage and venue neutrality not certified.')
     evidence=Path('docs/kanit/competitions');evidence.mkdir(parents=True,exist_ok=True)
     (evidence/f'{CODE}_collection.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf8')

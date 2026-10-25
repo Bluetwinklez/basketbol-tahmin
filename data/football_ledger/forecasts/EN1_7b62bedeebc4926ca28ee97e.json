@@ -1,0 +1,65 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+  "fixture": {
+    "event_id": "EN1_7b62bedeebc4926ca28ee97e",
+    "league": "EN1",
+    "season": "2026-27",
+    "date": "2026-10-31",
+    "home": "afc bournemouth",
+    "away": "leeds united fc",
+    "home_name": "AFC Bournemouth",
+    "away_name": "Leeds United FC",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/en.1.json",
+    "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "EN1",
+    "home": "afc bournemouth",
+    "away": "leeds united fc",
+    "expected_home_goals": 1.4264927764094915,
+    "expected_away_goals": 1.090028716066894,
+    "probabilities": {
+      "home": 0.44736893539056366,
+      "draw": 0.2643909066001886,
+      "away": 0.2882401580092479
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.7160761480854337,
+      "2.5": 0.4604178495363321,
+      "3.5": 0.2459613151934127
+    },
+    "both_teams_score": 0.5043834287258643,
+    "total_goals_80": [
+      1,
+      5
+    ],
+    "training_cutoff_exclusive": "2026-10-25",
+    "training_games": 1100,
+    "prior_team_games": {
+      "afc bournemouth": 110,
+      "leeds united fc": 43
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "653f7bd855fde1275fd8db8739bfb6edd2be28d37870e466697f9df28d16186f",
+  "payload_sha256": "9958623ebcef011d4fce9bcea3d73863f9617329c727effb4cc83cc0f1597a61"
+}

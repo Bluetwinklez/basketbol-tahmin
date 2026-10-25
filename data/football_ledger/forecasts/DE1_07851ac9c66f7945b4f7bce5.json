@@ -1,0 +1,65 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+  "fixture": {
+    "event_id": "DE1_07851ac9c66f7945b4f7bce5",
+    "league": "DE1",
+    "season": "2026-27",
+    "date": "2026-10-31",
+    "home": "bayer 04 leverkusen",
+    "away": "vfb stuttgart",
+    "home_name": "Bayer 04 Leverkusen",
+    "away_name": "VfB Stuttgart",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/de.1.json",
+    "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "DE1",
+    "home": "bayer 04 leverkusen",
+    "away": "vfb stuttgart",
+    "expected_home_goals": 2.3294190092512843,
+    "expected_away_goals": 1.473640023346151,
+    "probabilities": {
+      "home": 0.5670128031880955,
+      "draw": 0.19581071634060832,
+      "away": 0.23717648047129622
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      2,
+      1
+    ],
+    "over": {
+      "1.5": 0.8928800473057882,
+      "2.5": 0.7315970500711035,
+      "3.5": 0.5271407969251856
+    },
+    "both_teams_score": 0.6958600796195381,
+    "total_goals_80": [
+      1,
+      6
+    ],
+    "training_cutoff_exclusive": "2026-10-25",
+    "training_games": 882,
+    "prior_team_games": {
+      "bayer 04 leverkusen": 98,
+      "vfb stuttgart": 98
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "653f7bd855fde1275fd8db8739bfb6edd2be28d37870e466697f9df28d16186f",
+  "payload_sha256": "c895b60f64897e2dc6827769e497bc4e06b7116448699c4c9be8ff1f933b3c78"
+}

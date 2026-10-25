@@ -1,0 +1,65 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+  "fixture": {
+    "event_id": "ES1_0a641e6e34c25bb38b7d5abd",
+    "league": "ES1",
+    "season": "2026-27",
+    "date": "2026-11-01",
+    "home": "getafe cf",
+    "away": "sevilla fc",
+    "home_name": "Getafe CF",
+    "away_name": "Sevilla FC",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/es.1.json",
+    "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "ES1",
+    "home": "getafe cf",
+    "away": "sevilla fc",
+    "expected_home_goals": 1.1928136031938457,
+    "expected_away_goals": 0.9931412163024222,
+    "probabilities": {
+      "home": 0.40504758128363166,
+      "draw": 0.29050406275967705,
+      "away": 0.30444835595669134
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      1,
+      0
+    ],
+    "over": {
+      "1.5": 0.6419930176705307,
+      "2.5": 0.3735177701286303,
+      "3.5": 0.17789284970207356
+    },
+    "both_teams_score": 0.43859256023317345,
+    "total_goals_80": [
+      0,
+      4
+    ],
+    "training_cutoff_exclusive": "2026-10-25",
+    "training_games": 1100,
+    "prior_team_games": {
+      "getafe cf": 110,
+      "sevilla fc": 111
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "653f7bd855fde1275fd8db8739bfb6edd2be28d37870e466697f9df28d16186f",
+  "payload_sha256": "be2b95b6af8e54fb74474f1e4277557bf3cee756fb2c1b13012f3937a7527f85"
+}

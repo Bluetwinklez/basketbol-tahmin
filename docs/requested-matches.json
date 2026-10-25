@@ -617,6 +617,101 @@
       "observations": [],
       "verified_event_id": "E2026_70",
       "existing_prediction_location": "docs/kanit/prospective and docs/kanit/pregame_verified; preserve originals"
+    },
+    {
+      "request_id": "request-035",
+      "sport": "basketball",
+      "competition_claim": "ECW",
+      "home_display": "Helsinki Basketball Academy",
+      "away_display": "BK Zabiny Brno",
+      "evidence": "Existing four-match governance and timestamped reconstruction reports; original screenshot not retrieved",
+      "verified_event_id": "ECW_F135401",
+      "fixture_start_utc": "2026-10-22T15:30:00+00:00",
+      "identity_status": "existing_official_fixture_mapping",
+      "first_prediction": null,
+      "observations": [
+        {
+          "kind": "retrospective_reconstruction",
+          "path": "docs/kanit/competitions/2026-10-22_reconstruction.json",
+          "prospective_eligible": false
+        }
+      ]
+    },
+    {
+      "request_id": "request-036",
+      "sport": "basketball",
+      "competition_claim": "VTB",
+      "home_display": "UNICS Kazan",
+      "away_display": "MBA Moscow",
+      "evidence": "Existing four-match governance and timestamped reconstruction reports; original screenshot not retrieved",
+      "verified_event_id": null,
+      "fixture_start_utc": "2026-10-22T16:00:00+00:00",
+      "identity_status": "existing_official_fixture_mapping",
+      "first_prediction": null,
+      "observations": [
+        {
+          "kind": "retrospective_reconstruction",
+          "path": "docs/kanit/competitions/2026-10-22_reconstruction.json",
+          "prospective_eligible": false
+        }
+      ]
+    },
+    {
+      "request_id": "request-037",
+      "sport": "basketball",
+      "competition_claim": "FEC",
+      "home_display": "KK Parnu",
+      "away_display": "BC Vienna",
+      "evidence": "Existing four-match governance and timestamped reconstruction reports; original screenshot not retrieved",
+      "verified_event_id": "FEC_F135760",
+      "fixture_start_utc": "2026-10-22T16:00:00+00:00",
+      "identity_status": "existing_official_fixture_mapping",
+      "first_prediction": null,
+      "observations": [
+        {
+          "kind": "retrospective_reconstruction",
+          "path": "docs/kanit/competitions/2026-10-22_reconstruction.json",
+          "prospective_eligible": false
+        }
+      ]
+    },
+    {
+      "request_id": "request-038",
+      "sport": "basketball",
+      "competition_claim": "ECW",
+      "home_display": "ZKK Celje",
+      "away_display": "KP Brno",
+      "evidence": "Existing four-match governance and timestamped reconstruction reports; original screenshot not retrieved",
+      "verified_event_id": "ECW_F135385",
+      "fixture_start_utc": "2026-10-22T16:00:00+00:00",
+      "identity_status": "existing_official_fixture_mapping",
+      "first_prediction": null,
+      "observations": [
+        {
+          "kind": "retrospective_reconstruction",
+          "path": "docs/kanit/competitions/2026-10-22_reconstruction.json",
+          "prospective_eligible": false
+        }
+      ]
+    },
+    {
+      "request_id": "request-039",
+      "sport": "basketball",
+      "competition_claim": "ECW",
+      "home_display": "Montana 2003",
+      "away_display": "Uni Girona CB",
+      "evidence": "Existing four-match governance and timestamped reconstruction reports; original screenshot not retrieved",
+      "verified_event_id": "ECW_F135362",
+      "fixture_start_utc": "2026-10-22T16:30:00+00:00",
+      "identity_status": "existing_official_fixture_mapping",
+      "first_prediction": null,
+      "observations": [
+        {
+          "kind": "retrospective_reconstruction",
+          "path": "docs/kanit/competitions/2026-10-22_reconstruction.json",
+          "prospective_eligible": false
+        }
+      ]
     }
   ],
   "limitations": [

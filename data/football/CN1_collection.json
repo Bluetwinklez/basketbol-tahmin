@@ -1,56 +1,9 @@
 {
-  "checked_at_utc": "2026-10-24T21:10:50.047695+00:00",
+  "checked_at_utc": "2026-10-25T12:01:26.163716+00:00",
   "revision": "f51b2dcf5e0fab9f0abd5206ab8c24a413e67277",
   "license": "CC0-1.0",
-  "files": [
-    {
-      "season": "2019",
-      "rows": 240,
-      "finals": 240,
-      "source_sha256": "7f9ad7e850c414d42731d09e49be56d18a718d53c9bf25b3284ff28e7d90aeab",
-      "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2019/cn.1.json"
-    },
-    {
-      "season": "2020",
-      "rows": 160,
-      "finals": 160,
-      "source_sha256": "690ec517d10eb5d721bc4743b0eb216abc5ff4fac1d17d6a0f61ab2360017bd6",
-      "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2020/cn.1.json"
-    },
-    {
-      "season": "2025",
-      "rows": 240,
-      "finals": 79,
-      "source_sha256": "c39888f9bf0e015679c9c0d03d88c435d2ea038060a33766f598d8009e8529c6",
-      "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2025/cn.1.json"
-    }
-  ],
+  "files": [],
   "errors": [
-    {
-      "league": "CN1",
-      "season": "2018",
-      "error": "Source file unavailable; historical data is not current coverage"
-    },
-    {
-      "league": "CN1",
-      "season": "2021",
-      "error": "Source file unavailable; historical data is not current coverage"
-    },
-    {
-      "league": "CN1",
-      "season": "2022",
-      "error": "Source file unavailable; historical data is not current coverage"
-    },
-    {
-      "league": "CN1",
-      "season": "2023",
-      "error": "Source file unavailable; historical data is not current coverage"
-    },
-    {
-      "league": "CN1",
-      "season": "2024",
-      "error": "Source file unavailable; historical data is not current coverage"
-    },
     {
       "league": "CN1",
       "season": "2026",

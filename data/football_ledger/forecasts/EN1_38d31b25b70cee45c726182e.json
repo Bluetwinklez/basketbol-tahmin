@@ -1,0 +1,65 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+  "fixture": {
+    "event_id": "EN1_38d31b25b70cee45c726182e",
+    "league": "EN1",
+    "season": "2026-27",
+    "date": "2026-10-31",
+    "home": "manchester city fc",
+    "away": "brighton & hove albion fc",
+    "home_name": "Manchester City FC",
+    "away_name": "Brighton & Hove Albion FC",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/en.1.json",
+    "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "EN1",
+    "home": "manchester city fc",
+    "away": "brighton & hove albion fc",
+    "expected_home_goals": 2.0300337772749435,
+    "expected_away_goals": 1.3163288479325934,
+    "probabilities": {
+      "home": 0.5395271537982426,
+      "draw": 0.2143049836071166,
+      "away": 0.24616786259464088
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      2,
+      1
+    ],
+    "over": {
+      "1.5": 0.8469550037993913,
+      "2.5": 0.6497993735596163,
+      "3.5": 0.42988129609840986
+    },
+    "both_teams_score": 0.6357633177261989,
+    "total_goals_80": [
+      1,
+      6
+    ],
+    "training_cutoff_exclusive": "2026-10-25",
+    "training_games": 1100,
+    "prior_team_games": {
+      "manchester city fc": 110,
+      "brighton & hove albion fc": 110
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "653f7bd855fde1275fd8db8739bfb6edd2be28d37870e466697f9df28d16186f",
+  "payload_sha256": "7105556379650a5195ce649875b3322c6c22ab65d7b5a6a9bc2e0f39e1ca398c"
+}

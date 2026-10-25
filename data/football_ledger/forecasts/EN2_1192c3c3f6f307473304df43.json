@@ -1,0 +1,65 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+  "fixture": {
+    "event_id": "EN2_1192c3c3f6f307473304df43",
+    "league": "EN2",
+    "season": "2026-27",
+    "date": "2026-10-31",
+    "home": "burnley fc",
+    "away": "portsmouth fc",
+    "home_name": "Burnley FC",
+    "away_name": "Portsmouth FC",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/en.2.json",
+    "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "EN2",
+    "home": "burnley fc",
+    "away": "portsmouth fc",
+    "expected_home_goals": 1.5724192966401669,
+    "expected_away_goals": 1.1339713299069074,
+    "probabilities": {
+      "home": 0.4747787129996533,
+      "draw": 0.25069969615833004,
+      "away": 0.2745215908420167
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.7524968823336856,
+      "2.5": 0.5079396839064938,
+      "3.5": 0.28731724741383896
+    },
+    "both_teams_score": 0.5374820003533697,
+    "total_goals_80": [
+      1,
+      5
+    ],
+    "training_cutoff_exclusive": "2026-10-25",
+    "training_games": 1611,
+    "prior_team_games": {
+      "burnley fc": 54,
+      "portsmouth fc": 99
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "653f7bd855fde1275fd8db8739bfb6edd2be28d37870e466697f9df28d16186f",
+  "payload_sha256": "e4b94da3c8ad64f47ca29507f255a1349ede9b9904811003a07f652012608ca3"
+}
