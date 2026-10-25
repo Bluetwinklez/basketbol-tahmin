@@ -10,7 +10,7 @@ The calendar-year importer adds 2,716 community CC0 finals from eight Série B s
 
 ## Current limitations
 
-No 2026 Série B source file is available in the selected CC0 repositories. CRB–Londrina is therefore blocked for current recommendations: historical data exists but is stale. The eight other screenshot pairings have no licensed competition archive integrated yet. The audit lists them explicitly as unsupported; no made-up score or probability is substituted. No live red-card or in-play goal model was added.
+No 2026 Série B source file is available in the selected CC0 repositories. CRB–Londrina is therefore blocked for current recommendations: historical data exists but is stale. Some other screenshot competitions now have licensed historical archives (see regional-football.md), but their active seasons and exact fixtures remain unverified. CO2/USLC/USL1 still have no integrated competition archive. The audit lists them explicitly as unsupported; no made-up score or probability is substituted. No live red-card or in-play goal model was added.
 
 The daily refresh uses current calendar years only, while weekly backfill refreshes historical years. A missing active source is surfaced as a partial refresh, retains prior archives and never replaces them with empty data. The calendar report is separate from the European collector's report.
 

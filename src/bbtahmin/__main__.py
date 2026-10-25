@@ -103,7 +103,7 @@ def main():
     travel=sub.add_parser('seyahat-baglam',help='Observed venue-to-venue schedule proxies; no inferred actual itinerary')
     travel.add_argument('--event-id',required=True);travel.add_argument('--asof',required=True)
     football=sub.add_parser('futbol',help='Separate football data, goal forecasts and chronological evaluation')
-    football.add_argument('action',choices=['collect','daily','predict','evaluate','compare'])
+    football.add_argument('action',choices=['collect','daily','predict','evaluate','compare','coverage'])
     football.add_argument('--model',choices=['baseline','opponent','opponent_dc','ensemble'],default='baseline')
     football.add_argument('--first',type=int,default=2010)
     football.add_argument('--last',type=int)
@@ -120,7 +120,10 @@ def main():
         from pathlib import Path
         from .football.data import collect,load,write_json
         from .football.model import GoalModel,evaluate
-        if args.action=='collect':
+        if args.action=='coverage':
+            from .football.coverage import league_coverage
+            result=league_coverage(load())
+        elif args.action=='collect':
             result=collect(args.first,args.last,current_only=args.current_only)
         elif args.action=='daily':
             from .football.daily import run as football_run
