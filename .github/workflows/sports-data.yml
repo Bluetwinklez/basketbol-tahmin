@@ -27,8 +27,37 @@ jobs:
         id: collect
         continue-on-error: true
         run: python scripts/refresh_sports.py ${{ github.event.schedule == '45 4 * * 0' && '--backfill' || '' }}
-      - name: Preserve data and earliest forecasts even on partial failure
+      - name: Independently confirm football fixtures
+        id: fixtures
         if: always() && steps.collect.outcome != 'skipped'
+        continue-on-error: true
+        run: python scripts/confirm_football_fixtures.py --lookback ${{ github.event.schedule == '45 4 * * 0' && '40' || '2' }}
+      - name: Inspect separately licensed football sources
+        id: licensed_sources
+        if: always() && steps.collect.outcome != 'skipped'
+        continue-on-error: true
+        run: python scripts/inspect_wikipedia_football.py
+      - name: Collect separately licensed football supplement
+        id: licensed
+        if: always() && steps.collect.outcome != 'skipped'
+        continue-on-error: true
+        run: python scripts/collect_licensed_football.py
+      - name: Freeze and settle paired forward candidates
+        id: shadow
+        if: always() && steps.collect.outcome != 'skipped'
+        continue-on-error: true
+        run: python scripts/run_shadow_cycle.py
+      - name: Freeze football forecasts after independent checks and supplements
+        id: football
+        if: always() && steps.collect.outcome != 'skipped'
+        continue-on-error: true
+        run: python -m bbtahmin futbol daily --output data/football_ledger
+      - name: Verify original forecasts
+        id: originals
+        if: always() && steps.collect.outcome != 'skipped'
+        run: python scripts/pin_improvement_baseline.py --verify-only
+      - name: Preserve data and earliest forecasts even on partial failure
+        if: always() && steps.collect.outcome != 'skipped' && steps.originals.outcome == 'success' && steps.shadow.outcome == 'success' && steps.football.outcome == 'success'
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
@@ -44,9 +73,14 @@ jobs:
           name: sports-refresh-evidence
           path: |
             data/refresh/
+            data/improvement_shadow/latest.json
+            data/football_fixture_checks/latest.json
+            data/football/licensed_collection.json
+            data/football/licensed_source_refresh.json
+            data/improvement_shadow/experiments/
             docs/kanit/asia_data/
             docs/kanit/competitions/*_collection.json
       - name: Surface incomplete source refresh
-        if: steps.collect.outcome == 'failure'
+        if: steps.collect.outcome == 'failure' || steps.fixtures.outcome == 'failure' || steps.licensed_sources.outcome == 'failure' || steps.licensed.outcome == 'failure' || steps.shadow.outcome == 'failure' || steps.football.outcome == 'failure'
         run: exit 1
 

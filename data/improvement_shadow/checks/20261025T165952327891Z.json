@@ -1,0 +1,353 @@
+{
+  "checked_at_utc": "2026-10-25T16:59:52.320877+00:00",
+  "experiment_id": "756cfe7cebbd46381df8e4c94ce0867b59fd864092b0cb6e81c8e4f163233a3f",
+  "new_pairs": 97,
+  "reused_pairs": 0,
+  "skipped": [
+    {
+      "league": "EN1",
+      "event_id": "EN1_47d0257d5e990f384b6958e1",
+      "reason": "chelsea fc: latest completed history is 37 days old; chelsea fc: 2 unresolved past fixtures; refresh/review required; manchester united fc: latest completed history is 35 days old; manchester united fc: 2 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "EN1",
+      "event_id": "EN1_38d31b25b70cee45c726182e",
+      "reason": "manchester city fc: latest completed history is 35 days old; manchester city fc: 2 unresolved past fixtures; refresh/review required; brighton & hove albion fc: latest completed history is 36 days old; brighton & hove albion fc: 2 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "EN1",
+      "event_id": "EN1_7b62bedeebc4926ca28ee97e",
+      "reason": "afc bournemouth: latest completed history is 35 days old; afc bournemouth: 2 unresolved past fixtures; refresh/review required; leeds united fc: latest completed history is 35 days old; leeds united fc: 2 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "EN1",
+      "event_id": "EN1_921a9c9d9b2fee0f6fbc96e0",
+      "reason": "coventry city fc: latest completed history is 36 days old; coventry city fc: 2 unresolved past fixtures; refresh/review required; sunderland afc: latest completed history is 35 days old; sunderland afc: 2 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "EN1",
+      "event_id": "EN1_ae272eaaa96f5fa7bd4afe43",
+      "reason": "tottenham hotspur fc: latest completed history is 36 days old; tottenham hotspur fc: 2 unresolved past fixtures; refresh/review required; crystal palace fc: latest completed history is 35 days old; crystal palace fc: 2 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "EN1",
+      "event_id": "EN1_00347c7e0feea1df3a1fe3b2",
+      "reason": "aston villa fc: latest completed history is 36 days old; aston villa fc: 2 unresolved past fixtures; refresh/review required; fulham fc: latest completed history is 35 days old; fulham fc: 2 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "EN1",
+      "event_id": "EN1_0c74263399ca5e42a468f6e4",
+      "reason": "liverpool fc: latest completed history is 35 days old; liverpool fc: 2 unresolved past fixtures; refresh/review required; arsenal fc: latest completed history is 36 days old; arsenal fc: 2 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "EN2",
+      "event_id": "EN2_a93610094a0000e17269f098",
+      "reason": "sheffield united fc: latest completed history is 36 days old; sheffield united fc: 3 unresolved past fixtures; refresh/review required; wrexham afc: latest completed history is 36 days old; wrexham afc: 3 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "EN2",
+      "event_id": "EN2_d7903f0a89ed66b7e5e44781",
+      "reason": "stoke city fc: latest completed history is 36 days old; stoke city fc: 3 unresolved past fixtures; refresh/review required; preston north end fc: latest completed history is 36 days old; preston north end fc: 3 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "EN2",
+      "event_id": "EN2_e20b416c1fd14fb387d8f728",
+      "reason": "norwich city fc: latest completed history is 35 days old; norwich city fc: 3 unresolved past fixtures; refresh/review required; watford fc: latest completed history is 37 days old; watford fc: 3 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "EN2",
+      "event_id": "EN2_87f5fcfc4d3f9b5bdd4f4747",
+      "reason": "lincoln city fc: latest completed history is 36 days old; lincoln city fc: 3 unresolved past fixtures; refresh/review required; birmingham city fc: latest completed history is 36 days old; birmingham city fc: 3 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "EN2",
+      "event_id": "EN2_d4eb4e797be9ce54ec2da5cd",
+      "reason": "wolverhampton wanderers fc: latest completed history is 35 days old; wolverhampton wanderers fc: 4 unresolved past fixtures; refresh/review required; cardiff city fc: latest completed history is 36 days old; cardiff city fc: 3 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "EN2",
+      "event_id": "EN2_60c3ee9c6dec64c5392cbb7f",
+      "reason": "west ham united fc: latest completed history is 36 days old; west ham united fc: 3 unresolved past fixtures; refresh/review required; west bromwich albion fc: latest completed history is 35 days old; west bromwich albion fc: 3 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "EN2",
+      "event_id": "EN2_b82ad6f40143b1eca2eddc87",
+      "reason": "swansea city afc: latest completed history is 36 days old; swansea city afc: 3 unresolved past fixtures; refresh/review required; blackburn rovers fc: latest completed history is 36 days old; blackburn rovers fc: 3 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "EN2",
+      "event_id": "EN2_1192c3c3f6f307473304df43",
+      "reason": "burnley fc: latest completed history is 36 days old; burnley fc: 3 unresolved past fixtures; refresh/review required; portsmouth fc: latest completed history is 36 days old; portsmouth fc: 4 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "EN2",
+      "event_id": "EN2_59e393fe09f074c9a6baefb0",
+      "reason": "millwall fc: latest completed history is 36 days old; millwall fc: 3 unresolved past fixtures; refresh/review required; derby county fc: latest completed history is 36 days old; derby county fc: 3 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "EN2",
+      "event_id": "EN2_a393bd88f0e2f56c145bc3c4",
+      "reason": "southampton fc: latest completed history is 36 days old; southampton fc: 3 unresolved past fixtures; refresh/review required; queens park rangers fc: latest completed history is 36 days old; queens park rangers fc: 3 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "DE1",
+      "event_id": "DE1_de822da6643d147151b1b57f",
+      "reason": "sv 07 elversberg: latest completed history is 35 days old; sv 07 elversberg: 2 unresolved past fixtures; refresh/review required; 1. fsv mainz 05: latest completed history is 36 days old; 1. fsv mainz 05: 2 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "DE1",
+      "event_id": "DE1_e6430434f8f97d05f4bbc6f7",
+      "reason": "borussia monchengladbach: latest completed history is 36 days old; borussia monchengladbach: 3 unresolved past fixtures; refresh/review required; sc paderborn 07: latest completed history is 35 days old; sc paderborn 07: 2 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "DE1",
+      "event_id": "DE1_d1bdef1ce224c3a546340975",
+      "reason": "fc schalke 04: latest completed history is 35 days old; fc schalke 04: 2 unresolved past fixtures; refresh/review required; rb leipzig: latest completed history is 35 days old; rb leipzig: 2 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "DE1",
+      "event_id": "DE1_8805585488aa85aaf8b86684",
+      "reason": "fc augsburg: latest completed history is 36 days old; fc augsburg: 2 unresolved past fixtures; refresh/review required; sc freiburg: latest completed history is 36 days old; sc freiburg: 2 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "DE1",
+      "event_id": "DE1_0595a47b764241e448dc42ff",
+      "reason": "sv werder bremen: latest completed history is 36 days old; sv werder bremen: 2 unresolved past fixtures; refresh/review required; tsg 1899 hoffenheim: latest completed history is 35 days old; tsg 1899 hoffenheim: 2 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "DE1",
+      "event_id": "DE1_07851ac9c66f7945b4f7bce5",
+      "reason": "bayer 04 leverkusen: latest completed history is 35 days old; bayer 04 leverkusen: 2 unresolved past fixtures; refresh/review required; vfb stuttgart: latest completed history is 36 days old; vfb stuttgart: 3 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "DE1",
+      "event_id": "DE1_34198c9d947335555e729cc3",
+      "reason": "fc bayern munchen: latest completed history is 37 days old; fc bayern munchen: 2 unresolved past fixtures; refresh/review required; borussia dortmund: latest completed history is 36 days old; borussia dortmund: 2 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "DE1",
+      "event_id": "DE1_650fbf325054a4266c7ee236",
+      "reason": "1. fc union berlin: latest completed history is 37 days old; 1. fc union berlin: 2 unresolved past fixtures; refresh/review required; 1. fc koln: latest completed history is 36 days old; 1. fc koln: 2 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "DE1",
+      "event_id": "DE1_c5a27426cab5647c3c2f8903",
+      "reason": "eintracht frankfurt: latest completed history is 36 days old; eintracht frankfurt: 2 unresolved past fixtures; refresh/review required; hamburger sv: latest completed history is 36 days old; hamburger sv: 2 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "ES1",
+      "event_id": "ES1_3292ce876d8bf7eb4c88eff7",
+      "reason": "fc barcelona: latest completed history is 36 days old; fc barcelona: 2 unresolved past fixtures; refresh/review required; real madrid cf: latest completed history is 35 days old; real madrid cf: 2 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "ES1",
+      "event_id": "ES1_2b3157e20da7a29bfa0330e2",
+      "reason": "real sociedad de futbol: latest completed history is 35 days old; real sociedad de futbol: 2 unresolved past fixtures; refresh/review required; levante ud: latest completed history is 35 days old; levante ud: 3 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "FR1",
+      "event_id": "FR1_c1f514b933fce2affdb1ba6b",
+      "reason": "le havre ac: latest completed history is 36 days old; le havre ac: 2 unresolved past fixtures; refresh/review required; paris saint-germain fc: latest completed history is 35 days old; paris saint-germain fc: 2 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "FR1",
+      "event_id": "FR1_8ead32901fbedaa810fbc68c",
+      "reason": "lille osc: latest completed history is 35 days old; lille osc: 2 unresolved past fixtures; refresh/review required; racing club de lens: latest completed history is 37 days old; racing club de lens: 2 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "FR1",
+      "event_id": "FR1_b28553ea7df84dc2af19c277",
+      "reason": "olympique lyonnais: latest completed history is 36 days old; olympique lyonnais: 2 unresolved past fixtures; refresh/review required; angers sco: latest completed history is 36 days old; angers sco: 2 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "FR1",
+      "event_id": "FR1_a876ad867144eec387a74449",
+      "reason": "rc strasbourg alsace: latest completed history is 36 days old; rc strasbourg alsace: 2 unresolved past fixtures; refresh/review required; aj auxerre: latest completed history is 35 days old; aj auxerre: 2 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "FR1",
+      "event_id": "FR1_a999e64350d69e7b8e57d39a",
+      "reason": "paris fc: latest completed history is 36 days old; paris fc: 2 unresolved past fixtures; refresh/review required; as monaco fc: latest completed history is 37 days old; as monaco fc: 2 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "IT1",
+      "event_id": "IT1_28a67aa93478007a8e062227",
+      "reason": "us lecce: latest completed history is 35 days old; us lecce: 2 unresolved past fixtures; refresh/review required; juventus fc: latest completed history is 35 days old; juventus fc: 2 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "IT1",
+      "event_id": "IT1_cded7534c5f1b5973e5bda2b",
+      "reason": "udinese calcio: latest completed history is 36 days old; udinese calcio: 2 unresolved past fixtures; refresh/review required; ac milan: latest completed history is 35 days old; ac milan: 2 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "IT1",
+      "event_id": "IT1_0f4bcfecd57bfd6ccac7ac06",
+      "reason": "us sassuolo calcio: latest completed history is 37 days old; us sassuolo calcio: 2 unresolved past fixtures; refresh/review required; ss lazio: latest completed history is 36 days old; ss lazio: 2 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "IT1",
+      "event_id": "IT1_b8a8a056b5bc8ac5bb797cad",
+      "reason": "as roma: latest completed history is 36 days old; as roma: 2 unresolved past fixtures; refresh/review required; cagliari calcio: latest completed history is 36 days old; cagliari calcio: 2 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "IT1",
+      "event_id": "IT1_05c5434c668aaaeb1b8eb2b2",
+      "reason": "ac milan: latest completed history is 35 days old; ac milan: 2 unresolved past fixtures; refresh/review required; bologna fc 1909: latest completed history is 36 days old; bologna fc 1909: 2 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "IT1",
+      "event_id": "IT1_0890575cabb3ea2549451f42",
+      "reason": "venezia fc: latest completed history is 36 days old; venezia fc: 2 unresolved past fixtures; refresh/review required; fc internazionale milano: latest completed history is 36 days old; fc internazionale milano: 2 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "IT1",
+      "event_id": "IT1_9a8adcb14c7f3ffb890c316a",
+      "reason": "parma calcio 1913: latest completed history is 35 days old; parma calcio 1913: 2 unresolved past fixtures; refresh/review required; udinese calcio: latest completed history is 36 days old; udinese calcio: 2 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "IT1",
+      "event_id": "IT1_dea6b9bb9a8d854eb9b26956",
+      "reason": "genoa cfc: latest completed history is 35 days old; genoa cfc: 2 unresolved past fixtures; refresh/review required; juventus fc: latest completed history is 35 days old; juventus fc: 2 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "IT1",
+      "event_id": "IT1_ec7e5b5ae5bdad2d796d6883",
+      "reason": "frosinone calcio: latest completed history is 35 days old; frosinone calcio: 2 unresolved past fixtures; refresh/review required; us lecce: latest completed history is 35 days old; us lecce: 2 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "IT1",
+      "event_id": "IT1_cb8a131520c209481023300e",
+      "reason": "acf fiorentina: latest completed history is 35 days old; acf fiorentina: 2 unresolved past fixtures; refresh/review required; atalanta bc: latest completed history is 35 days old; atalanta bc: 2 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "IT1",
+      "event_id": "IT1_e7f83e4c4112686a786fb493",
+      "reason": "udinese calcio: latest completed history is 36 days old; udinese calcio: 2 unresolved past fixtures; refresh/review required; as roma: latest completed history is 36 days old; as roma: 2 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "IT1",
+      "event_id": "IT1_2e60f6868ae3dfa6596762ae",
+      "reason": "ac milan: latest completed history is 35 days old; ac milan: 2 unresolved past fixtures; refresh/review required; fc internazionale milano: latest completed history is 36 days old; fc internazionale milano: 2 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "IT1",
+      "event_id": "IT1_5856e096a22605913930fe86",
+      "reason": "como 1907: latest completed history is 35 days old; como 1907: 2 unresolved past fixtures; refresh/review required; venezia fc: latest completed history is 36 days old; venezia fc: 2 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "IT1",
+      "event_id": "IT1_42b94d1ef1019102b346ac3e",
+      "reason": "ss lazio: latest completed history is 36 days old; ss lazio: 2 unresolved past fixtures; refresh/review required; cagliari calcio: latest completed history is 36 days old; cagliari calcio: 2 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "NL1",
+      "event_id": "NL1_0f4a8bcc6619917e37add746",
+      "reason": "az: latest completed history is 35 days old; az: 2 unresolved past fixtures; refresh/review required; fc twente '65: latest completed history is 35 days old; fc twente '65: 2 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "NL1",
+      "event_id": "NL1_161376e191ce54a9e35049c3",
+      "reason": "feyenoord rotterdam: latest completed history is 35 days old; feyenoord rotterdam: 2 unresolved past fixtures; refresh/review required; fortuna sittard: latest completed history is 36 days old; fortuna sittard: 2 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "NL1",
+      "event_id": "NL1_ad94cc44c0ac0ec6fc645a15",
+      "reason": "sc heerenveen: latest completed history is 36 days old; sc heerenveen: 2 unresolved past fixtures; refresh/review required; nec: latest completed history is 35 days old; nec: 2 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "NL1",
+      "event_id": "NL1_b88c0b280cd21ebe9e913499",
+      "reason": "psv: latest completed history is 35 days old; psv: 2 unresolved past fixtures; refresh/review required; willem ii tilburg: latest completed history is 36 days old; willem ii tilburg: 2 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "NL1",
+      "event_id": "NL1_43f338326ad680b40fc05a85",
+      "reason": "sc cambuur-leeuwarden: latest completed history is 36 days old; sc cambuur-leeuwarden: 2 unresolved past fixtures; refresh/review required; go ahead eagles: latest completed history is 35 days old; go ahead eagles: 3 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "NL1",
+      "event_id": "NL1_21f4c8aa937a5a8f6aa5f929",
+      "reason": "afc ajax: latest completed history is 36 days old; afc ajax: 2 unresolved past fixtures; refresh/review required; az: latest completed history is 35 days old; az: 2 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "NL1",
+      "event_id": "NL1_cf22325d49b4921f4f0bdb9a",
+      "reason": "pec zwolle: latest completed history is 37 days old; pec zwolle: 2 unresolved past fixtures; refresh/review required; ado den haag: latest completed history is 36 days old; ado den haag: 2 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "NL1",
+      "event_id": "NL1_70ac5bdcc010ccf8209e322b",
+      "reason": "sbv excelsior: latest completed history is 36 days old; sbv excelsior: 2 unresolved past fixtures; refresh/review required; fc twente '65: latest completed history is 35 days old; fc twente '65: 2 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "NL1",
+      "event_id": "NL1_7ce7ff482175dc7e463aeab2",
+      "reason": "fc groningen: latest completed history is 37 days old; fc groningen: 2 unresolved past fixtures; refresh/review required; sparta rotterdam: latest completed history is 36 days old; sparta rotterdam: 2 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "PT1",
+      "event_id": "PT1_46dc30b0445b2364af01d7d7",
+      "reason": "cd nacional: latest completed history is 36 days old; cd nacional: 1 unresolved past fixtures; refresh/review required; sporting clube de braga: latest completed history is 35 days old; sporting clube de braga: 2 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "PT1",
+      "event_id": "PT1_ac078016160ef1b7e5ed8988",
+      "reason": "casa pia ac: latest completed history is 35 days old; casa pia ac: 1 unresolved past fixtures; refresh/review required; sporting clube de portugal: latest completed history is 36 days old; sporting clube de portugal: 1 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "PT1",
+      "event_id": "PT1_9a7628dc5235a1ea10dad2ea",
+      "reason": "moreirense fc: latest completed history is 35 days old; moreirense fc: 1 unresolved past fixtures; refresh/review required; cf estrela da amadora: latest completed history is 35 days old; cf estrela da amadora: 1 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "PT1",
+      "event_id": "PT1_f081df345359be3890a57f00",
+      "reason": "fc porto: latest completed history is 35 days old; fc porto: 1 unresolved past fixtures; refresh/review required; gd estoril praia: latest completed history is 35 days old; gd estoril praia: 1 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "PT1",
+      "event_id": "PT1_298bafdc737e51205a843d53",
+      "reason": "fc arouca: latest completed history is 36 days old; fc arouca: 1 unresolved past fixtures; refresh/review required; cd nacional: latest completed history is 36 days old; cd nacional: 1 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "TR1",
+      "event_id": "TR1_80f7e0e888b95520aee60527",
+      "reason": "istanbul basaksehir: latest completed history is 51 days old; istanbul basaksehir: 4 unresolved past fixtures; refresh/review required; samsunspor: latest completed history is 49 days old; samsunspor: 4 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "TR1",
+      "event_id": "TR1_15f4dd4d63910ac64eef3cfc",
+      "reason": "trabzonspor: latest completed history is 49 days old; trabzonspor: 4 unresolved past fixtures; refresh/review required; gaziantep fk: latest completed history is 48 days old; gaziantep fk: 4 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "TR1",
+      "event_id": "TR1_9502691714972a5e45face4d",
+      "reason": "kasimpasa: latest completed history is 49 days old; kasimpasa: 4 unresolved past fixtures; refresh/review required; besiktas: latest completed history is 50 days old; besiktas: 4 unresolved past fixtures; refresh/review required"
+    }
+  ],
+  "experiments": [
+    {
+      "experiment_id": "51ffcc22a4b196c2b6a46b1ccaff7986d8b85dec47496f7c5da070e8679a9df6",
+      "spec": "paired-forward-report-v1",
+      "checked_at_utc": "2026-10-25T16:59:51.837829+00:00",
+      "pending": 77,
+      "settled_games": 0,
+      "rejected": [],
+      "leagues": [],
+      "rows": [],
+      "production_default_changed": false
+    },
+    {
+      "experiment_id": "756cfe7cebbd46381df8e4c94ce0867b59fd864092b0cb6e81c8e4f163233a3f",
+      "spec": "paired-forward-report-v1",
+      "checked_at_utc": "2026-10-25T16:59:52.078047+00:00",
+      "pending": 97,
+      "settled_games": 0,
+      "rejected": [],
+      "leagues": [],
+      "rows": [],
+      "production_default_changed": false
+    }
+  ],
+  "production_default_changed": false
+}

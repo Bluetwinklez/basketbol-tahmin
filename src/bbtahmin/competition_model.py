@@ -45,7 +45,7 @@ def predict(code,home,away,when):
     if pd.isna(date) or date.tzinfo is None:raise ValueError('Timezone-aware fixture time required')
     cutoff=date.tz_convert('UTC').floor('D')
     g=load(code);g=g[g.tarih_utc<cutoff].copy()
-    catalog=json.loads(Path(f'data/competitions/{code}_teams.json').read_text())
+    catalog=json.loads(Path(f'data/competitions/{code}_teams.json').read_text(encoding='utf8'))
     if home==away or home not in catalog or away not in catalog:raise ValueError('Unknown or identical team identity')
     year=date.year if date.month>=7 else date.year-1;season=f'{year}-{str(year+1)[-2:]}'
     earlier=sorted(s for s,n in g.groupby('sezon').size().items() if s<season and n>=100)

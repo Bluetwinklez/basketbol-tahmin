@@ -1,0 +1,27 @@
+{
+  "spec": "paired-forward-policy-v1",
+  "policy": {
+    "version": "paired-shadow-v1",
+    "basketball_reference": "unchanged runtime model",
+    "basketball_candidate": "common prior-season policy with alpha=.1",
+    "basketball_leagues": [
+      "E",
+      "KBL",
+      "ABA",
+      "ECW",
+      "FEC",
+      "UKR",
+      "TR_BSL",
+      "ARG_LNB"
+    ],
+    "football_reference": "baseline",
+    "football_candidate": "opponent_dc",
+    "confidence_threshold": 0.65,
+    "minimum_review_games": 100,
+    "minimum_review_days": 20,
+    "note": "Independent future experiment, fixed before outcomes; historical candidate reports cannot promote production. Skipped source/history fixtures are explicitly counted outside the frozen cohort.",
+    "cycle_script_sha256": "e845ebf64217615cd4706180642d99d8eca2a4fea42153aa4d9da2d310ceed0c"
+  },
+  "source_code_sha256": "cfe579ebf5c8a4857f54d6582772263c98c8e0a400377f17aebd87ad2696f39f",
+  "sha256": "756cfe7cebbd46381df8e4c94ce0867b59fd864092b0cb6e81c8e4f163233a3f"
+}

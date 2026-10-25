@@ -26,19 +26,28 @@ function render() {
   for (const item of report.forecasts) {
     const f = item.fixture, p = item.prediction;
     if (league && f.league !== league) continue;
-    if (status && item.status !== status) continue;
+    const reviewRequired = item.status === 'fixture_review_required';
+    if (status && !(status === 'pending' ? !item.result : item.status === status)) continue;
     if (search && !`${f.home_name} ${f.away_name}`.toLocaleLowerCase().includes(search)) continue;
     const card = el('article'); card.className = 'forecast-card match-card'; card.dataset.event = f.event_id || `${f.league}:${f.date}:${f.home_name}`;
-    card.append(el('small', `${f.league} · ${f.date} · time unavailable`), el('h2', `${f.home_name} - ${f.away_name}`),
+    card.append(el('small', `${f.league} · ${f.date}${reviewRequired ? ' · disputed original date' : f.verified_start_utc ? ` · confirmed kickoff ${f.verified_start_utc}` : ' · time unavailable'}`), el('h2', `${f.home_name} - ${f.away_name}`),
       el('p', `Expected goals ${p.expected_home_goals.toFixed(2)} - ${p.expected_away_goals.toFixed(2)}`),
       el('p', `Home ${pct(p.probabilities.home)} · Draw ${pct(p.probabilities.draw)} · Away ${pct(p.probabilities.away)}`),
       el('p', `Over 1.5 ${pct(p.over['1.5'])} · Over 2.5 ${pct(p.over['2.5'])} · Over 3.5 ${pct(p.over['3.5'])}`),
       el('p', `Both teams score ${pct(p.both_teams_score)} · Total 80% range ${p.total_goals_80.join('-')}`),
-      el('p', item.result ? `Community final ${item.result.actual_home}-${item.result.actual_away}; outcome ${item.result.winner_correct ? 'correct' : 'incorrect'}; total error ${item.result.total_absolute_error.toFixed(2)}; margin error ${item.result.margin_absolute_error.toFixed(2)}` : 'Pending · no final result'));
+      el('p', reviewRequired ? `Review required · fixture date conflict. Provider start: ${item.fixture_review?.observed_start_utc || 'unavailable'}. Original forecast retained; result scoring withheld.` : item.result ? `Community final ${item.result.actual_home}-${item.result.actual_away}; outcome ${item.result.winner_correct ? 'correct' : 'incorrect'}; total error ${item.result.total_absolute_error.toFixed(2)}; margin error ${item.result.margin_absolute_error.toFixed(2)}` : 'Pending · no final result'));
+    if (reviewRequired && /^https:\/\/www\.espn\.com\/soccer\/game\//.test(item.fixture_review?.source_url || '')) {
+      const reviewLink = el('a', 'Fixture review source'); reviewLink.href = item.fixture_review.source_url;
+      reviewLink.target = '_blank'; reviewLink.rel = 'noopener noreferrer'; card.append(reviewLink);
+    }
     const details = el('details'); details.open = opened.has(card.dataset.event);
     details.append(el('summary', 'Model and source details'), el('p', `Model: ${p.model || 'saved model'} · recorded ${item.recorded_at_utc || 'time unavailable'}`));
     if (p.most_likely_score) details.append(el('p', `Most likely score ${p.most_likely_score.join('-')} · not an exact-score guarantee`));
     if (p.issues?.length) details.append(el('p', p.issues.join('; ')));
+    if (/^https:\/\/www\.espn\.com\/soccer\/game\//.test(f.independent_fixture?.source_url || '')) {
+      const fixtureLink = el('a', 'Independent fixture confirmation'); fixtureLink.href = f.independent_fixture.source_url;
+      fixtureLink.target = '_blank'; fixtureLink.rel = 'noopener noreferrer'; details.append(fixtureLink);
+    }
     const a = el('a', 'Data source'); a.href = /^https:\/\/github\.com\/openfootball\//.test(f.source_url) ? f.source_url : '#'; a.target = '_blank'; a.rel = 'noopener noreferrer';
     details.append(a); card.append(details); cards.push(card);
   }

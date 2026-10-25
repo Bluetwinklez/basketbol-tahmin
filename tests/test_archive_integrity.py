@@ -80,7 +80,7 @@ def test_future_or_naive_fixture_capture_is_not_frozen(tmp_path, monkeypatch, ca
     game=row('AR2','2026','2026-10-25','A','B',None,'source',captured)
     monkeypatch.setattr(daily,'load',lambda root:pd.DataFrame([game]))
     write_json(tmp_path/'collection.json',dict(checked_at_utc=captured,errors=[]))
-    result=daily.run(output=tmp_path/'ledger',root=tmp_path,now='2026-10-23T13:00Z')
+    result=daily.run(require_fixture_confirmation=False, output=tmp_path/'ledger',root=tmp_path,now='2026-10-23T13:00Z')
     assert result['pending']==0 and issue in result['skipped'][0]['reason']
 
 
@@ -94,5 +94,5 @@ def test_stale_team_history_cannot_enter_prospective_ledger(tmp_path, monkeypatc
         def predict(self,*args):return dict(issues=['a: history older than 90 days'])
     monkeypatch.setattr(challenger,'fit',lambda *args:Model())
     write_json(tmp_path/'collection.json',dict(checked_at_utc='2026-10-23T12:00Z',errors=[]))
-    result=daily.run(output=tmp_path/'ledger',root=tmp_path,now='2026-10-23T13:00Z')
+    result=daily.run(require_fixture_confirmation=False, output=tmp_path/'ledger',root=tmp_path,now='2026-10-23T13:00Z')
     assert result['pending']==0 and 'Insufficient history' in result['skipped'][0]['reason']

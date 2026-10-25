@@ -46,7 +46,7 @@ def refresh(leagues):
                     refresh_europe(payload, captured, year=year)
                     target = Path('data/schedules/E.json')
                     target.parent.mkdir(parents=True, exist_ok=True)
-                    target.write_text(json.dumps(dict(fixtures=fixtures, results=results), indent=2))
+                    target.write_text(json.dumps(dict(fixtures=fixtures, results=results), indent=2),encoding='utf8')
                 elif source == 'KBL':
                     from .veri.korea import collect
                     collect(first=today.year, last=today.year)
@@ -60,7 +60,7 @@ def refresh(leagues):
                     from importlib import import_module
                     module={'UKR':'ukraine','TR_BSL':'turkey','ARG_LNB':'argentina'}[source]
                     import_module('.veri.'+module,'bbtahmin').collect(first=year,last=year)
-                    report = json.loads(Path(f'docs/kanit/competitions/{source}_collection.json').read_text())
+                    report = json.loads(Path(f'docs/kanit/competitions/{source}_collection.json').read_text(encoding='utf8'))
                     if report.get('errors'):
                         raise ValueError(f'{source} current source refresh failed; previous observations retained: {report["errors"]}')
                 elif source in ('ECW', 'FEC'):
@@ -85,7 +85,7 @@ def source_facts(code):
         path = Path('data/schedules/E.json')
         if not path.exists():
             raise ValueError('No EuroLeague schedule snapshot; run with --guncelle')
-        payload = json.loads(path.read_text())
+        payload = json.loads(path.read_text(encoding='utf8'))
         return payload['fixtures'], payload['results']
     root = Path('data/competitions' if code in ('ABA', 'ECW', 'FEC', 'UKR', 'TR_BSL', 'ARG_LNB') else 'data/asia')
     fixtures_path = root / f'{code}_fixtures.parquet'
@@ -93,7 +93,7 @@ def source_facts(code):
     if not archive_path.exists() or not fixtures_path.exists():
         raise ValueError(f'No fixture/archive snapshot for {code}; run with --guncelle')
     catalog_path = root / f'{code}_teams.json'
-    catalog = json.loads(catalog_path.read_text()) if catalog_path.exists() else {}
+    catalog = json.loads(catalog_path.read_text(encoding='utf8')) if catalog_path.exists() else {}
     def convert(row, final=False):
         result = dict(event_id=row['mac_id'], league=code, home=row['ev'], away=row['dep'],
                       start_utc=timestamp(row['tarih_utc']).isoformat(),
@@ -146,7 +146,7 @@ def run(leagues=LEAGUES, output='rapor/daily', update=False, hours=48, threshold
                    set(Path('docs/kanit/prospective').glob('*.json')))
     for path in paths:
         try:
-            candidate = json.loads(path.read_text())
+            candidate = json.loads(path.read_text(encoding='utf8'))
             if not isinstance(candidate, dict) or candidate.get('spec') != 'prospective-v1':
                 continue
             record = verify(candidate)
@@ -251,7 +251,7 @@ def run(leagues=LEAGUES, output='rapor/daily', update=False, hours=48, threshold
     report['note'] = ('Model probabilities are not measured accuracy. Rejected/low-probability forecasts remain visible. '
                       'Only source-confirmed timestamped finals settle. No live predictor. Small batches do not establish general accuracy.')
     stamp = pd.Timestamp.now(tz='UTC').strftime('%Y%m%dT%H%M%S%fZ')
-    with (root / f'check_{stamp}.json').open('x') as stream:
+    with (root / f'check_{stamp}.json').open('x',encoding='utf8') as stream:
         json.dump(report, stream, ensure_ascii=False, indent=2, allow_nan=False)
     (root / 'latest.md').write_text(markdown(report), encoding='utf8')
     return report

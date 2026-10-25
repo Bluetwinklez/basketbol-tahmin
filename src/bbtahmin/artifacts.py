@@ -4,6 +4,12 @@ import json
 from pathlib import Path
 
 
+def matches_text_hash(path,expected):
+    """Git may convert CRLF/LF on checkout; only newline variants are allowed."""
+    raw=Path(path).read_bytes();lf=raw.replace(b'\r\n',b'\n')
+    return expected in {hashlib.sha256(value).hexdigest() for value in (raw,lf,lf.replace(b'\n',b'\r\n'))}
+
+
 def verified_manifest(directory='docs/kanit/pregame_verified'):
     from .ozellik import FEATURES
     from .eksik_ozellik import EKSIK_LIGLERI
@@ -15,7 +21,7 @@ def verified_manifest(directory='docs/kanit/pregame_verified'):
                 or meta['box_leagues']!=sorted(KUTU_LIGLERI)):
             return None
         for name in ('parametreler.json','metrikler.csv'):
-            if hashlib.sha256((root/name).read_bytes()).hexdigest()!=meta['files'][name]:
+            if not matches_text_hash(root/name,meta['files'][name]):
                 return None
         return meta
     except (OSError,ValueError,KeyError,TypeError):
