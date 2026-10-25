@@ -13,10 +13,10 @@ def collect(first=2018, last=None, directory=None, root=ROOT, current_only=False
     now=pd.Timestamp.now(tz='UTC'); last=now.year if last is None else last
     if current_only: first=last=now.year
     if not 2018 <= first <= last <= now.year: raise ValueError('Invalid calendar years')
-    directory=Path(directory) if directory else git_source('south-america', refresh=code=='BR2')
+    directory=Path(directory) if directory else git_source('south-america', refresh=True)
     if not (directory/'LICENSE.md').read_text().startswith('CC0'): raise ValueError('Expected CC0 license')
     revision=subprocess.check_output(['git','-C',str(directory),'rev-parse','HEAD'],text=True).strip()
-    json_directory=Path(json_directory) if json_directory else git_source('football.json', refresh=False)
+    json_directory=Path(json_directory) if json_directory else git_source('football.json', refresh=True)
     if not (json_directory/'LICENSE.md').read_text().startswith('CC0'): raise ValueError('Expected CC0 license')
     json_revision=subprocess.check_output(['git','-C',str(json_directory),'rev-parse','HEAD'],text=True).strip()
     root=Path(root); root.mkdir(parents=True,exist_ok=True); files=[]; errors=[]
@@ -30,20 +30,9 @@ def collect(first=2018, last=None, directory=None, root=ROOT, current_only=False
         url=(f'https://github.com/openfootball/football.json/blob/{json_revision}/{year}/{json_source.name}' if source==json_source else f'https://github.com/openfootball/south-america/blob/{revision}/brazil/{source.name}')
         try:
             raw=source.read_text('utf8'); rows=(parse_json(json.loads(raw),code,str(year),url,now.isoformat()) if source==json_source else parse_text(raw,code,str(year),url,now.isoformat()))
-            ids=[r['event_id'] for r in rows]
-            if len(ids)!=len(set(ids)): raise ValueError('Duplicate fixture identity')
-            target=root/f'{code}_{year}.json.gz'
-            if target.exists():
-                old=json.loads(gzip.decompress(target.read_bytes()))['rows']; merged={r['event_id']:r for r in rows}
-                for r in old:
-                    fresh=merged.get(r['event_id'])
-                    if r['status']=='final':
-                        if fresh and fresh['status']=='final' and any(r[k]!=fresh[k] for k in ('home_goals','away_goals')):
-                            raise ValueError('Conflicting final score; retained previous snapshot')
-                        if not fresh or fresh['status']!='final': merged[r['event_id']]=r
-                rows=list(merged.values())
-            payload=dict(league=code,season=str(year),source_url=url,captured_at_utc=now.isoformat(),rows=rows)
-            temp=target.with_suffix('.part');temp.write_bytes(gzip.compress(json.dumps(payload,ensure_ascii=False,allow_nan=False).encode(),mtime=0));temp.replace(target)
+            from .storage import save as save_snapshot
+            rows = save_snapshot(rows, code, str(year), root, dict(
+                league=code, season=str(year), source_url=url, captured_at_utc=now.isoformat()))
             files.append(dict(season=str(year),rows=len(rows),finals=sum(r['status']=='final' for r in rows),source_sha256=hashlib.sha256(raw.encode()).hexdigest(),source_url=url))
         except Exception as exc: errors.append(dict(league=code,season=str(year),error=str(exc),retained_previous=True))
     report=dict(checked_at_utc=now.isoformat(),revision=revision,license='CC0-1.0',files=files,errors=errors,note='Community results, not official verification; day precision. No inferred current season.')

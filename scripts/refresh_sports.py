@@ -22,14 +22,22 @@ def main():
         try:
             if sport=='football':
                 from refresh_screenshot_leagues import run as screenshot_refresh
-                screenshot_refresh(args.backfill)
-                collection=collect(current_only=not args.backfill)
-                calendar=calendar_collect(current_only=not args.backfill)
-                for code in ('BR1','AR1','CO1','US1','JP1','CN1'):
-                    extra=calendar_collect(current_only=not args.backfill,code=code)
-                    calendar['errors'].extend(extra['errors'])
-                report=football_run(output='data/football_ledger')
-                errors=collection['errors']+calendar['errors']
+                errors=[]
+                def attempt(name, action):
+                    try:
+                        result=action()
+                        errors.extend(dict(source=name,**e) for e in result.get('errors',[]))
+                        return result
+                    except Exception as exc:
+                        errors.append(dict(source=name,error=f'{type(exc).__name__}: {exc}',retained_previous=True))
+                        return None
+                attempt('screenshots',lambda: screenshot_refresh(args.backfill))
+                attempt('football',lambda: collect(current_only=not args.backfill))
+                for code in ('BR2','BR1','AR1','CO1','US1','JP1','CN1'):
+                    attempt(code,lambda code=code: calendar_collect(current_only=not args.backfill,code=code))
+                # A source outage must not prevent settlement of existing forecasts.
+                attempt('football_ledger',lambda: football_run(output='data/football_ledger'))
+
             else:
                 backfill_errors=[]
                 if args.backfill:

@@ -44,7 +44,9 @@ def test_japanese_all_star_rows_excluded_and_date_carried_between_pages():
     assert 'Tokyo Hac' in hachioji[2]['JP_hb']['aliases']
     new_title=title.replace('2025.','2026.')
     modern=japan_row().replace('<span>第1節</span>','<span class="setu-none"></span>')
-    assert len(parse_topics([new_title+modern],2026,1,'2026-10-23T00:00Z')[0])==1
+    modern_rows=parse_topics([new_title+modern],2026,1,'2026-10-23T00:00Z')[0]
+    assert len(modern_rows)==1 and modern_rows[0]['competition_code']=='JP_PREMIER'
+    assert parse_topics([new_title+modern],2026,2,'2026-10-23T00:00Z')[0][0]['competition_code']=='JP_ONE'
     all_star=modern.replace('class="game"','class="game game_ajst"')
     assert not parse_topics([new_title+all_star],2026,1,'2026-10-23T00:00Z')[0]
 
@@ -158,3 +160,10 @@ def test_pba_refresh_revokes_previously_accepted_invalid_player_rows(tmp_path,mo
     source.collect()
     rows=pd.read_parquet(path)
     assert rows.player_id.tolist()==['valid']
+
+
+@pytest.mark.parametrize('code',['JP_B1','JP_B2'])
+def test_reorganised_japan_cannot_silently_use_legacy_model(code):
+    from bbtahmin.asia_model import predict
+    with pytest.raises(ValueError,match='separate 2026-27 competitions'):
+        predict(code,'JP_a','JP_b','2026-10-25T10:00Z')

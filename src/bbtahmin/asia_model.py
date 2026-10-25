@@ -78,6 +78,9 @@ def walk_forward(code,g=None):
     if set(g.lig)!={code}:raise ValueError('League mixing forbidden')
     x=build_features(g);records=[];folds=[];skipped=[]
     for season in sorted(g.sezon.unique())[2:]:
+        if code in ('JP_B1','JP_B2') and season >= '2026-27':
+            skipped.append(dict(season=season,reason='B.PREMIER/B.ONE reorganisation requires separate validated competition model'))
+            continue
         try:probs,scores,errors,info=fit_fold(g,x,season)
         except ValueError as e:
             skipped.append(dict(season=season,reason=str(e)));continue
@@ -105,7 +108,10 @@ def walk_forward(code,g=None):
 def predict(code,home,away,when):
     date=pd.Timestamp(when)
     if date.tzinfo is None:raise ValueError('Timezone-aware fixture required')
-    date=date.tz_convert('UTC');cutoff=date.floor('D');g=load(code);g=g[g.tarih_utc<cutoff]
+    date=date.tz_convert('UTC')
+    if code in ('JP_B1','JP_B2') and date >= pd.Timestamp('2026-07-01',tz='UTC'):
+        raise ValueError('B.PREMIER/B.ONE are separate 2026-27 competitions; legacy B1/B2 model transfer is not validated')
+    cutoff=date.floor('D');g=load(code);g=g[g.tarih_utc<cutoff]
     catalog=json.loads(Path(f'data/asia/{code}_teams.json').read_text())
     if home==away or home not in catalog or away not in catalog:raise ValueError('Unknown or identical Asian team identity')
     year=date.year if date.month>=7 else date.year-1;season=f'{year}-{str(year+1)[-2:]}'
