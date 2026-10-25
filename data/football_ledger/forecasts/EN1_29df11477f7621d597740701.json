@@ -1,0 +1,65 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+  "fixture": {
+    "event_id": "EN1_29df11477f7621d597740701",
+    "league": "EN1",
+    "season": "2026-27",
+    "date": "2026-10-31",
+    "home": "brentford fc",
+    "away": "nottingham forest fc",
+    "home_name": "Brentford FC",
+    "away_name": "Nottingham Forest FC",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/en.1.json",
+    "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "EN1",
+    "home": "brentford fc",
+    "away": "nottingham forest fc",
+    "expected_home_goals": 1.715934147513259,
+    "expected_away_goals": 1.4080203585098172,
+    "probabilities": {
+      "home": 0.44898753670442115,
+      "draw": 0.2345371689177176,
+      "away": 0.3164752943778614
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.8186165483934912,
+      "2.5": 0.6040000019926363,
+      "3.5": 0.38051589292728255
+    },
+    "both_teams_score": 0.619560128858015,
+    "total_goals_80": [
+      1,
+      5
+    ],
+    "training_cutoff_exclusive": "2026-10-25",
+    "training_games": 1100,
+    "prior_team_games": {
+      "brentford fc": 110,
+      "nottingham forest fc": 110
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "653f7bd855fde1275fd8db8739bfb6edd2be28d37870e466697f9df28d16186f",
+  "payload_sha256": "6044f8792707860110fc79e9aaf3ef03f092ed194c0348c7e9a666af11784772"
+}

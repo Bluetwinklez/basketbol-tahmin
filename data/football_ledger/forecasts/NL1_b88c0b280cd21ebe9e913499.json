@@ -1,0 +1,65 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+  "fixture": {
+    "event_id": "NL1_b88c0b280cd21ebe9e913499",
+    "league": "NL1",
+    "season": "2026-27",
+    "date": "2026-10-31",
+    "home": "psv",
+    "away": "willem ii tilburg",
+    "home_name": "PSV",
+    "away_name": "Willem II Tilburg",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/nl.1.json",
+    "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "NL1",
+    "home": "psv",
+    "away": "willem ii tilburg",
+    "expected_home_goals": 3.2094569973796028,
+    "expected_away_goals": 1.2560938088819307,
+    "probabilities": {
+      "home": 0.7548838941739974,
+      "draw": 0.13172333376185946,
+      "away": 0.11339277206414305
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      3,
+      1
+    ],
+    "over": {
+      "1.5": 0.9371551256983868,
+      "2.5": 0.8225098929725075,
+      "3.5": 0.6518585224948108
+    },
+    "both_teams_score": 0.6863556274745222,
+    "total_goals_80": [
+      2,
+      7
+    ],
+    "training_cutoff_exclusive": "2026-10-25",
+    "training_games": 901,
+    "prior_team_games": {
+      "psv": 100,
+      "willem ii tilburg": 41
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "653f7bd855fde1275fd8db8739bfb6edd2be28d37870e466697f9df28d16186f",
+  "payload_sha256": "81d6db6ae8c255b313158ebf4ad11ef28304faba930baebced937851c2e3364c"
+}

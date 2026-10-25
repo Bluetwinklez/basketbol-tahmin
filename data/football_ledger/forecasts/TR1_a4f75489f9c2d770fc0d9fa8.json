@@ -1,0 +1,65 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+  "fixture": {
+    "event_id": "TR1_a4f75489f9c2d770fc0d9fa8",
+    "league": "TR1",
+    "season": "2026-27",
+    "date": "2026-11-01",
+    "home": "kocaelispor",
+    "away": "caykur rizespor",
+    "home_name": "Kocaelispor",
+    "away_name": "Çaykur Rizespor",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/europe/blob/63df627f3c87ce71708f016522ea236cf74332c3/turkey/2026-27_tr1.txt",
+    "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "TR1",
+    "home": "kocaelispor",
+    "away": "caykur rizespor",
+    "expected_home_goals": 1.3992449325837921,
+    "expected_away_goals": 1.0422779335419066,
+    "probabilities": {
+      "home": 0.4512391079584176,
+      "draw": 0.26845004517247534,
+      "away": 0.2803108468691072
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.7004903971669861,
+      "2.5": 0.44110131752757364,
+      "3.5": 0.22999986113993207
+    },
+    "both_teams_score": 0.4875945345611912,
+    "total_goals_80": [
+      1,
+      5
+    ],
+    "training_cutoff_exclusive": "2026-10-25",
+    "training_games": 763,
+    "prior_team_games": {
+      "kocaelispor": 15,
+      "caykur rizespor": 80
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "653f7bd855fde1275fd8db8739bfb6edd2be28d37870e466697f9df28d16186f",
+  "payload_sha256": "0d90ebe677eea55e5405383f782781551b36129221dbeb72dc5cd04665e96b8b"
+}

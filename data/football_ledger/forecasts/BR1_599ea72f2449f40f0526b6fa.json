@@ -1,0 +1,65 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+  "fixture": {
+    "event_id": "BR1_599ea72f2449f40f0526b6fa",
+    "league": "BR1",
+    "season": "2026",
+    "date": "2026-10-28",
+    "home": "cr vasco da gama",
+    "away": "cr flamengo",
+    "home_name": "CR Vasco da Gama",
+    "away_name": "CR Flamengo",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026/br.1.json",
+    "captured_at_utc": "2026-10-25T12:01:16.791819+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "BR1",
+    "home": "cr vasco da gama",
+    "away": "cr flamengo",
+    "expected_home_goals": 1.2438013080963182,
+    "expected_away_goals": 1.7805954543032028,
+    "probabilities": {
+      "home": 0.2673565176003591,
+      "draw": 0.23265429968126694,
+      "away": 0.49998918271837395
+    },
+    "predicted_outcome": "away",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.8044661434871848,
+      "2.5": 0.5822535294499853,
+      "3.5": 0.35823382596383857
+    },
+    "both_teams_score": 0.5917630936470326,
+    "total_goals_80": [
+      1,
+      5
+    ],
+    "training_cutoff_exclusive": "2026-10-25",
+    "training_games": 1130,
+    "prior_team_games": {
+      "cr vasco da gama": 113,
+      "cr flamengo": 113
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "653f7bd855fde1275fd8db8739bfb6edd2be28d37870e466697f9df28d16186f",
+  "payload_sha256": "320c9eb25e7d4e5a31be268d43002c53b4359ee5202d2e534b0f5f4edb632ef4"
+}

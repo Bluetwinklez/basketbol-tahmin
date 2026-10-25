@@ -1,0 +1,65 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+  "fixture": {
+    "event_id": "PT1_298bafdc737e51205a843d53",
+    "league": "PT1",
+    "season": "2026-27",
+    "date": "2026-11-01",
+    "home": "fc arouca",
+    "away": "cd nacional",
+    "home_name": "FC Arouca",
+    "away_name": "CD Nacional",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/pt.1.json",
+    "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "PT1",
+    "home": "fc arouca",
+    "away": "cd nacional",
+    "expected_home_goals": 1.6277736337971345,
+    "expected_away_goals": 1.0160048778055926,
+    "probabilities": {
+      "home": 0.5164632744372637,
+      "draw": 0.24719804198794895,
+      "away": 0.23633868357478757
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.7409559917568691,
+      "2.5": 0.49250443512804687,
+      "3.5": 0.2735541395982043
+    },
+    "both_teams_score": 0.5126874253099624,
+    "total_goals_80": [
+      1,
+      5
+    ],
+    "training_cutoff_exclusive": "2026-10-25",
+    "training_games": 908,
+    "prior_team_games": {
+      "fc arouca": 101,
+      "cd nacional": 75
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "653f7bd855fde1275fd8db8739bfb6edd2be28d37870e466697f9df28d16186f",
+  "payload_sha256": "b0ff65b367a9ab95be0d7aad23b5237fa92f4fb73c08160e472478e5d1996ffb"
+}

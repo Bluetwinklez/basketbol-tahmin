@@ -1,0 +1,65 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+  "fixture": {
+    "event_id": "BR1_883932f9704bf377911ee6e5",
+    "league": "BR1",
+    "season": "2026",
+    "date": "2026-10-28",
+    "home": "ca mineiro",
+    "away": "cruzeiro ec",
+    "home_name": "CA Mineiro",
+    "away_name": "Cruzeiro EC",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026/br.1.json",
+    "captured_at_utc": "2026-10-25T12:01:16.791819+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "BR1",
+    "home": "ca mineiro",
+    "away": "cruzeiro ec",
+    "expected_home_goals": 1.5665348675572808,
+    "expected_away_goals": 1.1854065145008086,
+    "probabilities": {
+      "home": 0.4615439691811366,
+      "draw": 0.2500609130670171,
+      "away": 0.28839511775184656
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.7606116078168147,
+      "2.5": 0.5190124558933077,
+      "3.5": 0.29739022121049513
+    },
+    "both_teams_score": 0.5494146217683027,
+    "total_goals_80": [
+      1,
+      5
+    ],
+    "training_cutoff_exclusive": "2026-10-25",
+    "training_games": 1130,
+    "prior_team_games": {
+      "ca mineiro": 112,
+      "cruzeiro ec": 113
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "653f7bd855fde1275fd8db8739bfb6edd2be28d37870e466697f9df28d16186f",
+  "payload_sha256": "ec4898ef30faa0398c69fdb45ca5e87fa29235437e9fab0846e77b0e375950aa"
+}

@@ -1,0 +1,65 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+  "fixture": {
+    "event_id": "DE1_c5a27426cab5647c3c2f8903",
+    "league": "DE1",
+    "season": "2026-27",
+    "date": "2026-11-01",
+    "home": "eintracht frankfurt",
+    "away": "hamburger sv",
+    "home_name": "Eintracht Frankfurt",
+    "away_name": "Hamburger SV",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/de.1.json",
+    "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "DE1",
+    "home": "eintracht frankfurt",
+    "away": "hamburger sv",
+    "expected_home_goals": 1.9666250518614417,
+    "expected_away_goals": 1.2729725947473307,
+    "probabilities": {
+      "home": 0.5354182595196247,
+      "draw": 0.21868680048199843,
+      "away": 0.24589493999837697
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.8338940226465101,
+      "2.5": 0.6282989166644941,
+      "3.5": 0.4062837761666208
+    },
+    "both_teams_score": 0.6192532822978933,
+    "total_goals_80": [
+      1,
+      6
+    ],
+    "training_cutoff_exclusive": "2026-10-25",
+    "training_games": 882,
+    "prior_team_games": {
+      "eintracht frankfurt": 98,
+      "hamburger sv": 38
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "653f7bd855fde1275fd8db8739bfb6edd2be28d37870e466697f9df28d16186f",
+  "payload_sha256": "3472984a750d8e4561777294b8b718a4335691fbe0005e241d9ed102188d1584"
+}

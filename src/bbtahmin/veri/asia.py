@@ -37,6 +37,9 @@ def save(code,records,teams,report,fixtures=None):
     for _,part in g.groupby('mac_id'):
         if len(part[fields].drop_duplicates())!=1:raise ValueError('Conflicting persisted Asian result')
     g=g.drop_duplicates('mac_id').sort_values(['tarih_utc','mac_id']).reset_index(drop=True)
+    if code in ('JP_B1','JP_B2'):
+        current='JP_PREMIER' if code=='JP_B1' else 'JP_ONE'
+        g['competition_code']=g.sezon.map(lambda season: current if season>='2026-27' else code)
     aliases={}
     if code=='PBA_GOV':g,aliases=cross_source_pba(g)
     temp=path.with_suffix('.part');g.to_parquet(temp,index=False);temp.replace(path)
@@ -49,6 +52,9 @@ def save(code,records,teams,report,fixtures=None):
     if fixtures is not None:
         f=pd.DataFrame(fixtures)
         if not f.empty and f.mac_id.duplicated().any():raise ValueError('Duplicate current fixtures')
+        if not f.empty and code in ('JP_B1','JP_B2'):
+            current='JP_PREMIER' if code=='JP_B1' else 'JP_ONE'
+            f['competition_code']=f.sezon.map(lambda season: current if season>='2026-27' else code)
         f.to_parquet(root/f'{code}_fixtures.parquet',index=False)
     report.update(games=len(g),teams=len(set(g.ev)|set(g.dep)),seasons=g.groupby('sezon').size().to_dict(),
         dataset_sha256=hashlib.sha256(path.read_bytes()).hexdigest(),trained=False)

@@ -1,0 +1,65 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+  "fixture": {
+    "event_id": "ES1_a32bfe88554b1d0384259a10",
+    "league": "ES1",
+    "season": "2026-27",
+    "date": "2026-11-01",
+    "home": "villarreal cf",
+    "away": "rcd espanyol de barcelona",
+    "home_name": "Villarreal CF",
+    "away_name": "RCD Espanyol de Barcelona",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/es.1.json",
+    "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "ES1",
+    "home": "villarreal cf",
+    "away": "rcd espanyol de barcelona",
+    "expected_home_goals": 2.0737356814178525,
+    "expected_away_goals": 1.2738206541442632,
+    "probabilities": {
+      "home": 0.5582276590695071,
+      "draw": 0.21074713100123105,
+      "away": 0.23102520992926195
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      2,
+      1
+    ],
+    "over": {
+      "1.5": 0.8470956031751927,
+      "2.5": 0.6500346637606506,
+      "3.5": 0.4301437983509929
+    },
+    "both_teams_score": 0.6296942137403791,
+    "total_goals_80": [
+      1,
+      6
+    ],
+    "training_cutoff_exclusive": "2026-10-25",
+    "training_games": 1100,
+    "prior_team_games": {
+      "villarreal cf": 110,
+      "rcd espanyol de barcelona": 82
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "653f7bd855fde1275fd8db8739bfb6edd2be28d37870e466697f9df28d16186f",
+  "payload_sha256": "77b9539330d67f57147ce183b3baa180a49e8b5792eab098a3efbd542cf4d6ae"
+}

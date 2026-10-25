@@ -116,9 +116,41 @@ def test_published_argentina_forecasts_reused_in_new_local_ledger(tmp_path,monke
     def no_recalculation(*args,**kwargs):raise AssertionError('Frozen forecast must be reused')
     monkeypatch.setattr('bbtahmin.tahmin.tahmin_et',no_recalculation)
     from pathlib import Path
-    originals={p:p.read_bytes() for p in Path('data/argentina_ledger/forecasts').glob('*.json')}
+    originals={p:p.read_bytes() for p in Path('data/argentina_ledger/forecasts').glob('*.json')
+               if pd.Timestamp(json.loads(p.read_text())['recorded_at_utc'])<=pd.Timestamp('2026-10-23T21:00Z')}
     assert len(originals)==10
+    # Replay the recorded source fixtures, not today's mutable provider snapshot.
+    # Some originally upcoming games legitimately become finals after refresh.
+    fixtures=[item['fixture'] for raw in originals.values()
+              for item in json.loads(raw)['forecasts']]
+    monkeypatch.setattr(daily,'source_facts',lambda code:(fixtures,[]))
     report=daily.run(['ARG_LNB'],str(tmp_path/'new-ledger'),hours=168,now='2026-10-23T21:00Z')
     assert len(report['upcoming'])==10
     assert all(row['record_status']=='existing_immutable' for row in report['upcoming'])
     assert all(p.read_bytes()==raw for p,raw in originals.items())
+
+
+def test_rotating_official_tokens_reuse_exact_recorded_identity():
+    rows,_=a.parse_official(official('22/10/2026 21:00',('80','75')),2026,'2026-10-23T20:00Z','public')
+    old=rows[0];fresh=dict(old,mac_id='rotated-token-id',source_url='https://official/new-token')
+    linked,links=a.reconcile_official_ids([fresh],[pd.DataFrame(rows)])
+    assert linked[0]['mac_id']==old['mac_id'] and len(links)==1
+    assert len(a.merge_results(pd.DataFrame(rows),linked))==1
+    changed=dict(fresh,ev_skor=81)
+    linked,_=a.reconcile_official_ids([changed],[pd.DataFrame(rows)])
+    with pytest.raises(ValueError,match='Conflicting'):a.merge_results(pd.DataFrame(rows),linked)
+
+
+def test_rotating_tokens_never_link_ambiguous_or_changed_fixture():
+    rows,_=a.parse_official(official('22/10/2026 21:00',('80','75')),2026,'2026-10-23T20:00Z','public')
+    old=rows[0];fresh=dict(old,mac_id='new-token')
+    for changed in (dict(fresh,tarih_utc=old['tarih_utc']+pd.Timedelta(hours=1)),dict(fresh,ev='ARG_LNB_FERRO')):
+        linked,links=a.reconcile_official_ids([changed],[pd.DataFrame(rows)])
+        assert linked[0]['mac_id']=='new-token' and not links
+    with pytest.raises(ValueError,match='Ambiguous'):
+        a.reconcile_official_ids([fresh],[pd.DataFrame([old,dict(old,mac_id='second-old-id')])])
+    with pytest.raises(ValueError,match='Duplicate incoming'):
+        a.reconcile_official_ids([fresh,fresh],[pd.DataFrame(rows)])
+    publisher=dict(old,source_kind='publisher_history_not_official',date_precision='day')
+    linked,links=a.reconcile_official_ids([fresh],[pd.DataFrame([publisher])])
+    assert linked[0]['mac_id']=='new-token' and not links

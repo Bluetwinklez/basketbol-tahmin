@@ -1,0 +1,65 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+  "fixture": {
+    "event_id": "TR1_b1d2161a5e77b7f8afb9ecff",
+    "league": "TR1",
+    "season": "2026-27",
+    "date": "2026-11-01",
+    "home": "atiker konyaspor",
+    "away": "galatasaray",
+    "home_name": "Atiker Konyaspor",
+    "away_name": "Galatasaray",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/europe/blob/63df627f3c87ce71708f016522ea236cf74332c3/turkey/2026-27_tr1.txt",
+    "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "TR1",
+    "home": "atiker konyaspor",
+    "away": "galatasaray",
+    "expected_home_goals": 1.1409959042076927,
+    "expected_away_goals": 1.9180337685954045,
+    "probabilities": {
+      "home": 0.22370746108558495,
+      "draw": 0.22154822900981658,
+      "away": 0.5547443099045987
+    },
+    "predicted_outcome": "away",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.8094966929265184,
+      "2.5": 0.5899041050577082,
+      "3.5": 0.3659906909849377
+    },
+    "both_teams_score": 0.5805370335244349,
+    "total_goals_80": [
+      1,
+      5
+    ],
+    "training_cutoff_exclusive": "2026-10-25",
+    "training_games": 763,
+    "prior_team_games": {
+      "atiker konyaspor": 80,
+      "galatasaray": 79
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "653f7bd855fde1275fd8db8739bfb6edd2be28d37870e466697f9df28d16186f",
+  "payload_sha256": "5ec6d0af1f62c554ba18a60e44e16e7c4f3a45d8eb1f2d95e44c9937747f4361"
+}

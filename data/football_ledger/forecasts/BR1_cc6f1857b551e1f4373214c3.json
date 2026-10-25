@@ -1,0 +1,65 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+  "fixture": {
+    "event_id": "BR1_cc6f1857b551e1f4373214c3",
+    "league": "BR1",
+    "season": "2026",
+    "date": "2026-10-28",
+    "home": "ec bahia",
+    "away": "sao paulo fc",
+    "home_name": "EC Bahia",
+    "away_name": "São Paulo FC",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026/br.1.json",
+    "captured_at_utc": "2026-10-25T12:01:16.791819+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "BR1",
+    "home": "ec bahia",
+    "away": "sao paulo fc",
+    "expected_home_goals": 1.5950485484266275,
+    "expected_away_goals": 0.805885991411777,
+    "probabilities": {
+      "home": 0.5609740522476708,
+      "draw": 0.2503741617916197,
+      "away": 0.1886517859607096
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      1,
+      0
+    ],
+    "over": {
+      "1.5": 0.6917623742594121,
+      "2.5": 0.4305353993952272,
+      "3.5": 0.22147244383225403
+    },
+    "both_teams_score": 0.44104254957672384,
+    "total_goals_80": [
+      1,
+      4
+    ],
+    "training_cutoff_exclusive": "2026-10-25",
+    "training_games": 1130,
+    "prior_team_games": {
+      "ec bahia": 113,
+      "sao paulo fc": 112
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "653f7bd855fde1275fd8db8739bfb6edd2be28d37870e466697f9df28d16186f",
+  "payload_sha256": "fca9313673af0d512f6e35f94756ee26bc0cf56d79eca37587ef4387c5f13856"
+}

@@ -1,0 +1,65 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+  "fixture": {
+    "event_id": "NL1_21f4c8aa937a5a8f6aa5f929",
+    "league": "NL1",
+    "season": "2026-27",
+    "date": "2026-10-31",
+    "home": "afc ajax",
+    "away": "az",
+    "home_name": "AFC Ajax",
+    "away_name": "AZ",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/nl.1.json",
+    "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "NL1",
+    "home": "afc ajax",
+    "away": "az",
+    "expected_home_goals": 1.7220377950230092,
+    "expected_away_goals": 1.4776351395526963,
+    "probabilities": {
+      "home": 0.4358532393284921,
+      "draw": 0.23248592613984229,
+      "away": 0.33166083453166584
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.8287560763900038,
+      "2.5": 0.6200279953691018,
+      "3.5": 0.3974074648596004
+    },
+    "both_teams_score": 0.6338972619257303,
+    "total_goals_80": [
+      1,
+      6
+    ],
+    "training_cutoff_exclusive": "2026-10-25",
+    "training_games": 901,
+    "prior_team_games": {
+      "afc ajax": 102,
+      "az": 100
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "653f7bd855fde1275fd8db8739bfb6edd2be28d37870e466697f9df28d16186f",
+  "payload_sha256": "0cf3b5e5eb346ee4f645ad8e617c4bdfa20bddbc5930ac55ad4de6b6cfe42e4f"
+}

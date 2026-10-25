@@ -1,7 +1,7 @@
 {
   "spec": "football-daily-v1",
-  "checked_at_utc": "2026-10-23T16:50:17.613436+00:00",
-  "collection_checked_at_utc": "2026-10-23T16:45:36.284530+00:00",
+  "checked_at_utc": "2026-10-25T12:01:28.001360+00:00",
+  "collection_checked_at_utc": "2026-10-25T12:01:08.491265+00:00",
   "source_errors": [
     {
       "league": "DE2",
@@ -27,9 +27,792 @@
       "league": "AT1",
       "season": "2026-27",
       "error": "Source file unavailable"
+    },
+    {
+      "league": "BE1",
+      "season": "2026-27",
+      "error": "Source file unavailable"
+    },
+    {
+      "league": "GR1",
+      "season": "2026-27",
+      "error": "Source file unavailable"
+    },
+    {
+      "league": "SC1",
+      "season": "2026-27",
+      "error": "Source file unavailable"
     }
   ],
   "forecasts": [
+    {
+      "fixture": {
+        "event_id": "BR1_599ea72f2449f40f0526b6fa",
+        "league": "BR1",
+        "season": "2026",
+        "date": "2026-10-28",
+        "home": "cr vasco da gama",
+        "away": "cr flamengo",
+        "home_name": "CR Vasco da Gama",
+        "away_name": "CR Flamengo",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026/br.1.json",
+        "captured_at_utc": "2026-10-25T12:01:16.791819+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "BR1",
+        "home": "cr vasco da gama",
+        "away": "cr flamengo",
+        "expected_home_goals": 1.2438013080963182,
+        "expected_away_goals": 1.7805954543032028,
+        "probabilities": {
+          "home": 0.2673565176003591,
+          "draw": 0.23265429968126694,
+          "away": 0.49998918271837395
+        },
+        "predicted_outcome": "away",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.8044661434871848,
+          "2.5": 0.5822535294499853,
+          "3.5": 0.35823382596383857
+        },
+        "both_teams_score": 0.5917630936470326,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 1130,
+        "prior_team_games": {
+          "cr vasco da gama": 113,
+          "cr flamengo": 113
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+      "status": "pending",
+      "result": null
+    },
+    {
+      "fixture": {
+        "event_id": "BR1_63f01498dc17836f2f32bb84",
+        "league": "BR1",
+        "season": "2026",
+        "date": "2026-10-28",
+        "home": "fluminense fc",
+        "away": "sc internacional",
+        "home_name": "Fluminense FC",
+        "away_name": "SC Internacional",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026/br.1.json",
+        "captured_at_utc": "2026-10-25T12:01:16.791819+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "BR1",
+        "home": "fluminense fc",
+        "away": "sc internacional",
+        "expected_home_goals": 1.6549350170826789,
+        "expected_away_goals": 0.8584639481478044,
+        "probabilities": {
+          "home": 0.5622540787175145,
+          "draw": 0.24398542973087692,
+          "away": 0.19376049155160865
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          0
+        ],
+        "over": {
+          "1.5": 0.7154411037526827,
+          "2.5": 0.4596192940715269,
+          "3.5": 0.24529187015952492
+        },
+        "both_teams_score": 0.4660754257165082,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 1130,
+        "prior_team_games": {
+          "fluminense fc": 113,
+          "sc internacional": 114
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+      "status": "pending",
+      "result": null
+    },
+    {
+      "fixture": {
+        "event_id": "BR1_883932f9704bf377911ee6e5",
+        "league": "BR1",
+        "season": "2026",
+        "date": "2026-10-28",
+        "home": "ca mineiro",
+        "away": "cruzeiro ec",
+        "home_name": "CA Mineiro",
+        "away_name": "Cruzeiro EC",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026/br.1.json",
+        "captured_at_utc": "2026-10-25T12:01:16.791819+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "BR1",
+        "home": "ca mineiro",
+        "away": "cruzeiro ec",
+        "expected_home_goals": 1.5665348675572808,
+        "expected_away_goals": 1.1854065145008086,
+        "probabilities": {
+          "home": 0.4615439691811366,
+          "draw": 0.2500609130670171,
+          "away": 0.28839511775184656
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.7606116078168147,
+          "2.5": 0.5190124558933077,
+          "3.5": 0.29739022121049513
+        },
+        "both_teams_score": 0.5494146217683027,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 1130,
+        "prior_team_games": {
+          "ca mineiro": 112,
+          "cruzeiro ec": 113
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+      "status": "pending",
+      "result": null
+    },
+    {
+      "fixture": {
+        "event_id": "BR1_91ec442d20924ac8fcb52019",
+        "league": "BR1",
+        "season": "2026",
+        "date": "2026-10-28",
+        "home": "sc corinthians paulista",
+        "away": "mirassol fc",
+        "home_name": "SC Corinthians Paulista",
+        "away_name": "Mirassol FC",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026/br.1.json",
+        "captured_at_utc": "2026-10-25T12:01:16.791819+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "BR1",
+        "home": "sc corinthians paulista",
+        "away": "mirassol fc",
+        "expected_home_goals": 1.2827038438688434,
+        "expected_away_goals": 1.0145860758148482,
+        "probabilities": {
+          "home": 0.4257369815637224,
+          "draw": 0.2806128409513607,
+          "away": 0.2936501774849169
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.6685204050911336,
+          "2.5": 0.40324237568715837,
+          "3.5": 0.2001021947327231
+        },
+        "both_teams_score": 0.4606919073175353,
+        "total_goals_80": [
+          0,
+          4
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 1130,
+        "prior_team_games": {
+          "sc corinthians paulista": 113,
+          "mirassol fc": 66
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+      "status": "pending",
+      "result": null
+    },
+    {
+      "fixture": {
+        "event_id": "BR1_9c8a7a3ebb13ba6736df4f60",
+        "league": "BR1",
+        "season": "2026",
+        "date": "2026-10-28",
+        "home": "coritiba fbc",
+        "away": "ec vitoria",
+        "home_name": "Coritiba FBC",
+        "away_name": "EC Vitória",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026/br.1.json",
+        "captured_at_utc": "2026-10-25T12:01:16.791819+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "BR1",
+        "home": "coritiba fbc",
+        "away": "ec vitoria",
+        "expected_home_goals": 1.7784930658609128,
+        "expected_away_goals": 1.0699256725548731,
+        "probabilities": {
+          "home": 0.5397158842251977,
+          "draw": 0.23313664268184497,
+          "away": 0.2271474730929575
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.7770385498566886,
+          "2.5": 0.5420075585460294,
+          "3.5": 0.31885199862678987
+        },
+        "both_teams_score": 0.5460093814969957,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 1130,
+        "prior_team_games": {
+          "coritiba fbc": 38,
+          "ec vitoria": 104
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+      "status": "pending",
+      "result": null
+    },
+    {
+      "fixture": {
+        "event_id": "BR1_a8cc099447b231b418fc1f85",
+        "league": "BR1",
+        "season": "2026",
+        "date": "2026-10-28",
+        "home": "rb bragantino",
+        "away": "chapecoense af",
+        "home_name": "RB Bragantino",
+        "away_name": "Chapecoense AF",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026/br.1.json",
+        "captured_at_utc": "2026-10-25T12:01:16.791819+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "BR1",
+        "home": "rb bragantino",
+        "away": "chapecoense af",
+        "expected_home_goals": 1.5690225181766262,
+        "expected_away_goals": 1.0108606554818795,
+        "probabilities": {
+          "home": 0.5030158569005747,
+          "draw": 0.2529258789558946,
+          "away": 0.24405826414353088
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.7287062255900392,
+          "2.5": 0.47650856246592094,
+          "3.5": 0.2596283932892848
+        },
+        "both_teams_score": 0.5036285674104539,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 1130,
+        "prior_team_games": {
+          "rb bragantino": 112,
+          "chapecoense af": 27
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+      "status": "pending",
+      "result": null
+    },
+    {
+      "fixture": {
+        "event_id": "BR1_bc62b913de146768b02e0f13",
+        "league": "BR1",
+        "season": "2026",
+        "date": "2026-10-28",
+        "home": "clube do remo",
+        "away": "botafogo fr",
+        "home_name": "Clube do Remo",
+        "away_name": "Botafogo FR",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026/br.1.json",
+        "captured_at_utc": "2026-10-25T12:01:16.791819+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "BR1",
+        "home": "clube do remo",
+        "away": "botafogo fr",
+        "expected_home_goals": 1.317249299068675,
+        "expected_away_goals": 1.234551299841585,
+        "probabilities": {
+          "home": 0.38625669808652374,
+          "draw": 0.2665420172949669,
+          "away": 0.34720128461850935
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.7231684036390676,
+          "2.5": 0.4694040857544828,
+          "3.5": 0.2535521063011705
+        },
+        "both_teams_score": 0.5191047866482863,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 1130,
+        "prior_team_games": {
+          "clube do remo": 28,
+          "botafogo fr": 114
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+      "status": "pending",
+      "result": null
+    },
+    {
+      "fixture": {
+        "event_id": "BR1_cc6f1857b551e1f4373214c3",
+        "league": "BR1",
+        "season": "2026",
+        "date": "2026-10-28",
+        "home": "ec bahia",
+        "away": "sao paulo fc",
+        "home_name": "EC Bahia",
+        "away_name": "São Paulo FC",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026/br.1.json",
+        "captured_at_utc": "2026-10-25T12:01:16.791819+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "BR1",
+        "home": "ec bahia",
+        "away": "sao paulo fc",
+        "expected_home_goals": 1.5950485484266275,
+        "expected_away_goals": 0.805885991411777,
+        "probabilities": {
+          "home": 0.5609740522476708,
+          "draw": 0.2503741617916197,
+          "away": 0.1886517859607096
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          0
+        ],
+        "over": {
+          "1.5": 0.6917623742594121,
+          "2.5": 0.4305353993952272,
+          "3.5": 0.22147244383225403
+        },
+        "both_teams_score": 0.44104254957672384,
+        "total_goals_80": [
+          1,
+          4
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 1130,
+        "prior_team_games": {
+          "ec bahia": 113,
+          "sao paulo fc": 112
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+      "status": "pending",
+      "result": null
+    },
+    {
+      "fixture": {
+        "event_id": "BR1_eae802c189f00af37623cdb3",
+        "league": "BR1",
+        "season": "2026",
+        "date": "2026-10-28",
+        "home": "gremio fbpa",
+        "away": "ca paranaense",
+        "home_name": "Grêmio FBPA",
+        "away_name": "CA Paranaense",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026/br.1.json",
+        "captured_at_utc": "2026-10-25T12:01:16.791819+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "BR1",
+        "home": "gremio fbpa",
+        "away": "ca paranaense",
+        "expected_home_goals": 1.4753813919865415,
+        "expected_away_goals": 1.225735189311527,
+        "probabilities": {
+          "home": 0.4294754186870231,
+          "draw": 0.2557871772329094,
+          "away": 0.31473740408006745
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.7515421407837846,
+          "2.5": 0.5066489916505853,
+          "3.5": 0.2861540097272571
+        },
+        "both_teams_score": 0.5448972127197613,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 1130,
+        "prior_team_games": {
+          "gremio fbpa": 113,
+          "ca paranaense": 75
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+      "status": "pending",
+      "result": null
+    },
+    {
+      "fixture": {
+        "event_id": "BR1_ff340dfaa8e764f6737e50eb",
+        "league": "BR1",
+        "season": "2026",
+        "date": "2026-10-28",
+        "home": "santos fc",
+        "away": "se palmeiras",
+        "home_name": "Santos FC",
+        "away_name": "SE Palmeiras",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026/br.1.json",
+        "captured_at_utc": "2026-10-25T12:01:16.791819+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "BR1",
+        "home": "santos fc",
+        "away": "se palmeiras",
+        "expected_home_goals": 1.0808798381103075,
+        "expected_away_goals": 1.459457337063033,
+        "probabilities": {
+          "home": 0.28007659829800496,
+          "draw": 0.2617582492769274,
+          "away": 0.4581651524250678
+        },
+        "predicted_outcome": "away",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.7208804809891233,
+          "2.5": 0.4664914890240468,
+          "3.5": 0.25108021794279506
+        },
+        "both_teams_score": 0.5071806095676541,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 1130,
+        "prior_team_games": {
+          "santos fc": 75,
+          "se palmeiras": 113
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+      "status": "pending",
+      "result": null
+    },
+    {
+      "fixture": {
+        "event_id": "DE1_0595a47b764241e448dc42ff",
+        "league": "DE1",
+        "season": "2026-27",
+        "date": "2026-10-31",
+        "home": "sv werder bremen",
+        "away": "tsg 1899 hoffenheim",
+        "home_name": "SV Werder Bremen",
+        "away_name": "TSG 1899 Hoffenheim",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/de.1.json",
+        "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "DE1",
+        "home": "sv werder bremen",
+        "away": "tsg 1899 hoffenheim",
+        "expected_home_goals": 1.813416925084631,
+        "expected_away_goals": 1.6764355073290378,
+        "probabilities": {
+          "home": 0.416784384532317,
+          "draw": 0.2226587033082005,
+          "away": 0.3605569121594828
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.8630353748433841,
+          "2.5": 0.6772718355712624,
+          "3.5": 0.46117605577706705
+        },
+        "both_teams_score": 0.6803699861748486,
+        "total_goals_80": [
+          1,
+          6
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 882,
+        "prior_team_games": {
+          "sv werder bremen": 98,
+          "tsg 1899 hoffenheim": 98
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+      "status": "pending",
+      "result": null
+    },
+    {
+      "fixture": {
+        "event_id": "DE1_07851ac9c66f7945b4f7bce5",
+        "league": "DE1",
+        "season": "2026-27",
+        "date": "2026-10-31",
+        "home": "bayer 04 leverkusen",
+        "away": "vfb stuttgart",
+        "home_name": "Bayer 04 Leverkusen",
+        "away_name": "VfB Stuttgart",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/de.1.json",
+        "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "DE1",
+        "home": "bayer 04 leverkusen",
+        "away": "vfb stuttgart",
+        "expected_home_goals": 2.3294190092512843,
+        "expected_away_goals": 1.473640023346151,
+        "probabilities": {
+          "home": 0.5670128031880955,
+          "draw": 0.19581071634060832,
+          "away": 0.23717648047129622
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          2,
+          1
+        ],
+        "over": {
+          "1.5": 0.8928800473057882,
+          "2.5": 0.7315970500711035,
+          "3.5": 0.5271407969251856
+        },
+        "both_teams_score": 0.6958600796195381,
+        "total_goals_80": [
+          1,
+          6
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 882,
+        "prior_team_games": {
+          "bayer 04 leverkusen": 98,
+          "vfb stuttgart": 98
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+      "status": "pending",
+      "result": null
+    },
     {
       "fixture": {
         "event_id": "DE1_2f102cca50ca1340f5b1c128",
@@ -147,6 +930,70 @@
         "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
       },
       "recorded_at_utc": "2026-10-23T16:48:20.082045+00:00",
+      "status": "pending",
+      "result": null
+    },
+    {
+      "fixture": {
+        "event_id": "DE1_34198c9d947335555e729cc3",
+        "league": "DE1",
+        "season": "2026-27",
+        "date": "2026-10-31",
+        "home": "fc bayern munchen",
+        "away": "borussia dortmund",
+        "home_name": "FC Bayern München",
+        "away_name": "Borussia Dortmund",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/de.1.json",
+        "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "DE1",
+        "home": "fc bayern munchen",
+        "away": "borussia dortmund",
+        "expected_home_goals": 2.456337242990048,
+        "expected_away_goals": 1.3871005276809565,
+        "probabilities": {
+          "home": 0.6094336506443813,
+          "draw": 0.18586485858666776,
+          "away": 0.2047014907689512
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          2,
+          1
+        ],
+        "over": {
+          "1.5": 0.8962543469308444,
+          "2.5": 0.7380472736230028,
+          "3.5": 0.535360926576778
+        },
+        "both_teams_score": 0.6858728463381015,
+        "total_goals_80": [
+          1,
+          6
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 882,
+        "prior_team_games": {
+          "fc bayern munchen": 98,
+          "borussia dortmund": 98
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
       "status": "pending",
       "result": null
     },
@@ -451,6 +1298,70 @@
     },
     {
       "fixture": {
+        "event_id": "DE1_650fbf325054a4266c7ee236",
+        "league": "DE1",
+        "season": "2026-27",
+        "date": "2026-11-01",
+        "home": "1. fc union berlin",
+        "away": "1. fc koln",
+        "home_name": "1. FC Union Berlin",
+        "away_name": "1. FC Köln",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/de.1.json",
+        "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "DE1",
+        "home": "1. fc union berlin",
+        "away": "1. fc koln",
+        "expected_home_goals": 1.8850901071284165,
+        "expected_away_goals": 1.43672743421744,
+        "probabilities": {
+          "home": 0.48164686894458386,
+          "draw": 0.22368088092606966,
+          "away": 0.2946722501293467
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.8440377830969941,
+          "2.5": 0.6449362865176723,
+          "3.5": 0.4244766719025381
+        },
+        "both_teams_score": 0.6465674125465457,
+        "total_goals_80": [
+          1,
+          6
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 882,
+        "prior_team_games": {
+          "1. fc union berlin": 98,
+          "1. fc koln": 64
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+      "status": "pending",
+      "result": null
+    },
+    {
+      "fixture": {
         "event_id": "DE1_8645fde3e4b08d929066050c",
         "league": "DE1",
         "season": "2026-27",
@@ -505,6 +1416,134 @@
         "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
       },
       "recorded_at_utc": "2026-10-23T16:48:20.082045+00:00",
+      "status": "pending",
+      "result": null
+    },
+    {
+      "fixture": {
+        "event_id": "DE1_8805585488aa85aaf8b86684",
+        "league": "DE1",
+        "season": "2026-27",
+        "date": "2026-10-31",
+        "home": "fc augsburg",
+        "away": "sc freiburg",
+        "home_name": "FC Augsburg",
+        "away_name": "SC Freiburg",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/de.1.json",
+        "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "DE1",
+        "home": "fc augsburg",
+        "away": "sc freiburg",
+        "expected_home_goals": 1.690127727051612,
+        "expected_away_goals": 1.2549130606061931,
+        "probabilities": {
+          "home": 0.4761500586656029,
+          "draw": 0.23927241308522584,
+          "away": 0.2845775282491715
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.792491192480828,
+          "2.5": 0.5643846880967108,
+          "3.5": 0.3404570349829547
+        },
+        "both_teams_score": 0.5830033233586226,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 882,
+        "prior_team_games": {
+          "fc augsburg": 98,
+          "sc freiburg": 98
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+      "status": "pending",
+      "result": null
+    },
+    {
+      "fixture": {
+        "event_id": "DE1_c5a27426cab5647c3c2f8903",
+        "league": "DE1",
+        "season": "2026-27",
+        "date": "2026-11-01",
+        "home": "eintracht frankfurt",
+        "away": "hamburger sv",
+        "home_name": "Eintracht Frankfurt",
+        "away_name": "Hamburger SV",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/de.1.json",
+        "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "DE1",
+        "home": "eintracht frankfurt",
+        "away": "hamburger sv",
+        "expected_home_goals": 1.9666250518614417,
+        "expected_away_goals": 1.2729725947473307,
+        "probabilities": {
+          "home": 0.5354182595196247,
+          "draw": 0.21868680048199843,
+          "away": 0.24589493999837697
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.8338940226465101,
+          "2.5": 0.6282989166644941,
+          "3.5": 0.4062837761666208
+        },
+        "both_teams_score": 0.6192532822978933,
+        "total_goals_80": [
+          1,
+          6
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 882,
+        "prior_team_games": {
+          "eintracht frankfurt": 98,
+          "hamburger sv": 38
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
       "status": "pending",
       "result": null
     },
@@ -571,6 +1610,134 @@
     },
     {
       "fixture": {
+        "event_id": "EN1_00347c7e0feea1df3a1fe3b2",
+        "league": "EN1",
+        "season": "2026-27",
+        "date": "2026-10-31",
+        "home": "aston villa fc",
+        "away": "fulham fc",
+        "home_name": "Aston Villa FC",
+        "away_name": "Fulham FC",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/en.1.json",
+        "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "EN1",
+        "home": "aston villa fc",
+        "away": "fulham fc",
+        "expected_home_goals": 1.4708407042207143,
+        "expected_away_goals": 1.0303159427983122,
+        "probabilities": {
+          "home": 0.47306170815362014,
+          "draw": 0.2620380719759141,
+          "away": 0.2649002198704659
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.7129397808873813,
+          "2.5": 0.4564835478086823,
+          "3.5": 0.2426711437972662
+        },
+        "both_teams_score": 0.4953636584425378,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 1100,
+        "prior_team_games": {
+          "aston villa fc": 110,
+          "fulham fc": 110
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+      "status": "pending",
+      "result": null
+    },
+    {
+      "fixture": {
+        "event_id": "EN1_0c74263399ca5e42a468f6e4",
+        "league": "EN1",
+        "season": "2026-27",
+        "date": "2026-11-01",
+        "home": "liverpool fc",
+        "away": "arsenal fc",
+        "home_name": "Liverpool FC",
+        "away_name": "Arsenal FC",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/en.1.json",
+        "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "EN1",
+        "home": "liverpool fc",
+        "away": "arsenal fc",
+        "expected_home_goals": 1.2648279613455542,
+        "expected_away_goals": 1.2538505978968204,
+        "probabilities": {
+          "home": 0.3681757258874582,
+          "draw": 0.2688638079457467,
+          "away": 0.36296046616679517
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.7165141444849762,
+          "2.5": 0.46096919935855246,
+          "3.5": 0.2464240079543218
+        },
+        "both_teams_score": 0.5128744398608553,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 1100,
+        "prior_team_games": {
+          "liverpool fc": 110,
+          "arsenal fc": 110
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+      "status": "pending",
+      "result": null
+    },
+    {
+      "fixture": {
         "event_id": "EN1_150902d8773699de1444f1c8",
         "league": "EN1",
         "season": "2026-27",
@@ -625,6 +1792,70 @@
         "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
       },
       "recorded_at_utc": "2026-10-23T16:48:20.082045+00:00",
+      "status": "pending",
+      "result": null
+    },
+    {
+      "fixture": {
+        "event_id": "EN1_29df11477f7621d597740701",
+        "league": "EN1",
+        "season": "2026-27",
+        "date": "2026-10-31",
+        "home": "brentford fc",
+        "away": "nottingham forest fc",
+        "home_name": "Brentford FC",
+        "away_name": "Nottingham Forest FC",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/en.1.json",
+        "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "EN1",
+        "home": "brentford fc",
+        "away": "nottingham forest fc",
+        "expected_home_goals": 1.715934147513259,
+        "expected_away_goals": 1.4080203585098172,
+        "probabilities": {
+          "home": 0.44898753670442115,
+          "draw": 0.2345371689177176,
+          "away": 0.3164752943778614
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.8186165483934912,
+          "2.5": 0.6040000019926363,
+          "3.5": 0.38051589292728255
+        },
+        "both_teams_score": 0.619560128858015,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 1100,
+        "prior_team_games": {
+          "brentford fc": 110,
+          "nottingham forest fc": 110
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
       "status": "pending",
       "result": null
     },
@@ -748,6 +1979,134 @@
     },
     {
       "fixture": {
+        "event_id": "EN1_38d31b25b70cee45c726182e",
+        "league": "EN1",
+        "season": "2026-27",
+        "date": "2026-10-31",
+        "home": "manchester city fc",
+        "away": "brighton & hove albion fc",
+        "home_name": "Manchester City FC",
+        "away_name": "Brighton & Hove Albion FC",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/en.1.json",
+        "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "EN1",
+        "home": "manchester city fc",
+        "away": "brighton & hove albion fc",
+        "expected_home_goals": 2.0300337772749435,
+        "expected_away_goals": 1.3163288479325934,
+        "probabilities": {
+          "home": 0.5395271537982426,
+          "draw": 0.2143049836071166,
+          "away": 0.24616786259464088
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          2,
+          1
+        ],
+        "over": {
+          "1.5": 0.8469550037993913,
+          "2.5": 0.6497993735596163,
+          "3.5": 0.42988129609840986
+        },
+        "both_teams_score": 0.6357633177261989,
+        "total_goals_80": [
+          1,
+          6
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 1100,
+        "prior_team_games": {
+          "manchester city fc": 110,
+          "brighton & hove albion fc": 110
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+      "status": "pending",
+      "result": null
+    },
+    {
+      "fixture": {
+        "event_id": "EN1_47d0257d5e990f384b6958e1",
+        "league": "EN1",
+        "season": "2026-27",
+        "date": "2026-10-31",
+        "home": "chelsea fc",
+        "away": "manchester united fc",
+        "home_name": "Chelsea FC",
+        "away_name": "Manchester United FC",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/en.1.json",
+        "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "EN1",
+        "home": "chelsea fc",
+        "away": "manchester united fc",
+        "expected_home_goals": 1.5317220009819468,
+        "expected_away_goals": 1.4718246963303119,
+        "probabilities": {
+          "home": 0.39180379163969625,
+          "draw": 0.24271926618765377,
+          "away": 0.3654769421726501
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.8013808396088304,
+          "2.5": 0.5776040574596344,
+          "3.5": 0.35356271913984033
+        },
+        "both_teams_score": 0.6039413643931058,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 1100,
+        "prior_team_games": {
+          "chelsea fc": 110,
+          "manchester united fc": 110
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+      "status": "pending",
+      "result": null
+    },
+    {
+      "fixture": {
         "event_id": "EN1_4edf5e1d91159b772f30f52c",
         "league": "EN1",
         "season": "2026-27",
@@ -802,6 +2161,70 @@
         "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
       },
       "recorded_at_utc": "2026-10-23T16:48:20.082045+00:00",
+      "status": "pending",
+      "result": null
+    },
+    {
+      "fixture": {
+        "event_id": "EN1_7b62bedeebc4926ca28ee97e",
+        "league": "EN1",
+        "season": "2026-27",
+        "date": "2026-10-31",
+        "home": "afc bournemouth",
+        "away": "leeds united fc",
+        "home_name": "AFC Bournemouth",
+        "away_name": "Leeds United FC",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/en.1.json",
+        "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "EN1",
+        "home": "afc bournemouth",
+        "away": "leeds united fc",
+        "expected_home_goals": 1.4264927764094915,
+        "expected_away_goals": 1.090028716066894,
+        "probabilities": {
+          "home": 0.44736893539056366,
+          "draw": 0.2643909066001886,
+          "away": 0.2882401580092479
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.7160761480854337,
+          "2.5": 0.4604178495363321,
+          "3.5": 0.2459613151934127
+        },
+        "both_teams_score": 0.5043834287258643,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 1100,
+        "prior_team_games": {
+          "afc bournemouth": 110,
+          "leeds united fc": 43
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
       "status": "pending",
       "result": null
     },
@@ -922,6 +2345,70 @@
         "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
       },
       "recorded_at_utc": "2026-10-23T16:48:20.082045+00:00",
+      "status": "pending",
+      "result": null
+    },
+    {
+      "fixture": {
+        "event_id": "EN1_ae272eaaa96f5fa7bd4afe43",
+        "league": "EN1",
+        "season": "2026-27",
+        "date": "2026-10-31",
+        "home": "tottenham hotspur fc",
+        "away": "crystal palace fc",
+        "home_name": "Tottenham Hotspur FC",
+        "away_name": "Crystal Palace FC",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/en.1.json",
+        "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "EN1",
+        "home": "tottenham hotspur fc",
+        "away": "crystal palace fc",
+        "expected_home_goals": 1.3156232013497668,
+        "expected_away_goals": 1.4389428673467741,
+        "probabilities": {
+          "home": 0.34452477571246604,
+          "draw": 0.25464901708230037,
+          "away": 0.40082620720523393
+        },
+        "predicted_outcome": "away",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.7610720772750156,
+          "2.5": 0.5196463504347474,
+          "3.5": 0.2979719786798802
+        },
+        "both_teams_score": 0.5581512106145065,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 1100,
+        "prior_team_games": {
+          "tottenham hotspur fc": 110,
+          "crystal palace fc": 110
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
       "status": "pending",
       "result": null
     },
@@ -1106,6 +2593,70 @@
     },
     {
       "fixture": {
+        "event_id": "EN2_016401185eaba71a77fb0bc1",
+        "league": "EN2",
+        "season": "2026-27",
+        "date": "2026-10-31",
+        "home": "middlesbrough fc",
+        "away": "charlton athletic fc",
+        "home_name": "Middlesbrough FC",
+        "away_name": "Charlton Athletic FC",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/en.2.json",
+        "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "EN2",
+        "home": "middlesbrough fc",
+        "away": "charlton athletic fc",
+        "expected_home_goals": 1.7593301049073342,
+        "expected_away_goals": 0.9713801825562969,
+        "probabilities": {
+          "home": 0.5590084809519231,
+          "draw": 0.23420870238313965,
+          "away": 0.20678281666493734
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          0
+        ],
+        "over": {
+          "1.5": 0.75685848681073,
+          "2.5": 0.5138682368815429,
+          "3.5": 0.2926895784698798
+        },
+        "both_teams_score": 0.5144526320280416,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 1611,
+        "prior_team_games": {
+          "middlesbrough fc": 136,
+          "charlton athletic fc": 54
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+      "status": "pending",
+      "result": null
+    },
+    {
+      "fixture": {
         "event_id": "EN2_03d92eb8c2b40401e3e4eb5a",
         "league": "EN2",
         "season": "2026-27",
@@ -1160,6 +2711,70 @@
         "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
       },
       "recorded_at_utc": "2026-10-23T16:48:20.082045+00:00",
+      "status": "pending",
+      "result": null
+    },
+    {
+      "fixture": {
+        "event_id": "EN2_1192c3c3f6f307473304df43",
+        "league": "EN2",
+        "season": "2026-27",
+        "date": "2026-10-31",
+        "home": "burnley fc",
+        "away": "portsmouth fc",
+        "home_name": "Burnley FC",
+        "away_name": "Portsmouth FC",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/en.2.json",
+        "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "EN2",
+        "home": "burnley fc",
+        "away": "portsmouth fc",
+        "expected_home_goals": 1.5724192966401669,
+        "expected_away_goals": 1.1339713299069074,
+        "probabilities": {
+          "home": 0.4747787129996533,
+          "draw": 0.25069969615833004,
+          "away": 0.2745215908420167
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.7524968823336856,
+          "2.5": 0.5079396839064938,
+          "3.5": 0.28731724741383896
+        },
+        "both_teams_score": 0.5374820003533697,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 1611,
+        "prior_team_games": {
+          "burnley fc": 54,
+          "portsmouth fc": 99
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
       "status": "pending",
       "result": null
     },
@@ -1525,6 +3140,70 @@
     },
     {
       "fixture": {
+        "event_id": "EN2_59e393fe09f074c9a6baefb0",
+        "league": "EN2",
+        "season": "2026-27",
+        "date": "2026-10-31",
+        "home": "millwall fc",
+        "away": "derby county fc",
+        "home_name": "Millwall FC",
+        "away_name": "Derby County FC",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/en.2.json",
+        "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "EN2",
+        "home": "millwall fc",
+        "away": "derby county fc",
+        "expected_home_goals": 1.5452305092423644,
+        "expected_away_goals": 1.2218683069933214,
+        "probabilities": {
+          "home": 0.44802298048712724,
+          "draw": 0.25075086183118944,
+          "away": 0.3012261576816836
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.763260205806519,
+          "2.5": 0.522666869420406,
+          "3.5": 0.30075169065100354
+        },
+        "both_teams_score": 0.5549022548865731,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 1611,
+        "prior_team_games": {
+          "millwall fc": 135,
+          "derby county fc": 100
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+      "status": "pending",
+      "result": null
+    },
+    {
+      "fixture": {
         "event_id": "EN2_6255af74555a97321c53cfd6",
         "league": "EN2",
         "season": "2026-27",
@@ -1702,6 +3381,70 @@
     },
     {
       "fixture": {
+        "event_id": "EN2_a393bd88f0e2f56c145bc3c4",
+        "league": "EN2",
+        "season": "2026-27",
+        "date": "2026-10-31",
+        "home": "southampton fc",
+        "away": "queens park rangers fc",
+        "home_name": "Southampton FC",
+        "away_name": "Queens Park Rangers FC",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/en.2.json",
+        "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "EN2",
+        "home": "southampton fc",
+        "away": "queens park rangers fc",
+        "expected_home_goals": 1.7914695410306463,
+        "expected_away_goals": 0.8987571218201367,
+        "probabilities": {
+          "home": 0.5844243836701354,
+          "draw": 0.22983331064539725,
+          "away": 0.1857423056844675
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          0
+        ],
+        "over": {
+          "1.5": 0.749560719346046,
+          "2.5": 0.5039783670387415,
+          "3.5": 0.2837543030045001
+        },
+        "both_teams_score": 0.4940752695367977,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 1611,
+        "prior_team_games": {
+          "southampton fc": 92,
+          "queens park rangers fc": 133
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+      "status": "pending",
+      "result": null
+    },
+    {
+      "fixture": {
         "event_id": "EN2_a93610094a0000e17269f098",
         "league": "EN2",
         "season": "2026-27",
@@ -1761,6 +3504,198 @@
     },
     {
       "fixture": {
+        "event_id": "EN2_b82ad6f40143b1eca2eddc87",
+        "league": "EN2",
+        "season": "2026-27",
+        "date": "2026-10-31",
+        "home": "swansea city afc",
+        "away": "blackburn rovers fc",
+        "home_name": "Swansea City AFC",
+        "away_name": "Blackburn Rovers FC",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/en.2.json",
+        "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "EN2",
+        "home": "swansea city afc",
+        "away": "blackburn rovers fc",
+        "expected_home_goals": 1.3822370895014071,
+        "expected_away_goals": 0.9548956720540285,
+        "probabilities": {
+          "home": 0.4675302392142841,
+          "draw": 0.2728925651657466,
+          "away": 0.2595771956199694
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          0
+        ],
+        "over": {
+          "1.5": 0.677618862918853,
+          "2.5": 0.41378355843236697,
+          "3.5": 0.20824418050892704
+        },
+        "both_teams_score": 0.46073555719446263,
+        "total_goals_80": [
+          1,
+          4
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 1611,
+        "prior_team_games": {
+          "swansea city afc": 133,
+          "blackburn rovers fc": 133
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+      "status": "pending",
+      "result": null
+    },
+    {
+      "fixture": {
+        "event_id": "EN2_d7903f0a89ed66b7e5e44781",
+        "league": "EN2",
+        "season": "2026-27",
+        "date": "2026-10-31",
+        "home": "stoke city fc",
+        "away": "preston north end fc",
+        "home_name": "Stoke City FC",
+        "away_name": "Preston North End FC",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/en.2.json",
+        "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "EN2",
+        "home": "stoke city fc",
+        "away": "preston north end fc",
+        "expected_home_goals": 1.5926057686463106,
+        "expected_away_goals": 1.1124303523659116,
+        "probabilities": {
+          "home": 0.48482543368465075,
+          "draw": 0.249364300113537,
+          "away": 0.26581026620181225
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.75225198379533,
+          "2.5": 0.5076083712930721,
+          "3.5": 0.2870184350952307
+        },
+        "both_teams_score": 0.5347139987928868,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 1611,
+        "prior_team_games": {
+          "stoke city fc": 133,
+          "preston north end fc": 133
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+      "status": "pending",
+      "result": null
+    },
+    {
+      "fixture": {
+        "event_id": "EN2_e20b416c1fd14fb387d8f728",
+        "league": "EN2",
+        "season": "2026-27",
+        "date": "2026-10-31",
+        "home": "norwich city fc",
+        "away": "watford fc",
+        "home_name": "Norwich City FC",
+        "away_name": "Watford FC",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/en.2.json",
+        "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "EN2",
+        "home": "norwich city fc",
+        "away": "watford fc",
+        "expected_home_goals": 1.7185503977947145,
+        "expected_away_goals": 1.0625058745466052,
+        "probabilities": {
+          "home": 0.5273445778331569,
+          "draw": 0.23855944471668214,
+          "away": 0.23409597745016122
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.7656765526951482,
+          "2.5": 0.5260184236985409,
+          "3.5": 0.30385084274400775
+        },
+        "both_teams_score": 0.5370583791949556,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 1611,
+        "prior_team_games": {
+          "norwich city fc": 135,
+          "watford fc": 133
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+      "status": "pending",
+      "result": null
+    },
+    {
+      "fixture": {
         "event_id": "EN2_f8a77e4f0c771334f9506bbd",
         "league": "EN2",
         "season": "2026-27",
@@ -1815,6 +3750,198 @@
         "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
       },
       "recorded_at_utc": "2026-10-23T16:48:20.082045+00:00",
+      "status": "pending",
+      "result": null
+    },
+    {
+      "fixture": {
+        "event_id": "ES1_002eb32930cf37bd5342d007",
+        "league": "ES1",
+        "season": "2026-27",
+        "date": "2026-11-01",
+        "home": "fc barcelona",
+        "away": "deportivo alaves",
+        "home_name": "FC Barcelona",
+        "away_name": "Deportivo Alavés",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/es.1.json",
+        "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "ES1",
+        "home": "fc barcelona",
+        "away": "deportivo alaves",
+        "expected_home_goals": 2.475790364422664,
+        "expected_away_goals": 0.909784473017637,
+        "probabilities": {
+          "home": 0.7162402535831345,
+          "draw": 0.16547216980254778,
+          "away": 0.11828757661431759
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          2,
+          0
+        ],
+        "over": {
+          "1.5": 0.8515124449207602,
+          "2.5": 0.6574692704834152,
+          "3.5": 0.43848670756604385
+        },
+        "both_teams_score": 0.5471506884855005,
+        "total_goals_80": [
+          1,
+          6
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 1100,
+        "prior_team_games": {
+          "fc barcelona": 110,
+          "deportivo alaves": 110
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+      "status": "pending",
+      "result": null
+    },
+    {
+      "fixture": {
+        "event_id": "ES1_0a4ef4edd6f6b5b244e94cbb",
+        "league": "ES1",
+        "season": "2026-27",
+        "date": "2026-11-01",
+        "home": "elche cf",
+        "away": "valencia cf",
+        "home_name": "Elche CF",
+        "away_name": "Valencia CF",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/es.1.json",
+        "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "ES1",
+        "home": "elche cf",
+        "away": "valencia cf",
+        "expected_home_goals": 1.5050418997264643,
+        "expected_away_goals": 1.365101217140807,
+        "probabilities": {
+          "home": 0.40708768043645516,
+          "draw": 0.24855181603429619,
+          "away": 0.3443605035292489
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.7805984418739628,
+          "2.5": 0.5470968787004132,
+          "3.5": 0.32370257726030965
+        },
+        "both_teams_score": 0.5793279926304167,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 1100,
+        "prior_team_games": {
+          "elche cf": 45,
+          "valencia cf": 110
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+      "status": "pending",
+      "result": null
+    },
+    {
+      "fixture": {
+        "event_id": "ES1_0a641e6e34c25bb38b7d5abd",
+        "league": "ES1",
+        "season": "2026-27",
+        "date": "2026-11-01",
+        "home": "getafe cf",
+        "away": "sevilla fc",
+        "home_name": "Getafe CF",
+        "away_name": "Sevilla FC",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/es.1.json",
+        "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "ES1",
+        "home": "getafe cf",
+        "away": "sevilla fc",
+        "expected_home_goals": 1.1928136031938457,
+        "expected_away_goals": 0.9931412163024222,
+        "probabilities": {
+          "home": 0.40504758128363166,
+          "draw": 0.29050406275967705,
+          "away": 0.30444835595669134
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          0
+        ],
+        "over": {
+          "1.5": 0.6419930176705307,
+          "2.5": 0.3735177701286303,
+          "3.5": 0.17789284970207356
+        },
+        "both_teams_score": 0.43859256023317345,
+        "total_goals_80": [
+          0,
+          4
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 1100,
+        "prior_team_games": {
+          "getafe cf": 110,
+          "sevilla fc": 111
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
       "status": "pending",
       "result": null
     },
@@ -2001,6 +4128,70 @@
     },
     {
       "fixture": {
+        "event_id": "ES1_32510e6f645df100fc182c0f",
+        "league": "ES1",
+        "season": "2026-27",
+        "date": "2026-11-01",
+        "home": "levante ud",
+        "away": "club atletico de madrid",
+        "home_name": "Levante UD",
+        "away_name": "Club Atlético de Madrid",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/es.1.json",
+        "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "ES1",
+        "home": "levante ud",
+        "away": "club atletico de madrid",
+        "expected_home_goals": 1.6238902385304168,
+        "expected_away_goals": 1.552886126432557,
+        "probabilities": {
+          "home": 0.3976750697228945,
+          "draw": 0.23508034371970907,
+          "away": 0.3672445865573966
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.8257451890950188,
+          "2.5": 0.615228347963586,
+          "3.5": 0.39230670618591934
+        },
+        "both_teams_score": 0.6329533244362701,
+        "total_goals_80": [
+          1,
+          6
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 1100,
+        "prior_team_games": {
+          "levante ud": 44,
+          "club atletico de madrid": 111
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+      "status": "pending",
+      "result": null
+    },
+    {
+      "fixture": {
         "event_id": "ES1_3292ce876d8bf7eb4c88eff7",
         "league": "ES1",
         "season": "2026-27",
@@ -2119,6 +4310,134 @@
     },
     {
       "fixture": {
+        "event_id": "ES1_44ae52dbb778658d7a010316",
+        "league": "ES1",
+        "season": "2026-27",
+        "date": "2026-11-01",
+        "home": "athletic club",
+        "away": "real sociedad de futbol",
+        "home_name": "Athletic Club",
+        "away_name": "Real Sociedad de Fútbol",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/es.1.json",
+        "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "ES1",
+        "home": "athletic club",
+        "away": "real sociedad de futbol",
+        "expected_home_goals": 1.4988616388215763,
+        "expected_away_goals": 1.1426635415528779,
+        "probabilities": {
+          "home": 0.4541217931006761,
+          "draw": 0.2566223095009458,
+          "away": 0.2892558973983781
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.7405321771753931,
+          "2.5": 0.4919444379907336,
+          "3.5": 0.2730608471278553
+        },
+        "both_teams_score": 0.5288999021906878,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 1100,
+        "prior_team_games": {
+          "athletic club": 109,
+          "real sociedad de futbol": 110
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+      "status": "pending",
+      "result": null
+    },
+    {
+      "fixture": {
+        "event_id": "ES1_a32bfe88554b1d0384259a10",
+        "league": "ES1",
+        "season": "2026-27",
+        "date": "2026-11-01",
+        "home": "villarreal cf",
+        "away": "rcd espanyol de barcelona",
+        "home_name": "Villarreal CF",
+        "away_name": "RCD Espanyol de Barcelona",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/es.1.json",
+        "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "ES1",
+        "home": "villarreal cf",
+        "away": "rcd espanyol de barcelona",
+        "expected_home_goals": 2.0737356814178525,
+        "expected_away_goals": 1.2738206541442632,
+        "probabilities": {
+          "home": 0.5582276590695071,
+          "draw": 0.21074713100123105,
+          "away": 0.23102520992926195
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          2,
+          1
+        ],
+        "over": {
+          "1.5": 0.8470956031751927,
+          "2.5": 0.6500346637606506,
+          "3.5": 0.4301437983509929
+        },
+        "both_teams_score": 0.6296942137403791,
+        "total_goals_80": [
+          1,
+          6
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 1100,
+        "prior_team_games": {
+          "villarreal cf": 110,
+          "rcd espanyol de barcelona": 82
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+      "status": "pending",
+      "result": null
+    },
+    {
+      "fixture": {
         "event_id": "ES1_c38b4ed70323e599488fc599",
         "league": "ES1",
         "season": "2026-27",
@@ -2232,6 +4551,70 @@
         "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
       },
       "recorded_at_utc": "2026-10-23T16:48:20.082045+00:00",
+      "status": "pending",
+      "result": null
+    },
+    {
+      "fixture": {
+        "event_id": "ES1_cea3d29c0110401c5593cc82",
+        "league": "ES1",
+        "season": "2026-27",
+        "date": "2026-11-01",
+        "home": "rayo vallecano de madrid",
+        "away": "rc celta de vigo",
+        "home_name": "Rayo Vallecano de Madrid",
+        "away_name": "RC Celta de Vigo",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/es.1.json",
+        "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "ES1",
+        "home": "rayo vallecano de madrid",
+        "away": "rc celta de vigo",
+        "expected_home_goals": 1.2225279279415038,
+        "expected_away_goals": 1.018985561534869,
+        "probabilities": {
+          "home": 0.4076660852528034,
+          "draw": 0.28613177900834147,
+          "away": 0.30620213573885524
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.6554352120036366,
+          "2.5": 0.38839554464494963,
+          "3.5": 0.18887120577502298
+        },
+        "both_teams_score": 0.450851786402526,
+        "total_goals_80": [
+          0,
+          4
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 1100,
+        "prior_team_games": {
+          "rayo vallecano de madrid": 110,
+          "rc celta de vigo": 110
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
       "status": "pending",
       "result": null
     },
@@ -2713,6 +5096,262 @@
     },
     {
       "fixture": {
+        "event_id": "FR1_a876ad867144eec387a74449",
+        "league": "FR1",
+        "season": "2026-27",
+        "date": "2026-11-01",
+        "home": "rc strasbourg alsace",
+        "away": "aj auxerre",
+        "home_name": "RC Strasbourg Alsace",
+        "away_name": "AJ Auxerre",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/fr.1.json",
+        "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "FR1",
+        "home": "rc strasbourg alsace",
+        "away": "aj auxerre",
+        "expected_home_goals": 1.9186938938605922,
+        "expected_away_goals": 1.2517521217714258,
+        "probabilities": {
+          "home": 0.5296066829728557,
+          "draw": 0.22219820739424048,
+          "away": 0.24819510963290403
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.824904375285558,
+          "2.5": 0.613894140867805,
+          "3.5": 0.3908952885453575
+        },
+        "both_teams_score": 0.6091830512457413,
+        "total_goals_80": [
+          1,
+          6
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 882,
+        "prior_team_games": {
+          "rc strasbourg alsace": 98,
+          "aj auxerre": 73
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+      "status": "pending",
+      "result": null
+    },
+    {
+      "fixture": {
+        "event_id": "FR1_a999e64350d69e7b8e57d39a",
+        "league": "FR1",
+        "season": "2026-27",
+        "date": "2026-11-01",
+        "home": "paris fc",
+        "away": "as monaco fc",
+        "home_name": "Paris FC",
+        "away_name": "AS Monaco FC",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/fr.1.json",
+        "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "FR1",
+        "home": "paris fc",
+        "away": "as monaco fc",
+        "expected_home_goals": 1.6335071012004176,
+        "expected_away_goals": 1.3714057491733365,
+        "probabilities": {
+          "home": 0.4371774674706654,
+          "draw": 0.2405323308767951,
+          "away": 0.32229020165253963
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.8015843150991935,
+          "2.5": 0.5779097010122759,
+          "3.5": 0.3538687936215532
+        },
+        "both_teams_score": 0.6005494391211885,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 882,
+        "prior_team_games": {
+          "paris fc": 39,
+          "as monaco fc": 98
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+      "status": "pending",
+      "result": null
+    },
+    {
+      "fixture": {
+        "event_id": "FR1_adf7a15c65b6f9ce7b563f91",
+        "league": "FR1",
+        "season": "2026-27",
+        "date": "2026-11-01",
+        "home": "olympique de marseille",
+        "away": "toulouse fc",
+        "home_name": "Olympique de Marseille",
+        "away_name": "Toulouse FC",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/fr.1.json",
+        "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "FR1",
+        "home": "olympique de marseille",
+        "away": "toulouse fc",
+        "expected_home_goals": 1.971391270933889,
+        "expected_away_goals": 1.4668622991146612,
+        "probabilities": {
+          "home": 0.4943225532696162,
+          "draw": 0.21812173697264073,
+          "away": 0.2875557097577433
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.8574400421695887,
+          "2.5": 0.6675810126155499,
+          "3.5": 0.4499865172255077
+        },
+        "both_teams_score": 0.6622097085341916,
+        "total_goals_80": [
+          1,
+          6
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 882,
+        "prior_team_games": {
+          "olympique de marseille": 98,
+          "toulouse fc": 97
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+      "status": "pending",
+      "result": null
+    },
+    {
+      "fixture": {
+        "event_id": "FR1_b28553ea7df84dc2af19c277",
+        "league": "FR1",
+        "season": "2026-27",
+        "date": "2026-10-31",
+        "home": "olympique lyonnais",
+        "away": "angers sco",
+        "home_name": "Olympique Lyonnais",
+        "away_name": "Angers SCO",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/fr.1.json",
+        "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "FR1",
+        "home": "olympique lyonnais",
+        "away": "angers sco",
+        "expected_home_goals": 1.755718296053559,
+        "expected_away_goals": 0.9696612989895869,
+        "probabilities": {
+          "home": 0.5585830077243928,
+          "draw": 0.23454847940439563,
+          "away": 0.20686851287121177
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          0
+        ],
+        "over": {
+          "1.5": 0.7559081874919236,
+          "2.5": 0.5125720079695909,
+          "3.5": 0.29151085516761743
+        },
+        "both_teams_score": 0.5135267824714009,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 882,
+        "prior_team_games": {
+          "olympique lyonnais": 98,
+          "angers sco": 73
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+      "status": "pending",
+      "result": null
+    },
+    {
+      "fixture": {
         "event_id": "FR1_b69eefb9dd9b44291e59f58a",
         "league": "FR1",
         "season": "2026-27",
@@ -3005,6 +5644,134 @@
         "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
       },
       "recorded_at_utc": "2026-10-23T16:48:20.082045+00:00",
+      "status": "pending",
+      "result": null
+    },
+    {
+      "fixture": {
+        "event_id": "FR1_caaca3b578d56ac18ca1a6fc",
+        "league": "FR1",
+        "season": "2026-27",
+        "date": "2026-10-31",
+        "home": "ogc nice",
+        "away": "stade rennais fc 1901",
+        "home_name": "OGC Nice",
+        "away_name": "Stade Rennais FC 1901",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/fr.1.json",
+        "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "FR1",
+        "home": "ogc nice",
+        "away": "stade rennais fc 1901",
+        "expected_home_goals": 1.5885300760218293,
+        "expected_away_goals": 1.4744534756790095,
+        "probabilities": {
+          "home": 0.4049775610178939,
+          "draw": 0.23972890748916345,
+          "away": 0.35529353149294274
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.810063596831225,
+          "2.5": 0.5907717531094836,
+          "3.5": 0.3668759829955355
+        },
+        "both_teams_score": 0.6136186301830634,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 882,
+        "prior_team_games": {
+          "ogc nice": 98,
+          "stade rennais fc 1901": 98
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+      "status": "pending",
+      "result": null
+    },
+    {
+      "fixture": {
+        "event_id": "FR1_d0f03ec23774127a34071437",
+        "league": "FR1",
+        "season": "2026-27",
+        "date": "2026-10-31",
+        "home": "fc lorient",
+        "away": "stade brestois 29",
+        "home_name": "FC Lorient",
+        "away_name": "Stade Brestois 29",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/fr.1.json",
+        "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "FR1",
+        "home": "fc lorient",
+        "away": "stade brestois 29",
+        "expected_home_goals": 1.7876535946552778,
+        "expected_away_goals": 1.3030504926965771,
+        "probabilities": {
+          "home": 0.4884233109557266,
+          "draw": 0.2315890223088838,
+          "away": 0.2799876667353897
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.8139959783291157,
+          "2.5": 0.5968213299785449,
+          "3.5": 0.373080472203108
+        },
+        "both_teams_score": 0.606415838934818,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 882,
+        "prior_team_games": {
+          "fc lorient": 64,
+          "stade brestois 29": 98
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
       "status": "pending",
       "result": null
     },
@@ -3364,6 +6131,134 @@
     },
     {
       "fixture": {
+        "event_id": "IT1_2e60f6868ae3dfa6596762ae",
+        "league": "IT1",
+        "season": "2026-27",
+        "date": "2026-10-31",
+        "home": "ac milan",
+        "away": "fc internazionale milano",
+        "home_name": "AC Milan",
+        "away_name": "FC Internazionale Milano",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/it.1.json",
+        "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "IT1",
+        "home": "ac milan",
+        "away": "fc internazionale milano",
+        "expected_home_goals": 1.2402638145700733,
+        "expected_away_goals": 1.4764494599834561,
+        "probabilities": {
+          "home": 0.31825351316901734,
+          "draw": 0.2551858375726768,
+          "away": 0.42656064925830595
+        },
+        "predicted_outcome": "away",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.754356387993123,
+          "2.5": 0.5104607517942207,
+          "3.5": 0.28959591430514203
+        },
+        "both_teams_score": 0.5483363769771348,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 1090,
+        "prior_team_games": {
+          "ac milan": 109,
+          "fc internazionale milano": 109
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+      "status": "pending",
+      "result": null
+    },
+    {
+      "fixture": {
+        "event_id": "IT1_42b94d1ef1019102b346ac3e",
+        "league": "IT1",
+        "season": "2026-27",
+        "date": "2026-11-01",
+        "home": "ss lazio",
+        "away": "cagliari calcio",
+        "home_name": "SS Lazio",
+        "away_name": "Cagliari Calcio",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/it.1.json",
+        "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "IT1",
+        "home": "ss lazio",
+        "away": "cagliari calcio",
+        "expected_home_goals": 1.377141380392026,
+        "expected_away_goals": 1.1625030612625042,
+        "probabilities": {
+          "home": 0.41785141639856077,
+          "draw": 0.26570235862091307,
+          "away": 0.3164462249805262
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.7207417113826409,
+          "2.5": 0.466315252263253,
+          "3.5": 0.25093100469245416
+        },
+        "both_teams_score": 0.5138932100524684,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 1090,
+        "prior_team_games": {
+          "ss lazio": 109,
+          "cagliari calcio": 109
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+      "status": "pending",
+      "result": null
+    },
+    {
+      "fixture": {
         "event_id": "IT1_431303f6da99a079a31b3bbd",
         "league": "IT1",
         "season": "2026-27",
@@ -3477,6 +6372,70 @@
         "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
       },
       "recorded_at_utc": "2026-10-23T16:48:20.082045+00:00",
+      "status": "pending",
+      "result": null
+    },
+    {
+      "fixture": {
+        "event_id": "IT1_5856e096a22605913930fe86",
+        "league": "IT1",
+        "season": "2026-27",
+        "date": "2026-11-01",
+        "home": "como 1907",
+        "away": "venezia fc",
+        "home_name": "Como 1907",
+        "away_name": "Venezia FC",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/it.1.json",
+        "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "IT1",
+        "home": "como 1907",
+        "away": "venezia fc",
+        "expected_home_goals": 1.869335547811717,
+        "expected_away_goals": 0.9855787190322226,
+        "probabilities": {
+          "home": 0.5807308993259199,
+          "draw": 0.22369459993156654,
+          "away": 0.19557450074251367
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          0
+        ],
+        "over": {
+          "1.5": 0.7781082213541243,
+          "2.5": 0.5435327305140116,
+          "3.5": 0.32030175869689254
+        },
+        "both_teams_score": 0.5301114790531148,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 1090,
+        "prior_team_games": {
+          "como 1907": 80,
+          "venezia fc": 42
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
       "status": "pending",
       "result": null
     },
@@ -3836,6 +6795,198 @@
     },
     {
       "fixture": {
+        "event_id": "IT1_c54a2986a853a79ed1f8f8b1",
+        "league": "IT1",
+        "season": "2026-27",
+        "date": "2026-10-31",
+        "home": "bologna fc 1909",
+        "away": "ac monza",
+        "home_name": "Bologna FC 1909",
+        "away_name": "AC Monza",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/it.1.json",
+        "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "IT1",
+        "home": "bologna fc 1909",
+        "away": "ac monza",
+        "expected_home_goals": 1.5315438923705584,
+        "expected_away_goals": 1.1941970834693076,
+        "probabilities": {
+          "home": 0.45076740765901313,
+          "draw": 0.25256640085990467,
+          "away": 0.29666619148108236
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.7559727120549397,
+          "2.5": 0.5126599407625648,
+          "3.5": 0.29159074387697176
+        },
+        "both_teams_score": 0.546348937278946,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 1090,
+        "prior_team_games": {
+          "bologna fc 1909": 109,
+          "ac monza": 71
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+      "status": "pending",
+      "result": null
+    },
+    {
+      "fixture": {
+        "event_id": "IT1_c6e216e3fed593a5d686a0f3",
+        "league": "IT1",
+        "season": "2026-27",
+        "date": "2026-11-01",
+        "home": "juventus fc",
+        "away": "ssc napoli",
+        "home_name": "Juventus FC",
+        "away_name": "SSC Napoli",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/it.1.json",
+        "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "IT1",
+        "home": "juventus fc",
+        "away": "ssc napoli",
+        "expected_home_goals": 1.3275001532762827,
+        "expected_away_goals": 1.0094558524871158,
+        "probabilities": {
+          "home": 0.4394185276492128,
+          "draw": 0.2765052760763998,
+          "away": 0.2840761962743874
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.6775789535247436,
+          "2.5": 0.4137369234197173,
+          "3.5": 0.20820785114413456
+        },
+        "both_teams_score": 0.4670648423911403,
+        "total_goals_80": [
+          1,
+          4
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 1090,
+        "prior_team_games": {
+          "juventus fc": 109,
+          "ssc napoli": 109
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+      "status": "pending",
+      "result": null
+    },
+    {
+      "fixture": {
+        "event_id": "IT1_c9692072547047611e638432",
+        "league": "IT1",
+        "season": "2026-27",
+        "date": "2026-11-01",
+        "home": "us lecce",
+        "away": "genoa cfc",
+        "home_name": "US Lecce",
+        "away_name": "Genoa CFC",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/it.1.json",
+        "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "IT1",
+        "home": "us lecce",
+        "away": "genoa cfc",
+        "expected_home_goals": 1.0094559428419478,
+        "expected_away_goals": 1.1473605723818836,
+        "probabilities": {
+          "home": 0.31809993112246987,
+          "draw": 0.29386027439852336,
+          "away": 0.38803979447900694
+        },
+        "predicted_outcome": "away",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.6347789262766541,
+          "2.5": 0.3656856204754898,
+          "3.5": 0.17222399177944733
+        },
+        "both_teams_score": 0.4338020392615886,
+        "total_goals_80": [
+          0,
+          4
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 1090,
+        "prior_team_games": {
+          "us lecce": 109,
+          "genoa cfc": 109
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+      "status": "pending",
+      "result": null
+    },
+    {
+      "fixture": {
         "event_id": "IT1_cb8a131520c209481023300e",
         "league": "IT1",
         "season": "2026-27",
@@ -4013,6 +7164,134 @@
     },
     {
       "fixture": {
+        "event_id": "IT1_e39e8d4a604c59cc56d40575",
+        "league": "IT1",
+        "season": "2026-27",
+        "date": "2026-11-01",
+        "home": "frosinone calcio",
+        "away": "torino fc",
+        "home_name": "Frosinone Calcio",
+        "away_name": "Torino FC",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/it.1.json",
+        "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "IT1",
+        "home": "frosinone calcio",
+        "away": "torino fc",
+        "expected_home_goals": 1.574500870729685,
+        "expected_away_goals": 1.059197688926819,
+        "probabilities": {
+          "home": 0.4928166491098651,
+          "draw": 0.25179068572244845,
+          "away": 0.25539266516768655
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.7390555013531431,
+          "2.5": 0.48999699149230197,
+          "3.5": 0.27134864526207125
+        },
+        "both_teams_score": 0.5179675789317495,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 1090,
+        "prior_team_games": {
+          "frosinone calcio": 34,
+          "torino fc": 109
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+      "status": "pending",
+      "result": null
+    },
+    {
+      "fixture": {
+        "event_id": "IT1_e7f83e4c4112686a786fb493",
+        "league": "IT1",
+        "season": "2026-27",
+        "date": "2026-10-31",
+        "home": "udinese calcio",
+        "away": "as roma",
+        "home_name": "Udinese Calcio",
+        "away_name": "AS Roma",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/it.1.json",
+        "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "IT1",
+        "home": "udinese calcio",
+        "away": "as roma",
+        "expected_home_goals": 0.9201000861325406,
+        "expected_away_goals": 1.404125646771879,
+        "probabilities": {
+          "home": 0.24649077195183527,
+          "draw": 0.27148151415267113,
+          "away": 0.4820277138954938
+        },
+        "predicted_outcome": "away",
+        "most_likely_score": [
+          0,
+          1
+        ],
+        "over": {
+          "1.5": 0.6746939827709634,
+          "2.5": 0.41037509129318706,
+          "3.5": 0.2055961682047145
+        },
+        "both_teams_score": 0.45379833927238233,
+        "total_goals_80": [
+          1,
+          4
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 1090,
+        "prior_team_games": {
+          "udinese calcio": 109,
+          "as roma": 109
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+      "status": "pending",
+      "result": null
+    },
+    {
+      "fixture": {
         "event_id": "IT1_e9136611bd33ece7108c32e8",
         "league": "IT1",
         "season": "2026-27",
@@ -4185,6 +7464,198 @@
         "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
       },
       "recorded_at_utc": "2026-10-23T16:48:20.082045+00:00",
+      "status": "pending",
+      "result": null
+    },
+    {
+      "fixture": {
+        "event_id": "NL1_161376e191ce54a9e35049c3",
+        "league": "NL1",
+        "season": "2026-27",
+        "date": "2026-10-31",
+        "home": "feyenoord rotterdam",
+        "away": "fortuna sittard",
+        "home_name": "Feyenoord Rotterdam",
+        "away_name": "Fortuna Sittard",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/nl.1.json",
+        "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "NL1",
+        "home": "feyenoord rotterdam",
+        "away": "fortuna sittard",
+        "expected_home_goals": 2.1843487338946352,
+        "expected_away_goals": 1.3645007995973975,
+        "probabilities": {
+          "home": 0.5612665722125436,
+          "draw": 0.20394241102376282,
+          "away": 0.23479101676369357
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          2,
+          1
+        ],
+        "over": {
+          "1.5": 0.8691855251751188,
+          "2.5": 0.6880934659059228,
+          "3.5": 0.47387064255372363
+        },
+        "both_teams_score": 0.6606985010081967,
+        "total_goals_80": [
+          1,
+          6
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 901,
+        "prior_team_games": {
+          "feyenoord rotterdam": 100,
+          "fortuna sittard": 100
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+      "status": "pending",
+      "result": null
+    },
+    {
+      "fixture": {
+        "event_id": "NL1_21f4c8aa937a5a8f6aa5f929",
+        "league": "NL1",
+        "season": "2026-27",
+        "date": "2026-10-31",
+        "home": "afc ajax",
+        "away": "az",
+        "home_name": "AFC Ajax",
+        "away_name": "AZ",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/nl.1.json",
+        "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "NL1",
+        "home": "afc ajax",
+        "away": "az",
+        "expected_home_goals": 1.7220377950230092,
+        "expected_away_goals": 1.4776351395526963,
+        "probabilities": {
+          "home": 0.4358532393284921,
+          "draw": 0.23248592613984229,
+          "away": 0.33166083453166584
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.8287560763900038,
+          "2.5": 0.6200279953691018,
+          "3.5": 0.3974074648596004
+        },
+        "both_teams_score": 0.6338972619257303,
+        "total_goals_80": [
+          1,
+          6
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 901,
+        "prior_team_games": {
+          "afc ajax": 102,
+          "az": 100
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+      "status": "pending",
+      "result": null
+    },
+    {
+      "fixture": {
+        "event_id": "NL1_337a5a65fc86f7f0e852dea6",
+        "league": "NL1",
+        "season": "2026-27",
+        "date": "2026-11-01",
+        "home": "telstar 1963",
+        "away": "fc utrecht",
+        "home_name": "Telstar 1963",
+        "away_name": "FC Utrecht",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/nl.1.json",
+        "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "NL1",
+        "home": "telstar 1963",
+        "away": "fc utrecht",
+        "expected_home_goals": 1.8415351249453658,
+        "expected_away_goals": 1.7194257412972187,
+        "probabilities": {
+          "home": 0.4146918970900159,
+          "draw": 0.22028603649998277,
+          "away": 0.3650220664100014
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.8704162059291667,
+          "2.5": 0.6902809372060436,
+          "3.5": 0.476462723021666
+        },
+        "both_teams_score": 0.6906686956411724,
+        "total_goals_80": [
+          1,
+          6
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 901,
+        "prior_team_games": {
+          "telstar 1963": 41,
+          "fc utrecht": 100
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
       "status": "pending",
       "result": null
     },
@@ -4428,6 +7899,70 @@
     },
     {
       "fixture": {
+        "event_id": "NL1_70ac5bdcc010ccf8209e322b",
+        "league": "NL1",
+        "season": "2026-27",
+        "date": "2026-11-01",
+        "home": "sbv excelsior",
+        "away": "fc twente '65",
+        "home_name": "SBV Excelsior",
+        "away_name": "FC Twente '65",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/nl.1.json",
+        "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "NL1",
+        "home": "sbv excelsior",
+        "away": "fc twente '65",
+        "expected_home_goals": 1.4174275786796748,
+        "expected_away_goals": 1.611319995235631,
+        "probabilities": {
+          "home": 0.33736994196825154,
+          "draw": 0.24046799000587152,
+          "away": 0.422162068025877
+        },
+        "predicted_outcome": "away",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.8051045507629138,
+          "2.5": 0.5832196219591589,
+          "3.5": 0.35920847535824474
+        },
+        "both_teams_score": 0.6064156427324646,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 901,
+        "prior_team_games": {
+          "sbv excelsior": 66,
+          "fc twente '65": 100
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+      "status": "pending",
+      "result": null
+    },
+    {
+      "fixture": {
         "event_id": "NL1_765727231e09cb6922e6ec79",
         "league": "NL1",
         "season": "2026-27",
@@ -4482,6 +8017,198 @@
         "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
       },
       "recorded_at_utc": "2026-10-23T16:48:20.082045+00:00",
+      "status": "pending",
+      "result": null
+    },
+    {
+      "fixture": {
+        "event_id": "NL1_7ce7ff482175dc7e463aeab2",
+        "league": "NL1",
+        "season": "2026-27",
+        "date": "2026-11-01",
+        "home": "fc groningen",
+        "away": "sparta rotterdam",
+        "home_name": "FC Groningen",
+        "away_name": "Sparta Rotterdam",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/nl.1.json",
+        "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "NL1",
+        "home": "fc groningen",
+        "away": "sparta rotterdam",
+        "expected_home_goals": 1.96446685390329,
+        "expected_away_goals": 1.1976624927644497,
+        "probabilities": {
+          "home": 0.5519342108960495,
+          "draw": 0.21832279869981727,
+          "away": 0.22974299040413337
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.8237941810207629,
+          "2.5": 0.6121365458446846,
+          "3.5": 0.38904027263249435
+        },
+        "both_teams_score": 0.600205788924069,
+        "total_goals_80": [
+          1,
+          6
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 901,
+        "prior_team_games": {
+          "fc groningen": 75,
+          "sparta rotterdam": 100
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+      "status": "pending",
+      "result": null
+    },
+    {
+      "fixture": {
+        "event_id": "NL1_ad94cc44c0ac0ec6fc645a15",
+        "league": "NL1",
+        "season": "2026-27",
+        "date": "2026-10-31",
+        "home": "sc heerenveen",
+        "away": "nec",
+        "home_name": "SC Heerenveen",
+        "away_name": "NEC",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/nl.1.json",
+        "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "NL1",
+        "home": "sc heerenveen",
+        "away": "nec",
+        "expected_home_goals": 1.5321682975879989,
+        "expected_away_goals": 1.566394984696978,
+        "probabilities": {
+          "home": 0.37331254629008903,
+          "draw": 0.23853846977749796,
+          "away": 0.38814898393241304
+        },
+        "predicted_outcome": "away",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.8150975312637315,
+          "2.5": 0.5985257794681974,
+          "3.5": 0.3748386867702717
+        },
+        "both_teams_score": 0.6202507677505569,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 901,
+        "prior_team_games": {
+          "sc heerenveen": 99,
+          "nec": 100
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+      "status": "pending",
+      "result": null
+    },
+    {
+      "fixture": {
+        "event_id": "NL1_b88c0b280cd21ebe9e913499",
+        "league": "NL1",
+        "season": "2026-27",
+        "date": "2026-10-31",
+        "home": "psv",
+        "away": "willem ii tilburg",
+        "home_name": "PSV",
+        "away_name": "Willem II Tilburg",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/nl.1.json",
+        "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "NL1",
+        "home": "psv",
+        "away": "willem ii tilburg",
+        "expected_home_goals": 3.2094569973796028,
+        "expected_away_goals": 1.2560938088819307,
+        "probabilities": {
+          "home": 0.7548838941739974,
+          "draw": 0.13172333376185946,
+          "away": 0.11339277206414305
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          3,
+          1
+        ],
+        "over": {
+          "1.5": 0.9371551256983868,
+          "2.5": 0.8225098929725075,
+          "3.5": 0.6518585224948108
+        },
+        "both_teams_score": 0.6863556274745222,
+        "total_goals_80": [
+          2,
+          7
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 901,
+        "prior_team_games": {
+          "psv": 100,
+          "willem ii tilburg": 41
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
       "status": "pending",
       "result": null
     },
@@ -4602,6 +8329,70 @@
         "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
       },
       "recorded_at_utc": "2026-10-23T16:48:20.082045+00:00",
+      "status": "pending",
+      "result": null
+    },
+    {
+      "fixture": {
+        "event_id": "PT1_298bafdc737e51205a843d53",
+        "league": "PT1",
+        "season": "2026-27",
+        "date": "2026-11-01",
+        "home": "fc arouca",
+        "away": "cd nacional",
+        "home_name": "FC Arouca",
+        "away_name": "CD Nacional",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/pt.1.json",
+        "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "PT1",
+        "home": "fc arouca",
+        "away": "cd nacional",
+        "expected_home_goals": 1.6277736337971345,
+        "expected_away_goals": 1.0160048778055926,
+        "probabilities": {
+          "home": 0.5164632744372637,
+          "draw": 0.24719804198794895,
+          "away": 0.23633868357478757
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.7409559917568691,
+          "2.5": 0.49250443512804687,
+          "3.5": 0.2735541395982043
+        },
+        "both_teams_score": 0.5126874253099624,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 908,
+        "prior_team_games": {
+          "fc arouca": 101,
+          "cd nacional": 75
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
       "status": "pending",
       "result": null
     },
@@ -4784,6 +8575,70 @@
     },
     {
       "fixture": {
+        "event_id": "PT1_762277503c6c80e593cb456b",
+        "league": "PT1",
+        "season": "2026-27",
+        "date": "2026-11-01",
+        "home": "sporting clube de braga",
+        "away": "fc famalicao",
+        "home_name": "Sporting Clube de Braga",
+        "away_name": "FC Famalicão",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/pt.1.json",
+        "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "PT1",
+        "home": "sporting clube de braga",
+        "away": "fc famalicao",
+        "expected_home_goals": 1.4151911532784205,
+        "expected_away_goals": 1.0662070517736342,
+        "probabilities": {
+          "home": 0.44990104541101084,
+          "draw": 0.26618757008041405,
+          "away": 0.2839113845085751
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.7088638375062798,
+          "2.5": 0.45140643462880203,
+          "3.5": 0.2384549888362898
+        },
+        "both_teams_score": 0.4964350339243302,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 908,
+        "prior_team_games": {
+          "sporting clube de braga": 100,
+          "fc famalicao": 101
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+      "status": "pending",
+      "result": null
+    },
+    {
+      "fixture": {
         "event_id": "PT1_874b119521591ed3f5ce9ac6",
         "league": "PT1",
         "season": "2026-27",
@@ -4840,6 +8695,70 @@
         "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
       },
       "recorded_at_utc": "2026-10-23T16:48:20.082045+00:00",
+      "status": "pending",
+      "result": null
+    },
+    {
+      "fixture": {
+        "event_id": "PT1_9a7628dc5235a1ea10dad2ea",
+        "league": "PT1",
+        "season": "2026-27",
+        "date": "2026-10-31",
+        "home": "moreirense fc",
+        "away": "cf estrela da amadora",
+        "home_name": "Moreirense FC",
+        "away_name": "CF Estrela da Amadora",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/pt.1.json",
+        "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "PT1",
+        "home": "moreirense fc",
+        "away": "cf estrela da amadora",
+        "expected_home_goals": 1.589673471255556,
+        "expected_away_goals": 1.4446693145870262,
+        "probabilities": {
+          "home": 0.41132478826074087,
+          "draw": 0.2407512581659216,
+          "away": 0.34792395357333766
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.8059228222819409,
+          "2.5": 0.5844599347835396,
+          "3.5": 0.36046182977932595
+        },
+        "both_teams_score": 0.6082900111929265,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 908,
+        "prior_team_games": {
+          "moreirense fc": 101,
+          "cf estrela da amadora": 101
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
       "status": "pending",
       "result": null
     },
@@ -5140,6 +9059,70 @@
     },
     {
       "fixture": {
+        "event_id": "PT1_f081df345359be3890a57f00",
+        "league": "PT1",
+        "season": "2026-27",
+        "date": "2026-10-31",
+        "home": "fc porto",
+        "away": "gd estoril praia",
+        "home_name": "FC Porto",
+        "away_name": "GD Estoril Praia",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/pt.1.json",
+        "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "PT1",
+        "home": "fc porto",
+        "away": "gd estoril praia",
+        "expected_home_goals": 1.9924788367221162,
+        "expected_away_goals": 0.7771657657200827,
+        "probabilities": {
+          "home": 0.6585847457408126,
+          "draw": 0.20445759529674312,
+          "away": 0.1369576589624445
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          0
+        ],
+        "over": {
+          "1.5": 0.7637025474292705,
+          "2.5": 0.5232791523612473,
+          "3.5": 0.30131669954425455
+        },
+        "both_teams_score": 0.4666201949551271,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 908,
+        "prior_team_games": {
+          "fc porto": 101,
+          "gd estoril praia": 101
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+      "status": "pending",
+      "result": null
+    },
+    {
+      "fixture": {
         "event_id": "TR1_0bede0b4c66eb2800f6221fa",
         "league": "TR1",
         "season": "2026-27",
@@ -5201,6 +9184,70 @@
     },
     {
       "fixture": {
+        "event_id": "TR1_15f4dd4d63910ac64eef3cfc",
+        "league": "TR1",
+        "season": "2026-27",
+        "date": "2026-11-01",
+        "home": "trabzonspor",
+        "away": "gaziantep fk",
+        "home_name": "Trabzonspor",
+        "away_name": "Gaziantep FK",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/europe/blob/63df627f3c87ce71708f016522ea236cf74332c3/turkey/2026-27_tr1.txt",
+        "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "TR1",
+        "home": "trabzonspor",
+        "away": "gaziantep fk",
+        "expected_home_goals": 1.824842786793212,
+        "expected_away_goals": 1.2105526198706364,
+        "probabilities": {
+          "home": 0.5177371248507838,
+          "draw": 0.22940551617682098,
+          "away": 0.2528573589723952
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.8060764200923108,
+          "2.5": 0.5846930094027569,
+          "3.5": 0.36069761342987444
+        },
+        "both_teams_score": 0.5887801307135937,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 763,
+        "prior_team_games": {
+          "trabzonspor": 80,
+          "gaziantep fk": 79
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+      "status": "pending",
+      "result": null
+    },
+    {
+      "fixture": {
         "event_id": "TR1_27e3ae8e3dede207b9895576",
         "league": "TR1",
         "season": "2026-27",
@@ -5255,6 +9302,70 @@
         "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
       },
       "recorded_at_utc": "2026-10-23T16:48:20.082045+00:00",
+      "status": "pending",
+      "result": null
+    },
+    {
+      "fixture": {
+        "event_id": "TR1_40fddab08e8ed45fec251d93",
+        "league": "TR1",
+        "season": "2026-27",
+        "date": "2026-11-01",
+        "home": "fenerbahce",
+        "away": "goztepe",
+        "home_name": "Fenerbahçe",
+        "away_name": "Göztepe",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/europe/blob/63df627f3c87ce71708f016522ea236cf74332c3/turkey/2026-27_tr1.txt",
+        "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "TR1",
+        "home": "fenerbahce",
+        "away": "goztepe",
+        "expected_home_goals": 2.035071576568094,
+        "expected_away_goals": 1.43773988246138,
+        "probabilities": {
+          "home": 0.5142767516232206,
+          "draw": 0.21427029607405026,
+          "away": 0.27145295230272926
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          2,
+          1
+        ],
+        "over": {
+          "1.5": 0.8612101397269828,
+          "2.5": 0.6740947266527394,
+          "3.5": 0.45748920975765095
+        },
+        "both_teams_score": 0.6628946912398578,
+        "total_goals_80": [
+          1,
+          6
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 763,
+        "prior_team_games": {
+          "fenerbahce": 80,
+          "goztepe": 51
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
       "status": "pending",
       "result": null
     },
@@ -5439,6 +9550,134 @@
     },
     {
       "fixture": {
+        "event_id": "TR1_80f7e0e888b95520aee60527",
+        "league": "TR1",
+        "season": "2026-27",
+        "date": "2026-11-01",
+        "home": "istanbul basaksehir",
+        "away": "samsunspor",
+        "home_name": "İstanbul Başakşehir",
+        "away_name": "Samsunspor",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/europe/blob/63df627f3c87ce71708f016522ea236cf74332c3/turkey/2026-27_tr1.txt",
+        "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "TR1",
+        "home": "istanbul basaksehir",
+        "away": "samsunspor",
+        "expected_home_goals": 1.3212166691892446,
+        "expected_away_goals": 1.2653209546186925,
+        "probabilities": {
+          "home": 0.3808275410423304,
+          "draw": 0.2645916839847332,
+          "away": 0.3545807749729365
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.7300045945233943,
+          "2.5": 0.478185541062723,
+          "3.5": 0.2610723890068136
+        },
+        "both_teams_score": 0.5263210288946608,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 763,
+        "prior_team_games": {
+          "istanbul basaksehir": 80,
+          "samsunspor": 80
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+      "status": "pending",
+      "result": null
+    },
+    {
+      "fixture": {
+        "event_id": "TR1_9502691714972a5e45face4d",
+        "league": "TR1",
+        "season": "2026-27",
+        "date": "2026-11-01",
+        "home": "kasimpasa",
+        "away": "besiktas",
+        "home_name": "Kasimpasa",
+        "away_name": "Beşiktaş",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/europe/blob/63df627f3c87ce71708f016522ea236cf74332c3/turkey/2026-27_tr1.txt",
+        "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "TR1",
+        "home": "kasimpasa",
+        "away": "besiktas",
+        "expected_home_goals": 1.3406269710627605,
+        "expected_away_goals": 1.3522114029797525,
+        "probabilities": {
+          "home": 0.36804072048061215,
+          "draw": 0.2585733265657037,
+          "away": 0.3733859529536844
+        },
+        "predicted_outcome": "away",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.7500371581134563,
+          "2.5": 0.5046195421714089,
+          "3.5": 0.2843295508798182
+        },
+        "both_teams_score": 0.5473393813007973,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 763,
+        "prior_team_games": {
+          "kasimpasa": 80,
+          "besiktas": 79
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+      "status": "pending",
+      "result": null
+    },
+    {
+      "fixture": {
         "event_id": "TR1_9ee3776c249968e4ef4419a7",
         "league": "TR1",
         "season": "2026-27",
@@ -5495,6 +9734,70 @@
         "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
       },
       "recorded_at_utc": "2026-10-23T16:48:20.082045+00:00",
+      "status": "pending",
+      "result": null
+    },
+    {
+      "fixture": {
+        "event_id": "TR1_a4f75489f9c2d770fc0d9fa8",
+        "league": "TR1",
+        "season": "2026-27",
+        "date": "2026-11-01",
+        "home": "kocaelispor",
+        "away": "caykur rizespor",
+        "home_name": "Kocaelispor",
+        "away_name": "Çaykur Rizespor",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/europe/blob/63df627f3c87ce71708f016522ea236cf74332c3/turkey/2026-27_tr1.txt",
+        "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "TR1",
+        "home": "kocaelispor",
+        "away": "caykur rizespor",
+        "expected_home_goals": 1.3992449325837921,
+        "expected_away_goals": 1.0422779335419066,
+        "probabilities": {
+          "home": 0.4512391079584176,
+          "draw": 0.26845004517247534,
+          "away": 0.2803108468691072
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.7004903971669861,
+          "2.5": 0.44110131752757364,
+          "3.5": 0.22999986113993207
+        },
+        "both_teams_score": 0.4875945345611912,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 763,
+        "prior_team_games": {
+          "kocaelispor": 15,
+          "caykur rizespor": 80
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
       "status": "pending",
       "result": null
     },
@@ -5559,6 +9862,70 @@
     },
     {
       "fixture": {
+        "event_id": "TR1_b1d2161a5e77b7f8afb9ecff",
+        "league": "TR1",
+        "season": "2026-27",
+        "date": "2026-11-01",
+        "home": "atiker konyaspor",
+        "away": "galatasaray",
+        "home_name": "Atiker Konyaspor",
+        "away_name": "Galatasaray",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/europe/blob/63df627f3c87ce71708f016522ea236cf74332c3/turkey/2026-27_tr1.txt",
+        "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "TR1",
+        "home": "atiker konyaspor",
+        "away": "galatasaray",
+        "expected_home_goals": 1.1409959042076927,
+        "expected_away_goals": 1.9180337685954045,
+        "probabilities": {
+          "home": 0.22370746108558495,
+          "draw": 0.22154822900981658,
+          "away": 0.5547443099045987
+        },
+        "predicted_outcome": "away",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.8094966929265184,
+          "2.5": 0.5899041050577082,
+          "3.5": 0.3659906909849377
+        },
+        "both_teams_score": 0.5805370335244349,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 763,
+        "prior_team_games": {
+          "atiker konyaspor": 80,
+          "galatasaray": 79
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+      "status": "pending",
+      "result": null
+    },
+    {
+      "fixture": {
         "event_id": "TR1_dd86f1682752dde89bb68445",
         "league": "TR1",
         "season": "2026-27",
@@ -5613,6 +9980,70 @@
         "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
       },
       "recorded_at_utc": "2026-10-23T16:48:20.082045+00:00",
+      "status": "pending",
+      "result": null
+    },
+    {
+      "fixture": {
+        "event_id": "TR1_e2b41ee6ee1deb240e715725",
+        "league": "TR1",
+        "season": "2026-27",
+        "date": "2026-11-01",
+        "home": "genclerbirligi",
+        "away": "aytemiz alanyaspor",
+        "home_name": "Gençlerbirligi",
+        "away_name": "Aytemiz Alanyaspor",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/europe/blob/63df627f3c87ce71708f016522ea236cf74332c3/turkey/2026-27_tr1.txt",
+        "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "TR1",
+        "home": "genclerbirligi",
+        "away": "aytemiz alanyaspor",
+        "expected_home_goals": 1.3984620880061958,
+        "expected_away_goals": 1.2053063558615813,
+        "probabilities": {
+          "home": 0.41403882555102695,
+          "draw": 0.2622279901482082,
+          "away": 0.323733184300765
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.7333420041157467,
+          "2.5": 0.48251605999967795,
+          "3.5": 0.26481850060209083
+        },
+        "both_teams_score": 0.5274175078113048,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-10-25",
+        "training_games": 763,
+        "prior_team_games": {
+          "genclerbirligi": 15,
+          "aytemiz alanyaspor": 79
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
       "status": "pending",
       "result": null
     },
@@ -5676,8 +10107,82 @@
       "result": null
     }
   ],
-  "skipped": [],
-  "pending": 95,
+  "skipped": [
+    {
+      "event_id": "DE1_d1bdef1ce224c3a546340975",
+      "reason": "Insufficient history: fc schalke 04: fewer than 10 prior matches"
+    },
+    {
+      "event_id": "DE1_e6430434f8f97d05f4bbc6f7",
+      "reason": "Insufficient history: sc paderborn 07: fewer than 10 prior matches"
+    },
+    {
+      "event_id": "EN1_921a9c9d9b2fee0f6fbc96e0",
+      "reason": "Insufficient history: coventry city fc: fewer than 10 prior matches"
+    },
+    {
+      "event_id": "EN1_bfe4b7a91f6928736d098fb4",
+      "reason": "Insufficient history: hull city afc: fewer than 10 prior matches"
+    },
+    {
+      "event_id": "EN2_60c3ee9c6dec64c5392cbb7f",
+      "reason": "Insufficient history: west ham united fc: fewer than 10 prior matches"
+    },
+    {
+      "event_id": "EN2_83eda3fdfb0546d3b8adf7cb",
+      "reason": "Insufficient history: bolton wanderers fc: fewer than 10 prior matches"
+    },
+    {
+      "event_id": "EN2_87f5fcfc4d3f9b5bdd4f4747",
+      "reason": "Insufficient history: lincoln city fc: fewer than 10 prior matches"
+    },
+    {
+      "event_id": "EN2_d4eb4e797be9ce54ec2da5cd",
+      "reason": "Insufficient history: wolverhampton wanderers fc: fewer than 10 prior matches"
+    },
+    {
+      "event_id": "FR1_5bbc5bd83a0448a53d6cf4bf",
+      "reason": "Insufficient history: es troyes ac: fewer than 10 prior matches; le mans fc: fewer than 10 prior matches"
+    },
+    {
+      "event_id": "NL1_43f338326ad680b40fc05a85",
+      "reason": "Insufficient history: sc cambuur-leeuwarden: fewer than 10 prior matches"
+    },
+    {
+      "event_id": "ES1_94352ffb3b53332045458b89",
+      "reason": "Insufficient history: malaga cf: fewer than 10 prior matches"
+    },
+    {
+      "event_id": "ES1_9d7e5c3a054369ed88f800fa",
+      "reason": "Insufficient history: real racing club de santander: fewer than 10 prior matches"
+    },
+    {
+      "event_id": "ES1_f7f112b2042eeb5e9087b255",
+      "reason": "Insufficient history: rc deportivo la coruna: fewer than 10 prior matches"
+    },
+    {
+      "event_id": "NL1_cf22325d49b4921f4f0bdb9a",
+      "reason": "Insufficient history: ado den haag: fewer than 10 prior matches"
+    },
+    {
+      "event_id": "PT1_37af9b3564bf279e58db7966",
+      "reason": "Insufficient history: academico de viseu fc: fewer than 10 prior matches"
+    },
+    {
+      "event_id": "PT1_88adb3f10942e0cea234fdb0",
+      "reason": "Insufficient history: cs maritimo: fewer than 10 prior matches"
+    },
+    {
+      "event_id": "TR1_d49aa0662c0c19796216bc4b",
+      "reason": "Insufficient history: bb erzurumspor: fewer than 10 prior matches; corum: fewer than 10 prior matches"
+    },
+    {
+      "event_id": "TR1_dc32b8cc90e23784d22cf7b9",
+      "reason": "Insufficient history: amed: fewer than 10 prior matches"
+    }
+  ],
+  "pending": 164,
+  "requested_model_variant": "baseline",
   "publisher_performance": {
     "games": 0,
     "winner_accuracy": null,

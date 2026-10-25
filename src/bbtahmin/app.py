@@ -261,6 +261,20 @@ class Handler(BaseHTTPRequestHandler):
     def do_POST(self):
         port = self.server.server_port
         origin = self.headers.get('Origin')
+        # Consume a bounded request before an early rejection. Closing a socket
+        # with unread POST bytes can reset the connection on Windows, hiding
+        # the intended 403 response from the client. Never drain unbounded data.
+        try:
+            size = int(self.headers.get('Content-Length', '0'))
+        except ValueError:
+            size = 0
+        payload_bytes = b''
+        if 0 < size <= 8192:
+            self.connection.settimeout(3)
+            try:
+                payload_bytes = self.rfile.read(size)
+            except OSError:
+                return self.send(dict(error='Incomplete request body'), status=400)
         if (not self.allowed() or origin not in (None, f'http://127.0.0.1:{port}', f'http://localhost:{port}') or
                 not secrets.compare_digest(self.headers.get('X-App-Token', ''), self.server.state.token)):
             return self.send(dict(error='Invalid local request'), status=403)
@@ -268,10 +282,9 @@ class Handler(BaseHTTPRequestHandler):
         if path not in ('/api/run','/api/football/run'):
             return self.send(dict(error='Not found'), status=404)
         try:
-            size = int(self.headers.get('Content-Length', '0'))
             if not 0 < size <= 8192 or self.headers.get_content_type() != 'application/json':
                 raise ValueError('A JSON request of at most 8 KB is required')
-            payload = json.loads(self.rfile.read(size))
+            payload = json.loads(payload_bytes)
             if path == '/api/football/run': self.server.state.submit_football(payload)
             else: self.server.state.submit(payload)
         except (ValueError, TypeError) as exc:
