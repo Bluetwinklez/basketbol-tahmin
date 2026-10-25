@@ -96,7 +96,9 @@ class SportsUpgradeTests(unittest.TestCase):
 
     def test_frozen_football_records_survive_new_candidate(self):
         from bbtahmin.football import daily
-        h=history();h['date']=(pd.to_datetime(h.date)+pd.Timedelta(days=500)).dt.strftime('%Y-%m-%d')
+        # Keep the immutability test's source within the new current-history
+        # diagnostic window; stale-source rejection has separate coverage.
+        h=history();h['date']=(pd.to_datetime(h.date)+pd.Timedelta(days=550)).dt.strftime('%Y-%m-%d')
         fixture=row('TR1','2026-27','2026-10-25','A','B',None,'source','2026-10-23T12:00Z')
         frame=pd.concat([h,pd.DataFrame([fixture])],ignore_index=True)
         with tempfile.TemporaryDirectory() as folder,patch.object(daily,'load',return_value=frame):

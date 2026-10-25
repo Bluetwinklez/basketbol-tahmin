@@ -1,0 +1,52 @@
+{
+  "variants": [
+    "baseline",
+    "form_slow",
+    "form_fast",
+    "without_rest",
+    "without_opponent_ratings",
+    "without_home"
+  ],
+  "leagues": [
+    "KBL",
+    "E",
+    "ABA",
+    "ECW",
+    "FEC",
+    "TR_BSL",
+    "UKR",
+    "ARG_LNB"
+  ],
+  "source_code_sha256": "ddb01247a8e419ef4a144ab82b43d2a25473148001e811bc11e21aff36b625e8",
+  "inputs": {
+    "KBL": {
+      "data/asia/KBL.parquet": "37e16ee91d06da4f56b3668deac424717c38c4f62ef1c80392a5acf55dca84ce"
+    },
+    "E": {
+      "data/maclar.parquet": "b47d00dbc49469d0511f23e1f2282a123e40302cca080aa3e6dcd85e619262b4",
+      "data/recent/E.parquet": "142bafeac4e7fb2d4e1c60844aaab84c8bcb919c41ff4913b5cb3e8831053326"
+    },
+    "ABA": {
+      "data/competitions/ABA.parquet": "34d54b723a07d754f1fac57631aceac559afda6ec71b2d7f84fd11d065abb593"
+    },
+    "ECW": {
+      "data/competitions/ECW.parquet": "9f5fc9947f7063026ad250228c89f799af799014093a018b8c77f6a4a396fc8d"
+    },
+    "FEC": {
+      "data/competitions/FEC.parquet": "9388f0dfbd13f0ca58c1a0dd1b506e13f8bd4962957a4a82d23ffea3afb1a6da"
+    },
+    "TR_BSL": {
+      "data/competitions/TR_BSL.parquet": "55f8bef6c424662f5b0489d803a9301a405dc35b0c252f6fa9d5595cd8255a90"
+    },
+    "UKR": {
+      "data/competitions/UKR.parquet": "a69ebe280d0cd53a6ea328319fd0c5298b3a21a74dfcebf2dc5d03833157dedc"
+    },
+    "ARG_LNB": {
+      "data/competitions/ARG_LNB.parquet": "33bd463dcde41abae79afad67203ff438fdd86ae610ee7dada48bfbaae25be66"
+    }
+  },
+  "selection_threshold": 0.65,
+  "last_completed_seasons": 2,
+  "predeclared_at_utc": "2026-10-25T13:44:57.429061+00:00",
+  "note": "Fixed previous-season disjoint calibration/selection, last two available past seasons; completeness unverified. No promotion."
+}
