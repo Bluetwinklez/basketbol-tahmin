@@ -1,0 +1,47 @@
+{
+  "captured_at_utc": "2026-10-25T22:33:28.625157+00:00",
+  "source_url": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard",
+  "provider": "espn",
+  "live_games": [
+    {
+      "event_id": "401909861",
+      "league": "NBA",
+      "home": "UTAH",
+      "away": "LAL",
+      "home_score": 75,
+      "away_score": 77,
+      "period": 3,
+      "remaining_seconds": 617,
+      "regulation_minutes": 48,
+      "overtime": false,
+      "start_utc": "2026-10-25T21:00:00+00:00",
+      "captured_at_utc": "2026-10-25T22:33:28.625157+00:00",
+      "source_url": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard",
+      "source_updated_at": null,
+      "source_freshness_verified": false,
+      "used_for_prediction": false,
+      "note": "Public broadcaster scoreboard observation; source update timestamp unavailable, so live freshness is unverified."
+    },
+    {
+      "event_id": "401909862",
+      "league": "NBA",
+      "home": "BRK",
+      "away": "IND",
+      "home_score": 21,
+      "away_score": 21,
+      "period": 1,
+      "remaining_seconds": 149,
+      "regulation_minutes": 48,
+      "overtime": false,
+      "start_utc": "2026-10-25T22:00:00+00:00",
+      "captured_at_utc": "2026-10-25T22:33:28.625157+00:00",
+      "source_url": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard",
+      "source_updated_at": null,
+      "source_freshness_verified": false,
+      "used_for_prediction": false,
+      "note": "Public broadcaster scoreboard observation; source update timestamp unavailable, so live freshness is unverified."
+    }
+  ],
+  "total_listed": 7,
+  "prediction_enabled": false
+}
