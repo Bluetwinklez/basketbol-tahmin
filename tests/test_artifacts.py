@@ -12,7 +12,7 @@ def test_partial_mismatched_and_tampered_benchmarks_are_not_selected(tmp_path):
     assert verified_manifest(tmp_path) is None
     contents={'metrikler.csv':'lig,model\nNBA,skor\n','parametreler.json':'[]'}
     for name,content in contents.items():
-        (tmp_path/name).write_text(content)
+        (tmp_path/name).write_bytes(content.encode())
     meta=dict(base_features=FEATURES,absence_leagues=sorted(EKSIK_LIGLERI),box_leagues=sorted(KUTU_LIGLERI),
               files={name:hashlib.sha256(value.encode()).hexdigest() for name,value in contents.items()})
     (tmp_path/'manifest.json').write_text(json.dumps(meta))

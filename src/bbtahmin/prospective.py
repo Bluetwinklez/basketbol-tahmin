@@ -14,7 +14,7 @@ def canonical(value):
 
 def fingerprint(root=Path('.')):
     paths=sorted((root/'src').rglob('*.py'))
-    return hashlib.sha256(b''.join(str(p.relative_to(root)).encode()+b'\0'+p.read_bytes() for p in paths)).hexdigest()
+    return hashlib.sha256(b''.join(p.relative_to(root).as_posix().encode()+b'\0'+p.read_bytes() for p in paths)).hexdigest()
 
 
 def dataset_hashes():
@@ -24,7 +24,7 @@ def dataset_hashes():
         paths.update(Path(folder).rglob('*.parquet'))
         paths.update(Path(folder).rglob('*.json'))
     paths.update(Path('data').glob('*.parquet'))
-    return {str(p):hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(paths)}
+    return {p.as_posix():hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(paths)}
 
 
 def freeze(predictions,fixtures,destination,now=None):

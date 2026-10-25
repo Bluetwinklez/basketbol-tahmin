@@ -33,9 +33,13 @@ def run(days=7, output='rapor/football', root=ROOT, now=None, model_variant='bas
         try:
             # A future fixture is valid only if actually captured before its date.
             if g['captured_at_utc'][:10]>=g['date']: raise ValueError('Not a pregame source capture')
-            if (now-pd.Timestamp(g['captured_at_utc'])).total_seconds()>72*3600: raise ValueError('Fixture snapshot older than 72 hours; refresh required')
+            captured=pd.Timestamp(g['captured_at_utc'])
+            if captured.tzinfo is None: raise ValueError('Fixture capture timezone required')
+            if captured>now: raise ValueError('Fixture capture is in the future')
+            if (now-captured).total_seconds()>72*3600: raise ValueError('Fixture snapshot older than 72 hours; refresh required')
             if g['league'] not in models: models[g['league']]=fit(frame,g['league'],today,model_variant)
             prediction=models[g['league']].predict(g['home'],g['away'])
+            if prediction.get('issues'): raise ValueError('Insufficient history: '+'; '.join(prediction['issues']))
             payload=dict(spec='football-prospective-v1',recorded_at_utc=now.isoformat(),fixture=g,prediction=prediction,
                          archive_sha256=archive_sha)
             record=dict(payload,payload_sha256=digest(payload))

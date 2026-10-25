@@ -62,7 +62,7 @@ def test_frozen_ledger_reuses_forecast_and_checks_integrity(tmp_path,monkeypatch
     from bbtahmin.football import daily
     fixture=row('TR1','2026-27','2026-10-25','A','B',None,'source','2026-10-23T12:00Z')
     # History from earlier dates and a separate fixture only.
-    h=history();h['date']=(pd.to_datetime(h.date)+pd.Timedelta(days=365)).dt.strftime('%Y-%m-%d')
+    h=history();h['date']=(pd.to_datetime(h.date)+pd.Timedelta(days=480)).dt.strftime('%Y-%m-%d')
     h['event_id']=['h'+str(i) for i in range(len(h))]
     f=pd.concat([h,pd.DataFrame([fixture])],ignore_index=True)
     monkeypatch.setattr(daily,'load',lambda root:f)
