@@ -1,0 +1,65 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+  "fixture": {
+    "event_id": "IT1_c6e216e3fed593a5d686a0f3",
+    "league": "IT1",
+    "season": "2026-27",
+    "date": "2026-11-01",
+    "home": "juventus fc",
+    "away": "ssc napoli",
+    "home_name": "Juventus FC",
+    "away_name": "SSC Napoli",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/it.1.json",
+    "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "IT1",
+    "home": "juventus fc",
+    "away": "ssc napoli",
+    "expected_home_goals": 1.3275001532762827,
+    "expected_away_goals": 1.0094558524871158,
+    "probabilities": {
+      "home": 0.4394185276492128,
+      "draw": 0.2765052760763998,
+      "away": 0.2840761962743874
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.6775789535247436,
+      "2.5": 0.4137369234197173,
+      "3.5": 0.20820785114413456
+    },
+    "both_teams_score": 0.4670648423911403,
+    "total_goals_80": [
+      1,
+      4
+    ],
+    "training_cutoff_exclusive": "2026-10-25",
+    "training_games": 1090,
+    "prior_team_games": {
+      "juventus fc": 109,
+      "ssc napoli": 109
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "653f7bd855fde1275fd8db8739bfb6edd2be28d37870e466697f9df28d16186f",
+  "payload_sha256": "f0272ab1932fde888b74a847b9780426110be03dd94911c0567b53b0b873b6c9"
+}

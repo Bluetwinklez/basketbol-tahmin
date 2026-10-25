@@ -11,7 +11,7 @@
           "log_loss": 1.0201965320966646,
           "brier": 0.6113956982360308,
           "total_mae": 1.1714758798929499,
-          "margin_mae": 1.0633655408066731,
+          "margin_mae": 1.063365540806673,
           "total_in_80": 0.9052631578947369,
           "goal_markets": {
             "over_1.5": {
@@ -28,7 +28,7 @@
             },
             "both_teams_score": {
               "accuracy": 0.5684210526315789,
-              "brier": 0.2493887404594643
+              "brier": 0.24938874045946427
             }
           }
         },
@@ -43,11 +43,11 @@
           "goal_markets": {
             "over_1.5": {
               "accuracy": 0.631578947368421,
-              "brier": 0.23267344121125882
+              "brier": 0.23267344121125885
             },
             "over_2.5": {
               "accuracy": 0.6263157894736842,
-              "brier": 0.23199051079788688
+              "brier": 0.23199051079788693
             },
             "over_3.5": {
               "accuracy": 0.8184210526315789,
@@ -74,11 +74,11 @@
             },
             "over_2.5": {
               "accuracy": 0.6263157894736842,
-              "brier": 0.23199051079788688
+              "brier": 0.23199051079788693
             },
             "over_3.5": {
               "accuracy": 0.8184210526315789,
-              "brier": 0.1500580504003206
+              "brier": 0.15005805040032064
             },
             "both_teams_score": {
               "accuracy": 0.55,
@@ -109,7 +109,7 @@
             },
             "both_teams_score": {
               "accuracy": 0.5684210526315789,
-              "brier": 0.24847814250115455
+              "brier": 0.24847814250115458
             }
           }
         }
@@ -381,7 +381,7 @@
       },
       "both_teams_score": {
         "n": 380,
-        "brier": 0.2493887404594643,
+        "brier": 0.24938874045946427,
         "log_loss": 0.6924628048456528,
         "expected_calibration_error": 0.058719208787928245,
         "bins": [
@@ -506,7 +506,7 @@
             "lower": 0.0,
             "upper": 0.1,
             "n": 2,
-            "mean_probability": 0.07922302834042746,
+            "mean_probability": 0.07922302834042744,
             "observed_rate": 0.5
           },
           {
@@ -541,9 +541,9 @@
       },
       "over_1.5": {
         "n": 380,
-        "brier": 0.23267344121125882,
+        "brier": 0.23267344121125885,
         "log_loss": 0.6581627551825475,
-        "expected_calibration_error": 0.04388012309127782,
+        "expected_calibration_error": 0.043880123091277826,
         "bins": [
           {
             "lower": 0.4,
@@ -570,7 +570,7 @@
             "lower": 0.7,
             "upper": 0.8,
             "n": 46,
-            "mean_probability": 0.730208793294351,
+            "mean_probability": 0.7302087932943511,
             "observed_rate": 0.6739130434782609
           },
           {
@@ -584,15 +584,15 @@
       },
       "over_2.5": {
         "n": 380,
-        "brier": 0.23199051079788688,
+        "brier": 0.23199051079788693,
         "log_loss": 0.6564152133444265,
-        "expected_calibration_error": 0.034084789655612194,
+        "expected_calibration_error": 0.034084789655612166,
         "bins": [
           {
             "lower": 0.1,
             "upper": 0.2,
             "n": 5,
-            "mean_probability": 0.19085602726722609,
+            "mean_probability": 0.19085602726722606,
             "observed_rate": 0.0
           },
           {
@@ -606,7 +606,7 @@
             "lower": 0.3,
             "upper": 0.4,
             "n": 189,
-            "mean_probability": 0.3461734582948578,
+            "mean_probability": 0.34617345829485785,
             "observed_rate": 0.37566137566137564
           },
           {
@@ -708,9 +708,9 @@
     "opponent_dc": {
       "home": {
         "n": 380,
-        "brier": 0.24754258960998177,
+        "brier": 0.2475425896099818,
         "log_loss": 0.6885745890450053,
-        "expected_calibration_error": 0.05688636638853279,
+        "expected_calibration_error": 0.05688636638853277,
         "bins": [
           {
             "lower": 0.2,
@@ -723,7 +723,7 @@
             "lower": 0.3,
             "upper": 0.4,
             "n": 75,
-            "mean_probability": 0.3644804276621742,
+            "mean_probability": 0.36448042766217414,
             "observed_rate": 0.52
           },
           {
@@ -737,7 +737,7 @@
             "lower": 0.5,
             "upper": 0.6,
             "n": 117,
-            "mean_probability": 0.5426544975363008,
+            "mean_probability": 0.5426544975363009,
             "observed_rate": 0.6068376068376068
           },
           {
@@ -766,7 +766,7 @@
             "lower": 0.1,
             "upper": 0.2,
             "n": 4,
-            "mean_probability": 0.18350092069469143,
+            "mean_probability": 0.18350092069469137,
             "observed_rate": 0.0
           },
           {
@@ -788,14 +788,14 @@
       "away": {
         "n": 380,
         "brier": 0.16895507327168421,
-        "log_loss": 0.5205077957521413,
+        "log_loss": 0.5205077957521412,
         "expected_calibration_error": 0.01896308285781714,
         "bins": [
           {
             "lower": 0.0,
             "upper": 0.1,
             "n": 2,
-            "mean_probability": 0.07534209101990537,
+            "mean_probability": 0.07534209101990536,
             "observed_rate": 0.5
           },
           {
@@ -873,15 +873,15 @@
       },
       "over_2.5": {
         "n": 380,
-        "brier": 0.23199051079788688,
+        "brier": 0.23199051079788693,
         "log_loss": 0.6564152133444265,
-        "expected_calibration_error": 0.03408478965561219,
+        "expected_calibration_error": 0.034084789655612166,
         "bins": [
           {
             "lower": 0.1,
             "upper": 0.2,
             "n": 5,
-            "mean_probability": 0.19085602726722609,
+            "mean_probability": 0.19085602726722603,
             "observed_rate": 0.0
           },
           {
@@ -902,7 +902,7 @@
             "lower": 0.4,
             "upper": 0.5,
             "n": 80,
-            "mean_probability": 0.44011780951554913,
+            "mean_probability": 0.44011780951554924,
             "observed_rate": 0.4625
           },
           {
@@ -923,22 +923,22 @@
       },
       "over_3.5": {
         "n": 380,
-        "brier": 0.1500580504003206,
+        "brier": 0.15005805040032064,
         "log_loss": 0.47926639833646695,
-        "expected_calibration_error": 0.028811263157552055,
+        "expected_calibration_error": 0.028811263157552038,
         "bins": [
           {
             "lower": 0.0,
             "upper": 0.1,
             "n": 45,
-            "mean_probability": 0.08695818810647438,
+            "mean_probability": 0.08695818810647436,
             "observed_rate": 0.17777777777777778
           },
           {
             "lower": 0.1,
             "upper": 0.2,
             "n": 251,
-            "mean_probability": 0.15044696410536235,
+            "mean_probability": 0.15044696410536237,
             "observed_rate": 0.16733067729083664
           },
           {
@@ -961,13 +961,13 @@
         "n": 380,
         "brier": 0.24890749582767197,
         "log_loss": 0.6912346939373224,
-        "expected_calibration_error": 0.05935355429637707,
+        "expected_calibration_error": 0.05935355429637705,
         "bins": [
           {
             "lower": 0.2,
             "upper": 0.3,
             "n": 18,
-            "mean_probability": 0.28258171563280643,
+            "mean_probability": 0.2825817156328064,
             "observed_rate": 0.3333333333333333
           },
           {
@@ -981,7 +981,7 @@
             "lower": 0.4,
             "upper": 0.5,
             "n": 158,
-            "mean_probability": 0.4374238673249577,
+            "mean_probability": 0.43742386732495775,
             "observed_rate": 0.4936708860759494
           },
           {
@@ -999,7 +999,7 @@
         "n": 380,
         "brier": 0.2479655917067373,
         "log_loss": 0.6893917006567736,
-        "expected_calibration_error": 0.056283074655911376,
+        "expected_calibration_error": 0.056283074655911425,
         "bins": [
           {
             "lower": 0.2,
@@ -1019,7 +1019,7 @@
             "lower": 0.4,
             "upper": 0.5,
             "n": 151,
-            "mean_probability": 0.455165127041782,
+            "mean_probability": 0.4551651270417819,
             "observed_rate": 0.46357615894039733
           },
           {
@@ -1040,7 +1040,7 @@
             "lower": 0.7,
             "upper": 0.8,
             "n": 2,
-            "mean_probability": 0.7339202514314305,
+            "mean_probability": 0.7339202514314306,
             "observed_rate": 0.5
           }
         ]
@@ -1055,7 +1055,7 @@
             "lower": 0.1,
             "upper": 0.2,
             "n": 3,
-            "mean_probability": 0.18359984752129221,
+            "mean_probability": 0.1835998475212922,
             "observed_rate": 0.0
           },
           {
@@ -1163,14 +1163,14 @@
       "over_2.5": {
         "n": 380,
         "brier": 0.23290829823643264,
-        "log_loss": 0.658777970795492,
+        "log_loss": 0.6587779707954922,
         "expected_calibration_error": 0.05421221224941325,
         "bins": [
           {
             "lower": 0.1,
             "upper": 0.2,
             "n": 1,
-            "mean_probability": 0.18600846056120104,
+            "mean_probability": 0.18600846056120102,
             "observed_rate": 0.0
           },
           {
@@ -1214,7 +1214,7 @@
         "n": 380,
         "brier": 0.14997568434745584,
         "log_loss": 0.47966002352609466,
-        "expected_calibration_error": 0.031187079175871726,
+        "expected_calibration_error": 0.031187079175871744,
         "bins": [
           {
             "lower": 0.0,
@@ -1227,7 +1227,7 @@
             "lower": 0.1,
             "upper": 0.2,
             "n": 265,
-            "mean_probability": 0.14945789839831256,
+            "mean_probability": 0.14945789839831253,
             "observed_rate": 0.17735849056603772
           },
           {
@@ -1248,9 +1248,9 @@
       },
       "both_teams_score": {
         "n": 380,
-        "brier": 0.24847814250115455,
+        "brier": 0.24847814250115458,
         "log_loss": 0.6903892992435018,
-        "expected_calibration_error": 0.04853566102315322,
+        "expected_calibration_error": 0.04853566102315325,
         "bins": [
           {
             "lower": 0.2,
@@ -1263,7 +1263,7 @@
             "lower": 0.3,
             "upper": 0.4,
             "n": 192,
-            "mean_probability": 0.35615732220357504,
+            "mean_probability": 0.356157322203575,
             "observed_rate": 0.421875
           },
           {

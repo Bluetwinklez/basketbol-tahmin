@@ -1,0 +1,65 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+  "fixture": {
+    "event_id": "EN2_016401185eaba71a77fb0bc1",
+    "league": "EN2",
+    "season": "2026-27",
+    "date": "2026-10-31",
+    "home": "middlesbrough fc",
+    "away": "charlton athletic fc",
+    "home_name": "Middlesbrough FC",
+    "away_name": "Charlton Athletic FC",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/en.2.json",
+    "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "EN2",
+    "home": "middlesbrough fc",
+    "away": "charlton athletic fc",
+    "expected_home_goals": 1.7593301049073342,
+    "expected_away_goals": 0.9713801825562969,
+    "probabilities": {
+      "home": 0.5590084809519231,
+      "draw": 0.23420870238313965,
+      "away": 0.20678281666493734
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      1,
+      0
+    ],
+    "over": {
+      "1.5": 0.75685848681073,
+      "2.5": 0.5138682368815429,
+      "3.5": 0.2926895784698798
+    },
+    "both_teams_score": 0.5144526320280416,
+    "total_goals_80": [
+      1,
+      5
+    ],
+    "training_cutoff_exclusive": "2026-10-25",
+    "training_games": 1611,
+    "prior_team_games": {
+      "middlesbrough fc": 136,
+      "charlton athletic fc": 54
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "653f7bd855fde1275fd8db8739bfb6edd2be28d37870e466697f9df28d16186f",
+  "payload_sha256": "5e4bade1f242313948eafd659ab9c2ea2387ed9ccc2fabfe72f227ff70cde6de"
+}

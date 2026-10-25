@@ -150,6 +150,9 @@ def run(leagues=LEAGUES, output='rapor/daily', update=False, hours=48, threshold
             if not isinstance(candidate, dict) or candidate.get('spec') != 'prospective-v1':
                 continue
             record = verify(candidate)
+            if timestamp(record['recorded_at_utc']) > clock:
+                report['skipped'].append(dict(record=str(path),reason='Forecast was recorded after requested clock'))
+                continue
             records[str(path)] = record
             for item in record['forecasts']:
                 f = item['fixture']; key = (f['league'], f['event_id'])

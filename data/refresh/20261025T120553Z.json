@@ -1,0 +1,101 @@
+{
+  "football": {
+    "status": "partial",
+    "errors": [
+      {
+        "source": "football",
+        "league": "DE2",
+        "season": "2026-27",
+        "error": "Source file unavailable"
+      },
+      {
+        "source": "football",
+        "league": "ES2",
+        "season": "2026-27",
+        "error": "Source file unavailable"
+      },
+      {
+        "source": "football",
+        "league": "IT2",
+        "season": "2026-27",
+        "error": "Source file unavailable"
+      },
+      {
+        "source": "football",
+        "league": "FR2",
+        "season": "2026-27",
+        "error": "Source file unavailable"
+      },
+      {
+        "source": "football",
+        "league": "AT1",
+        "season": "2026-27",
+        "error": "Source file unavailable"
+      },
+      {
+        "source": "football",
+        "league": "BE1",
+        "season": "2026-27",
+        "error": "Source file unavailable"
+      },
+      {
+        "source": "football",
+        "league": "GR1",
+        "season": "2026-27",
+        "error": "Source file unavailable"
+      },
+      {
+        "source": "football",
+        "league": "SC1",
+        "season": "2026-27",
+        "error": "Source file unavailable"
+      },
+      {
+        "source": "BR2",
+        "league": "BR2",
+        "season": "2026",
+        "error": "Source file unavailable; historical data is not current coverage"
+      },
+      {
+        "source": "AR1",
+        "league": "AR1",
+        "season": "2026",
+        "error": "Source file unavailable; historical data is not current coverage"
+      },
+      {
+        "source": "CO1",
+        "league": "CO1",
+        "season": "2026",
+        "error": "Source file unavailable; historical data is not current coverage"
+      },
+      {
+        "source": "US1",
+        "league": "US1",
+        "season": "2026",
+        "error": "Source file unavailable; historical data is not current coverage"
+      },
+      {
+        "source": "JP1",
+        "league": "JP1",
+        "season": "2026",
+        "error": "Source file unavailable; historical data is not current coverage"
+      },
+      {
+        "source": "CN1",
+        "league": "CN1",
+        "season": "2026",
+        "error": "Source file unavailable; historical data is not current coverage"
+      }
+    ]
+  },
+  "basketball": {
+    "status": "partial",
+    "errors": [
+      {
+        "league": "ARG_LNB",
+        "status": "failed",
+        "error": "ValueError: Duplicate Argentina natural fixture identity"
+      }
+    ]
+  }
+}

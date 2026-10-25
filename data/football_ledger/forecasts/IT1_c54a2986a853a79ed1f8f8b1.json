@@ -1,0 +1,65 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+  "fixture": {
+    "event_id": "IT1_c54a2986a853a79ed1f8f8b1",
+    "league": "IT1",
+    "season": "2026-27",
+    "date": "2026-10-31",
+    "home": "bologna fc 1909",
+    "away": "ac monza",
+    "home_name": "Bologna FC 1909",
+    "away_name": "AC Monza",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/it.1.json",
+    "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "IT1",
+    "home": "bologna fc 1909",
+    "away": "ac monza",
+    "expected_home_goals": 1.5315438923705584,
+    "expected_away_goals": 1.1941970834693076,
+    "probabilities": {
+      "home": 0.45076740765901313,
+      "draw": 0.25256640085990467,
+      "away": 0.29666619148108236
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.7559727120549397,
+      "2.5": 0.5126599407625648,
+      "3.5": 0.29159074387697176
+    },
+    "both_teams_score": 0.546348937278946,
+    "total_goals_80": [
+      1,
+      5
+    ],
+    "training_cutoff_exclusive": "2026-10-25",
+    "training_games": 1090,
+    "prior_team_games": {
+      "bologna fc 1909": 109,
+      "ac monza": 71
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "653f7bd855fde1275fd8db8739bfb6edd2be28d37870e466697f9df28d16186f",
+  "payload_sha256": "30c14288cd4549146160879e225c1986df46451e8e27bbce65f03169edb4d76b"
+}

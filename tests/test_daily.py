@@ -155,3 +155,13 @@ def test_damaged_existing_record_cannot_be_silently_replaced(tmp_path,monkeypatc
     path.write_text(json.dumps(record))
     with pytest.raises(ValueError,match='Invalid existing forecast record'):
         daily.run(['JP_B1'],now='2026-10-23T13:00Z')
+
+
+def test_historical_clock_cannot_reuse_future_record(tmp_path,monkeypatch):
+    f,p=setup(tmp_path,monkeypatch)
+    root=tmp_path/'ledger'
+    first=daily.run(['JP_B1'],str(root),now='2026-10-23T11:00Z')
+    assert len(first['upcoming'])==1
+    second=daily.run(['JP_B1'],str(root),now='2026-10-23T09:00Z')
+    assert not second['upcoming']
+    assert any('recorded after requested clock' in item['reason'] for item in second['skipped'])

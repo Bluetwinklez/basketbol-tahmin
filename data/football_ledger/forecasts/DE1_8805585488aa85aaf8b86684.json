@@ -1,0 +1,65 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+  "fixture": {
+    "event_id": "DE1_8805585488aa85aaf8b86684",
+    "league": "DE1",
+    "season": "2026-27",
+    "date": "2026-10-31",
+    "home": "fc augsburg",
+    "away": "sc freiburg",
+    "home_name": "FC Augsburg",
+    "away_name": "SC Freiburg",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/de.1.json",
+    "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "DE1",
+    "home": "fc augsburg",
+    "away": "sc freiburg",
+    "expected_home_goals": 1.690127727051612,
+    "expected_away_goals": 1.2549130606061931,
+    "probabilities": {
+      "home": 0.4761500586656029,
+      "draw": 0.23927241308522584,
+      "away": 0.2845775282491715
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.792491192480828,
+      "2.5": 0.5643846880967108,
+      "3.5": 0.3404570349829547
+    },
+    "both_teams_score": 0.5830033233586226,
+    "total_goals_80": [
+      1,
+      5
+    ],
+    "training_cutoff_exclusive": "2026-10-25",
+    "training_games": 882,
+    "prior_team_games": {
+      "fc augsburg": 98,
+      "sc freiburg": 98
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "653f7bd855fde1275fd8db8739bfb6edd2be28d37870e466697f9df28d16186f",
+  "payload_sha256": "3175da00cc9544fcb89817fdc8d5f2552f91346f27b963318cb71cb1f7d05fa0"
+}

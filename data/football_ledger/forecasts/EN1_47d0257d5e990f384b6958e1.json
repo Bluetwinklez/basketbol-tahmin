@@ -1,0 +1,65 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+  "fixture": {
+    "event_id": "EN1_47d0257d5e990f384b6958e1",
+    "league": "EN1",
+    "season": "2026-27",
+    "date": "2026-10-31",
+    "home": "chelsea fc",
+    "away": "manchester united fc",
+    "home_name": "Chelsea FC",
+    "away_name": "Manchester United FC",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/en.1.json",
+    "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "EN1",
+    "home": "chelsea fc",
+    "away": "manchester united fc",
+    "expected_home_goals": 1.5317220009819468,
+    "expected_away_goals": 1.4718246963303119,
+    "probabilities": {
+      "home": 0.39180379163969625,
+      "draw": 0.24271926618765377,
+      "away": 0.3654769421726501
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.8013808396088304,
+      "2.5": 0.5776040574596344,
+      "3.5": 0.35356271913984033
+    },
+    "both_teams_score": 0.6039413643931058,
+    "total_goals_80": [
+      1,
+      5
+    ],
+    "training_cutoff_exclusive": "2026-10-25",
+    "training_games": 1100,
+    "prior_team_games": {
+      "chelsea fc": 110,
+      "manchester united fc": 110
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "653f7bd855fde1275fd8db8739bfb6edd2be28d37870e466697f9df28d16186f",
+  "payload_sha256": "b43d766c33b2cacadae8d9f99f044e087f9f7bd3dbc259c0df0dccc2d00e0485"
+}

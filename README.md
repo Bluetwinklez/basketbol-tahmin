@@ -4,6 +4,8 @@ A Python research package for pregame basketball probabilities, score margins an
 
 **The core archive contains 54,808 games; the separate Asian archives contain 12,850 results. More data has not established a general increase in prediction accuracy.** Results below distinguish full coverage from confidence-filtered subsets, and historical tests from live performance.
 
+**Japan 2026–27:** current B.PREMIER/B.ONE fixtures are distinct competitions. Legacy B1/B2 model transfer is blocked until separately validated; historical archive availability does not imply current prediction support.
+
 Current delivery audit and unresolved acceptance criteria: [scope ledger](docs/delivery-scope.md). Screenshot pairings, unknown dates and source verification are tracked separately from model performance.
 
 ## What works

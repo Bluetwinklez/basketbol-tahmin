@@ -1,0 +1,65 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+  "fixture": {
+    "event_id": "TR1_15f4dd4d63910ac64eef3cfc",
+    "league": "TR1",
+    "season": "2026-27",
+    "date": "2026-11-01",
+    "home": "trabzonspor",
+    "away": "gaziantep fk",
+    "home_name": "Trabzonspor",
+    "away_name": "Gaziantep FK",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/europe/blob/63df627f3c87ce71708f016522ea236cf74332c3/turkey/2026-27_tr1.txt",
+    "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "TR1",
+    "home": "trabzonspor",
+    "away": "gaziantep fk",
+    "expected_home_goals": 1.824842786793212,
+    "expected_away_goals": 1.2105526198706364,
+    "probabilities": {
+      "home": 0.5177371248507838,
+      "draw": 0.22940551617682098,
+      "away": 0.2528573589723952
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.8060764200923108,
+      "2.5": 0.5846930094027569,
+      "3.5": 0.36069761342987444
+    },
+    "both_teams_score": 0.5887801307135937,
+    "total_goals_80": [
+      1,
+      5
+    ],
+    "training_cutoff_exclusive": "2026-10-25",
+    "training_games": 763,
+    "prior_team_games": {
+      "trabzonspor": 80,
+      "gaziantep fk": 79
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "653f7bd855fde1275fd8db8739bfb6edd2be28d37870e466697f9df28d16186f",
+  "payload_sha256": "488c252d8392be963185e17cc63026c38aa024e47acafee135492697469593f6"
+}

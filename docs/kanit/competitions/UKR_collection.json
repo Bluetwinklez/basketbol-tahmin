@@ -1,7 +1,7 @@
 {
-  "timestamp_utc": "2026-10-23T14:16:39.363193+00:00",
+  "timestamp_utc": "2026-10-25T12:04:50.096315+00:00",
   "league": "UKR",
-  "games": 997,
+  "games": 1002,
   "teams": 19,
   "seasons": {
     "2020-21": 246,
@@ -10,15 +10,9 @@
     "2023-24": 153,
     "2024-25": 132,
     "2025-26": 127,
-    "2026-27": 21
+    "2026-27": 26
   },
   "sources": [
-    "https://widgets.baskethotel.com/widget-service/export/view/schedule_and_results?api=aaed6059969d182ff2a08e7d61458ce2d1a372c1&season_id=119469&lang=en&type=results_only",
-    "https://widgets.baskethotel.com/widget-service/export/view/schedule_and_results?api=aaed6059969d182ff2a08e7d61458ce2d1a372c1&season_id=122785&lang=en&type=results_only",
-    "https://widgets.baskethotel.com/widget-service/export/view/schedule_and_results?api=aaed6059969d182ff2a08e7d61458ce2d1a372c1&season_id=125619&lang=en&type=results_only",
-    "https://widgets.baskethotel.com/widget-service/export/view/schedule_and_results?api=aaed6059969d182ff2a08e7d61458ce2d1a372c1&season_id=127156&lang=en&type=results_only",
-    "https://widgets.baskethotel.com/widget-service/export/view/schedule_and_results?api=aaed6059969d182ff2a08e7d61458ce2d1a372c1&season_id=129119&lang=en&type=results_only",
-    "https://widgets.baskethotel.com/widget-service/export/view/schedule_and_results?api=aaed6059969d182ff2a08e7d61458ce2d1a372c1&season_id=131063&lang=en&type=results_only",
     "https://widgets.baskethotel.com/widget-service/export/view/schedule_and_results?api=aaed6059969d182ff2a08e7d61458ce2d1a372c1&season_id=133338&lang=en&type=results_only",
     "https://widgets.baskethotel.com/widget-service/export/view/schedule_and_results?api=aaed6059969d182ff2a08e7d61458ce2d1a372c1&season_id=133338&lang=en&type=schedule_only"
   ],
@@ -28,52 +22,10 @@
   "note": "Normalized numeric facts from public pages; no supported developer API contract. Nominal home/away, neutral venues not independently verified.",
   "counts": [
     {
-      "year": 2020,
-      "provider_season": "119469",
-      "export_type": "results_only",
-      "finals": 246,
-      "fixtures": 0
-    },
-    {
-      "year": 2021,
-      "provider_season": "122785",
-      "export_type": "results_only",
-      "finals": 176,
-      "fixtures": 0
-    },
-    {
-      "year": 2022,
-      "provider_season": "125619",
-      "export_type": "results_only",
-      "finals": 142,
-      "fixtures": 0
-    },
-    {
-      "year": 2023,
-      "provider_season": "127156",
-      "export_type": "results_only",
-      "finals": 153,
-      "fixtures": 0
-    },
-    {
-      "year": 2024,
-      "provider_season": "129119",
-      "export_type": "results_only",
-      "finals": 132,
-      "fixtures": 0
-    },
-    {
-      "year": 2025,
-      "provider_season": "131063",
-      "export_type": "results_only",
-      "finals": 127,
-      "fixtures": 0
-    },
-    {
       "year": 2026,
       "provider_season": "133338",
       "export_type": "results_only",
-      "finals": 21,
+      "finals": 26,
       "fixtures": 0
     },
     {
@@ -81,7 +33,7 @@
       "provider_season": "133338",
       "export_type": "schedule_only",
       "finals": 0,
-      "fixtures": 9
+      "fixtures": 4
     }
   ],
   "source": "https://fbu.ua/statistics/league-224/calendar",

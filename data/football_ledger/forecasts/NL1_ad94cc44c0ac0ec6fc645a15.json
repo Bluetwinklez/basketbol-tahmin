@@ -1,0 +1,65 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+  "fixture": {
+    "event_id": "NL1_ad94cc44c0ac0ec6fc645a15",
+    "league": "NL1",
+    "season": "2026-27",
+    "date": "2026-10-31",
+    "home": "sc heerenveen",
+    "away": "nec",
+    "home_name": "SC Heerenveen",
+    "away_name": "NEC",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/nl.1.json",
+    "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "NL1",
+    "home": "sc heerenveen",
+    "away": "nec",
+    "expected_home_goals": 1.5321682975879989,
+    "expected_away_goals": 1.566394984696978,
+    "probabilities": {
+      "home": 0.37331254629008903,
+      "draw": 0.23853846977749796,
+      "away": 0.38814898393241304
+    },
+    "predicted_outcome": "away",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.8150975312637315,
+      "2.5": 0.5985257794681974,
+      "3.5": 0.3748386867702717
+    },
+    "both_teams_score": 0.6202507677505569,
+    "total_goals_80": [
+      1,
+      5
+    ],
+    "training_cutoff_exclusive": "2026-10-25",
+    "training_games": 901,
+    "prior_team_games": {
+      "sc heerenveen": 99,
+      "nec": 100
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "653f7bd855fde1275fd8db8739bfb6edd2be28d37870e466697f9df28d16186f",
+  "payload_sha256": "1a52344e9dd4ddb99b7420a2af02d952f230ab58cc5b9a8007120c8f03a5512c"
+}

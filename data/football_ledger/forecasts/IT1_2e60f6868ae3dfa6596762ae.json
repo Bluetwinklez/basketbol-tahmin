@@ -1,0 +1,65 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+  "fixture": {
+    "event_id": "IT1_2e60f6868ae3dfa6596762ae",
+    "league": "IT1",
+    "season": "2026-27",
+    "date": "2026-10-31",
+    "home": "ac milan",
+    "away": "fc internazionale milano",
+    "home_name": "AC Milan",
+    "away_name": "FC Internazionale Milano",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/it.1.json",
+    "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "IT1",
+    "home": "ac milan",
+    "away": "fc internazionale milano",
+    "expected_home_goals": 1.2402638145700733,
+    "expected_away_goals": 1.4764494599834561,
+    "probabilities": {
+      "home": 0.31825351316901734,
+      "draw": 0.2551858375726768,
+      "away": 0.42656064925830595
+    },
+    "predicted_outcome": "away",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.754356387993123,
+      "2.5": 0.5104607517942207,
+      "3.5": 0.28959591430514203
+    },
+    "both_teams_score": 0.5483363769771348,
+    "total_goals_80": [
+      1,
+      5
+    ],
+    "training_cutoff_exclusive": "2026-10-25",
+    "training_games": 1090,
+    "prior_team_games": {
+      "ac milan": 109,
+      "fc internazionale milano": 109
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "653f7bd855fde1275fd8db8739bfb6edd2be28d37870e466697f9df28d16186f",
+  "payload_sha256": "492685e532f3e6bff354921b41e1b90418bc9b0bb783c792b5d18c2b13e35b7d"
+}

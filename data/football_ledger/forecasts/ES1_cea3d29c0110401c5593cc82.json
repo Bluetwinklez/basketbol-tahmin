@@ -1,0 +1,65 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+  "fixture": {
+    "event_id": "ES1_cea3d29c0110401c5593cc82",
+    "league": "ES1",
+    "season": "2026-27",
+    "date": "2026-11-01",
+    "home": "rayo vallecano de madrid",
+    "away": "rc celta de vigo",
+    "home_name": "Rayo Vallecano de Madrid",
+    "away_name": "RC Celta de Vigo",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/es.1.json",
+    "captured_at_utc": "2026-10-25T12:01:08.491265+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "ES1",
+    "home": "rayo vallecano de madrid",
+    "away": "rc celta de vigo",
+    "expected_home_goals": 1.2225279279415038,
+    "expected_away_goals": 1.018985561534869,
+    "probabilities": {
+      "home": 0.4076660852528034,
+      "draw": 0.28613177900834147,
+      "away": 0.30620213573885524
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.6554352120036366,
+      "2.5": 0.38839554464494963,
+      "3.5": 0.18887120577502298
+    },
+    "both_teams_score": 0.450851786402526,
+    "total_goals_80": [
+      0,
+      4
+    ],
+    "training_cutoff_exclusive": "2026-10-25",
+    "training_games": 1100,
+    "prior_team_games": {
+      "rayo vallecano de madrid": 110,
+      "rc celta de vigo": 110
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "653f7bd855fde1275fd8db8739bfb6edd2be28d37870e466697f9df28d16186f",
+  "payload_sha256": "3189230cb2c39657d6059600d27bdd46c9d76429979ec906239aa2f183e8a681"
+}
