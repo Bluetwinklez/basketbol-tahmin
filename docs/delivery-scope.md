@@ -51,3 +51,13 @@ An additional replay leak was fixed: a historical requested clock cannot reuse a
 
 
 The second validation passes 315 Python tests. A repeatable Windows early-POST rejection reset was fixed by consuming only bounded request bodies before returning authentication errors; host/origin/token checks remain enforced. Four additional repository-backed screenshot pairings (Helsinki–Brno, Pärnu–Vienna, Celje–Brno, Montana–Girona) bring the scope registry to 38. Additional durable-chat retrieval was attempted: one large prior turn exceeds the retrieval service response limit; it was not claimed reviewed.
+
+
+## Identity and reporting follow-up
+
+PR #18 merged as 39ec87d3abd8e31d83f8f11a887b99d5b86f1cda after successful exact-head push and PR CI, including rendered UI. Team-name resolution now accepts only a unique explicit normalized alias or team code. Prefix/fuzzy matches are suggestions only; shared aliases cannot collapse into one arbitrary team. Historical football coverage is exposed separately from active-season availability through `python -m bbtahmin futbol coverage`, `/api/football/coverage`, and the existing read-only MCP `football_status` tool. The 90-day history diagnostic is not an accuracy guarantee; no coverage count automatically certifies a fixture prediction.
+
+Football score reports now include home, away and combined team-score MAE with their explicit sample count. Older result objects that lack team errors report no such metric rather than silently treating missing errors as zero. The unchanged BR2 chronological cohort is regenerated to include these measures; defaults remain unchanged.
+
+
+Final local follow-up validation: 321 Python tests pass. On the unchanged 380-game 2024 BR2 cohort, baseline 1/X/2 accuracy remains 51.58% and combined team-score MAE is 0.79609 goals; the existing opponent candidate remains 52.63% / 0.79394. These are different existing candidates, not evidence of a new-model gain. `audit_fenerbahce_history.py` exports 50 available BSL/EuroLeague candidates before the original 23 October forecast date, while explicitly leaving actual all-competition latest-50 completeness unverified. Missing cup/Super Cup calendars and venue checks are not filled with old or duplicate records.

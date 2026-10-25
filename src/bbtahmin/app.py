@@ -231,6 +231,10 @@ class Handler(BaseHTTPRequestHandler):
             if name in ('index.html','football.html'):
                 raw = raw.replace('__CSRF_TOKEN__', self.server.state.token)
             return self.send(raw.encode('utf8'), kind)
+        if path == '/api/football/coverage':
+            from .football.data import load
+            from .football.coverage import league_coverage
+            return self.send(league_coverage(load()))
         if path == '/api/football':
             return self.send(self.server.state.football_snapshot())
         if path in ('/api/football/export.json','/api/football/export.csv','/api/football/export.md'):

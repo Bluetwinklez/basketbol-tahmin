@@ -116,3 +116,13 @@ def test_csv_export_has_point_errors_and_neutralizes_formula_names():
                        total_absolute_error=3.,margin_absolute_error=7.,total_in_80=True,margin_in_80=True))
     rows=list(csv.DictReader(io.StringIO(export_csv(report(),[row]).decode('utf-8-sig'))))
     assert rows[0]['home']=="'=FORMULA()" and rows[0]['margin_absolute_error']=='7.0'
+
+
+def test_coverage_endpoint_exposes_unsupported_requested_competitions(local_app):
+    server,state=local_app
+    status,_,body=request(server,'/api/football/coverage')
+    assert status==200
+    codes={x['league']:x for x in json.loads(body)['leagues']}
+    assert codes['CO2']['status']=='missing_archive'
+    assert codes['USLC']['historical_finals']==0
+    assert not codes['TR1']['prediction_ready']
