@@ -7,6 +7,7 @@ import pandas as pd
 
 from .data import ROOT, load, write_json
 from .model import GoalModel, metrics, score
+from .health import assess as assess_history
 
 
 def digest(payload):
@@ -25,23 +26,39 @@ def run(days=7, output='rapor/football', root=ROOT, now=None, model_variant='bas
     output=Path(output); ledger=output/'forecasts'; ledger.mkdir(parents=True,exist_ok=True)
     if frame.empty: raise ValueError('Collect football data first')
     collection=json.loads((Path(root)/'collection.json').read_text())
+    review_path=Path(root)/'fixture_reviews.json'
+    reviews={}
+    if review_path.exists():
+        review_file=json.loads(review_path.read_text(encoding='utf8'))
+        if review_file.get('spec')!='football-fixture-reviews-v1' or not isinstance(review_file.get('reviews'),dict):
+            raise ValueError('Invalid fixture review registry')
+        reviews=review_file['reviews']
     forecasts=[]; skipped=[]; models={}
     archive_sha=digest(frame.to_json(orient='records'))
+    from ..prospective import fingerprint
+    code_sha=fingerprint()
     for g in frame.loc[(frame.status=='scheduled')&(frame.date>today)&(frame.date<=end)].sort_values(['date','league','event_id']).to_dict('records'):
         path=ledger/(g['event_id']+'.json')
         if path.exists(): continue
         try:
+            if g['event_id'] in reviews:
+                raise ValueError('Fixture date/identity is quarantined; original record retained for review')
             # A future fixture is valid only if actually captured before its date.
             if g['captured_at_utc'][:10]>=g['date']: raise ValueError('Not a pregame source capture')
             captured=pd.Timestamp(g['captured_at_utc'])
             if captured.tzinfo is None: raise ValueError('Fixture capture timezone required')
             if captured>now: raise ValueError('Fixture capture is in the future')
             if (now-captured).total_seconds()>72*3600: raise ValueError('Fixture snapshot older than 72 hours; refresh required')
+            health=assess_history(frame,g,now)
+            if not health['diagnostic_gate_passed']:
+                raise ValueError('Insufficient history (current coverage): '+'; '.join(health['blocking_issues']))
             if g['league'] not in models: models[g['league']]=fit(frame,g['league'],today,model_variant)
             prediction=models[g['league']].predict(g['home'],g['away'])
             if prediction.get('issues'): raise ValueError('Insufficient history: '+'; '.join(prediction['issues']))
             payload=dict(spec='football-prospective-v1',recorded_at_utc=now.isoformat(),fixture=g,prediction=prediction,
-                         archive_sha256=archive_sha)
+                         archive_sha256=archive_sha,source_code_sha256=code_sha,
+                         requested_model_variant=model_variant,history_health=health,
+                         selection_policy='Current-history diagnostic gate plus existing model issues; research only, no validated recommendation.')
             record=dict(payload,payload_sha256=digest(payload))
             encoded=json.dumps(record,ensure_ascii=False,indent=2,allow_nan=False)
             with path.open('x',encoding='utf8') as f: f.write(encoded)
@@ -51,18 +68,23 @@ def run(days=7, output='rapor/football', root=ROOT, now=None, model_variant='bas
     for path in sorted(ledger.glob('*.json')):
         record=json.loads(path.read_text()); sha=record.pop('payload_sha256')
         if digest(record)!=sha: raise ValueError('Frozen football forecast hash mismatch')
+        if pd.Timestamp(record['recorded_at_utc'])>now:
+            skipped.append(dict(record=str(path),reason='Forecast was recorded after requested clock'))
+            continue
         fixture=record['fixture']; g=rows.get(fixture['event_id'])
         result=None
         if record['recorded_at_utc'][:10]>=fixture['date']: raise ValueError('Forecast was not recorded before fixture date')
         # Community scores are explicitly separate from official verification.
-        if g and g['status']=='final' and g['date']<today:
+        review=reviews.get(fixture['event_id'])
+        if g and g['status']=='final' and g['date']<today and not review:
             if any(g[k]!=fixture[k] for k in ('home','away','date','league')): raise ValueError('Result identity mismatch')
             result=score(record['prediction'],int(g['home_goals']),int(g['away_goals']))
             result.update(verification='community_source_final_not_official',source_url=g['source_url'])
             settled.append(result)
         else: pending+=1
         forecasts.append(dict(fixture=fixture,prediction=record['prediction'],recorded_at_utc=record['recorded_at_utc'],
-                              status='publisher_final' if result else 'pending',result=result))
+                              status='fixture_review_required' if review else 'publisher_final' if result else 'pending',result=result,
+                              fixture_review=review))
     report=dict(spec='football-daily-v1',checked_at_utc=now.isoformat(),collection_checked_at_utc=collection['checked_at_utc'],
                 source_errors=collection['errors'],forecasts=forecasts,skipped=skipped,pending=pending,
                 requested_model_variant=model_variant,

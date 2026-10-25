@@ -11,13 +11,17 @@ from .data import key
 
 
 class GoalModel:
-    def __init__(self, history, league, cutoff):
+    def __init__(self, history, league, cutoff, *, half_life=180., shrinkage=8., window_days=1095):
+        if (not np.isfinite([half_life,shrinkage]).all() or half_life<=0 or shrinkage<=0
+                or type(window_days) is not int or window_days<1):
+            raise ValueError('Positive finite recency, shrinkage and history window required')
+        self.settings=dict(half_life_days=float(half_life),shrinkage_games=float(shrinkage),window_days=window_days)
         cutoff=pd.Timestamp(cutoff).normalize().tz_localize(None)
         history=history.loc[(history.league==league)&(history.status=='final')].copy()
         dates=pd.to_datetime(history.date)
-        history=history.loc[(dates<cutoff)&(dates>=cutoff-pd.Timedelta(days=1095))].copy()
+        history=history.loc[(dates<cutoff)&(dates>=cutoff-pd.Timedelta(days=window_days))].copy()
         if len(history)<100: raise ValueError('At least 100 earlier league finals required')
-        history['weight']=np.exp2(-(cutoff-pd.to_datetime(history.date)).dt.days/180.)
+        history['weight']=np.exp2(-(cutoff-pd.to_datetime(history.date)).dt.days/half_life)
         self.history, self.league, self.cutoff=history,league,cutoff
         weights=history.weight.to_numpy()
         self.home_mean=float(np.average(history.home_goals.astype(float),weights=weights))
@@ -29,8 +33,8 @@ class GoalModel:
                 ('away','away_goals','home_goals',self.away_mean,self.home_mean)]:
             for team,g in history.groupby(venue):
                 # Eight pseudo-matches shrink sparse/promoted clubs toward the league.
-                attack=(float((g[goals]*g.weight).sum())+8*base_for)/(g.weight.sum()+8)/base_for
-                defence=(float((g[conceded]*g.weight).sum())+8*base_against)/(g.weight.sum()+8)/base_against
+                attack=(float((g[goals]*g.weight).sum())+shrinkage*base_for)/(g.weight.sum()+shrinkage)/base_for
+                defence=(float((g[conceded]*g.weight).sum())+shrinkage*base_against)/(g.weight.sum()+shrinkage)/base_against
                 self.ratings[venue,team]=(attack,defence)
         self.baseline=history.assign(outcome=np.sign(history.home_goals-history.away_goals)).groupby('outcome').weight.sum()
         self.base_probs=np.array([self.baseline.get(1,0)+1,self.baseline.get(0,0)+1,self.baseline.get(-1,0)+1])
@@ -64,6 +68,7 @@ class GoalModel:
                     total_goals_80=[int(poisson.ppf(.1,goals)),int(poisson.ppf(.9,goals))],
                     training_cutoff_exclusive=self.cutoff.date().isoformat(),training_games=len(self.history),
                     prior_team_games=counts,issues=issues,recommendation_validated=False,
+                    settings=self.settings,
                     note='Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee.')
 
 
