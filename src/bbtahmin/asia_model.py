@@ -112,7 +112,7 @@ def predict(code,home,away,when):
     if code in ('JP_B1','JP_B2') and date >= pd.Timestamp('2026-07-01',tz='UTC'):
         raise ValueError('B.PREMIER/B.ONE are separate 2026-27 competitions; legacy B1/B2 model transfer is not validated')
     cutoff=date.floor('D');g=load(code);g=g[g.tarih_utc<cutoff]
-    catalog=json.loads(Path(f'data/asia/{code}_teams.json').read_text())
+    catalog=json.loads(Path(f'data/asia/{code}_teams.json').read_text(encoding='utf8'))
     if home==away or home not in catalog or away not in catalog:raise ValueError('Unknown or identical Asian team identity')
     year=date.year if date.month>=7 else date.year-1;season=f'{year}-{str(year+1)[-2:]}'
     if code.startswith('PBA_'):
