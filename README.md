@@ -4,6 +4,8 @@ A Python research package for pregame basketball probabilities, score margins an
 
 **The core archive contains 54,808 games; the separate Asian archives contain 12,850 results. More data has not established a general increase in prediction accuracy.** Results below distinguish full coverage from confidence-filtered subsets, and historical tests from live performance.
 
+Current delivery audit and unresolved acceptance criteria: [scope ledger](docs/delivery-scope.md). Screenshot pairings, unknown dates and source verification are tracked separately from model performance.
+
 ## What works
 
 **Football probability research:** a fixed joint-score ensemble, consistent goal markets and per-market reliability reports now complement the existing candidates. Same-cohort historical 1/X/2 is 48.78% versus baseline 47.80% on 3,973 games; other candidates perform better on some measures. Defaults and frozen forecasts remain unchanged. [Comparison and usage](docs/football-ensemble.md).

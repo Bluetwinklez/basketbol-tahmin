@@ -6,19 +6,8 @@ from .data import ROOT,load,row,parse_text,write_json,key
 
 
 def save(rows,code,season,root):
-    target=Path(root)/f'{code}_{season}.json.gz'
-    if target.exists():
-        old=json.loads(gzip.decompress(target.read_bytes()))['rows'];merged={r['event_id']:r for r in rows}
-        for r in old:
-            n=merged.get(r['event_id'])
-            if r['status']=='final':
-                if n and n['status']=='final' and any(n[k]!=r[k] for k in ('home_goals','away_goals')):raise ValueError('Conflicting final score')
-                if not n or n['status']!='final':merged[r['event_id']]=r
-        rows=list(merged.values())
-    if len({r['event_id'] for r in rows})!=len(rows):raise ValueError('Duplicate source identity')
-    target.parent.mkdir(parents=True,exist_ok=True)
-    tmp=target.with_suffix('.part');tmp.write_bytes(gzip.compress(json.dumps(dict(rows=rows),ensure_ascii=False,allow_nan=False).encode(),mtime=0));tmp.replace(target)
-    return len(rows)
+    from .storage import save as save_snapshot
+    return len(save_snapshot(rows, code, season, root))
 
 
 def argentina(directory,root=ROOT,first=2023):
