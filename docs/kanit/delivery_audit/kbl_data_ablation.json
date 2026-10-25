@@ -1,0 +1,963 @@
+{
+  "league": "KBL",
+  "base_revision": "0fafc2ef6345a19f447f36f2be046a9a26a41f29",
+  "model": "asia-separate-prior-policy-v1",
+  "source_revision": "de35010e7c4aa342dfef0dd4418146df240e4d2d",
+  "model_source_sha256": "a6f4bd201405684b0dbc38efe04e92eaa77fe0d0ae34e161455d7d94b9a5baf4",
+  "same_fixture_ids": [
+    "KBL_S49G01N33",
+    "KBL_S49G01N34",
+    "KBL_S49G01N35",
+    "KBL_S49G01N36",
+    "KBL_S49G01N37",
+    "KBL_S49G01N38",
+    "KBL_S49G01N39"
+  ],
+  "first_start_utc": "2026-10-23T10:00:00+00:00",
+  "last_start_utc": "2026-10-25T07:30:00+00:00",
+  "skipped": 0,
+  "experiments": {
+    "old_data": {
+      "summary": {
+        "games": 7,
+        "winner_accuracy": 0.42857142857142855,
+        "accuracy_wilson_95": [
+          0.15821985525146975,
+          0.7495416354723428
+        ],
+        "brier": 0.2350617049265123,
+        "calibration_bins": [
+          {
+            "lower": 0.5,
+            "n": 4,
+            "mean_probability": 0.5261398803670793,
+            "observed_home_rate": 0.25
+          },
+          {
+            "lower": 0.6000000000000001,
+            "n": 3,
+            "mean_probability": 0.6628743710891437,
+            "observed_home_rate": 0.6666666666666666
+          }
+        ],
+        "margin_in_80": 0.8571428571428571,
+        "log_loss": 0.6618482208847173,
+        "team_score_mae": 10.160394086717272,
+        "total_mae": 17.547433114928563,
+        "margin_mae": 6.756128208771352,
+        "total_in_80": 0.5714285714285714
+      },
+      "rows": [
+        {
+          "event_id": "KBL_S49G01N33",
+          "start_utc": "2026-10-23T10:00:00+00:00",
+          "prediction": {
+            "lig": "KBL",
+            "ev": "KBL_06",
+            "dep": "KBL_16",
+            "tarih_utc": "2026-10-23T10:00:00+00:00",
+            "model": "asia-separate-prior-policy-v1/elo",
+            "ev_kazanir": 0.5034654034704239,
+            "ev_skor": 81.65861815819689,
+            "dep_skor": 83.41418068485028,
+            "fark": -1.7555625266534,
+            "toplam": 165.07279884304717,
+            "fark_80": [
+              -17.741375821085274,
+              14.230250767778474
+            ],
+            "toplam_80": [
+              143.16077960174542,
+              186.98481808434892
+            ],
+            "tum_modeller": {
+              "score": 0.4440376586974703,
+              "logistic": 0.4169305818056843,
+              "elo": 0.5034654034704239,
+              "ensemble": 0.4548112146578595
+            },
+            "az_veri": [],
+            "recent_games": {
+              "KBL_06": 61,
+              "KBL_16": 60
+            },
+            "uzatma": null,
+            "experimental": true,
+            "training_cutoff": "2026-10-23T00:00:00+00:00",
+            "selection": {
+              "season": "2026-27",
+              "previous_season": "2025-26",
+              "training_games": 2247,
+              "calibration_games": 134,
+              "final_training_games": 2517,
+              "calibration_season_gap": 1,
+              "selection_games": 136,
+              "selection_window_start_utc": "2026-01-02T00:00:00+00:00",
+              "selected": "elo",
+              "selection_log_loss": {
+                "score": 0.6535251221056223,
+                "logistic": 0.6575069087166779,
+                "elo": 0.6289965293543216,
+                "ensemble": 0.6448875034714635
+              },
+              "rule": "Lowest log loss on the second UTC-day half of the preceding season. Score probabilities calibrate on its first half. Fixed learners; test outcomes never select a candidate."
+            },
+            "dataset_sha256": "9e09a0ebac480fc13986b381787b1dfd5d1266dfed9856cc44167fb8ecb13278",
+            "calibration_regime_gap": false,
+            "history_start_season": null,
+            "note": "Separate-league pregame research, not validated live/score certainty. Models fit on earlier seasons, features withhold the entire UTC day. Cup rules, promotions, historical publication and neutral venues are not fully modeled."
+          },
+          "actual_home": 95,
+          "actual_away": 102
+        },
+        {
+          "event_id": "KBL_S49G01N34",
+          "start_utc": "2026-10-24T05:00:00+00:00",
+          "prediction": {
+            "lig": "KBL",
+            "ev": "KBL_55",
+            "dep": "KBL_50",
+            "tarih_utc": "2026-10-24T05:00:00+00:00",
+            "model": "asia-separate-prior-policy-v1/elo",
+            "ev_kazanir": 0.5532308855025384,
+            "ev_skor": 82.56935344214222,
+            "dep_skor": 79.26628252117811,
+            "fark": 3.3030709209640916,
+            "toplam": 161.83563596332033,
+            "fark_80": [
+              -12.682742373467782,
+              19.288884215395964
+            ],
+            "toplam_80": [
+              139.92361672201858,
+              183.74765520462208
+            ],
+            "tum_modeller": {
+              "score": 0.604418529129658,
+              "logistic": 0.6155268824499089,
+              "elo": 0.5532308855025384,
+              "ensemble": 0.5910587656940351
+            },
+            "az_veri": [],
+            "recent_games": {
+              "KBL_55": 56,
+              "KBL_50": 61
+            },
+            "uzatma": null,
+            "experimental": true,
+            "training_cutoff": "2026-10-24T00:00:00+00:00",
+            "selection": {
+              "season": "2026-27",
+              "previous_season": "2025-26",
+              "training_games": 2247,
+              "calibration_games": 134,
+              "final_training_games": 2517,
+              "calibration_season_gap": 1,
+              "selection_games": 136,
+              "selection_window_start_utc": "2026-01-02T00:00:00+00:00",
+              "selected": "elo",
+              "selection_log_loss": {
+                "score": 0.6535251221056223,
+                "logistic": 0.6575069087166779,
+                "elo": 0.6289965293543216,
+                "ensemble": 0.6448875034714635
+              },
+              "rule": "Lowest log loss on the second UTC-day half of the preceding season. Score probabilities calibrate on its first half. Fixed learners; test outcomes never select a candidate."
+            },
+            "dataset_sha256": "9e09a0ebac480fc13986b381787b1dfd5d1266dfed9856cc44167fb8ecb13278",
+            "calibration_regime_gap": false,
+            "history_start_season": null,
+            "note": "Separate-league pregame research, not validated live/score certainty. Models fit on earlier seasons, features withhold the entire UTC day. Cup rules, promotions, historical publication and neutral venues are not fully modeled."
+          },
+          "actual_home": 86,
+          "actual_away": 85
+        },
+        {
+          "event_id": "KBL_S49G01N35",
+          "start_utc": "2026-10-24T07:30:00+00:00",
+          "prediction": {
+            "lig": "KBL",
+            "ev": "KBL_10",
+            "dep": "KBL_35",
+            "tarih_utc": "2026-10-24T07:30:00+00:00",
+            "model": "asia-separate-prior-policy-v1/elo",
+            "ev_kazanir": 0.5243568381182881,
+            "ev_skor": 80.9252025178665,
+            "dep_skor": 81.29325729522907,
+            "fark": -0.3680547773625773,
+            "toplam": 162.21845981309556,
+            "fark_80": [
+              -16.35386807179445,
+              15.617758517069296
+            ],
+            "toplam_80": [
+              140.30644057179381,
+              184.1304790543973
+            ],
+            "tum_modeller": {
+              "score": 0.48823042283912726,
+              "logistic": 0.47983446557643267,
+              "elo": 0.5243568381182881,
+              "ensemble": 0.497473908844616
+            },
+            "az_veri": [],
+            "recent_games": {
+              "KBL_10": 61,
+              "KBL_35": 60
+            },
+            "uzatma": null,
+            "experimental": true,
+            "training_cutoff": "2026-10-24T00:00:00+00:00",
+            "selection": {
+              "season": "2026-27",
+              "previous_season": "2025-26",
+              "training_games": 2247,
+              "calibration_games": 134,
+              "final_training_games": 2517,
+              "calibration_season_gap": 1,
+              "selection_games": 136,
+              "selection_window_start_utc": "2026-01-02T00:00:00+00:00",
+              "selected": "elo",
+              "selection_log_loss": {
+                "score": 0.6535251221056223,
+                "logistic": 0.6575069087166779,
+                "elo": 0.6289965293543216,
+                "ensemble": 0.6448875034714635
+              },
+              "rule": "Lowest log loss on the second UTC-day half of the preceding season. Score probabilities calibrate on its first half. Fixed learners; test outcomes never select a candidate."
+            },
+            "dataset_sha256": "9e09a0ebac480fc13986b381787b1dfd5d1266dfed9856cc44167fb8ecb13278",
+            "calibration_regime_gap": false,
+            "history_start_season": null,
+            "note": "Separate-league pregame research, not validated live/score certainty. Models fit on earlier seasons, features withhold the entire UTC day. Cup rules, promotions, historical publication and neutral venues are not fully modeled."
+          },
+          "actual_home": 71,
+          "actual_away": 91
+        },
+        {
+          "event_id": "KBL_S49G01N36",
+          "start_utc": "2026-10-24T07:30:00+00:00",
+          "prediction": {
+            "lig": "KBL",
+            "ev": "KBL_66",
+            "dep": "KBL_60",
+            "tarih_utc": "2026-10-24T07:30:00+00:00",
+            "model": "asia-separate-prior-policy-v1/elo",
+            "ev_kazanir": 0.6913639511266105,
+            "ev_skor": 85.94735204784493,
+            "dep_skor": 79.20775547722869,
+            "fark": 6.739596570616231,
+            "toplam": 165.15510752507362,
+            "fark_80": [
+              -9.246216723815643,
+              22.725409865048103
+            ],
+            "toplam_80": [
+              143.24308828377187,
+              187.06712676637537
+            ],
+            "tum_modeller": {
+              "score": 0.7055050418637212,
+              "logistic": 0.7250518141277524,
+              "elo": 0.6913639511266105,
+              "ensemble": 0.7073069357060281
+            },
+            "az_veri": [],
+            "recent_games": {
+              "KBL_66": 61,
+              "KBL_60": 61
+            },
+            "uzatma": null,
+            "experimental": true,
+            "training_cutoff": "2026-10-24T00:00:00+00:00",
+            "selection": {
+              "season": "2026-27",
+              "previous_season": "2025-26",
+              "training_games": 2247,
+              "calibration_games": 134,
+              "final_training_games": 2517,
+              "calibration_season_gap": 1,
+              "selection_games": 136,
+              "selection_window_start_utc": "2026-01-02T00:00:00+00:00",
+              "selected": "elo",
+              "selection_log_loss": {
+                "score": 0.6535251221056223,
+                "logistic": 0.6575069087166779,
+                "elo": 0.6289965293543216,
+                "ensemble": 0.6448875034714635
+              },
+              "rule": "Lowest log loss on the second UTC-day half of the preceding season. Score probabilities calibrate on its first half. Fixed learners; test outcomes never select a candidate."
+            },
+            "dataset_sha256": "9e09a0ebac480fc13986b381787b1dfd5d1266dfed9856cc44167fb8ecb13278",
+            "calibration_regime_gap": false,
+            "history_start_season": null,
+            "note": "Separate-league pregame research, not validated live/score certainty. Models fit on earlier seasons, features withhold the entire UTC day. Cup rules, promotions, historical publication and neutral venues are not fully modeled."
+          },
+          "actual_home": 97,
+          "actual_away": 96
+        },
+        {
+          "event_id": "KBL_S49G01N37",
+          "start_utc": "2026-10-25T05:00:00+00:00",
+          "prediction": {
+            "lig": "KBL",
+            "ev": "KBL_55",
+            "dep": "KBL_06",
+            "tarih_utc": "2026-10-25T05:00:00+00:00",
+            "model": "asia-separate-prior-policy-v1/elo",
+            "ev_kazanir": 0.6466808156134617,
+            "ev_skor": 83.41790230546857,
+            "dep_skor": 75.93329085964498,
+            "fark": 7.484611445823581,
+            "toplam": 159.35119316511356,
+            "fark_80": [
+              -8.501201848608293,
+              23.470424740255453
+            ],
+            "toplam_80": [
+              137.4391739238118,
+              181.2632124064153
+            ],
+            "tum_modeller": {
+              "score": 0.7257557942423369,
+              "logistic": 0.7708597810971708,
+              "elo": 0.6466808156134617,
+              "ensemble": 0.7144321303176565
+            },
+            "az_veri": [],
+            "recent_games": {
+              "KBL_55": 56,
+              "KBL_06": 61
+            },
+            "uzatma": null,
+            "experimental": true,
+            "training_cutoff": "2026-10-25T00:00:00+00:00",
+            "selection": {
+              "season": "2026-27",
+              "previous_season": "2025-26",
+              "training_games": 2247,
+              "calibration_games": 134,
+              "final_training_games": 2517,
+              "calibration_season_gap": 1,
+              "selection_games": 136,
+              "selection_window_start_utc": "2026-01-02T00:00:00+00:00",
+              "selected": "elo",
+              "selection_log_loss": {
+                "score": 0.6535251221056223,
+                "logistic": 0.6575069087166779,
+                "elo": 0.6289965293543216,
+                "ensemble": 0.6448875034714635
+              },
+              "rule": "Lowest log loss on the second UTC-day half of the preceding season. Score probabilities calibrate on its first half. Fixed learners; test outcomes never select a candidate."
+            },
+            "dataset_sha256": "9e09a0ebac480fc13986b381787b1dfd5d1266dfed9856cc44167fb8ecb13278",
+            "calibration_regime_gap": false,
+            "history_start_season": null,
+            "note": "Separate-league pregame research, not validated live/score certainty. Models fit on earlier seasons, features withhold the entire UTC day. Cup rules, promotions, historical publication and neutral venues are not fully modeled."
+          },
+          "actual_home": 90,
+          "actual_away": 79
+        },
+        {
+          "event_id": "KBL_S49G01N38",
+          "start_utc": "2026-10-25T05:00:00+00:00",
+          "prediction": {
+            "lig": "KBL",
+            "ev": "KBL_70",
+            "dep": "KBL_16",
+            "tarih_utc": "2026-10-25T05:00:00+00:00",
+            "model": "asia-separate-prior-policy-v1/elo",
+            "ev_kazanir": 0.6505783465273587,
+            "ev_skor": 81.37078330109587,
+            "dep_skor": 79.74025491332777,
+            "fark": 1.6305283877680972,
+            "toplam": 161.11103821442364,
+            "fark_80": [
+              -14.355284906663776,
+              17.61634168219997
+            ],
+            "toplam_80": [
+              139.1990189731219,
+              183.0230574557254
+            ],
+            "tum_modeller": {
+              "score": 0.5520001273570192,
+              "logistic": 0.556949676886511,
+              "elo": 0.6505783465273587,
+              "ensemble": 0.5865093835902963
+            },
+            "az_veri": [],
+            "recent_games": {
+              "KBL_70": 62,
+              "KBL_16": 60
+            },
+            "uzatma": null,
+            "experimental": true,
+            "training_cutoff": "2026-10-25T00:00:00+00:00",
+            "selection": {
+              "season": "2026-27",
+              "previous_season": "2025-26",
+              "training_games": 2247,
+              "calibration_games": 134,
+              "final_training_games": 2517,
+              "calibration_season_gap": 1,
+              "selection_games": 136,
+              "selection_window_start_utc": "2026-01-02T00:00:00+00:00",
+              "selected": "elo",
+              "selection_log_loss": {
+                "score": 0.6535251221056223,
+                "logistic": 0.6575069087166779,
+                "elo": 0.6289965293543216,
+                "ensemble": 0.6448875034714635
+              },
+              "rule": "Lowest log loss on the second UTC-day half of the preceding season. Score probabilities calibrate on its first half. Fixed learners; test outcomes never select a candidate."
+            },
+            "dataset_sha256": "9e09a0ebac480fc13986b381787b1dfd5d1266dfed9856cc44167fb8ecb13278",
+            "calibration_regime_gap": false,
+            "history_start_season": null,
+            "note": "Separate-league pregame research, not validated live/score certainty. Models fit on earlier seasons, features withhold the entire UTC day. Cup rules, promotions, historical publication and neutral venues are not fully modeled."
+          },
+          "actual_home": 93,
+          "actual_away": 95
+        },
+        {
+          "event_id": "KBL_S49G01N39",
+          "start_utc": "2026-10-25T07:30:00+00:00",
+          "prediction": {
+            "lig": "KBL",
+            "ev": "KBL_64",
+            "dep": "KBL_35",
+            "tarih_utc": "2026-10-25T07:30:00+00:00",
+            "model": "asia-separate-prior-policy-v1/elo",
+            "ev_kazanir": 0.5235063943770665,
+            "ev_skor": 80.18363801713663,
+            "dep_skor": 80.95570768524605,
+            "fark": -0.772069668109421,
+            "toplam": 161.13934570238268,
+            "fark_80": [
+              -16.757882962541295,
+              15.213743626322453
+            ],
+            "toplam_80": [
+              139.22732646108093,
+              183.05136494368443
+            ],
+            "tum_modeller": {
+              "score": 0.47532309566833125,
+              "logistic": 0.4563706963730312,
+              "elo": 0.5235063943770665,
+              "ensemble": 0.48506672880614293
+            },
+            "az_veri": [],
+            "recent_games": {
+              "KBL_64": 61,
+              "KBL_35": 60
+            },
+            "uzatma": null,
+            "experimental": true,
+            "training_cutoff": "2026-10-25T00:00:00+00:00",
+            "selection": {
+              "season": "2026-27",
+              "previous_season": "2025-26",
+              "training_games": 2247,
+              "calibration_games": 134,
+              "final_training_games": 2517,
+              "calibration_season_gap": 1,
+              "selection_games": 136,
+              "selection_window_start_utc": "2026-01-02T00:00:00+00:00",
+              "selected": "elo",
+              "selection_log_loss": {
+                "score": 0.6535251221056223,
+                "logistic": 0.6575069087166779,
+                "elo": 0.6289965293543216,
+                "ensemble": 0.6448875034714635
+              },
+              "rule": "Lowest log loss on the second UTC-day half of the preceding season. Score probabilities calibrate on its first half. Fixed learners; test outcomes never select a candidate."
+            },
+            "dataset_sha256": "9e09a0ebac480fc13986b381787b1dfd5d1266dfed9856cc44167fb8ecb13278",
+            "calibration_regime_gap": false,
+            "history_start_season": null,
+            "note": "Separate-league pregame research, not validated live/score certainty. Models fit on earlier seasons, features withhold the entire UTC day. Cup rules, promotions, historical publication and neutral venues are not fully modeled."
+          },
+          "actual_home": 68,
+          "actual_away": 76
+        }
+      ]
+    },
+    "expanded_data": {
+      "summary": {
+        "games": 7,
+        "winner_accuracy": 0.5714285714285714,
+        "accuracy_wilson_95": [
+          0.2504583645276572,
+          0.8417801447485302
+        ],
+        "brier": 0.22780275076012693,
+        "calibration_bins": [
+          {
+            "lower": 0.4,
+            "n": 1,
+            "mean_probability": 0.49846271472719905,
+            "observed_home_rate": 0.0
+          },
+          {
+            "lower": 0.5,
+            "n": 3,
+            "mean_probability": 0.5270177090304168,
+            "observed_home_rate": 0.3333333333333333
+          },
+          {
+            "lower": 0.6000000000000001,
+            "n": 3,
+            "mean_probability": 0.664349501859073,
+            "observed_home_rate": 0.6666666666666666
+          }
+        ],
+        "margin_in_80": 0.8571428571428571,
+        "log_loss": 0.6466208357862399,
+        "team_score_mae": 10.101397914766943,
+        "total_mae": 17.450586532136295,
+        "margin_mae": 6.941401214720039,
+        "total_in_80": 0.5714285714285714
+      },
+      "rows": [
+        {
+          "event_id": "KBL_S49G01N33",
+          "start_utc": "2026-10-23T10:00:00+00:00",
+          "prediction": {
+            "lig": "KBL",
+            "ev": "KBL_06",
+            "dep": "KBL_16",
+            "tarih_utc": "2026-10-23T10:00:00+00:00",
+            "model": "asia-separate-prior-policy-v1/elo",
+            "ev_kazanir": 0.5034654034704239,
+            "ev_skor": 81.65861815819689,
+            "dep_skor": 83.41418068485028,
+            "fark": -1.7555625266534,
+            "toplam": 165.07279884304717,
+            "fark_80": [
+              -17.741375821085274,
+              14.230250767778474
+            ],
+            "toplam_80": [
+              143.16077960174542,
+              186.98481808434892
+            ],
+            "tum_modeller": {
+              "score": 0.4440376586974703,
+              "logistic": 0.4169305818056843,
+              "elo": 0.5034654034704239,
+              "ensemble": 0.4548112146578595
+            },
+            "az_veri": [],
+            "recent_games": {
+              "KBL_06": 61,
+              "KBL_16": 60
+            },
+            "uzatma": null,
+            "experimental": true,
+            "training_cutoff": "2026-10-23T00:00:00+00:00",
+            "selection": {
+              "season": "2026-27",
+              "previous_season": "2025-26",
+              "training_games": 2247,
+              "calibration_games": 134,
+              "final_training_games": 2517,
+              "calibration_season_gap": 1,
+              "selection_games": 136,
+              "selection_window_start_utc": "2026-01-02T00:00:00+00:00",
+              "selected": "elo",
+              "selection_log_loss": {
+                "score": 0.6535251221056223,
+                "logistic": 0.6575069087166779,
+                "elo": 0.6289965293543216,
+                "ensemble": 0.6448875034714635
+              },
+              "rule": "Lowest log loss on the second UTC-day half of the preceding season. Score probabilities calibrate on its first half. Fixed learners; test outcomes never select a candidate."
+            },
+            "dataset_sha256": "37e16ee91d06da4f56b3668deac424717c38c4f62ef1c80392a5acf55dca84ce",
+            "calibration_regime_gap": false,
+            "history_start_season": null,
+            "note": "Separate-league pregame research, not validated live/score certainty. Models fit on earlier seasons, features withhold the entire UTC day. Cup rules, promotions, historical publication and neutral venues are not fully modeled."
+          },
+          "actual_home": 95,
+          "actual_away": 102
+        },
+        {
+          "event_id": "KBL_S49G01N34",
+          "start_utc": "2026-10-24T05:00:00+00:00",
+          "prediction": {
+            "lig": "KBL",
+            "ev": "KBL_55",
+            "dep": "KBL_50",
+            "tarih_utc": "2026-10-24T05:00:00+00:00",
+            "model": "asia-separate-prior-policy-v1/elo",
+            "ev_kazanir": 0.5532308855025384,
+            "ev_skor": 82.65628443372773,
+            "dep_skor": 79.3402926850575,
+            "fark": 3.3159917486702355,
+            "toplam": 161.99657711878524,
+            "fark_80": [
+              -12.669821545761637,
+              19.301805043102107
+            ],
+            "toplam_80": [
+              140.0845578774835,
+              183.908596360087
+            ],
+            "tum_modeller": {
+              "score": 0.6048174767396922,
+              "logistic": 0.61649537943157,
+              "elo": 0.5532308855025384,
+              "ensemble": 0.5915145805579335
+            },
+            "az_veri": [],
+            "recent_games": {
+              "KBL_55": 56,
+              "KBL_50": 61
+            },
+            "uzatma": null,
+            "experimental": true,
+            "training_cutoff": "2026-10-24T00:00:00+00:00",
+            "selection": {
+              "season": "2026-27",
+              "previous_season": "2025-26",
+              "training_games": 2247,
+              "calibration_games": 134,
+              "final_training_games": 2517,
+              "calibration_season_gap": 1,
+              "selection_games": 136,
+              "selection_window_start_utc": "2026-01-02T00:00:00+00:00",
+              "selected": "elo",
+              "selection_log_loss": {
+                "score": 0.6535251221056223,
+                "logistic": 0.6575069087166779,
+                "elo": 0.6289965293543216,
+                "ensemble": 0.6448875034714635
+              },
+              "rule": "Lowest log loss on the second UTC-day half of the preceding season. Score probabilities calibrate on its first half. Fixed learners; test outcomes never select a candidate."
+            },
+            "dataset_sha256": "37e16ee91d06da4f56b3668deac424717c38c4f62ef1c80392a5acf55dca84ce",
+            "calibration_regime_gap": false,
+            "history_start_season": null,
+            "note": "Separate-league pregame research, not validated live/score certainty. Models fit on earlier seasons, features withhold the entire UTC day. Cup rules, promotions, historical publication and neutral venues are not fully modeled."
+          },
+          "actual_home": 86,
+          "actual_away": 85
+        },
+        {
+          "event_id": "KBL_S49G01N35",
+          "start_utc": "2026-10-24T07:30:00+00:00",
+          "prediction": {
+            "lig": "KBL",
+            "ev": "KBL_10",
+            "dep": "KBL_35",
+            "tarih_utc": "2026-10-24T07:30:00+00:00",
+            "model": "asia-separate-prior-policy-v1/elo",
+            "ev_kazanir": 0.5243568381182881,
+            "ev_skor": 81.01213350945201,
+            "dep_skor": 81.36726745910843,
+            "fark": -0.35513394965643275,
+            "toplam": 162.37940096856045,
+            "fark_80": [
+              -16.340947244088305,
+              15.63067934477544
+            ],
+            "toplam_80": [
+              140.4673817272587,
+              184.2914202098622
+            ],
+            "tum_modeller": {
+              "score": 0.48864348865664575,
+              "logistic": 0.4808564858658126,
+              "elo": 0.5243568381182881,
+              "ensemble": 0.49795227088024885
+            },
+            "az_veri": [],
+            "recent_games": {
+              "KBL_10": 61,
+              "KBL_35": 60
+            },
+            "uzatma": null,
+            "experimental": true,
+            "training_cutoff": "2026-10-24T00:00:00+00:00",
+            "selection": {
+              "season": "2026-27",
+              "previous_season": "2025-26",
+              "training_games": 2247,
+              "calibration_games": 134,
+              "final_training_games": 2517,
+              "calibration_season_gap": 1,
+              "selection_games": 136,
+              "selection_window_start_utc": "2026-01-02T00:00:00+00:00",
+              "selected": "elo",
+              "selection_log_loss": {
+                "score": 0.6535251221056223,
+                "logistic": 0.6575069087166779,
+                "elo": 0.6289965293543216,
+                "ensemble": 0.6448875034714635
+              },
+              "rule": "Lowest log loss on the second UTC-day half of the preceding season. Score probabilities calibrate on its first half. Fixed learners; test outcomes never select a candidate."
+            },
+            "dataset_sha256": "37e16ee91d06da4f56b3668deac424717c38c4f62ef1c80392a5acf55dca84ce",
+            "calibration_regime_gap": false,
+            "history_start_season": null,
+            "note": "Separate-league pregame research, not validated live/score certainty. Models fit on earlier seasons, features withhold the entire UTC day. Cup rules, promotions, historical publication and neutral venues are not fully modeled."
+          },
+          "actual_home": 71,
+          "actual_away": 91
+        },
+        {
+          "event_id": "KBL_S49G01N36",
+          "start_utc": "2026-10-24T07:30:00+00:00",
+          "prediction": {
+            "lig": "KBL",
+            "ev": "KBL_66",
+            "dep": "KBL_60",
+            "tarih_utc": "2026-10-24T07:30:00+00:00",
+            "model": "asia-separate-prior-policy-v1/elo",
+            "ev_kazanir": 0.6913639511266105,
+            "ev_skor": 86.03428303943043,
+            "dep_skor": 79.28176564110807,
+            "fark": 6.752517398322373,
+            "toplam": 165.3160486805385,
+            "fark_80": [
+              -9.2332958961095,
+              22.738330692754246
+            ],
+            "toplam_80": [
+              143.40402943923675,
+              187.22806792184025
+            ],
+            "tum_modeller": {
+              "score": 0.7058620594059456,
+              "logistic": 0.7258672889379918,
+              "elo": 0.6913639511266105,
+              "ensemble": 0.7076977664901826
+            },
+            "az_veri": [],
+            "recent_games": {
+              "KBL_66": 61,
+              "KBL_60": 61
+            },
+            "uzatma": null,
+            "experimental": true,
+            "training_cutoff": "2026-10-24T00:00:00+00:00",
+            "selection": {
+              "season": "2026-27",
+              "previous_season": "2025-26",
+              "training_games": 2247,
+              "calibration_games": 134,
+              "final_training_games": 2517,
+              "calibration_season_gap": 1,
+              "selection_games": 136,
+              "selection_window_start_utc": "2026-01-02T00:00:00+00:00",
+              "selected": "elo",
+              "selection_log_loss": {
+                "score": 0.6535251221056223,
+                "logistic": 0.6575069087166779,
+                "elo": 0.6289965293543216,
+                "ensemble": 0.6448875034714635
+              },
+              "rule": "Lowest log loss on the second UTC-day half of the preceding season. Score probabilities calibrate on its first half. Fixed learners; test outcomes never select a candidate."
+            },
+            "dataset_sha256": "37e16ee91d06da4f56b3668deac424717c38c4f62ef1c80392a5acf55dca84ce",
+            "calibration_regime_gap": false,
+            "history_start_season": null,
+            "note": "Separate-league pregame research, not validated live/score certainty. Models fit on earlier seasons, features withhold the entire UTC day. Cup rules, promotions, historical publication and neutral venues are not fully modeled."
+          },
+          "actual_home": 97,
+          "actual_away": 96
+        },
+        {
+          "event_id": "KBL_S49G01N37",
+          "start_utc": "2026-10-25T05:00:00+00:00",
+          "prediction": {
+            "lig": "KBL",
+            "ev": "KBL_55",
+            "dep": "KBL_06",
+            "tarih_utc": "2026-10-25T05:00:00+00:00",
+            "model": "asia-separate-prior-policy-v1/elo",
+            "ev_kazanir": 0.6622928766297352,
+            "ev_skor": 83.59929844367667,
+            "dep_skor": 76.4831676394314,
+            "fark": 7.116130804245278,
+            "toplam": 160.08246608310807,
+            "fark_80": [
+              -8.869682490186594,
+              23.10194409867715
+            ],
+            "toplam_80": [
+              138.17044684180632,
+              181.99448532440982
+            ],
+            "tum_modeller": {
+              "score": 0.7158260674472827,
+              "logistic": 0.7662991891413585,
+              "elo": 0.6622928766297352,
+              "ensemble": 0.7148060444061256
+            },
+            "az_veri": [],
+            "recent_games": {
+              "KBL_55": 57,
+              "KBL_06": 62
+            },
+            "uzatma": null,
+            "experimental": true,
+            "training_cutoff": "2026-10-25T00:00:00+00:00",
+            "selection": {
+              "season": "2026-27",
+              "previous_season": "2025-26",
+              "training_games": 2247,
+              "calibration_games": 134,
+              "final_training_games": 2517,
+              "calibration_season_gap": 1,
+              "selection_games": 136,
+              "selection_window_start_utc": "2026-01-02T00:00:00+00:00",
+              "selected": "elo",
+              "selection_log_loss": {
+                "score": 0.6535251221056223,
+                "logistic": 0.6575069087166779,
+                "elo": 0.6289965293543216,
+                "ensemble": 0.6448875034714635
+              },
+              "rule": "Lowest log loss on the second UTC-day half of the preceding season. Score probabilities calibrate on its first half. Fixed learners; test outcomes never select a candidate."
+            },
+            "dataset_sha256": "37e16ee91d06da4f56b3668deac424717c38c4f62ef1c80392a5acf55dca84ce",
+            "calibration_regime_gap": false,
+            "history_start_season": null,
+            "note": "Separate-league pregame research, not validated live/score certainty. Models fit on earlier seasons, features withhold the entire UTC day. Cup rules, promotions, historical publication and neutral venues are not fully modeled."
+          },
+          "actual_home": 90,
+          "actual_away": 79
+        },
+        {
+          "event_id": "KBL_S49G01N38",
+          "start_utc": "2026-10-25T05:00:00+00:00",
+          "prediction": {
+            "lig": "KBL",
+            "ev": "KBL_70",
+            "dep": "KBL_16",
+            "tarih_utc": "2026-10-25T05:00:00+00:00",
+            "model": "asia-separate-prior-policy-v1/elo",
+            "ev_kazanir": 0.6393916778208735,
+            "ev_skor": 82.69380685335908,
+            "dep_skor": 80.69480738234493,
+            "fark": 1.998999471014157,
+            "toplam": 163.388614235704,
+            "fark_80": [
+              -13.986813823417716,
+              17.98481276544603
+            ],
+            "toplam_80": [
+              141.47659499440226,
+              185.30063347700576
+            ],
+            "tum_modeller": {
+              "score": 0.5636602518606769,
+              "logistic": 0.5556749163749467,
+              "elo": 0.6393916778208735,
+              "ensemble": 0.5862422820188323
+            },
+            "az_veri": [],
+            "recent_games": {
+              "KBL_70": 62,
+              "KBL_16": 61
+            },
+            "uzatma": null,
+            "experimental": true,
+            "training_cutoff": "2026-10-25T00:00:00+00:00",
+            "selection": {
+              "season": "2026-27",
+              "previous_season": "2025-26",
+              "training_games": 2247,
+              "calibration_games": 134,
+              "final_training_games": 2517,
+              "calibration_season_gap": 1,
+              "selection_games": 136,
+              "selection_window_start_utc": "2026-01-02T00:00:00+00:00",
+              "selected": "elo",
+              "selection_log_loss": {
+                "score": 0.6535251221056223,
+                "logistic": 0.6575069087166779,
+                "elo": 0.6289965293543216,
+                "ensemble": 0.6448875034714635
+              },
+              "rule": "Lowest log loss on the second UTC-day half of the preceding season. Score probabilities calibrate on its first half. Fixed learners; test outcomes never select a candidate."
+            },
+            "dataset_sha256": "37e16ee91d06da4f56b3668deac424717c38c4f62ef1c80392a5acf55dca84ce",
+            "calibration_regime_gap": false,
+            "history_start_season": null,
+            "note": "Separate-league pregame research, not validated live/score certainty. Models fit on earlier seasons, features withhold the entire UTC day. Cup rules, promotions, historical publication and neutral venues are not fully modeled."
+          },
+          "actual_home": 93,
+          "actual_away": 95
+        },
+        {
+          "event_id": "KBL_S49G01N39",
+          "start_utc": "2026-10-25T07:30:00+00:00",
+          "prediction": {
+            "lig": "KBL",
+            "ev": "KBL_64",
+            "dep": "KBL_35",
+            "tarih_utc": "2026-10-25T07:30:00+00:00",
+            "model": "asia-separate-prior-policy-v1/elo",
+            "ev_kazanir": 0.49846271472719905,
+            "ev_skor": 81.69016844158261,
+            "dep_skor": 81.941041275994,
+            "fark": -0.2508728344113855,
+            "toplam": 163.6312097175766,
+            "fark_80": [
+              -16.23668612884326,
+              15.734940460020487
+            ],
+            "toplam_80": [
+              141.71919047627486,
+              185.54322895887836
+            ],
+            "tum_modeller": {
+              "score": 0.4919770188053942,
+              "logistic": 0.45317022937085677,
+              "elo": 0.49846271472719905,
+              "ensemble": 0.48120332096781665
+            },
+            "az_veri": [],
+            "recent_games": {
+              "KBL_64": 61,
+              "KBL_35": 61
+            },
+            "uzatma": null,
+            "experimental": true,
+            "training_cutoff": "2026-10-25T00:00:00+00:00",
+            "selection": {
+              "season": "2026-27",
+              "previous_season": "2025-26",
+              "training_games": 2247,
+              "calibration_games": 134,
+              "final_training_games": 2517,
+              "calibration_season_gap": 1,
+              "selection_games": 136,
+              "selection_window_start_utc": "2026-01-02T00:00:00+00:00",
+              "selected": "elo",
+              "selection_log_loss": {
+                "score": 0.6535251221056223,
+                "logistic": 0.6575069087166779,
+                "elo": 0.6289965293543216,
+                "ensemble": 0.6448875034714635
+              },
+              "rule": "Lowest log loss on the second UTC-day half of the preceding season. Score probabilities calibrate on its first half. Fixed learners; test outcomes never select a candidate."
+            },
+            "dataset_sha256": "37e16ee91d06da4f56b3668deac424717c38c4f62ef1c80392a5acf55dca84ce",
+            "calibration_regime_gap": false,
+            "history_start_season": null,
+            "note": "Separate-league pregame research, not validated live/score certainty. Models fit on earlier seasons, features withhold the entire UTC day. Cup rules, promotions, historical publication and neutral venues are not fully modeled."
+          },
+          "actual_home": 68,
+          "actual_away": 76
+        }
+      ]
+    }
+  },
+  "defaults_changed": false,
+  "note": "Exploratory post-result data ablation on all newly imported KBL finals, selected by archive membership, not outcomes. Identical fixed previous-season policy and whole-UTC-day withholding. No target tuning or calibration changes. Historical publication availability is unknown. Seven matches cannot establish general improvement; not prospective success."
+}
