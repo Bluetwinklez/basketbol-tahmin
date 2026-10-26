@@ -9,10 +9,10 @@
     "https://basketball.realgm.com/international/league/132/PBA--Governors-Cup/team/1744/Phoenix-Fuel-Masters/schedule/2027",
     "https://www.sportsmetric.ph/leagues/pba"
   ],
-  "captured_at_utc": "2026-10-25T12:04:28.228095+00:00",
+  "captured_at_utc": "2026-10-26T13:10:29.737109+00:00",
   "current_model_season": "2025-26",
   "identity_evidence": "Within source season 50 only, Macau Giant Pandas is linked to RealGM team 2827 (displayed as Macau Black Knights): eleven unique date/opponent/score pairs agree. This is not an inferred cross-season ownership history.",
-  "current_publisher_final_games": 71,
+  "current_publisher_final_games": 72,
   "cross_source_duplicates": [
     {
       "publisher_id": "pba-pba-gov-cup-50-ros-vs-mag-2026-10-21",
@@ -362,6 +362,36 @@
   ],
   "rejected_boxes": [
     {
+      "event_id": "sync-4ed8b94ebc5fd8366c84518b",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "sync-4ed8b94ebc5fd8366c84518b",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "sync-4ed8b94ebc5fd8366c84518b",
+      "side": "home",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "sync-4ed8b94ebc5fd8366c84518b",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "sync-4ed8b94ebc5fd8366c84518b",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
+      "event_id": "sync-4ed8b94ebc5fd8366c84518b",
+      "side": "away",
+      "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
+    },
+    {
       "event_id": "sync-055bf5c543981356c9131d78",
       "side": "home",
       "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
@@ -3762,8 +3792,8 @@
       "reason": "Scoring identity inconsistent, allowing unreported four-point makes"
     },
     {
-      "event_id": "PBA_SM_5ea084e60351bd41621a",
-      "side": "PBA_1241",
+      "event_id": "PBA_SM_a900374d07cdeaaa6270",
+      "side": "PBA_1744",
       "reason": "Conflicting duplicated player counting row"
     },
     {
@@ -3772,23 +3802,23 @@
       "reason": "Conflicting duplicated player counting row"
     },
     {
-      "event_id": "PBA_SM_a900374d07cdeaaa6270",
-      "side": "PBA_1744",
+      "event_id": "PBA_SM_5ea084e60351bd41621a",
+      "side": "PBA_1241",
       "reason": "Conflicting duplicated player counting row"
     }
   ],
-  "validated_player_match_rows": 1031,
+  "validated_player_match_rows": 1050,
   "limitations": "Current conference publisher data, not an official PBA API. Historic clocks unverified: day precision and whole-day feature withholding. Three recent score pairs were independently checked against the official PBA homepage; that does not verify all history. No provider box is a target-game pregame feature. Completeness and original publication times unknown.",
-  "games": 323,
+  "games": 324,
   "teams": 15,
   "seasons": {
     "2018-19": 79,
     "2021-22": 88,
     "2022-23": 83,
     "2024-25": 2,
-    "2025-26": 71
+    "2025-26": 72
   },
-  "dataset_sha256": "f1d45ec5f2553e6acb26b45d6f5033a1bcaffaea36183e8aa10aa44a78401c7d",
+  "dataset_sha256": "ce9bf13d723707cd24349ede41a443e2746fc8ef96f560093446c68e7ac8bdce",
   "trained": false,
   "counts": [
     {

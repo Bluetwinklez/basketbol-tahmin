@@ -1,7 +1,7 @@
 {
-  "timestamp_utc": "2026-10-25T13:14:07.353070+00:00",
+  "timestamp_utc": "2026-10-26T13:11:00.340176+00:00",
   "league": "UKR",
-  "games": 1002,
+  "games": 1006,
   "teams": 19,
   "seasons": {
     "2020-21": 246,
@@ -10,7 +10,7 @@
     "2023-24": 153,
     "2024-25": 132,
     "2025-26": 127,
-    "2026-27": 26
+    "2026-27": 30
   },
   "sources": [
     "https://widgets.baskethotel.com/widget-service/export/view/schedule_and_results?api=aaed6059969d182ff2a08e7d61458ce2d1a372c1&season_id=133338&lang=en&type=results_only",
@@ -25,7 +25,7 @@
       "year": 2026,
       "provider_season": "133338",
       "export_type": "results_only",
-      "finals": 26,
+      "finals": 30,
       "fixtures": 0
     },
     {
@@ -33,7 +33,7 @@
       "provider_season": "133338",
       "export_type": "schedule_only",
       "finals": 0,
-      "fixtures": 4
+      "fixtures": 0
     }
   ],
   "source": "https://fbu.ua/statistics/league-224/calendar",
