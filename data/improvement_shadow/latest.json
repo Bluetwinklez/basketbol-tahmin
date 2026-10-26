@@ -1,7 +1,7 @@
 {
-  "checked_at_utc": "2026-10-26T13:13:14.763931+00:00",
-  "experiment_id": "c3172d369677d38a013598d26cb3ef362612c8ca2bd71080bd9f337a24a470d3",
-  "new_pairs": 148,
+  "checked_at_utc": "2026-10-26T16:28:13.539678+00:00",
+  "experiment_id": "d4258944d099cb3c987e5fd6ba2b96f232e7c4c6ea9de3e5d8803b899ebba1ff",
+  "new_pairs": 149,
   "reused_pairs": 0,
   "skipped": [
     {
@@ -171,16 +171,6 @@
     },
     {
       "league": "TR1",
-      "event_id": "TR1_808816cb3ab0a2d30f173889",
-      "reason": "Quarantined fixture conflict"
-    },
-    {
-      "league": "TR1",
-      "event_id": "TR1_ae441500fbef903f8450411b",
-      "reason": "Quarantined fixture conflict"
-    },
-    {
-      "league": "TR1",
       "event_id": "TR1_f0ee178e6d9659a498cebfb7",
       "reason": "Quarantined fixture conflict"
     },
@@ -229,7 +219,7 @@
     {
       "experiment_id": "29d9f51a7ae193495934c846455910ac2c11d06a4349e864dc5b2f3064e05d96",
       "spec": "paired-forward-report-v1",
-      "checked_at_utc": "2026-10-26T13:13:14.173547+00:00",
+      "checked_at_utc": "2026-10-26T16:28:12.678945+00:00",
       "pending": 143,
       "settled_games": 6,
       "rejected": [],
@@ -1542,7 +1532,7 @@
           "team_mae": 20.508397781128508,
           "total_mae": 41.016795562257016,
           "margin_mae": 11.059620069294368,
-          "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2pwJ0XzY39jxmFsVnBKrIlTFR5NFlZVtXIdx5R2D7gut8z3xUzXGPYA==/racing-ch-vs-quimsa",
+          "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2kckg0UbOiDa6Irq7IarB98q5RxvuGUEMVgELUbVSm9-hGgqUeE4O1w==/racing-ch-vs-quimsa",
           "record_sha256": "db54209d9e70b905613e6a5761aa9cd25ec2431a027926f9f029b58e05c96686"
         },
         {
@@ -1559,7 +1549,7 @@
           "team_mae": 20.508397781128508,
           "total_mae": 41.016795562257016,
           "margin_mae": 11.059620069294368,
-          "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2pwJ0XzY39jxmFsVnBKrIlTFR5NFlZVtXIdx5R2D7gut8z3xUzXGPYA==/racing-ch-vs-quimsa",
+          "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2kckg0UbOiDa6Irq7IarB98q5RxvuGUEMVgELUbVSm9-hGgqUeE4O1w==/racing-ch-vs-quimsa",
           "record_sha256": "db54209d9e70b905613e6a5761aa9cd25ec2431a027926f9f029b58e05c96686"
         },
         {
@@ -1712,7 +1702,7 @@
     {
       "experiment_id": "3ca8c864cb8f30c78072ee9b7a96bb0466ae706f4a9262e6d1d0a0fc83723af4",
       "spec": "paired-forward-report-v1",
-      "checked_at_utc": "2026-10-26T13:13:14.345153+00:00",
+      "checked_at_utc": "2026-10-26T16:28:12.900469+00:00",
       "pending": 143,
       "settled_games": 6,
       "rejected": [],
@@ -3025,7 +3015,7 @@
           "team_mae": 20.508397781128508,
           "total_mae": 41.016795562257016,
           "margin_mae": 11.059620069294368,
-          "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2pwJ0XzY39jxmFsVnBKrIlTFR5NFlZVtXIdx5R2D7gut8z3xUzXGPYA==/racing-ch-vs-quimsa",
+          "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2kckg0UbOiDa6Irq7IarB98q5RxvuGUEMVgELUbVSm9-hGgqUeE4O1w==/racing-ch-vs-quimsa",
           "record_sha256": "44f25cc100244b5a9bd60bc164552490aef41ff04c2f96937649dc7b7f7b81c6"
         },
         {
@@ -3042,7 +3032,7 @@
           "team_mae": 22.081119021438084,
           "total_mae": 44.16223804287617,
           "margin_mae": 10.592392329554201,
-          "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2pwJ0XzY39jxmFsVnBKrIlTFR5NFlZVtXIdx5R2D7gut8z3xUzXGPYA==/racing-ch-vs-quimsa",
+          "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2kckg0UbOiDa6Irq7IarB98q5RxvuGUEMVgELUbVSm9-hGgqUeE4O1w==/racing-ch-vs-quimsa",
           "record_sha256": "44f25cc100244b5a9bd60bc164552490aef41ff04c2f96937649dc7b7f7b81c6"
         },
         {
@@ -3195,7 +3185,7 @@
     {
       "experiment_id": "51ffcc22a4b196c2b6a46b1ccaff7986d8b85dec47496f7c5da070e8679a9df6",
       "spec": "paired-forward-report-v1",
-      "checked_at_utc": "2026-10-26T13:13:14.508898+00:00",
+      "checked_at_utc": "2026-10-26T16:28:13.112697+00:00",
       "pending": 74,
       "settled_games": 3,
       "rejected": [],
@@ -3816,7 +3806,7 @@
           "team_mae": 20.508397781128508,
           "total_mae": 41.016795562257016,
           "margin_mae": 11.059620069294368,
-          "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2pwJ0XzY39jxmFsVnBKrIlTFR5NFlZVtXIdx5R2D7gut8z3xUzXGPYA==/racing-ch-vs-quimsa",
+          "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2kckg0UbOiDa6Irq7IarB98q5RxvuGUEMVgELUbVSm9-hGgqUeE4O1w==/racing-ch-vs-quimsa",
           "record_sha256": "b65ad7eda1ddb2fb77d71ad245fab54933284acdd8784a9ed437de5ec37af0d2"
         },
         {
@@ -3833,7 +3823,7 @@
           "team_mae": 22.081119021438084,
           "total_mae": 44.16223804287617,
           "margin_mae": 10.592392329554201,
-          "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2pwJ0XzY39jxmFsVnBKrIlTFR5NFlZVtXIdx5R2D7gut8z3xUzXGPYA==/racing-ch-vs-quimsa",
+          "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2kckg0UbOiDa6Irq7IarB98q5RxvuGUEMVgELUbVSm9-hGgqUeE4O1w==/racing-ch-vs-quimsa",
           "record_sha256": "b65ad7eda1ddb2fb77d71ad245fab54933284acdd8784a9ed437de5ec37af0d2"
         },
         {
@@ -3912,7 +3902,7 @@
     {
       "experiment_id": "756cfe7cebbd46381df8e4c94ce0867b59fd864092b0cb6e81c8e4f163233a3f",
       "spec": "paired-forward-report-v1",
-      "checked_at_utc": "2026-10-26T13:13:14.591231+00:00",
+      "checked_at_utc": "2026-10-26T16:28:13.216821+00:00",
       "pending": 94,
       "settled_games": 3,
       "rejected": [],
@@ -4533,7 +4523,7 @@
           "team_mae": 20.508397781128508,
           "total_mae": 41.016795562257016,
           "margin_mae": 11.059620069294368,
-          "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2pwJ0XzY39jxmFsVnBKrIlTFR5NFlZVtXIdx5R2D7gut8z3xUzXGPYA==/racing-ch-vs-quimsa",
+          "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2kckg0UbOiDa6Irq7IarB98q5RxvuGUEMVgELUbVSm9-hGgqUeE4O1w==/racing-ch-vs-quimsa",
           "record_sha256": "3f55b062bb3a8b548444c459050b6244e3ea667c6f689653f85bc461e9c18c9c"
         },
         {
@@ -4550,7 +4540,7 @@
           "team_mae": 22.081119021438084,
           "total_mae": 44.16223804287617,
           "margin_mae": 10.592392329554201,
-          "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2pwJ0XzY39jxmFsVnBKrIlTFR5NFlZVtXIdx5R2D7gut8z3xUzXGPYA==/racing-ch-vs-quimsa",
+          "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2kckg0UbOiDa6Irq7IarB98q5RxvuGUEMVgELUbVSm9-hGgqUeE4O1w==/racing-ch-vs-quimsa",
           "record_sha256": "3f55b062bb3a8b548444c459050b6244e3ea667c6f689653f85bc461e9c18c9c"
         },
         {
@@ -4629,8 +4619,21 @@
     {
       "experiment_id": "c3172d369677d38a013598d26cb3ef362612c8ca2bd71080bd9f337a24a470d3",
       "spec": "paired-forward-report-v1",
-      "checked_at_utc": "2026-10-26T13:13:14.680373+00:00",
+      "checked_at_utc": "2026-10-26T16:28:13.330441+00:00",
       "pending": 148,
+      "settled_games": 0,
+      "rejected": [],
+      "leagues": [],
+      "rows": [],
+      "source_snapshot_verified": true,
+      "active_experiment": false,
+      "production_default_changed": false
+    },
+    {
+      "experiment_id": "d4258944d099cb3c987e5fd6ba2b96f232e7c4c6ea9de3e5d8803b899ebba1ff",
+      "spec": "paired-forward-report-v1",
+      "checked_at_utc": "2026-10-26T16:28:13.433748+00:00",
+      "pending": 149,
       "settled_games": 0,
       "rejected": [],
       "leagues": [],

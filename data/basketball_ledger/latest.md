@@ -1,6 +1,6 @@
 # Daily basketball research
 
-Checked: 2026-10-26T13:11:22.880455+00:00
+Checked: 2026-10-26T16:26:34.495993+00:00
 
 | Tipoff (Istanbul) | League | Fixture | Score forecast | Home win | Data gate / probability filter |
 |---|---|---|---|---|---|
@@ -47,6 +47,7 @@ Checked: 2026-10-26T13:11:22.880455+00:00
 | 01 Nov 19:00 | ABA | SC Derby – Perspektiva Ilirija | 84.2–82.7 | 54.8% | not selected |
 | 01 Nov 21:00 | ABA | Slovan Bratislava – Krka | 88.3–79.4 | 77.2% | not selected |
 | 02 Nov 15:00 | ABA | Partizan Mozzart Bet – U-BT Cluj-Napoca | 94.0–78.5 | 88.8% | passed |
+| 02 Nov 18:30 | ABA | Dubai Basketball – Zadar | 90.9–75.7 | 89.4% | passed |
 | 26 Oct 20:00 | ECW | Maccabi Bnot Ashdod – DSK Basketball | 88.2–53.6 | 97.4% | not selected |
 | 28 Oct 19:00 | ECW | MBK Ruzomberok – C'Chartres Metropole Basket Feminin | 66.5–80.5 | 21.5% | not selected |
 | 28 Oct 19:15 | ECW | SBS Ostrava – BC Montana 2003 | 71.1–73.3 | 45.1% | not selected |
@@ -104,7 +105,7 @@ Checked: 2026-10-26T13:11:22.880455+00:00
 | 01 Nov 06:00 | ARG_LNB | INSTITUTO – GIMNASIA (CR) | 78.2–75.9 | 55.8% | not selected |
 | 01 Nov 06:00 | ARG_LNB | ATENAS (C) – RACING (CH) | 82.2–79.0 | 57.8% | not selected |
 
-Settled: 10; pending: 103; winner accuracy: 70.0%.
+Settled: 10; pending: 104; winner accuracy: 70.0%.
 
 | Fixture ID | Status | Final | Winner correct | Team MAE | Total error | Margin error | Total / margin in 80% |
 |---|---|---|---|---|---|---|---|
@@ -185,6 +186,7 @@ Settled: 10; pending: 103; winner accuracy: 70.0%.
 | FEC_F135704 | pending | — | — | — | — | — | — |
 | ECW_F135405 | pending | — | — | — | — | — | — |
 | ECW_F135377 | pending | — | — | — | — | — | — |
+| ABA_2026_57 | pending | — | — | — | — | — | — |
 | E2026_82 | pending | — | — | — | — | — | — |
 | ECW_F135274 | pending | — | — | — | — | — | — |
 | TR_BSL_B20261025_TR_BSL_10_TR_BSL_95 | pending | — | — | — | — | — | — |
