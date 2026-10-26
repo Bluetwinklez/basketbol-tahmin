@@ -1,5 +1,7 @@
 """CC0 OpenFootball imports. Day precision is never invented into a tipoff."""
 import gzip
+from contextlib import contextmanager
+from contextvars import ContextVar
 import hashlib
 import json
 import re
@@ -36,14 +38,45 @@ def write_json(path, data):
     tmp.replace(path)
 
 
+_source_session = ContextVar('football_source_session', default=None)
+
+
+@contextmanager
+def source_refresh_session():
+    """Reuse each successful update (or failure) only within one refresh run.
+
+    Cached disk checkouts still require a fresh pull in the next run. Failed
+    updates never silently authorize using old files as freshly captured data.
+    """
+    token = _source_session.set({})
+    try:
+        yield
+    finally:
+        _source_session.reset(token)
+
+
 def git_source(name, refresh=True):
     path = Path('.runtime/openfootball')/name
     url = f'https://github.com/openfootball/{name}.git'
-    if not path.exists():
-        path.parent.mkdir(parents=True, exist_ok=True)
-        subprocess.run(['git', 'clone', '--depth', '1', url, str(path)], check=True, timeout=180, capture_output=True)
-    elif refresh:
-        subprocess.run(['git', '-C', str(path), 'pull', '--ff-only'], check=True, timeout=180, capture_output=True)
+    session = _source_session.get()
+    cache_key = (str(path.resolve()), refresh)
+    if session is not None and cache_key in session:
+        result = session[cache_key]
+        if isinstance(result, Exception):
+            raise result
+        return result
+    try:
+        if not path.exists():
+            path.parent.mkdir(parents=True, exist_ok=True)
+            subprocess.run(['git', 'clone', '--depth', '1', url, str(path)], check=True, timeout=180, capture_output=True)
+        elif refresh:
+            subprocess.run(['git', '-C', str(path), 'pull', '--ff-only'], check=True, timeout=180, capture_output=True)
+    except Exception as exc:
+        if session is not None:
+            session[cache_key] = exc
+        raise
+    if session is not None:
+        session[cache_key] = path
     return path
 
 
