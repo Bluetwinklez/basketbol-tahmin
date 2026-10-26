@@ -7,7 +7,7 @@ from pathlib import Path
 import pandas as pd
 
 from bbtahmin.daily import LEAGUES, run as basketball_run
-from bbtahmin.football.data import collect, write_json
+from bbtahmin.football.data import collect, write_json, source_refresh_session
 from bbtahmin.football.daily import run as football_run
 from bbtahmin.football.calendar import collect as calendar_collect
 
@@ -16,7 +16,13 @@ def main():
     parser=argparse.ArgumentParser()
     parser.add_argument('--sport',choices=['football','basketball','all'],default='all')
     parser.add_argument('--backfill',action='store_true',help='Refresh historical seasons as well as the active season')
-    args=parser.parse_args(); results={}; failed=False
+    args=parser.parse_args()
+    with source_refresh_session():
+        return refresh(args)
+
+
+def refresh(args):
+    results={}; failed=False
     for sport in ('football','basketball'):
         if args.sport not in (sport,'all'): continue
         try:
@@ -26,7 +32,8 @@ def main():
                 def attempt(name, action):
                     try:
                         result=action()
-                        errors.extend(dict(source=name,**e) for e in result.get('errors',[]))
+                        errors.extend(dict(e, source=e.get('source', name), collector=name)
+                                      for e in result.get('errors',[]))
                         return result
                     except Exception as exc:
                         errors.append(dict(source=name,error=f'{type(exc).__name__}: {exc}',retained_previous=True))
