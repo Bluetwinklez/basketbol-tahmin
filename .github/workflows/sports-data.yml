@@ -23,10 +23,26 @@ jobs:
           cache: pip
       - run: python -m pip install -r requirements.txt
       - run: python -m pip install --no-deps -e .
+      - name: Restore source repositories for incremental updates
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            .runtime/openfootball/
+            .runtime/futbol-argentino-data/
+          key: sports-sources-v1-${{ runner.os }}-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: sports-sources-v1-${{ runner.os }}-
       - name: Refresh independent football and basketball sources
         id: collect
         continue-on-error: true
         run: python scripts/refresh_sports.py ${{ github.event.schedule == '45 4 * * 0' && '--backfill' || '' }}
+      - name: Save source repositories even after partial collection
+        if: always() && steps.collect.outcome != 'skipped'
+        uses: actions/cache/save@v4
+        with:
+          path: |
+            .runtime/openfootball/
+            .runtime/futbol-argentino-data/
+          key: sports-sources-v1-${{ runner.os }}-${{ github.run_id }}-${{ github.run_attempt }}
       - name: Independently confirm football fixtures
         id: fixtures
         if: always() && steps.collect.outcome != 'skipped'
