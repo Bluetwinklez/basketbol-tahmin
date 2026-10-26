@@ -1,0 +1,4644 @@
+{
+  "checked_at_utc": "2026-10-26T13:13:14.763931+00:00",
+  "experiment_id": "c3172d369677d38a013598d26cb3ef362612c8ca2bd71080bd9f337a24a470d3",
+  "new_pairs": 148,
+  "reused_pairs": 0,
+  "skipped": [
+    {
+      "league": "E",
+      "event_id": "E2026_72",
+      "reason": "ValueError: Invalid challenger basketball finals"
+    },
+    {
+      "league": "E",
+      "event_id": "E2026_71",
+      "reason": "ValueError: Invalid challenger basketball finals"
+    },
+    {
+      "league": "E",
+      "event_id": "E2026_74",
+      "reason": "ValueError: Invalid challenger basketball finals"
+    },
+    {
+      "league": "E",
+      "event_id": "E2026_76",
+      "reason": "ValueError: Invalid challenger basketball finals"
+    },
+    {
+      "league": "E",
+      "event_id": "E2026_75",
+      "reason": "ValueError: Invalid challenger basketball finals"
+    },
+    {
+      "league": "E",
+      "event_id": "E2026_73",
+      "reason": "ValueError: Invalid challenger basketball finals"
+    },
+    {
+      "league": "E",
+      "event_id": "E2026_79",
+      "reason": "ValueError: Invalid challenger basketball finals"
+    },
+    {
+      "league": "E",
+      "event_id": "E2026_77",
+      "reason": "ValueError: Invalid challenger basketball finals"
+    },
+    {
+      "league": "E",
+      "event_id": "E2026_78",
+      "reason": "ValueError: Invalid challenger basketball finals"
+    },
+    {
+      "league": "E",
+      "event_id": "E2026_80",
+      "reason": "ValueError: Invalid challenger basketball finals"
+    },
+    {
+      "league": "E",
+      "event_id": "E2026_81",
+      "reason": "ValueError: Invalid challenger basketball finals"
+    },
+    {
+      "league": "E",
+      "event_id": "E2026_82",
+      "reason": "ValueError: Invalid challenger basketball finals"
+    },
+    {
+      "league": "E",
+      "event_id": "E2026_83",
+      "reason": "ValueError: Invalid challenger basketball finals"
+    },
+    {
+      "league": "E",
+      "event_id": "E2026_84",
+      "reason": "ValueError: Invalid challenger basketball finals"
+    },
+    {
+      "league": "E",
+      "event_id": "E2026_88",
+      "reason": "ValueError: Invalid challenger basketball finals"
+    },
+    {
+      "league": "E",
+      "event_id": "E2026_86",
+      "reason": "ValueError: Invalid challenger basketball finals"
+    },
+    {
+      "league": "E",
+      "event_id": "E2026_85",
+      "reason": "ValueError: Invalid challenger basketball finals"
+    },
+    {
+      "league": "E",
+      "event_id": "E2026_90",
+      "reason": "ValueError: Invalid challenger basketball finals"
+    },
+    {
+      "league": "E",
+      "event_id": "E2026_87",
+      "reason": "ValueError: Invalid challenger basketball finals"
+    },
+    {
+      "league": "E",
+      "event_id": "E2026_89",
+      "reason": "ValueError: Invalid challenger basketball finals"
+    },
+    {
+      "league": "EN1",
+      "event_id": "EN1_921a9c9d9b2fee0f6fbc96e0",
+      "reason": "Insufficient team history"
+    },
+    {
+      "league": "EN1",
+      "event_id": "EN1_bfe4b7a91f6928736d098fb4",
+      "reason": "Insufficient team history"
+    },
+    {
+      "league": "DE1",
+      "event_id": "DE1_de822da6643d147151b1b57f",
+      "reason": "Insufficient team history"
+    },
+    {
+      "league": "DE1",
+      "event_id": "DE1_e6430434f8f97d05f4bbc6f7",
+      "reason": "Insufficient team history"
+    },
+    {
+      "league": "DE1",
+      "event_id": "DE1_d1bdef1ce224c3a546340975",
+      "reason": "Insufficient team history"
+    },
+    {
+      "league": "ES1",
+      "event_id": "ES1_c38b4ed70323e599488fc599",
+      "reason": "Quarantined fixture conflict"
+    },
+    {
+      "league": "ES1",
+      "event_id": "ES1_44ae52dbb778658d7a010316",
+      "reason": "athletic club: 1 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "ES1",
+      "event_id": "ES1_cea3d29c0110401c5593cc82",
+      "reason": "rayo vallecano de madrid: 1 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "FR1",
+      "event_id": "FR1_b69eefb9dd9b44291e59f58a",
+      "reason": "Quarantined fixture conflict"
+    },
+    {
+      "league": "FR1",
+      "event_id": "FR1_5bbc5bd83a0448a53d6cf4bf",
+      "reason": "Insufficient team history"
+    },
+    {
+      "league": "PT1",
+      "event_id": "PT1_88adb3f10942e0cea234fdb0",
+      "reason": "Insufficient team history"
+    },
+    {
+      "league": "PT1",
+      "event_id": "PT1_37af9b3564bf279e58db7966",
+      "reason": "Insufficient team history"
+    },
+    {
+      "league": "PT1",
+      "event_id": "PT1_762277503c6c80e593cb456b",
+      "reason": "sporting clube de braga: 1 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "TR1",
+      "event_id": "TR1_808816cb3ab0a2d30f173889",
+      "reason": "Quarantined fixture conflict"
+    },
+    {
+      "league": "TR1",
+      "event_id": "TR1_ae441500fbef903f8450411b",
+      "reason": "Quarantined fixture conflict"
+    },
+    {
+      "league": "TR1",
+      "event_id": "TR1_f0ee178e6d9659a498cebfb7",
+      "reason": "Quarantined fixture conflict"
+    },
+    {
+      "league": "TR1",
+      "event_id": "TR1_a4f75489f9c2d770fc0d9fa8",
+      "reason": "kocaelispor: 1 unresolved past fixtures; refresh/review required; caykur rizespor: 2 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "TR1",
+      "event_id": "TR1_dc32b8cc90e23784d22cf7b9",
+      "reason": "amed: 1 unresolved past fixtures; refresh/review required; eyupspor: 1 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "TR1",
+      "event_id": "TR1_80f7e0e888b95520aee60527",
+      "reason": "istanbul basaksehir: 1 unresolved past fixtures; refresh/review required; samsunspor: 1 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "TR1",
+      "event_id": "TR1_40fddab08e8ed45fec251d93",
+      "reason": "fenerbahce: 1 unresolved past fixtures; refresh/review required; goztepe: 1 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "TR1",
+      "event_id": "TR1_15f4dd4d63910ac64eef3cfc",
+      "reason": "trabzonspor: 1 unresolved past fixtures; refresh/review required; gaziantep fk: 1 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "TR1",
+      "event_id": "TR1_9502691714972a5e45face4d",
+      "reason": "kasimpasa: 1 unresolved past fixtures; refresh/review required; besiktas: 1 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "TR1",
+      "event_id": "TR1_b1d2161a5e77b7f8afb9ecff",
+      "reason": "atiker konyaspor: 1 unresolved past fixtures; refresh/review required; galatasaray: 1 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "TR1",
+      "event_id": "TR1_d49aa0662c0c19796216bc4b",
+      "reason": "bb erzurumspor: 1 unresolved past fixtures; refresh/review required; corum: 2 unresolved past fixtures; refresh/review required"
+    }
+  ],
+  "experiments": [
+    {
+      "experiment_id": "29d9f51a7ae193495934c846455910ac2c11d06a4349e864dc5b2f3064e05d96",
+      "spec": "paired-forward-report-v1",
+      "checked_at_utc": "2026-10-26T13:13:14.173547+00:00",
+      "pending": 143,
+      "settled_games": 6,
+      "rejected": [],
+      "leagues": [
+        {
+          "league": "ARG_LNB",
+          "summary": {
+            "reference": {
+              "all": {
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.4860525838326976,
+                "brier": 0.29637382909378535
+              },
+              "selected": {
+                "games": 0,
+                "accuracy": null,
+                "log_loss": null,
+                "brier": null
+              },
+              "coverage": 0.0,
+              "confusion_actual_by_predicted": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1
+                ]
+              ],
+              "confidence_bins": [
+                {
+                  "lower": 0.6,
+                  "upper": 0.7,
+                  "games": 1,
+                  "mean_confidence": 0.6150494648050315,
+                  "accuracy": 1.0
+                }
+              ],
+              "brier_convention": "Sum over classes; binary value is twice the one-probability binary Brier.",
+              "score_errors": {
+                "team_mae": 20.508397781128508,
+                "total_mae": 41.016795562257016,
+                "margin_mae": 11.059620069294368
+              }
+            },
+            "candidate": {
+              "all": {
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.523176105743527,
+                "brier": 0.3318920247786901
+              },
+              "selected": {
+                "games": 0,
+                "accuracy": null,
+                "log_loss": null,
+                "brier": null
+              },
+              "coverage": 0.0,
+              "confusion_actual_by_predicted": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1
+                ]
+              ],
+              "confidence_bins": [
+                {
+                  "lower": 0.5,
+                  "upper": 0.6,
+                  "games": 1,
+                  "mean_confidence": 0.5926352833278942,
+                  "accuracy": 1.0
+                }
+              ],
+              "brier_convention": "Sum over classes; binary value is twice the one-probability binary Brier.",
+              "score_errors": {
+                "team_mae": 20.508397781128508,
+                "total_mae": 41.016795562257016,
+                "margin_mae": 11.059620069294368
+              }
+            }
+          },
+          "paired": {
+            "games": 1,
+            "day_blocks": 1,
+            "changes": {
+              "accuracy": {
+                "delta": 0.0,
+                "day_block_95_interval": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "log_loss": {
+                "delta": 0.037123521910829405,
+                "day_block_95_interval": [
+                  0.037123521910829405,
+                  0.037123521910829405
+                ]
+              },
+              "brier": {
+                "delta": 0.035518195684904774,
+                "day_block_95_interval": [
+                  0.035518195684904774,
+                  0.035518195684904774
+                ]
+              }
+            },
+            "equal_coverage": [
+              {
+                "variant": "reference",
+                "requested_coverage": 0.25,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.4860525838326976,
+                "brier": 0.29637382909378535
+              },
+              {
+                "variant": "reference",
+                "requested_coverage": 0.5,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.4860525838326976,
+                "brier": 0.29637382909378535
+              },
+              {
+                "variant": "reference",
+                "requested_coverage": 0.75,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.4860525838326976,
+                "brier": 0.29637382909378535
+              },
+              {
+                "variant": "reference",
+                "requested_coverage": 1.0,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.4860525838326976,
+                "brier": 0.29637382909378535
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 0.25,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.523176105743527,
+                "brier": 0.3318920247786901
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 0.5,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.523176105743527,
+                "brier": 0.3318920247786901
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 0.75,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.523176105743527,
+                "brier": 0.3318920247786901
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 1.0,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.523176105743527,
+                "brier": 0.3318920247786901
+              }
+            ],
+            "replicates": 1000,
+            "seed": 20261025,
+            "note": "Candidate minus reference. Higher accuracy/lower losses are better. Exploratory intervals are not corrected for multiple candidate searches; historical comparisons cannot promote a model automatically."
+          },
+          "temporal_stability": [
+            {
+              "period": "later",
+              "games": 1,
+              "accuracy_delta": 0.0,
+              "log_loss_delta": 0.037123521910829405
+            }
+          ],
+          "promotion_review_eligible": false,
+          "production_promoted": false,
+          "reason": "Sample checkpoints plus paired uncertainty, losses and coverage; independent temporal stability review still required. No automatic promotion."
+        },
+        {
+          "league": "ES1",
+          "summary": {
+            "reference": {
+              "all": {
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 1.66830429370292,
+                "brier": 1.0704399878609396
+              },
+              "selected": {
+                "games": 0,
+                "accuracy": null,
+                "log_loss": null,
+                "brier": null
+              },
+              "coverage": 0.0,
+              "confusion_actual_by_predicted": [
+                [
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  1,
+                  0,
+                  0
+                ]
+              ],
+              "confidence_bins": [
+                {
+                  "lower": 0.6,
+                  "upper": 0.7,
+                  "games": 1,
+                  "mean_confidence": 0.6091910704157186,
+                  "accuracy": 0.0
+                }
+              ],
+              "brier_convention": "Sum over classes; binary value is twice the one-probability binary Brier.",
+              "score_errors": {
+                "team_mae": 1.0156109139844727,
+                "total_mae": 0.25219011062712937,
+                "margin_mae": 2.0312218279689453
+              }
+            },
+            "candidate": {
+              "all": {
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 1.92770451859028,
+                "brier": 1.2384593796275087
+              },
+              "selected": {
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 1.92770451859028,
+                "brier": 1.2384593796275087
+              },
+              "coverage": 1.0,
+              "confusion_actual_by_predicted": [
+                [
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  1,
+                  0,
+                  0
+                ]
+              ],
+              "confidence_bins": [
+                {
+                  "lower": 0.6,
+                  "upper": 0.7,
+                  "games": 1,
+                  "mean_confidence": 0.6948009470286353,
+                  "accuracy": 0.0
+                }
+              ],
+              "brier_convention": "Sum over classes; binary value is twice the one-probability binary Brier.",
+              "score_errors": {
+                "team_mae": 1.0156109139844727,
+                "total_mae": 0.25219011062712937,
+                "margin_mae": 2.0312218279689453
+              }
+            }
+          },
+          "paired": {
+            "games": 1,
+            "day_blocks": 1,
+            "changes": {
+              "accuracy": {
+                "delta": 0.0,
+                "day_block_95_interval": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "log_loss": {
+                "delta": 0.2594002248873599,
+                "day_block_95_interval": [
+                  0.2594002248873599,
+                  0.2594002248873599
+                ]
+              },
+              "brier": {
+                "delta": 0.1680193917665691,
+                "day_block_95_interval": [
+                  0.1680193917665691,
+                  0.1680193917665691
+                ]
+              }
+            },
+            "equal_coverage": [
+              {
+                "variant": "reference",
+                "requested_coverage": 0.25,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 1.66830429370292,
+                "brier": 1.0704399878609396
+              },
+              {
+                "variant": "reference",
+                "requested_coverage": 0.5,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 1.66830429370292,
+                "brier": 1.0704399878609396
+              },
+              {
+                "variant": "reference",
+                "requested_coverage": 0.75,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 1.66830429370292,
+                "brier": 1.0704399878609396
+              },
+              {
+                "variant": "reference",
+                "requested_coverage": 1.0,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 1.66830429370292,
+                "brier": 1.0704399878609396
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 0.25,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 1.92770451859028,
+                "brier": 1.2384593796275087
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 0.5,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 1.92770451859028,
+                "brier": 1.2384593796275087
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 0.75,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 1.92770451859028,
+                "brier": 1.2384593796275087
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 1.0,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 1.92770451859028,
+                "brier": 1.2384593796275087
+              }
+            ],
+            "replicates": 1000,
+            "seed": 20261025,
+            "note": "Candidate minus reference. Higher accuracy/lower losses are better. Exploratory intervals are not corrected for multiple candidate searches; historical comparisons cannot promote a model automatically."
+          },
+          "temporal_stability": [
+            {
+              "period": "later",
+              "games": 1,
+              "accuracy_delta": 0.0,
+              "log_loss_delta": 0.2594002248873599
+            }
+          ],
+          "promotion_review_eligible": false,
+          "production_promoted": false,
+          "reason": "Sample checkpoints plus paired uncertainty, losses and coverage; independent temporal stability review still required. No automatic promotion."
+        },
+        {
+          "league": "IT1",
+          "summary": {
+            "reference": {
+              "all": {
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.7030201642478089,
+                "brier": 0.38312920946268675
+              },
+              "selected": {
+                "games": 0,
+                "accuracy": null,
+                "log_loss": null,
+                "brier": null
+              },
+              "coverage": 0.0,
+              "confusion_actual_by_predicted": [
+                [
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  1
+                ]
+              ],
+              "confidence_bins": [
+                {
+                  "lower": 0.4,
+                  "upper": 0.5,
+                  "games": 1,
+                  "mean_confidence": 0.4950877971072642,
+                  "accuracy": 1.0
+                }
+              ],
+              "brier_convention": "Sum over classes; binary value is twice the one-probability binary Brier.",
+              "score_errors": {
+                "team_mae": 0.7322046480941821,
+                "total_mae": 0.2892441926798144,
+                "margin_mae": 1.4644092961883641
+              }
+            },
+            "candidate": {
+              "all": {
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.6334082536201658,
+                "brier": 0.33056938190178714
+              },
+              "selected": {
+                "games": 0,
+                "accuracy": null,
+                "log_loss": null,
+                "brier": null
+              },
+              "coverage": 0.0,
+              "confusion_actual_by_predicted": [
+                [
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  1
+                ]
+              ],
+              "confidence_bins": [
+                {
+                  "lower": 0.5,
+                  "upper": 0.6,
+                  "games": 1,
+                  "mean_confidence": 0.5307796829062422,
+                  "accuracy": 1.0
+                }
+              ],
+              "brier_convention": "Sum over classes; binary value is twice the one-probability binary Brier.",
+              "score_errors": {
+                "team_mae": 0.7720121007556335,
+                "total_mae": 0.6709687229353665,
+                "margin_mae": 1.544024201511267
+              }
+            }
+          },
+          "paired": {
+            "games": 1,
+            "day_blocks": 1,
+            "changes": {
+              "accuracy": {
+                "delta": 0.0,
+                "day_block_95_interval": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "log_loss": {
+                "delta": -0.06961191062764305,
+                "day_block_95_interval": [
+                  -0.06961191062764305,
+                  -0.06961191062764305
+                ]
+              },
+              "brier": {
+                "delta": -0.05255982756089961,
+                "day_block_95_interval": [
+                  -0.05255982756089961,
+                  -0.05255982756089961
+                ]
+              }
+            },
+            "equal_coverage": [
+              {
+                "variant": "reference",
+                "requested_coverage": 0.25,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.7030201642478089,
+                "brier": 0.38312920946268675
+              },
+              {
+                "variant": "reference",
+                "requested_coverage": 0.5,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.7030201642478089,
+                "brier": 0.38312920946268675
+              },
+              {
+                "variant": "reference",
+                "requested_coverage": 0.75,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.7030201642478089,
+                "brier": 0.38312920946268675
+              },
+              {
+                "variant": "reference",
+                "requested_coverage": 1.0,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.7030201642478089,
+                "brier": 0.38312920946268675
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 0.25,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.6334082536201658,
+                "brier": 0.33056938190178714
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 0.5,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.6334082536201658,
+                "brier": 0.33056938190178714
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 0.75,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.6334082536201658,
+                "brier": 0.33056938190178714
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 1.0,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.6334082536201658,
+                "brier": 0.33056938190178714
+              }
+            ],
+            "replicates": 1000,
+            "seed": 20261025,
+            "note": "Candidate minus reference. Higher accuracy/lower losses are better. Exploratory intervals are not corrected for multiple candidate searches; historical comparisons cannot promote a model automatically."
+          },
+          "temporal_stability": [
+            {
+              "period": "later",
+              "games": 1,
+              "accuracy_delta": 0.0,
+              "log_loss_delta": -0.06961191062764305
+            }
+          ],
+          "promotion_review_eligible": false,
+          "production_promoted": false,
+          "reason": "Sample checkpoints plus paired uncertainty, losses and coverage; independent temporal stability review still required. No automatic promotion."
+        },
+        {
+          "league": "KBL",
+          "summary": {
+            "reference": {
+              "all": {
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 0.8809917539939385,
+                "brier": 0.6859208873916799
+              },
+              "selected": {
+                "games": 0,
+                "accuracy": null,
+                "log_loss": null,
+                "brier": null
+              },
+              "coverage": 0.0,
+              "confusion_actual_by_predicted": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  1,
+                  0
+                ]
+              ],
+              "confidence_bins": [
+                {
+                  "lower": 0.5,
+                  "upper": 0.6,
+                  "games": 1,
+                  "mean_confidence": 0.5856282470098586,
+                  "accuracy": 0.0
+                }
+              ],
+              "brier_convention": "Sum over classes; binary value is twice the one-probability binary Brier.",
+              "score_errors": {
+                "team_mae": 25.9576274164384,
+                "total_mae": 51.9152548328768,
+                "margin_mae": 2.898471493483868
+              }
+            },
+            "candidate": {
+              "all": {
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 0.7833623782063867,
+                "brier": 0.589986335014396
+              },
+              "selected": {
+                "games": 0,
+                "accuracy": null,
+                "log_loss": null,
+                "brier": null
+              },
+              "coverage": 0.0,
+              "confusion_actual_by_predicted": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  1,
+                  0
+                ]
+              ],
+              "confidence_bins": [
+                {
+                  "lower": 0.5,
+                  "upper": 0.6,
+                  "games": 1,
+                  "mean_confidence": 0.5431327347041403,
+                  "accuracy": 0.0
+                }
+              ],
+              "brier_convention": "Sum over classes; binary value is twice the one-probability binary Brier.",
+              "score_errors": {
+                "team_mae": 25.9576274164384,
+                "total_mae": 51.9152548328768,
+                "margin_mae": 2.898471493483868
+              }
+            }
+          },
+          "paired": {
+            "games": 1,
+            "day_blocks": 1,
+            "changes": {
+              "accuracy": {
+                "delta": 0.0,
+                "day_block_95_interval": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "log_loss": {
+                "delta": -0.09762937578755182,
+                "day_block_95_interval": [
+                  -0.09762937578755182,
+                  -0.09762937578755182
+                ]
+              },
+              "brier": {
+                "delta": -0.09593455237728388,
+                "day_block_95_interval": [
+                  -0.09593455237728388,
+                  -0.09593455237728388
+                ]
+              }
+            },
+            "equal_coverage": [
+              {
+                "variant": "reference",
+                "requested_coverage": 0.25,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 0.8809917539939385,
+                "brier": 0.6859208873916799
+              },
+              {
+                "variant": "reference",
+                "requested_coverage": 0.5,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 0.8809917539939385,
+                "brier": 0.6859208873916799
+              },
+              {
+                "variant": "reference",
+                "requested_coverage": 0.75,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 0.8809917539939385,
+                "brier": 0.6859208873916799
+              },
+              {
+                "variant": "reference",
+                "requested_coverage": 1.0,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 0.8809917539939385,
+                "brier": 0.6859208873916799
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 0.25,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 0.7833623782063867,
+                "brier": 0.589986335014396
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 0.5,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 0.7833623782063867,
+                "brier": 0.589986335014396
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 0.75,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 0.7833623782063867,
+                "brier": 0.589986335014396
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 1.0,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 0.7833623782063867,
+                "brier": 0.589986335014396
+              }
+            ],
+            "replicates": 1000,
+            "seed": 20261025,
+            "note": "Candidate minus reference. Higher accuracy/lower losses are better. Exploratory intervals are not corrected for multiple candidate searches; historical comparisons cannot promote a model automatically."
+          },
+          "temporal_stability": [
+            {
+              "period": "later",
+              "games": 1,
+              "accuracy_delta": 0.0,
+              "log_loss_delta": -0.09762937578755182
+            }
+          ],
+          "promotion_review_eligible": false,
+          "production_promoted": false,
+          "reason": "Sample checkpoints plus paired uncertainty, losses and coverage; independent temporal stability review still required. No automatic promotion."
+        },
+        {
+          "league": "NL1",
+          "summary": {
+            "reference": {
+              "all": {
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 1.1956513434304892,
+                "brier": 0.7584268759221193
+              },
+              "selected": {
+                "games": 0,
+                "accuracy": null,
+                "log_loss": null,
+                "brier": null
+              },
+              "coverage": 0.0,
+              "confusion_actual_by_predicted": [
+                [
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  1,
+                  0,
+                  0
+                ]
+              ],
+              "confidence_bins": [
+                {
+                  "lower": 0.4,
+                  "upper": 0.5,
+                  "games": 1,
+                  "mean_confidence": 0.4685001598339332,
+                  "accuracy": 0.0
+                }
+              ],
+              "brier_convention": "Sum over classes; binary value is twice the one-probability binary Brier.",
+              "score_errors": {
+                "team_mae": 1.1958501535385448,
+                "total_mae": 1.2173884489154103,
+                "margin_mae": 2.3917003070770897
+              }
+            },
+            "candidate": {
+              "all": {
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 1.0419814866442265,
+                "brier": 0.6392387600251075
+              },
+              "selected": {
+                "games": 0,
+                "accuracy": null,
+                "log_loss": null,
+                "brier": null
+              },
+              "coverage": 0.0,
+              "confusion_actual_by_predicted": [
+                [
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  1,
+                  0,
+                  0
+                ]
+              ],
+              "confidence_bins": [
+                {
+                  "lower": 0.3,
+                  "upper": 0.4,
+                  "games": 1,
+                  "mean_confidence": 0.3972758852139436,
+                  "accuracy": 0.0
+                }
+              ],
+              "brier_convention": "Sum over classes; binary value is twice the one-probability binary Brier.",
+              "score_errors": {
+                "team_mae": 1.0363257376612136,
+                "total_mae": 0.8795278349307885,
+                "margin_mae": 2.072651475322427
+              }
+            }
+          },
+          "paired": {
+            "games": 1,
+            "day_blocks": 1,
+            "changes": {
+              "accuracy": {
+                "delta": 0.0,
+                "day_block_95_interval": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "log_loss": {
+                "delta": -0.15366985678626266,
+                "day_block_95_interval": [
+                  -0.15366985678626266,
+                  -0.15366985678626266
+                ]
+              },
+              "brier": {
+                "delta": -0.11918811589701184,
+                "day_block_95_interval": [
+                  -0.11918811589701184,
+                  -0.11918811589701184
+                ]
+              }
+            },
+            "equal_coverage": [
+              {
+                "variant": "reference",
+                "requested_coverage": 0.25,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 1.1956513434304892,
+                "brier": 0.7584268759221193
+              },
+              {
+                "variant": "reference",
+                "requested_coverage": 0.5,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 1.1956513434304892,
+                "brier": 0.7584268759221193
+              },
+              {
+                "variant": "reference",
+                "requested_coverage": 0.75,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 1.1956513434304892,
+                "brier": 0.7584268759221193
+              },
+              {
+                "variant": "reference",
+                "requested_coverage": 1.0,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 1.1956513434304892,
+                "brier": 0.7584268759221193
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 0.25,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 1.0419814866442265,
+                "brier": 0.6392387600251075
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 0.5,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 1.0419814866442265,
+                "brier": 0.6392387600251075
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 0.75,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 1.0419814866442265,
+                "brier": 0.6392387600251075
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 1.0,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 1.0419814866442265,
+                "brier": 0.6392387600251075
+              }
+            ],
+            "replicates": 1000,
+            "seed": 20261025,
+            "note": "Candidate minus reference. Higher accuracy/lower losses are better. Exploratory intervals are not corrected for multiple candidate searches; historical comparisons cannot promote a model automatically."
+          },
+          "temporal_stability": [
+            {
+              "period": "later",
+              "games": 1,
+              "accuracy_delta": 0.0,
+              "log_loss_delta": -0.15366985678626266
+            }
+          ],
+          "promotion_review_eligible": false,
+          "production_promoted": false,
+          "reason": "Sample checkpoints plus paired uncertainty, losses and coverage; independent temporal stability review still required. No automatic promotion."
+        },
+        {
+          "league": "PT1",
+          "summary": {
+            "reference": {
+              "all": {
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.7146005824090613,
+                "brier": 0.3913502531530924
+              },
+              "selected": {
+                "games": 0,
+                "accuracy": null,
+                "log_loss": null,
+                "brier": null
+              },
+              "coverage": 0.0,
+              "confusion_actual_by_predicted": [
+                [
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  1
+                ]
+              ],
+              "confidence_bins": [
+                {
+                  "lower": 0.4,
+                  "upper": 0.5,
+                  "games": 1,
+                  "mean_confidence": 0.48938754275781515,
+                  "accuracy": 1.0
+                }
+              ],
+              "brier_convention": "Sum over classes; binary value is twice the one-probability binary Brier.",
+              "score_errors": {
+                "team_mae": 1.7519143804261983,
+                "total_mae": 1.195026520771978,
+                "margin_mae": 3.5038287608523966
+              }
+            },
+            "candidate": {
+              "all": {
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.6609153297417167,
+                "brier": 0.3509038116094316
+              },
+              "selected": {
+                "games": 0,
+                "accuracy": null,
+                "log_loss": null,
+                "brier": null
+              },
+              "coverage": 0.0,
+              "confusion_actual_by_predicted": [
+                [
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  1
+                ]
+              ],
+              "confidence_bins": [
+                {
+                  "lower": 0.5,
+                  "upper": 0.6,
+                  "games": 1,
+                  "mean_confidence": 0.5163784615435453,
+                  "accuracy": 1.0
+                }
+              ],
+              "brier_convention": "Sum over classes; binary value is twice the one-probability binary Brier.",
+              "score_errors": {
+                "team_mae": 1.7886768429965496,
+                "total_mae": 1.464763880120758,
+                "margin_mae": 3.577353685993099
+              }
+            }
+          },
+          "paired": {
+            "games": 1,
+            "day_blocks": 1,
+            "changes": {
+              "accuracy": {
+                "delta": 0.0,
+                "day_block_95_interval": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "log_loss": {
+                "delta": -0.053685252667344585,
+                "day_block_95_interval": [
+                  -0.053685252667344585,
+                  -0.053685252667344585
+                ]
+              },
+              "brier": {
+                "delta": -0.04044644154366078,
+                "day_block_95_interval": [
+                  -0.04044644154366078,
+                  -0.04044644154366078
+                ]
+              }
+            },
+            "equal_coverage": [
+              {
+                "variant": "reference",
+                "requested_coverage": 0.25,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.7146005824090613,
+                "brier": 0.3913502531530924
+              },
+              {
+                "variant": "reference",
+                "requested_coverage": 0.5,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.7146005824090613,
+                "brier": 0.3913502531530924
+              },
+              {
+                "variant": "reference",
+                "requested_coverage": 0.75,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.7146005824090613,
+                "brier": 0.3913502531530924
+              },
+              {
+                "variant": "reference",
+                "requested_coverage": 1.0,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.7146005824090613,
+                "brier": 0.3913502531530924
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 0.25,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.6609153297417167,
+                "brier": 0.3509038116094316
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 0.5,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.6609153297417167,
+                "brier": 0.3509038116094316
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 0.75,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.6609153297417167,
+                "brier": 0.3509038116094316
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 1.0,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.6609153297417167,
+                "brier": 0.3509038116094316
+              }
+            ],
+            "replicates": 1000,
+            "seed": 20261025,
+            "note": "Candidate minus reference. Higher accuracy/lower losses are better. Exploratory intervals are not corrected for multiple candidate searches; historical comparisons cannot promote a model automatically."
+          },
+          "temporal_stability": [
+            {
+              "period": "later",
+              "games": 1,
+              "accuracy_delta": 0.0,
+              "log_loss_delta": -0.053685252667344585
+            }
+          ],
+          "promotion_review_eligible": false,
+          "production_promoted": false,
+          "reason": "Sample checkpoints plus paired uncertainty, losses and coverage; independent temporal stability review still required. No automatic promotion."
+        }
+      ],
+      "rows": [
+        {
+          "event_id": "NL1_0f4a8bcc6619917e37add746",
+          "league": "NL1",
+          "day": "2026-10-25",
+          "variant": "reference",
+          "y": 2,
+          "p": [
+            0.4685001598339332,
+            0.22899298601898888,
+            0.302506854147078
+          ],
+          "selected": false,
+          "team_mae": 1.1958501535385448,
+          "total_mae": 1.2173884489154103,
+          "margin_mae": 2.3917003070770897,
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401875566",
+          "record_sha256": "89b3f83de7f70134b3220e3ac3bf23625ccfa923bb2f945ac87d489e74d33675"
+        },
+        {
+          "event_id": "NL1_0f4a8bcc6619917e37add746",
+          "league": "NL1",
+          "day": "2026-10-25",
+          "variant": "candidate",
+          "y": 2,
+          "p": [
+            0.3972758852139436,
+            0.24996910513432472,
+            0.3527550096517317
+          ],
+          "selected": false,
+          "team_mae": 1.0363257376612136,
+          "total_mae": 0.8795278349307885,
+          "margin_mae": 2.072651475322427,
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401875566",
+          "record_sha256": "89b3f83de7f70134b3220e3ac3bf23625ccfa923bb2f945ac87d489e74d33675"
+        },
+        {
+          "event_id": "ARG_LNB_948031aef52b0920727968d8",
+          "league": "ARG_LNB",
+          "day": "2026-10-25",
+          "variant": "reference",
+          "y": 1,
+          "p": [
+            0.3849505351949685,
+            0.6150494648050315
+          ],
+          "selected": false,
+          "team_mae": 20.508397781128508,
+          "total_mae": 41.016795562257016,
+          "margin_mae": 11.059620069294368,
+          "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2pwJ0XzY39jxmFsVnBKrIlTFR5NFlZVtXIdx5R2D7gut8z3xUzXGPYA==/racing-ch-vs-quimsa",
+          "record_sha256": "db54209d9e70b905613e6a5761aa9cd25ec2431a027926f9f029b58e05c96686"
+        },
+        {
+          "event_id": "ARG_LNB_948031aef52b0920727968d8",
+          "league": "ARG_LNB",
+          "day": "2026-10-25",
+          "variant": "candidate",
+          "y": 1,
+          "p": [
+            0.40736471667210583,
+            0.5926352833278942
+          ],
+          "selected": false,
+          "team_mae": 20.508397781128508,
+          "total_mae": 41.016795562257016,
+          "margin_mae": 11.059620069294368,
+          "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2pwJ0XzY39jxmFsVnBKrIlTFR5NFlZVtXIdx5R2D7gut8z3xUzXGPYA==/racing-ch-vs-quimsa",
+          "record_sha256": "db54209d9e70b905613e6a5761aa9cd25ec2431a027926f9f029b58e05c96686"
+        },
+        {
+          "event_id": "IT1_cded7534c5f1b5973e5bda2b",
+          "league": "IT1",
+          "day": "2026-10-25",
+          "variant": "reference",
+          "y": 2,
+          "p": [
+            0.23342047015011372,
+            0.2714917327426223,
+            0.4950877971072642
+          ],
+          "selected": false,
+          "team_mae": 0.7322046480941821,
+          "total_mae": 0.2892441926798144,
+          "margin_mae": 1.4644092961883641,
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401874779",
+          "record_sha256": "1780d3130ac2a2f7b090f60cab2e9ff4b33cb2e3f630f97472aec2b4952cec69"
+        },
+        {
+          "event_id": "IT1_cded7534c5f1b5973e5bda2b",
+          "league": "IT1",
+          "day": "2026-10-25",
+          "variant": "candidate",
+          "y": 2,
+          "p": [
+            0.24721616785667247,
+            0.22200414923708534,
+            0.5307796829062422
+          ],
+          "selected": false,
+          "team_mae": 0.7720121007556335,
+          "total_mae": 0.6709687229353665,
+          "margin_mae": 1.544024201511267,
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401874779",
+          "record_sha256": "1780d3130ac2a2f7b090f60cab2e9ff4b33cb2e3f630f97472aec2b4952cec69"
+        },
+        {
+          "event_id": "ES1_3292ce876d8bf7eb4c88eff7",
+          "league": "ES1",
+          "day": "2026-10-25",
+          "variant": "reference",
+          "y": 2,
+          "p": [
+            0.6091910704157186,
+            0.20224238141320697,
+            0.1885665481710743
+          ],
+          "selected": false,
+          "team_mae": 1.0156109139844727,
+          "total_mae": 0.25219011062712937,
+          "margin_mae": 2.0312218279689453,
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401882832",
+          "record_sha256": "f1d020f7b6be4cf4815926deae6129e65616775c1c73ed8ecfd24ed9f422cdca"
+        },
+        {
+          "event_id": "ES1_3292ce876d8bf7eb4c88eff7",
+          "league": "ES1",
+          "day": "2026-10-25",
+          "variant": "candidate",
+          "y": 2,
+          "p": [
+            0.6948009470286353,
+            0.15971728679371777,
+            0.14548176617764697
+          ],
+          "selected": true,
+          "team_mae": 1.0156109139844727,
+          "total_mae": 0.25219011062712937,
+          "margin_mae": 2.0312218279689453,
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401882832",
+          "record_sha256": "f1d020f7b6be4cf4815926deae6129e65616775c1c73ed8ecfd24ed9f422cdca"
+        },
+        {
+          "event_id": "KBL_S49G01N40",
+          "league": "KBL",
+          "day": "2026-10-26",
+          "variant": "reference",
+          "y": 1,
+          "p": [
+            0.5856282470098586,
+            0.4143717529901414
+          ],
+          "selected": false,
+          "team_mae": 25.9576274164384,
+          "total_mae": 51.9152548328768,
+          "margin_mae": 2.898471493483868,
+          "source_url": "https://api.kbl.or.kr/match/S49G01N40",
+          "record_sha256": "b210621b6dad6447ec55f9155749c50473bea6ca188b6ad7cb88f84e78189f58"
+        },
+        {
+          "event_id": "KBL_S49G01N40",
+          "league": "KBL",
+          "day": "2026-10-26",
+          "variant": "candidate",
+          "y": 1,
+          "p": [
+            0.5431327347041403,
+            0.45686726529585975
+          ],
+          "selected": false,
+          "team_mae": 25.9576274164384,
+          "total_mae": 51.9152548328768,
+          "margin_mae": 2.898471493483868,
+          "source_url": "https://api.kbl.or.kr/match/S49G01N40",
+          "record_sha256": "b210621b6dad6447ec55f9155749c50473bea6ca188b6ad7cb88f84e78189f58"
+        },
+        {
+          "event_id": "PT1_bbd84955a3d81e7ea5c730f5",
+          "league": "PT1",
+          "day": "2026-10-25",
+          "variant": "reference",
+          "y": 2,
+          "p": [
+            0.2667655243398366,
+            0.24384693290234838,
+            0.48938754275781515
+          ],
+          "selected": false,
+          "team_mae": 1.7519143804261983,
+          "total_mae": 1.195026520771978,
+          "margin_mae": 3.5038287608523966,
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401885415",
+          "record_sha256": "12e684034eb739690db873a1db067fb87c52f40cab470fdec519b31ad6a4e8f4"
+        },
+        {
+          "event_id": "PT1_bbd84955a3d81e7ea5c730f5",
+          "league": "PT1",
+          "day": "2026-10-25",
+          "variant": "candidate",
+          "y": 2,
+          "p": [
+            0.24768966882549157,
+            0.2359318696309632,
+            0.5163784615435453
+          ],
+          "selected": false,
+          "team_mae": 1.7886768429965496,
+          "total_mae": 1.464763880120758,
+          "margin_mae": 3.577353685993099,
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401885415",
+          "record_sha256": "12e684034eb739690db873a1db067fb87c52f40cab470fdec519b31ad6a4e8f4"
+        }
+      ],
+      "source_snapshot_verified": true,
+      "active_experiment": false,
+      "production_default_changed": false
+    },
+    {
+      "experiment_id": "3ca8c864cb8f30c78072ee9b7a96bb0466ae706f4a9262e6d1d0a0fc83723af4",
+      "spec": "paired-forward-report-v1",
+      "checked_at_utc": "2026-10-26T13:13:14.345153+00:00",
+      "pending": 143,
+      "settled_games": 6,
+      "rejected": [],
+      "leagues": [
+        {
+          "league": "ARG_LNB",
+          "summary": {
+            "reference": {
+              "all": {
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.4860525838326976,
+                "brier": 0.29637382909378535
+              },
+              "selected": {
+                "games": 0,
+                "accuracy": null,
+                "log_loss": null,
+                "brier": null
+              },
+              "coverage": 0.0,
+              "confusion_actual_by_predicted": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1
+                ]
+              ],
+              "confidence_bins": [
+                {
+                  "lower": 0.6,
+                  "upper": 0.7,
+                  "games": 1,
+                  "mean_confidence": 0.6150494648050315,
+                  "accuracy": 1.0
+                }
+              ],
+              "brier_convention": "Sum over classes; binary value is twice the one-probability binary Brier.",
+              "score_errors": {
+                "team_mae": 20.508397781128508,
+                "total_mae": 41.016795562257016,
+                "margin_mae": 11.059620069294368
+              }
+            },
+            "candidate": {
+              "all": {
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.43029002338860284,
+                "brier": 0.2445515624704
+              },
+              "selected": {
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.43029002338860284,
+                "brier": 0.2445515624704
+              },
+              "coverage": 1.0,
+              "confusion_actual_by_predicted": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1
+                ]
+              ],
+              "confidence_bins": [
+                {
+                  "lower": 0.6,
+                  "upper": 0.7,
+                  "games": 1,
+                  "mean_confidence": 0.6503204592270231,
+                  "accuracy": 1.0
+                }
+              ],
+              "brier_convention": "Sum over classes; binary value is twice the one-probability binary Brier.",
+              "score_errors": {
+                "team_mae": 22.081119021438084,
+                "total_mae": 44.16223804287617,
+                "margin_mae": 10.592392329554201
+              }
+            }
+          },
+          "paired": {
+            "games": 1,
+            "day_blocks": 1,
+            "changes": {
+              "accuracy": {
+                "delta": 0.0,
+                "day_block_95_interval": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "log_loss": {
+                "delta": -0.05576256044409478,
+                "day_block_95_interval": [
+                  -0.05576256044409478,
+                  -0.05576256044409478
+                ]
+              },
+              "brier": {
+                "delta": -0.05182226662338535,
+                "day_block_95_interval": [
+                  -0.05182226662338535,
+                  -0.05182226662338535
+                ]
+              }
+            },
+            "equal_coverage": [
+              {
+                "variant": "reference",
+                "requested_coverage": 0.25,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.4860525838326976,
+                "brier": 0.29637382909378535
+              },
+              {
+                "variant": "reference",
+                "requested_coverage": 0.5,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.4860525838326976,
+                "brier": 0.29637382909378535
+              },
+              {
+                "variant": "reference",
+                "requested_coverage": 0.75,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.4860525838326976,
+                "brier": 0.29637382909378535
+              },
+              {
+                "variant": "reference",
+                "requested_coverage": 1.0,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.4860525838326976,
+                "brier": 0.29637382909378535
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 0.25,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.43029002338860284,
+                "brier": 0.2445515624704
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 0.5,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.43029002338860284,
+                "brier": 0.2445515624704
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 0.75,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.43029002338860284,
+                "brier": 0.2445515624704
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 1.0,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.43029002338860284,
+                "brier": 0.2445515624704
+              }
+            ],
+            "replicates": 1000,
+            "seed": 20261025,
+            "note": "Candidate minus reference. Higher accuracy/lower losses are better. Exploratory intervals are not corrected for multiple candidate searches; historical comparisons cannot promote a model automatically."
+          },
+          "temporal_stability": [
+            {
+              "period": "later",
+              "games": 1,
+              "accuracy_delta": 0.0,
+              "log_loss_delta": -0.05576256044409478
+            }
+          ],
+          "promotion_review_eligible": false,
+          "production_promoted": false,
+          "reason": "Sample checkpoints plus paired uncertainty, losses and coverage; independent temporal stability review still required. No automatic promotion."
+        },
+        {
+          "league": "ES1",
+          "summary": {
+            "reference": {
+              "all": {
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 1.66830429370292,
+                "brier": 1.0704399878609396
+              },
+              "selected": {
+                "games": 0,
+                "accuracy": null,
+                "log_loss": null,
+                "brier": null
+              },
+              "coverage": 0.0,
+              "confusion_actual_by_predicted": [
+                [
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  1,
+                  0,
+                  0
+                ]
+              ],
+              "confidence_bins": [
+                {
+                  "lower": 0.6,
+                  "upper": 0.7,
+                  "games": 1,
+                  "mean_confidence": 0.6091910704157186,
+                  "accuracy": 0.0
+                }
+              ],
+              "brier_convention": "Sum over classes; binary value is twice the one-probability binary Brier.",
+              "score_errors": {
+                "team_mae": 1.0156109139844727,
+                "total_mae": 0.25219011062712937,
+                "margin_mae": 2.0312218279689453
+              }
+            },
+            "candidate": {
+              "all": {
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 1.5480270168816361,
+                "brier": 1.003260154339284
+              },
+              "selected": {
+                "games": 0,
+                "accuracy": null,
+                "log_loss": null,
+                "brier": null
+              },
+              "coverage": 0.0,
+              "confusion_actual_by_predicted": [
+                [
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  1,
+                  0,
+                  0
+                ]
+              ],
+              "confidence_bins": [
+                {
+                  "lower": 0.5,
+                  "upper": 0.6,
+                  "games": 1,
+                  "mean_confidence": 0.5852657818293721,
+                  "accuracy": 0.0
+                }
+              ],
+              "brier_convention": "Sum over classes; binary value is twice the one-probability binary Brier.",
+              "score_errors": {
+                "team_mae": 0.9773114695106069,
+                "total_mae": 0.6461266956531353,
+                "margin_mae": 1.9546229390212138
+              }
+            }
+          },
+          "paired": {
+            "games": 1,
+            "day_blocks": 1,
+            "changes": {
+              "accuracy": {
+                "delta": 0.0,
+                "day_block_95_interval": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "log_loss": {
+                "delta": -0.12027727682128386,
+                "day_block_95_interval": [
+                  -0.12027727682128386,
+                  -0.12027727682128386
+                ]
+              },
+              "brier": {
+                "delta": -0.06717983352165557,
+                "day_block_95_interval": [
+                  -0.06717983352165557,
+                  -0.06717983352165557
+                ]
+              }
+            },
+            "equal_coverage": [
+              {
+                "variant": "reference",
+                "requested_coverage": 0.25,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 1.66830429370292,
+                "brier": 1.0704399878609396
+              },
+              {
+                "variant": "reference",
+                "requested_coverage": 0.5,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 1.66830429370292,
+                "brier": 1.0704399878609396
+              },
+              {
+                "variant": "reference",
+                "requested_coverage": 0.75,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 1.66830429370292,
+                "brier": 1.0704399878609396
+              },
+              {
+                "variant": "reference",
+                "requested_coverage": 1.0,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 1.66830429370292,
+                "brier": 1.0704399878609396
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 0.25,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 1.5480270168816361,
+                "brier": 1.003260154339284
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 0.5,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 1.5480270168816361,
+                "brier": 1.003260154339284
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 0.75,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 1.5480270168816361,
+                "brier": 1.003260154339284
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 1.0,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 1.5480270168816361,
+                "brier": 1.003260154339284
+              }
+            ],
+            "replicates": 1000,
+            "seed": 20261025,
+            "note": "Candidate minus reference. Higher accuracy/lower losses are better. Exploratory intervals are not corrected for multiple candidate searches; historical comparisons cannot promote a model automatically."
+          },
+          "temporal_stability": [
+            {
+              "period": "later",
+              "games": 1,
+              "accuracy_delta": 0.0,
+              "log_loss_delta": -0.12027727682128386
+            }
+          ],
+          "promotion_review_eligible": false,
+          "production_promoted": false,
+          "reason": "Sample checkpoints plus paired uncertainty, losses and coverage; independent temporal stability review still required. No automatic promotion."
+        },
+        {
+          "league": "IT1",
+          "summary": {
+            "reference": {
+              "all": {
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.7030201642478089,
+                "brier": 0.38312920946268675
+              },
+              "selected": {
+                "games": 0,
+                "accuracy": null,
+                "log_loss": null,
+                "brier": null
+              },
+              "coverage": 0.0,
+              "confusion_actual_by_predicted": [
+                [
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  1
+                ]
+              ],
+              "confidence_bins": [
+                {
+                  "lower": 0.4,
+                  "upper": 0.5,
+                  "games": 1,
+                  "mean_confidence": 0.4950877971072642,
+                  "accuracy": 1.0
+                }
+              ],
+              "brier_convention": "Sum over classes; binary value is twice the one-probability binary Brier.",
+              "score_errors": {
+                "team_mae": 0.7322046480941821,
+                "total_mae": 0.2892441926798144,
+                "margin_mae": 1.4644092961883641
+              }
+            },
+            "candidate": {
+              "all": {
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.7342381763492564,
+                "brier": 0.40602128417078515
+              },
+              "selected": {
+                "games": 0,
+                "accuracy": null,
+                "log_loss": null,
+                "brier": null
+              },
+              "coverage": 0.0,
+              "confusion_actual_by_predicted": [
+                [
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  1
+                ]
+              ],
+              "confidence_bins": [
+                {
+                  "lower": 0.4,
+                  "upper": 0.5,
+                  "games": 1,
+                  "mean_confidence": 0.4798708967560999,
+                  "accuracy": 1.0
+                }
+              ],
+              "brier_convention": "Sum over classes; binary value is twice the one-probability binary Brier.",
+              "score_errors": {
+                "team_mae": 0.7720121007556335,
+                "total_mae": 0.6709687229353665,
+                "margin_mae": 1.544024201511267
+              }
+            }
+          },
+          "paired": {
+            "games": 1,
+            "day_blocks": 1,
+            "changes": {
+              "accuracy": {
+                "delta": 0.0,
+                "day_block_95_interval": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "log_loss": {
+                "delta": 0.03121801210144748,
+                "day_block_95_interval": [
+                  0.03121801210144748,
+                  0.03121801210144748
+                ]
+              },
+              "brier": {
+                "delta": 0.022892074708098398,
+                "day_block_95_interval": [
+                  0.022892074708098398,
+                  0.022892074708098398
+                ]
+              }
+            },
+            "equal_coverage": [
+              {
+                "variant": "reference",
+                "requested_coverage": 0.25,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.7030201642478089,
+                "brier": 0.38312920946268675
+              },
+              {
+                "variant": "reference",
+                "requested_coverage": 0.5,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.7030201642478089,
+                "brier": 0.38312920946268675
+              },
+              {
+                "variant": "reference",
+                "requested_coverage": 0.75,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.7030201642478089,
+                "brier": 0.38312920946268675
+              },
+              {
+                "variant": "reference",
+                "requested_coverage": 1.0,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.7030201642478089,
+                "brier": 0.38312920946268675
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 0.25,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.7342381763492564,
+                "brier": 0.40602128417078515
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 0.5,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.7342381763492564,
+                "brier": 0.40602128417078515
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 0.75,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.7342381763492564,
+                "brier": 0.40602128417078515
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 1.0,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.7342381763492564,
+                "brier": 0.40602128417078515
+              }
+            ],
+            "replicates": 1000,
+            "seed": 20261025,
+            "note": "Candidate minus reference. Higher accuracy/lower losses are better. Exploratory intervals are not corrected for multiple candidate searches; historical comparisons cannot promote a model automatically."
+          },
+          "temporal_stability": [
+            {
+              "period": "later",
+              "games": 1,
+              "accuracy_delta": 0.0,
+              "log_loss_delta": 0.03121801210144748
+            }
+          ],
+          "promotion_review_eligible": false,
+          "production_promoted": false,
+          "reason": "Sample checkpoints plus paired uncertainty, losses and coverage; independent temporal stability review still required. No automatic promotion."
+        },
+        {
+          "league": "KBL",
+          "summary": {
+            "reference": {
+              "all": {
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 0.8809917539939385,
+                "brier": 0.6859208873916799
+              },
+              "selected": {
+                "games": 0,
+                "accuracy": null,
+                "log_loss": null,
+                "brier": null
+              },
+              "coverage": 0.0,
+              "confusion_actual_by_predicted": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  1,
+                  0
+                ]
+              ],
+              "confidence_bins": [
+                {
+                  "lower": 0.5,
+                  "upper": 0.6,
+                  "games": 1,
+                  "mean_confidence": 0.5856282470098586,
+                  "accuracy": 0.0
+                }
+              ],
+              "brier_convention": "Sum over classes; binary value is twice the one-probability binary Brier.",
+              "score_errors": {
+                "team_mae": 25.9576274164384,
+                "total_mae": 51.9152548328768,
+                "margin_mae": 2.898471493483868
+              }
+            },
+            "candidate": {
+              "all": {
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 0.8809917539939385,
+                "brier": 0.6859208873916799
+              },
+              "selected": {
+                "games": 0,
+                "accuracy": null,
+                "log_loss": null,
+                "brier": null
+              },
+              "coverage": 0.0,
+              "confusion_actual_by_predicted": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  1,
+                  0
+                ]
+              ],
+              "confidence_bins": [
+                {
+                  "lower": 0.5,
+                  "upper": 0.6,
+                  "games": 1,
+                  "mean_confidence": 0.5856282470098586,
+                  "accuracy": 0.0
+                }
+              ],
+              "brier_convention": "Sum over classes; binary value is twice the one-probability binary Brier.",
+              "score_errors": {
+                "team_mae": 26.093034607497955,
+                "total_mae": 52.18606921499591,
+                "margin_mae": 2.2765381815651438
+              }
+            }
+          },
+          "paired": {
+            "games": 1,
+            "day_blocks": 1,
+            "changes": {
+              "accuracy": {
+                "delta": 0.0,
+                "day_block_95_interval": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "log_loss": {
+                "delta": 0.0,
+                "day_block_95_interval": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "brier": {
+                "delta": 0.0,
+                "day_block_95_interval": [
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            "equal_coverage": [
+              {
+                "variant": "reference",
+                "requested_coverage": 0.25,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 0.8809917539939385,
+                "brier": 0.6859208873916799
+              },
+              {
+                "variant": "reference",
+                "requested_coverage": 0.5,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 0.8809917539939385,
+                "brier": 0.6859208873916799
+              },
+              {
+                "variant": "reference",
+                "requested_coverage": 0.75,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 0.8809917539939385,
+                "brier": 0.6859208873916799
+              },
+              {
+                "variant": "reference",
+                "requested_coverage": 1.0,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 0.8809917539939385,
+                "brier": 0.6859208873916799
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 0.25,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 0.8809917539939385,
+                "brier": 0.6859208873916799
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 0.5,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 0.8809917539939385,
+                "brier": 0.6859208873916799
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 0.75,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 0.8809917539939385,
+                "brier": 0.6859208873916799
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 1.0,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 0.8809917539939385,
+                "brier": 0.6859208873916799
+              }
+            ],
+            "replicates": 1000,
+            "seed": 20261025,
+            "note": "Candidate minus reference. Higher accuracy/lower losses are better. Exploratory intervals are not corrected for multiple candidate searches; historical comparisons cannot promote a model automatically."
+          },
+          "temporal_stability": [
+            {
+              "period": "later",
+              "games": 1,
+              "accuracy_delta": 0.0,
+              "log_loss_delta": 0.0
+            }
+          ],
+          "promotion_review_eligible": false,
+          "production_promoted": false,
+          "reason": "Sample checkpoints plus paired uncertainty, losses and coverage; independent temporal stability review still required. No automatic promotion."
+        },
+        {
+          "league": "NL1",
+          "summary": {
+            "reference": {
+              "all": {
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 1.1956513434304892,
+                "brier": 0.7584268759221193
+              },
+              "selected": {
+                "games": 0,
+                "accuracy": null,
+                "log_loss": null,
+                "brier": null
+              },
+              "coverage": 0.0,
+              "confusion_actual_by_predicted": [
+                [
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  1,
+                  0,
+                  0
+                ]
+              ],
+              "confidence_bins": [
+                {
+                  "lower": 0.4,
+                  "upper": 0.5,
+                  "games": 1,
+                  "mean_confidence": 0.4685001598339332,
+                  "accuracy": 0.0
+                }
+              ],
+              "brier_convention": "Sum over classes; binary value is twice the one-probability binary Brier.",
+              "score_errors": {
+                "team_mae": 1.1958501535385448,
+                "total_mae": 1.2173884489154103,
+                "margin_mae": 2.3917003070770897
+              }
+            },
+            "candidate": {
+              "all": {
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 1.0527704983653183,
+                "brier": 0.6420309247865192
+              },
+              "selected": {
+                "games": 0,
+                "accuracy": null,
+                "log_loss": null,
+                "brier": null
+              },
+              "coverage": 0.0,
+              "confusion_actual_by_predicted": [
+                [
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  1,
+                  0,
+                  0
+                ]
+              ],
+              "confidence_bins": [
+                {
+                  "lower": 0.3,
+                  "upper": 0.4,
+                  "games": 1,
+                  "mean_confidence": 0.38150641263854934,
+                  "accuracy": 0.0
+                }
+              ],
+              "brier_convention": "Sum over classes; binary value is twice the one-probability binary Brier.",
+              "score_errors": {
+                "team_mae": 1.0363257376612136,
+                "total_mae": 0.8795278349307885,
+                "margin_mae": 2.072651475322427
+              }
+            }
+          },
+          "paired": {
+            "games": 1,
+            "day_blocks": 1,
+            "changes": {
+              "accuracy": {
+                "delta": 0.0,
+                "day_block_95_interval": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "log_loss": {
+                "delta": -0.14288084506517085,
+                "day_block_95_interval": [
+                  -0.14288084506517085,
+                  -0.14288084506517085
+                ]
+              },
+              "brier": {
+                "delta": -0.11639595113560008,
+                "day_block_95_interval": [
+                  -0.11639595113560008,
+                  -0.11639595113560008
+                ]
+              }
+            },
+            "equal_coverage": [
+              {
+                "variant": "reference",
+                "requested_coverage": 0.25,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 1.1956513434304892,
+                "brier": 0.7584268759221193
+              },
+              {
+                "variant": "reference",
+                "requested_coverage": 0.5,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 1.1956513434304892,
+                "brier": 0.7584268759221193
+              },
+              {
+                "variant": "reference",
+                "requested_coverage": 0.75,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 1.1956513434304892,
+                "brier": 0.7584268759221193
+              },
+              {
+                "variant": "reference",
+                "requested_coverage": 1.0,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 1.1956513434304892,
+                "brier": 0.7584268759221193
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 0.25,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 1.0527704983653183,
+                "brier": 0.6420309247865192
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 0.5,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 1.0527704983653183,
+                "brier": 0.6420309247865192
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 0.75,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 1.0527704983653183,
+                "brier": 0.6420309247865192
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 1.0,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 1.0527704983653183,
+                "brier": 0.6420309247865192
+              }
+            ],
+            "replicates": 1000,
+            "seed": 20261025,
+            "note": "Candidate minus reference. Higher accuracy/lower losses are better. Exploratory intervals are not corrected for multiple candidate searches; historical comparisons cannot promote a model automatically."
+          },
+          "temporal_stability": [
+            {
+              "period": "later",
+              "games": 1,
+              "accuracy_delta": 0.0,
+              "log_loss_delta": -0.14288084506517085
+            }
+          ],
+          "promotion_review_eligible": false,
+          "production_promoted": false,
+          "reason": "Sample checkpoints plus paired uncertainty, losses and coverage; independent temporal stability review still required. No automatic promotion."
+        },
+        {
+          "league": "PT1",
+          "summary": {
+            "reference": {
+              "all": {
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.7146005824090613,
+                "brier": 0.3913502531530924
+              },
+              "selected": {
+                "games": 0,
+                "accuracy": null,
+                "log_loss": null,
+                "brier": null
+              },
+              "coverage": 0.0,
+              "confusion_actual_by_predicted": [
+                [
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  1
+                ]
+              ],
+              "confidence_bins": [
+                {
+                  "lower": 0.4,
+                  "upper": 0.5,
+                  "games": 1,
+                  "mean_confidence": 0.48938754275781515,
+                  "accuracy": 1.0
+                }
+              ],
+              "brier_convention": "Sum over classes; binary value is twice the one-probability binary Brier.",
+              "score_errors": {
+                "team_mae": 1.7519143804261983,
+                "total_mae": 1.195026520771978,
+                "margin_mae": 3.5038287608523966
+              }
+            },
+            "candidate": {
+              "all": {
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.7400989707308142,
+                "brier": 0.41076083570450683
+              },
+              "selected": {
+                "games": 0,
+                "accuracy": null,
+                "log_loss": null,
+                "brier": null
+              },
+              "coverage": 0.0,
+              "confusion_actual_by_predicted": [
+                [
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  0,
+                  1
+                ]
+              ],
+              "confidence_bins": [
+                {
+                  "lower": 0.4,
+                  "upper": 0.5,
+                  "games": 1,
+                  "mean_confidence": 0.477066697544771,
+                  "accuracy": 1.0
+                }
+              ],
+              "brier_convention": "Sum over classes; binary value is twice the one-probability binary Brier.",
+              "score_errors": {
+                "team_mae": 1.7886768429965496,
+                "total_mae": 1.464763880120758,
+                "margin_mae": 3.577353685993099
+              }
+            }
+          },
+          "paired": {
+            "games": 1,
+            "day_blocks": 1,
+            "changes": {
+              "accuracy": {
+                "delta": 0.0,
+                "day_block_95_interval": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "log_loss": {
+                "delta": 0.025498388321752885,
+                "day_block_95_interval": [
+                  0.025498388321752885,
+                  0.025498388321752885
+                ]
+              },
+              "brier": {
+                "delta": 0.019410582551414424,
+                "day_block_95_interval": [
+                  0.019410582551414424,
+                  0.019410582551414424
+                ]
+              }
+            },
+            "equal_coverage": [
+              {
+                "variant": "reference",
+                "requested_coverage": 0.25,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.7146005824090613,
+                "brier": 0.3913502531530924
+              },
+              {
+                "variant": "reference",
+                "requested_coverage": 0.5,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.7146005824090613,
+                "brier": 0.3913502531530924
+              },
+              {
+                "variant": "reference",
+                "requested_coverage": 0.75,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.7146005824090613,
+                "brier": 0.3913502531530924
+              },
+              {
+                "variant": "reference",
+                "requested_coverage": 1.0,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.7146005824090613,
+                "brier": 0.3913502531530924
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 0.25,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.7400989707308142,
+                "brier": 0.41076083570450683
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 0.5,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.7400989707308142,
+                "brier": 0.41076083570450683
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 0.75,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.7400989707308142,
+                "brier": 0.41076083570450683
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 1.0,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.7400989707308142,
+                "brier": 0.41076083570450683
+              }
+            ],
+            "replicates": 1000,
+            "seed": 20261025,
+            "note": "Candidate minus reference. Higher accuracy/lower losses are better. Exploratory intervals are not corrected for multiple candidate searches; historical comparisons cannot promote a model automatically."
+          },
+          "temporal_stability": [
+            {
+              "period": "later",
+              "games": 1,
+              "accuracy_delta": 0.0,
+              "log_loss_delta": 0.025498388321752885
+            }
+          ],
+          "promotion_review_eligible": false,
+          "production_promoted": false,
+          "reason": "Sample checkpoints plus paired uncertainty, losses and coverage; independent temporal stability review still required. No automatic promotion."
+        }
+      ],
+      "rows": [
+        {
+          "event_id": "NL1_0f4a8bcc6619917e37add746",
+          "league": "NL1",
+          "day": "2026-10-25",
+          "variant": "reference",
+          "y": 2,
+          "p": [
+            0.4685001598339332,
+            0.22899298601898888,
+            0.302506854147078
+          ],
+          "selected": false,
+          "team_mae": 1.1958501535385448,
+          "total_mae": 1.2173884489154103,
+          "margin_mae": 2.3917003070770897,
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401875566",
+          "record_sha256": "87b4e5d2bb58ef116a61d1f3562e8d991121feb3410cb98267d733a33e006cd0"
+        },
+        {
+          "event_id": "NL1_0f4a8bcc6619917e37add746",
+          "league": "NL1",
+          "day": "2026-10-25",
+          "variant": "candidate",
+          "y": 2,
+          "p": [
+            0.38150641263854934,
+            0.2695239984497734,
+            0.3489695889116771
+          ],
+          "selected": false,
+          "team_mae": 1.0363257376612136,
+          "total_mae": 0.8795278349307885,
+          "margin_mae": 2.072651475322427,
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401875566",
+          "record_sha256": "87b4e5d2bb58ef116a61d1f3562e8d991121feb3410cb98267d733a33e006cd0"
+        },
+        {
+          "event_id": "ARG_LNB_948031aef52b0920727968d8",
+          "league": "ARG_LNB",
+          "day": "2026-10-25",
+          "variant": "reference",
+          "y": 1,
+          "p": [
+            0.3849505351949685,
+            0.6150494648050315
+          ],
+          "selected": false,
+          "team_mae": 20.508397781128508,
+          "total_mae": 41.016795562257016,
+          "margin_mae": 11.059620069294368,
+          "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2pwJ0XzY39jxmFsVnBKrIlTFR5NFlZVtXIdx5R2D7gut8z3xUzXGPYA==/racing-ch-vs-quimsa",
+          "record_sha256": "44f25cc100244b5a9bd60bc164552490aef41ff04c2f96937649dc7b7f7b81c6"
+        },
+        {
+          "event_id": "ARG_LNB_948031aef52b0920727968d8",
+          "league": "ARG_LNB",
+          "day": "2026-10-25",
+          "variant": "candidate",
+          "y": 1,
+          "p": [
+            0.34967954077297686,
+            0.6503204592270231
+          ],
+          "selected": true,
+          "team_mae": 22.081119021438084,
+          "total_mae": 44.16223804287617,
+          "margin_mae": 10.592392329554201,
+          "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2pwJ0XzY39jxmFsVnBKrIlTFR5NFlZVtXIdx5R2D7gut8z3xUzXGPYA==/racing-ch-vs-quimsa",
+          "record_sha256": "44f25cc100244b5a9bd60bc164552490aef41ff04c2f96937649dc7b7f7b81c6"
+        },
+        {
+          "event_id": "IT1_cded7534c5f1b5973e5bda2b",
+          "league": "IT1",
+          "day": "2026-10-25",
+          "variant": "reference",
+          "y": 2,
+          "p": [
+            0.23342047015011372,
+            0.2714917327426223,
+            0.4950877971072642
+          ],
+          "selected": false,
+          "team_mae": 0.7322046480941821,
+          "total_mae": 0.2892441926798144,
+          "margin_mae": 1.4644092961883641,
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401874779",
+          "record_sha256": "973feabea90b8b2a5726a2f3afcd602885de75b2f119b108580b7466a76a3992"
+        },
+        {
+          "event_id": "IT1_cded7534c5f1b5973e5bda2b",
+          "league": "IT1",
+          "day": "2026-10-25",
+          "variant": "candidate",
+          "y": 2,
+          "p": [
+            0.27054925736006064,
+            0.24957984588383952,
+            0.4798708967560999
+          ],
+          "selected": false,
+          "team_mae": 0.7720121007556335,
+          "total_mae": 0.6709687229353665,
+          "margin_mae": 1.544024201511267,
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401874779",
+          "record_sha256": "973feabea90b8b2a5726a2f3afcd602885de75b2f119b108580b7466a76a3992"
+        },
+        {
+          "event_id": "ES1_3292ce876d8bf7eb4c88eff7",
+          "league": "ES1",
+          "day": "2026-10-25",
+          "variant": "reference",
+          "y": 2,
+          "p": [
+            0.6091910704157186,
+            0.20224238141320697,
+            0.1885665481710743
+          ],
+          "selected": false,
+          "team_mae": 1.0156109139844727,
+          "total_mae": 0.25219011062712937,
+          "margin_mae": 2.0312218279689453,
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401882832",
+          "record_sha256": "8855d70dc0021d6800030d1a2d9c04130d16eda2572cc234ad8731ee55fde86b"
+        },
+        {
+          "event_id": "ES1_3292ce876d8bf7eb4c88eff7",
+          "league": "ES1",
+          "day": "2026-10-25",
+          "variant": "candidate",
+          "y": 2,
+          "p": [
+            0.5852657818293721,
+            0.20206706929794888,
+            0.2126671488726792
+          ],
+          "selected": false,
+          "team_mae": 0.9773114695106069,
+          "total_mae": 0.6461266956531353,
+          "margin_mae": 1.9546229390212138,
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401882832",
+          "record_sha256": "8855d70dc0021d6800030d1a2d9c04130d16eda2572cc234ad8731ee55fde86b"
+        },
+        {
+          "event_id": "KBL_S49G01N40",
+          "league": "KBL",
+          "day": "2026-10-26",
+          "variant": "reference",
+          "y": 1,
+          "p": [
+            0.5856282470098586,
+            0.4143717529901414
+          ],
+          "selected": false,
+          "team_mae": 25.9576274164384,
+          "total_mae": 51.9152548328768,
+          "margin_mae": 2.898471493483868,
+          "source_url": "https://api.kbl.or.kr/match/S49G01N40",
+          "record_sha256": "ff43d7701d74c95aad9e52c2d11012ec59e6fdc50eb28e7ad880f236dc2d7f56"
+        },
+        {
+          "event_id": "KBL_S49G01N40",
+          "league": "KBL",
+          "day": "2026-10-26",
+          "variant": "candidate",
+          "y": 1,
+          "p": [
+            0.5856282470098586,
+            0.4143717529901414
+          ],
+          "selected": false,
+          "team_mae": 26.093034607497955,
+          "total_mae": 52.18606921499591,
+          "margin_mae": 2.2765381815651438,
+          "source_url": "https://api.kbl.or.kr/match/S49G01N40",
+          "record_sha256": "ff43d7701d74c95aad9e52c2d11012ec59e6fdc50eb28e7ad880f236dc2d7f56"
+        },
+        {
+          "event_id": "PT1_bbd84955a3d81e7ea5c730f5",
+          "league": "PT1",
+          "day": "2026-10-25",
+          "variant": "reference",
+          "y": 2,
+          "p": [
+            0.2667655243398366,
+            0.24384693290234838,
+            0.48938754275781515
+          ],
+          "selected": false,
+          "team_mae": 1.7519143804261983,
+          "total_mae": 1.195026520771978,
+          "margin_mae": 3.5038287608523966,
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401885415",
+          "record_sha256": "07474bec9d7bd7ccef3329e554d2dd61c5117fa615b615c7d8f4b82fd8a9920e"
+        },
+        {
+          "event_id": "PT1_bbd84955a3d81e7ea5c730f5",
+          "league": "PT1",
+          "day": "2026-10-25",
+          "variant": "candidate",
+          "y": 2,
+          "p": [
+            0.27837785283200744,
+            0.24455544962322168,
+            0.477066697544771
+          ],
+          "selected": false,
+          "team_mae": 1.7886768429965496,
+          "total_mae": 1.464763880120758,
+          "margin_mae": 3.577353685993099,
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401885415",
+          "record_sha256": "07474bec9d7bd7ccef3329e554d2dd61c5117fa615b615c7d8f4b82fd8a9920e"
+        }
+      ],
+      "source_snapshot_verified": true,
+      "active_experiment": false,
+      "production_default_changed": false
+    },
+    {
+      "experiment_id": "51ffcc22a4b196c2b6a46b1ccaff7986d8b85dec47496f7c5da070e8679a9df6",
+      "spec": "paired-forward-report-v1",
+      "checked_at_utc": "2026-10-26T13:13:14.508898+00:00",
+      "pending": 74,
+      "settled_games": 3,
+      "rejected": [],
+      "leagues": [
+        {
+          "league": "ABA",
+          "summary": {
+            "reference": {
+              "all": {
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.43246030770962757,
+                "brier": 0.2465275204236131
+              },
+              "selected": {
+                "games": 0,
+                "accuracy": null,
+                "log_loss": null,
+                "brier": null
+              },
+              "coverage": 0.0,
+              "confusion_actual_by_predicted": [
+                [
+                  1,
+                  0
+                ],
+                [
+                  0,
+                  0
+                ]
+              ],
+              "confidence_bins": [
+                {
+                  "lower": 0.6,
+                  "upper": 0.7,
+                  "games": 1,
+                  "mean_confidence": 0.6489106093716209,
+                  "accuracy": 1.0
+                }
+              ],
+              "brier_convention": "Sum over classes; binary value is twice the one-probability binary Brier.",
+              "score_errors": {
+                "team_mae": 9.810805592074246,
+                "total_mae": 9.27348687043451,
+                "margin_mae": 19.62161118414849
+              }
+            },
+            "candidate": {
+              "all": {
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.420235513106124,
+                "brier": 0.2354460690866349
+              },
+              "selected": {
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.420235513106124,
+                "brier": 0.2354460690866349
+              },
+              "coverage": 1.0,
+              "confusion_actual_by_predicted": [
+                [
+                  1,
+                  0
+                ],
+                [
+                  0,
+                  0
+                ]
+              ],
+              "confidence_bins": [
+                {
+                  "lower": 0.6,
+                  "upper": 0.7,
+                  "games": 1,
+                  "mean_confidence": 0.6568920948982413,
+                  "accuracy": 1.0
+                }
+              ],
+              "brier_convention": "Sum over classes; binary value is twice the one-probability binary Brier.",
+              "score_errors": {
+                "team_mae": 9.516918653617907,
+                "total_mae": 10.194070528177917,
+                "margin_mae": 19.033837307235814
+              }
+            }
+          },
+          "paired": {
+            "games": 1,
+            "day_blocks": 1,
+            "changes": {
+              "accuracy": {
+                "delta": 0.0,
+                "day_block_95_interval": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "log_loss": {
+                "delta": -0.012224794603503564,
+                "day_block_95_interval": [
+                  -0.012224794603503564,
+                  -0.012224794603503564
+                ]
+              },
+              "brier": {
+                "delta": -0.011081451336978188,
+                "day_block_95_interval": [
+                  -0.011081451336978188,
+                  -0.011081451336978188
+                ]
+              }
+            },
+            "equal_coverage": [
+              {
+                "variant": "reference",
+                "requested_coverage": 0.25,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.43246030770962757,
+                "brier": 0.2465275204236131
+              },
+              {
+                "variant": "reference",
+                "requested_coverage": 0.5,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.43246030770962757,
+                "brier": 0.2465275204236131
+              },
+              {
+                "variant": "reference",
+                "requested_coverage": 0.75,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.43246030770962757,
+                "brier": 0.2465275204236131
+              },
+              {
+                "variant": "reference",
+                "requested_coverage": 1.0,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.43246030770962757,
+                "brier": 0.2465275204236131
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 0.25,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.420235513106124,
+                "brier": 0.2354460690866349
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 0.5,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.420235513106124,
+                "brier": 0.2354460690866349
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 0.75,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.420235513106124,
+                "brier": 0.2354460690866349
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 1.0,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.420235513106124,
+                "brier": 0.2354460690866349
+              }
+            ],
+            "replicates": 1000,
+            "seed": 20261025,
+            "note": "Candidate minus reference. Higher accuracy/lower losses are better. Exploratory intervals are not corrected for multiple candidate searches; historical comparisons cannot promote a model automatically."
+          },
+          "temporal_stability": [
+            {
+              "period": "later",
+              "games": 1,
+              "accuracy_delta": 0.0,
+              "log_loss_delta": -0.012224794603503564
+            }
+          ],
+          "promotion_review_eligible": false,
+          "production_promoted": false,
+          "reason": "Sample checkpoints plus paired uncertainty, losses and coverage; independent temporal stability review still required. No automatic promotion."
+        },
+        {
+          "league": "ARG_LNB",
+          "summary": {
+            "reference": {
+              "all": {
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.4860525838326976,
+                "brier": 0.29637382909378535
+              },
+              "selected": {
+                "games": 0,
+                "accuracy": null,
+                "log_loss": null,
+                "brier": null
+              },
+              "coverage": 0.0,
+              "confusion_actual_by_predicted": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1
+                ]
+              ],
+              "confidence_bins": [
+                {
+                  "lower": 0.6,
+                  "upper": 0.7,
+                  "games": 1,
+                  "mean_confidence": 0.6150494648050315,
+                  "accuracy": 1.0
+                }
+              ],
+              "brier_convention": "Sum over classes; binary value is twice the one-probability binary Brier.",
+              "score_errors": {
+                "team_mae": 20.508397781128508,
+                "total_mae": 41.016795562257016,
+                "margin_mae": 11.059620069294368
+              }
+            },
+            "candidate": {
+              "all": {
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.43029002338860284,
+                "brier": 0.2445515624704
+              },
+              "selected": {
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.43029002338860284,
+                "brier": 0.2445515624704
+              },
+              "coverage": 1.0,
+              "confusion_actual_by_predicted": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1
+                ]
+              ],
+              "confidence_bins": [
+                {
+                  "lower": 0.6,
+                  "upper": 0.7,
+                  "games": 1,
+                  "mean_confidence": 0.6503204592270231,
+                  "accuracy": 1.0
+                }
+              ],
+              "brier_convention": "Sum over classes; binary value is twice the one-probability binary Brier.",
+              "score_errors": {
+                "team_mae": 22.081119021438084,
+                "total_mae": 44.16223804287617,
+                "margin_mae": 10.592392329554201
+              }
+            }
+          },
+          "paired": {
+            "games": 1,
+            "day_blocks": 1,
+            "changes": {
+              "accuracy": {
+                "delta": 0.0,
+                "day_block_95_interval": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "log_loss": {
+                "delta": -0.05576256044409478,
+                "day_block_95_interval": [
+                  -0.05576256044409478,
+                  -0.05576256044409478
+                ]
+              },
+              "brier": {
+                "delta": -0.05182226662338535,
+                "day_block_95_interval": [
+                  -0.05182226662338535,
+                  -0.05182226662338535
+                ]
+              }
+            },
+            "equal_coverage": [
+              {
+                "variant": "reference",
+                "requested_coverage": 0.25,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.4860525838326976,
+                "brier": 0.29637382909378535
+              },
+              {
+                "variant": "reference",
+                "requested_coverage": 0.5,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.4860525838326976,
+                "brier": 0.29637382909378535
+              },
+              {
+                "variant": "reference",
+                "requested_coverage": 0.75,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.4860525838326976,
+                "brier": 0.29637382909378535
+              },
+              {
+                "variant": "reference",
+                "requested_coverage": 1.0,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.4860525838326976,
+                "brier": 0.29637382909378535
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 0.25,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.43029002338860284,
+                "brier": 0.2445515624704
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 0.5,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.43029002338860284,
+                "brier": 0.2445515624704
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 0.75,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.43029002338860284,
+                "brier": 0.2445515624704
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 1.0,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.43029002338860284,
+                "brier": 0.2445515624704
+              }
+            ],
+            "replicates": 1000,
+            "seed": 20261025,
+            "note": "Candidate minus reference. Higher accuracy/lower losses are better. Exploratory intervals are not corrected for multiple candidate searches; historical comparisons cannot promote a model automatically."
+          },
+          "temporal_stability": [
+            {
+              "period": "later",
+              "games": 1,
+              "accuracy_delta": 0.0,
+              "log_loss_delta": -0.05576256044409478
+            }
+          ],
+          "promotion_review_eligible": false,
+          "production_promoted": false,
+          "reason": "Sample checkpoints plus paired uncertainty, losses and coverage; independent temporal stability review still required. No automatic promotion."
+        },
+        {
+          "league": "KBL",
+          "summary": {
+            "reference": {
+              "all": {
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 0.8809917539939385,
+                "brier": 0.6859208873916799
+              },
+              "selected": {
+                "games": 0,
+                "accuracy": null,
+                "log_loss": null,
+                "brier": null
+              },
+              "coverage": 0.0,
+              "confusion_actual_by_predicted": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  1,
+                  0
+                ]
+              ],
+              "confidence_bins": [
+                {
+                  "lower": 0.5,
+                  "upper": 0.6,
+                  "games": 1,
+                  "mean_confidence": 0.5856282470098586,
+                  "accuracy": 0.0
+                }
+              ],
+              "brier_convention": "Sum over classes; binary value is twice the one-probability binary Brier.",
+              "score_errors": {
+                "team_mae": 25.9576274164384,
+                "total_mae": 51.9152548328768,
+                "margin_mae": 2.898471493483868
+              }
+            },
+            "candidate": {
+              "all": {
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 0.8809917539939385,
+                "brier": 0.6859208873916799
+              },
+              "selected": {
+                "games": 0,
+                "accuracy": null,
+                "log_loss": null,
+                "brier": null
+              },
+              "coverage": 0.0,
+              "confusion_actual_by_predicted": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  1,
+                  0
+                ]
+              ],
+              "confidence_bins": [
+                {
+                  "lower": 0.5,
+                  "upper": 0.6,
+                  "games": 1,
+                  "mean_confidence": 0.5856282470098586,
+                  "accuracy": 0.0
+                }
+              ],
+              "brier_convention": "Sum over classes; binary value is twice the one-probability binary Brier.",
+              "score_errors": {
+                "team_mae": 26.093034607497955,
+                "total_mae": 52.18606921499591,
+                "margin_mae": 2.2765381815651438
+              }
+            }
+          },
+          "paired": {
+            "games": 1,
+            "day_blocks": 1,
+            "changes": {
+              "accuracy": {
+                "delta": 0.0,
+                "day_block_95_interval": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "log_loss": {
+                "delta": 0.0,
+                "day_block_95_interval": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "brier": {
+                "delta": 0.0,
+                "day_block_95_interval": [
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            "equal_coverage": [
+              {
+                "variant": "reference",
+                "requested_coverage": 0.25,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 0.8809917539939385,
+                "brier": 0.6859208873916799
+              },
+              {
+                "variant": "reference",
+                "requested_coverage": 0.5,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 0.8809917539939385,
+                "brier": 0.6859208873916799
+              },
+              {
+                "variant": "reference",
+                "requested_coverage": 0.75,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 0.8809917539939385,
+                "brier": 0.6859208873916799
+              },
+              {
+                "variant": "reference",
+                "requested_coverage": 1.0,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 0.8809917539939385,
+                "brier": 0.6859208873916799
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 0.25,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 0.8809917539939385,
+                "brier": 0.6859208873916799
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 0.5,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 0.8809917539939385,
+                "brier": 0.6859208873916799
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 0.75,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 0.8809917539939385,
+                "brier": 0.6859208873916799
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 1.0,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 0.8809917539939385,
+                "brier": 0.6859208873916799
+              }
+            ],
+            "replicates": 1000,
+            "seed": 20261025,
+            "note": "Candidate minus reference. Higher accuracy/lower losses are better. Exploratory intervals are not corrected for multiple candidate searches; historical comparisons cannot promote a model automatically."
+          },
+          "temporal_stability": [
+            {
+              "period": "later",
+              "games": 1,
+              "accuracy_delta": 0.0,
+              "log_loss_delta": 0.0
+            }
+          ],
+          "promotion_review_eligible": false,
+          "production_promoted": false,
+          "reason": "Sample checkpoints plus paired uncertainty, losses and coverage; independent temporal stability review still required. No automatic promotion."
+        }
+      ],
+      "rows": [
+        {
+          "event_id": "ARG_LNB_948031aef52b0920727968d8",
+          "league": "ARG_LNB",
+          "day": "2026-10-25",
+          "variant": "reference",
+          "y": 1,
+          "p": [
+            0.3849505351949685,
+            0.6150494648050315
+          ],
+          "selected": false,
+          "team_mae": 20.508397781128508,
+          "total_mae": 41.016795562257016,
+          "margin_mae": 11.059620069294368,
+          "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2pwJ0XzY39jxmFsVnBKrIlTFR5NFlZVtXIdx5R2D7gut8z3xUzXGPYA==/racing-ch-vs-quimsa",
+          "record_sha256": "b65ad7eda1ddb2fb77d71ad245fab54933284acdd8784a9ed437de5ec37af0d2"
+        },
+        {
+          "event_id": "ARG_LNB_948031aef52b0920727968d8",
+          "league": "ARG_LNB",
+          "day": "2026-10-25",
+          "variant": "candidate",
+          "y": 1,
+          "p": [
+            0.34967954077297686,
+            0.6503204592270231
+          ],
+          "selected": true,
+          "team_mae": 22.081119021438084,
+          "total_mae": 44.16223804287617,
+          "margin_mae": 10.592392329554201,
+          "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2pwJ0XzY39jxmFsVnBKrIlTFR5NFlZVtXIdx5R2D7gut8z3xUzXGPYA==/racing-ch-vs-quimsa",
+          "record_sha256": "b65ad7eda1ddb2fb77d71ad245fab54933284acdd8784a9ed437de5ec37af0d2"
+        },
+        {
+          "event_id": "ABA_2026_48",
+          "league": "ABA",
+          "day": "2026-10-25",
+          "variant": "reference",
+          "y": 0,
+          "p": [
+            0.6489106093716209,
+            0.35108939062837907
+          ],
+          "selected": false,
+          "team_mae": 9.810805592074246,
+          "total_mae": 9.27348687043451,
+          "margin_mae": 19.62161118414849,
+          "source_url": "https://www.aba-liga.com/match/48/26/1/Overview/q1/1/home/zadar-perspektiva-ilirija/",
+          "record_sha256": "784cfd49e39d3ade9473d7310504cea9ac3a0a5be25e74d70b28b1e6dcb938a0"
+        },
+        {
+          "event_id": "ABA_2026_48",
+          "league": "ABA",
+          "day": "2026-10-25",
+          "variant": "candidate",
+          "y": 0,
+          "p": [
+            0.6568920948982413,
+            0.3431079051017587
+          ],
+          "selected": true,
+          "team_mae": 9.516918653617907,
+          "total_mae": 10.194070528177917,
+          "margin_mae": 19.033837307235814,
+          "source_url": "https://www.aba-liga.com/match/48/26/1/Overview/q1/1/home/zadar-perspektiva-ilirija/",
+          "record_sha256": "784cfd49e39d3ade9473d7310504cea9ac3a0a5be25e74d70b28b1e6dcb938a0"
+        },
+        {
+          "event_id": "KBL_S49G01N40",
+          "league": "KBL",
+          "day": "2026-10-26",
+          "variant": "reference",
+          "y": 1,
+          "p": [
+            0.5856282470098586,
+            0.4143717529901414
+          ],
+          "selected": false,
+          "team_mae": 25.9576274164384,
+          "total_mae": 51.9152548328768,
+          "margin_mae": 2.898471493483868,
+          "source_url": "https://api.kbl.or.kr/match/S49G01N40",
+          "record_sha256": "72dddc34c5d4aae5fb7f0bb4cfa1426222dbb17ab42060734538bce6397d1634"
+        },
+        {
+          "event_id": "KBL_S49G01N40",
+          "league": "KBL",
+          "day": "2026-10-26",
+          "variant": "candidate",
+          "y": 1,
+          "p": [
+            0.5856282470098586,
+            0.4143717529901414
+          ],
+          "selected": false,
+          "team_mae": 26.093034607497955,
+          "total_mae": 52.18606921499591,
+          "margin_mae": 2.2765381815651438,
+          "source_url": "https://api.kbl.or.kr/match/S49G01N40",
+          "record_sha256": "72dddc34c5d4aae5fb7f0bb4cfa1426222dbb17ab42060734538bce6397d1634"
+        }
+      ],
+      "source_snapshot_verified": false,
+      "active_experiment": false,
+      "production_default_changed": false
+    },
+    {
+      "experiment_id": "756cfe7cebbd46381df8e4c94ce0867b59fd864092b0cb6e81c8e4f163233a3f",
+      "spec": "paired-forward-report-v1",
+      "checked_at_utc": "2026-10-26T13:13:14.591231+00:00",
+      "pending": 94,
+      "settled_games": 3,
+      "rejected": [],
+      "leagues": [
+        {
+          "league": "ABA",
+          "summary": {
+            "reference": {
+              "all": {
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.43246030770962757,
+                "brier": 0.2465275204236131
+              },
+              "selected": {
+                "games": 0,
+                "accuracy": null,
+                "log_loss": null,
+                "brier": null
+              },
+              "coverage": 0.0,
+              "confusion_actual_by_predicted": [
+                [
+                  1,
+                  0
+                ],
+                [
+                  0,
+                  0
+                ]
+              ],
+              "confidence_bins": [
+                {
+                  "lower": 0.6,
+                  "upper": 0.7,
+                  "games": 1,
+                  "mean_confidence": 0.6489106093716209,
+                  "accuracy": 1.0
+                }
+              ],
+              "brier_convention": "Sum over classes; binary value is twice the one-probability binary Brier.",
+              "score_errors": {
+                "team_mae": 9.810805592074246,
+                "total_mae": 9.27348687043451,
+                "margin_mae": 19.62161118414849
+              }
+            },
+            "candidate": {
+              "all": {
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.420235513106124,
+                "brier": 0.2354460690866349
+              },
+              "selected": {
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.420235513106124,
+                "brier": 0.2354460690866349
+              },
+              "coverage": 1.0,
+              "confusion_actual_by_predicted": [
+                [
+                  1,
+                  0
+                ],
+                [
+                  0,
+                  0
+                ]
+              ],
+              "confidence_bins": [
+                {
+                  "lower": 0.6,
+                  "upper": 0.7,
+                  "games": 1,
+                  "mean_confidence": 0.6568920948982413,
+                  "accuracy": 1.0
+                }
+              ],
+              "brier_convention": "Sum over classes; binary value is twice the one-probability binary Brier.",
+              "score_errors": {
+                "team_mae": 9.516918653617907,
+                "total_mae": 10.194070528177917,
+                "margin_mae": 19.033837307235814
+              }
+            }
+          },
+          "paired": {
+            "games": 1,
+            "day_blocks": 1,
+            "changes": {
+              "accuracy": {
+                "delta": 0.0,
+                "day_block_95_interval": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "log_loss": {
+                "delta": -0.012224794603503564,
+                "day_block_95_interval": [
+                  -0.012224794603503564,
+                  -0.012224794603503564
+                ]
+              },
+              "brier": {
+                "delta": -0.011081451336978188,
+                "day_block_95_interval": [
+                  -0.011081451336978188,
+                  -0.011081451336978188
+                ]
+              }
+            },
+            "equal_coverage": [
+              {
+                "variant": "reference",
+                "requested_coverage": 0.25,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.43246030770962757,
+                "brier": 0.2465275204236131
+              },
+              {
+                "variant": "reference",
+                "requested_coverage": 0.5,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.43246030770962757,
+                "brier": 0.2465275204236131
+              },
+              {
+                "variant": "reference",
+                "requested_coverage": 0.75,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.43246030770962757,
+                "brier": 0.2465275204236131
+              },
+              {
+                "variant": "reference",
+                "requested_coverage": 1.0,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.43246030770962757,
+                "brier": 0.2465275204236131
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 0.25,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.420235513106124,
+                "brier": 0.2354460690866349
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 0.5,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.420235513106124,
+                "brier": 0.2354460690866349
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 0.75,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.420235513106124,
+                "brier": 0.2354460690866349
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 1.0,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.420235513106124,
+                "brier": 0.2354460690866349
+              }
+            ],
+            "replicates": 1000,
+            "seed": 20261025,
+            "note": "Candidate minus reference. Higher accuracy/lower losses are better. Exploratory intervals are not corrected for multiple candidate searches; historical comparisons cannot promote a model automatically."
+          },
+          "temporal_stability": [
+            {
+              "period": "later",
+              "games": 1,
+              "accuracy_delta": 0.0,
+              "log_loss_delta": -0.012224794603503564
+            }
+          ],
+          "promotion_review_eligible": false,
+          "production_promoted": false,
+          "reason": "Sample checkpoints plus paired uncertainty, losses and coverage; independent temporal stability review still required. No automatic promotion."
+        },
+        {
+          "league": "ARG_LNB",
+          "summary": {
+            "reference": {
+              "all": {
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.4860525838326976,
+                "brier": 0.29637382909378535
+              },
+              "selected": {
+                "games": 0,
+                "accuracy": null,
+                "log_loss": null,
+                "brier": null
+              },
+              "coverage": 0.0,
+              "confusion_actual_by_predicted": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1
+                ]
+              ],
+              "confidence_bins": [
+                {
+                  "lower": 0.6,
+                  "upper": 0.7,
+                  "games": 1,
+                  "mean_confidence": 0.6150494648050315,
+                  "accuracy": 1.0
+                }
+              ],
+              "brier_convention": "Sum over classes; binary value is twice the one-probability binary Brier.",
+              "score_errors": {
+                "team_mae": 20.508397781128508,
+                "total_mae": 41.016795562257016,
+                "margin_mae": 11.059620069294368
+              }
+            },
+            "candidate": {
+              "all": {
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.43029002338860284,
+                "brier": 0.2445515624704
+              },
+              "selected": {
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.43029002338860284,
+                "brier": 0.2445515624704
+              },
+              "coverage": 1.0,
+              "confusion_actual_by_predicted": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  0,
+                  1
+                ]
+              ],
+              "confidence_bins": [
+                {
+                  "lower": 0.6,
+                  "upper": 0.7,
+                  "games": 1,
+                  "mean_confidence": 0.6503204592270231,
+                  "accuracy": 1.0
+                }
+              ],
+              "brier_convention": "Sum over classes; binary value is twice the one-probability binary Brier.",
+              "score_errors": {
+                "team_mae": 22.081119021438084,
+                "total_mae": 44.16223804287617,
+                "margin_mae": 10.592392329554201
+              }
+            }
+          },
+          "paired": {
+            "games": 1,
+            "day_blocks": 1,
+            "changes": {
+              "accuracy": {
+                "delta": 0.0,
+                "day_block_95_interval": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "log_loss": {
+                "delta": -0.05576256044409478,
+                "day_block_95_interval": [
+                  -0.05576256044409478,
+                  -0.05576256044409478
+                ]
+              },
+              "brier": {
+                "delta": -0.05182226662338535,
+                "day_block_95_interval": [
+                  -0.05182226662338535,
+                  -0.05182226662338535
+                ]
+              }
+            },
+            "equal_coverage": [
+              {
+                "variant": "reference",
+                "requested_coverage": 0.25,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.4860525838326976,
+                "brier": 0.29637382909378535
+              },
+              {
+                "variant": "reference",
+                "requested_coverage": 0.5,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.4860525838326976,
+                "brier": 0.29637382909378535
+              },
+              {
+                "variant": "reference",
+                "requested_coverage": 0.75,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.4860525838326976,
+                "brier": 0.29637382909378535
+              },
+              {
+                "variant": "reference",
+                "requested_coverage": 1.0,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.4860525838326976,
+                "brier": 0.29637382909378535
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 0.25,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.43029002338860284,
+                "brier": 0.2445515624704
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 0.5,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.43029002338860284,
+                "brier": 0.2445515624704
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 0.75,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.43029002338860284,
+                "brier": 0.2445515624704
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 1.0,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.43029002338860284,
+                "brier": 0.2445515624704
+              }
+            ],
+            "replicates": 1000,
+            "seed": 20261025,
+            "note": "Candidate minus reference. Higher accuracy/lower losses are better. Exploratory intervals are not corrected for multiple candidate searches; historical comparisons cannot promote a model automatically."
+          },
+          "temporal_stability": [
+            {
+              "period": "later",
+              "games": 1,
+              "accuracy_delta": 0.0,
+              "log_loss_delta": -0.05576256044409478
+            }
+          ],
+          "promotion_review_eligible": false,
+          "production_promoted": false,
+          "reason": "Sample checkpoints plus paired uncertainty, losses and coverage; independent temporal stability review still required. No automatic promotion."
+        },
+        {
+          "league": "KBL",
+          "summary": {
+            "reference": {
+              "all": {
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 0.8809917539939385,
+                "brier": 0.6859208873916799
+              },
+              "selected": {
+                "games": 0,
+                "accuracy": null,
+                "log_loss": null,
+                "brier": null
+              },
+              "coverage": 0.0,
+              "confusion_actual_by_predicted": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  1,
+                  0
+                ]
+              ],
+              "confidence_bins": [
+                {
+                  "lower": 0.5,
+                  "upper": 0.6,
+                  "games": 1,
+                  "mean_confidence": 0.5856282470098586,
+                  "accuracy": 0.0
+                }
+              ],
+              "brier_convention": "Sum over classes; binary value is twice the one-probability binary Brier.",
+              "score_errors": {
+                "team_mae": 25.9576274164384,
+                "total_mae": 51.9152548328768,
+                "margin_mae": 2.898471493483868
+              }
+            },
+            "candidate": {
+              "all": {
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 0.8809917539939385,
+                "brier": 0.6859208873916799
+              },
+              "selected": {
+                "games": 0,
+                "accuracy": null,
+                "log_loss": null,
+                "brier": null
+              },
+              "coverage": 0.0,
+              "confusion_actual_by_predicted": [
+                [
+                  0,
+                  0
+                ],
+                [
+                  1,
+                  0
+                ]
+              ],
+              "confidence_bins": [
+                {
+                  "lower": 0.5,
+                  "upper": 0.6,
+                  "games": 1,
+                  "mean_confidence": 0.5856282470098586,
+                  "accuracy": 0.0
+                }
+              ],
+              "brier_convention": "Sum over classes; binary value is twice the one-probability binary Brier.",
+              "score_errors": {
+                "team_mae": 26.093034607497955,
+                "total_mae": 52.18606921499591,
+                "margin_mae": 2.2765381815651438
+              }
+            }
+          },
+          "paired": {
+            "games": 1,
+            "day_blocks": 1,
+            "changes": {
+              "accuracy": {
+                "delta": 0.0,
+                "day_block_95_interval": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "log_loss": {
+                "delta": 0.0,
+                "day_block_95_interval": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "brier": {
+                "delta": 0.0,
+                "day_block_95_interval": [
+                  0.0,
+                  0.0
+                ]
+              }
+            },
+            "equal_coverage": [
+              {
+                "variant": "reference",
+                "requested_coverage": 0.25,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 0.8809917539939385,
+                "brier": 0.6859208873916799
+              },
+              {
+                "variant": "reference",
+                "requested_coverage": 0.5,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 0.8809917539939385,
+                "brier": 0.6859208873916799
+              },
+              {
+                "variant": "reference",
+                "requested_coverage": 0.75,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 0.8809917539939385,
+                "brier": 0.6859208873916799
+              },
+              {
+                "variant": "reference",
+                "requested_coverage": 1.0,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 0.8809917539939385,
+                "brier": 0.6859208873916799
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 0.25,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 0.8809917539939385,
+                "brier": 0.6859208873916799
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 0.5,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 0.8809917539939385,
+                "brier": 0.6859208873916799
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 0.75,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 0.8809917539939385,
+                "brier": 0.6859208873916799
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 1.0,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 0.0,
+                "log_loss": 0.8809917539939385,
+                "brier": 0.6859208873916799
+              }
+            ],
+            "replicates": 1000,
+            "seed": 20261025,
+            "note": "Candidate minus reference. Higher accuracy/lower losses are better. Exploratory intervals are not corrected for multiple candidate searches; historical comparisons cannot promote a model automatically."
+          },
+          "temporal_stability": [
+            {
+              "period": "later",
+              "games": 1,
+              "accuracy_delta": 0.0,
+              "log_loss_delta": 0.0
+            }
+          ],
+          "promotion_review_eligible": false,
+          "production_promoted": false,
+          "reason": "Sample checkpoints plus paired uncertainty, losses and coverage; independent temporal stability review still required. No automatic promotion."
+        }
+      ],
+      "rows": [
+        {
+          "event_id": "ARG_LNB_948031aef52b0920727968d8",
+          "league": "ARG_LNB",
+          "day": "2026-10-25",
+          "variant": "reference",
+          "y": 1,
+          "p": [
+            0.3849505351949685,
+            0.6150494648050315
+          ],
+          "selected": false,
+          "team_mae": 20.508397781128508,
+          "total_mae": 41.016795562257016,
+          "margin_mae": 11.059620069294368,
+          "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2pwJ0XzY39jxmFsVnBKrIlTFR5NFlZVtXIdx5R2D7gut8z3xUzXGPYA==/racing-ch-vs-quimsa",
+          "record_sha256": "3f55b062bb3a8b548444c459050b6244e3ea667c6f689653f85bc461e9c18c9c"
+        },
+        {
+          "event_id": "ARG_LNB_948031aef52b0920727968d8",
+          "league": "ARG_LNB",
+          "day": "2026-10-25",
+          "variant": "candidate",
+          "y": 1,
+          "p": [
+            0.34967954077297686,
+            0.6503204592270231
+          ],
+          "selected": true,
+          "team_mae": 22.081119021438084,
+          "total_mae": 44.16223804287617,
+          "margin_mae": 10.592392329554201,
+          "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2pwJ0XzY39jxmFsVnBKrIlTFR5NFlZVtXIdx5R2D7gut8z3xUzXGPYA==/racing-ch-vs-quimsa",
+          "record_sha256": "3f55b062bb3a8b548444c459050b6244e3ea667c6f689653f85bc461e9c18c9c"
+        },
+        {
+          "event_id": "ABA_2026_48",
+          "league": "ABA",
+          "day": "2026-10-25",
+          "variant": "reference",
+          "y": 0,
+          "p": [
+            0.6489106093716209,
+            0.35108939062837907
+          ],
+          "selected": false,
+          "team_mae": 9.810805592074246,
+          "total_mae": 9.27348687043451,
+          "margin_mae": 19.62161118414849,
+          "source_url": "https://www.aba-liga.com/match/48/26/1/Overview/q1/1/home/zadar-perspektiva-ilirija/",
+          "record_sha256": "b7c558c79724aad2dcace880081855b10bcc7e6f9af77140fbd43cfadbf54880"
+        },
+        {
+          "event_id": "ABA_2026_48",
+          "league": "ABA",
+          "day": "2026-10-25",
+          "variant": "candidate",
+          "y": 0,
+          "p": [
+            0.6568920948982413,
+            0.3431079051017587
+          ],
+          "selected": true,
+          "team_mae": 9.516918653617907,
+          "total_mae": 10.194070528177917,
+          "margin_mae": 19.033837307235814,
+          "source_url": "https://www.aba-liga.com/match/48/26/1/Overview/q1/1/home/zadar-perspektiva-ilirija/",
+          "record_sha256": "b7c558c79724aad2dcace880081855b10bcc7e6f9af77140fbd43cfadbf54880"
+        },
+        {
+          "event_id": "KBL_S49G01N40",
+          "league": "KBL",
+          "day": "2026-10-26",
+          "variant": "reference",
+          "y": 1,
+          "p": [
+            0.5856282470098586,
+            0.4143717529901414
+          ],
+          "selected": false,
+          "team_mae": 25.9576274164384,
+          "total_mae": 51.9152548328768,
+          "margin_mae": 2.898471493483868,
+          "source_url": "https://api.kbl.or.kr/match/S49G01N40",
+          "record_sha256": "677db28d787afcc27ec1eec1122ef9955395a0a63816a3d69372518be4b07e96"
+        },
+        {
+          "event_id": "KBL_S49G01N40",
+          "league": "KBL",
+          "day": "2026-10-26",
+          "variant": "candidate",
+          "y": 1,
+          "p": [
+            0.5856282470098586,
+            0.4143717529901414
+          ],
+          "selected": false,
+          "team_mae": 26.093034607497955,
+          "total_mae": 52.18606921499591,
+          "margin_mae": 2.2765381815651438,
+          "source_url": "https://api.kbl.or.kr/match/S49G01N40",
+          "record_sha256": "677db28d787afcc27ec1eec1122ef9955395a0a63816a3d69372518be4b07e96"
+        }
+      ],
+      "source_snapshot_verified": false,
+      "active_experiment": false,
+      "production_default_changed": false
+    },
+    {
+      "experiment_id": "c3172d369677d38a013598d26cb3ef362612c8ca2bd71080bd9f337a24a470d3",
+      "spec": "paired-forward-report-v1",
+      "checked_at_utc": "2026-10-26T13:13:14.680373+00:00",
+      "pending": 148,
+      "settled_games": 0,
+      "rejected": [],
+      "leagues": [],
+      "rows": [],
+      "source_snapshot_verified": true,
+      "active_experiment": true,
+      "production_default_changed": false
+    }
+  ],
+  "production_default_changed": false
+}
