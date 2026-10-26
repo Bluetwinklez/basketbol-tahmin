@@ -49,7 +49,10 @@ def register(root,policy):
     target=directory/'protocol.json'
     if target.exists():
         saved=checked(json.loads(target.read_text(encoding='utf8')))
-        if {k:v for k,v in saved.items() if k!='sha256'}!=payload: raise ValueError('Experiment policy conflict')
+        # Policies may contain tuples before their first JSON round trip.
+        # Compare the canonical representation used by the identity itself.
+        if canonical({k:v for k,v in saved.items() if k!='sha256'})!=canonical(payload):
+            raise ValueError('Experiment policy conflict')
     else: save_new(target,payload)
     snapshot_path=directory/'source_snapshot.json.gz'
     if not snapshot_path.exists():
