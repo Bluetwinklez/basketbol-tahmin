@@ -1,0 +1,120 @@
+{
+  "football": {
+    "status": "partial",
+    "errors": [
+      {
+        "league": "DE2",
+        "season": "2026-27",
+        "error": "Source file unavailable",
+        "source": "football",
+        "collector": "football"
+      },
+      {
+        "league": "ES2",
+        "season": "2026-27",
+        "error": "Source file unavailable",
+        "source": "football",
+        "collector": "football"
+      },
+      {
+        "league": "IT2",
+        "season": "2026-27",
+        "error": "Source file unavailable",
+        "source": "football",
+        "collector": "football"
+      },
+      {
+        "league": "FR2",
+        "season": "2026-27",
+        "error": "Source file unavailable",
+        "source": "football",
+        "collector": "football"
+      },
+      {
+        "league": "AT1",
+        "season": "2026-27",
+        "error": "Source file unavailable",
+        "source": "football",
+        "collector": "football"
+      },
+      {
+        "league": "BE1",
+        "season": "2026-27",
+        "error": "Source file unavailable",
+        "source": "football",
+        "collector": "football"
+      },
+      {
+        "league": "GR1",
+        "season": "2026-27",
+        "error": "Source file unavailable",
+        "source": "football",
+        "collector": "football"
+      },
+      {
+        "league": "SC1",
+        "season": "2026-27",
+        "error": "Source file unavailable",
+        "source": "football",
+        "collector": "football"
+      },
+      {
+        "league": "BR2",
+        "season": "2026",
+        "error": "Source file unavailable; historical data is not current coverage",
+        "source": "BR2",
+        "collector": "BR2"
+      },
+      {
+        "league": "AR1",
+        "season": "2026",
+        "error": "Source file unavailable; historical data is not current coverage",
+        "source": "AR1",
+        "collector": "AR1"
+      },
+      {
+        "league": "CO1",
+        "season": "2026",
+        "error": "Source file unavailable; historical data is not current coverage",
+        "source": "CO1",
+        "collector": "CO1"
+      },
+      {
+        "league": "US1",
+        "season": "2026",
+        "error": "Source file unavailable; historical data is not current coverage",
+        "source": "US1",
+        "collector": "US1"
+      },
+      {
+        "league": "JP1",
+        "season": "2026",
+        "error": "Source file unavailable; historical data is not current coverage",
+        "source": "JP1",
+        "collector": "JP1"
+      },
+      {
+        "league": "CN1",
+        "season": "2026",
+        "error": "Source file unavailable; historical data is not current coverage",
+        "source": "CN1",
+        "collector": "CN1"
+      }
+    ]
+  },
+  "basketball": {
+    "status": "partial",
+    "errors": [
+      {
+        "league": "JP_B1",
+        "status": "failed",
+        "error": "ValueError: Final without valid Japanese scores"
+      },
+      {
+        "league": "JP_B2",
+        "status": "failed",
+        "error": "ValueError: Final without valid Japanese scores"
+      }
+    ]
+  }
+}
