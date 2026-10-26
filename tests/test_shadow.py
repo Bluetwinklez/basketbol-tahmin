@@ -11,6 +11,18 @@ def fixture():
                 captured_at='2026-10-26T12:00Z',source_url='https://example.org/one',status='scheduled')
 
 
+def test_register_reuses_json_equivalent_policy_without_rewriting(tmp_path):
+    policy=dict(version=1,leagues=('E','KBL'),nested={'thresholds':(.5,.65)})
+    directory,identity=register(tmp_path,policy)
+    original={p.name:p.read_bytes() for p in directory.iterdir()}
+    repeated,repeat_id=register(tmp_path,policy)
+    decoded,decoded_id=register(tmp_path,json.loads(json.dumps(policy)))
+    assert repeated==decoded==directory and repeat_id==decoded_id==identity
+    assert {p.name:p.read_bytes() for p in directory.iterdir()}==original
+    _,changed_id=register(tmp_path,dict(policy,leagues=('E','ABA')))
+    assert changed_id!=identity
+
+
 def predictions():
     p=dict(model='model',league='KBL',home='a',away='b',probabilities=[.6,.4],class_labels=['home','away'],
            expected_home=81.,expected_away=75.,eligible=True,information_cutoff_utc='2026-10-26T13:00:00+00:00')
