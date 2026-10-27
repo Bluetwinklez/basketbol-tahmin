@@ -1,0 +1,123 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-10-27T12:32:47.121512+00:00",
+  "fixture": {
+    "event_id": "EN1_17d13b215a5ab42ec4b29185",
+    "league": "EN1",
+    "season": "2026-27",
+    "date": "2026-11-02",
+    "home": "newcastle united fc",
+    "away": "everton fc",
+    "home_name": "Newcastle United FC",
+    "away_name": "Everton FC",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/en.1.json",
+    "captured_at_utc": "2026-10-27T12:32:44.266419+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null,
+    "original_date": null,
+    "date_correction_verified": null,
+    "license_url": null,
+    "source_sha256": null,
+    "fixture_verification_url": null,
+    "actual_start_utc": null,
+    "source_original_date": "2026-11-02",
+    "verified_start_utc": "2026-11-02T20:00:00+00:00",
+    "independent_fixture": {
+      "provider_event_id": "401878762",
+      "league": "EN1",
+      "season_year": 2026,
+      "start_utc": "2026-11-02T20:00:00+00:00",
+      "captured_at": "2026-10-26T16:26:40.189393+00:00",
+      "home_name": "Newcastle United",
+      "away_name": "Everton",
+      "provider_home_id": "361",
+      "provider_away_id": "368",
+      "source_url": "https://www.espn.com/soccer/game/_/gameId/401878762",
+      "status": "scheduled",
+      "event_id": "EN1_17d13b215a5ab42ec4b29185",
+      "home": "newcastle united fc",
+      "away": "everton fc"
+    }
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "EN1",
+    "home": "newcastle united fc",
+    "away": "everton fc",
+    "expected_home_goals": 1.5355360210454645,
+    "expected_away_goals": 1.202185741929837,
+    "probabilities": {
+      "home": 0.4499820732213477,
+      "draw": 0.25203608359536717,
+      "away": 0.2979818431832853
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.7581035389897955,
+      "2.5": 0.5155703560740826,
+      "3.5": 0.2942408983700771
+    },
+    "both_teams_score": 0.5488407897725811,
+    "total_goals_80": [
+      1,
+      5
+    ],
+    "training_cutoff_exclusive": "2026-10-27",
+    "training_games": 1129,
+    "prior_team_games": {
+      "newcastle united fc": 113,
+      "everton fc": 113
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "settings": {
+      "half_life_days": 180.0,
+      "shrinkage_games": 8.0,
+      "window_days": 1095
+    },
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "cf960df8399ae3d414799cf11152750d9b7ec2b866f35298ae7a42cc51c487e7",
+  "source_code_sha256": "b9c9cb8e6f8de70fe92057f23be8e54e493b04c5aaf74450649f75e52af91253",
+  "requested_model_variant": "baseline",
+  "history_health": {
+    "spec": "football-history-health-v1",
+    "checked_at_utc": "2026-10-27T12:32:45.793144+00:00",
+    "information_cutoff_exclusive": "2026-10-27",
+    "teams": {
+      "newcastle united fc": {
+        "prior_finals": 236,
+        "active_season_finals": 8,
+        "last_final_date": "2026-10-25",
+        "days_since_last_final": 2,
+        "unresolved_past_fixture_ids": []
+      },
+      "everton fc": {
+        "prior_finals": 616,
+        "active_season_finals": 8,
+        "last_final_date": "2026-10-24",
+        "days_since_last_final": 3,
+        "unresolved_past_fixture_ids": []
+      }
+    },
+    "diagnostic_gate_passed": true,
+    "blocking_issues": [],
+    "max_history_age_days": 30,
+    "calendar_completeness_verified": false,
+    "note": "Diagnostic policy, not a validated success threshold. Unresolved fixtures may be postponed or missing results. Fresh source captures do not make old histories current."
+  },
+  "selection_policy": "Current-history diagnostic gate plus existing model issues; research only, no validated recommendation.",
+  "payload_sha256": "f5232e88ec862e0e64ee06216d6ea8198b22d5fbb444469003e111807e3a0e3b"
+}

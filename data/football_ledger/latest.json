@@ -1,7 +1,7 @@
 {
   "spec": "football-daily-v1",
-  "checked_at_utc": "2026-10-26T16:28:14.149606+00:00",
-  "collection_checked_at_utc": "2026-10-26T16:25:15.765009+00:00",
+  "checked_at_utc": "2026-10-27T12:37:01.933238+00:00",
+  "collection_checked_at_utc": "2026-10-27T12:32:44.266419+00:00",
   "source_errors": [
     {
       "league": "DE2",
@@ -2145,6 +2145,100 @@
         "verification": "community_source_final_not_official",
         "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Premier_League"
       },
+      "fixture_review": null
+    },
+    {
+      "fixture": {
+        "event_id": "EN1_17d13b215a5ab42ec4b29185",
+        "league": "EN1",
+        "season": "2026-27",
+        "date": "2026-11-02",
+        "home": "newcastle united fc",
+        "away": "everton fc",
+        "home_name": "Newcastle United FC",
+        "away_name": "Everton FC",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/en.1.json",
+        "captured_at_utc": "2026-10-27T12:32:44.266419+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null,
+        "original_date": null,
+        "date_correction_verified": null,
+        "license_url": null,
+        "source_sha256": null,
+        "fixture_verification_url": null,
+        "actual_start_utc": null,
+        "source_original_date": "2026-11-02",
+        "verified_start_utc": "2026-11-02T20:00:00+00:00",
+        "independent_fixture": {
+          "provider_event_id": "401878762",
+          "league": "EN1",
+          "season_year": 2026,
+          "start_utc": "2026-11-02T20:00:00+00:00",
+          "captured_at": "2026-10-26T16:26:40.189393+00:00",
+          "home_name": "Newcastle United",
+          "away_name": "Everton",
+          "provider_home_id": "361",
+          "provider_away_id": "368",
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401878762",
+          "status": "scheduled",
+          "event_id": "EN1_17d13b215a5ab42ec4b29185",
+          "home": "newcastle united fc",
+          "away": "everton fc"
+        }
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "EN1",
+        "home": "newcastle united fc",
+        "away": "everton fc",
+        "expected_home_goals": 1.5355360210454645,
+        "expected_away_goals": 1.202185741929837,
+        "probabilities": {
+          "home": 0.4499820732213477,
+          "draw": 0.25203608359536717,
+          "away": 0.2979818431832853
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.7581035389897955,
+          "2.5": 0.5155703560740826,
+          "3.5": 0.2942408983700771
+        },
+        "both_teams_score": 0.5488407897725811,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-10-27",
+        "training_games": 1129,
+        "prior_team_games": {
+          "newcastle united fc": 113,
+          "everton fc": 113
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-27T12:32:47.121512+00:00",
+      "status": "pending",
+      "result": null,
       "fixture_review": null
     },
     {
@@ -9117,6 +9211,100 @@
     },
     {
       "fixture": {
+        "event_id": "IT1_afddf8da8ebf82fe28075e55",
+        "league": "IT1",
+        "season": "2026-27",
+        "date": "2026-11-02",
+        "home": "us sassuolo calcio",
+        "away": "acf fiorentina",
+        "home_name": "US Sassuolo Calcio",
+        "away_name": "ACF Fiorentina",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/it.1.json",
+        "captured_at_utc": "2026-10-27T12:32:44.266419+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null,
+        "original_date": null,
+        "date_correction_verified": null,
+        "license_url": null,
+        "source_sha256": null,
+        "fixture_verification_url": null,
+        "actual_start_utc": null,
+        "source_original_date": "2026-11-02",
+        "verified_start_utc": "2026-11-02T17:30:00+00:00",
+        "independent_fixture": {
+          "provider_event_id": "401874963",
+          "league": "IT1",
+          "season_year": 2026,
+          "start_utc": "2026-11-02T17:30:00+00:00",
+          "captured_at": "2026-10-26T16:26:41.231642+00:00",
+          "home_name": "Sassuolo",
+          "away_name": "Fiorentina",
+          "provider_home_id": "3997",
+          "provider_away_id": "109",
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401874963",
+          "status": "scheduled",
+          "event_id": "IT1_afddf8da8ebf82fe28075e55",
+          "home": "us sassuolo calcio",
+          "away": "acf fiorentina"
+        }
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "IT1",
+        "home": "us sassuolo calcio",
+        "away": "acf fiorentina",
+        "expected_home_goals": 1.7124804549963217,
+        "expected_away_goals": 1.3333943728384867,
+        "probabilities": {
+          "home": 0.46418421727528747,
+          "draw": 0.23631879936324665,
+          "away": 0.299496983361466
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.8075996702415221,
+          "2.5": 0.5870088286730525,
+          "3.5": 0.3630447981449533
+        },
+        "both_teams_score": 0.6035559237480549,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-10-27",
+        "training_games": 1119,
+        "prior_team_games": {
+          "us sassuolo calcio": 75,
+          "acf fiorentina": 112
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-27T12:32:47.158857+00:00",
+      "status": "pending",
+      "result": null,
+      "fixture_review": null
+    },
+    {
+      "fixture": {
         "event_id": "IT1_b8a8a056b5bc8ac5bb797cad",
         "league": "IT1",
         "season": "2026-27",
@@ -9582,6 +9770,100 @@
         "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
       },
       "recorded_at_utc": "2026-10-23T16:48:20.082045+00:00",
+      "status": "pending",
+      "result": null,
+      "fixture_review": null
+    },
+    {
+      "fixture": {
+        "event_id": "IT1_e1cebcae9e6d0e40323e73ba",
+        "league": "IT1",
+        "season": "2026-27",
+        "date": "2026-11-02",
+        "home": "atalanta bc",
+        "away": "parma calcio 1913",
+        "home_name": "Atalanta BC",
+        "away_name": "Parma Calcio 1913",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/it.1.json",
+        "captured_at_utc": "2026-10-27T12:32:44.266419+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null,
+        "original_date": null,
+        "date_correction_verified": null,
+        "license_url": null,
+        "source_sha256": null,
+        "fixture_verification_url": null,
+        "actual_start_utc": null,
+        "source_original_date": "2026-11-02",
+        "verified_start_utc": "2026-11-02T19:45:00+00:00",
+        "independent_fixture": {
+          "provider_event_id": "401874971",
+          "league": "IT1",
+          "season_year": 2026,
+          "start_utc": "2026-11-02T19:45:00+00:00",
+          "captured_at": "2026-10-26T16:26:41.231642+00:00",
+          "home_name": "Atalanta",
+          "away_name": "Parma",
+          "provider_home_id": "105",
+          "provider_away_id": "115",
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401874971",
+          "status": "scheduled",
+          "event_id": "IT1_e1cebcae9e6d0e40323e73ba",
+          "home": "atalanta bc",
+          "away": "parma calcio 1913"
+        }
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "IT1",
+        "home": "atalanta bc",
+        "away": "parma calcio 1913",
+        "expected_home_goals": 1.6518606636092061,
+        "expected_away_goals": 0.8297432840619856,
+        "probabilities": {
+          "home": 0.5688519794743286,
+          "draw": 0.24399366440614478,
+          "away": 0.1871543561195267
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          0
+        ],
+        "over": {
+          "1.5": 0.7089065285239771,
+          "2.5": 0.45145940353194036,
+          "3.5": 0.2384988029663282
+        },
+        "both_teams_score": 0.45575487142750565,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-10-27",
+        "training_games": 1119,
+        "prior_team_games": {
+          "atalanta bc": 112,
+          "parma calcio 1913": 83
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-27T12:32:47.173581+00:00",
       "status": "pending",
       "result": null,
       "fixture_review": null
@@ -11805,6 +12087,100 @@
     },
     {
       "fixture": {
+        "event_id": "PT1_8c6b724276b74e16f9620607",
+        "league": "PT1",
+        "season": "2026-27",
+        "date": "2026-11-02",
+        "home": "sport lisboa e benfica",
+        "away": "fc alverca",
+        "home_name": "Sport Lisboa e Benfica",
+        "away_name": "FC Alverca",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/pt.1.json",
+        "captured_at_utc": "2026-10-27T12:32:44.266419+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null,
+        "original_date": null,
+        "date_correction_verified": null,
+        "license_url": null,
+        "source_sha256": null,
+        "fixture_verification_url": null,
+        "actual_start_utc": null,
+        "source_original_date": "2026-11-02",
+        "verified_start_utc": "2026-11-02T20:15:00+00:00",
+        "independent_fixture": {
+          "provider_event_id": "401885403",
+          "league": "PT1",
+          "season_year": 2026,
+          "start_utc": "2026-11-02T20:15:00+00:00",
+          "captured_at": "2026-10-26T16:26:41.781319+00:00",
+          "home_name": "Benfica",
+          "away_name": "Alverca",
+          "provider_home_id": "1929",
+          "provider_away_id": "21613",
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401885403",
+          "status": "scheduled",
+          "event_id": "PT1_8c6b724276b74e16f9620607",
+          "home": "sport lisboa e benfica",
+          "away": "fc alverca"
+        }
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "PT1",
+        "home": "sport lisboa e benfica",
+        "away": "fc alverca",
+        "expected_home_goals": 2.214086414773415,
+        "expected_away_goals": 1.049225787958953,
+        "probabilities": {
+          "home": 0.6375981845869417,
+          "draw": 0.19421802025717402,
+          "away": 0.16818379515588422
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          2,
+          1
+        ],
+        "over": {
+          "1.5": 0.8368794583530772,
+          "2.5": 0.6331523730391798,
+          "3.5": 0.41154401186186673
+        },
+        "both_teams_score": 0.5787993973154825,
+        "total_goals_80": [
+          1,
+          6
+        ],
+        "training_cutoff_exclusive": "2026-10-27",
+        "training_games": 924,
+        "prior_team_games": {
+          "sport lisboa e benfica": 102,
+          "fc alverca": 43
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-27T12:32:47.199275+00:00",
+      "status": "pending",
+      "result": null,
+      "fixture_review": null
+    },
+    {
+      "fixture": {
         "event_id": "PT1_9a7628dc5235a1ea10dad2ea",
         "league": "PT1",
         "season": "2026-27",
@@ -11924,8 +12300,44 @@
         "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
       },
       "recorded_at_utc": "2026-10-23T16:48:20.082045+00:00",
-      "status": "pending",
-      "result": null,
+      "status": "publisher_final",
+      "result": {
+        "actual_home": 1,
+        "actual_away": 2,
+        "actual_outcome": "away",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.07273592573867872
+          },
+          "over_2.5": {
+            "actual": true,
+            "correct": false,
+            "brier": 0.2718862373218269
+          },
+          "over_3.5": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.0683333307045096
+          },
+          "both_teams_score": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.2432090180828324
+          }
+        },
+        "winner_correct": true,
+        "home_absolute_error": 0.024734641864219586,
+        "away_absolute_error": 0.4366585700068699,
+        "total_absolute_error": 0.41192392814265055,
+        "margin_absolute_error": 0.4613932118710895,
+        "total_in_80": true,
+        "log_loss": 0.6966863744738957,
+        "brier": 0.37766612884048156,
+        "verification": "community_source_final_not_official",
+        "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Primeira_Liga"
+      },
       "fixture_review": null
     },
     {
@@ -13442,10 +13854,6 @@
       "reason": "Insufficient history: es troyes ac: fewer than 10 prior matches; le mans fc: fewer than 10 prior matches"
     },
     {
-      "event_id": "ES1_f7f112b2042eeb5e9087b255",
-      "reason": "Fresh independent future scheduled fixture required"
-    },
-    {
       "event_id": "PT1_37af9b3564bf279e58db7966",
       "reason": "Insufficient history: academico de viseu fc: fewer than 10 prior matches"
     },
@@ -13455,67 +13863,51 @@
     },
     {
       "event_id": "TR1_d49aa0662c0c19796216bc4b",
-      "reason": "Insufficient history (current coverage): bb erzurumspor: 1 unresolved past fixtures; refresh/review required; corum: 2 unresolved past fixtures; refresh/review required"
+      "reason": "Insufficient history (current coverage): bb erzurumspor: 1 unresolved past fixtures; refresh/review required; corum: 3 unresolved past fixtures; refresh/review required"
     },
     {
       "event_id": "TR1_dc32b8cc90e23784d22cf7b9",
       "reason": "Insufficient history (current coverage): amed: 1 unresolved past fixtures; refresh/review required; eyupspor: 1 unresolved past fixtures; refresh/review required"
     },
     {
-      "event_id": "EN1_17d13b215a5ab42ec4b29185",
-      "reason": "Fresh independent future scheduled fixture required"
-    },
-    {
-      "event_id": "IT1_afddf8da8ebf82fe28075e55",
-      "reason": "Fresh independent future scheduled fixture required"
-    },
-    {
-      "event_id": "IT1_e1cebcae9e6d0e40323e73ba",
-      "reason": "Fresh independent future scheduled fixture required"
-    },
-    {
       "event_id": "PT1_2a779c134f784d3c61fe7355",
-      "reason": "Fresh independent future scheduled fixture required"
-    },
-    {
-      "event_id": "PT1_8c6b724276b74e16f9620607",
-      "reason": "Fresh independent future scheduled fixture required"
+      "reason": "Insufficient history (current coverage): gil vicente fc: 1 unresolved past fixtures; refresh/review required"
     },
     {
       "event_id": "EN2_0304f15ee256be6639c15167",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "EN2_366f442672efc7a71d950857",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "EN2_4a36eb531e67d3ae6b31caee",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "EN2_5e949510a303cb2945d92d32",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "EN2_675f83451f3556d5e403f0cd",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "EN2_ba26e2c7f7b26b791bf7519a",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "EN2_bb2c01da82fd0691f6304b8a",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "EN2_be96610e4e49202ba526aa0a",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "EN2_e868515ebf4e07b49bfffc1c",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "BR1_11c45f2d7461b191693ec5dc",
@@ -13568,38 +13960,42 @@
     {
       "event_id": "EN2_fd3f9b6359de2d81e0b2c511",
       "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "record": "data/football_ledger/forecasts/ES1_f7f112b2042eeb5e9087b255.json",
+      "reason": "Forecast was recorded after requested clock"
     }
   ],
-  "pending": 110,
+  "pending": 113,
   "requested_model_variant": "baseline",
   "publisher_performance": {
-    "games": 62,
-    "winner_accuracy": 0.532258064516129,
-    "log_loss": 1.0325969339315677,
-    "brier": 0.618134476966285,
-    "total_mae": 1.3828420541310513,
-    "margin_mae": 1.3112755139422931,
-    "total_in_80": 0.8548387096774194,
-    "team_score_games": 62,
-    "home_score_mae": 1.0144159731475397,
-    "away_score_mae": 1.0116548724539736,
-    "team_score_mae": 1.0130354228007565,
+    "games": 63,
+    "winner_accuracy": 0.5396825396825397,
+    "log_loss": 1.0272650202893825,
+    "brier": 0.6143175190595261,
+    "total_mae": 1.3674306553058386,
+    "margin_mae": 1.2977853186713215,
+    "total_in_80": 0.8571428571428571,
+    "team_score_games": 63,
+    "home_score_mae": 0.998706745666852,
+    "away_score_mae": 1.0025279470183053,
+    "team_score_mae": 1.0006173463425785,
     "goal_markets": {
       "over_1.5": {
-        "accuracy": 0.7580645161290323,
-        "brier": 0.1855432072665957
+        "accuracy": 0.7619047619047619,
+        "brier": 0.1837526154963113
       },
       "over_2.5": {
-        "accuracy": 0.5967741935483871,
-        "brier": 0.24614723940527436
+        "accuracy": 0.5873015873015873,
+        "brier": 0.24655579492775934
       },
       "over_3.5": {
-        "accuracy": 0.7096774193548387,
-        "brier": 0.2014852903941219
+        "accuracy": 0.7142857142857143,
+        "brier": 0.19937176722444552
       },
       "both_teams_score": {
-        "accuracy": 0.5967741935483871,
-        "brier": 0.2490862360496808
+        "accuracy": 0.6031746031746031,
+        "brier": 0.24899294687560386
       }
     }
   },

@@ -1,0 +1,123 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-10-27T12:32:47.199275+00:00",
+  "fixture": {
+    "event_id": "PT1_8c6b724276b74e16f9620607",
+    "league": "PT1",
+    "season": "2026-27",
+    "date": "2026-11-02",
+    "home": "sport lisboa e benfica",
+    "away": "fc alverca",
+    "home_name": "Sport Lisboa e Benfica",
+    "away_name": "FC Alverca",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/pt.1.json",
+    "captured_at_utc": "2026-10-27T12:32:44.266419+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null,
+    "original_date": null,
+    "date_correction_verified": null,
+    "license_url": null,
+    "source_sha256": null,
+    "fixture_verification_url": null,
+    "actual_start_utc": null,
+    "source_original_date": "2026-11-02",
+    "verified_start_utc": "2026-11-02T20:15:00+00:00",
+    "independent_fixture": {
+      "provider_event_id": "401885403",
+      "league": "PT1",
+      "season_year": 2026,
+      "start_utc": "2026-11-02T20:15:00+00:00",
+      "captured_at": "2026-10-26T16:26:41.781319+00:00",
+      "home_name": "Benfica",
+      "away_name": "Alverca",
+      "provider_home_id": "1929",
+      "provider_away_id": "21613",
+      "source_url": "https://www.espn.com/soccer/game/_/gameId/401885403",
+      "status": "scheduled",
+      "event_id": "PT1_8c6b724276b74e16f9620607",
+      "home": "sport lisboa e benfica",
+      "away": "fc alverca"
+    }
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "PT1",
+    "home": "sport lisboa e benfica",
+    "away": "fc alverca",
+    "expected_home_goals": 2.214086414773415,
+    "expected_away_goals": 1.049225787958953,
+    "probabilities": {
+      "home": 0.6375981845869417,
+      "draw": 0.19421802025717402,
+      "away": 0.16818379515588422
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      2,
+      1
+    ],
+    "over": {
+      "1.5": 0.8368794583530772,
+      "2.5": 0.6331523730391798,
+      "3.5": 0.41154401186186673
+    },
+    "both_teams_score": 0.5787993973154825,
+    "total_goals_80": [
+      1,
+      6
+    ],
+    "training_cutoff_exclusive": "2026-10-27",
+    "training_games": 924,
+    "prior_team_games": {
+      "sport lisboa e benfica": 102,
+      "fc alverca": 43
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "settings": {
+      "half_life_days": 180.0,
+      "shrinkage_games": 8.0,
+      "window_days": 1095
+    },
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "cf960df8399ae3d414799cf11152750d9b7ec2b866f35298ae7a42cc51c487e7",
+  "source_code_sha256": "b9c9cb8e6f8de70fe92057f23be8e54e493b04c5aaf74450649f75e52af91253",
+  "requested_model_variant": "baseline",
+  "history_health": {
+    "spec": "football-history-health-v1",
+    "checked_at_utc": "2026-10-27T12:32:45.793144+00:00",
+    "information_cutoff_exclusive": "2026-10-27",
+    "teams": {
+      "sport lisboa e benfica": {
+        "prior_finals": 110,
+        "active_season_finals": 8,
+        "last_final_date": "2026-10-11",
+        "days_since_last_final": 16,
+        "unresolved_past_fixture_ids": []
+      },
+      "fc alverca": {
+        "prior_finals": 43,
+        "active_season_finals": 9,
+        "last_final_date": "2026-10-24",
+        "days_since_last_final": 3,
+        "unresolved_past_fixture_ids": []
+      }
+    },
+    "diagnostic_gate_passed": true,
+    "blocking_issues": [],
+    "max_history_age_days": 30,
+    "calendar_completeness_verified": false,
+    "note": "Diagnostic policy, not a validated success threshold. Unresolved fixtures may be postponed or missing results. Fresh source captures do not make old histories current."
+  },
+  "selection_policy": "Current-history diagnostic gate plus existing model issues; research only, no validated recommendation.",
+  "payload_sha256": "e8bde10c2d8fa7af3175eb8019079955016fb1659eecf1e593eb1cfdad9b3efa"
+}
