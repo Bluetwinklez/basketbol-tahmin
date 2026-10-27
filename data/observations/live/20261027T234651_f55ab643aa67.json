@@ -1,0 +1,28 @@
+{
+  "captured_at_utc": "2026-10-27T23:46:51.689946+00:00",
+  "source_url": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard",
+  "provider": "espn",
+  "live_games": [
+    {
+      "event_id": "401909877",
+      "league": "NBA",
+      "home": "BOS",
+      "away": "BRK",
+      "home_score": 6,
+      "away_score": 10,
+      "period": 1,
+      "remaining_seconds": 465,
+      "regulation_minutes": 48,
+      "overtime": false,
+      "start_utc": "2026-10-27T23:30:00+00:00",
+      "captured_at_utc": "2026-10-27T23:46:51.689946+00:00",
+      "source_url": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard",
+      "source_updated_at": null,
+      "source_freshness_verified": false,
+      "used_for_prediction": false,
+      "note": "Public broadcaster scoreboard observation; source update timestamp unavailable, so live freshness is unverified."
+    }
+  ],
+  "total_listed": 4,
+  "prediction_enabled": false
+}
