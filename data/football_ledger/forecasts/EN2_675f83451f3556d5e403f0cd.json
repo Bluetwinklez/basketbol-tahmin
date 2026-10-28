@@ -1,0 +1,123 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-10-28T13:25:52.891374+00:00",
+  "fixture": {
+    "event_id": "EN2_675f83451f3556d5e403f0cd",
+    "league": "EN2",
+    "season": "2026-27",
+    "date": "2026-11-03",
+    "home": "west bromwich albion fc",
+    "away": "southampton fc",
+    "home_name": "West Bromwich Albion FC",
+    "away_name": "Southampton FC",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/en.2.json",
+    "captured_at_utc": "2026-10-28T13:21:17.998728+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null,
+    "original_date": null,
+    "date_correction_verified": null,
+    "license_url": null,
+    "source_sha256": null,
+    "fixture_verification_url": null,
+    "actual_start_utc": null,
+    "source_original_date": "2026-11-03",
+    "verified_start_utc": "2026-11-03T20:00:00+00:00",
+    "independent_fixture": {
+      "provider_event_id": "401880177",
+      "league": "EN2",
+      "season_year": 2026,
+      "start_utc": "2026-11-03T20:00:00+00:00",
+      "captured_at": "2026-10-28T13:24:39.896479+00:00",
+      "home_name": "West Bromwich Albion",
+      "away_name": "Southampton",
+      "provider_home_id": "383",
+      "provider_away_id": "376",
+      "source_url": "https://www.espn.com/soccer/game/_/gameId/401880177",
+      "status": "scheduled",
+      "event_id": "EN2_675f83451f3556d5e403f0cd",
+      "home": "west bromwich albion fc",
+      "away": "southampton fc"
+    }
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "EN2",
+    "home": "west bromwich albion fc",
+    "away": "southampton fc",
+    "expected_home_goals": 1.354818690848863,
+    "expected_away_goals": 1.3724679795278074,
+    "probabilities": {
+      "home": 0.36761695888456875,
+      "draw": 0.2566679226821883,
+      "away": 0.3757151184332432
+    },
+    "predicted_outcome": "away",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.7562485293398798,
+      "2.5": 0.5130359505651986,
+      "3.5": 0.29193247584515725
+    },
+    "both_teams_score": 0.5539218224811328,
+    "total_goals_80": [
+      1,
+      5
+    ],
+    "training_cutoff_exclusive": "2026-10-28",
+    "training_games": 1650,
+    "prior_team_games": {
+      "west bromwich albion fc": 139,
+      "southampton fc": 95
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "settings": {
+      "half_life_days": 180.0,
+      "shrinkage_games": 8.0,
+      "window_days": 1095
+    },
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "ff786f078badc631e6f0a6ec936f911b157c0be39eb1ec41aa483c696439321b",
+  "source_code_sha256": "42c8c8f8d2e77b3f9bdd5fc0d8eafc9fede6db95e8c086120373b31178a7b03c",
+  "requested_model_variant": "baseline",
+  "history_health": {
+    "spec": "football-history-health-v1",
+    "checked_at_utc": "2026-10-28T13:25:51.055067+00:00",
+    "information_cutoff_exclusive": "2026-10-28",
+    "teams": {
+      "west bromwich albion fc": {
+        "prior_finals": 244,
+        "active_season_finals": 12,
+        "last_final_date": "2026-10-24",
+        "days_since_last_final": 4,
+        "unresolved_past_fixture_ids": []
+      },
+      "southampton fc": {
+        "prior_finals": 155,
+        "active_season_finals": 12,
+        "last_final_date": "2026-10-24",
+        "days_since_last_final": 4,
+        "unresolved_past_fixture_ids": []
+      }
+    },
+    "diagnostic_gate_passed": true,
+    "blocking_issues": [],
+    "max_history_age_days": 30,
+    "calendar_completeness_verified": false,
+    "note": "Diagnostic policy, not a validated success threshold. Unresolved fixtures may be postponed or missing results. Fresh source captures do not make old histories current."
+  },
+  "selection_policy": "Current-history diagnostic gate plus existing model issues; research only, no validated recommendation.",
+  "payload_sha256": "0c11bf0704009214b907343c434150b7a3eb19b57e7452b2d3703011ba161de6"
+}

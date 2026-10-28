@@ -1,7 +1,7 @@
 {
   "spec": "football-daily-v1",
-  "checked_at_utc": "2026-10-27T12:37:01.933238+00:00",
-  "collection_checked_at_utc": "2026-10-27T12:32:44.266419+00:00",
+  "checked_at_utc": "2026-10-28T13:25:51.055067+00:00",
+  "collection_checked_at_utc": "2026-10-28T13:21:17.998728+00:00",
   "source_errors": [
     {
       "league": "DE2",
@@ -6752,6 +6752,100 @@
     },
     {
       "fixture": {
+        "event_id": "ES1_f7f112b2042eeb5e9087b255",
+        "league": "ES1",
+        "season": "2026-27",
+        "date": "2026-11-02",
+        "home": "rc deportivo la coruna",
+        "away": "ca osasuna",
+        "home_name": "RC Deportivo La Coruña",
+        "away_name": "CA Osasuna",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/es.1.json",
+        "captured_at_utc": "2026-10-27T12:32:44.266419+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null,
+        "original_date": null,
+        "date_correction_verified": null,
+        "license_url": null,
+        "source_sha256": null,
+        "fixture_verification_url": null,
+        "actual_start_utc": null,
+        "source_original_date": "2026-11-01",
+        "verified_start_utc": "2026-11-02T20:00:00+00:00",
+        "independent_fixture": {
+          "provider_event_id": "401882824",
+          "league": "ES1",
+          "season_year": 2026,
+          "start_utc": "2026-11-02T20:00:00+00:00",
+          "captured_at": "2026-10-27T12:36:00.978410+00:00",
+          "home_name": "Deportivo",
+          "away_name": "Osasuna",
+          "provider_home_id": "90",
+          "provider_away_id": "97",
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401882824",
+          "status": "scheduled",
+          "event_id": "ES1_f7f112b2042eeb5e9087b255",
+          "home": "rc deportivo la coruna",
+          "away": "ca osasuna"
+        }
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "ES1",
+        "home": "rc deportivo la coruna",
+        "away": "ca osasuna",
+        "expected_home_goals": 1.7516687328690494,
+        "expected_away_goals": 0.9757956435232058,
+        "probabilities": {
+          "home": 0.5561303318959042,
+          "draw": 0.23501098027494938,
+          "away": 0.20885868782914646
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          0
+        ],
+        "over": {
+          "1.5": 0.7562802223090673,
+          "2.5": 0.5130791698793847,
+          "3.5": 0.2919717676116969
+        },
+        "both_teams_score": 0.5150083058309183,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-10-27",
+        "training_games": 1129,
+        "prior_team_games": {
+          "rc deportivo la coruna": 10,
+          "ca osasuna": 113
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-27T12:37:03.227929+00:00",
+      "status": "pending",
+      "result": null,
+      "fixture_review": null
+    },
+    {
+      "fixture": {
         "event_id": "FR1_55ca23f3418f53ce5d905d27",
         "league": "FR1",
         "season": "2026-27",
@@ -8158,8 +8252,44 @@
         "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
       },
       "recorded_at_utc": "2026-10-23T16:48:20.082045+00:00",
-      "status": "pending",
-      "result": null,
+      "status": "publisher_final",
+      "result": {
+        "actual_home": 2,
+        "actual_away": 6,
+        "actual_outcome": "away",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.0999549107151348
+          },
+          "over_2.5": {
+            "actual": true,
+            "correct": false,
+            "brier": 0.33512447856092303
+          },
+          "over_3.5": {
+            "actual": true,
+            "correct": false,
+            "brier": 0.617830000083269
+          },
+          "both_teams_score": {
+            "actual": true,
+            "correct": false,
+            "brier": 0.2711986402393537
+          }
+        },
+        "winner_correct": true,
+        "home_absolute_error": 0.8914951800787463,
+        "away_absolute_error": 4.7435816435132345,
+        "total_absolute_error": 5.635076823591981,
+        "margin_absolute_error": 3.8520864634344885,
+        "total_in_80": false,
+        "log_loss": 0.923743279223271,
+        "brier": 0.5464549841836043,
+        "verification": "community_source_final_not_official",
+        "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Serie_A"
+      },
       "fixture_review": null
     },
     {
@@ -8600,8 +8730,44 @@
         "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
       },
       "recorded_at_utc": "2026-10-23T16:48:20.082045+00:00",
-      "status": "pending",
-      "result": null,
+      "status": "publisher_final",
+      "result": {
+        "actual_home": 1,
+        "actual_away": 3,
+        "actual_outcome": "away",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.0628062692746045
+          },
+          "over_2.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.24626767204444677
+          },
+          "over_3.5": {
+            "actual": true,
+            "correct": false,
+            "brier": 0.5133059158692183
+          },
+          "both_teams_score": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.22343673599508565
+          }
+        },
+        "winner_correct": true,
+        "home_absolute_error": 0.07297372646983802,
+        "away_absolute_error": 1.3836916581353222,
+        "total_absolute_error": 1.3107179316654842,
+        "margin_absolute_error": 1.4566653846051603,
+        "total_in_80": true,
+        "log_loss": 0.6931633058936028,
+        "brier": 0.3750217996259211,
+        "verification": "community_source_final_not_official",
+        "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Serie_A"
+      },
       "fixture_review": null
     },
     {
@@ -9359,8 +9525,44 @@
         "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
       },
       "recorded_at_utc": "2026-10-23T16:48:20.082045+00:00",
-      "status": "pending",
-      "result": null,
+      "status": "publisher_final",
+      "result": {
+        "actual_home": 4,
+        "actual_away": 2,
+        "actual_outcome": "home",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.07638201359710245
+          },
+          "over_2.5": {
+            "actual": true,
+            "correct": false,
+            "brier": 0.28091110550270193
+          },
+          "over_3.5": {
+            "actual": true,
+            "correct": false,
+            "brier": 0.5564409479768166
+          },
+          "both_teams_score": {
+            "actual": true,
+            "correct": false,
+            "brier": 0.2916224989063491
+          }
+        },
+        "winner_correct": true,
+        "home_absolute_error": 2.262896549891724,
+        "away_absolute_error": 1.1829952624058662,
+        "total_absolute_error": 3.4458918122975906,
+        "margin_absolute_error": 1.079901287485858,
+        "total_in_80": false,
+        "log_loss": 0.5234081041487828,
+        "brier": 0.25092113699548524,
+        "verification": "community_source_final_not_official",
+        "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Serie_A"
+      },
       "fixture_review": null
     },
     {
@@ -13874,42 +14076,6 @@
       "reason": "Insufficient history (current coverage): gil vicente fc: 1 unresolved past fixtures; refresh/review required"
     },
     {
-      "event_id": "EN2_0304f15ee256be6639c15167",
-      "reason": "Fresh independent future scheduled fixture required"
-    },
-    {
-      "event_id": "EN2_366f442672efc7a71d950857",
-      "reason": "Fresh independent future scheduled fixture required"
-    },
-    {
-      "event_id": "EN2_4a36eb531e67d3ae6b31caee",
-      "reason": "Fresh independent future scheduled fixture required"
-    },
-    {
-      "event_id": "EN2_5e949510a303cb2945d92d32",
-      "reason": "Fresh independent future scheduled fixture required"
-    },
-    {
-      "event_id": "EN2_675f83451f3556d5e403f0cd",
-      "reason": "Fresh independent future scheduled fixture required"
-    },
-    {
-      "event_id": "EN2_ba26e2c7f7b26b791bf7519a",
-      "reason": "Fresh independent future scheduled fixture required"
-    },
-    {
-      "event_id": "EN2_bb2c01da82fd0691f6304b8a",
-      "reason": "Fresh independent future scheduled fixture required"
-    },
-    {
-      "event_id": "EN2_be96610e4e49202ba526aa0a",
-      "reason": "Fresh independent future scheduled fixture required"
-    },
-    {
-      "event_id": "EN2_e868515ebf4e07b49bfffc1c",
-      "reason": "Fresh independent future scheduled fixture required"
-    },
-    {
       "event_id": "BR1_11c45f2d7461b191693ec5dc",
       "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
     },
@@ -13951,51 +14117,107 @@
     },
     {
       "event_id": "EN2_bbe2a92603d0916c7a2783bd",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "EN2_e59ac54d7018c96fcd35d77b",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "EN2_fd3f9b6359de2d81e0b2c511",
+      "reason": "Fresh independent future scheduled fixture required"
+    },
+    {
+      "event_id": "DE1_4f66ac822ad24292bccc1556",
       "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
     },
     {
-      "record": "data/football_ledger/forecasts/ES1_f7f112b2042eeb5e9087b255.json",
+      "event_id": "EN2_8f2e5244e1047a0ad7ecdf56",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "FR1_496a4281675ef10553a37e28",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "IT1_dd9b9c6574aba6a75f754c2f",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "NL1_186bbde1c6fc1f6f62c2ca9f",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "PT1_c5a846702195eba8d488237d",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "record": "data/football_ledger/forecasts/EN2_0304f15ee256be6639c15167.json",
+      "reason": "Forecast was recorded after requested clock"
+    },
+    {
+      "record": "data/football_ledger/forecasts/EN2_366f442672efc7a71d950857.json",
+      "reason": "Forecast was recorded after requested clock"
+    },
+    {
+      "record": "data/football_ledger/forecasts/EN2_4a36eb531e67d3ae6b31caee.json",
+      "reason": "Forecast was recorded after requested clock"
+    },
+    {
+      "record": "data/football_ledger/forecasts/EN2_5e949510a303cb2945d92d32.json",
+      "reason": "Forecast was recorded after requested clock"
+    },
+    {
+      "record": "data/football_ledger/forecasts/EN2_675f83451f3556d5e403f0cd.json",
+      "reason": "Forecast was recorded after requested clock"
+    },
+    {
+      "record": "data/football_ledger/forecasts/EN2_ba26e2c7f7b26b791bf7519a.json",
+      "reason": "Forecast was recorded after requested clock"
+    },
+    {
+      "record": "data/football_ledger/forecasts/EN2_bb2c01da82fd0691f6304b8a.json",
+      "reason": "Forecast was recorded after requested clock"
+    },
+    {
+      "record": "data/football_ledger/forecasts/EN2_be96610e4e49202ba526aa0a.json",
+      "reason": "Forecast was recorded after requested clock"
+    },
+    {
+      "record": "data/football_ledger/forecasts/EN2_e868515ebf4e07b49bfffc1c.json",
       "reason": "Forecast was recorded after requested clock"
     }
   ],
-  "pending": 113,
+  "pending": 111,
   "requested_model_variant": "baseline",
   "publisher_performance": {
-    "games": 63,
-    "winner_accuracy": 0.5396825396825397,
-    "log_loss": 1.0272650202893825,
-    "brier": 0.6143175190595261,
-    "total_mae": 1.3674306553058386,
-    "margin_mae": 1.2977853186713215,
-    "total_in_80": 0.8571428571428571,
-    "team_score_games": 63,
-    "home_score_mae": 0.998706745666852,
-    "away_score_mae": 1.0025279470183053,
-    "team_score_mae": 1.0006173463425785,
+    "games": 66,
+    "winner_accuracy": 0.5606060606060606,
+    "log_loss": 1.0130001661741932,
+    "brier": 0.6041576003265934,
+    "total_mae": 1.4627245129064073,
+    "margin_mae": 1.335592851694224,
+    "total_in_80": 0.8333333333333334,
+    "team_score_games": 66,
+    "home_score_mae": 1.002210461112909,
+    "away_score_mae": 1.067720139791025,
+    "team_score_mae": 1.0349653004519672,
     "goal_markets": {
       "over_1.5": {
-        "accuracy": 0.7619047619047619,
-        "brier": 0.1837526154963113
+        "accuracy": 0.7727272727272727,
+        "brier": 0.1790236056038554
       },
       "over_2.5": {
-        "accuracy": 0.5873015873015873,
-        "brier": 0.24655579492775934
+        "accuracy": 0.5757575757575758,
+        "brier": 0.24841391419025619
       },
       "over_3.5": {
-        "accuracy": 0.7142857142857143,
-        "brier": 0.19937176722444552
+        "accuracy": 0.6818181818181818,
+        "brier": 0.2158787605919602
       },
       "both_teams_score": {
-        "accuracy": 0.6031746031746031,
-        "brier": 0.24899294687560386
+        "accuracy": 0.5909090909090909,
+        "brier": 0.24958808376217925
       }
     }
   },
