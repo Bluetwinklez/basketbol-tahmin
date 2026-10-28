@@ -1,0 +1,2204 @@
+{
+  "cohort": [
+    "AR1_c710fd4d774c4f6c8ba6dbfa",
+    "AR1_4742b94ce5bd46c373446729",
+    "AR2_ebe09e3c71e52974700fa54e",
+    "AR2_69975b82196d732b04c0787a"
+  ],
+  "summaries": {
+    "baseline": {
+      "games": 4,
+      "winner_accuracy": 0.5,
+      "log_loss": 0.9135684259791943,
+      "brier": 0.5383300966300488,
+      "total_mae": 1.164019717480476,
+      "margin_mae": 0.5897628406896234,
+      "total_in_80": 1.0,
+      "team_score_games": 4,
+      "home_score_mae": 0.7417640452596485,
+      "away_score_mae": 0.4260361105620468,
+      "team_score_mae": 0.5839000779108476,
+      "goal_markets": {
+        "over_1.5": {
+          "accuracy": 0.5,
+          "brier": 0.24105779958829776
+        },
+        "over_2.5": {
+          "accuracy": 0.75,
+          "brier": 0.13959996964300497
+        },
+        "over_3.5": {
+          "accuracy": 0.75,
+          "brier": 0.16210118119154093
+        },
+        "both_teams_score": {
+          "accuracy": 0.5,
+          "brier": 0.24241258562811577
+        }
+      },
+      "coverage": 1.0,
+      "calibration": {
+        "home": {
+          "n": 4,
+          "brier": 0.20641688366857042,
+          "log_loss": 0.6046837030360321,
+          "expected_calibration_error": 0.45010691976284056,
+          "bins": [
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "n": 2,
+              "mean_probability": 0.3950111450915383,
+              "observed_rate": 0.0
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "n": 1,
+              "mean_probability": 0.45520886013873557,
+              "observed_rate": 1.0
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "n": 1,
+              "mean_probability": 0.5343857509929787,
+              "observed_rate": 1.0
+            }
+          ]
+        },
+        "draw": {
+          "n": 4,
+          "brier": 0.26689424938677514,
+          "log_loss": 0.7260861842764619,
+          "expected_calibration_error": 0.4780139722232313,
+          "bins": [
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "n": 2,
+              "mean_probability": 0.28232008676529785,
+              "observed_rate": 0.0
+            },
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "n": 2,
+              "mean_probability": 0.3262921423188353,
+              "observed_rate": 1.0
+            }
+          ]
+        },
+        "away": {
+          "n": 4,
+          "brier": 0.06501896357470321,
+          "log_loss": 0.290552584510295,
+          "expected_calibration_error": 0.25078966012923576,
+          "bins": [
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "n": 1,
+              "mean_probability": 0.17208293353127307,
+              "observed_rate": 0.0
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "n": 3,
+              "mean_probability": 0.27702523566189,
+              "observed_rate": 0.0
+            }
+          ]
+        },
+        "over_1.5": {
+          "n": 4,
+          "brier": 0.24105779958829776,
+          "log_loss": 0.6720480149407435,
+          "expected_calibration_error": 0.2362450361643636,
+          "bins": [
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "n": 3,
+              "mean_probability": 0.5448647542416407,
+              "observed_rate": 0.3333333333333333
+            },
+            {
+              "lower": 0.6,
+              "upper": 0.7,
+              "n": 1,
+              "mean_probability": 0.6896141180674678,
+              "observed_rate": 1.0
+            }
+          ]
+        },
+        "over_2.5": {
+          "n": 4,
+          "brier": 0.13959996964300497,
+          "log_loss": 0.45555070765662203,
+          "expected_calibration_error": 0.3506182104860311,
+          "bins": [
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "n": 3,
+              "mean_probability": 0.27681154066906877,
+              "observed_rate": 0.0
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "n": 1,
+              "mean_probability": 0.42796178006308194,
+              "observed_rate": 1.0
+            }
+          ]
+        },
+        "over_3.5": {
+          "n": 4,
+          "brier": 0.16210118119154093,
+          "log_loss": 0.469600716938803,
+          "expected_calibration_error": 0.2802493727159937,
+          "bins": [
+            {
+              "lower": 0.0,
+              "upper": 0.1,
+              "n": 1,
+              "mean_probability": 0.09582618339666947,
+              "observed_rate": 0.0
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "n": 2,
+              "mean_probability": 0.12229413885740341,
+              "observed_rate": 0.0
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "n": 1,
+              "mean_probability": 0.21941697024750148,
+              "observed_rate": 1.0
+            }
+          ]
+        },
+        "both_teams_score": {
+          "n": 4,
+          "brier": 0.24241258562811577,
+          "log_loss": 0.6785925183251282,
+          "expected_calibration_error": 0.1359337355589159,
+          "bins": [
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "n": 3,
+              "mean_probability": 0.3398213948803557,
+              "observed_rate": 0.3333333333333333
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "n": 1,
+              "mean_probability": 0.47572924240540343,
+              "observed_rate": 1.0
+            }
+          ]
+        }
+      }
+    },
+    "opponent": {
+      "games": 4,
+      "winner_accuracy": 0.25,
+      "log_loss": 0.9936746653602443,
+      "brier": 0.6041600159744771,
+      "total_mae": 1.063387933079025,
+      "margin_mae": 0.7708052794008106,
+      "total_in_80": 1.0,
+      "team_score_games": 4,
+      "home_score_mae": 0.7993944956782479,
+      "away_score_mae": 0.4559302715697283,
+      "team_score_mae": 0.627662383623988,
+      "goal_markets": {
+        "over_1.5": {
+          "accuracy": 0.5,
+          "brier": 0.22222421329214503
+        },
+        "over_2.5": {
+          "accuracy": 0.75,
+          "brier": 0.1157717879432954
+        },
+        "over_3.5": {
+          "accuracy": 0.75,
+          "brier": 0.13948445883610094
+        },
+        "both_teams_score": {
+          "accuracy": 0.75,
+          "brier": 0.21731236678597116
+        }
+      },
+      "coverage": 1.0,
+      "calibration": {
+        "home": {
+          "n": 4,
+          "brier": 0.25556107976910725,
+          "log_loss": 0.7060715556376099,
+          "expected_calibration_error": 0.3150049343553285,
+          "bins": [
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "n": 2,
+              "mean_probability": 0.350849564775104,
+              "observed_rate": 0.5
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "n": 1,
+              "mean_probability": 0.4774625935456047,
+              "observed_rate": 0.0
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "n": 1,
+              "mean_probability": 0.5157437265740829,
+              "observed_rate": 1.0
+            }
+          ]
+        },
+        "draw": {
+          "n": 4,
+          "brier": 0.26735023112742184,
+          "log_loss": 0.7269944024835056,
+          "expected_calibration_error": 0.3259573268944714,
+          "bins": [
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "n": 1,
+              "mean_probability": 0.26031161246594575,
+              "observed_rate": 0.0
+            },
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "n": 3,
+              "mean_probability": 0.3188274349626867,
+              "observed_rate": 0.6666666666666666
+            }
+          ]
+        },
+        "away": {
+          "n": 4,
+          "brier": 0.08124870507794786,
+          "log_loss": 0.32465180843362273,
+          "expected_calibration_error": 0.27207515824402473,
+          "bins": [
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "n": 1,
+              "mean_probability": 0.17974425224601648,
+              "observed_rate": 0.0
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "n": 1,
+              "mean_probability": 0.20918475998064576,
+              "observed_rate": 0.0
+            },
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "n": 2,
+              "mean_probability": 0.3496858103747183,
+              "observed_rate": 0.0
+            }
+          ]
+        },
+        "over_1.5": {
+          "n": 4,
+          "brier": 0.22222421329214503,
+          "log_loss": 0.6306589142878246,
+          "expected_calibration_error": 0.2116743288006323,
+          "bins": [
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "n": 3,
+              "mean_probability": 0.5298086502882068,
+              "observed_rate": 0.3333333333333333
+            },
+            {
+              "lower": 0.7,
+              "upper": 0.8,
+              "n": 1,
+              "mean_probability": 0.7427286356620912,
+              "observed_rate": 1.0
+            }
+          ]
+        },
+        "over_2.5": {
+          "n": 4,
+          "brier": 0.1157717879432954,
+          "log_loss": 0.4048211935936088,
+          "expected_calibration_error": 0.3235128998581868,
+          "bins": [
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "n": 3,
+              "mean_probability": 0.2629678204358384,
+              "observed_rate": 0.0
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "n": 1,
+              "mean_probability": 0.494851861874768,
+              "observed_rate": 1.0
+            }
+          ]
+        },
+        "over_3.5": {
+          "n": 4,
+          "brier": 0.13948445883610094,
+          "log_loss": 0.4053854657992603,
+          "expected_calibration_error": 0.2598301846962802,
+          "bins": [
+            {
+              "lower": 0.0,
+              "upper": 0.1,
+              "n": 1,
+              "mean_probability": 0.09475576539400415,
+              "observed_rate": 0.0
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "n": 2,
+              "mean_probability": 0.11009575223451823,
+              "observed_rate": 0.0
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "n": 1,
+              "mean_probability": 0.2756265310779197,
+              "observed_rate": 1.0
+            }
+          ]
+        },
+        "both_teams_score": {
+          "n": 4,
+          "brier": 0.21731236678597116,
+          "log_loss": 0.6261935288934404,
+          "expected_calibration_error": 0.12222896197698137,
+          "bins": [
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "n": 3,
+              "mean_probability": 0.32409250295666847,
+              "observed_rate": 0.3333333333333333
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "n": 1,
+              "mean_probability": 0.5388066432220691,
+              "observed_rate": 1.0
+            }
+          ]
+        }
+      }
+    },
+    "opponent_dc": {
+      "games": 4,
+      "winner_accuracy": 0.25,
+      "log_loss": 0.9844988292645571,
+      "brier": 0.5983873751178383,
+      "total_mae": 1.063387933079025,
+      "margin_mae": 0.7708052794008106,
+      "total_in_80": 1.0,
+      "team_score_games": 4,
+      "home_score_mae": 0.7993944956782479,
+      "away_score_mae": 0.4559302715697283,
+      "team_score_mae": 0.627662383623988,
+      "goal_markets": {
+        "over_1.5": {
+          "accuracy": 0.5,
+          "brier": 0.22318800090587937
+        },
+        "over_2.5": {
+          "accuracy": 0.75,
+          "brier": 0.1157717879432954
+        },
+        "over_3.5": {
+          "accuracy": 0.75,
+          "brier": 0.13948445883610094
+        },
+        "both_teams_score": {
+          "accuracy": 0.75,
+          "brier": 0.21572784969626713
+        }
+      },
+      "coverage": 1.0,
+      "calibration": {
+        "home": {
+          "n": 4,
+          "brier": 0.25701050870770503,
+          "log_loss": 0.7092869112068979,
+          "expected_calibration_error": 0.3184160529381808,
+          "bins": [
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "n": 2,
+              "mean_probability": 0.34448257238900515,
+              "observed_rate": 0.5
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "n": 1,
+              "mean_probability": 0.47189046254853656,
+              "observed_rate": 0.0
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "n": 1,
+              "mean_probability": 0.509261106017803,
+              "observed_rate": 1.0
+            }
+          ]
+        },
+        "draw": {
+          "n": 4,
+          "brier": 0.26350180388966277,
+          "log_loss": 0.7189977473802514,
+          "expected_calibration_error": 0.32036687302711514,
+          "bins": [
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "n": 1,
+              "mean_probability": 0.2739194410567791,
+              "observed_rate": 0.0
+            },
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "n": 3,
+              "mean_probability": 0.33081731631610617,
+              "observed_rate": 0.6666666666666666
+            }
+          ]
+        },
+        "away": {
+          "n": 4,
+          "brier": 0.07787506252047056,
+          "log_loss": 0.31600820597318025,
+          "expected_calibration_error": 0.26587797416263825,
+          "bins": [
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "n": 1,
+              "mean_probability": 0.17326163168973657,
+              "observed_rate": 0.0
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "n": 2,
+              "mean_probability": 0.25031693082243356,
+              "observed_rate": 0.0
+            },
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "n": 1,
+              "mean_probability": 0.3896164033159492,
+              "observed_rate": 0.0
+            }
+          ]
+        },
+        "over_1.5": {
+          "n": 4,
+          "brier": 0.22318800090587937,
+          "log_loss": 0.632080444196786,
+          "expected_calibration_error": 0.21446955573431045,
+          "bins": [
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "n": 3,
+              "mean_probability": 0.5358035909649166,
+              "observed_rate": 0.3333333333333333
+            },
+            {
+              "lower": 0.7,
+              "upper": 0.8,
+              "n": 1,
+              "mean_probability": 0.749532549957508,
+              "observed_rate": 1.0
+            }
+          ]
+        },
+        "over_2.5": {
+          "n": 4,
+          "brier": 0.1157717879432954,
+          "log_loss": 0.4048211935936088,
+          "expected_calibration_error": 0.3235128998581868,
+          "bins": [
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "n": 3,
+              "mean_probability": 0.2629678204358384,
+              "observed_rate": 0.0
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "n": 1,
+              "mean_probability": 0.494851861874768,
+              "observed_rate": 1.0
+            }
+          ]
+        },
+        "over_3.5": {
+          "n": 4,
+          "brier": 0.13948445883610094,
+          "log_loss": 0.4053854657992603,
+          "expected_calibration_error": 0.2598301846962802,
+          "bins": [
+            {
+              "lower": 0.0,
+              "upper": 0.1,
+              "n": 1,
+              "mean_probability": 0.09475576539400415,
+              "observed_rate": 0.0
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "n": 2,
+              "mean_probability": 0.11009575223451823,
+              "observed_rate": 0.0
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "n": 1,
+              "mean_probability": 0.2756265310779197,
+              "observed_rate": 1.0
+            }
+          ]
+        },
+        "both_teams_score": {
+          "n": 4,
+          "brier": 0.21572784969626713,
+          "log_loss": 0.6230533718612655,
+          "expected_calibration_error": 0.11603177789559495,
+          "bins": [
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "n": 3,
+              "mean_probability": 0.33008744363337816,
+              "observed_rate": 0.3333333333333333
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "n": 1,
+              "mean_probability": 0.5456105575174857,
+              "observed_rate": 1.0
+            }
+          ]
+        }
+      }
+    },
+    "ensemble": {
+      "games": 4,
+      "winner_accuracy": 0.5,
+      "log_loss": 0.9460386242567849,
+      "brier": 0.5655264932985891,
+      "total_mae": 1.1137038252797504,
+      "margin_mae": 0.680284060045217,
+      "total_in_80": 1.0,
+      "team_score_games": 4,
+      "home_score_mae": 0.7705792704689483,
+      "away_score_mae": 0.4409831910658877,
+      "team_score_mae": 0.605781230767418,
+      "goal_markets": {
+        "over_1.5": {
+          "accuracy": 0.5,
+          "brier": 0.23186737558906534
+        },
+        "over_2.5": {
+          "accuracy": 0.75,
+          "brier": 0.12735669688196227
+        },
+        "over_3.5": {
+          "accuracy": 0.75,
+          "brier": 0.15057661259403368
+        },
+        "both_teams_score": {
+          "accuracy": 0.75,
+          "brier": 0.2286842900202849
+        }
+      },
+      "coverage": 1.0,
+      "calibration": {
+        "home": {
+          "n": 4,
+          "brier": 0.23028460384846608,
+          "log_loss": 0.6533110430405874,
+          "expected_calibration_error": 0.2850789388242475,
+          "bins": [
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "n": 2,
+              "mean_probability": 0.38522604875544963,
+              "observed_rate": 0.5
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "n": 1,
+              "mean_probability": 0.43259128131328023,
+              "observed_rate": 0.0
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "n": 1,
+              "mean_probability": 0.5218234285053909,
+              "observed_rate": 1.0
+            }
+          ]
+        },
+        "draw": {
+          "n": 4,
+          "brier": 0.26514374016908066,
+          "log_loss": 0.7224261248177167,
+          "expected_calibration_error": 0.3258075937562361,
+          "bins": [
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "n": 1,
+              "mean_probability": 0.2725141495558132,
+              "observed_rate": 0.0
+            },
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "n": 3,
+              "mean_probability": 0.3230945915102896,
+              "observed_rate": 0.6666666666666666
+            }
+          ]
+        },
+        "away": {
+          "n": 4,
+          "brier": 0.07009814928104241,
+          "log_loss": 0.3018832460178183,
+          "expected_calibration_error": 0.25833381714593706,
+          "bins": [
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "n": 1,
+              "mean_probability": 0.17267228261050485,
+              "observed_rate": 0.0
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "n": 2,
+              "mean_probability": 0.26450682170603007,
+              "observed_rate": 0.0
+            },
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "n": 1,
+              "mean_probability": 0.33164934256118317,
+              "observed_rate": 0.0
+            }
+          ]
+        },
+        "over_1.5": {
+          "n": 4,
+          "brier": 0.23186737558906534,
+          "log_loss": 0.6517698077941014,
+          "expected_calibration_error": 0.22535729594933712,
+          "bins": [
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "n": 3,
+              "mean_probability": 0.5403341726032788,
+              "observed_rate": 0.3333333333333333
+            },
+            {
+              "lower": 0.7,
+              "upper": 0.8,
+              "n": 1,
+              "mean_probability": 0.7195733340124879,
+              "observed_rate": 1.0
+            }
+          ]
+        },
+        "over_2.5": {
+          "n": 4,
+          "brier": 0.12735669688196227,
+          "log_loss": 0.4294794787325813,
+          "expected_calibration_error": 0.33706555517210907,
+          "bins": [
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "n": 3,
+              "mean_probability": 0.2698896805524537,
+              "observed_rate": 0.0
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "n": 1,
+              "mean_probability": 0.4614068209689249,
+              "observed_rate": 1.0
+            }
+          ]
+        },
+        "over_3.5": {
+          "n": 4,
+          "brier": 0.15057661259403368,
+          "log_loss": 0.4358590703628262,
+          "expected_calibration_error": 0.270039778706137,
+          "bins": [
+            {
+              "lower": 0.0,
+              "upper": 0.1,
+              "n": 1,
+              "mean_probability": 0.0952909743953368,
+              "observed_rate": 0.0
+            },
+            {
+              "lower": 0.1,
+              "upper": 0.2,
+              "n": 2,
+              "mean_probability": 0.11619494554596083,
+              "observed_rate": 0.0
+            },
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "n": 1,
+              "mean_probability": 0.2475217506627105,
+              "observed_rate": 1.0
+            }
+          ]
+        },
+        "both_teams_score": {
+          "n": 4,
+          "brier": 0.2286842900202849,
+          "log_loss": 0.650124006503242,
+          "expected_calibration_error": 0.1235483394522891,
+          "bins": [
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "n": 3,
+              "mean_probability": 0.3349544192568669,
+              "observed_rate": 0.3333333333333333
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "n": 1,
+              "mean_probability": 0.5106698999614444,
+              "observed_rate": 1.0
+            }
+          ]
+        }
+      }
+    }
+  },
+  "predictions": [
+    {
+      "event_id": "AR1_4742b94ce5bd46c373446729",
+      "variant": "baseline",
+      "cutoff": "2026-10-26",
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "AR1",
+        "home": "instituto",
+        "away": "deportivo riestra",
+        "expected_home_goals": 1.2851349124745521,
+        "expected_away_goals": 0.5942851189349574,
+        "probabilities": {
+          "home": 0.5343857509929787,
+          "draw": 0.29353131547574834,
+          "away": 0.17208293353127307
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          0
+        ],
+        "over": {
+          "1.5": 0.5603740975965494,
+          "2.5": 0.29072687069987097,
+          "3.5": 0.12180007081865686
+        },
+        "both_teams_score": 0.32410835788320164,
+        "total_goals_80": [
+          0,
+          4
+        ],
+        "training_cutoff_exclusive": "2026-10-26",
+        "training_games": 687,
+        "prior_team_games": {
+          "instituto": 29,
+          "deportivo riestra": 45
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "result": {
+        "actual_home": 1,
+        "actual_away": 0,
+        "actual_outcome": "home",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": false,
+            "correct": false,
+            "brier": 0.3140191292571471
+          },
+          "over_2.5": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.08452211334693949
+          },
+          "over_3.5": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.014835257251429826
+          },
+          "both_teams_score": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.10504622764974551
+          }
+        },
+        "winner_correct": true,
+        "home_absolute_error": 0.28513491247455214,
+        "away_absolute_error": 0.5942851189349574,
+        "total_absolute_error": 0.8794200314095095,
+        "margin_absolute_error": 0.30915020646040525,
+        "total_in_80": true,
+        "log_loss": 0.626637320676223,
+        "brier": 0.3325697980560243
+      }
+    },
+    {
+      "event_id": "AR1_c710fd4d774c4f6c8ba6dbfa",
+      "variant": "baseline",
+      "cutoff": "2026-10-26",
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "AR1",
+        "home": "union",
+        "away": "estudiantes (lp)",
+        "expected_home_goals": 1.383529660548896,
+        "expected_away_goals": 1.0075608766824389,
+        "probabilities": {
+          "home": 0.45520886013873557,
+          "draw": 0.27110885805484736,
+          "away": 0.27368228180641724
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.6896141180674678,
+          "2.5": 0.42796178006308194,
+          "3.5": 0.21941697024750148
+        },
+        "both_teams_score": 0.47572924240540343,
+        "total_goals_80": [
+          1,
+          4
+        ],
+        "training_cutoff_exclusive": "2026-10-26",
+        "training_games": 687,
+        "prior_team_games": {
+          "union": 29,
+          "estudiantes (lp)": 29
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "result": {
+        "actual_home": 3,
+        "actual_away": 1,
+        "actual_outcome": "home",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.09633939570303585
+          },
+          "over_2.5": {
+            "actual": true,
+            "correct": false,
+            "brier": 0.3272277250685978
+          },
+          "over_3.5": {
+            "actual": true,
+            "correct": false,
+            "brier": 0.60930986633759
+          },
+          "both_teams_score": {
+            "actual": true,
+            "correct": false,
+            "brier": 0.2748598272688123
+          }
+        },
+        "winner_correct": true,
+        "home_absolute_error": 1.616470339451104,
+        "away_absolute_error": 0.007560876682438877,
+        "total_absolute_error": 1.6089094627686649,
+        "margin_absolute_error": 1.6240312161335428,
+        "total_in_80": true,
+        "log_loss": 0.7869989320827826,
+        "brier": 0.44519939036190626
+      }
+    },
+    {
+      "event_id": "AR2_69975b82196d732b04c0787a",
+      "variant": "baseline",
+      "cutoff": "2026-10-26",
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "AR2",
+        "home": "defensores de belgrano",
+        "away": "san miguel",
+        "expected_home_goals": 1.0398852932906277,
+        "expected_away_goals": 0.8453740819672815,
+        "probabilities": {
+          "home": 0.39329210007802384,
+          "draw": 0.3175801831911511,
+          "away": 0.2891277167308251
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          0
+        ],
+        "over": {
+          "1.5": 0.5620473916484078,
+          "2.5": 0.29230172350009087,
+          "3.5": 0.12278820689614996
+        },
+        "both_teams_score": 0.3688977573261453,
+        "total_goals_80": [
+          0,
+          4
+        ],
+        "training_cutoff_exclusive": "2026-10-26",
+        "training_games": 1962,
+        "prior_team_games": {
+          "defensores de belgrano": 106,
+          "san miguel": 106
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "result": {
+        "actual_home": 0,
+        "actual_away": 0,
+        "actual_outcome": "draw",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": false,
+            "correct": false,
+            "brier": 0.3158972704587787
+          },
+          "over_2.5": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.08544029756112358
+          },
+          "over_3.5": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.015076943752771728
+          },
+          "both_teams_score": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.1360855553602596
+          }
+        },
+        "winner_correct": false,
+        "home_absolute_error": 1.0398852932906277,
+        "away_absolute_error": 0.8453740819672815,
+        "total_absolute_error": 1.8852593752579092,
+        "margin_absolute_error": 0.19451121132334626,
+        "total_in_80": true,
+        "log_loss": 1.147024947049693,
+        "brier": 0.7039703189391855
+      }
+    },
+    {
+      "event_id": "AR2_ebe09e3c71e52974700fa54e",
+      "variant": "baseline",
+      "cutoff": "2026-10-26",
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "AR2",
+        "home": "nueva chicago",
+        "away": "san martin (sj)",
+        "expected_home_goals": 0.9744343641776897,
+        "expected_away_goals": 0.7430756353364903,
+        "probabilities": {
+          "home": 0.3967301901050527,
+          "draw": 0.33500410144651943,
+          "away": 0.2682657084484278
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          0,
+          0
+        ],
+        "over": {
+          "1.5": 0.5121727734799651,
+          "2.5": 0.2474060278072445,
+          "3.5": 0.09582618339666947
+        },
+        "both_teams_score": 0.3264580694317201,
+        "total_goals_80": [
+          0,
+          3
+        ],
+        "training_cutoff_exclusive": "2026-10-26",
+        "training_games": 1962,
+        "prior_team_games": {
+          "nueva chicago": 106,
+          "san martin (sj)": 72
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "result": {
+        "actual_home": 1,
+        "actual_away": 1,
+        "actual_outcome": "draw",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.2379754029342294
+          },
+          "over_2.5": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.06120974259535904
+          },
+          "over_3.5": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.009182657424372132
+          },
+          "both_teams_score": {
+            "actual": true,
+            "correct": false,
+            "brier": 0.4536587322336456
+          }
+        },
+        "winner_correct": false,
+        "home_absolute_error": 0.025565635822310306,
+        "away_absolute_error": 0.25692436466350965,
+        "total_absolute_error": 0.28249000048581996,
+        "margin_absolute_error": 0.23135872884119935,
+        "total_in_80": true,
+        "log_loss": 1.0936125041080784,
+        "brier": 0.6715808791630791
+      }
+    },
+    {
+      "event_id": "AR1_4742b94ce5bd46c373446729",
+      "variant": "opponent",
+      "cutoff": "2026-10-26",
+      "prediction": {
+        "model": "football-opponent-v1",
+        "league": "AR1",
+        "home": "instituto",
+        "away": "deportivo riestra",
+        "expected_home_goals": 1.2193840660210205,
+        "expected_away_goals": 0.5906665974695905,
+        "probabilities": {
+          "home": 0.5157437265740829,
+          "draw": 0.3045120211799008,
+          "away": 0.17974425224601648
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          0
+        ],
+        "over": {
+          "1.5": 0.5401468826488547,
+          "2.5": 0.272071798378139,
+          "3.5": 0.11032863699496892
+        },
+        "both_teams_score": 0.3142758857944576,
+        "total_goals_80": [
+          0,
+          4
+        ],
+        "training_cutoff_exclusive": "2026-10-26",
+        "training_games": 687,
+        "prior_team_games": {
+          "instituto": 29,
+          "deportivo riestra": 45
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Explicit research candidate, no automatic promotion or lineup/xG/odds inputs.",
+        "low_score_rho": 0.0,
+        "research_candidate": true
+      },
+      "result": {
+        "actual_home": 1,
+        "actual_away": 0,
+        "actual_outcome": "home",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": false,
+            "correct": false,
+            "brier": 0.2917586548352756
+          },
+          "over_2.5": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.07402306347271471
+          },
+          "over_3.5": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.012172408141167625
+          },
+          "both_teams_score": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.09876933239189095
+          }
+        },
+        "winner_correct": true,
+        "home_absolute_error": 0.21938406602102045,
+        "away_absolute_error": 0.5906665974695905,
+        "total_absolute_error": 0.8100506634906108,
+        "margin_absolute_error": 0.37128253144857004,
+        "total_in_80": true,
+        "log_loss": 0.6621452908001825,
+        "brier": 0.3595397056109046
+      }
+    },
+    {
+      "event_id": "AR1_c710fd4d774c4f6c8ba6dbfa",
+      "variant": "opponent",
+      "cutoff": "2026-10-26",
+      "prediction": {
+        "model": "football-opponent-v1",
+        "league": "AR1",
+        "home": "union",
+        "away": "estudiantes (lp)",
+        "expected_home_goals": 1.269363996255986,
+        "expected_away_goals": 1.3838736683379025,
+        "probabilities": {
+          "home": 0.34326806992268855,
+          "draw": 0.26031161246594575,
+          "away": 0.3964203176113659
+        },
+        "predicted_outcome": "away",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.7427286356620912,
+          "2.5": 0.494851861874768,
+          "3.5": 0.2756265310779197
+        },
+        "both_teams_score": 0.5388066432220691,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-10-26",
+        "training_games": 687,
+        "prior_team_games": {
+          "union": 29,
+          "estudiantes (lp)": 29
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Explicit research candidate, no automatic promotion or lineup/xG/odds inputs.",
+        "low_score_rho": 0.0,
+        "research_candidate": true
+      },
+      "result": {
+        "actual_home": 3,
+        "actual_away": 1,
+        "actual_outcome": "home",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.066188554908289
+          },
+          "over_2.5": {
+            "actual": true,
+            "correct": false,
+            "brier": 0.2551746414513885
+          },
+          "over_3.5": {
+            "actual": true,
+            "correct": false,
+            "brier": 0.5247169224782081
+          },
+          "both_teams_score": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.2126993123360959
+          }
+        },
+        "winner_correct": false,
+        "home_absolute_error": 1.730636003744014,
+        "away_absolute_error": 0.3838736683379025,
+        "total_absolute_error": 1.3467623354061118,
+        "margin_absolute_error": 2.1145096720819163,
+        "total_in_80": true,
+        "log_loss": 1.0692435920993235,
+        "brier": 0.6562080317827876
+      }
+    },
+    {
+      "event_id": "AR2_69975b82196d732b04c0787a",
+      "variant": "opponent",
+      "cutoff": "2026-10-26",
+      "prediction": {
+        "model": "football-opponent-v1",
+        "league": "AR2",
+        "home": "defensores de belgrano",
+        "away": "san miguel",
+        "expected_home_goals": 1.1525356239069664,
+        "expected_away_goals": 0.6546326206323202,
+        "probabilities": {
+          "home": 0.4774625935456047,
+          "draw": 0.3133526464737494,
+          "away": 0.20918475998064576
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          0
+        ],
+        "over": {
+          "1.5": 0.5392925386375896,
+          "2.5": 0.2712992111824914,
+          "3.5": 0.10986286747406754
+        },
+        "both_teams_score": 0.3286503774869589,
+        "total_goals_80": [
+          0,
+          4
+        ],
+        "training_cutoff_exclusive": "2026-10-26",
+        "training_games": 1962,
+        "prior_team_games": {
+          "defensores de belgrano": 106,
+          "san miguel": 106
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Explicit research candidate, no automatic promotion or lineup/xG/odds inputs.",
+        "low_score_rho": 0.0,
+        "research_candidate": true
+      },
+      "result": {
+        "actual_home": 0,
+        "actual_away": 0,
+        "actual_outcome": "draw",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": false,
+            "correct": false,
+            "brier": 0.29083644223017613
+          },
+          "over_2.5": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.07360326198824206
+          },
+          "over_3.5": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.012069849649624527
+          },
+          "both_teams_score": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.10801107062232058
+          }
+        },
+        "winner_correct": false,
+        "home_absolute_error": 1.1525356239069664,
+        "away_absolute_error": 0.6546326206323202,
+        "total_absolute_error": 1.8071682445392865,
+        "margin_absolute_error": 0.4979030032746462,
+        "total_in_80": true,
+        "log_loss": 1.1604260566035423,
+        "brier": 0.7432133801480596
+      }
+    },
+    {
+      "event_id": "AR2_ebe09e3c71e52974700fa54e",
+      "variant": "opponent",
+      "cutoff": "2026-10-26",
+      "prediction": {
+        "model": "football-opponent-v1",
+        "league": "AR2",
+        "home": "nueva chicago",
+        "away": "san martin (sj)",
+        "expected_home_goals": 0.9049777109590094,
+        "expected_away_goals": 0.8054518001608998,
+        "probabilities": {
+          "home": 0.3584310596275194,
+          "draw": 0.3386176372344099,
+          "away": 0.30295130313807067
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          0,
+          0
+        ],
+        "over": {
+          "1.5": 0.5099865295781763,
+          "2.5": 0.24553245174688484,
+          "3.5": 0.09475576539400415
+        },
+        "both_teams_score": 0.32935124558858886,
+        "total_goals_80": [
+          0,
+          3
+        ],
+        "training_cutoff_exclusive": "2026-10-26",
+        "training_games": 1962,
+        "prior_team_games": {
+          "nueva chicago": 106,
+          "san martin (sj)": 72
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Explicit research candidate, no automatic promotion or lineup/xG/odds inputs.",
+        "low_score_rho": 0.0,
+        "research_candidate": true
+      },
+      "result": {
+        "actual_home": 1,
+        "actual_away": 1,
+        "actual_outcome": "draw",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.24011320119483953
+          },
+          "over_2.5": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.06028618486083633
+          },
+          "over_3.5": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.008978655075403555
+          },
+          "both_teams_score": {
+            "actual": true,
+            "correct": false,
+            "brier": 0.44976975179357725
+          }
+        },
+        "winner_correct": false,
+        "home_absolute_error": 0.09502228904099064,
+        "away_absolute_error": 0.1945481998391002,
+        "total_absolute_error": 0.28957048888009096,
+        "margin_absolute_error": 0.09952591079810957,
+        "total_in_80": true,
+        "log_loss": 1.0828837219379293,
+        "brier": 0.6576789463561563
+      }
+    },
+    {
+      "event_id": "AR1_4742b94ce5bd46c373446729",
+      "variant": "opponent_dc",
+      "cutoff": "2026-10-26",
+      "prediction": {
+        "model": "football-opponent-dc-v1",
+        "league": "AR1",
+        "home": "instituto",
+        "away": "deportivo riestra",
+        "expected_home_goals": 1.2193840660210205,
+        "expected_away_goals": 0.5906665974695905,
+        "probabilities": {
+          "home": 0.509261106017803,
+          "draw": 0.3174772622924606,
+          "away": 0.17326163168973657
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          0
+        ],
+        "over": {
+          "1.5": 0.5466295032051346,
+          "2.5": 0.272071798378139,
+          "3.5": 0.11032863699496892
+        },
+        "both_teams_score": 0.3207585063507374,
+        "total_goals_80": [
+          0,
+          4
+        ],
+        "training_cutoff_exclusive": "2026-10-26",
+        "training_games": 687,
+        "prior_team_games": {
+          "instituto": 29,
+          "deportivo riestra": 45
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Explicit research candidate, no automatic promotion or lineup/xG/odds inputs.",
+        "low_score_rho": -0.05499999999999999,
+        "research_candidate": true
+      },
+      "result": {
+        "actual_home": 1,
+        "actual_away": 0,
+        "actual_outcome": "home",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": false,
+            "correct": false,
+            "brier": 0.29880381377429227
+          },
+          "over_2.5": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.07402306347271471
+          },
+          "over_3.5": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.012172408141167625
+          },
+          "both_teams_score": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.10288601939635604
+          }
+        },
+        "winner_correct": true,
+        "home_absolute_error": 0.21938406602102045,
+        "away_absolute_error": 0.5906665974695905,
+        "total_absolute_error": 0.8100506634906108,
+        "margin_absolute_error": 0.37128253144857004,
+        "total_in_80": true,
+        "log_loss": 0.6747944155360928,
+        "brier": 0.3716360671553758
+      }
+    },
+    {
+      "event_id": "AR1_c710fd4d774c4f6c8ba6dbfa",
+      "variant": "opponent_dc",
+      "cutoff": "2026-10-26",
+      "prediction": {
+        "model": "football-opponent-dc-v1",
+        "league": "AR1",
+        "home": "union",
+        "away": "estudiantes (lp)",
+        "expected_home_goals": 1.269363996255986,
+        "expected_away_goals": 1.3838736683379025,
+        "probabilities": {
+          "home": 0.3364641556272719,
+          "draw": 0.2739194410567791,
+          "away": 0.3896164033159492
+        },
+        "predicted_outcome": "away",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.749532549957508,
+          "2.5": 0.494851861874768,
+          "3.5": 0.2756265310779197
+        },
+        "both_teams_score": 0.5456105575174857,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-10-26",
+        "training_games": 687,
+        "prior_team_games": {
+          "union": 29,
+          "estudiantes (lp)": 29
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Explicit research candidate, no automatic promotion or lineup/xG/odds inputs.",
+        "low_score_rho": -0.05499999999999999,
+        "research_candidate": true
+      },
+      "result": {
+        "actual_home": 3,
+        "actual_away": 1,
+        "actual_outcome": "home",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.06273394353078825
+          },
+          "over_2.5": {
+            "actual": true,
+            "correct": false,
+            "brier": 0.2551746414513885
+          },
+          "over_3.5": {
+            "actual": true,
+            "correct": false,
+            "brier": 0.5247169224782081
+          },
+          "both_teams_score": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.2064697654395702
+          }
+        },
+        "winner_correct": false,
+        "home_absolute_error": 1.730636003744014,
+        "away_absolute_error": 0.3838736683379025,
+        "total_absolute_error": 1.3467623354061118,
+        "margin_absolute_error": 2.1145096720819163,
+        "total_in_80": true,
+        "log_loss": 1.0892636567382339,
+        "brier": 0.6671126186891441
+      }
+    },
+    {
+      "event_id": "AR2_69975b82196d732b04c0787a",
+      "variant": "opponent_dc",
+      "cutoff": "2026-10-26",
+      "prediction": {
+        "model": "football-opponent-dc-v1",
+        "league": "AR2",
+        "home": "defensores de belgrano",
+        "away": "san miguel",
+        "expected_home_goals": 1.1525356239069664,
+        "expected_away_goals": 0.6546326206323202,
+        "probabilities": {
+          "home": 0.47189046254853656,
+          "draw": 0.3244969084678858,
+          "away": 0.20361262898357754
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          0
+        ],
+        "over": {
+          "1.5": 0.5448646696346578,
+          "2.5": 0.2712992111824914,
+          "3.5": 0.10986286747406754
+        },
+        "both_teams_score": 0.3342225084840271,
+        "total_goals_80": [
+          0,
+          4
+        ],
+        "training_cutoff_exclusive": "2026-10-26",
+        "training_games": 1962,
+        "prior_team_games": {
+          "defensores de belgrano": 106,
+          "san miguel": 106
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Explicit research candidate, no automatic promotion or lineup/xG/odds inputs.",
+        "low_score_rho": -0.045,
+        "research_candidate": true
+      },
+      "result": {
+        "actual_home": 0,
+        "actual_away": 0,
+        "actual_outcome": "draw",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": false,
+            "correct": false,
+            "brier": 0.29687750821608483
+          },
+          "over_2.5": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.07360326198824206
+          },
+          "over_3.5": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.012069849649624527
+          },
+          "both_teams_score": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.11170468517735559
+          }
+        },
+        "winner_correct": false,
+        "home_absolute_error": 1.1525356239069664,
+        "away_absolute_error": 0.6546326206323202,
+        "total_absolute_error": 1.8071682445392865,
+        "margin_absolute_error": 0.4979030032746462,
+        "total_in_80": true,
+        "log_loss": 1.1254792699469012,
+        "brier": 0.7204431379953196
+      }
+    },
+    {
+      "event_id": "AR2_ebe09e3c71e52974700fa54e",
+      "variant": "opponent_dc",
+      "cutoff": "2026-10-26",
+      "prediction": {
+        "model": "football-opponent-dc-v1",
+        "league": "AR2",
+        "home": "nueva chicago",
+        "away": "san martin (sj)",
+        "expected_home_goals": 0.9049777109590094,
+        "expected_away_goals": 0.8054518001608998,
+        "probabilities": {
+          "home": 0.35250098915073835,
+          "draw": 0.3504777781879721,
+          "away": 0.2970212326612896
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          0,
+          0
+        ],
+        "over": {
+          "1.5": 0.5159166000549573,
+          "2.5": 0.24553245174688484,
+          "3.5": 0.09475576539400415
+        },
+        "both_teams_score": 0.3352813160653699,
+        "total_goals_80": [
+          0,
+          3
+        ],
+        "training_cutoff_exclusive": "2026-10-26",
+        "training_games": 1962,
+        "prior_team_games": {
+          "nueva chicago": 106,
+          "san martin (sj)": 72
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Explicit research candidate, no automatic promotion or lineup/xG/odds inputs.",
+        "low_score_rho": -0.045,
+        "research_candidate": true
+      },
+      "result": {
+        "actual_home": 1,
+        "actual_away": 1,
+        "actual_outcome": "draw",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.23433673810235214
+          },
+          "over_2.5": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.06028618486083633
+          },
+          "over_3.5": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.008978655075403555
+          },
+          "both_teams_score": {
+            "actual": true,
+            "correct": false,
+            "brier": 0.4418509287717866
+          }
+        },
+        "winner_correct": false,
+        "home_absolute_error": 0.09502228904099064,
+        "away_absolute_error": 0.1945481998391002,
+        "total_absolute_error": 0.28957048888009096,
+        "margin_absolute_error": 0.09952591079810957,
+        "total_in_80": true,
+        "log_loss": 1.0484579748370007,
+        "brier": 0.6343576766315141
+      }
+    },
+    {
+      "event_id": "AR1_4742b94ce5bd46c373446729",
+      "variant": "ensemble",
+      "cutoff": "2026-10-26",
+      "prediction": {
+        "model": "football-joint-ensemble-v1",
+        "league": "AR1",
+        "home": "instituto",
+        "away": "deportivo riestra",
+        "expected_home_goals": 1.2522594892477865,
+        "expected_away_goals": 0.5924758582022742,
+        "probabilities": {
+          "home": 0.5218234285053909,
+          "draw": 0.3055042888841044,
+          "away": 0.17267228261050485
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          0
+        ],
+        "over": {
+          "1.5": 0.5535018004008422,
+          "2.5": 0.28139933453900506,
+          "3.5": 0.11606435390681293
+        },
+        "both_teams_score": 0.3224334321169695,
+        "total_goals_80": [
+          0,
+          4
+        ],
+        "training_cutoff_exclusive": "2026-10-26",
+        "training_games": 687,
+        "prior_team_games": {
+          "instituto": 29,
+          "deportivo riestra": 45
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Fixed equal-weight joint-score mixture. All markets use the same distribution. Experimental; no automatic promotion, target tuning or guaranteed success.",
+        "research_candidate": true,
+        "ensemble_weights": {
+          "baseline": 0.5,
+          "opponent_dc": 0.5
+        }
+      },
+      "result": {
+        "actual_home": 1,
+        "actual_away": 0,
+        "actual_outcome": "home",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": false,
+            "correct": false,
+            "brier": 0.30636424304697374
+          },
+          "over_2.5": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.07918558547899489
+          },
+          "over_3.5": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.01347093424780592
+          },
+          "both_teams_score": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.10396331814672838
+          }
+        },
+        "winner_correct": true,
+        "home_absolute_error": 0.2522594892477865,
+        "away_absolute_error": 0.5924758582022742,
+        "total_absolute_error": 0.8447353474500607,
+        "margin_absolute_error": 0.3402163689544877,
+        "total_in_80": true,
+        "log_loss": 0.6504260078903872,
+        "brier": 0.3518014212348434
+      }
+    },
+    {
+      "event_id": "AR1_c710fd4d774c4f6c8ba6dbfa",
+      "variant": "ensemble",
+      "cutoff": "2026-10-26",
+      "prediction": {
+        "model": "football-joint-ensemble-v1",
+        "league": "AR1",
+        "home": "union",
+        "away": "estudiantes (lp)",
+        "expected_home_goals": 1.326446828402441,
+        "expected_away_goals": 1.1957172725101708,
+        "probabilities": {
+          "home": 0.3958365078830037,
+          "draw": 0.2725141495558132,
+          "away": 0.33164934256118317
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.7195733340124879,
+          "2.5": 0.4614068209689249,
+          "3.5": 0.2475217506627105
+        },
+        "both_teams_score": 0.5106698999614444,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-10-26",
+        "training_games": 687,
+        "prior_team_games": {
+          "union": 29,
+          "estudiantes (lp)": 29
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Fixed equal-weight joint-score mixture. All markets use the same distribution. Experimental; no automatic promotion, target tuning or guaranteed success.",
+        "research_candidate": true,
+        "ensemble_weights": {
+          "baseline": 0.5,
+          "opponent_dc": 0.5
+        }
+      },
+      "result": {
+        "actual_home": 3,
+        "actual_away": 1,
+        "actual_outcome": "home",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.07863911499687166
+          },
+          "over_2.5": {
+            "actual": true,
+            "correct": false,
+            "brier": 0.2900826124987998
+          },
+          "over_3.5": {
+            "actual": true,
+            "correct": false,
+            "brier": 0.566223515725712
+          },
+          "both_teams_score": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.2394439468037428
+          }
+        },
+        "winner_correct": true,
+        "home_absolute_error": 1.673553171597559,
+        "away_absolute_error": 0.1957172725101708,
+        "total_absolute_error": 1.4778358990873883,
+        "margin_absolute_error": 1.8692704441077297,
+        "total_in_80": true,
+        "log_loss": 0.9267540118586531,
+        "brier": 0.5492687733363969
+      }
+    },
+    {
+      "event_id": "AR2_69975b82196d732b04c0787a",
+      "variant": "ensemble",
+      "cutoff": "2026-10-26",
+      "prediction": {
+        "model": "football-joint-ensemble-v1",
+        "league": "AR2",
+        "home": "defensores de belgrano",
+        "away": "san miguel",
+        "expected_home_goals": 1.096210458598797,
+        "expected_away_goals": 0.7500033512998009,
+        "probabilities": {
+          "home": 0.43259128131328023,
+          "draw": 0.3210385458295185,
+          "away": 0.2463701728572014
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          0
+        ],
+        "over": {
+          "1.5": 0.5534560306415327,
+          "2.5": 0.28180046734129127,
+          "3.5": 0.11632553718510874
+        },
+        "both_teams_score": 0.35156013290508625,
+        "total_goals_80": [
+          0,
+          4
+        ],
+        "training_cutoff_exclusive": "2026-10-26",
+        "training_games": 1962,
+        "prior_team_games": {
+          "defensores de belgrano": 106,
+          "san miguel": 106
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Fixed equal-weight joint-score mixture. All markets use the same distribution. Experimental; no automatic promotion, target tuning or guaranteed success.",
+        "research_candidate": true,
+        "ensemble_weights": {
+          "baseline": 0.5,
+          "opponent_dc": 0.5
+        }
+      },
+      "result": {
+        "actual_home": 0,
+        "actual_away": 0,
+        "actual_outcome": "draw",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": false,
+            "correct": false,
+            "brier": 0.3063135778534812
+          },
+          "over_2.5": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.07941150339377016
+          },
+          "over_3.5": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.013531630601404117
+          },
+          "both_teams_score": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.1235945270482419
+          }
+        },
+        "winner_correct": false,
+        "home_absolute_error": 1.096210458598797,
+        "away_absolute_error": 0.7500033512998009,
+        "total_absolute_error": 1.846213809898598,
+        "margin_absolute_error": 0.3462071072989962,
+        "total_in_80": true,
+        "log_loss": 1.1361940825954135,
+        "brier": 0.7088221349912477
+      }
+    },
+    {
+      "event_id": "AR2_ebe09e3c71e52974700fa54e",
+      "variant": "ensemble",
+      "cutoff": "2026-10-26",
+      "prediction": {
+        "model": "football-joint-ensemble-v1",
+        "league": "AR2",
+        "home": "nueva chicago",
+        "away": "san martin (sj)",
+        "expected_home_goals": 0.9397060375683496,
+        "expected_away_goals": 0.7742637177486952,
+        "probabilities": {
+          "home": 0.3746155896278956,
+          "draw": 0.34274093981724574,
+          "away": 0.2826434705548587
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          0,
+          0
+        ],
+        "over": {
+          "1.5": 0.5140446867674613,
+          "2.5": 0.24646923977706472,
+          "3.5": 0.0952909743953368
+        },
+        "both_teams_score": 0.33086969274854505,
+        "total_goals_80": [
+          0,
+          3
+        ],
+        "training_cutoff_exclusive": "2026-10-26",
+        "training_games": 1962,
+        "prior_team_games": {
+          "nueva chicago": 106,
+          "san martin (sj)": 72
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Fixed equal-weight joint-score mixture. All markets use the same distribution. Experimental; no automatic promotion, target tuning or guaranteed success.",
+        "research_candidate": true,
+        "ensemble_weights": {
+          "baseline": 0.5,
+          "opponent_dc": 0.5
+        }
+      },
+      "result": {
+        "actual_home": 1,
+        "actual_away": 1,
+        "actual_outcome": "draw",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.23615256645893482
+          },
+          "over_2.5": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.06074708615628423
+          },
+          "over_3.5": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.009080369801212735
+          },
+          "both_teams_score": {
+            "actual": true,
+            "correct": false,
+            "brier": 0.4477353680824265
+          }
+        },
+        "winner_correct": false,
+        "home_absolute_error": 0.060293962431650416,
+        "away_absolute_error": 0.22573628225130482,
+        "total_absolute_error": 0.28603024468295524,
+        "margin_absolute_error": 0.1654423198196544,
+        "total_in_80": true,
+        "log_loss": 1.070780394682686,
+        "brier": 0.6522136436318685
+      }
+    }
+  ],
+  "simple_baselines": {
+    "always_home": 0.5,
+    "always_under_2_5": 0.75,
+    "always_btts_no": 0.5
+  },
+  "input_hashes": {
+    "data/football/AR1_2025.json.gz": "574a5265c0be482b9618ba34b177a6ccabf3dae3a74aa72659a95aa05e9cb2c0",
+    "data/football/AR1_2026.json.gz": "f92143096334ce309f9e4cb40182aa9bfc2eb08af050c30f082d8082842af13e",
+    "data/football/AR2_2023.json.gz": "8440e4946fa323b68ee97c685c3f277583e00c80737602e121cd14355b480455",
+    "data/football/AR2_2024.json.gz": "362d01253a6c7afe73f2c6a66c6acfd61111c78d1b5e481d2c756d25bbc8d9e5",
+    "data/football/AR2_2025.json.gz": "0c237d071b8d49c69b6491e4cd9b30c8cbc96d7ea55dd53846373ecbcbe49a6e",
+    "data/football/AR2_2026.json.gz": "deb04e6547c3d42f68b7f07fa1769e3ced3ae1adfff87d768aa63863c5e11cfd"
+  },
+  "limitations": "Four publisher CC-BY-SA finals, retrospective post-result audit; whole target day withheld. Historical publication availability unknown. No tuning, policy promotion, significance or prospective accuracy claim. Not evidence of data-only improvement.",
+  "original_forecasts_changed": false
+}
