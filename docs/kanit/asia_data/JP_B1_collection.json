@@ -1,57 +1,6 @@
 {
-  "rejected_finals": [
-    {
-      "mac_id": "JP_B1_506497",
-      "source_url": "https://www.bleague.jp/game_detail/?ScheduleKey=506497",
-      "tarih_utc": "2026-10-23T10:05:00+00:00",
-      "captured_at_utc": "2026-10-27T12:33:06.776574+00:00",
-      "reason": "Official FINAL has two empty score fields",
-      "source_state": "FINAL",
-      "home_score_text": "",
-      "away_score_text": ""
-    },
-    {
-      "mac_id": "JP_B1_506498",
-      "source_url": "https://www.bleague.jp/game_detail/?ScheduleKey=506498",
-      "tarih_utc": "2026-10-23T10:05:00+00:00",
-      "captured_at_utc": "2026-10-27T12:33:06.776574+00:00",
-      "reason": "Official FINAL has two empty score fields",
-      "source_state": "FINAL",
-      "home_score_text": "",
-      "away_score_text": ""
-    },
-    {
-      "mac_id": "JP_B1_506499",
-      "source_url": "https://www.bleague.jp/game_detail/?ScheduleKey=506499",
-      "tarih_utc": "2026-10-23T10:35:00+00:00",
-      "captured_at_utc": "2026-10-27T12:33:08.499259+00:00",
-      "reason": "Official FINAL has two empty score fields",
-      "source_state": "FINAL",
-      "home_score_text": "",
-      "away_score_text": ""
-    },
-    {
-      "mac_id": "JP_B1_506509",
-      "source_url": "https://www.bleague.jp/game_detail/?ScheduleKey=506509",
-      "tarih_utc": "2026-10-25T07:05:00+00:00",
-      "captured_at_utc": "2026-10-27T12:33:08.499259+00:00",
-      "reason": "Official FINAL has two empty score fields",
-      "source_state": "FINAL",
-      "home_score_text": "",
-      "away_score_text": ""
-    },
-    {
-      "mac_id": "JP_B1_506508",
-      "source_url": "https://www.bleague.jp/game_detail/?ScheduleKey=506508",
-      "tarih_utc": "2026-10-25T08:05:00+00:00",
-      "captured_at_utc": "2026-10-27T12:33:08.499259+00:00",
-      "reason": "Official FINAL has two empty score fields",
-      "source_state": "FINAL",
-      "home_score_text": "",
-      "away_score_text": ""
-    }
-  ],
-  "partial": true,
+  "rejected_finals": [],
+  "partial": false,
   "source": "Official B.LEAGUE public schedule",
   "sources": [
     "https://www.bleague.jp/schedule/?year=2021&mon=all&day=&tab=1&event=2",
@@ -98,9 +47,9 @@
     },
     {
       "year": 2026,
-      "accepted": 135,
+      "accepted": 140,
       "pages": 39,
-      "excluded": 1074
+      "excluded": 1069
     },
     {
       "year": 2016,
@@ -127,11 +76,11 @@
       "excluded": 174
     }
   ],
-  "captured_at_utc": "2026-10-27T12:34:06.459625+00:00",
+  "captured_at_utc": "2026-10-28T13:22:37.359701+00:00",
   "refresh_current_requested": true,
   "cache_reparse_only": false,
   "limitations": "Regular-season event only; playoffs/cups excluded. All advertised pages requested, not an independent completeness proof. Logo codes are source identities; reorganisations, renamed clubs and 2026 league changes require caution. Historical publication, neutral venues and overtime unverified. No blocked detailed-context endpoint used.",
-  "games": 5666,
+  "games": 5668,
   "teams": 39,
   "seasons": {
     "2016-17": 540,
@@ -143,8 +92,8 @@
     "2023-24": 720,
     "2024-25": 719,
     "2025-26": 780,
-    "2026-27": 138
+    "2026-27": 140
   },
-  "dataset_sha256": "51284d74f4fee8271f8fd73c6def4827e13531f842a640fee86d430965ade698",
+  "dataset_sha256": "367ab9ff4761146789045eb0605386a884248ba7d6c873831ca40755bb001378",
   "trained": false
 }

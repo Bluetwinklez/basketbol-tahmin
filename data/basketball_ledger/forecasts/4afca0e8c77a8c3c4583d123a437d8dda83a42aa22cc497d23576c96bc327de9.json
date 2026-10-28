@@ -1,0 +1,248 @@
+{
+  "spec": "prospective-v1",
+  "recorded_at_utc": "2026-10-28T13:24:35.254562+00:00",
+  "git_revision": "f32315988f88acdca3d85f40cdb1c90fd88ee9fe",
+  "source_code_sha256": "42c8c8f8d2e77b3f9bdd5fc0d8eafc9fede6db95e8c086120373b31178a7b03c",
+  "datasets": {
+    "data/asia/JP_B1.parquet": "367ab9ff4761146789045eb0605386a884248ba7d6c873831ca40755bb001378",
+    "data/asia/JP_B1_fixtures.parquet": "6e932f756afc9387877085a7fd83b98dbc7223edc53e60de792150b7ebac91f9",
+    "data/asia/JP_B1_teams.json": "5cecbd181bbe18c371a69d990663e1ca1fca440bd7de039609a90c26e3a962ad",
+    "data/asia/JP_B2.parquet": "19724f46f2c95fe57729ab2a1222a913a1ce28719139ddd5c9e29d9345ef9174",
+    "data/asia/JP_B2_fixtures.parquet": "1e4ee4ca0e93ee1d8d5156d232b077d89c027cf6b7bdb020b8c64e288d53dad3",
+    "data/asia/JP_B2_teams.json": "5e4ce9360ac2ddf2dd8fe93cb06cad6ca0509a670552660dc5280ecd92852496",
+    "data/asia/KBL.parquet": "329dc28cc526bc72be83f5d62f11ab36612f71a1a25f50ea1e88f8f277f40eb5",
+    "data/asia/KBL_fixtures.parquet": "36b52f68a3cc7177180856d041c87dec26ba42e5a5382e448c267a6f9a798617",
+    "data/asia/KBL_teams.json": "5c2e61bf24c37a260e11f8157bb5097176081f77b371d1b369c9942328612484",
+    "data/asia/PBA_COM.parquet": "e69325ce46706aaf79ed34327e525eb39769858e0a76c32e2a70314a4340c21c",
+    "data/asia/PBA_COM_teams.json": "4a3e30e8492399b8f390a063b01de468472c2c050a60c61bdb4ca6ef20bfd03d",
+    "data/asia/PBA_GOV.parquet": "ce9bf13d723707cd24349ede41a443e2746fc8ef96f560093446c68e7ac8bdce",
+    "data/asia/PBA_GOV_fixtures.parquet": "b2d42184762497d12e99c166d4030474aab2bf516d7a8eac74fc3a9a3bbaf369",
+    "data/asia/PBA_GOV_player_boxes.parquet": "2628e8d3b49658cdfc5c3a7bd7af2af5ae172949e4b2e777c9ac5342764f9af9",
+    "data/asia/PBA_GOV_teams.json": "ce9238ab8fb02dca0aab63281fa5a7c3efbc500aa5214b2bfb8fc1b542ec640a",
+    "data/asia/PBA_PHI.parquet": "6b86ee459c474989e9a4059650ed1aed201ada33e533a6dd2d9a0a4b8cad0ad9",
+    "data/asia/PBA_PHI_teams.json": "4a3e30e8492399b8f390a063b01de468472c2c050a60c61bdb4ca6ef20bfd03d",
+    "data/avrupa_olaylar.parquet": "4bb94930dd5e6aa251cb691033b82c69ac245c3ded70dcdc450333e345d76051",
+    "data/avrupa_oyuncu_istatistik.parquet": "662a37ee8fddf328693c804f28211d02add08c6214cc2373f7553ff2d2f8fd51",
+    "data/avrupa_sutlar.parquet": "1b7009798c37a60a24af43530c2a788a8174ae4e0c3d5eb2f5c584cefd017a61",
+    "data/avrupa_takim_istatistik.parquet": "bb14f601a2c9768769511faa45020cb3314c7405998c8af8885676f57540ff21",
+    "data/cba_games.parquet": "ff8708583942a0c98e2225086a35e3c54daff09ba2d308f0c39b22d23de0c1db",
+    "data/cba_quarters.parquet": "c23be4386027f97f09e70b5d1507eba9d36e9ad1b4e8299de1d20bc7a00df47b",
+    "data/competitions/ABA.parquet": "fd9be2a4dc0e0fde8f4abd51c144e56c547ff0b1dd9937f76e7a460f25d6433f",
+    "data/competitions/ABA_fixtures.parquet": "ceb73db991bcf1b6b9f20c450081098270206ac48d95e92e945901b2822e2834",
+    "data/competitions/ABA_teams.json": "4e557284445db5899218f39bd78079a16e1b6ab1f4d46a11a6d4fd3a4b9efc12",
+    "data/competitions/ARG_LNB.parquet": "00b99682070bc4ef71de669423ffc14bcd0eeac6694fb2ab8daaf5277065419c",
+    "data/competitions/ARG_LNB_fixtures.parquet": "ea00236b2c4276abf40c833e243be3a19a16a65daa77d82e2b5b90cbd1dca49a",
+    "data/competitions/ARG_LNB_teams.json": "3cf591a7957c3e94c92b718adf4ef28ff00505f2b7d8c8fa37855c18f7b0f36c",
+    "data/competitions/ECW.parquet": "27ec466a89b381ecef804446f20d5c2abbdadb7a552bfcedb4053f21f2b57742",
+    "data/competitions/ECW_early.parquet": "8ee1cd6fb04ce492d472573fbbdc8e681a8807a424beac06ea6a60e11218d6ff",
+    "data/competitions/ECW_fixtures.parquet": "e59be66a0894f7162e343605e44c13cace951e52b8e524f6ceb13acb1e6eef84",
+    "data/competitions/ECW_teams.json": "9279eaeb6a306648e81c800f38ac675a5f60abc727fa04cb51532e24f7958098",
+    "data/competitions/ELW.parquet": "1ef58d649d8ddb1a502d2f4625dfd76f9c66a624a5b28f5d881e878aea9e5119",
+    "data/competitions/ELW_fixtures.parquet": "ce06b85e9dc5224e2409021180101d713dfaf00052a9093396f0e6f28ce79c4d",
+    "data/competitions/ELW_teams.json": "ec8a7f27eb1f787a12a6fa3d2679284982f96bf2fe3b882f4e33041937ed4c0f",
+    "data/competitions/FEC.parquet": "5fa80e1e789aa8daee2e0080031bf368976574b74a95ea19610a40d4f8556de6",
+    "data/competitions/FEC_fixtures.parquet": "415e7884db183818c79e5c976d876fedc839dce9143b72e55117c4d4551e9355",
+    "data/competitions/FEC_teams.json": "10f52c5b1af380bb5c39169ace8037e7c92acea6c49ebb0121dcb8437b0243ce",
+    "data/competitions/TR_BSL.parquet": "59fc10ae6bf135035a819d8295ef9990d7c46a6d1fce95c75ee7a8db7ea661a0",
+    "data/competitions/TR_BSL_fixture_ids.json": "6f9789b0da023e6ad47fb8df6d8fd9f4553efd2a0b44a8ec02bc4e233caefa80",
+    "data/competitions/TR_BSL_fixtures.parquet": "a49bb3b087befbee151900faea024179b30be8563db8149128f06815f33fe1a5",
+    "data/competitions/TR_BSL_teams.json": "0430eddfbbbfce4d295966b37c088f3d3d4511af6c438718e309847a1bd8310f",
+    "data/competitions/UKR.parquet": "eb97f15415017dc82ee35b84dd9732544e56ebcee1288ac4332838c68b2c0d62",
+    "data/competitions/UKR_fixtures.parquet": "4acdfa9e956bd3432504baea6c0ff06401f26c279a8797b2621b0ce446cfd3b1",
+    "data/competitions/UKR_teams.json": "2d4c3292e914fdad96796868e4e948f11827ed44dfca7f10660157e2aa2ed454",
+    "data/competitions/VTB.parquet": "b1c55c4f80374ca74d07bb1ab639750bf1742beaa53341fd3c621f955c0199a1",
+    "data/competitions/VTB_teams.json": "6e53cbb4332cf8d55f79d5653c8994e5eb44e682fe711cddc53d6d6850859ef9",
+    "data/context/club_games.parquet": "5ac6f417bd71b3d960ccd5d2ccf0a4c05179d8b5472cc98b85147c114fa5107b",
+    "data/context/venue_schedule.json": "967f0fcd0f1e5e9d06b26f835aba99a7c06c9d0b98c27d3bee195fcf86c5e3e0",
+    "data/context/venues.json": "6d10c43916246a70608b2efc2233fc44365865e1bc8096ee82f1319b72244ffe",
+    "data/domestic/BG_W_A.parquet": "a3a753b012959f41b398a5164bb25d419f9019b43632d9a6f7fb8e06f994920c",
+    "data/domestic/CZ_W_ZBL.parquet": "1ba3b7c2dbfafb99ed3e7caf878cbc63a3183cb5d9fb35d1fd371d47424ed2e2",
+    "data/domestic/CZ_W_ZBL_fixtures.parquet": "641234f22ef012790f7e72af64e392dfc617f5be94a9083cb6c1bca51412c7f7",
+    "data/domestic/FI_W_KL.parquet": "7014e2fc40e3b5a4a083967749517a94835738d95cf91a88ed614d64cdbef6db",
+    "data/domestic/GIRONA_LFE.parquet": "f4247582bdcb6a79af5bc3bb5988694bae9a12b7252f5c3cb4806337a6a42d57",
+    "data/domestic/PARNU_DOMESTIC.parquet": "9cb5b790c771aa3062497ebb5ee01dedae3b3ddb4d03d0724e93a6803e47a990",
+    "data/domestic/SI_W_SKL.parquet": "3944e1f13c5ce4fb5fea6373c054e3998b9a2b2f2353c15da44d8a3cd1552b2b",
+    "data/domestic/WABA_W.parquet": "666268b573361e46bb7e2061a1f48430a4b1bfe521eb10f6d0aaa44ff88ffe15",
+    "data/kutu.parquet": "e343530d0ed2129f57bb53ba3a42424cfdab3cf9274d1a449560d8915c5b92a3",
+    "data/kutu_nba.parquet": "fac8e8ce7263f810086b62d20292340a94b7e3fdc045bfede3c1a6b37f66ec11",
+    "data/maclar.parquet": "b47d00dbc49469d0511f23e1f2282a123e40302cca080aa3e6dcd85e619262b4",
+    "data/nba_mac_baglami.parquet": "0583b22db2a7b0a2638090c59133d15e7acc78ecec9714fd85b5e35d35aea148",
+    "data/nba_oyuncu_istatistik.parquet": "843e582c40688c8dc10364a509597993f5b92102096cd9807c7e5eb49dbc6e42",
+    "data/nba_oyuncu_mac.parquet": "10594f10e0ab18942d0e5c9c87128aee32c9d0389d79334c9062c2f12521f8c1",
+    "data/nba_takim_istatistik.parquet": "d2aad12f295306c66b257017e5661ed214fcc9ca01134b15fa6aef40efb18fe2",
+    "data/observations/injuries/20261022T213000Z_dd46866cf4b5.json": "68f4de6e9a4368d9e83e4a49564456a63e96f72a98dc99c45d59c7d4d4f8e166",
+    "data/observations/injuries/20261023T061500Z_563b1ecccc61.json": "b385b16feaa75e89e0802f3b106af6fed4dcd2472a339e230295a355d1ee0f9b",
+    "data/observations/injuries/20261023T061500Z_58ad47e908b3.json": "3302afa7c10c6d53a206e2b33ad8c997bd40f9a96edc43d5e3aad140738864bf",
+    "data/observations/injuries/20261023T230000Z_b0c0b852c472.json": "edd300481ea6cad5ede2f365f80df32cac8aae8cfeef8e30b41ea9fdb22fa0f4",
+    "data/observations/injuries/20261024T013000Z_03dfc28171a6.json": "7d848f1344a37ee1d491bb115a6ce8e98dd05695965ef45ebca7a4740ba4a322",
+    "data/observations/injuries/20261024T221500Z_cc6414153a8e.json": "894757496089d843d0f5a6f19d6ce7cfbfe0c2b8eb0de7b2c2e84d3e40381c52",
+    "data/observations/injuries/20261025T010000Z_8b9843252201.json": "1002ae8f0d1bede5498f2ea997e561623fb959d2347628527ffb3a95f8219c59",
+    "data/observations/injuries/20261025T223000Z_315aa29b280f.json": "c9023f941998039ac3424c56586f8f6bf597bc2fdcece1020863d02b8ed412ef",
+    "data/observations/injuries/20261026T010000Z_5764d34f942b.json": "9581dd2c5686e4b0e31d6dafc957df5c2103c7bcc87b87d696b2575996180b06",
+    "data/observations/injuries/20261026T234500Z_d9cd9c9a5a22.json": "bc34276e6ed51401a39885168b6f904657d943a27d4c1c1fc6719b986e3bfc6e",
+    "data/observations/injuries/20261027T234500Z_68c9fabd577e.json": "e6d07361633a9bef1262711bab0ce7c09d625e6eb6896f64cb14bdd154394b42",
+    "data/observations/live/20261022T215011_bf626de15413.json": "755c6c7ebcbe6b7dde333a7a95ae4ec5c6b4e8bc997eb90c4930dc1d4b246635",
+    "data/observations/live/20261023T061952_8612f1f6ffcf.json": "59b2ae0437c6897133b51f0d3a0f589724916c229c6166ccffd30e05f0338350",
+    "data/observations/live/20261023T062124_444efaf8400a.json": "8e266657164b03991147f08cc8a88ee5b8defc4b7662e7bc8cedc92db788e709",
+    "data/observations/live/20261023T230906_3e1fbcdc241d.json": "4885988604546ef219f293238553027f75d4814b5049b2856a40475535c16a6f",
+    "data/observations/live/20261024T013531_39972c7f19f1.json": "7e977dadb5dfc0856c2ccb5d49c5f2034c298f48ccad636041cf765c7804c353",
+    "data/observations/live/20261024T222854_a9242ec52375.json": "b514e14b7d627ebeaa092ede1c1f0aa7b829b8d4642f3a532b88d647732d859d",
+    "data/observations/live/20261025T223328_219b71abccdd.json": "b4820febf4a24fcf6e2bf986bc395cf7deb78c99ca35a157e37a3421fb230849",
+    "data/observations/live/20261026T011009_3989ca748def.json": "4a0b8fc1b8b53f8553e544550bd1884539b0b85e052ac2c1b1b2b848a08d1fdf",
+    "data/observations/live/20261026T235318_8b19e35cd922.json": "5535e626fb47c673e7f1e794aa082e50a27d660e6c9c616c9d45d6fd37c1b46d",
+    "data/observations/live/20261027T234651_f55ab643aa67.json": "ac22eab159595c64ee82f88de6ae4fde1f2f561763e47a72fa257806823e648e",
+    "data/observations/odds/iddaa_20261023T062139652368Z.json": "7272771227ce1e318d5836d9706950643fb7f5427d1173a0aae5cbbbd5f1cd2e",
+    "data/observations/odds/iddaa_20261023T230911529704Z.json": "36cc03c124060eafb43cec35157b5f5f621ea6e111e3a453a4df67508037366f",
+    "data/observations/odds/iddaa_20261024T013536463025Z.json": "b34817ced483564854ae70ab7dcdf2c817bb523530fa4455a732b0ac3d116562",
+    "data/observations/odds/iddaa_20261024T222858585928Z.json": "de9ac50d073e878a6a51f946acf908d96cd7f25ed2a31d62308154b845fb8287",
+    "data/observations/odds/iddaa_20261025T011016775738Z.json": "74f1c77b571cb2c25b1962df117125f5b9c863c2140b029c8af2c221fcf74dbe",
+    "data/observations/odds/iddaa_20261025T223331210784Z.json": "605b457756d9bd1128ab694ebf73fab6354d04481a2d10cdc6745e87918f7adc",
+    "data/observations/odds/iddaa_20261026T011013148097Z.json": "bb680a3f57f67ebe518312b5cf8cb60c722f58ed2b46a8749b02eb8c736c104c",
+    "data/observations/odds/iddaa_20261026T235321903038Z.json": "b0a084abb2992ffe7a0a60cc73236222b7cfb776efcd9c7456ed47ba71d3b6fd",
+    "data/observations/odds/iddaa_20261027T234654165129Z.json": "d7462c0216701729877759f5f413985f23ee531c1f65bcfe2428be0d303193f4",
+    "data/observations/odds/latest.json": "d7462c0216701729877759f5f413985f23ee531c1f65bcfe2428be0d303193f4",
+    "data/observations/runs/20261023T061944.json": "aa4571c7f963699c27d952a3e326c7223059e190e998b1b6097ab707926d05f1",
+    "data/observations/runs/20261023T062120.json": "97a99b4dd6c302c5b3565ecba1a00899549daebff50f496aa073a4a546a11ea9",
+    "data/observations/runs/20261023T230906.json": "59d755b1227dd0ade07707e398dba9e2ef3da6017f2f386fd8f58c7c39d1cb24",
+    "data/observations/runs/20261024T013530.json": "7b9941a12a2dd6adc06da9ced350ec262c2841905bc223330b871ad2b06162f8",
+    "data/observations/runs/20261024T222853.json": "c69afc9be62c6c7c302fe5ffea9c542254bb1dcf1d71626489e13885228b5cb5",
+    "data/observations/runs/20261025T011012.json": "49295ba1e2e95537fe1df8ec7d7578b8811f99287fdf045f158bb35424031419",
+    "data/observations/runs/20261025T223327.json": "66216a96d76c4d9c7f08fc4f64fae314210bc76f39c89dd754a828e20fd2bf4a",
+    "data/observations/runs/20261026T011009.json": "72af71a29e9c6174a22620ece289221ba614c2aae10df284d442e8da0c9c71d8",
+    "data/observations/runs/20261026T235317.json": "ae845213d094e23263541f610af0cd488dbfc05f819ec9a8417ea18d0bf8e617",
+    "data/observations/runs/20261027T234650.json": "b70a03a4928861141c23d27db9cb77d49bad2b34acb62f5a26e1acec34a9a897",
+    "data/oyuncular.parquet": "6f54bdc912c3b00700f67bdc9a7a0f15b34993238878143ae97872306a9674c1",
+    "data/oyuncular_nba.parquet": "b51411e1f5148d9f7459d0379d7cc9650f5787fd559922e6212f64fe5f2f006e",
+    "data/recent/E.parquet": "2484d8cd5e5eb57377f6d06249f257c746bbd310ab42de01152c7694b9d0b25f"
+  },
+  "forecasts": [
+    {
+      "fixture": {
+        "event_id": "FEC_F135887",
+        "league": "FEC",
+        "home": "FEC_89375",
+        "away": "FEC_9118",
+        "start_utc": "2026-11-03T17:00:00+00:00",
+        "captured_at": "2026-10-28T13:24:03.468973+00:00",
+        "source_url": "https://www.fiba.basketball/en/events/fiba-europe-cup-26-27/games",
+        "home_name": "Athilitikos Omilos Mykonoy KAE",
+        "away_name": "CSM CSU Oradea",
+        "status": "scheduled"
+      },
+      "prediction": {
+        "lig": "FEC",
+        "ev": "FEC_89375",
+        "dep": "FEC_9118",
+        "tarih_utc": "2026-11-03T17:00:00+00:00",
+        "model": "separate-competition-ridge-v1",
+        "ev_kazanir": 0.493160409688084,
+        "ev_skor": 79.88269886741786,
+        "dep_skor": 80.16631872029335,
+        "fark": -0.2836198528754852,
+        "fark_80": [
+          -21.48340274888101,
+          20.916163043130037
+        ],
+        "toplam": 160.0490175877112,
+        "toplam_80": [
+          140.39614443452604,
+          179.70189074089637
+        ],
+        "empirical_intervals_research": {
+          "margin": [
+            -21.445292358726128,
+            20.249269796182553
+          ],
+          "total": [
+            139.97392926436893,
+            179.79395161950066
+          ],
+          "note": "Prior-season empirical residual quantiles; research only, not validated conditional coverage."
+        },
+        "tum_modeller": {
+          "separate-competition-ridge-v1": 0.493160409688084
+        },
+        "uzatma": null,
+        "az_veri": [
+          "FEC_89375"
+        ],
+        "recent_games": {
+          "FEC_89375": 3,
+          "FEC_9118": 15
+        },
+        "auxiliary_workload": {
+          "home": {
+            "observed": false,
+            "games_7d": null,
+            "games_14d": null,
+            "rest_days": null,
+            "latest_game_utc": null
+          },
+          "away": {
+            "observed": false,
+            "games_7d": null,
+            "games_14d": null,
+            "rest_days": null,
+            "latest_game_utc": null
+          },
+          "used_in_score_model": false,
+          "coverage": "Partial official club cohorts; missing observations are not zero workload."
+        },
+        "training_cutoff": "2026-11-03T00:00:00+00:00",
+        "calibration_season": "2025-26",
+        "experimental": true,
+        "dataset_sha256": "5fa80e1e789aa8daee2e0080031bf368976574b74a95ea19610a40d4f8556de6",
+        "note": "Independent competition/gender model. Low-history forecasts rely heavily on league priors; their intervals are not separately validated. Historical scores may include overtime; ties excluded from binary winner evaluation.",
+        "data_quality": {
+          "status": "limited",
+          "issues": [
+            "FEC_89375: fewer than five observed games in 400 days"
+          ],
+          "blocking_issues": [
+            "FEC_89375: fewer than five observed games in 400 days"
+          ],
+          "diagnostic_gate_passed": false,
+          "team_history": {
+            "FEC_89375": {
+              "all_prior_games": 3,
+              "recent_400d_games": 3,
+              "days_since_last": 7.333333333333333,
+              "effective_games_180d_half_life": 2.8398930048430895,
+              "opponents": 3,
+              "seasons": [
+                "2026-27"
+              ]
+            },
+            "FEC_9118": {
+              "all_prior_games": 39,
+              "recent_400d_games": 15,
+              "days_since_last": 6.333333333333333,
+              "effective_games_180d_half_life": 7.390402128912122,
+              "opponents": 9,
+              "seasons": [
+                "2023-24",
+                "2024-25",
+                "2025-26",
+                "2026-27"
+              ]
+            }
+          },
+          "information_cutoff_utc": "2026-10-28T00:00:00+00:00",
+          "recommendation_validated": false,
+          "thresholds": "Five games / 400 days and 60-day staleness are diagnostic flags, not validated selection thresholds.",
+          "unknowns": [
+            "Full domestic schedule coverage",
+            "Expected roster and injuries",
+            "Historical publication times for retrospectively collected results"
+          ],
+          "note": "Data adequacy is separate from win probability; no validated recommendation or accuracy guarantee."
+        },
+        "recommendation_validated": false,
+        "selection_eligible": false
+      }
+    }
+  ],
+  "selection_rule": "Earliest verified future fixtures with supported identities; no outcome-based replacement.",
+  "note": "Research predictions. Two games cannot establish general accuracy. Baseline and all limited-data flags remain visible.",
+  "payload_sha256": "8a0db64ed8b09f1d586716fb8ecb1da90755bbd399b19ec22ff58f1562ccf618"
+}
