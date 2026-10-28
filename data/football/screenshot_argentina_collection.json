@@ -1,20 +1,22 @@
 {
-  "revision": "02d6acb8ba2bc3605fa1f84c42e399952f158c57",
+  "revision": "07dc9c3ef323659a6b18b99356890918b54ac170",
   "files": [
     {
       "league": "AR1",
       "season": "2026",
-      "rows": 447,
-      "sha256": "967c2da7a52e2f8c8e2f253b41f4dee80faa8aaaf9f69dd0d117469f7c141e96"
+      "rows": 449,
+      "sha256": "dbe8f7896e1f5f67e12a70811b397e6c52c138ae898c1b451f5634f2148090ec"
     },
     {
       "league": "AR2",
       "season": "2026",
-      "rows": 628,
-      "sha256": "967c2da7a52e2f8c8e2f253b41f4dee80faa8aaaf9f69dd0d117469f7c141e96"
+      "rows": 630,
+      "sha256": "dbe8f7896e1f5f67e12a70811b397e6c52c138ae898c1b451f5634f2148090ec"
     }
   ],
+  "errors": [],
+  "partial": false,
   "license": "CC-BY-SA-4.0",
-  "checked_at_utc": "2026-10-27T12:32:44.213636+00:00",
+  "checked_at_utc": "2026-10-28T05:06:29.407742+00:00",
   "note": "Wikipedia-only regular stages; transformed data retains CC BY-SA 4.0. Not official verification."
 }

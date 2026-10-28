@@ -13,7 +13,7 @@ def run(backfill=False):
         else: subprocess.run(['git','-C',str(p),'pull','--ff-only'],check=True,timeout=180,capture_output=True)
         import pandas as pd
         report=argentina(p,first=2023 if backfill else pd.Timestamp.now(tz='UTC').year)
-        files.extend(report['files'])
+        files.extend(report['files']); errors.extend(report.get('errors',[]))
     except Exception as exc:
         errors.append(dict(source='argentina',error=str(exc),retained_previous=True))
     # Static historical Mexico is independent of the current Argentina source.

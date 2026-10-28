@@ -14,10 +14,15 @@ def argentina(directory,root=ROOT,first=2023):
     directory=Path(directory);license_text=(directory/'LICENSE-DATOS.md').read_text()
     if 'CC BY-SA 4.0' not in license_text:raise ValueError('Expected share-alike data license')
     revision=subprocess.check_output(['git','-C',str(directory),'rev-parse','HEAD'],text=True).strip()
-    captured=pd.Timestamp.now(tz='UTC').isoformat();report=[]
-    for year in range(first,pd.Timestamp.now(tz='UTC').year+1):
+    captured=pd.Timestamp.now(tz='UTC').isoformat();report=[];errors=[]
+    current_year=int(captured[:4])
+    if not 2023 <= first <= current_year:raise ValueError('Invalid Argentina source years')
+    for year in range(first,current_year+1):
         path=directory/'data'/f'partidos-{year}.csv'
-        if not path.exists():continue
+        if not path.exists():
+            errors.append(dict(source='argentina',season=str(year),error='Source file unavailable',
+                source_url=f'https://github.com/rhinoah/futbol-argentino-data/blob/{revision}/data/{path.name}',retained_previous=True))
+            continue
         f=pd.read_csv(path).fillna('');groups={}
         for m in f.to_dict('records'):
             # Only direct Wikipedia attribution; exclude mixed/noncommercial sources,
@@ -32,8 +37,13 @@ def argentina(directory,root=ROOT,first=2023):
             r=row(code,str(year),m['date'],m['home_team'],m['away_team'],list(map(int,scores)),m['source'],captured)
             r.update(source_kind='publisher_CC_BY_SA_not_official',license='CC-BY-SA-4.0',attribution='Wikipedia contributors; rhinoah/futbol-argentino-data',publisher_url=f'https://github.com/rhinoah/futbol-argentino-data/blob/{revision}/data/{path.name}')
             groups.setdefault(code,[]).append(r)
+        for code in (('AR2','AR1') if year==2026 else ('AR2',)):
+            if code not in groups:
+                errors.append(dict(source='argentina',league=code,season=str(year),
+                    error='No eligible source rows after license, stage and score checks',
+                    source_sha256=hashlib.sha256(path.read_bytes()).hexdigest(),retained_previous=True))
         for code,rows in groups.items():report.append(dict(league=code,season=str(year),rows=save(rows,code,str(year),root),sha256=hashlib.sha256(path.read_bytes()).hexdigest()))
-    result=dict(revision=revision,files=report,license='CC-BY-SA-4.0',checked_at_utc=captured,note='Wikipedia-only regular stages; transformed data retains CC BY-SA 4.0. Not official verification.')
+    result=dict(revision=revision,files=report,errors=errors,partial=bool(errors),license='CC-BY-SA-4.0',checked_at_utc=captured,note='Wikipedia-only regular stages; transformed data retains CC BY-SA 4.0. Not official verification.')
     write_json(Path(root)/'screenshot_argentina_collection.json',result);return result
 
 
