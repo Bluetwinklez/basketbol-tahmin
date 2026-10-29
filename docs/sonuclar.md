@@ -1,6 +1,6 @@
 # Gerçek çalıştırma sonuçları
 
-Rapor zamanı (UTC): 2026-10-22T06:45:41.984752+00:00. Toplama: 2026-10-22T06:41:56.963445+00:00.
+Rapor zamanı (UTC): 2026-10-29T09:20:41.946100+00:00. Toplama: 2026-10-22T06:41:56.963445+00:00.
 
 Tam komutlar ve ortam: [README](../README.md) ve [ortam.txt](kanit/ortam.txt).
 
@@ -209,15 +209,150 @@ Skor kaynaklarında raporlanan hata yok.
 
 Oran sezonları ve kaynak mesajları:
 
-| sezon | status | error |
-| --- | --- | --- |
-| 2026-27 | atlandı | SBR kullanım şartları yazılı izin gerektiriyor (https://www.sportsbookreviewsonline.com/terms/); --sbr-izni verilmedi |
+| sezon | status | rows | error |
+| --- | --- | --- | --- |
+| 2014-15 | ok | 1311.0000 | — |
+| 2015-16 | ok | 1316.0000 | — |
+| 2016-17 | ok | 1309.0000 | — |
+| 2017-18 | ok | 1312.0000 | — |
+| 2018-19 | ok | 1312.0000 | — |
+| 2019-20 | ok | 1143.0000 | — |
+| 2020-21 | ok | 1171.0000 | — |
+| 2021-22 | ok | 1323.0000 | — |
+| 2022-23 | ok | 664.0000 | — |
+| 2023-24 | missing | — | Arşiv sayfası yok (ana sayfaya yönlendirildi): https://www.sportsbookreviewsonline.com/scoresoddsarchives/nba-odds-2023-24/ |
+| 2024-25 | missing | — | Arşiv sayfası yok (ana sayfaya yönlendirildi): https://www.sportsbookreviewsonline.com/scoresoddsarchives/nba-odds-2024-25/ |
+| 2025-26 | missing | — | Arşiv sayfası yok (ana sayfaya yönlendirildi): https://www.sportsbookreviewsonline.com/scoresoddsarchives/nba-odds-2025-26/ |
 
 ## NBA piyasa kıyası ve bahis simülasyonu
 
-**Yapılmadı.** NBA piyasa kıyası, eğitimde avantaj eşiği seçimi, ROI / en büyük düşüş / bahis sayısı hesaplanmadı: kapanış oranı kullanılmadı. Sportsbook Reviews Online arşivi robots.txt ile izinli ve 2014-15…2022-23 sayfaları oran tablosu içeriyor; ancak sitenin Terms sayfası "içerik yazılı izin olmadan kullanılamaz veya çoğaltılamaz" diyor. Görev kullanım şartlarına uymayı istediği için oranlar ayrıştırılmadı. İzin alındığında `python -m bbtahmin topla --ligler NBA --baslangic 2014 --sbr-izni` ve ardından `backtest` ile bu bölüm otomatik dolar (ayrıştırıcı, eşleştirme, vig çıkarma ve eşik seçimi fixture testleriyle doğrulandı).
+Aynı maç alt kümesinde model ve vig'i çıkarılmış kapanış olasılığı:
 
-Eşleşmeyen oran satırı sayısı: **hesaplanmadı (oran satırı ayrıştırılmadı)**. Açık franchise eşlemesi src/bbtahmin/veri/teams.py içinde.
+| sezon | model | n | log_loss | brier | accuracy |
+| --- | --- | --- | --- | --- | --- |
+| 2016-17 | elo | 1308 | 0.6275 | 0.2193 | 0.6422 |
+| 2016-17 | piyasa_vigsiz | 1308 | 0.6082 | 0.2105 | 0.6728 |
+| 2016-17 | hist_gradient_boosting | 1308 | 0.6264 | 0.2186 | 0.6567 |
+| 2016-17 | home | 1308 | 0.6795 | 0.2432 | 0.5826 |
+| 2016-17 | logistic | 1308 | 0.6212 | 0.2163 | 0.6498 |
+| 2016-17 | mov_elo | 1308 | 0.6304 | 0.2197 | 0.6491 |
+| 2016-17 | skor | 1308 | 0.6188 | 0.2153 | 0.6529 |
+| 2016-17 | topluluk | 1308 | 0.6212 | 0.2163 | 0.6468 |
+| 2017-18 | elo | 1311 | 0.6287 | 0.2192 | 0.6438 |
+| 2017-18 | piyasa_vigsiz | 1311 | 0.5913 | 0.2031 | 0.6873 |
+| 2017-18 | hist_gradient_boosting | 1311 | 0.6222 | 0.2163 | 0.6476 |
+| 2017-18 | home | 1311 | 0.6781 | 0.2425 | 0.5866 |
+| 2017-18 | logistic | 1311 | 0.6156 | 0.2135 | 0.6560 |
+| 2017-18 | mov_elo | 1311 | 0.6199 | 0.2153 | 0.6575 |
+| 2017-18 | skor | 1311 | 0.6134 | 0.2127 | 0.6621 |
+| 2017-18 | topluluk | 1311 | 0.6149 | 0.2132 | 0.6545 |
+| 2018-19 | elo | 1312 | 0.6219 | 0.2163 | 0.6639 |
+| 2018-19 | piyasa_vigsiz | 1312 | 0.5953 | 0.2044 | 0.6707 |
+| 2018-19 | hist_gradient_boosting | 1312 | 0.6144 | 0.2131 | 0.6585 |
+| 2018-19 | home | 1312 | 0.6767 | 0.2418 | 0.5907 |
+| 2018-19 | logistic | 1312 | 0.6116 | 0.2117 | 0.6608 |
+| 2018-19 | mov_elo | 1312 | 0.6180 | 0.2146 | 0.6524 |
+| 2018-19 | skor | 1312 | 0.6114 | 0.2116 | 0.6608 |
+| 2018-19 | topluluk | 1312 | 0.6125 | 0.2121 | 0.6593 |
+| 2019-20 | elo | 979 | 0.6217 | 0.2163 | 0.6650 |
+| 2019-20 | piyasa_vigsiz | 979 | 0.6059 | 0.2085 | 0.6721 |
+| 2019-20 | hist_gradient_boosting | 979 | 0.6250 | 0.2176 | 0.6547 |
+| 2019-20 | home | 979 | 0.6906 | 0.2487 | 0.5506 |
+| 2019-20 | logistic | 979 | 0.6218 | 0.2165 | 0.6609 |
+| 2019-20 | mov_elo | 979 | 0.6225 | 0.2169 | 0.6568 |
+| 2019-20 | skor | 979 | 0.6181 | 0.2149 | 0.6588 |
+| 2019-20 | topluluk | 979 | 0.6188 | 0.2152 | 0.6650 |
+| 2020-21 | elo | 1170 | 0.6470 | 0.2280 | 0.6068 |
+| 2020-21 | piyasa_vigsiz | 1170 | 0.6202 | 0.2162 | 0.6556 |
+| 2020-21 | hist_gradient_boosting | 1170 | 0.6405 | 0.2247 | 0.6308 |
+| 2020-21 | home | 1170 | 0.6913 | 0.2490 | 0.5462 |
+| 2020-21 | logistic | 1170 | 0.6375 | 0.2235 | 0.6222 |
+| 2020-21 | mov_elo | 1170 | 0.6454 | 0.2269 | 0.6239 |
+| 2020-21 | skor | 1170 | 0.6363 | 0.2232 | 0.6239 |
+| 2020-21 | topluluk | 1170 | 0.6381 | 0.2238 | 0.6248 |
+| 2021-22 | elo | 1322 | 0.6380 | 0.2233 | 0.6483 |
+| 2021-22 | piyasa_vigsiz | 1322 | 0.6071 | 0.2098 | 0.6762 |
+| 2021-22 | hist_gradient_boosting | 1322 | 0.6289 | 0.2191 | 0.6558 |
+| 2021-22 | home | 1322 | 0.6902 | 0.2485 | 0.5477 |
+| 2021-22 | logistic | 1322 | 0.6221 | 0.2163 | 0.6626 |
+| 2021-22 | mov_elo | 1322 | 0.6338 | 0.2212 | 0.6596 |
+| 2021-22 | skor | 1322 | 0.6218 | 0.2162 | 0.6687 |
+| 2021-22 | topluluk | 1322 | 0.6241 | 0.2171 | 0.6657 |
+| 2022-23 | elo | 664 | 0.6487 | 0.2281 | 0.6370 |
+| 2022-23 | piyasa_vigsiz | 664 | 0.6390 | 0.2234 | 0.6386 |
+| 2022-23 | hist_gradient_boosting | 664 | 0.6584 | 0.2330 | 0.6130 |
+| 2022-23 | home | 664 | 0.6743 | 0.2406 | 0.6009 |
+| 2022-23 | logistic | 664 | 0.6564 | 0.2319 | 0.6114 |
+| 2022-23 | mov_elo | 664 | 0.6481 | 0.2279 | 0.6370 |
+| 2022-23 | skor | 664 | 0.6538 | 0.2308 | 0.6355 |
+| 2022-23 | topluluk | 664 | 0.6506 | 0.2293 | 0.6295 |
+| 2017-18 | harman_skor | 1311 | 0.5933 | 0.2038 | 0.6873 |
+| 2018-19 | harman_skor | 1312 | 0.5951 | 0.2043 | 0.6707 |
+| 2019-20 | harman_skor | 979 | 0.6060 | 0.2087 | 0.6711 |
+| 2020-21 | harman_skor | 1170 | 0.6197 | 0.2159 | 0.6556 |
+| 2021-22 | harman_skor | 1322 | 0.6071 | 0.2098 | 0.6785 |
+| 2022-23 | harman_skor | 664 | 0.6390 | 0.2236 | 0.6506 |
+| 2017-18 | harman_topluluk | 1311 | 0.5935 | 0.2039 | 0.6888 |
+| 2018-19 | harman_topluluk | 1312 | 0.5951 | 0.2043 | 0.6707 |
+| 2019-20 | harman_topluluk | 979 | 0.6064 | 0.2089 | 0.6711 |
+| 2020-21 | harman_topluluk | 1170 | 0.6198 | 0.2159 | 0.6547 |
+| 2021-22 | harman_topluluk | 1322 | 0.6072 | 0.2099 | 0.6793 |
+| 2022-23 | harman_topluluk | 664 | 0.6387 | 0.2234 | 0.6521 |
+| 2017-18 | harman_logistic | 1311 | 0.5935 | 0.2039 | 0.6873 |
+| 2018-19 | harman_logistic | 1312 | 0.5951 | 0.2043 | 0.6707 |
+| 2019-20 | harman_logistic | 979 | 0.6062 | 0.2088 | 0.6721 |
+| 2020-21 | harman_logistic | 1170 | 0.6198 | 0.2159 | 0.6547 |
+| 2021-22 | harman_logistic | 1322 | 0.6072 | 0.2099 | 0.6778 |
+| 2022-23 | harman_logistic | 664 | 0.6389 | 0.2235 | 0.6521 |
+
+Bahis simülasyonu (eşik yalnız önceki sezonların walk-forward tahminlerinden; sabit pay=%1 güncel sermaye, çeyrek Kelly):
+
+| sezon | model | method | status | threshold | train_roi | train_bets | roi | max_drawdown | bets | final_equity |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 2016-17 | logistic | fixed | eşik seçilemedi: önceki oranlı sezon yok | — | — | — | — | — | — | — |
+| 2016-17 | logistic | kelly | eşik seçilemedi: önceki oranlı sezon yok | — | — | — | — | — | — | — |
+| 2017-18 | logistic | fixed | ok | 0.0750 | 0.1089 | 460.0000 | -0.0420 | 0.5209 | 574.0000 | 0.7325 |
+| 2017-18 | logistic | kelly | ok | 0.0750 | 0.0056 | 460.0000 | -0.0472 | 0.9702 | 574.0000 | 0.0508 |
+| 2018-19 | logistic | fixed | ok | 0.0750 | 0.0103 | 1034.0000 | 0.0459 | 0.2008 | 463.0000 | 1.2192 |
+| 2018-19 | logistic | kelly | ok | 0.0500 | -0.0229 | 1487.0000 | -0.0702 | 0.8415 | 684.0000 | 0.2455 |
+| 2019-20 | logistic | fixed | ok | 0.1000 | 0.0348 | 965.0000 | -0.0454 | 0.2776 | 291.0000 | 0.8790 |
+| 2019-20 | logistic | kelly | ok | 0.0500 | -0.0234 | 2171.0000 | -0.0361 | 0.8324 | 566.0000 | 0.3774 |
+| 2020-21 | logistic | fixed | ok | 0.0750 | 0.0223 | 1915.0000 | -0.0121 | 0.4005 | 530.0000 | 0.9311 |
+| 2020-21 | logistic | kelly | ok | 0.0500 | -0.0234 | 2737.0000 | -0.0264 | 0.9475 | 724.0000 | 0.2371 |
+| 2021-22 | logistic | fixed | ok | 0.0750 | 0.0136 | 2445.0000 | -0.0278 | 0.3465 | 479.0000 | 0.8680 |
+| 2021-22 | logistic | kelly | ok | 0.0500 | -0.0234 | 3461.0000 | -0.0556 | 0.8142 | 729.0000 | 0.2642 |
+| 2022-23 | logistic | fixed | ok | 0.1000 | 0.0122 | 1925.0000 | -0.0282 | 0.2582 | 158.0000 | 0.9528 |
+| 2022-23 | logistic | kelly | ok | 0.0500 | -0.0234 | 4190.0000 | -0.0261 | 0.8178 | 356.0000 | 0.5807 |
+| 2016-17 | hist_gradient_boosting | fixed | eşik seçilemedi: önceki oranlı sezon yok | — | — | — | — | — | — | — |
+| 2016-17 | hist_gradient_boosting | kelly | eşik seçilemedi: önceki oranlı sezon yok | — | — | — | — | — | — | — |
+| 2017-18 | hist_gradient_boosting | fixed | ok | 0.1000 | 0.0621 | 381.0000 | -0.1320 | 0.5611 | 489.0000 | 0.4869 |
+| 2017-18 | hist_gradient_boosting | kelly | ok | 0.0750 | -0.0208 | 561.0000 | -0.0699 | 0.9927 | 652.0000 | 0.0095 |
+| 2018-19 | hist_gradient_boosting | fixed | ok | 0.0100 | -0.0152 | 2274.0000 | -0.0135 | 0.4750 | 1090.0000 | 0.8754 |
+| 2018-19 | hist_gradient_boosting | kelly | ok | 0.0300 | -0.0406 | 1998.0000 | -0.0530 | 0.9182 | 956.0000 | 0.1731 |
+| 2019-20 | hist_gradient_boosting | fixed | ok | 0.0750 | -0.0089 | 1765.0000 | 0.0501 | 0.2810 | 450.0000 | 1.2280 |
+| 2019-20 | hist_gradient_boosting | kelly | ok | 0.0300 | -0.0407 | 2954.0000 | -0.0356 | 0.9060 | 741.0000 | 0.4217 |
+| 2020-21 | hist_gradient_boosting | fixed | ok | 0.0750 | 0.0022 | 2215.0000 | -0.0295 | 0.4421 | 583.0000 | 0.8301 |
+| 2020-21 | hist_gradient_boosting | kelly | ok | 0.0300 | -0.0407 | 3695.0000 | -0.0403 | 0.9604 | 916.0000 | 0.1405 |
+| 2021-22 | hist_gradient_boosting | fixed | ok | 0.0750 | -0.0050 | 2798.0000 | -0.0734 | 0.3948 | 517.0000 | 0.7073 |
+| 2021-22 | hist_gradient_boosting | kelly | ok | 0.0300 | -0.0407 | 4611.0000 | -0.1630 | 0.9712 | 968.0000 | 0.0392 |
+| 2022-23 | hist_gradient_boosting | fixed | ok | 0.0100 | -0.0093 | 6332.0000 | -0.0245 | 0.2527 | 563.0000 | 0.8661 |
+| 2022-23 | hist_gradient_boosting | kelly | ok | 0.0300 | -0.0407 | 5579.0000 | -0.0297 | 0.8081 | 497.0000 | 0.4892 |
+| 2016-17 | mov_elo | fixed | eşik seçilemedi: önceki oranlı sezon yok | — | — | — | — | — | — | — |
+| 2016-17 | mov_elo | kelly | eşik seçilemedi: önceki oranlı sezon yok | — | — | — | — | — | — | — |
+| 2017-18 | mov_elo | fixed | ok | 0.1000 | 0.0360 | 353.0000 | -0.0953 | 0.4631 | 434.0000 | 0.6302 |
+| 2017-18 | mov_elo | kelly | ok | 0.0200 | -0.0417 | 1032.0000 | -0.0386 | 0.9927 | 1110.0000 | 0.0138 |
+| 2018-19 | mov_elo | fixed | ok | 0.0500 | -0.0095 | 1613.0000 | -0.0779 | 0.5585 | 771.0000 | 0.5881 |
+| 2018-19 | mov_elo | kelly | ok | 0.0200 | -0.0411 | 2142.0000 | -0.1480 | 0.9674 | 1056.0000 | 0.0728 |
+| 2019-20 | mov_elo | fixed | ok | 0.1000 | -0.0154 | 1172.0000 | 0.2196 | 0.2345 | 370.0000 | 1.9269 |
+| 2019-20 | mov_elo | kelly | ok | 0.0200 | -0.0411 | 3198.0000 | 0.0629 | 0.8668 | 835.0000 | 2.7827 |
+| 2020-21 | mov_elo | fixed | ok | 0.1000 | 0.0439 | 1542.0000 | 0.0153 | 0.2470 | 430.0000 | 1.0699 |
+| 2020-21 | mov_elo | kelly | ok | 0.0200 | -0.0411 | 4033.0000 | -0.0573 | 0.9746 | 995.0000 | 0.0743 |
+| 2021-22 | mov_elo | fixed | ok | 0.1000 | 0.0340 | 1972.0000 | -0.1589 | 0.4267 | 366.0000 | 0.5829 |
+| 2021-22 | mov_elo | kelly | ok | 0.0200 | -0.0411 | 5028.0000 | -0.1624 | 0.9923 | 1053.0000 | 0.0121 |
+| 2022-23 | mov_elo | fixed | ok | 0.1000 | 0.0003 | 2338.0000 | 0.1234 | 0.1715 | 193.0000 | 1.2827 |
+| 2022-23 | mov_elo | kelly | ok | 0.0200 | -0.0411 | 6081.0000 | 0.0382 | 0.7857 | 539.0000 | 2.2812 |
+
+Eşleşmeyen oran satırı: 169 / 10861; nedenler: {"Basketball Reference maçı yok": 166, "Skor uyuşmuyor": 3}.
 
 ## Yöntem ve belirsizlik
 
@@ -269,7 +404,7 @@ kanit/: metrikler.csv, toplam.csv, tahminler.csv, kalibrasyon.csv, anlamlilik.cs
 
 ## Test sonucu
 
-Pytest: 78 test; 0 başarısız, 0 hata, 0 atlanan. Ayrı negatif kontrol (tests/negative_control.py, kasıtlı sızıntılı özellik): 1 test, 1 başarısız — beklenen sonuç, sızıntı yakalandı.
+Pytest: 80 test; 0 başarısız, 0 hata, 0 atlanan. Ayrı negatif kontrol (tests/negative_control.py, kasıtlı sızıntılı özellik): 1 test, 1 başarısız — beklenen sonuç, sızıntı yakalandı.
 
 ## Kalibrasyon görselleri
 

@@ -553,12 +553,316 @@
   ],
   "odds": [
     {
-      "sezon": "2026-27",
-      "status": "atlandı",
-      "error": "SBR kullanım şartları yazılı izin gerektiriyor (https://www.sportsbookreviewsonline.com/terms/); --sbr-izni verilmedi"
+      "sezon": "2014-15",
+      "status": "ok",
+      "rows": 1311
+    },
+    {
+      "sezon": "2015-16",
+      "status": "ok",
+      "rows": 1316
+    },
+    {
+      "sezon": "2016-17",
+      "status": "ok",
+      "rows": 1309
+    },
+    {
+      "sezon": "2017-18",
+      "status": "ok",
+      "rows": 1312
+    },
+    {
+      "sezon": "2018-19",
+      "status": "ok",
+      "rows": 1312
+    },
+    {
+      "sezon": "2019-20",
+      "status": "ok",
+      "rows": 1143
+    },
+    {
+      "sezon": "2020-21",
+      "status": "ok",
+      "rows": 1171
+    },
+    {
+      "sezon": "2021-22",
+      "status": "ok",
+      "rows": 1323
+    },
+    {
+      "sezon": "2022-23",
+      "status": "ok",
+      "rows": 664
+    },
+    {
+      "sezon": "2023-24",
+      "status": "missing",
+      "error": "Arşiv sayfası yok (ana sayfaya yönlendirildi): https://www.sportsbookreviewsonline.com/scoresoddsarchives/nba-odds-2023-24/"
+    },
+    {
+      "sezon": "2024-25",
+      "status": "missing",
+      "error": "Arşiv sayfası yok (ana sayfaya yönlendirildi): https://www.sportsbookreviewsonline.com/scoresoddsarchives/nba-odds-2024-25/"
+    },
+    {
+      "sezon": "2025-26",
+      "status": "missing",
+      "error": "Arşiv sayfası yok (ana sayfaya yönlendirildi): https://www.sportsbookreviewsonline.com/scoresoddsarchives/nba-odds-2025-26/"
     }
   ],
-  "unmatched_odds_rows": null,
+  "unmatched_odds_rows": {
+    "count": 169,
+    "total": 10861,
+    "reasons": {
+      "Basketball Reference maçı yok": 166,
+      "Skor uyuşmuyor": 3
+    },
+    "examples": [
+      {
+        "sezon": "2014-15",
+        "tarih_yerel": "2014-11-21 00:00:00",
+        "ev_adi": "Toronto",
+        "dep_adi": "Milwaukee",
+        "ev_skor": "124",
+        "dep_skor": "83",
+        "ev_ml": "-430.0",
+        "dep_ml": "340.0",
+        "tarafsiz": "False",
+        "neden": "Skor uyuşmuyor"
+      },
+      {
+        "sezon": "2016-17",
+        "tarih_yerel": "2017-01-20 00:00:00",
+        "ev_adi": "LALakers",
+        "dep_adi": "Indiana",
+        "ev_skor": "108",
+        "dep_skor": "96",
+        "ev_ml": "150.0",
+        "dep_ml": "-170.0",
+        "tarafsiz": "False",
+        "neden": "Skor uyuşmuyor"
+      },
+      {
+        "sezon": "2017-18",
+        "tarih_yerel": "2017-10-19 00:00:00",
+        "ev_adi": "Toronto",
+        "dep_adi": "Chicago",
+        "ev_skor": "117",
+        "dep_skor": "101",
+        "ev_ml": "-1400.0",
+        "dep_ml": "800.0",
+        "tarafsiz": "False",
+        "neden": "Skor uyuşmuyor"
+      },
+      {
+        "sezon": "2019-20",
+        "tarih_yerel": "2019-08-01 00:00:00",
+        "ev_adi": "Denver",
+        "dep_adi": "Miami",
+        "ev_skor": "105",
+        "dep_skor": "125",
+        "ev_ml": "155.0",
+        "dep_ml": "-175.0",
+        "tarafsiz": "True",
+        "neden": "Basketball Reference maçı yok"
+      },
+      {
+        "sezon": "2019-20",
+        "tarih_yerel": "2019-08-01 00:00:00",
+        "ev_adi": "OklahomaCity",
+        "dep_adi": "Utah",
+        "ev_skor": "110",
+        "dep_skor": "94",
+        "ev_ml": "-110.0",
+        "dep_ml": "-110.0",
+        "tarafsiz": "True",
+        "neden": "Basketball Reference maçı yok"
+      },
+      {
+        "sezon": "2019-20",
+        "tarih_yerel": "2019-08-01 00:00:00",
+        "ev_adi": "LAClippers",
+        "dep_adi": "NewOrleans",
+        "ev_skor": "126",
+        "dep_skor": "103",
+        "ev_ml": "-220.0",
+        "dep_ml": "190.0",
+        "tarafsiz": "True",
+        "neden": "Basketball Reference maçı yok"
+      },
+      {
+        "sezon": "2019-20",
+        "tarih_yerel": "2019-08-01 00:00:00",
+        "ev_adi": "Indiana",
+        "dep_adi": "Philadelphia",
+        "ev_skor": "127",
+        "dep_skor": "121",
+        "ev_ml": "240.0",
+        "dep_ml": "-280.0",
+        "tarafsiz": "True",
+        "neden": "Basketball Reference maçı yok"
+      },
+      {
+        "sezon": "2019-20",
+        "tarih_yerel": "2019-08-01 00:00:00",
+        "ev_adi": "Toronto",
+        "dep_adi": "LALakers",
+        "ev_skor": "107",
+        "dep_skor": "92",
+        "ev_ml": "130.0",
+        "dep_ml": "-150.0",
+        "tarafsiz": "True",
+        "neden": "Basketball Reference maçı yok"
+      },
+      {
+        "sezon": "2019-20",
+        "tarih_yerel": "2019-08-02 00:00:00",
+        "ev_adi": "Brooklyn",
+        "dep_adi": "Washington",
+        "ev_skor": "118",
+        "dep_skor": "110",
+        "ev_ml": "-170.0",
+        "dep_ml": "150.0",
+        "tarafsiz": "True",
+        "neden": "Basketball Reference maçı yok"
+      },
+      {
+        "sezon": "2019-20",
+        "tarih_yerel": "2019-08-02 00:00:00",
+        "ev_adi": "Boston",
+        "dep_adi": "Portland",
+        "ev_skor": "128",
+        "dep_skor": "124",
+        "ev_ml": "-170.0",
+        "dep_ml": "150.0",
+        "tarafsiz": "True",
+        "neden": "Basketball Reference maçı yok"
+      },
+      {
+        "sezon": "2019-20",
+        "tarih_yerel": "2019-08-02 00:00:00",
+        "ev_adi": "Memphis",
+        "dep_adi": "SanAntonio",
+        "ev_skor": "106",
+        "dep_skor": "108",
+        "ev_ml": "-155.0",
+        "dep_ml": "135.0",
+        "tarafsiz": "True",
+        "neden": "Basketball Reference maçı yok"
+      },
+      {
+        "sezon": "2019-20",
+        "tarih_yerel": "2019-08-02 00:00:00",
+        "ev_adi": "Orlando",
+        "dep_adi": "Sacramento",
+        "ev_skor": "132",
+        "dep_skor": "116",
+        "ev_ml": "-130.0",
+        "dep_ml": "110.0",
+        "tarafsiz": "True",
+        "neden": "Basketball Reference maçı yok"
+      },
+      {
+        "sezon": "2019-20",
+        "tarih_yerel": "2019-08-02 00:00:00",
+        "ev_adi": "Houston",
+        "dep_adi": "Milwaukee",
+        "ev_skor": "120",
+        "dep_skor": "116",
+        "ev_ml": "175.0",
+        "dep_ml": "-200.0",
+        "tarafsiz": "True",
+        "neden": "Basketball Reference maçı yok"
+      },
+      {
+        "sezon": "2019-20",
+        "tarih_yerel": "2019-08-02 00:00:00",
+        "ev_adi": "Phoenix",
+        "dep_adi": "Dallas",
+        "ev_skor": "117",
+        "dep_skor": "115",
+        "ev_ml": "210.0",
+        "dep_ml": "-250.0",
+        "tarafsiz": "True",
+        "neden": "Basketball Reference maçı yok"
+      },
+      {
+        "sezon": "2019-20",
+        "tarih_yerel": "2019-08-03 00:00:00",
+        "ev_adi": "Miami",
+        "dep_adi": "Toronto",
+        "ev_skor": "103",
+        "dep_skor": "107",
+        "ev_ml": "125.0",
+        "dep_ml": "-145.0",
+        "tarafsiz": "True",
+        "neden": "Basketball Reference maçı yok"
+      },
+      {
+        "sezon": "2019-20",
+        "tarih_yerel": "2019-08-03 00:00:00",
+        "ev_adi": "Washington",
+        "dep_adi": "Indiana",
+        "ev_skor": "100",
+        "dep_skor": "111",
+        "ev_ml": "330.0",
+        "dep_ml": "-400.0",
+        "tarafsiz": "True",
+        "neden": "Basketball Reference maçı yok"
+      },
+      {
+        "sezon": "2019-20",
+        "tarih_yerel": "2019-08-03 00:00:00",
+        "ev_adi": "OklahomaCity",
+        "dep_adi": "Denver",
+        "ev_skor": "113",
+        "dep_skor": "121",
+        "ev_ml": "-240.0",
+        "dep_ml": "200.0",
+        "tarafsiz": "True",
+        "neden": "Basketball Reference maçı yok"
+      },
+      {
+        "sezon": "2019-20",
+        "tarih_yerel": "2019-08-03 00:00:00",
+        "ev_adi": "NewOrleans",
+        "dep_adi": "Memphis",
+        "ev_skor": "109",
+        "dep_skor": "99",
+        "ev_ml": "-185.0",
+        "dep_ml": "165.0",
+        "tarafsiz": "True",
+        "neden": "Basketball Reference maçı yok"
+      },
+      {
+        "sezon": "2019-20",
+        "tarih_yerel": "2019-08-03 00:00:00",
+        "ev_adi": "Philadelphia",
+        "dep_adi": "SanAntonio",
+        "ev_skor": "132",
+        "dep_skor": "130",
+        "ev_ml": "-335.0",
+        "dep_ml": "275.0",
+        "tarafsiz": "True",
+        "neden": "Basketball Reference maçı yok"
+      },
+      {
+        "sezon": "2019-20",
+        "tarih_yerel": "2019-08-03 00:00:00",
+        "ev_adi": "Utah",
+        "dep_adi": "LALakers",
+        "ev_skor": "108",
+        "dep_skor": "116",
+        "ev_ml": "225.0",
+        "dep_ml": "-265.0",
+        "tarafsiz": "True",
+        "neden": "Basketball Reference maçı yok"
+      }
+    ]
+  },
   "http": [],
   "limitations": [
     "NBA neutral courts unknown"
