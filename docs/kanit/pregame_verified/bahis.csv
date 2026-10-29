@@ -1,0 +1,13 @@
+sezon,model,method,status,threshold,train_roi,train_bets,roi,max_drawdown,bets,final_equity
+2021-22,logistic,fixed,eşik seçilemedi: önceki oranlı sezon yok,,,,,,,
+2021-22,logistic,kelly,eşik seçilemedi: önceki oranlı sezon yok,,,,,,,
+2022-23,logistic,fixed,ok,0.03,-0.02038367133021836,970.0,0.024961902587106073,0.27521067683494,507.0,1.1417130252702545
+2022-23,logistic,kelly,ok,0.03,-0.11311119298154372,970.0,-0.0018149791705993471,0.8116202605550322,507.0,0.9574469556224756
+2021-22,hist_gradient_boosting,fixed,eşik seçilemedi: önceki oranlı sezon yok,,,,,,,
+2021-22,hist_gradient_boosting,kelly,eşik seçilemedi: önceki oranlı sezon yok,,,,,,,
+2022-23,hist_gradient_boosting,fixed,ok,0.03,-0.011965924121788974,995.0,0.011883863428285575,0.2599161277915777,526.0,1.0651541889111011
+2022-23,hist_gradient_boosting,kelly,ok,0.03,-0.13611191356915797,995.0,-0.010001579829549086,0.8003494770316925,526.0,0.7806289188696768
+2021-22,mov_elo,fixed,eşik seçilemedi: önceki oranlı sezon yok,,,,,,,
+2021-22,mov_elo,kelly,eşik seçilemedi: önceki oranlı sezon yok,,,,,,,
+2022-23,mov_elo,fixed,ok,0.02,-0.03528422140095375,1053.0,0.021668690523186263,0.2600429233002159,539.0,1.12273066092529
+2022-23,mov_elo,kelly,ok,0.01,-0.16219522171091746,1106.0,0.0378052589964076,0.7845871033679744,560.0,2.273219889289402

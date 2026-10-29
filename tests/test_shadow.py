@@ -6,6 +6,13 @@ import pytest
 from bbtahmin.shadow import checked,evaluate,freeze,register
 
 
+@pytest.fixture
+def tmp_path(tmp_path_factory):
+    # Two SHA-256 names already consume 128 characters. Long test names in
+    # pytest's default temporary directory exceed Windows MAX_PATH.
+    return tmp_path_factory.mktemp('shadow')
+
+
 def fixture():
     return dict(event_id='one',league='KBL',home='a',away='b',start_utc='2026-10-27T12:00Z',
                 captured_at='2026-10-26T12:00Z',source_url='https://example.org/one',status='scheduled')

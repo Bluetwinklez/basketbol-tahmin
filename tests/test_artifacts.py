@@ -17,6 +17,14 @@ def test_partial_mismatched_and_tampered_benchmarks_are_not_selected(tmp_path):
               files={name:hashlib.sha256(value.encode()).hexdigest() for name,value in contents.items()})
     (tmp_path/'manifest.json').write_text(json.dumps(meta))
     assert verified_path('metrikler.csv',tmp_path)==tmp_path/'metrikler.csv'
+    (tmp_path/'harman.json').write_text('{}')
+    assert verified_path('harman.json',tmp_path) is None
+    meta['files']['harman.json']=hashlib.sha256(b'{}').hexdigest()
+    (tmp_path/'manifest.json').write_text(json.dumps(meta))
+    assert verified_path('harman.json',tmp_path)==tmp_path/'harman.json'
+    (tmp_path/'harman.json').write_text('{"tampered":true}')
+    assert verified_manifest(tmp_path) is None
+    (tmp_path/'harman.json').write_text('{}')
     (tmp_path/'metrikler.csv').write_text('changed')
     assert verified_manifest(tmp_path) is None
     (tmp_path/'metrikler.csv').write_text(contents['metrikler.csv'])
