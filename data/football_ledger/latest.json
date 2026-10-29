@@ -1,7 +1,7 @@
 {
   "spec": "football-daily-v1",
-  "checked_at_utc": "2026-10-28T13:25:51.055067+00:00",
-  "collection_checked_at_utc": "2026-10-28T13:21:17.998728+00:00",
+  "checked_at_utc": "2026-10-29T13:35:59.166022+00:00",
+  "collection_checked_at_utc": "2026-10-29T13:30:54.560799+00:00",
   "source_errors": [
     {
       "league": "DE2",
@@ -3405,6 +3405,100 @@
     },
     {
       "fixture": {
+        "event_id": "EN2_0304f15ee256be6639c15167",
+        "league": "EN2",
+        "season": "2026-27",
+        "date": "2026-11-03",
+        "home": "birmingham city fc",
+        "away": "millwall fc",
+        "home_name": "Birmingham City FC",
+        "away_name": "Millwall FC",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/en.2.json",
+        "captured_at_utc": "2026-10-28T13:21:17.998728+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null,
+        "original_date": null,
+        "date_correction_verified": null,
+        "license_url": null,
+        "source_sha256": null,
+        "fixture_verification_url": null,
+        "actual_start_utc": null,
+        "source_original_date": "2026-11-03",
+        "verified_start_utc": "2026-11-03T20:00:00+00:00",
+        "independent_fixture": {
+          "provider_event_id": "401880184",
+          "league": "EN2",
+          "season_year": 2026,
+          "start_utc": "2026-11-03T20:00:00+00:00",
+          "captured_at": "2026-10-28T13:24:39.896479+00:00",
+          "home_name": "Birmingham City",
+          "away_name": "Millwall",
+          "provider_home_id": "392",
+          "provider_away_id": "391",
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401880184",
+          "status": "scheduled",
+          "event_id": "EN2_0304f15ee256be6639c15167",
+          "home": "birmingham city fc",
+          "away": "millwall fc"
+        }
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "EN2",
+        "home": "birmingham city fc",
+        "away": "millwall fc",
+        "expected_home_goals": 1.64057650540181,
+        "expected_away_goals": 1.115169259388888,
+        "probabilities": {
+          "home": 0.4960478716242514,
+          "draw": 0.24517981916936749,
+          "away": 0.25877230920638106
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.7612787900504066,
+          "2.5": 0.5199311133902039,
+          "3.5": 0.298233500790728
+        },
+        "both_teams_score": 0.541833575150975,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-10-28",
+        "training_games": 1650,
+        "prior_team_games": {
+          "birmingham city fc": 90,
+          "millwall fc": 138
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-28T13:25:52.819246+00:00",
+      "status": "pending",
+      "result": null,
+      "fixture_review": null
+    },
+    {
+      "fixture": {
         "event_id": "EN2_03d92eb8c2b40401e3e4eb5a",
         "league": "EN2",
         "season": "2026-27",
@@ -3856,6 +3950,100 @@
     },
     {
       "fixture": {
+        "event_id": "EN2_366f442672efc7a71d950857",
+        "league": "EN2",
+        "season": "2026-27",
+        "date": "2026-11-03",
+        "home": "portsmouth fc",
+        "away": "swansea city afc",
+        "home_name": "Portsmouth FC",
+        "away_name": "Swansea City AFC",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/en.2.json",
+        "captured_at_utc": "2026-10-28T13:21:17.998728+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null,
+        "original_date": null,
+        "date_correction_verified": null,
+        "license_url": null,
+        "source_sha256": null,
+        "fixture_verification_url": null,
+        "actual_start_utc": null,
+        "source_original_date": "2026-11-03",
+        "verified_start_utc": "2026-11-03T19:45:00+00:00",
+        "independent_fixture": {
+          "provider_event_id": "401880181",
+          "league": "EN2",
+          "season_year": 2026,
+          "start_utc": "2026-11-03T19:45:00+00:00",
+          "captured_at": "2026-10-28T13:24:39.896479+00:00",
+          "home_name": "Portsmouth",
+          "away_name": "Swansea City",
+          "provider_home_id": "385",
+          "provider_away_id": "318",
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401880181",
+          "status": "scheduled",
+          "event_id": "EN2_366f442672efc7a71d950857",
+          "home": "portsmouth fc",
+          "away": "swansea city afc"
+        }
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "EN2",
+        "home": "portsmouth fc",
+        "away": "swansea city afc",
+        "expected_home_goals": 1.4558689026595684,
+        "expected_away_goals": 1.1726532062044706,
+        "probabilities": {
+          "home": 0.4362443198539837,
+          "draw": 0.2591381087580624,
+          "away": 0.30461757138795403
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.7380748953057982,
+          "2.5": 0.4887069508185197,
+          "3.5": 0.27021723237625606
+        },
+        "both_teams_score": 0.5294428501068409,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-10-28",
+        "training_games": 1650,
+        "prior_team_games": {
+          "portsmouth fc": 104,
+          "swansea city afc": 136
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-28T13:25:52.838727+00:00",
+      "status": "pending",
+      "result": null,
+      "fixture_review": null
+    },
+    {
+      "fixture": {
         "event_id": "EN2_4057e0fdf2ca10638c51dcd4",
         "league": "EN2",
         "season": "2026-27",
@@ -3950,6 +4138,100 @@
         "verification": "community_source_final_not_official",
         "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_EFL_Championship"
       },
+      "fixture_review": null
+    },
+    {
+      "fixture": {
+        "event_id": "EN2_4a36eb531e67d3ae6b31caee",
+        "league": "EN2",
+        "season": "2026-27",
+        "date": "2026-11-03",
+        "home": "derby county fc",
+        "away": "norwich city fc",
+        "home_name": "Derby County FC",
+        "away_name": "Norwich City FC",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/en.2.json",
+        "captured_at_utc": "2026-10-28T13:21:17.998728+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null,
+        "original_date": null,
+        "date_correction_verified": null,
+        "license_url": null,
+        "source_sha256": null,
+        "fixture_verification_url": null,
+        "actual_start_utc": null,
+        "source_original_date": "2026-11-03",
+        "verified_start_utc": "2026-11-03T19:45:00+00:00",
+        "independent_fixture": {
+          "provider_event_id": "401880182",
+          "league": "EN2",
+          "season_year": 2026,
+          "start_utc": "2026-11-03T19:45:00+00:00",
+          "captured_at": "2026-10-28T13:24:39.896479+00:00",
+          "home_name": "Derby County",
+          "away_name": "Norwich City",
+          "provider_home_id": "374",
+          "provider_away_id": "381",
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401880182",
+          "status": "scheduled",
+          "event_id": "EN2_4a36eb531e67d3ae6b31caee",
+          "home": "derby county fc",
+          "away": "norwich city fc"
+        }
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "EN2",
+        "home": "derby county fc",
+        "away": "norwich city fc",
+        "expected_home_goals": 1.228119108538468,
+        "expected_away_goals": 1.4460482841694522,
+        "probabilities": {
+          "home": 0.3207554143589906,
+          "draw": 0.2578252083461228,
+          "away": 0.4214193772948866
+        },
+        "predicted_outcome": "away",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.7466138946620702,
+          "2.5": 0.5000264046943632,
+          "3.5": 0.28022099632058556
+        },
+        "both_teams_score": 0.540622281803975,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-10-28",
+        "training_games": 1650,
+        "prior_team_games": {
+          "derby county fc": 104,
+          "norwich city fc": 138
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-28T13:25:52.856227+00:00",
+      "status": "pending",
+      "result": null,
       "fixture_review": null
     },
     {
@@ -4207,6 +4489,100 @@
         "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
       },
       "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+      "status": "pending",
+      "result": null,
+      "fixture_review": null
+    },
+    {
+      "fixture": {
+        "event_id": "EN2_5e949510a303cb2945d92d32",
+        "league": "EN2",
+        "season": "2026-27",
+        "date": "2026-11-03",
+        "home": "queens park rangers fc",
+        "away": "burnley fc",
+        "home_name": "Queens Park Rangers FC",
+        "away_name": "Burnley FC",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/en.2.json",
+        "captured_at_utc": "2026-10-28T13:21:17.998728+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null,
+        "original_date": null,
+        "date_correction_verified": null,
+        "license_url": null,
+        "source_sha256": null,
+        "fixture_verification_url": null,
+        "actual_start_utc": null,
+        "source_original_date": "2026-11-03",
+        "verified_start_utc": "2026-11-03T19:45:00+00:00",
+        "independent_fixture": {
+          "provider_event_id": "401880179",
+          "league": "EN2",
+          "season_year": 2026,
+          "start_utc": "2026-11-03T19:45:00+00:00",
+          "captured_at": "2026-10-28T13:24:39.896479+00:00",
+          "home_name": "Queens Park Rangers",
+          "away_name": "Burnley",
+          "provider_home_id": "334",
+          "provider_away_id": "379",
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401880179",
+          "status": "scheduled",
+          "event_id": "EN2_5e949510a303cb2945d92d32",
+          "home": "queens park rangers fc",
+          "away": "burnley fc"
+        }
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "EN2",
+        "home": "queens park rangers fc",
+        "away": "burnley fc",
+        "expected_home_goals": 1.9965144939101083,
+        "expected_away_goals": 1.4724357223258397,
+        "probabilities": {
+          "home": 0.49860547604698174,
+          "draw": 0.21655886770953303,
+          "away": 0.28483565624348517
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.8607934790322258,
+          "2.5": 0.6733716370263888,
+          "3.5": 0.4566526239085597
+        },
+        "both_teams_score": 0.665975763702738,
+        "total_goals_80": [
+          1,
+          6
+        ],
+        "training_cutoff_exclusive": "2026-10-28",
+        "training_games": 1650,
+        "prior_team_games": {
+          "queens park rangers fc": 136,
+          "burnley fc": 58
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-28T13:25:52.873762+00:00",
       "status": "pending",
       "result": null,
       "fixture_review": null
@@ -4495,6 +4871,100 @@
         "verification": "community_source_final_not_official",
         "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_EFL_Championship"
       },
+      "fixture_review": null
+    },
+    {
+      "fixture": {
+        "event_id": "EN2_675f83451f3556d5e403f0cd",
+        "league": "EN2",
+        "season": "2026-27",
+        "date": "2026-11-03",
+        "home": "west bromwich albion fc",
+        "away": "southampton fc",
+        "home_name": "West Bromwich Albion FC",
+        "away_name": "Southampton FC",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/en.2.json",
+        "captured_at_utc": "2026-10-28T13:21:17.998728+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null,
+        "original_date": null,
+        "date_correction_verified": null,
+        "license_url": null,
+        "source_sha256": null,
+        "fixture_verification_url": null,
+        "actual_start_utc": null,
+        "source_original_date": "2026-11-03",
+        "verified_start_utc": "2026-11-03T20:00:00+00:00",
+        "independent_fixture": {
+          "provider_event_id": "401880177",
+          "league": "EN2",
+          "season_year": 2026,
+          "start_utc": "2026-11-03T20:00:00+00:00",
+          "captured_at": "2026-10-28T13:24:39.896479+00:00",
+          "home_name": "West Bromwich Albion",
+          "away_name": "Southampton",
+          "provider_home_id": "383",
+          "provider_away_id": "376",
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401880177",
+          "status": "scheduled",
+          "event_id": "EN2_675f83451f3556d5e403f0cd",
+          "home": "west bromwich albion fc",
+          "away": "southampton fc"
+        }
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "EN2",
+        "home": "west bromwich albion fc",
+        "away": "southampton fc",
+        "expected_home_goals": 1.354818690848863,
+        "expected_away_goals": 1.3724679795278074,
+        "probabilities": {
+          "home": 0.36761695888456875,
+          "draw": 0.2566679226821883,
+          "away": 0.3757151184332432
+        },
+        "predicted_outcome": "away",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.7562485293398798,
+          "2.5": 0.5130359505651986,
+          "3.5": 0.29193247584515725
+        },
+        "both_teams_score": 0.5539218224811328,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-10-28",
+        "training_games": 1650,
+        "prior_team_games": {
+          "west bromwich albion fc": 139,
+          "southampton fc": 95
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-28T13:25:52.891374+00:00",
+      "status": "pending",
+      "result": null,
       "fixture_review": null
     },
     {
@@ -4973,6 +5443,288 @@
     },
     {
       "fixture": {
+        "event_id": "EN2_ba26e2c7f7b26b791bf7519a",
+        "league": "EN2",
+        "season": "2026-27",
+        "date": "2026-11-03",
+        "home": "watford fc",
+        "away": "lincoln city fc",
+        "home_name": "Watford FC",
+        "away_name": "Lincoln City FC",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/en.2.json",
+        "captured_at_utc": "2026-10-28T13:21:17.998728+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null,
+        "original_date": null,
+        "date_correction_verified": null,
+        "license_url": null,
+        "source_sha256": null,
+        "fixture_verification_url": null,
+        "actual_start_utc": null,
+        "source_original_date": "2026-11-03",
+        "verified_start_utc": "2026-11-03T19:45:00+00:00",
+        "independent_fixture": {
+          "provider_event_id": "401880178",
+          "league": "EN2",
+          "season_year": 2026,
+          "start_utc": "2026-11-03T19:45:00+00:00",
+          "captured_at": "2026-10-28T13:24:39.896479+00:00",
+          "home_name": "Watford",
+          "away_name": "Lincoln City",
+          "provider_home_id": "395",
+          "provider_away_id": "314",
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401880178",
+          "status": "scheduled",
+          "event_id": "EN2_ba26e2c7f7b26b791bf7519a",
+          "home": "watford fc",
+          "away": "lincoln city fc"
+        }
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "EN2",
+        "home": "watford fc",
+        "away": "lincoln city fc",
+        "expected_home_goals": 1.2145157437365364,
+        "expected_away_goals": 1.1949819638928176,
+        "probabilities": {
+          "home": 0.36674939992841427,
+          "draw": 0.2759608654029102,
+          "away": 0.3572897346686757
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.6936211059077004,
+          "2.5": 0.4327707217424096,
+          "3.5": 0.22326458751557496
+        },
+        "both_teams_score": 0.4902972728367507,
+        "total_goals_80": [
+          1,
+          4
+        ],
+        "training_cutoff_exclusive": "2026-10-28",
+        "training_games": 1650,
+        "prior_team_games": {
+          "watford fc": 136,
+          "lincoln city fc": 12
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-28T13:25:52.909344+00:00",
+      "status": "pending",
+      "result": null,
+      "fixture_review": null
+    },
+    {
+      "fixture": {
+        "event_id": "EN2_bb2c01da82fd0691f6304b8a",
+        "league": "EN2",
+        "season": "2026-27",
+        "date": "2026-11-03",
+        "home": "blackburn rovers fc",
+        "away": "stoke city fc",
+        "home_name": "Blackburn Rovers FC",
+        "away_name": "Stoke City FC",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/en.2.json",
+        "captured_at_utc": "2026-10-28T13:21:17.998728+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null,
+        "original_date": null,
+        "date_correction_verified": null,
+        "license_url": null,
+        "source_sha256": null,
+        "fixture_verification_url": null,
+        "actual_start_utc": null,
+        "source_original_date": "2026-11-03",
+        "verified_start_utc": "2026-11-03T19:45:00+00:00",
+        "independent_fixture": {
+          "provider_event_id": "401880183",
+          "league": "EN2",
+          "season_year": 2026,
+          "start_utc": "2026-11-03T19:45:00+00:00",
+          "captured_at": "2026-10-28T13:24:39.896479+00:00",
+          "home_name": "Blackburn Rovers",
+          "away_name": "Stoke City",
+          "provider_home_id": "365",
+          "provider_away_id": "336",
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401880183",
+          "status": "scheduled",
+          "event_id": "EN2_bb2c01da82fd0691f6304b8a",
+          "home": "blackburn rovers fc",
+          "away": "stoke city fc"
+        }
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "EN2",
+        "home": "blackburn rovers fc",
+        "away": "stoke city fc",
+        "expected_home_goals": 1.3273282622443987,
+        "expected_away_goals": 0.945419576924227,
+        "probabilities": {
+          "home": 0.45468112402866984,
+          "draw": 0.27900013733784623,
+          "away": 0.26631873863348404
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          0
+        ],
+        "over": {
+          "1.5": 0.6628130954087141,
+          "2.5": 0.3967218010481672,
+          "3.5": 0.19513566295499543
+        },
+        "both_teams_score": 0.44932734040691746,
+        "total_goals_80": [
+          0,
+          4
+        ],
+        "training_cutoff_exclusive": "2026-10-28",
+        "training_games": 1650,
+        "prior_team_games": {
+          "blackburn rovers fc": 136,
+          "stoke city fc": 136
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-28T13:25:52.927868+00:00",
+      "status": "pending",
+      "result": null,
+      "fixture_review": null
+    },
+    {
+      "fixture": {
+        "event_id": "EN2_be96610e4e49202ba526aa0a",
+        "league": "EN2",
+        "season": "2026-27",
+        "date": "2026-11-03",
+        "home": "preston north end fc",
+        "away": "sheffield united fc",
+        "home_name": "Preston North End FC",
+        "away_name": "Sheffield United FC",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/en.2.json",
+        "captured_at_utc": "2026-10-28T13:21:17.998728+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null,
+        "original_date": null,
+        "date_correction_verified": null,
+        "license_url": null,
+        "source_sha256": null,
+        "fixture_verification_url": null,
+        "actual_start_utc": null,
+        "source_original_date": "2026-11-03",
+        "verified_start_utc": "2026-11-03T19:45:00+00:00",
+        "independent_fixture": {
+          "provider_event_id": "401880180",
+          "league": "EN2",
+          "season_year": 2026,
+          "start_utc": "2026-11-03T19:45:00+00:00",
+          "captured_at": "2026-10-28T13:24:39.896479+00:00",
+          "home_name": "Preston North End",
+          "away_name": "Sheffield United",
+          "provider_home_id": "394",
+          "provider_away_id": "398",
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401880180",
+          "status": "scheduled",
+          "event_id": "EN2_be96610e4e49202ba526aa0a",
+          "home": "preston north end fc",
+          "away": "sheffield united fc"
+        }
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "EN2",
+        "home": "preston north end fc",
+        "away": "sheffield united fc",
+        "expected_home_goals": 1.087513778043692,
+        "expected_away_goals": 1.4363803697570288,
+        "probabilities": {
+          "home": 0.28583547321908265,
+          "draw": 0.263603178182696,
+          "away": 0.45056134859822145
+        },
+        "predicted_outcome": "away",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.7175708277958138,
+          "2.5": 0.4623012992417056,
+          "3.5": 0.24754354283185162
+        },
+        "both_teams_score": 0.5053065483753109,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-10-28",
+        "training_games": 1650,
+        "prior_team_games": {
+          "preston north end fc": 136,
+          "sheffield united fc": 107
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-28T13:25:52.946171+00:00",
+      "status": "pending",
+      "result": null,
+      "fixture_review": null
+    },
+    {
+      "fixture": {
         "event_id": "EN2_d4eb4e797be9ce54ec2da5cd",
         "league": "EN2",
         "season": "2026-27",
@@ -5191,6 +5943,100 @@
         "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
       },
       "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
+      "status": "pending",
+      "result": null,
+      "fixture_review": null
+    },
+    {
+      "fixture": {
+        "event_id": "EN2_e868515ebf4e07b49bfffc1c",
+        "league": "EN2",
+        "season": "2026-27",
+        "date": "2026-11-03",
+        "home": "charlton athletic fc",
+        "away": "bolton wanderers fc",
+        "home_name": "Charlton Athletic FC",
+        "away_name": "Bolton Wanderers FC",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/en.2.json",
+        "captured_at_utc": "2026-10-28T13:21:17.998728+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null,
+        "original_date": null,
+        "date_correction_verified": null,
+        "license_url": null,
+        "source_sha256": null,
+        "fixture_verification_url": null,
+        "actual_start_utc": null,
+        "source_original_date": "2026-11-03",
+        "verified_start_utc": "2026-11-03T19:45:00+00:00",
+        "independent_fixture": {
+          "provider_event_id": "401880174",
+          "league": "EN2",
+          "season_year": 2026,
+          "start_utc": "2026-11-03T19:45:00+00:00",
+          "captured_at": "2026-10-28T13:24:39.896479+00:00",
+          "home_name": "Charlton Athletic",
+          "away_name": "Bolton Wanderers",
+          "provider_home_id": "372",
+          "provider_away_id": "358",
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401880174",
+          "status": "scheduled",
+          "event_id": "EN2_e868515ebf4e07b49bfffc1c",
+          "home": "charlton athletic fc",
+          "away": "bolton wanderers fc"
+        }
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "EN2",
+        "home": "charlton athletic fc",
+        "away": "bolton wanderers fc",
+        "expected_home_goals": 1.221673568648414,
+        "expected_away_goals": 1.2438197485613203,
+        "probabilities": {
+          "home": 0.3585692982173956,
+          "draw": 0.27224238455124644,
+          "away": 0.36918831723135814
+        },
+        "predicted_outcome": "away",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.7055477190698893,
+          "2.5": 0.44730533590525245,
+          "3.5": 0.23507371260100995
+        },
+        "both_teams_score": 0.5019494727712722,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-10-28",
+        "training_games": 1650,
+        "prior_team_games": {
+          "charlton athletic fc": 58,
+          "bolton wanderers fc": 12
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-10-28T13:25:52.964197+00:00",
       "status": "pending",
       "result": null,
       "fixture_review": null
@@ -8132,8 +8978,44 @@
         "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
       },
       "recorded_at_utc": "2026-10-23T16:48:20.082045+00:00",
-      "status": "pending",
-      "result": null,
+      "status": "publisher_final",
+      "result": {
+        "actual_home": 2,
+        "actual_away": 4,
+        "actual_outcome": "away",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.08658257809755265
+          },
+          "over_2.5": {
+            "actual": true,
+            "correct": false,
+            "brier": 0.30519463722987844
+          },
+          "over_3.5": {
+            "actual": true,
+            "correct": false,
+            "brier": 0.5847973510616171
+          },
+          "both_teams_score": {
+            "actual": true,
+            "correct": false,
+            "brier": 0.25354999799777084
+          }
+        },
+        "winner_correct": false,
+        "home_absolute_error": 0.6267296347740079,
+        "away_absolute_error": 2.906807230400937,
+        "total_absolute_error": 3.533536865174945,
+        "margin_absolute_error": 2.280077595626929,
+        "total_in_80": false,
+        "log_loss": 1.2085379655227828,
+        "brier": 0.7512434617125466,
+        "verification": "community_source_final_not_official",
+        "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Serie_A"
+      },
       "fixture_review": null
     },
     {
@@ -8192,8 +9074,44 @@
         "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
       },
       "recorded_at_utc": "2026-10-23T16:48:20.082045+00:00",
-      "status": "pending",
-      "result": null,
+      "status": "publisher_final",
+      "result": {
+        "actual_home": 0,
+        "actual_away": 2,
+        "actual_outcome": "away",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.03909895510446727
+          },
+          "over_2.5": {
+            "actual": false,
+            "correct": false,
+            "brier": 0.33516439758399796
+          },
+          "over_3.5": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.12595074303444262
+          },
+          "both_teams_score": {
+            "actual": false,
+            "correct": false,
+            "brier": 0.29003061708981104
+          }
+        },
+        "winner_correct": true,
+        "home_absolute_error": 0.9636385306926665,
+        "away_absolute_error": 0.0458565575513985,
+        "total_absolute_error": 1.0094950882440648,
+        "margin_absolute_error": 0.917781973141268,
+        "total_in_80": true,
+        "log_loss": 0.4716511444824028,
+        "brier": 0.21276966237695172,
+        "verification": "community_source_final_not_official",
+        "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Serie_A"
+      },
       "fixture_review": null
     },
     {
@@ -8444,8 +9362,44 @@
         "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
       },
       "recorded_at_utc": "2026-10-23T16:48:20.082045+00:00",
-      "status": "pending",
-      "result": null,
+      "status": "publisher_final",
+      "result": {
+        "actual_home": 1,
+        "actual_away": 4,
+        "actual_outcome": "away",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.06391411092694284
+          },
+          "over_2.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.24920669065650483
+          },
+          "over_3.5": {
+            "actual": true,
+            "correct": false,
+            "brier": 0.5170968036477542
+          },
+          "both_teams_score": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.21784625269993213
+          }
+        },
+        "winner_correct": true,
+        "home_absolute_error": 0.13337800569985303,
+        "away_absolute_error": 2.4560967622521073,
+        "total_absolute_error": 2.3227187565522542,
+        "margin_absolute_error": 2.5894747679519603,
+        "total_in_80": true,
+        "log_loss": 0.7598592457754167,
+        "brier": 0.42530270660940006,
+        "verification": "community_source_final_not_official",
+        "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Serie_A"
+      },
       "fixture_review": null
     },
     {
@@ -9275,8 +10229,44 @@
         "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
       },
       "recorded_at_utc": "2026-10-23T16:48:20.082045+00:00",
-      "status": "pending",
-      "result": null,
+      "status": "publisher_final",
+      "result": {
+        "actual_home": 0,
+        "actual_away": 0,
+        "actual_outcome": "draw",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": false,
+            "correct": false,
+            "brier": 0.5840340273200254
+          },
+          "over_2.5": {
+            "actual": false,
+            "correct": false,
+            "brier": 0.2745736606755994
+          },
+          "over_3.5": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.09119221881692158
+          },
+          "both_teams_score": {
+            "actual": false,
+            "correct": false,
+            "brier": 0.3146986984476515
+          }
+        },
+        "winner_correct": false,
+        "home_absolute_error": 1.3081438975702997,
+        "away_absolute_error": 1.4644909061189224,
+        "total_absolute_error": 2.772634803689222,
+        "margin_absolute_error": 0.1563470085486227,
+        "total_in_80": false,
+        "log_loss": 1.3729578567662741,
+        "brier": 0.8387458507020464,
+        "verification": "community_source_final_not_official",
+        "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Serie_A"
+      },
       "fixture_review": null
     },
     {
@@ -9972,8 +10962,44 @@
         "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
       },
       "recorded_at_utc": "2026-10-23T16:48:20.082045+00:00",
-      "status": "pending",
-      "result": null,
+      "status": "publisher_final",
+      "result": {
+        "actual_home": 2,
+        "actual_away": 0,
+        "actual_outcome": "home",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.06936382179730372
+          },
+          "over_2.5": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.2369845273513524
+          },
+          "over_3.5": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.072123437789479
+          },
+          "both_teams_score": {
+            "actual": false,
+            "correct": false,
+            "brier": 0.2682895112044197
+          }
+        },
+        "winner_correct": false,
+        "home_absolute_error": 0.9277633392503966,
+        "away_absolute_error": 1.5486875678381453,
+        "total_absolute_error": 0.6209242285877488,
+        "margin_absolute_error": 2.476450907088542,
+        "total_in_80": true,
+        "log_loss": 1.3361315698140797,
+        "brier": 0.8413430764547494,
+        "verification": "community_source_final_not_official",
+        "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Serie_A"
+      },
       "fixture_review": null
     },
     {
@@ -14116,18 +15142,6 @@
       "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
     },
     {
-      "event_id": "EN2_bbe2a92603d0916c7a2783bd",
-      "reason": "Fresh independent future scheduled fixture required"
-    },
-    {
-      "event_id": "EN2_e59ac54d7018c96fcd35d77b",
-      "reason": "Fresh independent future scheduled fixture required"
-    },
-    {
-      "event_id": "EN2_fd3f9b6359de2d81e0b2c511",
-      "reason": "Fresh independent future scheduled fixture required"
-    },
-    {
       "event_id": "DE1_4f66ac822ad24292bccc1556",
       "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
     },
@@ -14152,72 +15166,200 @@
       "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
     },
     {
-      "record": "data/football_ledger/forecasts/EN2_0304f15ee256be6639c15167.json",
+      "event_id": "DE1_6b10a84879997b3690d13d2a",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "DE1_98096271d0b0fd744c57b743",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "DE1_9f22fd8a122664853d0182b3",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "DE1_e2872d3d6d1f035cc5a8fc05",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "DE1_f639e9954acf490a176275ec",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "EN1_17f2593466899f3d474e1903",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "EN1_56ebf6ad31696ab232824bbe",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "EN1_67abd5c97e6e78c74a4a33b2",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "EN1_6c61a15bf89ff3d9e87ac7f3",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "EN1_6d39e1f6e343e0e8ba0e484f",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "EN1_8e32d8d87545e1f63bc28a3f",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "EN1_ab0ae78395e60662c0d17090",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "EN1_c02c5ece2474ccb4ba560438",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "EN1_e3b29026e2c4aacc013fb426",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "EN1_f1605cac75844d6afe479734",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "EN2_0002b1aae56819e67ed84501",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "EN2_13a3f02c48da4a81721a3058",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "EN2_20ad9aad2b7bc58eaffbe3f5",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "EN2_711a3ad87b0222d819a19e06",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "EN2_78c471003f4c8436b48ce921",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "EN2_8177945e06ad36b7a0a6d25b",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "EN2_86327a06c7919175b68492e4",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "EN2_86656847b2d78c8c9f24b49b",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "EN2_8f9843ef60aee35acd30e669",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "EN2_983795d7737ed41b022b1dda",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "EN2_d2aea1a2dab53a5662429dde",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "FR1_1e63cd1a23e3d50364dea3e5",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "FR1_f23f9ab69c3d540ea9e3dbe6",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "IT1_07b31fd3fe8b37271a1fe639",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "IT1_4e8dd4e4261e704c6cad749d",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "IT1_7ff226f07576383f525bb6f7",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "IT1_d0744a5728d4ab13db0ef3ce",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "NL1_4b059bf0a812a2f7e503cdab",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "NL1_a5ca9958033922edddc0f37b",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "NL1_f91456f01f8b9a41ebb1f861",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "PT1_26526de6d4a0aaccb76b8e42",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "PT1_7d31db6c471b62bd173a04d0",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "PT1_b607851c11841ab2e80ccd43",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "record": "data/football_ledger/forecasts/EN2_bbe2a92603d0916c7a2783bd.json",
       "reason": "Forecast was recorded after requested clock"
     },
     {
-      "record": "data/football_ledger/forecasts/EN2_366f442672efc7a71d950857.json",
+      "record": "data/football_ledger/forecasts/EN2_e59ac54d7018c96fcd35d77b.json",
       "reason": "Forecast was recorded after requested clock"
     },
     {
-      "record": "data/football_ledger/forecasts/EN2_4a36eb531e67d3ae6b31caee.json",
-      "reason": "Forecast was recorded after requested clock"
-    },
-    {
-      "record": "data/football_ledger/forecasts/EN2_5e949510a303cb2945d92d32.json",
-      "reason": "Forecast was recorded after requested clock"
-    },
-    {
-      "record": "data/football_ledger/forecasts/EN2_675f83451f3556d5e403f0cd.json",
-      "reason": "Forecast was recorded after requested clock"
-    },
-    {
-      "record": "data/football_ledger/forecasts/EN2_ba26e2c7f7b26b791bf7519a.json",
-      "reason": "Forecast was recorded after requested clock"
-    },
-    {
-      "record": "data/football_ledger/forecasts/EN2_bb2c01da82fd0691f6304b8a.json",
-      "reason": "Forecast was recorded after requested clock"
-    },
-    {
-      "record": "data/football_ledger/forecasts/EN2_be96610e4e49202ba526aa0a.json",
-      "reason": "Forecast was recorded after requested clock"
-    },
-    {
-      "record": "data/football_ledger/forecasts/EN2_e868515ebf4e07b49bfffc1c.json",
+      "record": "data/football_ledger/forecasts/EN2_fd3f9b6359de2d81e0b2c511.json",
       "reason": "Forecast was recorded after requested clock"
     }
   ],
-  "pending": 111,
+  "pending": 115,
   "requested_model_variant": "baseline",
   "publisher_performance": {
-    "games": 66,
-    "winner_accuracy": 0.5606060606060606,
-    "log_loss": 1.0130001661741932,
-    "brier": 0.6041576003265934,
-    "total_mae": 1.4627245129064073,
-    "margin_mae": 1.335592851694224,
-    "total_in_80": 0.8333333333333334,
-    "team_score_games": 66,
-    "home_score_mae": 1.002210461112909,
-    "away_score_mae": 1.067720139791025,
-    "team_score_mae": 1.0349653004519672,
+    "games": 71,
+    "winner_accuracy": 0.5492957746478874,
+    "log_loss": 1.0141851936599677,
+    "brier": 0.6048423433719838,
+    "total_mae": 1.5042130647052272,
+    "margin_mae": 1.3601304290729026,
+    "total_in_80": 0.8169014084507042,
+    "team_score_games": 71,
+    "home_score_mae": 0.9874020259357635,
+    "away_score_mae": 1.1111474401460444,
+    "team_score_mae": 1.049274733040904,
     "goal_markets": {
       "over_1.5": {
-        "accuracy": 0.7727272727272727,
-        "brier": 0.1790236056038554
+        "accuracy": 0.7746478873239436,
+        "brier": 0.1782894572267711
       },
       "over_2.5": {
-        "accuracy": 0.5757575757575758,
-        "brier": 0.24841391419025619
+        "accuracy": 0.5633802816901409,
+        "brier": 0.2506541161979471
       },
       "over_3.5": {
-        "accuracy": 0.6818181818181818,
-        "brier": 0.2158787605919602
+        "accuracy": 0.676056338028169,
+        "brier": 0.220269841597459
       },
       "both_teams_score": {
-        "accuracy": 0.5909090909090909,
-        "brier": 0.24958808376217925
+        "accuracy": 0.5633802816901409,
+        "brier": 0.250946881771034
       }
     }
   },
