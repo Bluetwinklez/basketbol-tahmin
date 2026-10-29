@@ -52,7 +52,7 @@ Normal pakette aynı denetleyici (`tests/leakage_check.py`) aynı sızıntılı 
 |---|---|---|
 | [EuroLeague API v2](https://api-live.euroleague.net/v2/competitions/E/seasons/E2024/games) | E ve U, 2007-08…2025-26 | Yol: `/v2/competitions/{E,U}/seasons/{E,U}YYYY/games`. Yanıttaki `total` alanıyla eksiksizlik denetlenir. Oynanmamış maçlar ve EuroCup iki ayaklı eşleşmelerdeki beraberlikler dışlanır ve sayılır. |
 | [Basketball Reference](https://www.basketball-reference.com/leagues/NBA_2025_games.html) | NBA 2014-15…2025-26 | Sezon sayfasındaki aylık bağlantılar izlenir; ABD Doğu saati DST ile UTC'ye çevrilir. robots.txt okunur, tanımlı User-Agent, en az 6,1 sn aralık ve kayan 60 sn'de en fazla 10 istek. HTTP 429 sonrası aynı oturumda o sunucuya istek gönderilmez. |
-| [Sportsbook Reviews Online](https://www.sportsbookreviewsonline.com/scoresoddsarchives/nba-odds-2021-22/) | NBA kapanış moneyline | robots.txt arşive izin verir; 2014-15…2022-23 sayfaları tablo içerir, 2023-24 ve sonrası ana sayfaya yönlenir. **Sitenin [Terms](https://www.sportsbookreviewsonline.com/terms/) sayfası içeriğin yazılı izin olmadan kullanılmasını yasaklar**; bu yüzden ayrıştırma yalnız `--sbr-izni` ile çalışır ve bu çalışmada **kullanılmadı**. |
+| [Sportsbook Reviews Online](https://www.sportsbookreviewsonline.com/scoresoddsarchives/nba-odds-2021-22/) | NBA kapanış moneyline | robots.txt arşive izin verir; 2014-15…2022-23 sayfaları tablo içerir, 2023-24 ve sonrası ana sayfaya yönlenir. **Sitenin [Terms](https://www.sportsbookreviewsonline.com/terms/) sayfası içeriğin yazılı izin olmadan kullanılmasını yasaklar**; bu yüzden ayrıştırma yalnız `--sbr-izni` ile çalışır. 29 Ekim 2026'da kullanıcı şartları bilerek kişisel kullanım için onayladı; 2014-15…2022-23 oranları indirildi (10.692 maç eşleşti, 169 eşleşmedi). `data/oranlar.parquet` git dışında tutulur, depoya yalnız özet metrikler girer. |
 
 - Ham yanıtlar ve HTTP meta verisi URL SHA-256 anahtarıyla `data/raw/<sunucu>/` altında önbelleğe alınır; önbellekte olan tekrar indirilmez. Hatalı (429 gibi) yanıtlar da önbelleğe yazılır; yeniden denemek için ilgili çift bilinçli olarak silinmelidir (bu çalışmada Retry-After süresi dolduktan sonra yapıldı).
 - Normal tablo `data/maclar.parquet`: PLAN.md şeması (`mac_id, lig, sezon, tarih_utc, ev, dep, ev_skor, dep_skor, uzatma, ev_iy, dep_iy, tarafsiz_saha, asama, kaynak`). Tekrarlı `mac_id` ve beraberlik hata verir.
@@ -68,7 +68,8 @@ Normal pakette aynı denetleyici (`tests/leakage_check.py`) aynı sızıntılı 
 - **Öğrenilen ayarlar:** Elo K∈{10,20,30}, ev avantajı∈{0,50,100}, sezon başı çekme∈{0;0,25;0,5}; EWMA alfa∈{0,1;0,3}; lojistik C, boosting yaprak/regularizasyon/ağaç sayısı, Ridge alfa ve Platt katsayıları. Hepsi yalnız eğitim penceresinde seçilir ve her pencere için `docs/kanit/parametreler.json` içine kaydedilir. Bahis eşiği (oran kullanıldığında) yalnız önceki sezonların walk-forward tahminlerinden seçilir.
 - **Özellikler:** Elo farkı, ev/tarafsız saha, EWMA atılan/yenen/fark, tempo vekili toplam, dinlenme farkı, arka arkaya maç, son 7 günde maç sayısı, deplasman serisi, sezondaki maç sayısı, Avrupa maç yükü (yalnız E/U verisinden). Hiç maçı görülmemiş takımın EWMA değeri ligin geçmiş ortalamasıyla başlar.
 - **Metrikler:** log loss, Brier, doğruluk, 10 kovalı kalibrasyon tablosu (`kalibrasyon.csv`) ve PNG (`docs/kalibrasyon_*.png`), sayı farkı ve toplam MAE. Model−Elo log loss farkı için sezon bootstrap'ı, işaret permütasyonu ve lig içinde Holm düzeltmesi; p<0,05 olmadan üstünlük iddiası yapılmaz.
-- **Piyasa kıyası ve bahis:** vig'siz kapanış olasılığı (iki tarafın 1/ondalık oranı normalize edilir), sabit pay (%1 güncel sermaye) ve çeyrek Kelly; ROI, en büyük düşüş ve bahis sayısı. Kod ve fixture testleri hazır; gerçek oranlar ToS nedeniyle kullanılmadığı için **sonuç üretilmedi**.
+- **Piyasa kıyası ve bahis:** vig'siz kapanış olasılığı (iki tarafın 1/ondalık oranı normalize edilir), sabit pay (%1 güncel sermaye) ve çeyrek Kelly; ROI, en büyük düşüş ve bahis sayısı. Sonuçlar `docs/kanit/piyasa.csv` ve `bahis.csv` içinde.
+- **Harman (piyasa + model):** sezon S için `logit(piyasa)` ve `logit(model)` üzerine cezasız lojistik regresyon, yalnız S'den önceki oranlı sezonlarla eğitilir. 2017-18…2022-23'te (6.758 maç) vig'siz piyasa %66,94 isabet ve 0,6070 log loss, skor modeli %65,34 ve 0,6233, harman %67,09 ve 0,6073. Modelin harmandaki katsayısı 0'a yakın (−0,04…+0,09): model piyasanın bilmediği bir şey bilmiyor. Bahis simülasyonu da kâr göstermiyor (ROI −%6,5…+%0,4). Tüm oranlı sezonlarla öğrenilen katsayılar `docs/kanit/harman.json` içinde.
 
 ## Sınırlamalar
 
@@ -76,7 +77,7 @@ Normal pakette aynı denetleyici (`tests/leakage_check.py`) aynı sızıntılı 
 - Yerel ligler (BSL, ACB, BBL, LBA, LNB) yapılmadı: PLAN'a göre EuroLeague API'de maç verisi yok.
 - Avrupa yorgunluğu yalnız Avrupa maçlarından hesaplanır; yerel lig programı yok.
 - Yeniden eğitim yalnız sezon başında; aylık yeniden eğitim yapılmadı.
-- NBA kapanış oranı yok → piyasa kıyası, bahis simülasyonu ve eşleşmeyen oran satırı sayısı **yapılmadı**.
+- NBA kapanış oranı yalnız 2014-15…2022-23 için var (SBR sonraki sezonları yayımlamıyor). Avrupa ligleri için oran arşivi yok.
 - Tahmin komutu saf Elo verir; sınıflandırıcıyla gelecek maç servisi yapılmadı.
 
 ## PLAN.md ile çelişkiler / farklar
@@ -93,7 +94,7 @@ Bu çalışma yalnız ayrılmış çalışma kopyasındadır. Commit/merge yapı
 ## Ek bilgiler ve denenmiş özellikler
 
 - **Uzatma olasılığı:** Normal sürenin berabere bitme yoğunluğu, ligin geçmiş uzatma oranına ölçeklenerek verilir.
-- **Piyasa:** Maç `"Ev - Dep @1.30/2.14"` biçiminde yazılırsa oranlardan bahisçi marjı çıkarılmış olasılık gösterilir ve deftere yazılır.
+- **Piyasa:** Maç `"Ev - Dep @1.30/2.14"` biçiminde yazılırsa oranlardan bahisçi marjı çıkarılmış olasılık gösterilir ve deftere yazılır. NBA'de ayrıca `Harman` satırı çıkar: geçmiş testte en iyi sonucu veren piyasa+model birleşimi. Oran verildiğinde kazanan tahmini için bu satır esas alınmalıdır.
 - **NBA sakatlık raporu:** Resmi PDF (ak-static.cms.nba.com) `pdfplumber` ile okunur; Out/Doubtful/Questionable oyuncular listelenir. Modele girmez, geçmiş raporlarla backtest yapılmadı.
 - **Tahmin defteri:** `defter/tahminler.csv` git'e girer; tahminin maçtan önce yapıldığı commit geçmişinden görülür.
 - **Kutu skor özellikleri (tempo, ORtg/DRtg, kadro devamlılığı):** EuroLeague/EuroCup v3 (9.065 maç) ve ESPN NBA (15.439 maç) verisiyle denendi. Walk-forward'da log loss'u iyileştirmedi (NBA 0,6220 → 0,6227, EuroLeague 0,5955 → 0,5965, EuroCup 0,6129 → 0,6158); bu yüzden `KUTU_LIGLERI` boş. Veri ve kod duruyor.
