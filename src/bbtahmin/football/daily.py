@@ -14,8 +14,11 @@ def digest(payload):
     return hashlib.sha256(json.dumps(payload,sort_keys=True,ensure_ascii=False,allow_nan=False).encode()).hexdigest()
 
 
-def run(days=7, output='rapor/football', root=ROOT, now=None, model_variant='baseline',require_fixture_confirmation=True):
+def run(days=7, output='rapor/football', root=ROOT, now=None, model_variant=None,require_fixture_confirmation=True):
     from .challenger import fit, VARIANTS
+    if model_variant is None:
+        from .challenger import DEFAULT_VARIANT
+        model_variant=DEFAULT_VARIANT
     if model_variant not in VARIANTS: raise ValueError('Unknown football model candidate')
     if type(days) is not int or not 1<=days<=14: raise ValueError('Horizon must be 1..14 days')
     replay_clock=now is not None

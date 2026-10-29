@@ -10,7 +10,9 @@ Current delivery audit and unresolved acceptance criteria: [scope ledger](docs/d
 
 ## What works
 
-**Football probability research:** a fixed joint-score ensemble, consistent goal markets and per-market reliability reports now complement the existing candidates. Same-cohort historical 1/X/2 is 48.78% versus baseline 47.80% on 3,973 games; other candidates perform better on some measures. Defaults and frozen forecasts remain unchanged. [Comparison and usage](docs/football-ensemble.md).
+**Accuracy review (October 2026):** extended basketball features chosen per league on the preceding season, and the opponent-adjusted football model as default. The basketball gain is small (e.g. NBA 65.78% → 66.03%); football 1/X/2 rises from 47.80% to 49.18% on the same 3,973-game cohort. [Diagnosis, measurements and rejected ideas](docs/accuracy-review.md).
+
+**Football probability research:** a fixed joint-score ensemble, consistent goal markets and per-market reliability reports now complement the existing candidates. Same-cohort historical 1/X/2 is 48.78% versus baseline 47.80% on 3,973 games; the opponent-adjusted candidate (49.18%) is now the default. Frozen forecasts remain unchanged. [Comparison and usage](docs/football-ensemble.md).
 
 **Sports reliability expansion:** 3,133 additional football results across Belgium, Greece and Scotland (62,373 stored finals / 17 leagues including the preceding archive), explicit opponent-adjusted and low-score research candidates, same-cohort comparisons, football result filters and JSON/CSV/Markdown exports. Basketball adds Turkish provider-duplicate safeguards, stable postponed-fixture identities and display-only totals estimates. Weekly historical backfills and rendered Chromium fixture checks complement daily refresh. [Changes, measured results and remaining limits](docs/sports-upgrade.md).
 

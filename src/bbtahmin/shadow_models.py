@@ -40,7 +40,7 @@ def slow_form(code,fixture,clock,policy):
     removed=(('rest_diff','back_to_back_diff','load7_diff','road_streak_diff','europe_load_diff') if variant=='without_rest'
              else RATING_FEATURES if variant=='without_opponent_ratings' else ('home',) if variant=='without_home' else ())
     for column in removed:features[column]=0.
-    probabilities,scores,errors,info=fit_fold(combined,features,season)
+    probabilities,scores,errors,info=fit_fold(combined,features,season,select=False)
     i=combined.loc[combined.sezon==season,'mac_id'].tolist().index('SHADOW_QUERY')
     total=max(0.,float(scores[1][i]+errors[1]['bias']));margin=float(np.clip(scores[0][i],-total,total))
     p=float(probabilities[info['selected']][i]);z=float(norm.ppf(.9))
