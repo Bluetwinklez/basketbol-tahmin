@@ -55,8 +55,10 @@ def refresh(root=Path('docs/kanit/pregame_verified'), odds_path=Path('data/oranl
         odds_dataset_sha256=hashlib.sha256(odds_path.read_bytes()).hexdigest(),
         command='python scripts/refresh_verified_evidence.py')
     # Include the compressed, distributable predictions as well as all reports.
+    # The raw CSV is gitignored; signing it would invalidate a clean checkout.
+    meta['files'].pop('tahminler.csv',None)
     for path in sorted(root.iterdir()):
-        if path.suffix in ('.csv','.json','.gz') and path.name!='manifest.json':
+        if path.suffix in ('.csv','.json','.gz') and path.name not in ('manifest.json','tahminler.csv'):
             meta['files'][path.name]=hashlib.sha256(path.read_bytes()).hexdigest()
     (root/'manifest.json').write_text(json.dumps(meta,indent=2),'utf8')
     if verified_manifest(root) is None: raise ValueError('Derived evidence verification failed')
