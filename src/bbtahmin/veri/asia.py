@@ -1,5 +1,5 @@
 """Independent Asian-league archives; no mixing of divisions or PBA conferences."""
-import hashlib,json
+import copy,hashlib,json,tempfile
 from pathlib import Path
 import pandas as pd
 
@@ -25,6 +25,7 @@ def cross_source_pba(g):
 
 def save(code,records,teams,report,fixtures=None):
     if code not in CODES:raise ValueError('Unsupported Asian competition')
+    teams=copy.deepcopy(teams);report=copy.deepcopy(report)
     g=pd.DataFrame(records)
     if g.empty:raise ValueError('No verified final observations for '+code)
     g['tarih_utc']=pd.to_datetime(g.tarih_utc,utc=True)
@@ -42,26 +43,28 @@ def save(code,records,teams,report,fixtures=None):
         g['competition_code']=g.sezon.map(lambda season: current if season>='2026-27' else code)
     aliases={}
     if code=='PBA_GOV':g,aliases=cross_source_pba(g)
-    temp=path.with_suffix('.part');g.to_parquet(temp,index=False);temp.replace(path)
-    catalog=root/f'{code}_teams.json';old=json.loads(catalog.read_text()) if catalog.exists() else {}
+    # Validate and serialize every output before replacing any persisted file.
+    dataset_bytes=g.to_parquet(index=False)
+    payloads={path:dataset_bytes}
+    catalog=root/f'{code}_teams.json';old=json.loads(catalog.read_text(encoding='utf8')) if catalog.exists() else {}
     for key,entry in teams.items():
         previous=old.get(key,{})
         entry['aliases']=sorted(set(entry.get('aliases',[])+previous.get('aliases',[])+([previous['name']] if previous.get('name') else [])))
         old[key]=entry
-    catalog.write_text(json.dumps(old,ensure_ascii=False,indent=2))
+    payloads[catalog]=json.dumps(old,ensure_ascii=False,indent=2,allow_nan=False).encode('utf8')
     if fixtures is not None:
         f=pd.DataFrame(fixtures)
         if not f.empty and f.mac_id.duplicated().any():raise ValueError('Duplicate current fixtures')
         if not f.empty and code in ('JP_B1','JP_B2'):
             current='JP_PREMIER' if code=='JP_B1' else 'JP_ONE'
             f['competition_code']=f.sezon.map(lambda season: current if season>='2026-27' else code)
-        f.to_parquet(root/f'{code}_fixtures.parquet',index=False)
+        payloads[root/f'{code}_fixtures.parquet']=f.to_parquet(index=False)
     report.update(games=len(g),teams=len(set(g.ev)|set(g.dep)),seasons=g.groupby('sezon').size().to_dict(),
-        dataset_sha256=hashlib.sha256(path.read_bytes()).hexdigest(),trained=False)
+        dataset_sha256=hashlib.sha256(dataset_bytes).hexdigest(),trained=False)
     evidence=Path('docs/kanit/asia_data');evidence.mkdir(parents=True,exist_ok=True)
     report_path=evidence/f'{code}_collection.json'
     if report_path.exists():
-        previous=json.loads(report_path.read_text())
+        previous=json.loads(report_path.read_text(encoding='utf8'))
         report['sources']=list(dict.fromkeys(previous.get('sources',[])+report.get('sources',[])))
         counts={}
         for item in previous.get('counts',[])+report.get('counts',[]):
@@ -75,6 +78,15 @@ def save(code,records,teams,report,fixtures=None):
         boxes=root/'PBA_GOV_player_boxes.parquet'
         if boxes.exists():
             b=pd.read_parquet(boxes);b['mac_id']=b.mac_id.map(lambda k:aliases.get(k,k))
-            b.drop_duplicates(['mac_id','team','player_id']).to_parquet(boxes,index=False)
-    report_path.write_text(json.dumps(report,ensure_ascii=False,indent=2))
+            payloads[boxes]=b.drop_duplicates(['mac_id','team','player_id']).to_parquet(index=False)
+    payloads[report_path]=json.dumps(report,ensure_ascii=False,indent=2,allow_nan=False).encode('utf8')
+    staged=[]
+    try:
+        for destination,payload in payloads.items():
+            with tempfile.NamedTemporaryFile(dir=destination.parent,prefix=destination.name+'.',suffix='.part',delete=False) as handle:
+                temp=Path(handle.name);staged.append((temp,destination));handle.write(payload)
+        # Each replace is atomic; this is not a multi-file crash transaction.
+        for temp,destination in staged:temp.replace(destination)
+    finally:
+        for temp,_ in staged:temp.unlink(missing_ok=True)
     return g
