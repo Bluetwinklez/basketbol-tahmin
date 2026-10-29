@@ -23,8 +23,19 @@
     "rtop_12"
   ],
   "files": {
-    "parametreler.json": "2eb49c8c7d7347f326dd3fc8a5a9ba8a201a0819466fda02c73730bf5e5ace63",
-    "metrikler.csv": "6a0c600cff3e78be4d2bffccef9c4f72ce5f7f062dca7f4b7a436028cf42f26e"
+    "parametreler.json": "5331e59de442764d8e3b0a3333d260f23244ee204446ad4cabe31dff9f1b28d1",
+    "metrikler.csv": "d7513186b6f8dccedda28a4b8488b94b9aa2e84ddc92823233089d48d38857bd",
+    "bahis.csv": "58e3eb5340e1bc112b49a155de8d4fa1847e173682b6437d0cacd4005a1b9209",
+    "completed_seasons.csv": "cfde9770d932622349755724d1706163ef881af6f4711edf57952378f575be5c",
+    "confidence.csv": "fd868583b5d67c0d1e191369b19a86ff104b3ed200bf581de8314937b075ba55",
+    "harman.json": "6df710163cc712838b14b779ced316367cdc2bf0740db85ad57dc7f42153f9e8",
+    "kalibrasyon.csv": "e067ea9f97ab214f09803aa9c907b1da03e2f31b017fa04f40f3ecad3873b84f",
+    "mac_sayilari.csv": "ff7b661a639712d896465415f47c41580d36a7582193e277a0163b8d44c1a95c",
+    "piyasa.csv": "fe8a1214c1f9766982086c36121a328d70e846cea171a390fd5e467b8527121e",
+    "piyasa_ozet.csv": "72b042d1d72174a8fd701e55452184450a2173b4598db9770ffb6ffa3ac6bda7",
+    "profil.json": "65959336061e2b58fe2d7e709ff1f78cb4abbc470a9ca0608b5123d8b26f394f",
+    "tahminler.csv.gz": "599ba2662be26ae6ee40f182899bf7b1b770f29ba6b32c1c302d7950efa471a7",
+    "toplam.csv": "1fbced596b20c4ced0162d38aa9fb03fc1b065b5d1913c6f0204aae8be6f1205"
   },
   "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
   "packages": {
@@ -33,5 +44,11 @@
     "scipy": "1.17.0",
     "scikit-learn": "1.6.1"
   },
-  "prediction_sha256": "38c10a57b69ca7d28dd7b2e661b6fcc711710d1e6ecccb7b7d015dba6bde25a3"
+  "prediction_sha256": "38c10a57b69ca7d28dd7b2e661b6fcc711710d1e6ecccb7b7d015dba6bde25a3",
+  "derived_reports": {
+    "timestamp": "2026-10-29T15:54:46.573416+00:00",
+    "method": "Existing signed predictions; no model refit. Market summary uses common blend seasons.",
+    "odds_dataset_sha256": "60bd03ee13d42117934528b0962de2dc6c0a1bcec6cb72b614bce8a5422ed9ab",
+    "command": "python scripts/refresh_verified_evidence.py"
+  }
 }

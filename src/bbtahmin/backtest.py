@@ -169,7 +169,12 @@ def run(ligler=None,cikti='docs/kanit',first_test=None):
         prediction_sha256=hashlib.sha256((output/'tahminler.csv').read_bytes()).hexdigest(),
         dataset_sha256=hashlib.sha256(Path('data/maclar.parquet').read_bytes()).hexdigest(),
         absence_leagues=sorted(EKSIK_LIGLERI),box_leagues=sorted(KUTU_LIGLERI),base_features=FEATURES,
-        files={name:hashlib.sha256((output/name).read_bytes()).hexdigest() for name in ['parametreler.json','metrikler.csv']})
+        files={name:hashlib.sha256((output/name).read_bytes()).hexdigest() for name in
+               ['parametreler.json','metrikler.csv','tahminler.csv','toplam.csv',
+                'kalibrasyon.csv','mac_sayilari.csv','profil.json','piyasa.csv','bahis.csv','harman.json']
+               if (output/name).exists()})
+    if Path('data/oranlar.parquet').exists():
+        manifest['odds_dataset_sha256']=hashlib.sha256(Path('data/oranlar.parquet').read_bytes()).hexdigest()
     (output/'manifest.json').write_text(json.dumps(manifest,indent=2),'utf8')
     if deneme: return metrics
     plot_calibration(pred)

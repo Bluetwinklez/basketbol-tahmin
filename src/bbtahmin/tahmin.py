@@ -82,6 +82,10 @@ def harman(t, yol='docs/kanit/harman.json'):
     """Oran verilmişse piyasa ve model olasılığının backtest'te öğrenilen birleşimi; yoksa None."""
     if t.get('piyasa_ev') is None:
         return None
+    if str(yol)=='docs/kanit/harman.json':
+        from .artifacts import verified_path
+        yol=verified_path('harman.json')
+        if yol is None: return None
     try:
         kayit = json.loads(Path(yol).read_text('utf8'))[t['lig']][t['model']]
     except (OSError, KeyError, ValueError):
@@ -266,7 +270,7 @@ def yazdir(sonuclar, gosterim=None):
             print(f"  Piyasa:   ev %{pe * 100:.1f} / dep %{(1 - pe) * 100:.1f}  (oranlar {t['oran_ev']} / {t['oran_dep']}, marj çıkarıldı)")
         if t.get('harman_ev') is not None:
             ph = t['harman_ev']
-            print(f"  Harman:   ev %{ph * 100:.1f} / dep %{(1 - ph) * 100:.1f}  (piyasa + model; geçmiş testte en iyisi, önerilen)")
+            print(f"  Harman:   ev %{ph * 100:.1f} / dep %{(1 - ph) * 100:.1f}  (piyasa + model; araştırma)")
         if t.get('eksik_dk') is not None:
             print(f"  Eksik etkisi: ev − dep eksik dakika farkı {t['eksik_dk']:+.0f} dk (modele dahil)")
         for kod in (t['ev'], t['dep']):
