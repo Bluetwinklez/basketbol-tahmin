@@ -75,3 +75,24 @@ def test_match_counts_unmatched():
     assert (neutral.ev_ml,neutral.dep_ml)==(170,-200)
     reasons=sorted(u['neden'] for u in unmatched)
     assert len(unmatched)==2 and reasons[0]=='Eşleşmeyen takım: Gotham' and reasons[1]=='Moneyline yok'
+
+def test_harman_uses_only_prior_seasons_and_learns_market_weight():
+    import numpy as np
+    from bbtahmin.backtest import harman_fit,harman_p
+    rng=np.random.default_rng(1)
+    market=rng.uniform(.2,.8,4000)
+    y=(rng.uniform(size=4000)<market).astype(int)
+    part=pd.DataFrame(dict(market=market,p=rng.uniform(.2,.8,4000),y=y))
+    a,bm,bp=harman_fit(part)
+    assert bm==pytest.approx(1,abs=.15) and abs(bp)<.15  # gürültü modelin ağırlığı ~0
+    assert harman_p([0.,1.,0.],np.array([.7]),np.array([.1]))[0]==pytest.approx(.7)
+
+def test_tahmin_harman_needs_odds_and_coefficients(tmp_path):
+    import json
+    from bbtahmin.tahmin import harman
+    yol=tmp_path/'harman.json'
+    yol.write_text(json.dumps({'NBA':{'skor':{'katsayi':[0.,1.,0.]}}}),'utf8')
+    t=dict(lig='NBA',model='skor',ev_kazanir=.4,piyasa_ev=.65)
+    assert harman(t,yol)==pytest.approx(.65)
+    assert harman(dict(t,piyasa_ev=None),yol) is None
+    assert harman(dict(t,lig='E'),yol) is None
