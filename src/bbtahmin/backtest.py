@@ -151,12 +151,14 @@ def run(ligler=None,cikti='docs/kanit',first_test=None):
                     predicted=float(group.p.mean()) if len(group) else None,
                     observed=float(group.y.mean()) if len(group) else None))
     pd.DataFrame(aggregate).to_csv(output/'toplam.csv',index=False)
-    for name in ['piyasa.csv','bahis.csv']:
+    for name in ['piyasa.csv','bahis.csv','harman.json']:
         if (output/name).exists(): (output/name).unlink()
     if Path('data/oranlar.parquet').exists() and not pred.empty:
         market,bets=market_and_betting(pred,pd.read_parquet('data/oranlar.parquet'))
         market.to_csv(output/'piyasa.csv',index=False)
         bets.to_csv(output/'bahis.csv',index=False)
+        harman=dict(NBA=harman_katsayilari(pred,pd.read_parquet('data/oranlar.parquet')))
+        (output/'harman.json').write_text(json.dumps(harman,ensure_ascii=False,indent=2),'utf8')
     pd.DataFrame(calibration).to_csv(output/'kalibrasyon.csv',index=False)
     all_games.groupby(['lig','sezon']).size().rename('mac_sayisi').to_csv(output/'mac_sayilari.csv')
     profile=dict(rows=len(all_games),missing=all_games.isna().sum().to_dict(),
@@ -167,7 +169,12 @@ def run(ligler=None,cikti='docs/kanit',first_test=None):
         prediction_sha256=hashlib.sha256((output/'tahminler.csv').read_bytes()).hexdigest(),
         dataset_sha256=hashlib.sha256(Path('data/maclar.parquet').read_bytes()).hexdigest(),
         absence_leagues=sorted(EKSIK_LIGLERI),box_leagues=sorted(KUTU_LIGLERI),base_features=FEATURES,
-        files={name:hashlib.sha256((output/name).read_bytes()).hexdigest() for name in ['parametreler.json','metrikler.csv']})
+        files={name:hashlib.sha256((output/name).read_bytes()).hexdigest() for name in
+               ['parametreler.json','metrikler.csv','tahminler.csv','toplam.csv',
+                'kalibrasyon.csv','mac_sayilari.csv','profil.json','piyasa.csv','bahis.csv','harman.json']
+               if (output/name).exists()})
+    if Path('data/oranlar.parquet').exists():
+        manifest['odds_dataset_sha256']=hashlib.sha256(Path('data/oranlar.parquet').read_bytes()).hexdigest()
     (output/'manifest.json').write_text(json.dumps(manifest,indent=2),'utf8')
     if deneme: return metrics
     plot_calibration(pred)
@@ -179,6 +186,28 @@ def run(ligler=None,cikti='docs/kanit',first_test=None):
 
 THRESHOLDS=[.01,.02,.03,.05,.075,.1]
 BET_MODELS=['logistic','hist_gradient_boosting','mov_elo']
+HARMAN_MODELS=['skor','topluluk','logistic']
+
+def _logit(p):
+    p=np.clip(np.asarray(p,dtype=float),1e-6,1-1e-6)
+    return np.log(p/(1-p))
+
+def harman_fit(part):
+    """Cezasız lojistik: y ~ logit(piyasa) + logit(model). (sabit, piyasa katsayısı, model katsayısı) döner."""
+    from sklearn.linear_model import LogisticRegression
+    c=LogisticRegression(penalty=None,max_iter=1000).fit(np.c_[_logit(part.market),_logit(part.p)],part.y)
+    return [float(c.intercept_[0]),float(c.coef_[0,0]),float(c.coef_[0,1])]
+
+def harman_p(fit,market,p):
+    a,bm,bp=fit
+    return 1/(1+np.exp(-(a+bm*_logit(market)+bp*_logit(p))))
+
+def harman_katsayilari(pred,odds):
+    """Tüm oranlı NBA sezonlarıyla model başına harman katsayıları (tahmin komutu kullanır)."""
+    data=pred[pred.lig=='NBA'].merge(odds[['mac_id','ev_ml','dep_ml']],on='mac_id',how='inner')
+    data['market']=[no_vig(american_decimal(h),american_decimal(a))[0] for h,a in zip(data.ev_ml,data.dep_ml)]
+    return {model:dict(katsayi=harman_fit(part),n=len(part),sezonlar=sorted(part.sezon.unique()))
+            for model,part in data.groupby('model') if len(part)>=500}
 
 def market_and_betting(pred,odds,min_bets=20):
     """Vig'siz kapanış olasılığıyla kıyas ve bahis simülasyonu.
@@ -196,6 +225,14 @@ def market_and_betting(pred,odds,min_bets=20):
         market_rows.append(dict(sezon=season,model=model,n=len(part),**scores(part.y,part.p)))
         if model=='elo':
             market_rows.append(dict(sezon=season,model='piyasa_vigsiz',n=len(part),**scores(part.y,part.market)))
+    # Harman: sezon S için piyasa ve model logitleri üzerine lojistik, yalnız S'den önceki oranlı sezonlarla.
+    for model in HARMAN_MODELS:
+        m=data[data.model==model]
+        for season in sorted(m.sezon.unique())[1:]:
+            history,test=m[m.sezon<season],m[m.sezon==season]
+            fit=harman_fit(history)
+            market_rows.append(dict(sezon=season,model=f'harman_{model}',n=len(test),
+                **scores(test.y,harman_p(fit,test.market,test.p))))
     bets=[]
     seasons=sorted(data.sezon.unique())
     for model in BET_MODELS:

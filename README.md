@@ -162,7 +162,7 @@ The statement that no Iddaa MCP exists is incorrect: [`borakilicoglu/iddaa-mcp`]
 
 ## Current evaluation
 
-The new seven-model run is under [`docs/kanit/pregame_verified`](docs/kanit/pregame_verified). It excludes actual-participant absence labels. Each test season uses only preceding seasons for fitting/tuning; same-UTC-day outcomes are withheld from pregame features. Models refit at season boundaries, not monthly.
+The seven-model run is under [`docs/kanit/pregame_verified`](docs/kanit/pregame_verified). Its [evidence guide](docs/kanit/pregame_verified/README.md) defines the authoritative files and reproduction commands. It excludes actual-participant absence labels. Each test season uses only preceding seasons for fitting/tuning; same-UTC-day outcomes are withheld from pregame features. Models refit at season boundaries, not monthly.
 
 The following are **fixed-model results on the last five completed seasons, 2021–22 through 2025–26**. The current incomplete season is excluded. These are not live results, a comparison with identical previous injury-based metrics, or an out-of-sample evaluation of choosing the winning model after seeing this table.
 
@@ -200,6 +200,7 @@ python -m bbtahmin genislet --ligler E U --yalniz-skor
 python scripts/audit_dataset.py
 python -m bbtahmin backtest --ilk-test 2021 --cikti docs/kanit/pregame_verified
 python scripts/confidence_report.py
+python scripts/refresh_verified_evidence.py
 PYTHONPATH=src python scripts/evaluate_features.py
 python scripts/evaluate_calibration.py
 ```
@@ -216,7 +217,19 @@ python scripts/evaluate_calibration.py
 
 Available records are not a claim of complete coverage for every season or league. Data collectors preserve existing results, quarantine conflicting scores/shifted-date duplicates, normalize athlete IDs and retain source provenance. Four zero-score/administrative records remain in the factual archive but are excluded from ordinary-game modeling. Rich shot/player data is not automatically a same-game pregame feature.
 
-Sources: official EuroLeague API, Basketball Reference, ESPN/sportsdataverse, nba_api, nblR and verified numeric fields from euroleague-open-data. See [data expansion](docs/data-expansion.md), [source notes](data/KAYNAKLAR.md) and [dataset audit](docs/kanit/dataset_audit.json). The SBR collector remains permission-gated; no closing-odds profitability result is claimed.
+Sources: official EuroLeague API, Basketball Reference, ESPN/sportsdataverse, nba_api, nblR and verified numeric fields from euroleague-open-data. See [data expansion](docs/data-expansion.md), [source notes](data/KAYNAKLAR.md) and [dataset audit](docs/kanit/dataset_audit.json). The SBR collector remains permission-gated (`--sbr-izni`). On 2026-10-29 the owner accepted SBR's terms for personal use and NBA closing moneylines for 2014-15…2022-23 were collected (10,692 games matched, 169 unmatched); `data/oranlar.parquet` stays out of git and only summary metrics are committed.
+
+**NBA market comparison from the verified benchmark:** the common blend cohort is **664 matched games in 2022–23**, with 2021–22 used for blend training. This is a subset of the season, not the full five-season cohort above or the separate historical PR #30 run. All rows below use the same games and seasons; coefficients are fitted only on earlier odds seasons.
+
+| Model | Games | Accuracy | Log loss | Brier |
+|---|---:|---:|---:|---:|
+| Score | 664 | 63.40% | 0.64920 | 0.22856 |
+| Ensemble | 664 | 62.80% | 0.64980 | 0.22883 |
+| No-vig closing market | 664 | 63.86% | 0.63898 | 0.22342 |
+| Market + score | 664 | 64.31% | 0.64362 | 0.22544 |
+| Market + ensemble | 664 | 64.16% | 0.64389 | 0.22553 |
+
+The blends worsen log loss relative to the market on this cohort. This single-season comparison does not validate profitability or a new default model. Signed summaries: [piyasa_ozet.csv](docs/kanit/pregame_verified/piyasa_ozet.csv), [season metrics](docs/kanit/pregame_verified/piyasa.csv), [betting simulations](docs/kanit/pregame_verified/bahis.csv). Raw odds stay local. When odds are supplied, `tahmin` shows the research blend only if its coefficients in `pregame_verified/harman.json` pass manifest validation. Historical top-level market summaries remain separate archival results.
 
 ## Experimental CBA and live-state projections
 
@@ -279,7 +292,7 @@ Tests are offline. Install the MCP extra to include its protocol test; otherwise
 
 Latest local verification (2026-10-23): **213 tests passed**, including the optional MCP protocol test, source identity/final-score boundaries, date-only embargoes, archive-order invariance, future-result isolation, player-report availability and travel unknowns. See [latest test evidence](docs/kanit/asia_tests.xml). Earlier reports remain historical snapshots. The server exposes six read-only tools.
 
-A [fresh runtime verification](docs/kanit/runtime_validation/README.md) retrained all seven models for 2025–26 and partial 2026–27, reproduced 15,932 archived prediction rows within 2.04e-14, exercised a real bulletin fixture, and documented the rejection of unsupported live CBA games. It also reports the chronological **model-selection policy** separately from the fixed-model tables above: NBA 65.81% and NBL 59.22% across five completed seasons.
+A [separate runtime verification](docs/kanit/runtime_validation/README.md) retrained the models, exercised a real bulletin fixture, and documented the rejection of unsupported live CBA games. Its chronological model-selection experiment has a separate cohort and manifest; use the fixed-model tables above for the current benchmark.
 
 The highest-priority research additions are point-in-time injury/lineup history, timestamped market snapshots, stronger player/rotation value estimates, domestic-league workload and travel, and chronological calibration/interval checks. The implemented shooting-profile experiment did not consistently improve outcomes and remains disabled. Detailed priorities, reviewed repositories, provider limitations and measured ablations are in [research-and-roadmap.md](docs/research-and-roadmap.md).
 

@@ -21,8 +21,15 @@ def verified_manifest(directory='docs/kanit/pregame_verified'):
                 or meta['box_leagues']!=sorted(KUTU_LIGLERI)):
             return None
         for name in ('parametreler.json','metrikler.csv'):
-            if not matches_text_hash(root/name,meta['files'][name]):
+            if name not in meta['files']:
                 return None
+        for name,expected in meta['files'].items():
+            path=root/name
+            if path.suffix=='.gz':
+                valid=hashlib.sha256(path.read_bytes()).hexdigest()==expected
+            else:
+                valid=matches_text_hash(path,expected)
+            if not valid: return None
         return meta
     except (OSError,ValueError,KeyError,TypeError):
         return None
@@ -30,7 +37,8 @@ def verified_manifest(directory='docs/kanit/pregame_verified'):
 
 def verified_path(filename,directory='docs/kanit/pregame_verified'):
     root=Path(directory)
-    return root/filename if verified_manifest(directory) and (root/filename).exists() else None
+    meta=verified_manifest(directory)
+    return root/filename if meta and filename in meta['files'] and (root/filename).exists() else None
 
 
 def require_verified_path(filename,directory='docs/kanit/pregame_verified'):
