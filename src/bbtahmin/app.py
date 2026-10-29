@@ -59,7 +59,8 @@ def result_rows(report):
     """Attach the frozen forecast to settlements; never synthesize a prediction."""
     rows = []
     for check in (report or {}).get('settlements', []):
-        record = Path(check['record'])
+        # Ledgers written on Windows store backslash separators; resolve them on every OS.
+        record = Path(str(check['record']).replace('\\', '/'))
         predictions = {}
         try:
             from .prospective import verify

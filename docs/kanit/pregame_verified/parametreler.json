@@ -360,6 +360,30 @@
   {
     "lig": "E",
     "sezon": "2021-22",
+    "model": "feature_set",
+    "extended": false,
+    "columns": [
+      "elo_diff",
+      "home",
+      "points_for_diff",
+      "points_against_diff",
+      "margin_diff",
+      "total_mean",
+      "rest_diff",
+      "back_to_back_diff",
+      "load7_diff",
+      "road_streak_diff",
+      "games_diff",
+      "europe_load_diff",
+      "rmarj_04",
+      "rtop_04",
+      "rmarj_12",
+      "rtop_12"
+    ]
+  },
+  {
+    "lig": "E",
+    "sezon": "2021-22",
     "model": "margin_ridge",
     "alpha": 100.0,
     "candidates": [
@@ -865,6 +889,30 @@
     "validation_losses": [
       0.6042099371569223,
       0.605526165600503
+    ]
+  },
+  {
+    "lig": "E",
+    "sezon": "2022-23",
+    "model": "feature_set",
+    "extended": false,
+    "columns": [
+      "elo_diff",
+      "home",
+      "points_for_diff",
+      "points_against_diff",
+      "margin_diff",
+      "total_mean",
+      "rest_diff",
+      "back_to_back_diff",
+      "load7_diff",
+      "road_streak_diff",
+      "games_diff",
+      "europe_load_diff",
+      "rmarj_04",
+      "rtop_04",
+      "rmarj_12",
+      "rtop_12"
     ]
   },
   {
@@ -1380,6 +1428,30 @@
   {
     "lig": "E",
     "sezon": "2023-24",
+    "model": "feature_set",
+    "extended": false,
+    "columns": [
+      "elo_diff",
+      "home",
+      "points_for_diff",
+      "points_against_diff",
+      "margin_diff",
+      "total_mean",
+      "rest_diff",
+      "back_to_back_diff",
+      "load7_diff",
+      "road_streak_diff",
+      "games_diff",
+      "europe_load_diff",
+      "rmarj_04",
+      "rtop_04",
+      "rmarj_12",
+      "rtop_12"
+    ]
+  },
+  {
+    "lig": "E",
+    "sezon": "2023-24",
     "model": "margin_ridge",
     "alpha": 100.0,
     "candidates": [
@@ -1890,6 +1962,37 @@
   {
     "lig": "E",
     "sezon": "2024-25",
+    "model": "feature_set",
+    "extended": true,
+    "columns": [
+      "elo_diff",
+      "home",
+      "points_for_diff",
+      "points_against_diff",
+      "margin_diff",
+      "total_mean",
+      "rest_diff",
+      "back_to_back_diff",
+      "load7_diff",
+      "road_streak_diff",
+      "games_diff",
+      "europe_load_diff",
+      "rmarj_04",
+      "rtop_04",
+      "rmarj_12",
+      "rtop_12",
+      "min_games_log",
+      "early",
+      "elo_diff_early",
+      "rmarj_12_early",
+      "season_margin_diff",
+      "venue_form_diff",
+      "prev_margin_diff"
+    ]
+  },
+  {
+    "lig": "E",
+    "sezon": "2024-25",
     "model": "margin_ridge",
     "alpha": 100.0,
     "candidates": [
@@ -1898,16 +2001,16 @@
       100.0
     ],
     "validation_mae": [
-      8.937413766246344,
-      8.937414630480099,
-      8.935662995938804
+      8.96339280912536,
+      8.953936187551982,
+      8.936002806750055
     ],
     "history_window": null,
     "validation_objective": "mae",
     "validation_losses": [
-      8.937413766246344,
-      8.937414630480099,
-      8.935662995938804
+      8.96339280912536,
+      8.953936187551982,
+      8.936002806750055
     ],
     "history_candidates": [
       {
@@ -1924,11 +2027,11 @@
       }
     ],
     "training_rows": 5538,
-    "residual_sigma": 11.652221930473443,
-    "residual_mean": 0.11197521871561632,
-    "residual_normality_p": 0.0880349144348722,
-    "residual_skew": -0.006446208688692496,
-    "residual_excess_kurtosis": 0.6885659395847781
+    "residual_sigma": 11.659368113378198,
+    "residual_mean": 0.09751560213438962,
+    "residual_normality_p": 0.06572115334710336,
+    "residual_skew": 0.031187795013474944,
+    "residual_excess_kurtosis": 0.7413297274179804
   },
   {
     "lig": "E",
@@ -1941,16 +2044,16 @@
       100.0
     ],
     "validation_mae": [
-      12.950748434953297,
-      12.943536626735767,
-      12.907303862065262
+      12.952016239109357,
+      12.93851058599276,
+      12.899212085383459
     ],
     "history_window": null,
     "validation_objective": "mae",
     "validation_losses": [
-      12.950748434953297,
-      12.943536626735767,
-      12.907303862065262
+      12.952016239109357,
+      12.93851058599276,
+      12.899212085383459
     ],
     "history_candidates": [
       {
@@ -1967,11 +2070,11 @@
       }
     ],
     "training_rows": 5538,
-    "residual_sigma": 16.571528344989154,
-    "residual_mean": 1.4371685066360262,
-    "residual_normality_p": 1.1348569189608929e-07,
-    "residual_skew": 0.43727553248120954,
-    "residual_excess_kurtosis": 2.3004729472880507
+    "residual_sigma": 16.593221667196385,
+    "residual_mean": 1.3583776261959983,
+    "residual_normality_p": 5.473031997396483e-08,
+    "residual_skew": 0.45446921913698923,
+    "residual_excess_kurtosis": 2.3723294625894464
   },
   {
     "lig": "E",
@@ -1983,20 +2086,20 @@
     "lig": "E",
     "sezon": "2024-25",
     "model": "logistic",
-    "parameter": 10.0,
+    "parameter": 0.1,
     "candidates": [
       0.1,
       1.0,
       10.0
     ],
     "validation_losses": [
-      0.5877142062559318,
-      0.5877096431578827,
-      0.5877070109988064
+      0.5873015885572832,
+      0.5880858808040786,
+      0.5882963754620056
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.9381657235171406,
-    "calibration_intercept": 0.16417063256035622
+    "calibration_coefficient": 0.976030159327731,
+    "calibration_intercept": 0.13528538240385252
   },
   {
     "lig": "E",
@@ -2030,14 +2133,14 @@
       }
     ],
     "validation_losses": [
-      0.5952817583287764,
-      0.6101237079442581,
-      0.5995568120773254,
-      0.607665206059824
+      0.5936176576083678,
+      0.6030529077813096,
+      0.5938372842937351,
+      0.6020931067408221
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.9082062892757815,
-    "calibration_intercept": 0.15678441305178392
+    "calibration_coefficient": 0.9261597706976871,
+    "calibration_intercept": 0.1416208297790283
   },
   {
     "lig": "E",
@@ -2395,6 +2498,30 @@
     "validation_losses": [
       0.619730043655078,
       0.6188563783382466
+    ]
+  },
+  {
+    "lig": "E",
+    "sezon": "2025-26",
+    "model": "feature_set",
+    "extended": false,
+    "columns": [
+      "elo_diff",
+      "home",
+      "points_for_diff",
+      "points_against_diff",
+      "margin_diff",
+      "total_mean",
+      "rest_diff",
+      "back_to_back_diff",
+      "load7_diff",
+      "road_streak_diff",
+      "games_diff",
+      "europe_load_diff",
+      "rmarj_04",
+      "rtop_04",
+      "rmarj_12",
+      "rtop_12"
     ]
   },
   {
@@ -2910,6 +3037,30 @@
   {
     "lig": "E",
     "sezon": "2026-27",
+    "model": "feature_set",
+    "extended": false,
+    "columns": [
+      "elo_diff",
+      "home",
+      "points_for_diff",
+      "points_against_diff",
+      "margin_diff",
+      "total_mean",
+      "rest_diff",
+      "back_to_back_diff",
+      "load7_diff",
+      "road_streak_diff",
+      "games_diff",
+      "europe_load_diff",
+      "rmarj_04",
+      "rtop_04",
+      "rmarj_12",
+      "rtop_12"
+    ]
+  },
+  {
+    "lig": "E",
+    "sezon": "2026-27",
     "model": "margin_ridge",
     "alpha": 100.0,
     "candidates": [
@@ -3420,6 +3571,30 @@
   {
     "lig": "NBA",
     "sezon": "2021-22",
+    "model": "feature_set",
+    "extended": false,
+    "columns": [
+      "elo_diff",
+      "home",
+      "points_for_diff",
+      "points_against_diff",
+      "margin_diff",
+      "total_mean",
+      "rest_diff",
+      "back_to_back_diff",
+      "load7_diff",
+      "road_streak_diff",
+      "games_diff",
+      "europe_load_diff",
+      "rmarj_04",
+      "rtop_04",
+      "rmarj_12",
+      "rtop_12"
+    ]
+  },
+  {
+    "lig": "NBA",
+    "sezon": "2021-22",
     "model": "margin_ridge",
     "alpha": 0.1,
     "candidates": [
@@ -3428,14 +3603,14 @@
       100.0
     ],
     "validation_mae": [
-      11.233662790473145,
+      11.233662790473144,
       11.234020710263406,
       11.236589945499764
     ],
     "history_window": null,
     "validation_objective": "mae",
     "validation_losses": [
-      11.233662790473145,
+      11.233662790473144,
       11.234020710263406,
       11.236589945499764
     ],
@@ -3455,9 +3630,9 @@
     ],
     "training_rows": 33841,
     "residual_sigma": 14.144346073970008,
-    "residual_mean": -1.4112540274695653,
+    "residual_mean": -1.411254027469565,
     "residual_normality_p": 0.015753891463226012,
-    "residual_skew": -0.10307395739616829,
+    "residual_skew": -0.10307395739616823,
     "residual_excess_kurtosis": 0.40380969021128976
   },
   {
@@ -3498,7 +3673,7 @@
     ],
     "training_rows": 33841,
     "residual_sigma": 18.843566759386363,
-    "residual_mean": 3.1564116211954945,
+    "residual_mean": 3.1564116211954922,
     "residual_normality_p": 0.01798161546342604,
     "residual_skew": 0.07623981731006126,
     "residual_excess_kurtosis": 0.430699284145458
@@ -3525,8 +3700,8 @@
       0.6445049484002132
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.821139447900403,
-    "calibration_intercept": -0.08938912704423406
+    "calibration_coefficient": 0.8211394479004032,
+    "calibration_intercept": -0.08938912704423445
   },
   {
     "lig": "NBA",
@@ -3923,8 +4098,32 @@
     "model": "ewma",
     "alpha": 0.3,
     "validation_losses": [
-      0.633954229456255,
-      0.6336643665757787
+      0.6339542294562549,
+      0.6336643665757785
+    ]
+  },
+  {
+    "lig": "NBA",
+    "sezon": "2022-23",
+    "model": "feature_set",
+    "extended": false,
+    "columns": [
+      "elo_diff",
+      "home",
+      "points_for_diff",
+      "points_against_diff",
+      "margin_diff",
+      "total_mean",
+      "rest_diff",
+      "back_to_back_diff",
+      "load7_diff",
+      "road_streak_diff",
+      "games_diff",
+      "europe_load_diff",
+      "rmarj_04",
+      "rtop_04",
+      "rmarj_12",
+      "rtop_12"
     ]
   },
   {
@@ -3938,14 +4137,14 @@
       100.0
     ],
     "validation_mae": [
-      11.141739879942255,
+      11.141739879942259,
       11.142008233288044,
       11.144301623443315
     ],
     "history_window": null,
     "validation_objective": "mae",
     "validation_losses": [
-      11.141739879942255,
+      11.141739879942259,
       11.142008233288044,
       11.144301623443315
     ],
@@ -3965,9 +4164,9 @@
     ],
     "training_rows": 35012,
     "residual_sigma": 14.18030501257801,
-    "residual_mean": -0.612981368485845,
-    "residual_normality_p": 0.02541815765862323,
-    "residual_skew": 0.07209308469150516,
+    "residual_mean": -0.6129813684858423,
+    "residual_normality_p": 0.025418157658623382,
+    "residual_skew": 0.07209308469150508,
     "residual_excess_kurtosis": 0.37657699010665224
   },
   {
@@ -3982,14 +4181,14 @@
     ],
     "validation_mae": [
       14.661241696399845,
-      14.661233321455681,
+      14.661233321455677,
       14.661872231687873
     ],
     "history_window": null,
     "validation_objective": "mae",
     "validation_losses": [
       14.661241696399845,
-      14.661233321455681,
+      14.661233321455677,
       14.661872231687873
     ],
     "history_candidates": [
@@ -4008,10 +4207,10 @@
     ],
     "training_rows": 35012,
     "residual_sigma": 18.37910130443722,
-    "residual_mean": 2.1953422773230695,
-    "residual_normality_p": 0.01647786026438067,
-    "residual_skew": 0.1520804951102544,
-    "residual_excess_kurtosis": 0.24916635413944377
+    "residual_mean": 2.1953422773230513,
+    "residual_normality_p": 0.016477860264380712,
+    "residual_skew": 0.15208049511025462,
+    "residual_excess_kurtosis": 0.24916635413944288
   },
   {
     "lig": "NBA",
@@ -4030,13 +4229,13 @@
       10.0
     ],
     "validation_losses": [
-      0.6336939969328064,
-      0.6336643665757787,
-      0.633621199595161
+      0.6336939969327948,
+      0.6336643665757785,
+      0.6336211995951615
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.841315433878809,
-    "calibration_intercept": -0.09202322922224423
+    "calibration_coefficient": 0.8413154338788059,
+    "calibration_intercept": -0.09202322922225331
   },
   {
     "lig": "NBA",
@@ -4433,8 +4632,39 @@
     "model": "ewma",
     "alpha": 0.3,
     "validation_losses": [
-      0.6479502749231565,
+      0.6479502749231558,
       0.6477058537728602
+    ]
+  },
+  {
+    "lig": "NBA",
+    "sezon": "2023-24",
+    "model": "feature_set",
+    "extended": true,
+    "columns": [
+      "elo_diff",
+      "home",
+      "points_for_diff",
+      "points_against_diff",
+      "margin_diff",
+      "total_mean",
+      "rest_diff",
+      "back_to_back_diff",
+      "load7_diff",
+      "road_streak_diff",
+      "games_diff",
+      "europe_load_diff",
+      "rmarj_04",
+      "rtop_04",
+      "rmarj_12",
+      "rtop_12",
+      "min_games_log",
+      "early",
+      "elo_diff_early",
+      "rmarj_12_early",
+      "season_margin_diff",
+      "venue_form_diff",
+      "prev_margin_diff"
     ]
   },
   {
@@ -4448,16 +4678,16 @@
       100.0
     ],
     "validation_mae": [
-      10.191525257160102,
-      10.191449306585701,
-      10.190872724783064
+      10.194464929318949,
+      10.194260055993988,
+      10.192903053804576
     ],
     "history_window": null,
     "validation_objective": "mae",
     "validation_losses": [
-      10.191525257160102,
-      10.191449306585701,
-      10.190872724783064
+      10.194464929318949,
+      10.194260055993988,
+      10.192903053804576
     ],
     "history_candidates": [
       {
@@ -4474,11 +4704,11 @@
       }
     ],
     "training_rows": 36335,
-    "residual_sigma": 12.91617082610226,
-    "residual_mean": 0.37015407635361813,
-    "residual_normality_p": 0.049536204467023,
-    "residual_skew": -0.05312912041724294,
-    "residual_excess_kurtosis": 0.3463326145901293
+    "residual_sigma": 12.919521496027102,
+    "residual_mean": 0.30338458488983694,
+    "residual_normality_p": 0.055651224816841094,
+    "residual_skew": -0.05232773216560841,
+    "residual_excess_kurtosis": 0.33792024652600894
   },
   {
     "lig": "NBA",
@@ -4491,16 +4721,16 @@
       100.0
     ],
     "validation_mae": [
-      14.803781352345624,
-      14.804570512558271,
-      14.811288622831075
+      14.77097143805871,
+      14.772241181535625,
+      14.782170123645304
     ],
     "history_window": null,
     "validation_objective": "mae",
     "validation_losses": [
-      14.803781352345624,
-      14.804570512558271,
-      14.811288622831075
+      14.77097143805871,
+      14.772241181535625,
+      14.782170123645304
     ],
     "history_candidates": [
       {
@@ -4517,11 +4747,11 @@
       }
     ],
     "training_rows": 36335,
-    "residual_sigma": 18.773277014838808,
-    "residual_mean": 2.8019425710676256,
-    "residual_normality_p": 2.8165137481454687e-09,
-    "residual_skew": 0.2754708078367014,
-    "residual_excess_kurtosis": 0.8890232532710307
+    "residual_sigma": 18.757874403101397,
+    "residual_mean": 2.6878735209756437,
+    "residual_normality_p": 1.8551209774916674e-09,
+    "residual_skew": 0.27753032489275165,
+    "residual_excess_kurtosis": 0.9053236727091503
   },
   {
     "lig": "NBA",
@@ -4540,22 +4770,22 @@
       10.0
     ],
     "validation_losses": [
-      0.6476752369684627,
-      0.6477058537728602,
-      0.6477090553950415
+      0.6478850594278337,
+      0.64790789671024,
+      0.6479108850521529
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.7678008823129466,
-    "calibration_intercept": 0.1193198693756089
+    "calibration_coefficient": 0.7651498355887734,
+    "calibration_intercept": 0.11558222217921832
   },
   {
     "lig": "NBA",
     "sezon": "2023-24",
     "model": "hist_gradient_boosting",
     "parameter": {
-      "max_leaf_nodes": 7,
-      "l2_regularization": 1.0,
-      "max_iter": 50
+      "max_leaf_nodes": 15,
+      "l2_regularization": 10.0,
+      "max_iter": 100
     },
     "candidates": [
       {
@@ -4580,14 +4810,14 @@
       }
     ],
     "validation_losses": [
-      0.6460429337662152,
-      0.6465334893224087,
-      0.6470435275391015,
-      0.6470458945288103
+      0.6478983116582594,
+      0.6476292799284363,
+      0.6484754186645358,
+      0.64934572412675
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.8613130107754409,
-    "calibration_intercept": 0.09359653906842318
+    "calibration_coefficient": 0.8287791102225802,
+    "calibration_intercept": 0.10781970950965071
   },
   {
     "lig": "NBA",
@@ -4943,31 +5173,62 @@
     "model": "ewma",
     "alpha": 0.1,
     "validation_losses": [
-      0.6094763429744812,
+      0.6094763429744813,
       0.6105306795993186
     ]
   },
   {
     "lig": "NBA",
     "sezon": "2024-25",
+    "model": "feature_set",
+    "extended": true,
+    "columns": [
+      "elo_diff",
+      "home",
+      "points_for_diff",
+      "points_against_diff",
+      "margin_diff",
+      "total_mean",
+      "rest_diff",
+      "back_to_back_diff",
+      "load7_diff",
+      "road_streak_diff",
+      "games_diff",
+      "europe_load_diff",
+      "rmarj_04",
+      "rtop_04",
+      "rmarj_12",
+      "rtop_12",
+      "min_games_log",
+      "early",
+      "elo_diff_early",
+      "rmarj_12_early",
+      "season_margin_diff",
+      "venue_form_diff",
+      "prev_margin_diff"
+    ]
+  },
+  {
+    "lig": "NBA",
+    "sezon": "2024-25",
     "model": "margin_ridge",
-    "alpha": 0.1,
+    "alpha": 10.0,
     "candidates": [
       0.1,
       10.0,
       100.0
     ],
     "validation_mae": [
-      11.04187184405171,
-      11.041986382981642,
-      11.043723758259631
+      11.033978827731572,
+      11.033970335256305,
+      11.033970906147243
     ],
     "history_window": null,
     "validation_objective": "mae",
     "validation_losses": [
-      11.04187184405171,
-      11.041986382981642,
-      11.043723758259631
+      11.033978827731572,
+      11.033970335256305,
+      11.033970906147243
     ],
     "history_candidates": [
       {
@@ -4984,33 +5245,33 @@
       }
     ],
     "training_rows": 37655,
-    "residual_sigma": 14.208598495671819,
-    "residual_mean": 0.20711538372563074,
-    "residual_normality_p": 6.112296705926765e-05,
-    "residual_skew": 0.24159850534721106,
-    "residual_excess_kurtosis": 0.39913570033054135
+    "residual_sigma": 14.1895310474855,
+    "residual_mean": 0.19610780481532972,
+    "residual_normality_p": 7.470933406046623e-05,
+    "residual_skew": 0.23609037994375123,
+    "residual_excess_kurtosis": 0.40464940324102594
   },
   {
     "lig": "NBA",
     "sezon": "2024-25",
     "model": "total_ridge",
-    "alpha": 0.1,
+    "alpha": 100.0,
     "candidates": [
       0.1,
       10.0,
       100.0
     ],
     "validation_mae": [
-      14.415271248754028,
-      14.415457832974225,
-      14.416703339023025
+      14.423609099971097,
+      14.423267986364905,
+      14.420958902391215
     ],
     "history_window": null,
     "validation_objective": "mae",
     "validation_losses": [
-      14.415271248754028,
-      14.415457832974225,
-      14.416703339023025
+      14.423609099971097,
+      14.423267986364905,
+      14.420958902391215
     ],
     "history_candidates": [
       {
@@ -5027,11 +5288,11 @@
       }
     ],
     "training_rows": 37655,
-    "residual_sigma": 17.99536426991313,
-    "residual_mean": 2.22407395291799,
-    "residual_normality_p": 0.057851612055417945,
-    "residual_skew": 0.15285701017870434,
-    "residual_excess_kurtosis": 0.0910457588187854
+    "residual_sigma": 17.996291786497984,
+    "residual_mean": 2.1568660040064875,
+    "residual_normality_p": 0.052592584688459745,
+    "residual_skew": 0.15610430427199265,
+    "residual_excess_kurtosis": 0.08836015693550126
   },
   {
     "lig": "NBA",
@@ -5043,27 +5304,27 @@
     "lig": "NBA",
     "sezon": "2024-25",
     "model": "logistic",
-    "parameter": 10.0,
+    "parameter": 0.1,
     "candidates": [
       0.1,
       1.0,
       10.0
     ],
     "validation_losses": [
-      0.6094938909570292,
-      0.6094763429744812,
-      0.6094746648359836
+      0.608223508805432,
+      0.6082474364143249,
+      0.6082500199788485
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.9546027859107713,
-    "calibration_intercept": -0.05426520827388166
+    "calibration_coefficient": 0.9578722322412225,
+    "calibration_intercept": -0.05504596608606018
   },
   {
     "lig": "NBA",
     "sezon": "2024-25",
     "model": "hist_gradient_boosting",
     "parameter": {
-      "max_leaf_nodes": 7,
+      "max_leaf_nodes": 15,
       "l2_regularization": 10.0,
       "max_iter": 100
     },
@@ -5090,14 +5351,14 @@
       }
     ],
     "validation_losses": [
-      0.6122385319392334,
-      0.6121979026795998,
-      0.6119150051407417,
-      0.6126176784893005
+      0.6108994280970351,
+      0.6093973324952543,
+      0.6104035554036641,
+      0.6100702994803516
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 1.0759584969886655,
-    "calibration_intercept": -0.05229053680372918
+    "calibration_coefficient": 1.0838407364567275,
+    "calibration_intercept": -0.061743817584204136
   },
   {
     "lig": "NBA",
@@ -5453,8 +5714,39 @@
     "model": "ewma",
     "alpha": 0.1,
     "validation_losses": [
-      0.6068838312992703,
-      0.6074172772518048
+      0.6068838312992704,
+      0.6074172772518049
+    ]
+  },
+  {
+    "lig": "NBA",
+    "sezon": "2025-26",
+    "model": "feature_set",
+    "extended": true,
+    "columns": [
+      "elo_diff",
+      "home",
+      "points_for_diff",
+      "points_against_diff",
+      "margin_diff",
+      "total_mean",
+      "rest_diff",
+      "back_to_back_diff",
+      "load7_diff",
+      "road_streak_diff",
+      "games_diff",
+      "europe_load_diff",
+      "rmarj_04",
+      "rtop_04",
+      "rmarj_12",
+      "rtop_12",
+      "min_games_log",
+      "early",
+      "elo_diff_early",
+      "rmarj_12_early",
+      "season_margin_diff",
+      "venue_form_diff",
+      "prev_margin_diff"
     ]
   },
   {
@@ -5468,16 +5760,16 @@
       100.0
     ],
     "validation_mae": [
-      11.072465601751501,
-      11.072364752077409,
-      11.071690652761639
+      11.052907722906925,
+      11.052782467734515,
+      11.051851140716813
     ],
     "history_window": null,
     "validation_objective": "mae",
     "validation_losses": [
-      11.072465601751501,
-      11.072364752077409,
-      11.071690652761639
+      11.052907722906925,
+      11.052782467734515,
+      11.051851140716813
     ],
     "history_candidates": [
       {
@@ -5494,11 +5786,11 @@
       }
     ],
     "training_rows": 38974,
-    "residual_sigma": 14.184970799603024,
-    "residual_mean": -0.3864091667715669,
-    "residual_normality_p": 0.014933345016658694,
-    "residual_skew": -0.07388747731257549,
-    "residual_excess_kurtosis": 0.4135257810276949
+    "residual_sigma": 14.16533689610778,
+    "residual_mean": -0.3427506162289394,
+    "residual_normality_p": 0.013011009865410561,
+    "residual_skew": -0.07246648027822576,
+    "residual_excess_kurtosis": 0.42487898140254865
   },
   {
     "lig": "NBA",
@@ -5511,16 +5803,16 @@
       100.0
     ],
     "validation_mae": [
-      14.849113063943742,
-      14.849569909102842,
-      14.853254353572252
+      14.815731161777423,
+      14.816363694049032,
+      14.822099700181122
     ],
     "history_window": null,
     "validation_objective": "mae",
     "validation_losses": [
-      14.849113063943742,
-      14.849569909102842,
-      14.853254353572252
+      14.815731161777423,
+      14.816363694049032,
+      14.822099700181122
     ],
     "history_candidates": [
       {
@@ -5537,11 +5829,11 @@
       }
     ],
     "training_rows": 38974,
-    "residual_sigma": 18.41984999310665,
-    "residual_mean": 1.8046849341133415,
-    "residual_normality_p": 0.3621388032320177,
-    "residual_skew": 0.09357686870430469,
-    "residual_excess_kurtosis": -0.05213333975628576
+    "residual_sigma": 18.4006084365787,
+    "residual_mean": 1.6567546441080325,
+    "residual_normality_p": 0.3596617992310061,
+    "residual_skew": 0.09506483446905395,
+    "residual_excess_kurtosis": -0.039940757830781326
   },
   {
     "lig": "NBA",
@@ -5553,20 +5845,20 @@
     "lig": "NBA",
     "sezon": "2025-26",
     "model": "logistic",
-    "parameter": 0.1,
+    "parameter": 1.0,
     "candidates": [
       0.1,
       1.0,
       10.0
     ],
     "validation_losses": [
-      0.6068625219695238,
-      0.6068838312992703,
-      0.6068872677368482
+      0.6060532144529408,
+      0.606033847372063,
+      0.6060339126270669
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.9224220261743743,
-    "calibration_intercept": -0.06385665549333598
+    "calibration_coefficient": 0.9050095742267397,
+    "calibration_intercept": -0.05415046159669348
   },
   {
     "lig": "NBA",
@@ -5600,14 +5892,14 @@
       }
     ],
     "validation_losses": [
-      0.6077365665021386,
-      0.6069691257412437,
-      0.6067362760441214,
-      0.6089749441365248
+      0.6088479933443327,
+      0.6069762582365675,
+      0.6067242324537764,
+      0.6103358285468781
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 1.0518086767042,
-    "calibration_intercept": -0.08498011193405793
+    "calibration_coefficient": 1.002495027292663,
+    "calibration_intercept": -0.07245766126213016
   },
   {
     "lig": "NBA",
@@ -5963,8 +6255,32 @@
     "model": "ewma",
     "alpha": 0.1,
     "validation_losses": [
-      0.5995474520838419,
-      0.599811289167994
+      0.599547452083842,
+      0.5998112891679951
+    ]
+  },
+  {
+    "lig": "NBA",
+    "sezon": "2026-27",
+    "model": "feature_set",
+    "extended": false,
+    "columns": [
+      "elo_diff",
+      "home",
+      "points_for_diff",
+      "points_against_diff",
+      "margin_diff",
+      "total_mean",
+      "rest_diff",
+      "back_to_back_diff",
+      "load7_diff",
+      "road_streak_diff",
+      "games_diff",
+      "europe_load_diff",
+      "rmarj_04",
+      "rtop_04",
+      "rmarj_12",
+      "rtop_12"
     ]
   },
   {
@@ -6005,9 +6321,9 @@
     ],
     "training_rows": 40295,
     "residual_sigma": 14.57408017741429,
-    "residual_mean": -0.2178446134573295,
+    "residual_mean": -0.2178446134573288,
     "residual_normality_p": 0.014753562689960403,
-    "residual_skew": -0.11666305831195072,
+    "residual_skew": -0.11666305831195091,
     "residual_excess_kurtosis": 0.3474951462443707
   },
   {
@@ -6021,14 +6337,14 @@
       100.0
     ],
     "validation_mae": [
-      14.984030598604404,
+      14.9840305986044,
       14.984435974375542,
       14.987957152407475
     ],
     "history_window": null,
     "validation_objective": "mae",
     "validation_losses": [
-      14.984030598604404,
+      14.9840305986044,
       14.984435974375542,
       14.987957152407475
     ],
@@ -6048,10 +6364,10 @@
     ],
     "training_rows": 40295,
     "residual_sigma": 18.921093724187113,
-    "residual_mean": 1.909376741605096,
-    "residual_normality_p": 0.029474868296062877,
-    "residual_skew": 0.1785223109762733,
-    "residual_excess_kurtosis": 0.01850522940833521
+    "residual_mean": 1.9093767416051017,
+    "residual_normality_p": 0.029474868296062887,
+    "residual_skew": 0.17852231097627327,
+    "residual_excess_kurtosis": 0.018505229408334767
   },
   {
     "lig": "NBA",
@@ -6071,12 +6387,12 @@
     ],
     "validation_losses": [
       0.5994336800914495,
-      0.5995474520838419,
+      0.599547452083842,
       0.5995590876623145
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.9211300486999913,
-    "calibration_intercept": 0.029943101971677613
+    "calibration_coefficient": 0.9211300486999907,
+    "calibration_intercept": 0.029943101971678144
   },
   {
     "lig": "NBA",
@@ -6475,6 +6791,30 @@
     "validation_losses": [
       0.6758104284195349,
       0.6717278377248577
+    ]
+  },
+  {
+    "lig": "NBL",
+    "sezon": "2021-22",
+    "model": "feature_set",
+    "extended": false,
+    "columns": [
+      "elo_diff",
+      "home",
+      "points_for_diff",
+      "points_against_diff",
+      "margin_diff",
+      "total_mean",
+      "rest_diff",
+      "back_to_back_diff",
+      "load7_diff",
+      "road_streak_diff",
+      "games_diff",
+      "europe_load_diff",
+      "rmarj_04",
+      "rtop_04",
+      "rmarj_12",
+      "rtop_12"
     ]
   },
   {
@@ -6990,6 +7330,30 @@
   {
     "lig": "NBL",
     "sezon": "2022-23",
+    "model": "feature_set",
+    "extended": false,
+    "columns": [
+      "elo_diff",
+      "home",
+      "points_for_diff",
+      "points_against_diff",
+      "margin_diff",
+      "total_mean",
+      "rest_diff",
+      "back_to_back_diff",
+      "load7_diff",
+      "road_streak_diff",
+      "games_diff",
+      "europe_load_diff",
+      "rmarj_04",
+      "rtop_04",
+      "rmarj_12",
+      "rtop_12"
+    ]
+  },
+  {
+    "lig": "NBL",
+    "sezon": "2022-23",
     "model": "margin_ridge",
     "alpha": 100.0,
     "candidates": [
@@ -7495,6 +7859,30 @@
     "validation_losses": [
       0.6867205524995468,
       0.6835834525091558
+    ]
+  },
+  {
+    "lig": "NBL",
+    "sezon": "2023-24",
+    "model": "feature_set",
+    "extended": false,
+    "columns": [
+      "elo_diff",
+      "home",
+      "points_for_diff",
+      "points_against_diff",
+      "margin_diff",
+      "total_mean",
+      "rest_diff",
+      "back_to_back_diff",
+      "load7_diff",
+      "road_streak_diff",
+      "games_diff",
+      "europe_load_diff",
+      "rmarj_04",
+      "rtop_04",
+      "rmarj_12",
+      "rtop_12"
     ]
   },
   {
@@ -8010,24 +8398,55 @@
   {
     "lig": "NBL",
     "sezon": "2024-25",
+    "model": "feature_set",
+    "extended": true,
+    "columns": [
+      "elo_diff",
+      "home",
+      "points_for_diff",
+      "points_against_diff",
+      "margin_diff",
+      "total_mean",
+      "rest_diff",
+      "back_to_back_diff",
+      "load7_diff",
+      "road_streak_diff",
+      "games_diff",
+      "europe_load_diff",
+      "rmarj_04",
+      "rtop_04",
+      "rmarj_12",
+      "rtop_12",
+      "min_games_log",
+      "early",
+      "elo_diff_early",
+      "rmarj_12_early",
+      "season_margin_diff",
+      "venue_form_diff",
+      "prev_margin_diff"
+    ]
+  },
+  {
+    "lig": "NBL",
+    "sezon": "2024-25",
     "model": "margin_ridge",
-    "alpha": 0.1,
+    "alpha": 10.0,
     "candidates": [
       0.1,
       10.0,
       100.0
     ],
     "validation_mae": [
-      11.597475243460043,
-      11.60346207521003,
-      11.62358419782193
+      11.549098920812227,
+      11.547140289303224,
+      11.574674198516252
     ],
     "history_window": null,
     "validation_objective": "mae",
     "validation_losses": [
-      11.597475243460043,
-      11.60346207521003,
-      11.62358419782193
+      11.549098920812227,
+      11.547140289303224,
+      11.574674198516252
     ],
     "history_candidates": [
       {
@@ -8044,11 +8463,11 @@
       }
     ],
     "training_rows": 1078,
-    "residual_sigma": 14.712666069445318,
-    "residual_mean": 0.7842868159767855,
-    "residual_normality_p": 0.011727796286079548,
-    "residual_skew": -0.43606113951439374,
-    "residual_excess_kurtosis": 0.7397310941232069
+    "residual_sigma": 14.632664130703379,
+    "residual_mean": 0.8565283988195665,
+    "residual_normality_p": 0.022247709548581265,
+    "residual_skew": -0.391915083564806,
+    "residual_excess_kurtosis": 0.6922597643419057
   },
   {
     "lig": "NBL",
@@ -8061,16 +8480,16 @@
       100.0
     ],
     "validation_mae": [
-      14.540109615729312,
-      14.47714945949551,
-      14.285654033148438
+      14.6115189316382,
+      14.465175767329894,
+      14.242221591589336
     ],
     "history_window": null,
     "validation_objective": "mae",
     "validation_losses": [
-      14.540109615729312,
-      14.47714945949551,
-      14.285654033148438
+      14.6115189316382,
+      14.465175767329894,
+      14.242221591589336
     ],
     "history_candidates": [
       {
@@ -8087,11 +8506,11 @@
       }
     ],
     "training_rows": 1078,
-    "residual_sigma": 17.931222308792492,
-    "residual_mean": 3.0788894155712523,
-    "residual_normality_p": 0.6862863632867313,
-    "residual_skew": 0.15012734767250466,
-    "residual_excess_kurtosis": -0.005512715204413876
+    "residual_sigma": 17.930354913863532,
+    "residual_mean": 2.9211830342356344,
+    "residual_normality_p": 0.6780207810367781,
+    "residual_skew": 0.14876474110228724,
+    "residual_excess_kurtosis": 0.018372342924264373
   },
   {
     "lig": "NBL",
@@ -8110,13 +8529,13 @@
       10.0
     ],
     "validation_losses": [
-      0.6823685485862995,
-      0.6831233289849205,
-      0.6832152326594099
+      0.67720843953192,
+      0.6785347764774315,
+      0.6794884726507164
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.464382738342131,
-    "calibration_intercept": 0.26870392096959156
+    "calibration_coefficient": 0.5252419215044812,
+    "calibration_intercept": 0.24353978507578883
   },
   {
     "lig": "NBL",
@@ -8150,14 +8569,14 @@
       }
     ],
     "validation_losses": [
-      0.6846089760000069,
-      0.7088596359394884,
-      0.6959789933426929,
-      0.7063790698958957
+      0.6922504970430213,
+      0.7014321773373747,
+      0.6956207264878728,
+      0.7071133699467159
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.41768546840314164,
-    "calibration_intercept": 0.23433469795742806
+    "calibration_coefficient": 0.34179405773802524,
+    "calibration_intercept": 0.2557483362418583
   },
   {
     "lig": "NBL",
@@ -8520,6 +8939,37 @@
   {
     "lig": "NBL",
     "sezon": "2025-26",
+    "model": "feature_set",
+    "extended": true,
+    "columns": [
+      "elo_diff",
+      "home",
+      "points_for_diff",
+      "points_against_diff",
+      "margin_diff",
+      "total_mean",
+      "rest_diff",
+      "back_to_back_diff",
+      "load7_diff",
+      "road_streak_diff",
+      "games_diff",
+      "europe_load_diff",
+      "rmarj_04",
+      "rtop_04",
+      "rmarj_12",
+      "rtop_12",
+      "min_games_log",
+      "early",
+      "elo_diff_early",
+      "rmarj_12_early",
+      "season_margin_diff",
+      "venue_form_diff",
+      "prev_margin_diff"
+    ]
+  },
+  {
+    "lig": "NBL",
+    "sezon": "2025-26",
     "model": "margin_ridge",
     "alpha": 100.0,
     "candidates": [
@@ -8528,16 +8978,16 @@
       100.0
     ],
     "validation_mae": [
-      12.0435651098886,
-      12.041991425723674,
-      12.032997996344763
+      11.976867148413708,
+      11.975906517447903,
+      11.971877296258699
     ],
     "history_window": null,
     "validation_objective": "mae",
     "validation_losses": [
-      12.0435651098886,
-      12.041991425723674,
-      12.032997996344763
+      11.976867148413708,
+      11.975906517447903,
+      11.971877296258699
     ],
     "history_candidates": [
       {
@@ -8554,33 +9004,33 @@
       }
     ],
     "training_rows": 1251,
-    "residual_sigma": 15.549850735637655,
-    "residual_mean": -1.0813758047860438,
-    "residual_normality_p": 0.12646498515610996,
-    "residual_skew": -0.24206752204962828,
-    "residual_excess_kurtosis": 0.5650425367961649
+    "residual_sigma": 15.4210246983941,
+    "residual_mean": -1.0700304678423633,
+    "residual_normality_p": 0.20122515120984313,
+    "residual_skew": -0.2250200447153834,
+    "residual_excess_kurtosis": 0.4375044790061611
   },
   {
     "lig": "NBL",
     "sezon": "2025-26",
     "model": "total_ridge",
-    "alpha": 0.1,
+    "alpha": 10.0,
     "candidates": [
       0.1,
       10.0,
       100.0
     ],
     "validation_mae": [
-      15.23165989573064,
-      15.243359828289043,
-      15.324316053157292
+      15.246746713376522,
+      15.181940134811134,
+      15.26495417168538
     ],
     "history_window": null,
     "validation_objective": "mae",
     "validation_losses": [
-      15.23165989573064,
-      15.243359828289043,
-      15.324316053157292
+      15.246746713376522,
+      15.181940134811134,
+      15.26495417168538
     ],
     "history_candidates": [
       {
@@ -8597,11 +9047,11 @@
       }
     ],
     "training_rows": 1251,
-    "residual_sigma": 18.856727071409324,
-    "residual_mean": 4.297937433733605,
-    "residual_normality_p": 0.6380814799239907,
-    "residual_skew": 0.17131990930289684,
-    "residual_excess_kurtosis": -0.0959471921142745
+    "residual_sigma": 18.825334046698337,
+    "residual_mean": 4.3303202110551515,
+    "residual_normality_p": 0.5683128793067094,
+    "residual_skew": 0.19082756020452465,
+    "residual_excess_kurtosis": -0.13236063639887163
   },
   {
     "lig": "NBL",
@@ -8620,13 +9070,13 @@
       10.0
     ],
     "validation_losses": [
-      0.6714751116481767,
-      0.6714304705689425,
-      0.6713798367598853
+      0.6668662457367763,
+      0.6667217396598143,
+      0.6666605959550843
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.7554818419110433,
-    "calibration_intercept": -0.02988799650547053
+    "calibration_coefficient": 0.7673998314107956,
+    "calibration_intercept": -0.022901260806529024
   },
   {
     "lig": "NBL",
@@ -8660,14 +9110,14 @@
       }
     ],
     "validation_losses": [
-      0.6620221064997862,
-      0.6899066470892177,
-      0.6762644625515725,
-      0.676564347860699
+      0.6694689633620691,
+      0.7026965346284512,
+      0.681391242294049,
+      0.6960526957887886
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.7659206759287764,
-    "calibration_intercept": -0.033014204852549876
+    "calibration_coefficient": 0.7552551930000012,
+    "calibration_intercept": -0.10502886845952956
   },
   {
     "lig": "NBL",
@@ -9030,6 +9480,37 @@
   {
     "lig": "NBL",
     "sezon": "2026-27",
+    "model": "feature_set",
+    "extended": true,
+    "columns": [
+      "elo_diff",
+      "home",
+      "points_for_diff",
+      "points_against_diff",
+      "margin_diff",
+      "total_mean",
+      "rest_diff",
+      "back_to_back_diff",
+      "load7_diff",
+      "road_streak_diff",
+      "games_diff",
+      "europe_load_diff",
+      "rmarj_04",
+      "rtop_04",
+      "rmarj_12",
+      "rtop_12",
+      "min_games_log",
+      "early",
+      "elo_diff_early",
+      "rmarj_12_early",
+      "season_margin_diff",
+      "venue_form_diff",
+      "prev_margin_diff"
+    ]
+  },
+  {
+    "lig": "NBL",
+    "sezon": "2026-27",
     "model": "margin_ridge",
     "alpha": 0.1,
     "candidates": [
@@ -9038,16 +9519,16 @@
       100.0
     ],
     "validation_mae": [
-      11.967848768851374,
-      11.973784985966018,
-      12.022418285883617
+      11.83400759376828,
+      11.834921152667082,
+      11.851454594081902
     ],
     "history_window": null,
     "validation_objective": "mae",
     "validation_losses": [
-      11.967848768851374,
-      11.973784985966018,
-      12.022418285883617
+      11.83400759376828,
+      11.834921152667082,
+      11.851454594081902
     ],
     "history_candidates": [
       {
@@ -9064,33 +9545,33 @@
       }
     ],
     "training_rows": 1423,
-    "residual_sigma": 15.502137201636257,
-    "residual_mean": -0.39222634708452253,
-    "residual_normality_p": 0.44682039672882135,
-    "residual_skew": -0.15837463337363372,
-    "residual_excess_kurtosis": 0.25161250633896826
+    "residual_sigma": 15.374157749548116,
+    "residual_mean": -0.21284971763089305,
+    "residual_normality_p": 0.4090370864225854,
+    "residual_skew": -0.16780361125625745,
+    "residual_excess_kurtosis": 0.27033589208037734
   },
   {
     "lig": "NBL",
     "sezon": "2026-27",
     "model": "total_ridge",
-    "alpha": 10.0,
+    "alpha": 100.0,
     "candidates": [
       0.1,
       10.0,
       100.0
     ],
     "validation_mae": [
-      14.821842887785616,
-      14.81646415207202,
-      14.824817713153566
+      15.107597575643167,
+      15.025768547358197,
+      14.939897753353835
     ],
     "history_window": null,
     "validation_objective": "mae",
     "validation_losses": [
-      14.821842887785616,
-      14.81646415207202,
-      14.824817713153566
+      15.107597575643167,
+      15.025768547358197,
+      14.939897753353835
     ],
     "history_candidates": [
       {
@@ -9107,11 +9588,11 @@
       }
     ],
     "training_rows": 1423,
-    "residual_sigma": 18.283169037622578,
-    "residual_mean": 2.307320486474413,
-    "residual_normality_p": 0.29388231303487944,
-    "residual_skew": 0.28025728705240205,
-    "residual_excess_kurtosis": -0.05801357410165586
+    "residual_sigma": 18.36629851828009,
+    "residual_mean": 2.095917204770305,
+    "residual_normality_p": 0.3040972130480814,
+    "residual_skew": 0.2763762426643267,
+    "residual_excess_kurtosis": -0.10307779595220223
   },
   {
     "lig": "NBL",
@@ -9123,29 +9604,29 @@
     "lig": "NBL",
     "sezon": "2026-27",
     "model": "logistic",
-    "parameter": 10.0,
+    "parameter": 0.1,
     "candidates": [
       0.1,
       1.0,
       10.0
     ],
     "validation_losses": [
-      0.6018515167303471,
-      0.6006705891821178,
-      0.6005588037773538
+      0.6006182568979157,
+      0.6013371337049932,
+      0.6015347090738589
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 1.367727811344318,
-    "calibration_intercept": -0.19478846150266205
+    "calibration_coefficient": 1.148813568693344,
+    "calibration_intercept": -0.12304533457042588
   },
   {
     "lig": "NBL",
     "sezon": "2026-27",
     "model": "hist_gradient_boosting",
     "parameter": {
-      "max_leaf_nodes": 7,
-      "l2_regularization": 1.0,
-      "max_iter": 50
+      "max_leaf_nodes": 15,
+      "l2_regularization": 10.0,
+      "max_iter": 100
     },
     "candidates": [
       {
@@ -9170,14 +9651,14 @@
       }
     ],
     "validation_losses": [
-      0.661185755497783,
-      0.6748081360402104,
-      0.6672595848172502,
-      0.6827180516384044
+      0.6393478794635107,
+      0.6320893256027189,
+      0.6359847744786147,
+      0.6463364779930987
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.7055652143724745,
-    "calibration_intercept": 0.04129042364632668
+    "calibration_coefficient": 0.7909652667751982,
+    "calibration_intercept": -0.05281447361641373
   },
   {
     "lig": "U",
@@ -9535,6 +10016,30 @@
     "validation_losses": [
       0.5923314752100294,
       0.593358806470339
+    ]
+  },
+  {
+    "lig": "U",
+    "sezon": "2021-22",
+    "model": "feature_set",
+    "extended": false,
+    "columns": [
+      "elo_diff",
+      "home",
+      "points_for_diff",
+      "points_against_diff",
+      "margin_diff",
+      "total_mean",
+      "rest_diff",
+      "back_to_back_diff",
+      "load7_diff",
+      "road_streak_diff",
+      "games_diff",
+      "europe_load_diff",
+      "rmarj_04",
+      "rtop_04",
+      "rmarj_12",
+      "rtop_12"
     ]
   },
   {
@@ -10050,6 +10555,30 @@
   {
     "lig": "U",
     "sezon": "2022-23",
+    "model": "feature_set",
+    "extended": false,
+    "columns": [
+      "elo_diff",
+      "home",
+      "points_for_diff",
+      "points_against_diff",
+      "margin_diff",
+      "total_mean",
+      "rest_diff",
+      "back_to_back_diff",
+      "load7_diff",
+      "road_streak_diff",
+      "games_diff",
+      "europe_load_diff",
+      "rmarj_04",
+      "rtop_04",
+      "rmarj_12",
+      "rtop_12"
+    ]
+  },
+  {
+    "lig": "U",
+    "sezon": "2022-23",
     "model": "margin_ridge",
     "alpha": 100.0,
     "candidates": [
@@ -10555,6 +11084,30 @@
     "validation_losses": [
       0.5995257996791333,
       0.600689328670291
+    ]
+  },
+  {
+    "lig": "U",
+    "sezon": "2023-24",
+    "model": "feature_set",
+    "extended": false,
+    "columns": [
+      "elo_diff",
+      "home",
+      "points_for_diff",
+      "points_against_diff",
+      "margin_diff",
+      "total_mean",
+      "rest_diff",
+      "back_to_back_diff",
+      "load7_diff",
+      "road_streak_diff",
+      "games_diff",
+      "europe_load_diff",
+      "rmarj_04",
+      "rtop_04",
+      "rmarj_12",
+      "rtop_12"
     ]
   },
   {
@@ -11070,6 +11623,30 @@
   {
     "lig": "U",
     "sezon": "2024-25",
+    "model": "feature_set",
+    "extended": false,
+    "columns": [
+      "elo_diff",
+      "home",
+      "points_for_diff",
+      "points_against_diff",
+      "margin_diff",
+      "total_mean",
+      "rest_diff",
+      "back_to_back_diff",
+      "load7_diff",
+      "road_streak_diff",
+      "games_diff",
+      "europe_load_diff",
+      "rmarj_04",
+      "rtop_04",
+      "rmarj_12",
+      "rtop_12"
+    ]
+  },
+  {
+    "lig": "U",
+    "sezon": "2024-25",
     "model": "margin_ridge",
     "alpha": 0.1,
     "candidates": [
@@ -11580,6 +12157,37 @@
   {
     "lig": "U",
     "sezon": "2025-26",
+    "model": "feature_set",
+    "extended": true,
+    "columns": [
+      "elo_diff",
+      "home",
+      "points_for_diff",
+      "points_against_diff",
+      "margin_diff",
+      "total_mean",
+      "rest_diff",
+      "back_to_back_diff",
+      "load7_diff",
+      "road_streak_diff",
+      "games_diff",
+      "europe_load_diff",
+      "rmarj_04",
+      "rtop_04",
+      "rmarj_12",
+      "rtop_12",
+      "min_games_log",
+      "early",
+      "elo_diff_early",
+      "rmarj_12_early",
+      "season_margin_diff",
+      "venue_form_diff",
+      "prev_margin_diff"
+    ]
+  },
+  {
+    "lig": "U",
+    "sezon": "2025-26",
     "model": "margin_ridge",
     "alpha": 100.0,
     "candidates": [
@@ -11588,16 +12196,16 @@
       100.0
     ],
     "validation_mae": [
-      10.096833301529392,
-      10.094591506517576,
-      10.087346768937598
+      10.14308083089064,
+      10.114712487308475,
+      10.084525693826544
     ],
     "history_window": null,
     "validation_objective": "mae",
     "validation_losses": [
-      10.096833301529392,
-      10.094591506517576,
-      10.087346768937598
+      10.14308083089064,
+      10.114712487308475,
+      10.084525693826544
     ],
     "history_candidates": [
       {
@@ -11614,11 +12222,11 @@
       }
     ],
     "training_rows": 4415,
-    "residual_sigma": 13.352363222742207,
-    "residual_mean": 0.11270044714919736,
-    "residual_normality_p": 0.3508937738397598,
-    "residual_skew": -0.005711484238298471,
-    "residual_excess_kurtosis": 0.4884334008782476
+    "residual_sigma": 13.333449129710278,
+    "residual_mean": 0.006054650495613057,
+    "residual_normality_p": 0.31289174005890374,
+    "residual_skew": 0.013267865592451293,
+    "residual_excess_kurtosis": 0.5257861219131663
   },
   {
     "lig": "U",
@@ -11631,16 +12239,16 @@
       100.0
     ],
     "validation_mae": [
-      14.868889088421959,
-      14.865858978832025,
-      14.839360332885903
+      14.772496231245974,
+      14.766680975194298,
+      14.742709168117115
     ],
     "history_window": null,
     "validation_objective": "mae",
     "validation_losses": [
-      14.868889088421959,
-      14.865858978832025,
-      14.839360332885903
+      14.772496231245974,
+      14.766680975194298,
+      14.742709168117115
     ],
     "history_candidates": [
       {
@@ -11657,11 +12265,11 @@
       }
     ],
     "training_rows": 4415,
-    "residual_sigma": 17.90130908877964,
-    "residual_mean": 5.5066653131702505,
-    "residual_normality_p": 0.43381369390390256,
-    "residual_skew": 0.20881731485077235,
-    "residual_excess_kurtosis": -0.20011055458020133
+    "residual_sigma": 17.940951294536717,
+    "residual_mean": 5.00781064878029,
+    "residual_normality_p": 0.43584923505294715,
+    "residual_skew": 0.209316109506672,
+    "residual_excess_kurtosis": -0.19451706467578012
   },
   {
     "lig": "U",
@@ -11680,13 +12288,13 @@
       10.0
     ],
     "validation_losses": [
-      0.6140689349826887,
-      0.6143362905282242,
-      0.6143667613364661
+      0.6121030533732171,
+      0.6136633827626581,
+      0.6137389686329837
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.7880526800995978,
-    "calibration_intercept": 0.0827267156879653
+    "calibration_coefficient": 0.7862219485624713,
+    "calibration_intercept": 0.07364704320562354
   },
   {
     "lig": "U",
@@ -11694,8 +12302,8 @@
     "model": "hist_gradient_boosting",
     "parameter": {
       "max_leaf_nodes": 7,
-      "l2_regularization": 10.0,
-      "max_iter": 100
+      "l2_regularization": 1.0,
+      "max_iter": 50
     },
     "candidates": [
       {
@@ -11720,14 +12328,14 @@
       }
     ],
     "validation_losses": [
-      0.6184169239172657,
-      0.6290455265438526,
-      0.6172985265280432,
-      0.6227021146165003
+      0.6122778753537964,
+      0.6175361236287819,
+      0.6147544727622366,
+      0.6209897478918672
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.7528528716377048,
-    "calibration_intercept": 0.12171859156034796
+    "calibration_coefficient": 0.8418139774706489,
+    "calibration_intercept": 0.11997324810314446
   },
   {
     "lig": "U",
@@ -12090,24 +12698,55 @@
   {
     "lig": "U",
     "sezon": "2026-27",
+    "model": "feature_set",
+    "extended": true,
+    "columns": [
+      "elo_diff",
+      "home",
+      "points_for_diff",
+      "points_against_diff",
+      "margin_diff",
+      "total_mean",
+      "rest_diff",
+      "back_to_back_diff",
+      "load7_diff",
+      "road_streak_diff",
+      "games_diff",
+      "europe_load_diff",
+      "rmarj_04",
+      "rtop_04",
+      "rmarj_12",
+      "rtop_12",
+      "min_games_log",
+      "early",
+      "elo_diff_early",
+      "rmarj_12_early",
+      "season_margin_diff",
+      "venue_form_diff",
+      "prev_margin_diff"
+    ]
+  },
+  {
+    "lig": "U",
+    "sezon": "2026-27",
     "model": "margin_ridge",
-    "alpha": 0.1,
+    "alpha": 10.0,
     "candidates": [
       0.1,
       10.0,
       100.0
     ],
     "validation_mae": [
-      11.479070569960767,
-      11.480177199595108,
-      11.48691727287102
+      11.440089360009692,
+      11.438976432860288,
+      11.45090422832958
     ],
     "history_window": null,
     "validation_objective": "mae",
     "validation_losses": [
-      11.479070569960767,
-      11.480177199595108,
-      11.48691727287102
+      11.440089360009692,
+      11.438976432860288,
+      11.45090422832958
     ],
     "history_candidates": [
       {
@@ -12124,11 +12763,11 @@
       }
     ],
     "training_rows": 4611,
-    "residual_sigma": 14.143012581969279,
-    "residual_mean": -0.9378081056617558,
-    "residual_normality_p": 0.24626945052680632,
-    "residual_skew": -0.16278117772217543,
-    "residual_excess_kurtosis": -0.4333153967127057
+    "residual_sigma": 14.000513107818735,
+    "residual_mean": -1.0906988183861779,
+    "residual_normality_p": 0.15664832230339434,
+    "residual_skew": -0.12961515206323973,
+    "residual_excess_kurtosis": -0.5125190955298451
   },
   {
     "lig": "U",
@@ -12141,16 +12780,16 @@
       100.0
     ],
     "validation_mae": [
-      16.201890441408977,
-      16.22364314752184,
-      16.314155261174847
+      16.13092640507013,
+      16.15469960065313,
+      16.24147728691642
     ],
     "history_window": null,
     "validation_objective": "mae",
     "validation_losses": [
-      16.201890441408977,
-      16.22364314752184,
-      16.314155261174847
+      16.13092640507013,
+      16.15469960065313,
+      16.24147728691642
     ],
     "history_candidates": [
       {
@@ -12167,11 +12806,11 @@
       }
     ],
     "training_rows": 4611,
-    "residual_sigma": 18.379446002165036,
-    "residual_mean": 7.611030956584172,
-    "residual_normality_p": 0.789021602080956,
-    "residual_skew": -0.10564650142093691,
-    "residual_excess_kurtosis": -0.16674136028656683
+    "residual_sigma": 18.389974840671233,
+    "residual_mean": 7.505583632125792,
+    "residual_normality_p": 0.7853798465574957,
+    "residual_skew": -0.10205444129148768,
+    "residual_excess_kurtosis": -0.18217055023432982
   },
   {
     "lig": "U",
@@ -12183,20 +12822,20 @@
     "lig": "U",
     "sezon": "2026-27",
     "model": "logistic",
-    "parameter": 0.1,
+    "parameter": 10.0,
     "candidates": [
       0.1,
       1.0,
       10.0
     ],
     "validation_losses": [
-      0.6224087230378639,
-      0.6228470306234599,
-      0.622892693587435
+      0.6175411476520413,
+      0.6173620933814981,
+      0.6171644259987676
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.7806187648829918,
-    "calibration_intercept": -0.016086484162742873
+    "calibration_coefficient": 0.7672403388189857,
+    "calibration_intercept": -0.027632862467036896
   },
   {
     "lig": "U",
@@ -12230,13 +12869,13 @@
       }
     ],
     "validation_losses": [
-      0.6271759450582093,
-      0.6478341327486377,
-      0.6388583220086707,
-      0.6390317320906865
+      0.6194601962578347,
+      0.6297399542740207,
+      0.623000503280595,
+      0.6344429127615976
     ],
     "calibration": "Unpenalized Platt on prior-season out-of-sample predictions",
-    "calibration_coefficient": 0.7893665012358388,
-    "calibration_intercept": 0.010488639678294507
+    "calibration_coefficient": 0.8052848865186799,
+    "calibration_intercept": 0.03182141387036496
   }
 ]

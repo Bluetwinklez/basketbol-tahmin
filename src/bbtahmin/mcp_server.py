@@ -99,7 +99,7 @@ def create_server(root):
                     note='Separate football model; community results are not official confirmation.')
 
     @server.tool(annotations=readonly)
-    def predict_football(league: str, home: str, away: str, fixture_date: str, model_variant: str='baseline') -> dict:
+    def predict_football(league: str, home: str, away: str, fixture_date: str, model_variant: str='opponent') -> dict:
         """Read-only manual regulation goal forecast, with 1/X/2 and goal markets.
 
         Fixture identity is not verified by a manual request. No provider refresh.
