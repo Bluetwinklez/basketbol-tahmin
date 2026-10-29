@@ -78,6 +78,19 @@ def en_iyi_model(lig, yol='docs/kanit/toplam.csv', sezon=None):
         return 'mov_elo' if sezon is not None else 'topluluk'
 
 
+def harman(t, yol='docs/kanit/harman.json'):
+    """Oran verilmişse piyasa ve model olasılığının backtest'te öğrenilen birleşimi; yoksa None."""
+    if t.get('piyasa_ev') is None:
+        return None
+    try:
+        kayit = json.loads(Path(yol).read_text('utf8'))[t['lig']][t['model']]
+    except (OSError, KeyError, ValueError):
+        return None
+    a, bm, bp = kayit['katsayi']
+    logit = lambda p: np.log(np.clip(p, 1e-6, 1 - 1e-6) / np.clip(1 - p, 1e-6, 1 - 1e-6))
+    return float(1 / (1 + np.exp(-(a + bm * logit(t['piyasa_ev']) + bp * logit(t['ev_kazanir'])))))
+
+
 def aktif_kodlar(gecmis, lig, tarih, gun=400):
     """Son `gun` günde o ligde oynamış takımlar. Ligden ayrılmış takım (ör. 2022'den beri
     EuroLeague'de olmayan Zenit) eski reytingiyle tahmin edilmesin diye eşleşmez."""
@@ -251,6 +264,9 @@ def yazdir(sonuclar, gosterim=None):
         if t.get('piyasa_ev') is not None:
             pe = t['piyasa_ev']
             print(f"  Piyasa:   ev %{pe * 100:.1f} / dep %{(1 - pe) * 100:.1f}  (oranlar {t['oran_ev']} / {t['oran_dep']}, marj çıkarıldı)")
+        if t.get('harman_ev') is not None:
+            ph = t['harman_ev']
+            print(f"  Harman:   ev %{ph * 100:.1f} / dep %{(1 - ph) * 100:.1f}  (piyasa + model; geçmiş testte en iyisi, önerilen)")
         if t.get('eksik_dk') is not None:
             print(f"  Eksik etkisi: ev − dep eksik dakika farkı {t['eksik_dk']:+.0f} dk (modele dahil)")
         for kod in (t['ev'], t['dep']):
@@ -335,6 +351,7 @@ def run(lig, maclar, tarih, json_cikti=False, kaydet=False, injury_report=False,
         o1, o2 = oranlar.get((t['ev'], t['dep']), (None, None))
         t['oran_ev'], t['oran_dep'] = o1, o2
         t['piyasa_ev'] = (1 / o1) / (1 / o1 + 1 / o2) if o1 and o2 else None
+        t['harman_ev'] = harman(t)
         if rapor is not None and t['lig'] == 'NBA':
             ilgili = rapor[rapor.takim.isin([t['ev'], t['dep']]) & rapor.durum.isin(['Out', 'Doubtful', 'Questionable'])]
             t['sakatlik'] = ilgili[['takim', 'oyuncu', 'durum']].to_dict('records')
