@@ -9,7 +9,7 @@ import numpy as np
 import pandas as pd
 from scipy.stats import norm
 from sklearn.metrics import log_loss,brier_score_loss,accuracy_score,mean_absolute_error
-from .ozellik import build_features,FEATURES
+from .ozellik import build_features,select_columns,FEATURES
 from .kutu_ozellik import kutu_ozellikleri,yukle,KUTU_FEATURES,KUTU_LIGLERI
 from .eksik_ozellik import eksik_ozellikleri,EKSIK_FEATURES,EKSIK_LIGLERI,yukle as eksik_yukle
 from .model import fit_predict,regression
@@ -88,8 +88,10 @@ def run(ligler=None,cikti='docs/kanit',first_test=None):
             if ekler:
                 x=pd.concat([x,*ekler],axis=1)
             params.append(dict(lig=league,sezon=season,model='ewma',alpha=[.1,.3][alpha_index],validation_losses=alpha_losses))
-            pm,rm=regression(x,margin,train,val,test,cols)
-            pt,rt=regression(x,total,train,val,test,cols)
+            season_cols=select_columns(x,margin,train,val,cols)
+            params.append(dict(lig=league,sezon=season,model='feature_set',extended=len(season_cols)>len(cols),columns=season_cols))
+            pm,rm=regression(x,margin,train,val,test,season_cols)
+            pt,rt=regression(x,total,train,val,test,season_cols)
             # Skorlar yıllar içinde arttığı için toplam her sezon 2-5 sayı düşük kalıyordu; doğrulama
             # sezonundaki ortalama artık eklenir. (Lig seviyesinden sapma hedefi denendi, MAE'yi kötüleştirdi.)
             pt=pt+rt['residual_mean']
@@ -101,7 +103,7 @@ def run(ligler=None,cikti='docs/kanit',first_test=None):
             probabilities={'home':np.full(test.sum(),home_rate),'elo':cache[selected['elo']].loc[test,'elo_p'].to_numpy(),
                            'mov_elo':cache[selected['mov']].loc[test,'elo_p'].to_numpy()}
             for kind in ['logistic','hist_gradient_boosting']:
-                probabilities[kind],details=fit_predict(kind,x,y,train,val,test,cols)
+                probabilities[kind],details=fit_predict(kind,x,y,train,val,test,season_cols)
                 params.append(dict(lig=league,sezon=season,model=kind,**details))
             # Skor modeli: Ridge fark tahmini ve doğrulama sezonundaki artık sapmasıyla normal dağılım.
             probabilities['skor']=norm.cdf(pm/max(rm['residual_sigma'],1e-6))

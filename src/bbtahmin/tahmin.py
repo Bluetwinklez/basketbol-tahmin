@@ -8,7 +8,7 @@ from pathlib import Path
 import numpy as np
 import pandas as pd
 from scipy.stats import norm
-from .ozellik import build_features, FEATURES
+from .ozellik import build_features, select_columns, FEATURES
 from .kutu_ozellik import kutu_ozellikleri, yukle, KUTU_FEATURES, KUTU_LIGLERI
 from .eksik_ozellik import eksik_ozellikleri, rapor_eslestir, EKSIK_FEATURES, EKSIK_LIGLERI, yukle as eksik_yukle
 from .model import fit_predict, regression
@@ -163,6 +163,7 @@ def _tahmin_et(lig, eslesmeler, tarih, veri='data/maclar.parquet', rapor=None, a
     # Current-season results must not train a model whose calibration holdout
     # is the preceding season. Match the chronological backtest split.
     egitim = (hepsi.sezon < tam[-1]).to_numpy() & ~sorgu
+    cols = select_columns(x, fark, egitim, dogrulama, cols)
     p_log, _ = fit_predict('logistic', x, y, egitim, dogrulama, sorgu, cols)
     p_hgb, _ = fit_predict('hist_gradient_boosting', x, y, egitim, dogrulama, sorgu, cols)
     pm, rm = regression(x, fark, egitim, dogrulama, sorgu, cols)
