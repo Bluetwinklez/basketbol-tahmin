@@ -1,12 +1,9 @@
 # Daily basketball research
 
-Checked: 2026-10-29T13:34:20.969054+00:00
+Checked: 2026-10-30T13:22:33.883502+00:00
 
 | Tipoff (Istanbul) | League | Fixture | Score forecast | Home win | Data gate / probability filter |
 |---|---|---|---|---|---|
-| 29 Oct 22:00 | E | Crvena Zvezda Meridianbet Belgrade – FC Bayern Munich | 90.6–82.3 | 76.4% | passed |
-| 29 Oct 22:05 | E | Maccabi Rapyd Tel Aviv – Paris Basketball | 93.9–90.7 | 60.7% | not selected |
-| 29 Oct 22:45 | E | Real Madrid – Fenerbahce Tarfin Istanbul | 86.3–81.7 | 65.5% | passed |
 | 30 Oct 19:00 | E | Dubai Basketball – Hapoel IBI Tel Aviv | 89.4–86.5 | 60.0% | not selected |
 | 30 Oct 20:30 | E | Anadolu Efes Istanbul – Panathinaikos AKTOR Athens | 81.1–83.6 | 41.6% | not selected |
 | 30 Oct 21:00 | E | Zalgiris Kaunas – Partizan Mozzart Bet Belgrade | 85.5–81.3 | 64.2% | not selected |
@@ -15,7 +12,11 @@ Checked: 2026-10-29T13:34:20.969054+00:00
 | 30 Oct 22:30 | E | FC Barcelona – Valencia Basket | 90.4–89.0 | 54.9% | not selected |
 | 30 Oct 22:30 | E | Virtus Bologna – Besiktas Istanbul | 88.1–84.0 | 63.9% | not selected |
 | 04 Nov 22:45 | E | Real Madrid – Panathinaikos AKTOR Athens | 89.0–83.4 | 68.4% | passed |
-| 30 Oct 13:00 | KBL | 고양 소노 스카이거너스 – 서울 삼성 썬더스 | 82.3–80.0 | 63.6% | not selected |
+| 05 Nov 20:15 | E | Anadolu Efes Istanbul – Paris Basketball | 90.5–86.7 | 62.8% | not selected |
+| 05 Nov 21:00 | E | Fenerbahce Tarfin Istanbul – Kosner Baskonia Vitoria-Gasteiz | 91.7–79.4 | 85.5% | passed |
+| 05 Nov 21:45 | E | Hapoel IBI Tel Aviv – FC Barcelona | 91.0–85.3 | 68.9% | passed |
+| 05 Nov 22:00 | E | LDLC ASVEL Villeurbanne – FC Bayern Munich | 89.8–85.8 | 63.3% | not selected |
+| 05 Nov 22:30 | E | Armani Olimpia Milan – Valencia Basket | 87.7–92.8 | 33.2% | passed |
 | 31 Oct 08:00 | KBL | 부산 KCC 이지스 – 원주 DB 프로미 | 86.2–87.9 | 45.3% | not selected |
 | 31 Oct 08:00 | KBL | 안양 정관장 레드부스터스 – 수원 KT 소닉붐 | 81.9–76.4 | 72.0% | passed |
 | 31 Oct 10:30 | KBL | 대구 한국가스공사 페가수스 – 울산 현대모비스 피버스 | 81.1–79.5 | 58.2% | not selected |
@@ -26,6 +27,7 @@ Checked: 2026-10-29T13:34:20.969054+00:00
 | 03 Nov 13:00 | KBL | 부산 KCC 이지스 – 고양 소노 스카이거너스 | 85.0–86.6 | 43.7% | not selected |
 | 04 Nov 13:00 | KBL | 서울 SK 나이츠 – 대구 한국가스공사 페가수스 | 84.6–77.1 | 70.8% | passed |
 | 05 Nov 13:00 | KBL | 울산 현대모비스 피버스 – 서울 삼성 썬더스 | 80.0–81.7 | 47.2% | not selected |
+| 06 Nov 13:00 | KBL | 안양 정관장 레드부스터스 – 서울 SK 나이츠 | 77.8–78.7 | 61.0% | not selected |
 | 30 Oct 20:30 | ABA | Cibona – Igokea m:tel | 85.7–87.0 | 45.5% | not selected |
 | 30 Oct 22:30 | ABA | BC Vienna – Bosna BH Telecom | 85.1–87.2 | 44.5% | not selected |
 | 31 Oct 19:00 | ABA | Cedevita Olimpija – FMP | 88.3–79.7 | 76.9% | passed |
@@ -36,15 +38,7 @@ Checked: 2026-10-29T13:34:20.969054+00:00
 | 02 Nov 15:00 | ABA | Partizan Mozzart Bet – U-BT Cluj-Napoca | 94.0–78.5 | 88.8% | passed |
 | 02 Nov 18:30 | ABA | Dubai Basketball – Zadar | 90.9–75.7 | 89.4% | passed |
 | 02 Nov 20:30 | ABA | Mega Superbet – Spartak Office Shoes | 83.8–83.8 | 51.4% | not selected |
-| 29 Oct 20:00 | ECW | TTT Riga – Umana Reyer Venice | 67.4–80.0 | 23.8% | not selected |
-| 29 Oct 20:30 | ECW | Rutronik Stars Keltern – Uni Girona CB | 70.7–74.8 | 40.8% | not selected |
-| 29 Oct 21:00 | ECW | Univerzitetski zenski kosarkaski klub Student – BC Saarlouis e.V.  | 72.5–77.0 | 40.1% | not selected |
-| 29 Oct 21:00 | ECW | InvestInTheWest Enea Gorzow – Lattes-Montpellier | 75.5–77.5 | 45.7% | not selected |
-| 29 Oct 21:15 | ECW | Panathlitikos A.C. Sykeon – ZKK Brod Na Savi | 73.4–66.6 | 65.1% | not selected |
-| 29 Oct 21:30 | ECW | SL Benfica – Sopron Basket | 62.6–81.5 | 14.3% | passed |
-| 29 Oct 21:30 | ECW | Landerneau Bretagne Basket – Autosped BCC Castelnuovo Scrivia | 72.6–73.0 | 49.0% | not selected |
-| 29 Oct 21:30 | ECW | BCF Elfic Fribourg – ENEA AZS Politechnika Poznan | 68.6–76.8 | 32.3% | not selected |
-| 29 Oct 22:30 | ECW | Basket Namur Capitale – Club Baloncesto Avenida | 65.1–81.5 | 17.7% | passed |
+| 05 Nov 20:00 | ABA | Spartak Office Shoes – Zadar | 82.0–78.8 | 62.8% | not selected |
 | 02 Nov 20:00 | ECW | Besiktas JK – Maccabi Bnot Ashdod | 81.0–63.7 | 83.6% | not selected |
 | 02 Nov 20:00 | ECW | TTT Riga – Elitzur Landco Ramla | 71.8–73.5 | 46.2% | not selected |
 | 03 Nov 20:30 | ECW | 1 Klub Sportowy Ślęza Wrocław S.A. – CBK Mersin | 63.0–81.0 | 15.6% | passed |
@@ -63,7 +57,6 @@ Checked: 2026-10-29T13:34:20.969054+00:00
 | 04 Nov 21:00 | ECW | BC Saarlouis e.V.  – SL Benfica | 74.7–74.0 | 51.6% | not selected |
 | 04 Nov 21:00 | ECW | Autosped BCC Castelnuovo Scrivia – BCF Elfic Fribourg | 80.7–65.1 | 81.0% | not selected |
 | 04 Nov 21:00 | ECW | C'Chartres Metropole Basket Feminin – Basket Namur Capitale | 77.0–71.7 | 61.8% | not selected |
-| 04 Nov 21:15 | ECW | Panathlitikos A.C. Sykeon – DVTK HUNTHERM | 65.7–71.0 | 38.2% | not selected |
 | 04 Nov 21:30 | ECW | ALBA Berlin Basketballteam e.V. – Panathinaikos A.C. | 67.3–81.1 | 21.8% | not selected |
 | 04 Nov 21:30 | ECW | GEAS Basket SSDRL – Castors Braine | 74.6–71.4 | 57.0% | not selected |
 | 04 Nov 21:30 | ECW | Landerneau Bretagne Basket – ENEA AZS Politechnika Poznan | 74.3–72.7 | 53.6% | not selected |
@@ -71,7 +64,6 @@ Checked: 2026-10-29T13:34:20.969054+00:00
 | 04 Nov 22:00 | ECW | ZKK Brod Na Savi – Hozono Global Jairis | 57.9–84.1 | 7.0% | not selected |
 | 04 Nov 22:00 | ECW | Ensino Lugo CB – Lattes-Montpellier | 65.0–85.8 | 12.0% | not selected |
 | 04 Nov 22:45 | ECW | Maccabi Bnot Ashdod – Besiktas JK | 69.4–72.0 | 44.3% | not selected |
-| 29 Oct 18:00 | FEC | Gence BC – Sporting CP | 76.8–85.1 | 30.9% | not selected |
 | 02 Nov 21:00 | FEC | Sport und Event Würzburg Baskets GmbH – Tartu Ülikool Maks & Moorits | 84.6–80.1 | 60.9% | not selected |
 | 03 Nov 20:00 | FEC | BC Rilski Sportist – Kolossos H Hotels BC | 72.2–82.9 | 25.9% | not selected |
 | 03 Nov 20:00 | FEC | Yukatel Denizli Basket – Bakken Bears Aarhus | 87.5–77.1 | 73.4% | not selected |
@@ -96,7 +88,15 @@ Checked: 2026-10-29T13:34:20.969054+00:00
 | 04 Nov 22:00 | FEC | Fribourg Olympic – VEF RIGA | 82.7–88.8 | 35.6% | not selected |
 | 04 Nov 22:30 | FEC | Coretec Oostende – NHSZ-Szolnoki Olajbanyasz | 85.6–77.8 | 68.2% | not selected |
 | 04 Nov 22:30 | FEC | Lions de Geneve – BC Prievidza | 88.3–81.5 | 66.0% | not selected |
-| 30 Oct 04:05 | ARG_LNB | LANÚS – SAN MARTÍN (C) | 84.6–80.1 | 63.3% | not selected |
+| 05 Nov 19:00 | UKR | KYIV-BASKET (Kyiv) – KHARKIVSKI SOKOLY (Kharkiv) | 77.2–73.5 | 58.5% | not selected |
+| 31 Oct 15:30 | TR_BSL | Biotekno Körfez Basket – Trabzonspor Basketbol | 83.5–82.1 | 47.7% | not selected |
+| 31 Oct 18:00 | TR_BSL | Pizzabulls Bordo Bandırma – Bahçeşehir Koleji | 79.6–87.5 | 33.5% | passed |
+| 31 Oct 20:30 | TR_BSL | Yukatel Denizli Basket – Galatasaray MCT Technic | 81.1–86.3 | 45.0% | not selected |
+| 01 Nov 13:00 | TR_BSL | Esenler Erokspor – Türk Telekom | 82.3–83.8 | 52.4% | not selected |
+| 01 Nov 15:30 | TR_BSL | Fenerbahçe Tarfin – TOFAŞ | 91.4–78.7 | 83.2% | passed |
+| 01 Nov 18:00 | TR_BSL | Bursaspor Basketbol – Karşıyaka Basketbol | 82.5–81.7 | 53.2% | not selected |
+| 02 Nov 18:00 | TR_BSL | Aliağa Petkimspor – Anadolu Efes | 78.5–85.9 | 29.6% | passed |
+| 02 Nov 20:30 | TR_BSL | Beşiktaş Basketbol – Glint Çayırova Belediyesi | 89.4–81.0 | 75.8% | passed |
 | 31 Oct 17:30 | ARG_LNB | QUIMSA – PEÑAROL (MDP) | 87.0–78.5 | 73.2% | passed |
 | 02 Nov 02:30 | ARG_LNB | INSTITUTO – GIMNASIA (CR) | 78.0–75.7 | 55.9% | not selected |
 | 02 Nov 03:00 | ARG_LNB | ATENAS (C) – RACING (CH) | 81.7–78.0 | 58.7% | not selected |
@@ -105,15 +105,17 @@ Checked: 2026-10-29T13:34:20.969054+00:00
 | 04 Nov 03:30 | ARG_LNB | LA UNION FSA – ARGENTINO (J) | 84.8–75.3 | 75.3% | passed |
 | 04 Nov 03:30 | ARG_LNB | ATENAS (C) – GIMNASIA (CR) | 76.9–79.9 | 38.8% | not selected |
 | 05 Nov 04:00 | ARG_LNB | OLIMPICO (LB) – LANÚS | 84.1–77.8 | 65.9% | not selected |
+| 06 Nov 03:00 | ARG_LNB | OBERÁ – ARGENTINO (J) | 83.5–73.2 | 78.1% | passed |
+| 06 Nov 03:30 | ARG_LNB | INDEPENDIENTE (O) – GIMNASIA (CR) | 81.2–80.3 | 47.4% | not selected |
 
-Settled: 66; pending: 113; winner accuracy: 66.7%.
+Settled: 81; pending: 116; winner accuracy: 66.7%.
 
 | Fixture ID | Status | Final | Winner correct | Team MAE | Total error | Margin error | Total / margin in 80% |
 |---|---|---|---|---|---|---|---|
 | ARG_LNB_9324c7c7a56e38eb2fb05393 | final | 76–78 | True | 3.39 | 6.36 | 6.77 | True / True |
 | ARG_LNB_9b1a912dea58612618a7cb8d | final | 95–76 | True | 5.92 | 6.83 | 11.85 | True / True |
 | ARG_LNB_75eb75c834e4b39e2c98cfc7 | pending | — | — | — | — | — | — |
-| ARG_LNB_605664aaaf5cb52de37dec39 | pending | — | — | — | — | — | — |
+| ARG_LNB_605664aaaf5cb52de37dec39 | final | 81–72 | True | 5.87 | 11.74 | 4.52 | True / True |
 | ARG_LNB_66531a495580310d081e18b6 | final | 95–83 | True | 5.20 | 10.40 | 7.21 | True / True |
 | ARG_LNB_02f55b4e3130a1f40b8bf1c9 | final | 72–63 | False | 13.43 | 26.85 | 9.82 | False / True |
 | ARG_LNB_1960230c36b1dcfc538a81d6 | final | 58–80 | False | 13.40 | 26.70 | 26.79 | False / False |
@@ -126,14 +128,16 @@ Settled: 66; pending: 113; winner accuracy: 66.7%.
 | FEC_F135886 | pending | — | — | — | — | — | — |
 | ECW_F135388 | pending | — | — | — | — | — | — |
 | KBL_S49G01N49 | pending | — | — | — | — | — | — |
-| ECW_F135329 | pending | — | — | — | — | — | — |
+| TR_BSL_BID2026_1518156 | pending | — | — | — | — | — | — |
+| ECW_F135329 | final | 75–84 | True | 4.77 | 9.53 | 4.55 | True / True |
 | KBL_S49G01N42 | final | 95–90 | False | 9.08 | 18.16 | 7.23 | True / True |
+| E2026_96 | pending | — | — | — | — | — | — |
 | FEC_F135826 | pending | — | — | — | — | — | — |
 | ECW_F135317 | pending | — | — | — | — | — | — |
-| ECW_F135370 | pending | — | — | — | — | — | — |
+| ECW_F135370 | final | 55–87 | True | 7.79 | 4.53 | 15.57 | True / True |
 | ARG_LNB_fc2ae60ed0edc615ec24bc9a | pending | — | — | — | — | — | — |
 | KBL_S49G01N41 | final | 96–87 | True | 7.87 | 15.74 | 0.08 | True / True |
-| ECW_F135298 | pending | — | — | — | — | — | — |
+| ECW_F135298 | final | 79–63 | True | 4.56 | 2.01 | 9.12 | True / True |
 | KBL_S49G01N52 | pending | — | — | — | — | — | — |
 | KBL_S49G01N48 | pending | — | — | — | — | — | — |
 | KBL_S49G01N50 | pending | — | — | — | — | — | — |
@@ -156,8 +160,8 @@ Settled: 66; pending: 113; winner accuracy: 66.7%.
 | ECW_F135292 | pending | — | — | — | — | — | — |
 | ECW_F135264 | pending | — | — | — | — | — | — |
 | ABA_2026_54 | pending | — | — | — | — | — | — |
-| ECW_F135322 | pending | — | — | — | — | — | — |
-| ECW_F135312 | pending | — | — | — | — | — | — |
+| ECW_F135322 | final | 72–62 | False | 14.47 | 10.10 | 28.95 | True / False |
+| ECW_F135312 | final | 72–91 | True | 7.82 | 15.64 | 6.37 | True / True |
 | ARG_LNB_de077cd7bf7843bd130312f0 | pending | — | — | — | — | — | — |
 | ECW_F135320 | pending | — | — | — | — | — | — |
 | E2026_84 | pending | — | — | — | — | — | — |
@@ -166,9 +170,13 @@ Settled: 66; pending: 113; winner accuracy: 66.7%.
 | KBL_S49G01N51 | pending | — | — | — | — | — | — |
 | UKR_2026_N28_UKR_2226_UKR_4680419 | final | 75–70 | False | 7.59 | 5.21 | 15.17 | True / True |
 | PBA_SM_9bb11eb97f5e6fa6e675 | pending | — | — | — | — | — | — |
+| TR_BSL_BID2026_1518155 | pending | — | — | — | — | — | — |
 | FEC_F135884 | final | 95–83 | True | 5.73 | 11.47 | 3.43 | True / True |
+| KBL_S49G01N55 | pending | — | — | — | — | — | — |
 | ECW_F135283 | pending | — | — | — | — | — | — |
 | ARG_LNB_0c3889d90bddda0208eb7eeb | pending | — | — | — | — | — | — |
+| E2026_95 | pending | — | — | — | — | — | — |
+| ARG_LNB_0a04c66c54f4326d0552fe47 | pending | — | — | — | — | — | — |
 | ABA_2026_51 | pending | — | — | — | — | — | — |
 | FEC_F135823 | final | 89–85 | False | 2.80 | 4.87 | 5.59 | True / True |
 | FEC_F135824 | final | 85–87 | True | 4.45 | 8.89 | 0.16 | True / True |
@@ -182,10 +190,11 @@ Settled: 66; pending: 113; winner accuracy: 66.7%.
 | KBL_S49G01N54 | pending | — | — | — | — | — | — |
 | FEC_F135887 | pending | — | — | — | — | — | — |
 | FEC_F135767 | pending | — | — | — | — | — | — |
-| E2026_83 | pending | — | — | — | — | — | — |
+| E2026_83 | final | 95–76 | True | 7.18 | 3.01 | 14.36 | True / True |
 | ARG_LNB_cb273967ddf7afe23276c483 | pending | — | — | — | — | — | — |
 | FEC_F135796 | pending | — | — | — | — | — | — |
-| FEC_F135733 | pending | — | — | — | — | — | — |
+| E2026_93 | pending | — | — | — | — | — | — |
+| FEC_F135733 | final | 69–67 | False | 12.96 | 25.93 | 10.26 | False / True |
 | UKR_2026_N29_UKR_4704541_UKR_4656005 | final | 64–75 | True | 6.99 | 13.98 | 6.87 | True / True |
 | ARG_LNB_fd8be0313b750577ad6d2d36 | pending | — | — | — | — | — | — |
 | ECW_F135281 | final | 72–54 | True | 9.95 | 19.90 | 11.92 | True / True |
@@ -193,7 +202,8 @@ Settled: 66; pending: 113; winner accuracy: 66.7%.
 | E2026_90 | pending | — | — | — | — | — | — |
 | FEC_F135734 | final | 103–86 | True | 10.98 | 21.95 | 12.01 | False / True |
 | FEC_F135736 | pending | — | — | — | — | — | — |
-| KBL_S49G01N44 | pending | — | — | — | — | — | — |
+| TR_BSL_BID2026_1518161 | pending | — | — | — | — | — | — |
+| KBL_S49G01N44 | final | 87–95 | False | 9.84 | 19.67 | 10.31 | True / True |
 | FEC_F135858 | pending | — | — | — | — | — | — |
 | KBL_S49G01N45 | pending | — | — | — | — | — | — |
 | ARG_LNB_8c649084ef7c092e651d7c03 | pending | — | — | — | — | — | — |
@@ -207,8 +217,9 @@ Settled: 66; pending: 113; winner accuracy: 66.7%.
 | E2026_73 | final | 86–104 | True | 5.46 | 8.84 | 10.93 | True / True |
 | E2026_71 | final | 100–78 | True | 6.91 | 0.70 | 13.81 | True / True |
 | ECW_F135271 | final | 73–76 | True | 4.13 | 2.49 | 8.25 | True / True |
-| E2026_81 | pending | — | — | — | — | — | — |
+| E2026_81 | final | 103–73 | True | 10.83 | 3.09 | 21.65 | True / False |
 | ABA_2026_58 | pending | — | — | — | — | — | — |
+| ABA_2026_69 | pending | — | — | — | — | — | — |
 | E2026_85 | pending | — | — | — | — | — | — |
 | ECW_F135315 | pending | — | — | — | — | — | — |
 | ARG_LNB_a7472fbe8c7499a733a39f87 | pending | — | — | — | — | — | — |
@@ -218,6 +229,7 @@ Settled: 66; pending: 113; winner accuracy: 66.7%.
 | FEC_F135825 | final | 66–94 | True | 13.79 | 6.03 | 27.59 | True / False |
 | KBL_S49G01N47 | pending | — | — | — | — | — | — |
 | ABA_2026_55 | pending | — | — | — | — | — | — |
+| TR_BSL_BID2026_1518160 | pending | — | — | — | — | — | — |
 | E2026_72 | final | 93–99 | False | 7.20 | 12.65 | 14.40 | True / True |
 | FEC_F135827 | pending | — | — | — | — | — | — |
 | FEC_F135857 | pending | — | — | — | — | — | — |
@@ -231,15 +243,18 @@ Settled: 66; pending: 113; winner accuracy: 66.7%.
 | FEC_F135888 | pending | — | — | — | — | — | — |
 | ECW_F135377 | final | 79–72 | False | 10.52 | 4.05 | 21.03 | True / True |
 | ABA_2026_57 | pending | — | — | — | — | — | — |
-| E2026_82 | pending | — | — | — | — | — | — |
+| E2026_82 | final | 94–99 | False | 4.20 | 8.41 | 8.16 | True / True |
 | ECW_F135274 | final | 66–84 | True | 8.59 | 0.24 | 17.18 | True / True |
 | FEC_F135768 | pending | — | — | — | — | — | — |
+| ARG_LNB_a9b4af9b2996c63bc6b36dac | pending | — | — | — | — | — | — |
 | FEC_F135856 | pending | — | — | — | — | — | — |
 | ECW_F135402 | pending | — | — | — | — | — | — |
 | ECW_F135357 | pending | — | — | — | — | — | — |
 | TR_BSL_B20261025_TR_BSL_10_TR_BSL_95 | pending | — | — | — | — | — | — |
+| TR_BSL_BID2026_1518162 | pending | — | — | — | — | — | — |
 | ECW_F135340 | pending | — | — | — | — | — | — |
 | ECW_F135359 | pending | — | — | — | — | — | — |
+| TR_BSL_BID2026_1518157 | pending | — | — | — | — | — | — |
 | FEC_F135766 | pending | — | — | — | — | — | — |
 | FEC_F135765 | final | 90–87 | True | 6.16 | 12.33 | 2.62 | True / True |
 | ARG_LNB_5a9f9a754d353d8e3c6be522 | pending | — | — | — | — | — | — |
@@ -251,15 +266,16 @@ Settled: 66; pending: 113; winner accuracy: 66.7%.
 | PBA_SM_487b35d3769c1bdcd74d | pending | — | — | — | — | — | — |
 | ABA_2026_52 | pending | — | — | — | — | — | — |
 | ECW_F135354 | final | 80–58 | True | 10.32 | 14.39 | 20.64 | True / True |
+| E2026_92 | pending | — | — | — | — | — | — |
 | FEC_F135885 | final | 88–91 | False | 4.17 | 7.16 | 8.33 | True / True |
 | KBL_S49G01N40 | final | 107–109 | False | 25.96 | 51.92 | 2.90 | False / True |
 | E2026_87 | pending | — | — | — | — | — | — |
-| ECW_F135342 | pending | — | — | — | — | — | — |
+| ECW_F135342 | final | 80–87 | True | 10.79 | 21.58 | 1.15 | True / True |
 | KBL_S49G01N46 | pending | — | — | — | — | — | — |
 | FEC_F135854 | final | 93–90 | True | 7.58 | 15.17 | 1.39 | True / True |
 | ABA_2026_48 | final | 95–70 | True | 9.81 | 9.27 | 19.62 | True / False |
 | FEC_F135737 | pending | — | — | — | — | — | — |
-| ECW_F135347 | pending | — | — | — | — | — | — |
+| ECW_F135347 | final | 77–65 | False | 6.97 | 10.99 | 13.94 | True / True |
 | FEC_F135673 | final | 70–91 | True | 8.30 | 2.82 | 16.60 | True / True |
 | ECW_F135290 | final | 62–89 | True | 10.68 | 0.66 | 21.36 | True / True |
 | ARG_LNB_4c69f86a9670f93503eb6898 | pending | — | — | — | — | — | — |
@@ -268,22 +284,26 @@ Settled: 66; pending: 113; winner accuracy: 66.7%.
 | ECW_F135266 | final | 67–48 | True | 13.40 | 26.81 | 15.58 | False / True |
 | FEC_F135707 | pending | — | — | — | — | — | — |
 | ECW_F135263 | final | 27–61 | True | 30.66 | 61.32 | 4.85 | False / True |
+| TR_BSL_BID2026_1518159 | pending | — | — | — | — | — | — |
 | E2026_86 | pending | — | — | — | — | — | — |
+| E2026_94 | pending | — | — | — | — | — | — |
 | FEC_F135763 | final | 83–85 | False | 2.64 | 5.28 | 3.76 | True / True |
 | FEC_F135883 | final | 83–99 | True | 10.22 | 20.44 | 2.26 | False / True |
 | ECW_F135270 | pending | — | — | — | — | — | — |
 | FEC_F135797 | pending | — | — | — | — | — | — |
 | ARG_LNB_8bcc8c4bcaa30fcb1f134285 | pending | — | — | — | — | — | — |
-| ECW_F135334 | pending | — | — | — | — | — | — |
+| ECW_F135334 | final | 68–73 | True | 2.30 | 4.60 | 4.56 | True / True |
 | E2026_78 | final | 82–75 | False | 5.93 | 11.85 | 8.67 | True / True |
 | FEC_F135678 | pending | — | — | — | — | — | — |
 | FEC_F135794 | final | 91–62 | False | 18.18 | 10.59 | 36.36 | True / False |
 | ECW_F135358 | final | 49–79 | True | 13.91 | 16.36 | 27.83 | True / False |
+| TR_BSL_BID2026_1518158 | pending | — | — | — | — | — | — |
 | ECW_F135389 | pending | — | — | — | — | — | — |
 | E2026_89 | pending | — | — | — | — | — | — |
+| UKR_2026_N33_UKR_4680419_UKR_4656005 | pending | — | — | — | — | — | — |
 | PBA_SM_1a95c8e32deb503d59fd | pending | — | — | — | — | — | — |
 | TR_BSL_B20261025_TR_BSL_11_TR_BSL_4 | pending | — | — | — | — | — | — |
-| ECW_F135366 | pending | — | — | — | — | — | — |
+| ECW_F135366 | final | 55–70 | True | 10.25 | 20.49 | 10.89 | True / True |
 | ABA_2026_56 | pending | — | — | — | — | — | — |
 | FEC_F135738 | pending | — | — | — | — | — | — |
 | FEC_F135703 | final | 76–78 | False | 5.96 | 7.00 | 11.92 | True / True |
@@ -292,9 +312,6 @@ Settled: 66; pending: 113; winner accuracy: 66.7%.
 
 ## Unresolved inputs
 
-- JP_B1_506520: B.PREMIER/B.ONE are separate 2026-27 competitions; legacy B1/B2 model transfer is not validated
-- JP_B1_506519: B.PREMIER/B.ONE are separate 2026-27 competitions; legacy B1/B2 model transfer is not validated
-- JP_B1_506521: B.PREMIER/B.ONE are separate 2026-27 competitions; legacy B1/B2 model transfer is not validated
 - JP_B1_506530: B.PREMIER/B.ONE are separate 2026-27 competitions; legacy B1/B2 model transfer is not validated
 - JP_B1_506522: B.PREMIER/B.ONE are separate 2026-27 competitions; legacy B1/B2 model transfer is not validated
 - JP_B1_506525: B.PREMIER/B.ONE are separate 2026-27 competitions; legacy B1/B2 model transfer is not validated
@@ -318,8 +335,12 @@ Settled: 66; pending: 113; winner accuracy: 66.7%.
 - JP_B1_506541: B.PREMIER/B.ONE are separate 2026-27 competitions; legacy B1/B2 model transfer is not validated
 - JP_B1_506544: B.PREMIER/B.ONE are separate 2026-27 competitions; legacy B1/B2 model transfer is not validated
 - JP_B1_506538: B.PREMIER/B.ONE are separate 2026-27 competitions; legacy B1/B2 model transfer is not validated
-- JP_B2_507300: B.PREMIER/B.ONE are separate 2026-27 competitions; legacy B1/B2 model transfer is not validated
-- JP_B2_507311: B.PREMIER/B.ONE are separate 2026-27 competitions; legacy B1/B2 model transfer is not validated
+- JP_B1_506545: B.PREMIER/B.ONE are separate 2026-27 competitions; legacy B1/B2 model transfer is not validated
+- JP_B1_506546: B.PREMIER/B.ONE are separate 2026-27 competitions; legacy B1/B2 model transfer is not validated
+- JP_B1_506547: B.PREMIER/B.ONE are separate 2026-27 competitions; legacy B1/B2 model transfer is not validated
+- JP_B1_506548: B.PREMIER/B.ONE are separate 2026-27 competitions; legacy B1/B2 model transfer is not validated
+- JP_B1_506549: B.PREMIER/B.ONE are separate 2026-27 competitions; legacy B1/B2 model transfer is not validated
+- JP_B1_506550: B.PREMIER/B.ONE are separate 2026-27 competitions; legacy B1/B2 model transfer is not validated
 - JP_B2_507305: B.PREMIER/B.ONE are separate 2026-27 competitions; legacy B1/B2 model transfer is not validated
 - JP_B2_507312: B.PREMIER/B.ONE are separate 2026-27 competitions; legacy B1/B2 model transfer is not validated
 - JP_B2_507291: B.PREMIER/B.ONE are separate 2026-27 competitions; legacy B1/B2 model transfer is not validated
@@ -349,6 +370,8 @@ Settled: 66; pending: 113; winner accuracy: 66.7%.
 - JP_B2_507319: B.PREMIER/B.ONE are separate 2026-27 competitions; legacy B1/B2 model transfer is not validated
 - JP_B2_507321: B.PREMIER/B.ONE are separate 2026-27 competitions; legacy B1/B2 model transfer is not validated
 - JP_B2_507322: B.PREMIER/B.ONE are separate 2026-27 competitions; legacy B1/B2 model transfer is not validated
+- JP_B2_507341: B.PREMIER/B.ONE are separate 2026-27 competitions; legacy B1/B2 model transfer is not validated
+- ECW_F135305: Fixture changed; original forecast retained, manual review required
 
 Source refresh failed (PBA_GOV): HTTPError: HTTP Error 503: Service Unavailable
 
