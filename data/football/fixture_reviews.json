@@ -302,6 +302,28 @@
       "checked_at_utc": "2026-10-25T17:34:51.721788+00:00",
       "status": "quarantined_date_conflict",
       "note": "Training date independently checked against licensed score; original forecast settlement still requires timing review."
+    },
+    "ES1_a32bfe88554b1d0384259a10": {
+      "league": "ES1",
+      "home": "villarreal cf",
+      "away": "rcd espanyol de barcelona",
+      "original_date": "2026-11-01",
+      "observed_start_utc": "2026-10-30T20:00:00+00:00",
+      "source_url": "https://www.espn.com/soccer/game/_/gameId/401882817",
+      "checked_at_utc": "2026-10-31T13:00:09.440681+00:00",
+      "status": "quarantined_date_conflict",
+      "note": "Training date independently checked against licensed score; original forecast settlement still requires timing review."
+    },
+    "FR1_caaca3b578d56ac18ca1a6fc": {
+      "league": "FR1",
+      "home": "ogc nice",
+      "away": "stade rennais fc 1901",
+      "original_date": "2026-10-31",
+      "observed_start_utc": "2026-10-30T18:00:00+00:00",
+      "source_url": "https://www.espn.com/soccer/game/_/gameId/401876416",
+      "checked_at_utc": "2026-10-31T13:00:09.440681+00:00",
+      "status": "quarantined_date_conflict",
+      "note": "Training date independently checked against licensed score; original forecast settlement still requires timing review."
     }
   }
 }

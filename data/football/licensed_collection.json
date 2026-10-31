@@ -1,9 +1,9 @@
 {
-  "checked_at_utc": "2026-10-30T13:22:54.936942+00:00",
+  "checked_at_utc": "2026-10-31T13:00:09.440681+00:00",
   "leagues": [
     {
       "league": "DE1",
-      "added_candidates": 0,
+      "added_candidates": 1,
       "skipped": [],
       "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Bundesliga"
     },
@@ -15,25 +15,25 @@
     },
     {
       "league": "EN2",
-      "added_candidates": 0,
+      "added_candidates": 1,
       "skipped": [],
       "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_EFL_Championship"
     },
     {
       "league": "ES1",
-      "added_candidates": 0,
+      "added_candidates": 1,
       "skipped": [],
       "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_La_Liga"
     },
     {
       "league": "FR1",
-      "added_candidates": 0,
+      "added_candidates": 3,
       "skipped": [],
       "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Ligue_1"
     },
     {
       "league": "IT1",
-      "added_candidates": 7,
+      "added_candidates": 2,
       "skipped": [],
       "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Serie_A"
     },
@@ -45,19 +45,24 @@
     },
     {
       "league": "PT1",
-      "added_candidates": 0,
+      "added_candidates": 1,
       "skipped": [],
       "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Primeira_Liga"
     },
     {
       "league": "TR1",
       "added_candidates": 0,
-      "skipped": [],
+      "skipped": [
+        {
+          "event_id": "TR1_b1d2161a5e77b7f8afb9ecff",
+          "reason": "No exact licensed club/score pair"
+        }
+      ],
       "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_S%C3%BCper_Lig"
     }
   ],
   "errors": [],
-  "licensed_finals": 278,
-  "new_unique_finals": 2,
+  "licensed_finals": 285,
+  "new_unique_finals": 7,
   "note": "Partial CC BY-SA supplement; original CC0 archives and frozen forecasts retained. Same-day, unknown date, name mismatch and conflicting results are excluded; calendar completeness is unverified."
 }
