@@ -1,6 +1,6 @@
 # Daily basketball research
 
-Checked: 2026-11-01T11:36:00.292055+00:00
+Checked: 2026-11-01T13:44:52.796796+00:00
 
 | Tipoff (Istanbul) | League | Fixture | Score forecast | Home win | Data gate / probability filter |
 |---|---|---|---|---|---|
@@ -25,7 +25,6 @@ Checked: 2026-11-01T11:36:00.292055+00:00
 | 08 Nov 08:00 | KBL | 서울 SK 나이츠 – 원주 DB 프로미 | 88.6–81.7 | 62.2% | not selected |
 | 08 Nov 08:00 | KBL | 울산 현대모비스 피버스 – 안양 정관장 레드부스터스 | 78.6–82.0 | 36.2% | not selected |
 | 08 Nov 10:30 | KBL | 창원 LG 세이커스 – 부산 KCC 이지스 | 88.3–81.8 | 67.5% | passed |
-| 01 Nov 15:00 | ABA | Crvena zvezda Meridianbet – HKK Široki TT Kabeli | 93.9–80.4 | 87.4% | not selected |
 | 01 Nov 19:00 | ABA | SC Derby – Perspektiva Ilirija | 84.2–82.7 | 54.8% | not selected |
 | 01 Nov 21:00 | ABA | Slovan Bratislava – Krka | 88.3–79.4 | 77.2% | not selected |
 | 02 Nov 15:00 | ABA | Partizan Mozzart Bet – U-BT Cluj-Napoca | 94.0–78.5 | 88.8% | passed |
@@ -37,6 +36,7 @@ Checked: 2026-11-01T11:36:00.292055+00:00
 | 07 Nov 21:00 | ABA | FMP – Budućnost VOLI | 79.1–87.9 | 23.5% | passed |
 | 07 Nov 21:00 | ABA | Perspektiva Ilirija – BC Vienna | 89.1–83.1 | 69.8% | passed |
 | 08 Nov 13:00 | ABA | U-BT Cluj-Napoca – Bosna BH Telecom | 89.3–86.3 | 61.6% | not selected |
+| 08 Nov 15:00 | ABA | Partizan Mozzart Bet – SC Derby | 93.8–72.0 | 94.5% | passed |
 | 02 Nov 20:00 | ECW | Besiktas JK – Maccabi Bnot Ashdod | 81.0–63.7 | 83.6% | not selected |
 | 02 Nov 20:00 | ECW | TTT Riga – Elitzur Landco Ramla | 71.8–73.5 | 46.2% | not selected |
 | 03 Nov 20:30 | ECW | 1 Klub Sportowy Ślęza Wrocław S.A. – CBK Mersin | 63.0–81.0 | 15.6% | passed |
@@ -93,10 +93,10 @@ Checked: 2026-11-01T11:36:00.292055+00:00
 | 07 Nov 17:00 | UKR | ZAPORIZHZHYA (Zaporizhzhya) – NIKO-BASKET (Mykolaiv) | 87.3–74.3 | 69.6% | passed |
 | 07 Nov 17:00 | UKR | RIVNE (Rivne) – KHMELNYTSKYI (Khmelnytskyi) | 82.5–72.2 | 66.7% | passed |
 | 08 Nov 14:00 | UKR | DNIPRO (Dnipro) – NIKO-BASKET (Mykolaiv) | 88.9–70.0 | 89.5% | passed |
-| 01 Nov 15:30 | TR_BSL | Fenerbahçe Tarfin – TOFAŞ | 91.4–78.7 | 83.2% | passed |
+| 08 Nov 15:00 | UKR | RIVNE (Rivne) – PRYKARPATTIA-GOVERLA-KFV (Iv-Frankivsk) | 83.9–72.7 | 71.5% | passed |
 | 01 Nov 18:00 | TR_BSL | Bursaspor Basketbol – Karşıyaka Basketbol | 82.5–81.7 | 53.2% | not selected |
-| 02 Nov 18:00 | TR_BSL | Aliağa Petkimspor – Anadolu Efes | 78.5–85.9 | 29.6% | passed |
-| 02 Nov 20:30 | TR_BSL | Beşiktaş Basketbol – Glint Çayırova Belediyesi | 89.4–81.0 | 75.8% | passed |
+| 02 Nov 18:00 | TR_BSL | Aliağa Petkimspor – Anadolu Efes | 78.5–85.9 | 29.6% | not selected |
+| 02 Nov 20:30 | TR_BSL | Beşiktaş Basketbol – Glint Çayırova Belediyesi | 89.4–81.0 | 75.8% | not selected |
 | 02 Nov 02:30 | ARG_LNB | INSTITUTO – GIMNASIA (CR) | 78.0–75.7 | 55.9% | not selected |
 | 02 Nov 03:00 | ARG_LNB | ATENAS (C) – RACING (CH) | 81.7–78.0 | 58.7% | not selected |
 | 03 Nov 04:00 | ARG_LNB | OLIMPICO (LB) – PEÑAROL (MDP) | 82.8–81.3 | 53.4% | not selected |
@@ -112,7 +112,7 @@ Checked: 2026-11-01T11:36:00.292055+00:00
 | 08 Nov 02:00 | ARG_LNB | BOCA – LA UNION FSA | 87.6–78.9 | 74.6% | passed |
 | 08 Nov 06:00 | ARG_LNB | RACING (CH) – REGATAS (C) | 80.8–79.3 | 52.8% | not selected |
 
-Settled: 99; pending: 124; winner accuracy: 65.7%.
+Settled: 99; pending: 126; winner accuracy: 65.7%.
 
 | Fixture ID | Status | Final | Winner correct | Team MAE | Total error | Margin error | Total / margin in 80% |
 |---|---|---|---|---|---|---|---|
@@ -184,6 +184,7 @@ Settled: 99; pending: 124; winner accuracy: 65.7%.
 | FEC_F135884 | final | 95–83 | True | 5.73 | 11.47 | 3.43 | True / True |
 | KBL_S49G01N55 | pending | — | — | — | — | — | — |
 | ECW_F135283 | pending | — | — | — | — | — | — |
+| ABA_2026_66 | pending | — | — | — | — | — | — |
 | ARG_LNB_0c3889d90bddda0208eb7eeb | pending | — | — | — | — | — | — |
 | E2026_95 | pending | — | — | — | — | — | — |
 | ARG_LNB_0a04c66c54f4326d0552fe47 | pending | — | — | — | — | — | — |
@@ -204,6 +205,7 @@ Settled: 99; pending: 124; winner accuracy: 65.7%.
 | FEC_F135767 | pending | — | — | — | — | — | — |
 | UKR_2026_N41_UKR_4657261_UKR_4704541 | pending | — | — | — | — | — | — |
 | E2026_83 | final | 95–76 | True | 7.18 | 3.01 | 14.36 | True / True |
+| UKR_2026_N40_UKR_2233_UKR_2226 | pending | — | — | — | — | — | — |
 | ARG_LNB_cb273967ddf7afe23276c483 | pending | — | — | — | — | — | — |
 | FEC_F135796 | pending | — | — | — | — | — | — |
 | E2026_98 | pending | — | — | — | — | — | — |
@@ -394,5 +396,7 @@ Settled: 99; pending: 124; winner accuracy: 65.7%.
 - ECW_F135305: Fixture changed; original forecast retained, manual review required
 
 Source refresh failed (PBA_GOV): HTTPError: HTTP Error 503: Service Unavailable
+
+Source refresh failed (TR_BSL): ValueError: TR_BSL current source refresh failed; previous observations retained: [{'source': 'https://beinsports.com.tr/lig/basketbol-super-ligi/', 'error': 'ValueError: Missing beIN fixture data', 'retained_previous_snapshot': True}]
 
 Model probabilities are not measured accuracy. Rejected/low-probability forecasts remain visible. Only source-confirmed timestamped finals settle. No live predictor. Small batches do not establish general accuracy.
