@@ -1,5 +1,5 @@
 {
-  "timestamp_utc": "2026-11-01T11:35:43.903717+00:00",
+  "timestamp_utc": "2026-11-01T13:44:34.971131+00:00",
   "league": "TR_BSL",
   "games": 4098,
   "teams": 46,
@@ -22,11 +22,14 @@
     "2025-26": 261,
     "2026-27": 43
   },
-  "sources": [
-    "https://beinsports.com.tr/lig/basketbol-super-ligi/fikstur",
-    "https://beinsports.com.tr/lig/basketbol-super-ligi/puan-durumu"
+  "sources": [],
+  "errors": [
+    {
+      "source": "https://beinsports.com.tr/lig/basketbol-super-ligi/",
+      "error": "ValueError: Missing beIN fixture data",
+      "retained_previous_snapshot": true
+    }
   ],
-  "errors": [],
   "gender": "Men",
   "coverage": "Finished non-tied games with positive scores from public pages; not a completeness guarantee. Aggregate-leg ties and unplayed games excluded.",
   "note": "Normalized numeric facts from public pages; no supported developer API contract. Nominal home/away, neutral venues not independently verified.",

@@ -1,56 +1,52 @@
 {
-  "checked_at_utc": "2026-11-01T11:36:19.331859+00:00",
+  "checked_at_utc": "2026-11-01T13:45:05.120380+00:00",
   "leagues": [
     {
       "league": "DE1",
-      "added_candidates": 34,
+      "added_candidates": 7,
       "skipped": [],
       "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Bundesliga"
     },
     {
       "league": "EN1",
-      "added_candidates": 38,
+      "added_candidates": 8,
       "skipped": [],
       "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Premier_League"
     },
     {
       "league": "EN2",
-      "added_candidates": 61,
+      "added_candidates": 12,
       "skipped": [],
       "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_EFL_Championship"
     },
     {
       "league": "ES1",
-      "added_candidates": 35,
+      "added_candidates": 5,
       "skipped": [],
       "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_La_Liga"
     },
     {
       "league": "FR1",
-      "added_candidates": 31,
+      "added_candidates": 4,
       "skipped": [],
       "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Ligue_1"
     },
     {
       "league": "IT1",
-      "added_candidates": 43,
+      "added_candidates": 3,
       "skipped": [],
       "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Serie_A"
     },
     {
       "league": "NL1",
-      "added_candidates": 32,
+      "added_candidates": 5,
       "skipped": [],
       "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Eredivisie"
     },
     {
       "league": "TR1",
-      "added_candidates": 26,
+      "added_candidates": 0,
       "skipped": [
-        {
-          "event_id": "TR1_c084713adf5988a46cde555f",
-          "reason": "No exact licensed club/score pair"
-        },
         {
           "event_id": "TR1_a4f75489f9c2d770fc0d9fa8",
           "reason": "No exact licensed club/score pair"
@@ -79,6 +75,6 @@
     }
   ],
   "licensed_finals": 328,
-  "new_unique_finals": 43,
+  "new_unique_finals": 0,
   "note": "Partial CC BY-SA supplement; original CC0 archives and frozen forecasts retained. Same-day, unknown date, name mismatch and conflicting results are excluded; calendar completeness is unverified."
 }
