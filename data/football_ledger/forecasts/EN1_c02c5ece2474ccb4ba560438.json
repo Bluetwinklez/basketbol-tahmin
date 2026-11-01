@@ -1,0 +1,123 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-11-01T11:30:44.953951+00:00",
+  "fixture": {
+    "event_id": "EN1_c02c5ece2474ccb4ba560438",
+    "league": "EN1",
+    "season": "2026-27",
+    "date": "2026-11-07",
+    "home": "nottingham forest fc",
+    "away": "manchester city fc",
+    "home_name": "Nottingham Forest FC",
+    "away_name": "Manchester City FC",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/en.1.json",
+    "captured_at_utc": "2026-11-01T11:30:39.754502+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null,
+    "original_date": null,
+    "date_correction_verified": null,
+    "license_url": null,
+    "source_sha256": null,
+    "fixture_verification_url": null,
+    "actual_start_utc": null,
+    "source_original_date": "2026-11-07",
+    "verified_start_utc": "2026-11-07T17:30:00+00:00",
+    "independent_fixture": {
+      "provider_event_id": "401878757",
+      "league": "EN1",
+      "season_year": 2026,
+      "start_utc": "2026-11-07T17:30:00+00:00",
+      "captured_at": "2026-10-31T13:00:03.490483+00:00",
+      "home_name": "Nottingham Forest",
+      "away_name": "Manchester City",
+      "provider_home_id": "393",
+      "provider_away_id": "382",
+      "source_url": "https://www.espn.com/soccer/game/_/gameId/401878757",
+      "status": "scheduled",
+      "event_id": "EN1_c02c5ece2474ccb4ba560438",
+      "home": "nottingham forest fc",
+      "away": "manchester city fc"
+    }
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "EN1",
+    "home": "nottingham forest fc",
+    "away": "manchester city fc",
+    "expected_home_goals": 0.8639945131022122,
+    "expected_away_goals": 1.3885227337687247,
+    "probabilities": {
+      "home": 0.2336670644316093,
+      "draw": 0.2745283599718814,
+      "away": 0.4918045755965095
+    },
+    "predicted_outcome": "away",
+    "most_likely_score": [
+      0,
+      1
+    ],
+    "over": {
+      "1.5": 0.6580490635316724,
+      "2.5": 0.39133221960335524,
+      "3.5": 0.19107078927684928
+    },
+    "both_teams_score": 0.4342155879032919,
+    "total_goals_80": [
+      0,
+      4
+    ],
+    "training_cutoff_exclusive": "2026-11-01",
+    "training_games": 1120,
+    "prior_team_games": {
+      "nottingham forest fc": 112,
+      "manchester city fc": 112
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "settings": {
+      "half_life_days": 180.0,
+      "shrinkage_games": 8.0,
+      "window_days": 1095
+    },
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "82238da3574c0407c41bdd468d4da3c850847dce984531e441615d916b91db52",
+  "source_code_sha256": "a8d9ce5c692529e6af6dfbcfc8112b7939f37ce83631889026a0559ee22fb8a5",
+  "requested_model_variant": "baseline",
+  "history_health": {
+    "spec": "football-history-health-v1",
+    "checked_at_utc": "2026-11-01T11:30:43.538127+00:00",
+    "information_cutoff_exclusive": "2026-11-01",
+    "teams": {
+      "nottingham forest fc": {
+        "prior_finals": 160,
+        "active_season_finals": 8,
+        "last_final_date": "2026-10-23",
+        "days_since_last_final": 9,
+        "unresolved_past_fixture_ids": []
+      },
+      "manchester city fc": {
+        "prior_finals": 236,
+        "active_season_finals": 8,
+        "last_final_date": "2026-10-24",
+        "days_since_last_final": 8,
+        "unresolved_past_fixture_ids": []
+      }
+    },
+    "diagnostic_gate_passed": true,
+    "blocking_issues": [],
+    "max_history_age_days": 30,
+    "calendar_completeness_verified": false,
+    "note": "Diagnostic policy, not a validated success threshold. Unresolved fixtures may be postponed or missing results. Fresh source captures do not make old histories current."
+  },
+  "selection_policy": "Current-history diagnostic gate plus existing model issues; research only, no validated recommendation.",
+  "payload_sha256": "555866badf0ac5c26824a9abd06ad72ea838c27ca68c78874104e68d22e4913e"
+}

@@ -1,0 +1,351 @@
+{
+  "football": {
+    "status": "partial",
+    "errors": [
+      {
+        "season": "2014-15",
+        "error": "Date outside source season",
+        "source": "screenshots",
+        "collector": "screenshots"
+      },
+      {
+        "league": "DE2",
+        "season": "2026-27",
+        "error": "Source file unavailable",
+        "source": "football",
+        "collector": "football"
+      },
+      {
+        "league": "ES2",
+        "season": "2026-27",
+        "error": "Source file unavailable",
+        "source": "football",
+        "collector": "football"
+      },
+      {
+        "league": "IT2",
+        "season": "2026-27",
+        "error": "Source file unavailable",
+        "source": "football",
+        "collector": "football"
+      },
+      {
+        "league": "FR2",
+        "season": "2026-27",
+        "error": "Source file unavailable",
+        "source": "football",
+        "collector": "football"
+      },
+      {
+        "league": "AT1",
+        "season": "2026-27",
+        "error": "Source file unavailable",
+        "source": "football",
+        "collector": "football"
+      },
+      {
+        "league": "BE1",
+        "season": "2026-27",
+        "error": "Source file unavailable",
+        "source": "football",
+        "collector": "football"
+      },
+      {
+        "league": "GR1",
+        "season": "2026-27",
+        "error": "Source file unavailable",
+        "source": "football",
+        "collector": "football"
+      },
+      {
+        "league": "SC1",
+        "season": "2026-27",
+        "error": "Source file unavailable",
+        "source": "football",
+        "collector": "football"
+      },
+      {
+        "league": "BR2",
+        "season": "2026",
+        "error": "Source file unavailable; historical data is not current coverage",
+        "source": "BR2",
+        "collector": "BR2"
+      },
+      {
+        "league": "BR1",
+        "season": "2020",
+        "error": "Date outside source season",
+        "retained_previous": true,
+        "source": "BR1",
+        "collector": "BR1"
+      },
+      {
+        "league": "AR1",
+        "season": "2018",
+        "error": "Source file unavailable; historical data is not current coverage",
+        "source": "AR1",
+        "collector": "AR1"
+      },
+      {
+        "league": "AR1",
+        "season": "2019",
+        "error": "Source file unavailable; historical data is not current coverage",
+        "source": "AR1",
+        "collector": "AR1"
+      },
+      {
+        "league": "AR1",
+        "season": "2020",
+        "error": "Source file unavailable; historical data is not current coverage",
+        "source": "AR1",
+        "collector": "AR1"
+      },
+      {
+        "league": "AR1",
+        "season": "2021",
+        "error": "Source file unavailable; historical data is not current coverage",
+        "source": "AR1",
+        "collector": "AR1"
+      },
+      {
+        "league": "AR1",
+        "season": "2022",
+        "error": "Source file unavailable; historical data is not current coverage",
+        "source": "AR1",
+        "collector": "AR1"
+      },
+      {
+        "league": "AR1",
+        "season": "2023",
+        "error": "Source file unavailable; historical data is not current coverage",
+        "source": "AR1",
+        "collector": "AR1"
+      },
+      {
+        "league": "AR1",
+        "season": "2024",
+        "error": "Source file unavailable; historical data is not current coverage",
+        "source": "AR1",
+        "collector": "AR1"
+      },
+      {
+        "league": "AR1",
+        "season": "2026",
+        "error": "Source file unavailable; historical data is not current coverage",
+        "source": "AR1",
+        "collector": "AR1"
+      },
+      {
+        "league": "CO1",
+        "season": "2018",
+        "error": "Source file unavailable; historical data is not current coverage",
+        "source": "CO1",
+        "collector": "CO1"
+      },
+      {
+        "league": "CO1",
+        "season": "2019",
+        "error": "Source file unavailable; historical data is not current coverage",
+        "source": "CO1",
+        "collector": "CO1"
+      },
+      {
+        "league": "CO1",
+        "season": "2020",
+        "error": "Source file unavailable; historical data is not current coverage",
+        "source": "CO1",
+        "collector": "CO1"
+      },
+      {
+        "league": "CO1",
+        "season": "2021",
+        "error": "Source file unavailable; historical data is not current coverage",
+        "source": "CO1",
+        "collector": "CO1"
+      },
+      {
+        "league": "CO1",
+        "season": "2022",
+        "error": "Source file unavailable; historical data is not current coverage",
+        "source": "CO1",
+        "collector": "CO1"
+      },
+      {
+        "league": "CO1",
+        "season": "2023",
+        "error": "Source file unavailable; historical data is not current coverage",
+        "source": "CO1",
+        "collector": "CO1"
+      },
+      {
+        "league": "CO1",
+        "season": "2024",
+        "error": "Source file unavailable; historical data is not current coverage",
+        "source": "CO1",
+        "collector": "CO1"
+      },
+      {
+        "league": "CO1",
+        "season": "2026",
+        "error": "Source file unavailable; historical data is not current coverage",
+        "source": "CO1",
+        "collector": "CO1"
+      },
+      {
+        "league": "US1",
+        "season": "2018",
+        "error": "Source file unavailable; historical data is not current coverage",
+        "source": "US1",
+        "collector": "US1"
+      },
+      {
+        "league": "US1",
+        "season": "2019",
+        "error": "Source file unavailable; historical data is not current coverage",
+        "source": "US1",
+        "collector": "US1"
+      },
+      {
+        "league": "US1",
+        "season": "2020",
+        "error": "Source file unavailable; historical data is not current coverage",
+        "source": "US1",
+        "collector": "US1"
+      },
+      {
+        "league": "US1",
+        "season": "2021",
+        "error": "Source file unavailable; historical data is not current coverage",
+        "source": "US1",
+        "collector": "US1"
+      },
+      {
+        "league": "US1",
+        "season": "2022",
+        "error": "Source file unavailable; historical data is not current coverage",
+        "source": "US1",
+        "collector": "US1"
+      },
+      {
+        "league": "US1",
+        "season": "2023",
+        "error": "Source file unavailable; historical data is not current coverage",
+        "source": "US1",
+        "collector": "US1"
+      },
+      {
+        "league": "US1",
+        "season": "2024",
+        "error": "Source file unavailable; historical data is not current coverage",
+        "source": "US1",
+        "collector": "US1"
+      },
+      {
+        "league": "US1",
+        "season": "2026",
+        "error": "Source file unavailable; historical data is not current coverage",
+        "source": "US1",
+        "collector": "US1"
+      },
+      {
+        "league": "JP1",
+        "season": "2018",
+        "error": "Source file unavailable; historical data is not current coverage",
+        "source": "JP1",
+        "collector": "JP1"
+      },
+      {
+        "league": "JP1",
+        "season": "2021",
+        "error": "Source file unavailable; historical data is not current coverage",
+        "source": "JP1",
+        "collector": "JP1"
+      },
+      {
+        "league": "JP1",
+        "season": "2022",
+        "error": "Source file unavailable; historical data is not current coverage",
+        "source": "JP1",
+        "collector": "JP1"
+      },
+      {
+        "league": "JP1",
+        "season": "2023",
+        "error": "Source file unavailable; historical data is not current coverage",
+        "source": "JP1",
+        "collector": "JP1"
+      },
+      {
+        "league": "JP1",
+        "season": "2024",
+        "error": "Source file unavailable; historical data is not current coverage",
+        "source": "JP1",
+        "collector": "JP1"
+      },
+      {
+        "league": "JP1",
+        "season": "2026",
+        "error": "Source file unavailable; historical data is not current coverage",
+        "source": "JP1",
+        "collector": "JP1"
+      },
+      {
+        "league": "CN1",
+        "season": "2018",
+        "error": "Source file unavailable; historical data is not current coverage",
+        "source": "CN1",
+        "collector": "CN1"
+      },
+      {
+        "league": "CN1",
+        "season": "2021",
+        "error": "Source file unavailable; historical data is not current coverage",
+        "source": "CN1",
+        "collector": "CN1"
+      },
+      {
+        "league": "CN1",
+        "season": "2022",
+        "error": "Source file unavailable; historical data is not current coverage",
+        "source": "CN1",
+        "collector": "CN1"
+      },
+      {
+        "league": "CN1",
+        "season": "2023",
+        "error": "Source file unavailable; historical data is not current coverage",
+        "source": "CN1",
+        "collector": "CN1"
+      },
+      {
+        "league": "CN1",
+        "season": "2024",
+        "error": "Source file unavailable; historical data is not current coverage",
+        "source": "CN1",
+        "collector": "CN1"
+      },
+      {
+        "league": "CN1",
+        "season": "2026",
+        "error": "Source file unavailable; historical data is not current coverage",
+        "source": "CN1",
+        "collector": "CN1"
+      }
+    ]
+  },
+  "basketball": {
+    "status": "partial",
+    "errors": [
+      {
+        "league": "UKR",
+        "error": "Missing or ambiguous FBU senior season",
+        "stage": "historical_backfill"
+      },
+      {
+        "league": "PBA_GOV",
+        "status": "failed",
+        "error": "HTTPError: HTTP Error 503: Service Unavailable"
+      }
+    ]
+  }
+}
