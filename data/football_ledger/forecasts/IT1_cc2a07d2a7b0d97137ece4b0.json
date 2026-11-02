@@ -1,0 +1,123 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-11-02T16:32:34.050450+00:00",
+  "fixture": {
+    "event_id": "IT1_cc2a07d2a7b0d97137ece4b0",
+    "league": "IT1",
+    "season": "2026-27",
+    "date": "2026-11-08",
+    "home": "ac monza",
+    "away": "atalanta bc",
+    "home_name": "AC Monza",
+    "away_name": "Atalanta BC",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/it.1.json",
+    "captured_at_utc": "2026-11-02T16:27:24.049612+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null,
+    "original_date": null,
+    "date_correction_verified": null,
+    "license_url": null,
+    "source_sha256": null,
+    "fixture_verification_url": null,
+    "actual_start_utc": null,
+    "source_original_date": "2026-11-08",
+    "verified_start_utc": "2026-11-08T14:00:00+00:00",
+    "independent_fixture": {
+      "provider_event_id": "401874800",
+      "league": "IT1",
+      "season_year": 2026,
+      "start_utc": "2026-11-08T14:00:00+00:00",
+      "captured_at": "2026-11-02T16:31:30.160679+00:00",
+      "home_name": "Monza",
+      "away_name": "Atalanta",
+      "provider_home_id": "4007",
+      "provider_away_id": "105",
+      "source_url": "https://www.espn.com/soccer/game/_/gameId/401874800",
+      "status": "scheduled",
+      "event_id": "IT1_cc2a07d2a7b0d97137ece4b0",
+      "home": "ac monza",
+      "away": "atalanta bc"
+    }
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "IT1",
+    "home": "ac monza",
+    "away": "atalanta bc",
+    "expected_home_goals": 1.5486243511997426,
+    "expected_away_goals": 1.7059268130786491,
+    "probabilities": {
+      "home": 0.35102273413313756,
+      "draw": 0.2313201722036151,
+      "away": 0.4176570936632474
+    },
+    "predicted_outcome": "away",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.8357822342670901,
+      "2.5": 0.6313644863026467,
+      "3.5": 0.40960181309036486
+    },
+    "both_teams_score": 0.6444539923850303,
+    "total_goals_80": [
+      1,
+      6
+    ],
+    "training_cutoff_exclusive": "2026-11-02",
+    "training_games": 1128,
+    "prior_team_games": {
+      "ac monza": 75,
+      "atalanta bc": 112
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "settings": {
+      "half_life_days": 180.0,
+      "shrinkage_games": 8.0,
+      "window_days": 1095
+    },
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "162ecadf21f287f21f229ddd045dbefbd518380f788b31aa35c7457eccef9b49",
+  "source_code_sha256": "a8d9ce5c692529e6af6dfbcfc8112b7939f37ce83631889026a0559ee22fb8a5",
+  "requested_model_variant": "baseline",
+  "history_health": {
+    "spec": "football-history-health-v1",
+    "checked_at_utc": "2026-11-02T16:32:31.353045+00:00",
+    "information_cutoff_exclusive": "2026-11-02",
+    "teams": {
+      "ac monza": {
+        "prior_finals": 123,
+        "active_season_finals": 10,
+        "last_final_date": "2026-10-31",
+        "days_since_last_final": 2,
+        "unresolved_past_fixture_ids": []
+      },
+      "atalanta bc": {
+        "prior_finals": 236,
+        "active_season_finals": 9,
+        "last_final_date": "2026-10-29",
+        "days_since_last_final": 4,
+        "unresolved_past_fixture_ids": []
+      }
+    },
+    "diagnostic_gate_passed": true,
+    "blocking_issues": [],
+    "max_history_age_days": 30,
+    "calendar_completeness_verified": false,
+    "note": "Diagnostic policy, not a validated success threshold. Unresolved fixtures may be postponed or missing results. Fresh source captures do not make old histories current."
+  },
+  "selection_policy": "Current-history diagnostic gate plus existing model issues; research only, no validated recommendation.",
+  "payload_sha256": "8735b07f6a4d55d85ae44bf7d587c5179e44605723a4532483789f7d881e8f89"
+}
