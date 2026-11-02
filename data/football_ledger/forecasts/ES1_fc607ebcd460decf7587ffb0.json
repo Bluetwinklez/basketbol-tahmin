@@ -1,0 +1,123 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-11-02T16:32:33.828485+00:00",
+  "fixture": {
+    "event_id": "ES1_fc607ebcd460decf7587ffb0",
+    "league": "ES1",
+    "season": "2026-27",
+    "date": "2026-11-08",
+    "home": "villarreal cf",
+    "away": "getafe cf",
+    "home_name": "Villarreal CF",
+    "away_name": "Getafe CF",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/es.1.json",
+    "captured_at_utc": "2026-11-02T16:27:24.049612+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null,
+    "original_date": null,
+    "date_correction_verified": null,
+    "license_url": null,
+    "source_sha256": null,
+    "fixture_verification_url": null,
+    "actual_start_utc": null,
+    "source_original_date": "2026-11-08",
+    "verified_start_utc": "2026-11-08T17:30:00+00:00",
+    "independent_fixture": {
+      "provider_event_id": "401882807",
+      "league": "ES1",
+      "season_year": 2026,
+      "start_utc": "2026-11-08T17:30:00+00:00",
+      "captured_at": "2026-11-02T16:31:29.146169+00:00",
+      "home_name": "Villarreal",
+      "away_name": "Getafe",
+      "provider_home_id": "102",
+      "provider_away_id": "2922",
+      "source_url": "https://www.espn.com/soccer/game/_/gameId/401882807",
+      "status": "scheduled",
+      "event_id": "ES1_fc607ebcd460decf7587ffb0",
+      "home": "villarreal cf",
+      "away": "getafe cf"
+    }
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "ES1",
+    "home": "villarreal cf",
+    "away": "getafe cf",
+    "expected_home_goals": 1.8110801506115202,
+    "expected_away_goals": 0.7876228414262824,
+    "probabilities": {
+      "home": 0.6170113773217439,
+      "draw": 0.22484836413928785,
+      "away": 0.15814025853896824
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      1,
+      0
+    ],
+    "over": {
+      "1.5": 0.7323645515579787,
+      "2.5": 0.4812447683900171,
+      "3.5": 0.2637161910971953
+    },
+    "both_teams_score": 0.45596757335699417,
+    "total_goals_80": [
+      1,
+      5
+    ],
+    "training_cutoff_exclusive": "2026-11-02",
+    "training_games": 1129,
+    "prior_team_games": {
+      "villarreal cf": 113,
+      "getafe cf": 113
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "settings": {
+      "half_life_days": 180.0,
+      "shrinkage_games": 8.0,
+      "window_days": 1095
+    },
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "162ecadf21f287f21f229ddd045dbefbd518380f788b31aa35c7457eccef9b49",
+  "source_code_sha256": "a8d9ce5c692529e6af6dfbcfc8112b7939f37ce83631889026a0559ee22fb8a5",
+  "requested_model_variant": "baseline",
+  "history_health": {
+    "spec": "football-history-health-v1",
+    "checked_at_utc": "2026-11-02T16:32:31.353045+00:00",
+    "information_cutoff_exclusive": "2026-11-02",
+    "teams": {
+      "villarreal cf": {
+        "prior_finals": 504,
+        "active_season_finals": 11,
+        "last_final_date": "2026-10-30",
+        "days_since_last_final": 3,
+        "unresolved_past_fixture_ids": []
+      },
+      "getafe cf": {
+        "prior_finals": 504,
+        "active_season_finals": 11,
+        "last_final_date": "2026-11-01",
+        "days_since_last_final": 1,
+        "unresolved_past_fixture_ids": []
+      }
+    },
+    "diagnostic_gate_passed": true,
+    "blocking_issues": [],
+    "max_history_age_days": 30,
+    "calendar_completeness_verified": false,
+    "note": "Diagnostic policy, not a validated success threshold. Unresolved fixtures may be postponed or missing results. Fresh source captures do not make old histories current."
+  },
+  "selection_policy": "Current-history diagnostic gate plus existing model issues; research only, no validated recommendation.",
+  "payload_sha256": "c156bbdb41f4aee6ec904682705515cee2d506c07eaacd9fcc98e7189789310e"
+}

@@ -1,45 +1,45 @@
 {
-  "checked_at_utc": "2026-11-01T13:45:05.120380+00:00",
+  "checked_at_utc": "2026-11-02T16:31:37.521400+00:00",
   "leagues": [
     {
       "league": "DE1",
-      "added_candidates": 7,
+      "added_candidates": 8,
       "skipped": [],
       "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Bundesliga"
     },
     {
       "league": "EN1",
-      "added_candidates": 8,
+      "added_candidates": 9,
       "skipped": [],
       "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Premier_League"
     },
     {
       "league": "EN2",
-      "added_candidates": 12,
+      "added_candidates": 11,
       "skipped": [],
       "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_EFL_Championship"
     },
     {
       "league": "ES1",
-      "added_candidates": 5,
+      "added_candidates": 8,
       "skipped": [],
       "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_La_Liga"
     },
     {
       "league": "FR1",
-      "added_candidates": 4,
+      "added_candidates": 5,
       "skipped": [],
       "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Ligue_1"
     },
     {
       "league": "IT1",
-      "added_candidates": 3,
+      "added_candidates": 8,
       "skipped": [],
       "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Serie_A"
     },
     {
       "league": "NL1",
-      "added_candidates": 5,
+      "added_candidates": 9,
       "skipped": [],
       "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Eredivisie"
     },
@@ -52,7 +52,23 @@
           "reason": "No exact licensed club/score pair"
         },
         {
+          "event_id": "TR1_dc32b8cc90e23784d22cf7b9",
+          "reason": "No exact licensed club/score pair"
+        },
+        {
+          "event_id": "TR1_80f7e0e888b95520aee60527",
+          "reason": "No exact licensed club/score pair"
+        },
+        {
           "event_id": "TR1_40fddab08e8ed45fec251d93",
+          "reason": "No exact licensed club/score pair"
+        },
+        {
+          "event_id": "TR1_15f4dd4d63910ac64eef3cfc",
+          "reason": "No exact licensed club/score pair"
+        },
+        {
+          "event_id": "TR1_9502691714972a5e45face4d",
           "reason": "No exact licensed club/score pair"
         },
         {
@@ -74,7 +90,7 @@
       "retained_previous": true
     }
   ],
-  "licensed_finals": 328,
-  "new_unique_finals": 0,
+  "licensed_finals": 348,
+  "new_unique_finals": 20,
   "note": "Partial CC BY-SA supplement; original CC0 archives and frozen forecasts retained. Same-day, unknown date, name mismatch and conflicting results are excluded; calendar completeness is unverified."
 }
