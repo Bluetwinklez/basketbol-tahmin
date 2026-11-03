@@ -3,6 +3,9 @@ import hashlib
 import json
 import re
 import urllib.request
+import urllib.error
+import tempfile
+import time
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
@@ -18,10 +21,33 @@ FIBA={'ELW':('euroleague-women','Women','EuroLeague Women',211,208762),
 def fetch(url,refresh=False):
     path=ROOT/(hashlib.sha256(url.encode()).hexdigest()+'.html')
     if refresh or not path.exists():
-        with urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent':'bbtahmin/0.3 research'}),timeout=25) as r:
-            raw=r.read(6_000_001)
+        for attempt in range(3):
+            try:
+                with urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent':'bbtahmin/0.3 research'}),timeout=25) as r:
+                    raw=r.read(6_000_001)
+                break
+            except urllib.error.HTTPError as exc:
+                # Never retry access denials or ignore a longer server backoff.
+                retry_after=exc.headers.get('Retry-After') if exc.headers else None
+                delay=attempt+1
+                if retry_after is not None:
+                    if not retry_after.isdigit() or int(retry_after)>5:
+                        exc.close();raise
+                    delay=max(delay,int(retry_after))
+                retry=exc.code in (502,503,504) and attempt<2
+                exc.close()
+                if not retry:raise
+                time.sleep(delay)
         if len(raw)>6_000_000:raise ValueError('Response exceeds limit')
-        path.parent.mkdir(parents=True,exist_ok=True);path.write_bytes(raw)
+        raw.decode('utf8')  # Validate before replacing a previously readable cache.
+        path.parent.mkdir(parents=True,exist_ok=True)
+        temp=None
+        try:
+            with tempfile.NamedTemporaryFile(dir=path.parent,suffix='.part',delete=False) as handle:
+                temp=Path(handle.name);handle.write(raw)
+            temp.replace(path)
+        finally:
+            if temp is not None:temp.unlink(missing_ok=True)
     return path.read_text('utf8')
 
 
