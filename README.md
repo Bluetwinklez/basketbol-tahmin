@@ -285,3 +285,5 @@ The highest-priority research additions are point-in-time injury/lineup history,
 
 
 Screenshot competition support is audited explicitly in [requested football coverage](docs/requested-football-coverage.md). Brazil Série B adds 2,716 CC0 historical finals, but missing 2026 data blocks current recommendations; unsupported leagues never receive invented model outputs. Same-cohort retrospective evidence includes goal-market calibration and simple baselines.
+
+[Security policy](SECURITY.md) · [Repository security audit](SECURITY_AUDIT.md)
