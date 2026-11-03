@@ -14,3 +14,16 @@ docs/kanit/tahminler.csv
 docs/kanit/pregame_verified/tahminler.csv
 docs/kanit/runtime_validation/tahminler.csv
 docs/deneme*/
+
+# Local credentials and private signing material
+.env
+.env.*
+!.env.example
+!.env.template
+*.pem
+*.p12
+*.pfx
+id_rsa
+id_ed25519
+service-account*.json
+credentials.local.json
