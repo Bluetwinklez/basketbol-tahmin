@@ -1,7 +1,7 @@
 {
   "spec": "football-daily-v1",
-  "checked_at_utc": "2026-11-03T14:37:52.858704+00:00",
-  "collection_checked_at_utc": "2026-11-03T14:32:37.051587+00:00",
+  "checked_at_utc": "2026-11-04T14:50:53.492071+00:00",
+  "collection_checked_at_utc": "2026-11-04T14:46:38.051554+00:00",
   "source_errors": [
     {
       "league": "DE2",
@@ -5479,8 +5479,44 @@
         "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
       },
       "recorded_at_utc": "2026-10-28T13:25:52.819246+00:00",
-      "status": "pending",
-      "result": null,
+      "status": "publisher_final",
+      "result": {
+        "actual_home": 3,
+        "actual_away": 0,
+        "actual_outcome": "home",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.05698781607979787
+          },
+          "over_2.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.23046613589076925
+          },
+          "over_3.5": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.08894322099389317
+          },
+          "both_teams_score": {
+            "actual": false,
+            "correct": false,
+            "brier": 0.29358362316088726
+          }
+        },
+        "winner_correct": true,
+        "home_absolute_error": 1.35942349459819,
+        "away_absolute_error": 1.115169259388888,
+        "total_absolute_error": 0.244254235209302,
+        "margin_absolute_error": 2.474592753987078,
+        "total_in_80": true,
+        "log_loss": 0.7010828415430438,
+        "brier": 0.3810439994343737,
+        "verification": "community_source_final_not_official",
+        "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_EFL_Championship"
+      },
       "fixture_review": null
     },
     {
@@ -6248,8 +6284,44 @@
         "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
       },
       "recorded_at_utc": "2026-10-28T13:25:52.838727+00:00",
-      "status": "pending",
-      "result": null,
+      "status": "publisher_final",
+      "result": {
+        "actual_home": 3,
+        "actual_away": 1,
+        "actual_outcome": "home",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.06860476046906859
+          },
+          "over_2.5": {
+            "actual": true,
+            "correct": false,
+            "brier": 0.26142058214129554
+          },
+          "over_3.5": {
+            "actual": true,
+            "correct": false,
+            "brier": 0.5325828879205714
+          },
+          "both_teams_score": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.221424031315573
+          }
+        },
+        "winner_correct": true,
+        "home_absolute_error": 1.5441310973404316,
+        "away_absolute_error": 0.17265320620447056,
+        "total_absolute_error": 1.371477891135961,
+        "margin_absolute_error": 1.7167843035449022,
+        "total_in_80": true,
+        "log_loss": 0.8295528259422806,
+        "brier": 0.47776489110589804,
+        "verification": "community_source_final_not_official",
+        "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_EFL_Championship"
+      },
       "fixture_review": null
     },
     {
@@ -6440,8 +6512,44 @@
         "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
       },
       "recorded_at_utc": "2026-10-28T13:25:52.856227+00:00",
-      "status": "pending",
-      "result": null,
+      "status": "publisher_final",
+      "result": {
+        "actual_home": 0,
+        "actual_away": 4,
+        "actual_outcome": "away",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.06420451837832447
+          },
+          "over_2.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.24997359600284466
+          },
+          "over_3.5": {
+            "actual": true,
+            "correct": false,
+            "brier": 0.5180818141377306
+          },
+          "both_teams_score": {
+            "actual": false,
+            "correct": false,
+            "brier": 0.2922724515829365
+          }
+        },
+        "winner_correct": true,
+        "home_absolute_error": 1.228119108538468,
+        "away_absolute_error": 2.553951715830548,
+        "total_absolute_error": 1.3258326072920799,
+        "margin_absolute_error": 3.7820708243690158,
+        "total_in_80": true,
+        "log_loss": 0.8641267955299747,
+        "brier": 0.5041134108691661,
+        "verification": "community_source_final_not_official",
+        "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_EFL_Championship"
+      },
       "fixture_review": null
     },
     {
@@ -6829,8 +6937,44 @@
         "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
       },
       "recorded_at_utc": "2026-10-28T13:25:52.873762+00:00",
-      "status": "pending",
-      "result": null,
+      "status": "publisher_final",
+      "result": {
+        "actual_home": 1,
+        "actual_away": 1,
+        "actual_outcome": "draw",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.019378455479951356
+          },
+          "over_2.5": {
+            "actual": false,
+            "correct": false,
+            "brier": 0.4534293615515987
+          },
+          "over_3.5": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.20853161892257246
+          },
+          "both_teams_score": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.1115721904339691
+          }
+        },
+        "winner_correct": false,
+        "home_absolute_error": 0.9965144939101083,
+        "away_absolute_error": 0.47243572232583975,
+        "total_absolute_error": 1.4689502162359478,
+        "margin_absolute_error": 0.5240787715842685,
+        "total_in_80": true,
+        "log_loss": 1.5298928622198071,
+        "brier": 0.9435187795762632,
+        "verification": "community_source_final_not_official",
+        "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_EFL_Championship"
+      },
       "fixture_review": null
     },
     {
@@ -7245,8 +7389,44 @@
         "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
       },
       "recorded_at_utc": "2026-10-28T13:25:52.891374+00:00",
-      "status": "pending",
-      "result": null,
+      "status": "publisher_final",
+      "result": {
+        "actual_home": 1,
+        "actual_away": 1,
+        "actual_outcome": "draw",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.059414779448971416
+          },
+          "over_2.5": {
+            "actual": false,
+            "correct": false,
+            "brier": 0.2632058865723369
+          },
+          "over_3.5": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.08522457045308332
+          },
+          "both_teams_score": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.19898574045855405
+          }
+        },
+        "winner_correct": false,
+        "home_absolute_error": 0.3548186908488631,
+        "away_absolute_error": 0.3724679795278074,
+        "total_absolute_error": 0.7272866703766705,
+        "margin_absolute_error": 0.01764928867894433,
+        "total_in_80": true,
+        "log_loss": 1.3599721592475233,
+        "brier": 0.8288466558484578,
+        "verification": "community_source_final_not_official",
+        "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_EFL_Championship"
+      },
       "fixture_review": null
     },
     {
@@ -8745,8 +8925,44 @@
         "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
       },
       "recorded_at_utc": "2026-10-28T13:25:52.909344+00:00",
-      "status": "pending",
-      "result": null,
+      "status": "publisher_final",
+      "result": {
+        "actual_home": 1,
+        "actual_away": 0,
+        "actual_outcome": "home",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": false,
+            "correct": false,
+            "brier": 0.48111023856062135
+          },
+          "over_2.5": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.18729049759744612
+          },
+          "over_3.5": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.04984707603849983
+          },
+          "both_teams_score": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.24039141575115514
+          }
+        },
+        "winner_correct": true,
+        "home_absolute_error": 0.21451574373653637,
+        "away_absolute_error": 1.1949819638928176,
+        "total_absolute_error": 1.4094977076293542,
+        "margin_absolute_error": 0.9804662201562813,
+        "total_in_80": true,
+        "log_loss": 1.003076498147394,
+        "brier": 0.6048166762245593,
+        "verification": "community_source_final_not_official",
+        "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_EFL_Championship"
+      },
       "fixture_review": null
     },
     {
@@ -8839,8 +9055,44 @@
         "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
       },
       "recorded_at_utc": "2026-10-28T13:25:52.927868+00:00",
-      "status": "pending",
-      "result": null,
+      "status": "publisher_final",
+      "result": {
+        "actual_home": 1,
+        "actual_away": 2,
+        "actual_outcome": "away",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.11369500862785291
+          },
+          "over_2.5": {
+            "actual": true,
+            "correct": false,
+            "brier": 0.3639445853305671
+          },
+          "over_3.5": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.038077926956885576
+          },
+          "both_teams_score": {
+            "actual": true,
+            "correct": false,
+            "brier": 0.30324037802331893
+          }
+        },
+        "winner_correct": false,
+        "home_absolute_error": 0.3273282622443987,
+        "away_absolute_error": 1.0545804230757732,
+        "total_absolute_error": 0.7272521608313745,
+        "margin_absolute_error": 1.3819086853201719,
+        "total_in_80": true,
+        "log_loss": 1.3230614220081847,
+        "brier": 0.8228641944628737,
+        "verification": "community_source_final_not_official",
+        "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_EFL_Championship"
+      },
       "fixture_review": null
     },
     {
@@ -9027,8 +9279,44 @@
         "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
       },
       "recorded_at_utc": "2026-10-28T13:25:52.946171+00:00",
-      "status": "pending",
-      "result": null,
+      "status": "publisher_final",
+      "result": {
+        "actual_home": 2,
+        "actual_away": 3,
+        "actual_outcome": "away",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.07976623731194185
+          },
+          "over_2.5": {
+            "actual": true,
+            "correct": false,
+            "brier": 0.28911989279715783
+          },
+          "over_3.5": {
+            "actual": true,
+            "correct": false,
+            "brier": 0.5661907199340415
+          },
+          "both_teams_score": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.24472161108034865
+          }
+        },
+        "winner_correct": true,
+        "home_absolute_error": 0.9124862219563079,
+        "away_absolute_error": 1.5636196302429712,
+        "total_absolute_error": 2.476105852199279,
+        "margin_absolute_error": 0.6511334082866633,
+        "total_in_80": true,
+        "log_loss": 0.7972610322968786,
+        "brier": 0.4530713849526003,
+        "verification": "community_source_final_not_official",
+        "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_EFL_Championship"
+      },
       "fixture_review": null
     },
     {
@@ -9641,8 +9929,44 @@
         "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
       },
       "recorded_at_utc": "2026-10-28T13:25:52.964197+00:00",
-      "status": "pending",
-      "result": null,
+      "status": "publisher_final",
+      "result": {
+        "actual_home": 0,
+        "actual_away": 1,
+        "actual_outcome": "away",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": false,
+            "correct": false,
+            "brier": 0.4977975838847235
+          },
+          "over_2.5": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.20008206352931074
+          },
+          "over_3.5": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.055259650356022226
+          },
+          "both_teams_score": {
+            "actual": false,
+            "correct": false,
+            "brier": 0.25195327321535815
+          }
+        },
+        "winner_correct": true,
+        "home_absolute_error": 1.221673568648414,
+        "away_absolute_error": 0.24381974856132027,
+        "total_absolute_error": 1.4654933172097344,
+        "margin_absolute_error": 0.9778538200870937,
+        "total_in_80": true,
+        "log_loss": 0.9964484203227991,
+        "brier": 0.6006112366876699,
+        "verification": "community_source_final_not_official",
+        "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_EFL_Championship"
+      },
       "fixture_review": null
     },
     {
@@ -20905,6 +21229,100 @@
     },
     {
       "fixture": {
+        "event_id": "PT1_26526de6d4a0aaccb76b8e42",
+        "league": "PT1",
+        "season": "2026-27",
+        "date": "2026-11-07",
+        "home": "cd nacional",
+        "away": "academico de viseu fc",
+        "home_name": "CD Nacional",
+        "away_name": "Académico de Viseu FC",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/pt.1.json",
+        "captured_at_utc": "2026-11-03T14:32:37.051587+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null,
+        "original_date": null,
+        "date_correction_verified": null,
+        "license_url": null,
+        "source_sha256": null,
+        "fixture_verification_url": null,
+        "actual_start_utc": null,
+        "source_original_date": "2026-11-07",
+        "verified_start_utc": "2026-11-07T15:30:00+00:00",
+        "independent_fixture": {
+          "provider_event_id": "401885398",
+          "league": "PT1",
+          "season_year": 2026,
+          "start_utc": "2026-11-07T15:30:00+00:00",
+          "captured_at": "2026-11-03T14:36:22.553109+00:00",
+          "home_name": "C.D. Nacional",
+          "away_name": "Académico de Viseu",
+          "provider_home_id": "3472",
+          "provider_away_id": "21607",
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401885398",
+          "status": "scheduled",
+          "event_id": "PT1_26526de6d4a0aaccb76b8e42",
+          "home": "cd nacional",
+          "away": "academico de viseu fc"
+        }
+      },
+      "prediction": {
+        "model": "football-poisson-v1",
+        "league": "PT1",
+        "home": "cd nacional",
+        "away": "academico de viseu fc",
+        "expected_home_goals": 1.1966680457698968,
+        "expected_away_goals": 1.6092154013442008,
+        "probabilities": {
+          "home": 0.28394400916878193,
+          "draw": 0.24646538449716332,
+          "away": 0.46959060633405497
+        },
+        "predicted_outcome": "away",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.7699216330373558,
+          "2.5": 0.531947605696225,
+          "3.5": 0.30937181097637284
+        },
+        "both_teams_score": 0.5582093820599124,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-11-03",
+        "training_games": 923,
+        "prior_team_games": {
+          "cd nacional": 78,
+          "academico de viseu fc": 10
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+      },
+      "recorded_at_utc": "2026-11-03T14:37:55.104201+00:00",
+      "status": "pending",
+      "result": null,
+      "fixture_review": null
+    },
+    {
+      "fixture": {
         "event_id": "PT1_298bafdc737e51205a843d53",
         "league": "PT1",
         "season": "2026-27",
@@ -23666,46 +24084,6 @@
   ],
   "skipped": [
     {
-      "event_id": "BR1_11c45f2d7461b191693ec5dc",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
-    },
-    {
-      "event_id": "BR1_16ee34df1d193ff08078b1fc",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
-    },
-    {
-      "event_id": "BR1_71cfd811b83e6f55e76a0d4e",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
-    },
-    {
-      "event_id": "BR1_902b7049f861d690325a23de",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
-    },
-    {
-      "event_id": "BR1_99437285052de95ca82e6c34",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
-    },
-    {
-      "event_id": "BR1_a4ce574d50e0deaf422d3c2f",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
-    },
-    {
-      "event_id": "BR1_a79d44115e31eaad1bd7ed2e",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
-    },
-    {
-      "event_id": "BR1_d3dac2707a178c536cddfe9c",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
-    },
-    {
-      "event_id": "BR1_ee2319ff3b96e7836d68085b",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
-    },
-    {
-      "event_id": "BR1_fe8198c261eae4a9e36a2096",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
-    },
-    {
       "event_id": "DE1_98096271d0b0fd744c57b743",
       "reason": "Insufficient history: sv 07 elversberg: fewer than 10 prior matches"
     },
@@ -23796,42 +24174,38 @@
     {
       "event_id": "TR1_f554ce22e6224a38c480a4fe",
       "reason": "Insufficient history (current coverage): aytemiz alanyaspor: 2 unresolved past fixtures; refresh/review required; trabzonspor: 2 unresolved past fixtures; refresh/review required"
-    },
-    {
-      "record": "data/football_ledger/forecasts/PT1_26526de6d4a0aaccb76b8e42.json",
-      "reason": "Forecast was recorded after requested clock"
     }
   ],
-  "pending": 116,
+  "pending": 108,
   "requested_model_variant": "baseline",
   "publisher_performance": {
-    "games": 136,
-    "winner_accuracy": 0.6176470588235294,
-    "log_loss": 0.9679003595293284,
-    "brier": 0.5740014048662307,
-    "total_mae": 1.5085432784198218,
-    "margin_mae": 1.556323014192673,
-    "total_in_80": 0.8602941176470589,
-    "team_score_games": 136,
-    "home_score_mae": 1.0219610184761025,
-    "away_score_mae": 1.1136807738923638,
-    "team_score_mae": 1.067820896184233,
+    "games": 145,
+    "winner_accuracy": 0.6206896551724138,
+    "log_loss": 0.9726822327810107,
+    "brier": 0.5771092571790983,
+    "total_mae": 1.492262320849762,
+    "margin_mae": 1.5459756414221928,
+    "total_in_80": 0.8689655172413793,
+    "team_score_games": 145,
+    "home_score_mae": 1.0147979944453218,
+    "away_score_mae": 1.1048569992993924,
+    "team_score_mae": 1.0598274968723569,
     "goal_markets": {
       "over_1.5": {
-        "accuracy": 0.7867647058823529,
-        "brier": 0.17271740018152906
+        "accuracy": 0.7862068965517242,
+        "brier": 0.17193466084778763
       },
       "over_2.5": {
-        "accuracy": 0.5294117647058824,
-        "brier": 0.2562150251994415
+        "accuracy": 0.5241379310344828,
+        "brier": 0.2575460415761198
       },
       "over_3.5": {
-        "accuracy": 0.6764705882352942,
-        "brier": 0.22664332266511983
+        "accuracy": 0.6758620689655173,
+        "brier": 0.22735331978047996
       },
       "both_teams_score": {
-        "accuracy": 0.5,
-        "brier": 0.25903061838926794
+        "accuracy": 0.503448275862069,
+        "brier": 0.2578366125238796
       }
     }
   },
