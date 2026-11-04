@@ -43,3 +43,18 @@ Per-league accuracy, log loss, multiclass Brier score, goal-market accuracy/Brie
 
 The `Refresh sports data and frozen forecasts` workflow runs daily at **06:30 UTC / 09:30 Europe/Istanbul**, plus manual dispatch. Football and the 10 existing daily basketball competitions refresh independently. Earlier season backfills are not repeated every day. Compressed source snapshots, source failures and both sports' forecast ledgers are persisted to the repository. Frozen forecasts are never regenerated using their outcome. Partial refreshes are persisted but mark the job failed; missing provider data cannot become a successful empty refresh. GitHub scheduling/provider availability is not guaranteed. This is scheduled data collection and forecasting, not autonomous model promotion: changes must pass evaluation and tests.
 
+## Calendar source isolation (2026-11-04)
+
+AR1, CO1, US1, JP1 and CN1 calendar imports fetch only `openfootball/football.json`.
+They no longer download or require the unrelated `south-america` Brazilian text archive.
+BR1 and BR2 retain their text fallback and JSON preference. Reports include a
+`revisions` map for all consulted repositories and `source_revision` per imported
+file, matching its pinned source URL; the legacy `revision` field is preserved.
+Missing season files remain explicit coverage errors and retain existing snapshots.
+CC0 validation, day precision and community/not-official result labels still apply.
+
+This collector reliability change adds no verified match records and makes no
+claim of improved prediction accuracy. Existing 1/X/2, goal totals, both-teams-score,
+calibration, error and coverage evidence is unchanged; no model candidate or frozen
+forecast is modified. Regression tests exercise each of the five JSON-only leagues
+with an unavailable unrelated source, missing season files and invalid licenses.
