@@ -54,3 +54,47 @@ def test_serie_a_separate_from_serie_b():
     a=parse_text(text,'BR1','2025','source','2026-10-25')
     assert a[0]['league']=='BR1'
     with pytest.raises(ValueError): parse_text(text,'BR2','2025','source','2026-10-25')
+
+
+@pytest.mark.parametrize("code,filename", [
+    ("AR1", "ar.1.json"), ("CO1", "co.1.json"), ("US1", "mls.json"),
+    ("JP1", "jp.1.json"), ("CN1", "cn.1.json"),
+])
+def test_json_leagues_survive_unrelated_source_outage(tmp_path, monkeypatch, code, filename):
+    import json
+    from bbtahmin.football import calendar
+
+    source = tmp_path / "json"
+    (source / "2024").mkdir(parents=True)
+    (source / "LICENSE.md").write_text("CC0 1.0 Universal")
+    (source / "2024" / filename).write_text(json.dumps({"name": "League 2024", "matches": [
+        {"date": "2024-04-01", "team1": "A", "team2": "B", "score": {"ft": [1, 0]}}
+    ]}))
+    calls = []
+
+    def fetch(name, refresh):
+        calls.append(name)
+        if name != "football.json":
+            raise RuntimeError("Brazil source unavailable")
+        return source
+
+    monkeypatch.setattr(calendar, "git_source", fetch)
+    monkeypatch.setattr(calendar.subprocess, "check_output", lambda *a, **kw: "json-revision\n")
+    root = tmp_path / "output"
+    report = calendar.collect(2024, 2024, code=code, root=root)
+    assert calls == ["football.json"]
+    assert report["errors"] == []
+    assert report["files"][0]["finals"] == 1
+    assert report["revisions"] == {"football.json": "json-revision"}
+    assert report["files"][0]["source_revision"] == "json-revision"
+    assert "/blob/json-revision/2024/" in report["files"][0]["source_url"]
+    stored = root / f"{code}_2024.json.gz"
+    original = stored.read_bytes()
+    (source / "2024" / filename).unlink()
+    missing = calendar.collect(2024, 2024, code=code, root=root)
+    assert missing["errors"] and missing["files"] == []
+    assert stored.read_bytes() == original
+    (source / "LICENSE.md").write_text("All rights reserved")
+    with pytest.raises(ValueError, match="Expected CC0"):
+        calendar.collect(2024, 2024, code=code, root=root)
+    assert stored.read_bytes() == original
