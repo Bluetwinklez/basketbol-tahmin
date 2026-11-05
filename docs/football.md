@@ -58,3 +58,20 @@ claim of improved prediction accuracy. Existing 1/X/2, goal totals, both-teams-s
 calibration, error and coverage evidence is unchanged; no model candidate or frozen
 forecast is modified. Regression tests exercise each of the five JSON-only leagues
 with an unavailable unrelated source, missing season files and invalid licenses.
+
+## Empty-source protection (2026-11-05)
+
+The shared football archive writer rejects empty source snapshots before merging
+or touching disk. Previously an empty JSON matches list could be reported as a
+successful refresh while removing stored scheduled fixtures; retained finals could
+also make an empty refresh look productive. Collectors now surface an explicit
+`Empty football source snapshot` error and preserve the complete prior archive.
+An empty first import creates no archive. Legitimate off-season empty responses
+therefore mean unavailable coverage, not successful current-season coverage.
+Nonempty schedules without final scores remain supported.
+
+Regression coverage checks lists and generators, first imports and existing mixed
+final/scheduled archives, and error propagation for all five JSON-only calendar
+leagues. This change adds no match records or model performance evidence. Existing
+chronological evaluation, official/community distinctions and frozen forecasts
+remain unchanged.

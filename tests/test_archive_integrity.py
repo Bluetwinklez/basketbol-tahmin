@@ -40,7 +40,8 @@ def test_partial_refresh_keeps_final_and_does_not_downgrade(tmp_path):
     a = fixture()
     save([a], 'AR2', '2026', tmp_path)
     save([dict(a, status='scheduled', home_goals=None, away_goals=None)], 'AR2', '2026', tmp_path)
-    save([], 'AR2', '2026', tmp_path)
+    with pytest.raises(ValueError, match='Empty football source snapshot'):
+        save([], 'AR2', '2026', tmp_path)
     assert json.loads(gzip.decompress((tmp_path/'AR2_2026.json.gz').read_bytes()))['rows'] == [a]
 
 
