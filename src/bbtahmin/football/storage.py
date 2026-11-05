@@ -17,6 +17,8 @@ def validate(rows, code, season):
 
 def save(rows, code, season, root, metadata=None):
     rows = list(rows)
+    if not rows:
+        raise ValueError("Empty football source snapshot; prior archive retained")
     validate(rows, code, season)
     target = Path(root) / f'{code}_{season}.json.gz'
     if target.exists():

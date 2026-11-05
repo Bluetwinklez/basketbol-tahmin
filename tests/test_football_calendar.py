@@ -90,6 +90,11 @@ def test_json_leagues_survive_unrelated_source_outage(tmp_path, monkeypatch, cod
     assert "/blob/json-revision/2024/" in report["files"][0]["source_url"]
     stored = root / f"{code}_2024.json.gz"
     original = stored.read_bytes()
+    (source / "2024" / filename).write_text(json.dumps({"name": "League 2024", "matches": []}))
+    empty = calendar.collect(2024, 2024, code=code, root=root)
+    assert empty["files"] == []
+    assert "Empty football source snapshot" in empty["errors"][0]["error"]
+    assert stored.read_bytes() == original
     (source / "2024" / filename).unlink()
     missing = calendar.collect(2024, 2024, code=code, root=root)
     assert missing["errors"] and missing["files"] == []
