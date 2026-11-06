@@ -75,3 +75,29 @@ final/scheduled archives, and error propagation for all five JSON-only calendar
 leagues. This change adds no match records or model performance evidence. Existing
 chronological evaluation, official/community distinctions and frozen forecasts
 remain unchanged.
+
+## Paired comparator audit (2026-11-06)
+
+The requested-football evaluator now calculates constant home-win, under-2.5 and
+BTTS-no comparators only on the events scored by every model. Previously it used
+all season finals even if model fitting skipped a month. The cohort validator
+rejects duplicate events, unexpected candidates/targets, mismatched candidate
+cohorts and conflicting observed scores. Empty evaluated cohorts have null success
+rates, not zero-percent performance. Coverage reports both eligible and evaluated
+archive events; it does not certify season completeness.
+
+Run `PYTHONPATH=src python scripts/audit_requested_football_cohort.py` to audit the
+saved BR2 2024 predictions without refitting or modifying any forecast. Evidence
+is in `docs/kanit/requested_football/cohort_audit_20261106.json`, including the
+source prediction hash, exact cohort IDs, 1/X/2 and goal-market metrics, probability
+reliability bins, score errors and interval coverage for all four candidates.
+
+All four candidates cover the same 380 stored events (no skipped targets in this
+existing evidence, so comparator rates are unchanged). Winner accuracy is 51.58%
+for the original baseline and 52.63% for the opponent candidate, versus 52.37% for
+always-home: only one additional correct result for the opponent candidate.
+The ensemble's over/under-2.5 accuracy is 63.42%, versus 62.63% for always-under.
+These are exploratory retrospective community-source results from one season,
+not official prospective verification or evidence of general improvement. No new
+matches, production model changes or rewritten historical predictions accompany
+this audit. Missing source seasons and provider outages remain separate issues.
