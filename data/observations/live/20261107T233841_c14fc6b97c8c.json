@@ -1,0 +1,28 @@
+{
+  "captured_at_utc": "2026-11-07T23:38:41.371981+00:00",
+  "source_url": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard",
+  "provider": "espn",
+  "live_games": [
+    {
+      "event_id": "401909938",
+      "league": "NBA",
+      "home": "IND",
+      "away": "DEN",
+      "home_score": 51,
+      "away_score": 74,
+      "period": 3,
+      "remaining_seconds": 498,
+      "regulation_minutes": 48,
+      "overtime": false,
+      "start_utc": "2026-11-07T22:00:00+00:00",
+      "captured_at_utc": "2026-11-07T23:38:41.371981+00:00",
+      "source_url": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard",
+      "source_updated_at": null,
+      "source_freshness_verified": false,
+      "used_for_prediction": false,
+      "note": "Public broadcaster scoreboard observation; source update timestamp unavailable, so live freshness is unverified."
+    }
+  ],
+  "total_listed": 7,
+  "prediction_enabled": false
+}
