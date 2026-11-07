@@ -1,7 +1,7 @@
 {
   "spec": "football-daily-v1",
-  "checked_at_utc": "2026-11-06T14:35:14.792898+00:00",
-  "collection_checked_at_utc": "2026-11-06T14:30:31.683990+00:00",
+  "checked_at_utc": "2026-11-07T13:29:29.426829+00:00",
+  "collection_checked_at_utc": "2026-11-07T13:24:16.233645+00:00",
   "source_errors": [
     {
       "league": "DE2",
@@ -1762,8 +1762,44 @@
         "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
       },
       "recorded_at_utc": "2026-10-31T12:56:10.877366+00:00",
-      "status": "pending",
-      "result": null,
+      "status": "publisher_final",
+      "result": {
+        "actual_home": 3,
+        "actual_away": 1,
+        "actual_outcome": "home",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.03692233797372799
+          },
+          "over_2.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.17024921008325508
+          },
+          "over_3.5": {
+            "actual": true,
+            "correct": false,
+            "brier": 0.4052223805742416
+          },
+          "both_teams_score": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.16002130799759223
+          }
+        },
+        "winner_correct": true,
+        "home_absolute_error": 1.2446646816612488,
+        "away_absolute_error": 0.2922558972269005,
+        "total_absolute_error": 0.9524087844343483,
+        "margin_absolute_error": 1.5369205788881493,
+        "total_in_80": true,
+        "log_loss": 0.7271490400718249,
+        "brier": 0.40167746918466035,
+        "verification": "community_source_final_not_official",
+        "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Bundesliga"
+      },
       "fixture_review": null
     },
     {
@@ -8249,8 +8285,44 @@
         "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
       },
       "recorded_at_utc": "2026-10-31T12:56:10.949950+00:00",
-      "status": "pending",
-      "result": null,
+      "status": "publisher_final",
+      "result": {
+        "actual_home": 3,
+        "actual_away": 1,
+        "actual_outcome": "home",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.06602556345052292
+          },
+          "over_2.5": {
+            "actual": true,
+            "correct": false,
+            "brier": 0.25474986157630247
+          },
+          "over_3.5": {
+            "actual": true,
+            "correct": false,
+            "brier": 0.5241779448096514
+          },
+          "both_teams_score": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.21168273505127436
+          }
+        },
+        "winner_correct": false,
+        "home_absolute_error": 1.6917100712354072,
+        "away_absolute_error": 0.3466450060579309,
+        "total_absolute_error": 1.3450650651774763,
+        "margin_absolute_error": 2.038355077293338,
+        "total_in_80": true,
+        "log_loss": 1.0195258584504687,
+        "brier": 0.6198818757331769,
+        "verification": "community_source_final_not_official",
+        "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_EFL_Championship"
+      },
       "fixture_review": null
     },
     {
@@ -10970,8 +11042,44 @@
         "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
       },
       "recorded_at_utc": "2026-11-01T11:36:53.608544+00:00",
-      "status": "pending",
-      "result": null,
+      "status": "publisher_final",
+      "result": {
+        "actual_home": 0,
+        "actual_away": 0,
+        "actual_outcome": "draw",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": false,
+            "correct": false,
+            "brier": 0.5540064905240478
+          },
+          "over_2.5": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.24697046404835013
+          },
+          "over_3.5": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.07700351745848202
+          },
+          "both_teams_score": {
+            "actual": false,
+            "correct": false,
+            "brier": 0.2826367525612402
+          }
+        },
+        "winner_correct": false,
+        "home_absolute_error": 1.52217412693474,
+        "away_absolute_error": 1.1395822385450998,
+        "total_absolute_error": 2.6617563654798397,
+        "margin_absolute_error": 0.3825918883896402,
+        "total_in_80": false,
+        "log_loss": 1.3673746892878271,
+        "brier": 0.8485904225768304,
+        "verification": "community_source_final_not_official",
+        "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_La_Liga"
+      },
       "fixture_review": null
     },
     {
@@ -13106,8 +13214,44 @@
         "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
       },
       "recorded_at_utc": "2026-10-31T12:56:11.007865+00:00",
-      "status": "pending",
-      "result": null,
+      "status": "publisher_final",
+      "result": {
+        "actual_home": 3,
+        "actual_away": 1,
+        "actual_outcome": "home",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.04212147503248008
+          },
+          "over_2.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.18684781246991994
+          },
+          "over_3.5": {
+            "actual": true,
+            "correct": false,
+            "brier": 0.43065075547273374
+          },
+          "both_teams_score": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.16281084214311772
+          }
+        },
+        "winner_correct": true,
+        "home_absolute_error": 1.515503515976522,
+        "away_absolute_error": 0.4752932214325014,
+        "total_absolute_error": 1.0402102945440204,
+        "margin_absolute_error": 1.9907967374090234,
+        "total_in_80": true,
+        "log_loss": 0.9686421534566956,
+        "brier": 0.5858824066161102,
+        "verification": "community_source_final_not_official",
+        "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Ligue_1"
+      },
       "fixture_review": null
     },
     {
@@ -18126,8 +18270,44 @@
         "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
       },
       "recorded_at_utc": "2026-10-31T12:56:11.069297+00:00",
-      "status": "pending",
-      "result": null,
+      "status": "publisher_final",
+      "result": {
+        "actual_home": 2,
+        "actual_away": 1,
+        "actual_outcome": "home",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.05799589067640626
+          },
+          "over_2.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.23324948346364713
+          },
+          "over_3.5": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.08737012192207248
+          },
+          "both_teams_score": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.20540622210899123
+          }
+        },
+        "winner_correct": false,
+        "home_absolute_error": 0.8292089852699951,
+        "away_absolute_error": 0.572999023440645,
+        "total_absolute_error": 0.2562099618293501,
+        "margin_absolute_error": 1.40220800871064,
+        "total_in_80": true,
+        "log_loss": 1.260049304585834,
+        "brier": 0.7932145602220302,
+        "verification": "community_source_final_not_official",
+        "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Serie_A"
+      },
       "fixture_review": null
     },
     {
@@ -19131,8 +19311,44 @@
         "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
       },
       "recorded_at_utc": "2026-10-31T12:56:11.125376+00:00",
-      "status": "pending",
-      "result": null,
+      "status": "publisher_final",
+      "result": {
+        "actual_home": 1,
+        "actual_away": 1,
+        "actual_outcome": "draw",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.016501791183793107
+          },
+          "over_2.5": {
+            "actual": false,
+            "correct": false,
+            "brier": 0.4792602018553096
+          },
+          "over_3.5": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.22929414942322313
+          },
+          "both_teams_score": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.094905590488332
+          }
+        },
+        "winner_correct": false,
+        "home_absolute_error": 0.7117834230143139,
+        "away_absolute_error": 0.8603367894493228,
+        "total_absolute_error": 1.5721202124636369,
+        "margin_absolute_error": 0.14855336643500894,
+        "total_in_80": true,
+        "log_loss": 1.5154060991526697,
+        "brier": 0.915077348231709,
+        "verification": "community_source_final_not_official",
+        "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Eredivisie"
+      },
       "fixture_review": null
     },
     {
@@ -22874,8 +23090,44 @@
         "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
       },
       "recorded_at_utc": "2026-10-31T12:56:11.145860+00:00",
-      "status": "pending",
-      "result": null,
+      "status": "publisher_final",
+      "result": {
+        "actual_home": 1,
+        "actual_away": 0,
+        "actual_outcome": "home",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": false,
+            "correct": false,
+            "brier": 0.4803623671171608
+          },
+          "over_2.5": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.18672883239163357
+          },
+          "over_3.5": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.04961456744376977
+          },
+          "both_teams_score": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.2340825288671182
+          }
+        },
+        "winner_correct": true,
+        "home_absolute_error": 0.34456869516374455,
+        "away_absolute_error": 1.0624399692596809,
+        "total_absolute_error": 1.4070086644234254,
+        "margin_absolute_error": 0.7178712740959363,
+        "total_in_80": true,
+        "log_loss": 0.8399178609702976,
+        "brier": 0.48462940206030297,
+        "verification": "community_source_final_not_official",
+        "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Primeira_Liga"
+      },
       "fixture_review": null
     },
     {
@@ -24192,26 +24444,6 @@
   ],
   "skipped": [
     {
-      "event_id": "DE1_98096271d0b0fd744c57b743",
-      "reason": "Insufficient history: sv 07 elversberg: fewer than 10 prior matches"
-    },
-    {
-      "event_id": "DE1_9f22fd8a122664853d0182b3",
-      "reason": "Insufficient history: sc paderborn 07: fewer than 10 prior matches"
-    },
-    {
-      "event_id": "EN1_17f2593466899f3d474e1903",
-      "reason": "Insufficient history: hull city afc: fewer than 10 prior matches"
-    },
-    {
-      "event_id": "EN1_e3b29026e2c4aacc013fb426",
-      "reason": "Insufficient history: coventry city fc: fewer than 10 prior matches"
-    },
-    {
-      "event_id": "FR1_1e63cd1a23e3d50364dea3e5",
-      "reason": "Insufficient history: es troyes ac: fewer than 10 prior matches"
-    },
-    {
       "event_id": "DE1_90eff8a8941cfcd26f0ce4d5",
       "reason": "Insufficient history: fc schalke 04: fewer than 10 prior matches"
     },
@@ -24269,51 +24501,51 @@
     },
     {
       "event_id": "TR1_cabbbaabbe1c6167b37f3a31",
-      "reason": "Insufficient history (current coverage): samsunspor: 2 unresolved past fixtures; refresh/review required; atiker konyaspor: 2 unresolved past fixtures; refresh/review required"
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
     },
     {
       "event_id": "TR1_cadab05ead490fcf517e12ea",
-      "reason": "Insufficient history (current coverage): gaziantep fk: 2 unresolved past fixtures; refresh/review required; kasimpasa: 2 unresolved past fixtures; refresh/review required"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "TR1_ef54d7aeb8daf9df94431593",
-      "reason": "Insufficient history (current coverage): eyupspor: 2 unresolved past fixtures; refresh/review required; kocaelispor: 2 unresolved past fixtures; refresh/review required"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "TR1_f554ce22e6224a38c480a4fe",
       "reason": "Insufficient history (current coverage): aytemiz alanyaspor: 2 unresolved past fixtures; refresh/review required; trabzonspor: 2 unresolved past fixtures; refresh/review required"
     }
   ],
-  "pending": 105,
+  "pending": 98,
   "requested_model_variant": "baseline",
   "publisher_performance": {
-    "games": 148,
-    "winner_accuracy": 0.6148648648648649,
-    "log_loss": 0.9764760218714709,
-    "brier": 0.5797714869913644,
-    "total_mae": 1.4933439908893553,
-    "margin_mae": 1.536826582550875,
-    "total_in_80": 0.8648648648648649,
-    "team_score_games": 148,
-    "home_score_mae": 1.0091961784181784,
-    "away_score_mae": 1.108386060975935,
-    "team_score_mae": 1.058791119697057,
+    "games": 155,
+    "winner_accuracy": 0.6064516129032258,
+    "log_loss": 0.982042040277118,
+    "brier": 0.5835815068344952,
+    "total_mae": 1.4854818709675914,
+    "margin_mae": 1.5204363299919432,
+    "total_in_80": 0.864516129032258,
+    "team_score_games": 155,
+    "home_score_mae": 1.0143267606783635,
+    "away_score_mae": 1.088972188192584,
+    "team_score_mae": 1.0516494744354736,
     "goal_markets": {
       "over_1.5": {
-        "accuracy": 0.7905405405405406,
-        "brier": 0.16934287859619118
+        "accuracy": 0.7870967741935484,
+        "brier": 0.1697850448270609
       },
       "over_2.5": {
-        "accuracy": 0.5202702702702703,
-        "brier": 0.25807106254606393
+        "accuracy": 0.5290322580645161,
+        "brier": 0.2577585362755218
       },
       "over_3.5": {
-        "accuracy": 0.6756756756756757,
-        "brier": 0.22703415038003305
+        "accuracy": 0.6709677419354839,
+        "brier": 0.22841540447321979
       },
       "both_teams_score": {
-        "accuracy": 0.5067567567567568,
-        "brier": 0.25798879527530577
+        "accuracy": 0.5225806451612903,
+        "brier": 0.2550573398707285
       }
     }
   },

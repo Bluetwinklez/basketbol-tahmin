@@ -390,6 +390,28 @@
       "checked_at_utc": "2026-11-03T14:36:29.778035+00:00",
       "status": "quarantined_date_conflict",
       "note": "Training date independently checked against licensed score; original forecast settlement still requires timing review."
+    },
+    "EN1_e3b29026e2c4aacc013fb426": {
+      "league": "EN1",
+      "home": "everton fc",
+      "away": "coventry city fc",
+      "original_date": "2026-11-07",
+      "observed_start_utc": "2026-11-06T20:00:00+00:00",
+      "source_url": "https://www.espn.com/soccer/game/_/gameId/401879242",
+      "checked_at_utc": "2026-11-07T13:28:32.426935+00:00",
+      "status": "quarantined_date_conflict",
+      "note": "Training date independently checked against licensed score; original forecast settlement still requires timing review."
+    },
+    "ES1_2fc9c99c1519876b8c76b149": {
+      "league": "ES1",
+      "home": "sevilla fc",
+      "away": "deportivo alaves",
+      "original_date": "2026-11-08",
+      "observed_start_utc": "2026-11-06T20:00:00+00:00",
+      "source_url": "https://www.espn.com/soccer/game/_/gameId/401882809",
+      "checked_at_utc": "2026-11-07T13:28:32.426935+00:00",
+      "status": "quarantined_date_conflict",
+      "note": "Training date independently checked against licensed score; original forecast settlement still requires timing review."
     }
   }
 }
