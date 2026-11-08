@@ -1,12 +1,56 @@
 {
-  "checked_at_utc": "2026-11-07T13:24:18.111481+00:00",
+  "checked_at_utc": "2026-11-08T11:33:32.670686+00:00",
   "revision": "e6744429ee395bc86f247348c6184bb08d4eb361",
   "revisions": {
     "football.json": "e6744429ee395bc86f247348c6184bb08d4eb361"
   },
   "license": "CC0-1.0",
-  "files": [],
+  "files": [
+    {
+      "source_revision": "e6744429ee395bc86f247348c6184bb08d4eb361",
+      "season": "2025",
+      "rows": 510,
+      "finals": 164,
+      "source_sha256": "8d8335845628c2ba3b4b67094e092400ec11f417214075123623d4f8a68a7d72",
+      "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2025/mls.json"
+    }
+  ],
   "errors": [
+    {
+      "league": "US1",
+      "season": "2018",
+      "error": "Source file unavailable; historical data is not current coverage"
+    },
+    {
+      "league": "US1",
+      "season": "2019",
+      "error": "Source file unavailable; historical data is not current coverage"
+    },
+    {
+      "league": "US1",
+      "season": "2020",
+      "error": "Source file unavailable; historical data is not current coverage"
+    },
+    {
+      "league": "US1",
+      "season": "2021",
+      "error": "Source file unavailable; historical data is not current coverage"
+    },
+    {
+      "league": "US1",
+      "season": "2022",
+      "error": "Source file unavailable; historical data is not current coverage"
+    },
+    {
+      "league": "US1",
+      "season": "2023",
+      "error": "Source file unavailable; historical data is not current coverage"
+    },
+    {
+      "league": "US1",
+      "season": "2024",
+      "error": "Source file unavailable; historical data is not current coverage"
+    },
     {
       "league": "US1",
       "season": "2026",

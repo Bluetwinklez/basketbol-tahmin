@@ -47,9 +47,9 @@
     },
     {
       "year": 2026,
-      "accepted": 177,
+      "accepted": 181,
       "pages": 39,
-      "excluded": 1025
+      "excluded": 1017
     },
     {
       "year": 2016,
@@ -76,11 +76,11 @@
       "excluded": 174
     }
   ],
-  "captured_at_utc": "2026-11-07T13:25:43.213813+00:00",
+  "captured_at_utc": "2026-11-08T11:37:11.293355+00:00",
   "refresh_current_requested": true,
   "cache_reparse_only": false,
   "limitations": "Regular-season event only; playoffs/cups excluded. All advertised pages requested, not an independent completeness proof. Logo codes are source identities; reorganisations, renamed clubs and 2026 league changes require caution. Historical publication, neutral venues and overtime unverified. No blocked detailed-context endpoint used.",
-  "games": 5705,
+  "games": 5709,
   "teams": 39,
   "seasons": {
     "2016-17": 540,
@@ -92,8 +92,8 @@
     "2023-24": 720,
     "2024-25": 719,
     "2025-26": 780,
-    "2026-27": 177
+    "2026-27": 181
   },
-  "dataset_sha256": "6a7f0ac229f156ab55ae3d53b474b41904afb28e61bdc8bb0dc13dcd88a28f8c",
+  "dataset_sha256": "ee202b1c08c48bd96ab0c7f4dea182dca72dba194e8061e25d5653fd887c1a7a",
   "trained": false
 }

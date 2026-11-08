@@ -1,68 +1,68 @@
 {
-  "checked_at_utc": "2026-11-07T13:28:32.426935+00:00",
+  "checked_at_utc": "2026-11-08T11:39:49.784323+00:00",
   "leagues": [
     {
       "league": "DE1",
-      "added_candidates": 1,
+      "added_candidates": 42,
       "skipped": [],
       "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Bundesliga"
     },
     {
       "league": "EN1",
-      "added_candidates": 1,
+      "added_candidates": 45,
       "skipped": [],
       "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Premier_League"
     },
     {
       "league": "EN2",
-      "added_candidates": 1,
+      "added_candidates": 85,
       "skipped": [],
       "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_EFL_Championship"
     },
     {
       "league": "ES1",
-      "added_candidates": 1,
+      "added_candidates": 45,
       "skipped": [],
       "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_La_Liga"
     },
     {
       "league": "FR1",
-      "added_candidates": 1,
+      "added_candidates": 39,
       "skipped": [],
       "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Ligue_1"
     },
     {
       "league": "IT1",
-      "added_candidates": 1,
+      "added_candidates": 55,
       "skipped": [],
       "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Serie_A"
     },
     {
       "league": "NL1",
-      "added_candidates": 1,
+      "added_candidates": 40,
       "skipped": [],
       "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Eredivisie"
     },
     {
-      "league": "PT1",
-      "added_candidates": 1,
-      "skipped": [],
-      "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Primeira_Liga"
-    },
-    {
       "league": "TR1",
-      "added_candidates": 0,
+      "added_candidates": 40,
       "skipped": [
         {
-          "event_id": "TR1_cadab05ead490fcf517e12ea",
+          "event_id": "TR1_c084713adf5988a46cde555f",
           "reason": "No exact licensed club/score pair"
         }
       ],
       "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_S%C3%BCper_Lig"
     }
   ],
-  "errors": [],
-  "licensed_finals": 378,
-  "new_unique_finals": 8,
+  "errors": [
+    {
+      "league": "PT1",
+      "reason": "ValueError: Licensed/publisher score conflict: PT1_f081df345359be3890a57f00",
+      "retained_previous": true
+    }
+  ],
+  "licensed_finals": 426,
+  "new_unique_finals": 48,
   "note": "Partial CC BY-SA supplement; original CC0 archives and frozen forecasts retained. Same-day, unknown date, name mismatch and conflicting results are excluded; calendar completeness is unverified."
 }
