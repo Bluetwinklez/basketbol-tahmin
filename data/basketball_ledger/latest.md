@@ -1,6 +1,6 @@
 # Daily basketball research
 
-Checked: 2026-11-08T11:39:34.463281+00:00
+Checked: 2026-11-08T13:48:10.088003+00:00
 
 | Tipoff (Istanbul) | League | Fixture | Score forecast | Home win | Data gate / probability filter |
 |---|---|---|---|---|---|
@@ -58,14 +58,12 @@ Checked: 2026-11-08T11:39:34.463281+00:00
 | 11 Nov 23:00 | FEC | Sport Lisboa e Benfica – Bakken Bears Aarhus | 86.9–79.5 | 67.2% | passed |
 | 12 Nov 18:00 | FEC | Gence BC – Esenler Erokspor | 75.3–91.4 | 16.5% | not selected |
 | 12 Nov 20:00 | FEC | Parnu Sadam – Keravnos BC | 74.7–81.1 | 34.9% | passed |
-| 08 Nov 15:00 | UKR | RIVNE (Rivne) – PRYKARPATTIA-GOVERLA-KFV (Iv-Frankivsk) | 83.9–72.7 | 71.5% | passed |
 | 08 Nov 17:00 | UKR | ZAPORIZHZHYA (Zaporizhzhya) – CHERKASKI MAVPY (Cherkasy) | 85.9–72.5 | 68.0% | passed |
 | 12 Nov 15:00 | UKR | KHARKIVSKI SOKOLY (Kharkiv) – RIVNE (Rivne) | 80.1–76.1 | 61.2% | not selected |
 | 12 Nov 18:00 | UKR | KYIV-BASKET (Kyiv) – VOLYN (Lutsk) | 81.5–68.2 | 79.2% | passed |
 | 13 Nov 15:00 | UKR | KHARKIVSKI SOKOLY (Kharkiv) – VOLYN (Lutsk) | 86.0–69.7 | 80.8% | passed |
 | 13 Nov 18:00 | UKR | KYIV-BASKET (Kyiv) – RIVNE (Rivne) | 76.4–72.5 | 60.7% | not selected |
 | 13 Nov 19:00 | UKR | CHERKASKI MAVPY (Cherkasy) – NIKO-BASKET (Mykolaiv) | 79.0–76.4 | 58.9% | not selected |
-| 08 Nov 15:30 | TR_BSL | Anadolu Efes – TOFAŞ | 90.3–77.0 | 80.4% | passed |
 | 08 Nov 18:00 | TR_BSL | Galatasaray MCT Technic – Esenler Erokspor | 86.7–78.5 | 58.5% | not selected |
 | 09 Nov 19:00 | TR_BSL | Karşıyaka Basketbol – Beşiktaş Basketbol | 80.7–83.4 | 33.8% | passed |
 | 09 Nov 02:00 | ARG_LNB | SAN LORENZO – SAN MARTÍN (C) | 84.5–79.0 | 63.8% | not selected |

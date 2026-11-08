@@ -1,7 +1,7 @@
 {
   "spec": "football-daily-v1",
-  "checked_at_utc": "2026-11-08T11:41:04.765373+00:00",
-  "collection_checked_at_utc": "2026-11-08T11:33:27.422315+00:00",
+  "checked_at_utc": "2026-11-08T13:49:12.698301+00:00",
+  "collection_checked_at_utc": "2026-11-08T13:44:32.481742+00:00",
   "source_errors": [
     {
       "league": "DE2",
@@ -23243,8 +23243,44 @@
         "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
       },
       "recorded_at_utc": "2026-11-01T11:30:45.411893+00:00",
-      "status": "pending",
-      "result": null,
+      "status": "publisher_final",
+      "result": {
+        "actual_home": 1,
+        "actual_away": 0,
+        "actual_outcome": "home",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": false,
+            "correct": false,
+            "brier": 0.7140712274579418
+          },
+          "over_2.5": {
+            "actual": false,
+            "correct": false,
+            "brier": 0.4180681768845902
+          },
+          "over_3.5": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.18173263128088912
+          },
+          "both_teams_score": {
+            "actual": false,
+            "correct": false,
+            "brier": 0.330903874262197
+          }
+        },
+        "winner_correct": true,
+        "home_absolute_error": 1.3127708926566806,
+        "away_absolute_error": 1.0173255777971275,
+        "total_absolute_error": 2.330096470453808,
+        "margin_absolute_error": 0.29544531485955305,
+        "total_in_80": true,
+        "log_loss": 0.410120541661646,
+        "brier": 0.1703126481749485,
+        "verification": "community_source_final_not_official",
+        "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Primeira_Liga"
+      },
       "fixture_review": null
     },
     {
@@ -23918,8 +23954,44 @@
         "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
       },
       "recorded_at_utc": "2026-11-01T11:30:45.427871+00:00",
-      "status": "pending",
-      "result": null,
+      "status": "publisher_final",
+      "result": {
+        "actual_home": 1,
+        "actual_away": 1,
+        "actual_outcome": "draw",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.12376005435586028
+          },
+          "over_2.5": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.1446632772870766
+          },
+          "over_3.5": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.03345146167664429
+          },
+          "both_teams_score": {
+            "actual": true,
+            "correct": false,
+            "brier": 0.3089047880875734
+          }
+        },
+        "winner_correct": false,
+        "home_absolute_error": 0.20679512661794042,
+        "away_absolute_error": 0.004622729478812815,
+        "total_absolute_error": 0.21141785609675345,
+        "margin_absolute_error": 0.2021723971391276,
+        "total_in_80": true,
+        "log_loss": 1.2431893191134877,
+        "brier": 0.7645647616989506,
+        "verification": "community_source_final_not_official",
+        "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Primeira_Liga"
+      },
       "fixture_review": null
     },
     {
@@ -25609,36 +25681,36 @@
     }
   ],
   "skipped": [],
-  "pending": 67,
+  "pending": 65,
   "requested_model_variant": "baseline",
   "publisher_performance": {
-    "games": 186,
-    "winner_accuracy": 0.5860215053763441,
-    "log_loss": 0.9857902058102251,
-    "brier": 0.585774334365236,
-    "total_mae": 1.478596281581288,
-    "margin_mae": 1.464390837183933,
-    "total_in_80": 0.8602150537634409,
-    "team_score_games": 186,
-    "home_score_mae": 1.014617958216159,
-    "away_score_mae": 1.0616078293110986,
-    "team_score_mae": 1.0381128937636286,
+    "games": 188,
+    "winner_accuracy": 0.5851063829787234,
+    "log_loss": 0.984097277348282,
+    "brier": 0.5845154446904669,
+    "total_mae": 1.4763852271312239,
+    "margin_mae": 1.4514591139798418,
+    "total_in_80": 0.8617021276595744,
+    "team_score_games": 188,
+    "home_score_mae": 1.0119069481248946,
+    "away_score_mae": 1.055750024250746,
+    "team_score_mae": 1.0338284861878202,
     "goal_markets": {
       "over_1.5": {
-        "accuracy": 0.7795698924731183,
-        "brier": 0.1734163097807283
+        "accuracy": 0.776595744680851,
+        "brier": 0.1760280047927089
       },
       "over_2.5": {
-        "accuracy": 0.521505376344086,
-        "brier": 0.2566888520278765
+        "accuracy": 0.5212765957446809,
+        "brier": 0.25695137197530155
       },
       "over_3.5": {
-        "accuracy": 0.6881720430107527,
-        "brier": 0.22235934605440316
+        "accuracy": 0.6914893617021277,
+        "brier": 0.2211384173355134
       },
       "both_teams_score": {
-        "accuracy": 0.5268817204301075,
-        "brier": 0.25249846735853687
+        "accuracy": 0.5212765957446809,
+        "brier": 0.2532155510161576
       }
     }
   },
