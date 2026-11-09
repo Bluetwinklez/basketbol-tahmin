@@ -53,8 +53,26 @@ Football (existing same-cohort comparison, 3,973 finals in 2025–26, [details](
 | Resetting teams returning after 2+ seasons; new teams starting below 1500 Elo | Mixed, worse in EuroCup, ECW, Japan |
 | Carrying EuroCup ratings into EuroLeague (and back) | EuroLeague slightly better, EuroCup worse (0.6101 → 0.6144); not adopted to avoid fitting test seasons |
 
+## Closing odds (NBA), measured after the first PR
+
+NBA closing moneylines for 2014-15…2022-23 were collected with the repository's existing SBR collector (`topla --sbr-izni`; the site's terms ask for written permission, and the file `data/oranlar.parquet` is deliberately **not committed**). Walk-forward, 2017-18…2022-23, 6,758 games with odds:
+
+| Probability source | Log loss | Accuracy |
+|---|---:|---:|
+| Model (score model, extended features) | 0.6277 | 64.84% |
+| No-vig closing market | 0.6070 | 67.15% |
+| Model + market as a regression feature | 0.6094 | 66.79% |
+| Logistic stack of both | 0.6087 | 66.84% |
+| Logit blend, 10% model / 90% market | 0.6069 | 66.91% |
+
+The market beats the model in every one of the six seasons. The model adds almost nothing on top of the closing line. `odds.market_blend` and a "Birleşik" line in `tahmin` (NBA only, when odds are supplied) implement the 10/90 blend; the frozen default forecast is unchanged. Limits: closing lines from one archive; Iddaa odds for other leagues have higher margins and are not validated; no other league has a historical odds archive.
+
+## Tried: roster continuity (already in the repo)
+
+`k_kadro_diff` / `k_kadro_ort` (minute share of last season's rotation) were already implemented and previously rejected. Re-tested on top of the extended features: EuroLeague 0.6169 → 0.6174, EuroCup 0.6105 → 0.6114, NBA 0.6193 → 0.6192 log loss. Not adopted.
+
 ## Not done: what would move accuracy materially
 
-- **Closing/opening odds as a feature or blend.** This needs a timestamped historical odds archive per league. Local Iddaa snapshots cover only recent days.
+- **Odds for leagues other than the NBA.** Only the NBA has a historical odds archive here; Iddaa snapshots cover only recent days.
 - **Roster continuity and transfers**, especially for European pre-season and early rounds.
 - **Player availability** (injuries, rest) as a validated model input, not only display context.

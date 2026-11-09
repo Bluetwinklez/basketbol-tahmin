@@ -252,6 +252,9 @@ def yazdir(sonuclar, gosterim=None):
         if t.get('piyasa_ev') is not None:
             pe = t['piyasa_ev']
             print(f"  Piyasa:   ev %{pe * 100:.1f} / dep %{(1 - pe) * 100:.1f}  (oranlar {t['oran_ev']} / {t['oran_dep']}, marj çıkarıldı)")
+            if t.get('birlesik_ev') is not None:
+                be = t['birlesik_ev']
+                print(f"  Birleşik: ev %{be * 100:.1f} / dep %{(1 - be) * 100:.1f}  (piyasa %90 + model %10; NBA kapanış oranı testinde isabet %67,2 / model tek başına %64,8)")
         if t.get('eksik_dk') is not None:
             print(f"  Eksik etkisi: ev − dep eksik dakika farkı {t['eksik_dk']:+.0f} dk (modele dahil)")
         for kod in (t['ev'], t['dep']):
@@ -336,6 +339,9 @@ def run(lig, maclar, tarih, json_cikti=False, kaydet=False, injury_report=False,
         o1, o2 = oranlar.get((t['ev'], t['dep']), (None, None))
         t['oran_ev'], t['oran_dep'] = o1, o2
         t['piyasa_ev'] = (1 / o1) / (1 / o1 + 1 / o2) if o1 and o2 else None
+        if t['piyasa_ev'] is not None and t['lig'] == 'NBA':
+            from .odds import market_blend
+            t['birlesik_ev'] = market_blend(t['ev_kazanir'], t['piyasa_ev'])
         if rapor is not None and t['lig'] == 'NBA':
             ilgili = rapor[rapor.takim.isin([t['ev'], t['dep']]) & rapor.durum.isin(['Out', 'Doubtful', 'Questionable'])]
             t['sakatlik'] = ilgili[['takim', 'oyuncu', 'durum']].to_dict('records')

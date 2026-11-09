@@ -46,3 +46,17 @@ def test_football_default_is_opponent_adjusted():
     import inspect
     assert DEFAULT_VARIANT=='opponent'
     assert inspect.signature(fit).parameters['variant'].default=='opponent'
+
+
+def test_market_blend_logit_mixture():
+    from bbtahmin.odds import market_blend
+    assert market_blend(.7,.7)==pytest_approx(.7)
+    assert market_blend(.9,.4,0.)==pytest_approx(.4)
+    assert market_blend(.9,.4,1.)==pytest_approx(.9)
+    blended=market_blend(.9,.4)
+    assert .4<blended<.5
+
+
+def pytest_approx(value):
+    import pytest
+    return pytest.approx(value,abs=1e-6)
