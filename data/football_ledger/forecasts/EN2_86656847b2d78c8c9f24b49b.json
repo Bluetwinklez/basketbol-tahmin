@@ -1,0 +1,123 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-10-31T13:01:07.583021+00:00",
+  "fixture": {
+    "event_id": "EN2_86656847b2d78c8c9f24b49b",
+    "league": "EN2",
+    "season": "2026-27",
+    "date": "2026-11-07",
+    "home": "portsmouth fc",
+    "away": "stoke city fc",
+    "home_name": "Portsmouth FC",
+    "away_name": "Stoke City FC",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/en.2.json",
+    "captured_at_utc": "2026-10-31T12:56:06.672847+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null,
+    "original_date": null,
+    "date_correction_verified": null,
+    "license_url": null,
+    "source_sha256": null,
+    "fixture_verification_url": null,
+    "actual_start_utc": null,
+    "source_original_date": "2026-11-07",
+    "verified_start_utc": "2026-11-07T12:30:00+00:00",
+    "independent_fixture": {
+      "provider_event_id": "401880166",
+      "league": "EN2",
+      "season_year": 2026,
+      "start_utc": "2026-11-07T12:30:00+00:00",
+      "captured_at": "2026-10-31T13:00:03.768976+00:00",
+      "home_name": "Portsmouth",
+      "away_name": "Stoke City",
+      "provider_home_id": "385",
+      "provider_away_id": "336",
+      "source_url": "https://www.espn.com/soccer/game/_/gameId/401880166",
+      "status": "scheduled",
+      "event_id": "EN2_86656847b2d78c8c9f24b49b",
+      "home": "portsmouth fc",
+      "away": "stoke city fc"
+    }
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "EN2",
+    "home": "portsmouth fc",
+    "away": "stoke city fc",
+    "expected_home_goals": 1.4143140935709222,
+    "expected_away_goals": 1.004158798782947,
+    "probabilities": {
+      "home": 0.46432182961016616,
+      "draw": 0.26819527757179795,
+      "away": 0.2674828928180359
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.6955593022595289,
+      "2.5": 0.4351101066828062,
+      "3.5": 0.22514700023691472
+    },
+    "both_teams_score": 0.4796125376903188,
+    "total_goals_80": [
+      1,
+      4
+    ],
+    "training_cutoff_exclusive": "2026-10-31",
+    "training_games": 1649,
+    "prior_team_games": {
+      "portsmouth fc": 104,
+      "stoke city fc": 136
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "settings": {
+      "half_life_days": 180.0,
+      "shrinkage_games": 8.0,
+      "window_days": 1095
+    },
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "c81b6729c8b62733beea937248ebd8a982e7a27b20ce9ef3b82e55c9732aeb0e",
+  "source_code_sha256": "a8d9ce5c692529e6af6dfbcfc8112b7939f37ce83631889026a0559ee22fb8a5",
+  "requested_model_variant": "baseline",
+  "history_health": {
+    "spec": "football-history-health-v1",
+    "checked_at_utc": "2026-10-31T13:01:05.236923+00:00",
+    "information_cutoff_exclusive": "2026-10-31",
+    "teams": {
+      "portsmouth fc": {
+        "prior_finals": 196,
+        "active_season_finals": 12,
+        "last_final_date": "2026-10-24",
+        "days_since_last_final": 7,
+        "unresolved_past_fixture_ids": []
+      },
+      "stoke city fc": {
+        "prior_finals": 288,
+        "active_season_finals": 12,
+        "last_final_date": "2026-10-24",
+        "days_since_last_final": 7,
+        "unresolved_past_fixture_ids": []
+      }
+    },
+    "diagnostic_gate_passed": true,
+    "blocking_issues": [],
+    "max_history_age_days": 30,
+    "calendar_completeness_verified": false,
+    "note": "Diagnostic policy, not a validated success threshold. Unresolved fixtures may be postponed or missing results. Fresh source captures do not make old histories current."
+  },
+  "selection_policy": "Current-history diagnostic gate plus existing model issues; research only, no validated recommendation.",
+  "payload_sha256": "82f0a2a2b3a2ae645c6b05ebc966f0977294a63aa9e083ee5af39d81956a9e1b"
+}

@@ -1,0 +1,28 @@
+{
+  "captured_at_utc": "2026-11-01T23:36:04.901263+00:00",
+  "source_url": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard",
+  "provider": "espn",
+  "live_games": [
+    {
+      "event_id": "401909904",
+      "league": "NBA",
+      "home": "IND",
+      "away": "BRK",
+      "home_score": 40,
+      "away_score": 43,
+      "period": 3,
+      "remaining_seconds": 612,
+      "regulation_minutes": 48,
+      "overtime": false,
+      "start_utc": "2026-11-01T22:00:00+00:00",
+      "captured_at_utc": "2026-11-01T23:36:04.901263+00:00",
+      "source_url": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard",
+      "source_updated_at": null,
+      "source_freshness_verified": false,
+      "used_for_prediction": false,
+      "note": "Public broadcaster scoreboard observation; source update timestamp unavailable, so live freshness is unverified."
+    }
+  ],
+  "total_listed": 4,
+  "prediction_enabled": false
+}

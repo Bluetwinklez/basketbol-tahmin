@@ -43,3 +43,61 @@ Per-league accuracy, log loss, multiclass Brier score, goal-market accuracy/Brie
 
 The `Refresh sports data and frozen forecasts` workflow runs daily at **06:30 UTC / 09:30 Europe/Istanbul**, plus manual dispatch. Football and the 10 existing daily basketball competitions refresh independently. Earlier season backfills are not repeated every day. Compressed source snapshots, source failures and both sports' forecast ledgers are persisted to the repository. Frozen forecasts are never regenerated using their outcome. Partial refreshes are persisted but mark the job failed; missing provider data cannot become a successful empty refresh. GitHub scheduling/provider availability is not guaranteed. This is scheduled data collection and forecasting, not autonomous model promotion: changes must pass evaluation and tests.
 
+## Calendar source isolation (2026-11-04)
+
+AR1, CO1, US1, JP1 and CN1 calendar imports fetch only `openfootball/football.json`.
+They no longer download or require the unrelated `south-america` Brazilian text archive.
+BR1 and BR2 retain their text fallback and JSON preference. Reports include a
+`revisions` map for all consulted repositories and `source_revision` per imported
+file, matching its pinned source URL; the legacy `revision` field is preserved.
+Missing season files remain explicit coverage errors and retain existing snapshots.
+CC0 validation, day precision and community/not-official result labels still apply.
+
+This collector reliability change adds no verified match records and makes no
+claim of improved prediction accuracy. Existing 1/X/2, goal totals, both-teams-score,
+calibration, error and coverage evidence is unchanged; no model candidate or frozen
+forecast is modified. Regression tests exercise each of the five JSON-only leagues
+with an unavailable unrelated source, missing season files and invalid licenses.
+
+## Empty-source protection (2026-11-05)
+
+The shared football archive writer rejects empty source snapshots before merging
+or touching disk. Previously an empty JSON matches list could be reported as a
+successful refresh while removing stored scheduled fixtures; retained finals could
+also make an empty refresh look productive. Collectors now surface an explicit
+`Empty football source snapshot` error and preserve the complete prior archive.
+An empty first import creates no archive. Legitimate off-season empty responses
+therefore mean unavailable coverage, not successful current-season coverage.
+Nonempty schedules without final scores remain supported.
+
+Regression coverage checks lists and generators, first imports and existing mixed
+final/scheduled archives, and error propagation for all five JSON-only calendar
+leagues. This change adds no match records or model performance evidence. Existing
+chronological evaluation, official/community distinctions and frozen forecasts
+remain unchanged.
+
+## Paired comparator audit (2026-11-06)
+
+The requested-football evaluator now calculates constant home-win, under-2.5 and
+BTTS-no comparators only on the events scored by every model. Previously it used
+all season finals even if model fitting skipped a month. The cohort validator
+rejects duplicate events, unexpected candidates/targets, mismatched candidate
+cohorts and conflicting observed scores. Empty evaluated cohorts have null success
+rates, not zero-percent performance. Coverage reports both eligible and evaluated
+archive events; it does not certify season completeness.
+
+Run `PYTHONPATH=src python scripts/audit_requested_football_cohort.py` to audit the
+saved BR2 2024 predictions without refitting or modifying any forecast. Evidence
+is in `docs/kanit/requested_football/cohort_audit_20261106.json`, including the
+source prediction hash, exact cohort IDs, 1/X/2 and goal-market metrics, probability
+reliability bins, score errors and interval coverage for all four candidates.
+
+All four candidates cover the same 380 stored events (no skipped targets in this
+existing evidence, so comparator rates are unchanged). Winner accuracy is 51.58%
+for the original baseline and 52.63% for the opponent candidate, versus 52.37% for
+always-home: only one additional correct result for the opponent candidate.
+The ensemble's over/under-2.5 accuracy is 63.42%, versus 62.63% for always-under.
+These are exploratory retrospective community-source results from one season,
+not official prospective verification or evidence of general improvement. No new
+matches, production model changes or rewritten historical predictions accompany
+this audit. Missing source seasons and provider outages remain separate issues.

@@ -1,0 +1,123 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-11-02T16:32:33.992467+00:00",
+  "fixture": {
+    "event_id": "IT1_05157dcbb02a4cc7524a2ba0",
+    "league": "IT1",
+    "season": "2026-27",
+    "date": "2026-11-08",
+    "home": "fc internazionale milano",
+    "away": "como 1907",
+    "home_name": "FC Internazionale Milano",
+    "away_name": "Como 1907",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/it.1.json",
+    "captured_at_utc": "2026-11-02T16:27:24.049612+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null,
+    "original_date": null,
+    "date_correction_verified": null,
+    "license_url": null,
+    "source_sha256": null,
+    "fixture_verification_url": null,
+    "actual_start_utc": null,
+    "source_original_date": "2026-11-08",
+    "verified_start_utc": "2026-11-08T17:00:00+00:00",
+    "independent_fixture": {
+      "provider_event_id": "401874808",
+      "league": "IT1",
+      "season_year": 2026,
+      "start_utc": "2026-11-08T17:00:00+00:00",
+      "captured_at": "2026-11-02T16:31:30.160679+00:00",
+      "home_name": "Internazionale",
+      "away_name": "Como",
+      "provider_home_id": "110",
+      "provider_away_id": "2572",
+      "source_url": "https://www.espn.com/soccer/game/_/gameId/401874808",
+      "status": "scheduled",
+      "event_id": "IT1_05157dcbb02a4cc7524a2ba0",
+      "home": "fc internazionale milano",
+      "away": "como 1907"
+    }
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "IT1",
+    "home": "fc internazionale milano",
+    "away": "como 1907",
+    "expected_home_goals": 1.770773831739139,
+    "expected_away_goals": 1.4381489885017709,
+    "probabilities": {
+      "home": 0.45537795646349466,
+      "draw": 0.2305942508042346,
+      "away": 0.3140277927322707
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.8299590634118189,
+      "2.5": 0.6219553567991242,
+      "3.5": 0.3994660765177339
+    },
+    "both_teams_score": 0.6328321564579696,
+    "total_goals_80": [
+      1,
+      6
+    ],
+    "training_cutoff_exclusive": "2026-11-02",
+    "training_games": 1128,
+    "prior_team_games": {
+      "fc internazionale milano": 113,
+      "como 1907": 85
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "settings": {
+      "half_life_days": 180.0,
+      "shrinkage_games": 8.0,
+      "window_days": 1095
+    },
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "162ecadf21f287f21f229ddd045dbefbd518380f788b31aa35c7457eccef9b49",
+  "source_code_sha256": "a8d9ce5c692529e6af6dfbcfc8112b7939f37ce83631889026a0559ee22fb8a5",
+  "requested_model_variant": "baseline",
+  "history_health": {
+    "spec": "football-history-health-v1",
+    "checked_at_utc": "2026-11-02T16:32:31.353045+00:00",
+    "information_cutoff_exclusive": "2026-11-02",
+    "teams": {
+      "fc internazionale milano": {
+        "prior_finals": 237,
+        "active_season_finals": 10,
+        "last_final_date": "2026-10-31",
+        "days_since_last_final": 2,
+        "unresolved_past_fixture_ids": []
+      },
+      "como 1907": {
+        "prior_finals": 85,
+        "active_season_finals": 10,
+        "last_final_date": "2026-11-01",
+        "days_since_last_final": 1,
+        "unresolved_past_fixture_ids": []
+      }
+    },
+    "diagnostic_gate_passed": true,
+    "blocking_issues": [],
+    "max_history_age_days": 30,
+    "calendar_completeness_verified": false,
+    "note": "Diagnostic policy, not a validated success threshold. Unresolved fixtures may be postponed or missing results. Fresh source captures do not make old histories current."
+  },
+  "selection_policy": "Current-history diagnostic gate plus existing model issues; research only, no validated recommendation.",
+  "payload_sha256": "58370d0e9e1cc0bda381da340215146eef3faa426650a1712ad434ff55d3eec2"
+}
