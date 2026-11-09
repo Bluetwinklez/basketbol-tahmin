@@ -10,7 +10,7 @@ from sklearn.linear_model import Ridge
 from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler
 
-from .ozellik import build_features,FEATURES
+from .ozellik import build_features,select_columns
 
 CODES=('ECW','FEC','VTB')
 NAMES={'ECW':'EuroCup Women','FEC':'FIBA Europe Cup','VTB':'VTB United League'}
@@ -29,12 +29,13 @@ def load(code):
 def fit(x,g,train,val,test):
     if train.sum()<150 or val.sum()<100:raise ValueError('Need at least 150 training and 100 calibration games')
     predictions=[];errors=[]
+    cols=select_columns(x,(g.ev_skor-g.dep_skor).to_numpy(float),train,val)
     for target in [(g.ev_skor-g.dep_skor).to_numpy(float),(g.ev_skor+g.dep_skor).to_numpy(float)]:
         def estimator():return make_pipeline(StandardScaler(),Ridge(alpha=10.))
-        inner=estimator().fit(x.loc[train,FEATURES],target[train])
-        residual=target[val]-inner.predict(x.loc[val,FEATURES])
-        final=estimator().fit(x.loc[train|val,FEATURES],target[train|val])
-        predictions.append(final.predict(x.loc[test,FEATURES]))
+        inner=estimator().fit(x.loc[train,cols],target[train])
+        residual=target[val]-inner.predict(x.loc[val,cols])
+        final=estimator().fit(x.loc[train|val,cols],target[train|val])
+        predictions.append(final.predict(x.loc[test,cols]))
         errors.append(dict(sigma=max(float(np.std(residual,ddof=1)),1.),bias=float(np.mean(residual)),
             residual_quantiles_80=np.quantile(residual,[.1,.9]).astype(float).tolist()))
     return predictions,errors
