@@ -1,7 +1,7 @@
 {
   "spec": "football-daily-v1",
-  "checked_at_utc": "2026-11-10T15:12:01.587639+00:00",
-  "collection_checked_at_utc": "2026-11-10T15:07:36.846634+00:00",
+  "checked_at_utc": "2026-11-11T14:43:45.119135+00:00",
+  "collection_checked_at_utc": "2026-11-11T14:38:42.842242+00:00",
   "source_errors": [
     {
       "league": "DE2",
@@ -26665,6 +26665,14 @@
     },
     {
       "event_id": "BR1_f0cc9abb8aa332cf82bbce93",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "DE1_3e2390e999b8ece75e4456f2",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "FR1_e16adef39a75628dbdbd38f0",
       "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
     }
   ],
