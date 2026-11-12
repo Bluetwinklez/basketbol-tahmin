@@ -10,6 +10,14 @@ from bbtahmin.football.model import metrics
 
 def reliability(probabilities, outcomes):
     p=np.asarray(probabilities,float);y=np.asarray(outcomes,float)
+    if p.ndim != 1 or y.ndim != 1 or p.shape != y.shape:
+        raise ValueError('Calibration requires aligned one-dimensional observations')
+    if not np.isfinite(p).all() or not np.isfinite(y).all():
+        raise ValueError('Calibration observations must be finite')
+    if ((p < 0) | (p > 1)).any() or not np.isin(y, [0, 1]).all():
+        raise ValueError('Calibration requires probabilities in [0, 1] and binary outcomes')
+    if not len(p):
+        return dict(n=0, brier=None, log_loss=None, expected_calibration_error=None, bins=[])
     bins=[]
     for i in range(10):
         mask=(p>=i/10)&((p<(i+1)/10) if i<9 else (p<=1))
