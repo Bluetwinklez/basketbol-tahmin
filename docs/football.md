@@ -101,3 +101,20 @@ These are exploratory retrospective community-source results from one season,
 not official prospective verification or evidence of general improvement. No new
 matches, production model changes or rewritten historical predictions accompany
 this audit. Missing source seasons and provider outages remain separate issues.
+
+## Missing calibration evidence (2026-11-12)
+
+The shared reliability calculation used by football evaluation scripts now returns
+`n: 0`, empty bins and null Brier/log-loss/calibration-error values for empty
+cohorts. It previously divided by zero after computing empty means, preventing
+reports for unsupported cohorts. A missing measurement is never reported as zero
+error or perfect calibration.
+
+Mismatched array lengths, multidimensional arrays, nonfinite values, probabilities
+outside [0, 1] and nonbinary outcomes raise explicit errors rather than producing
+misleading calibration evidence. Valid boundary probabilities remain included in
+exactly one bin. Regression tests check these cases and hand-calculated metrics.
+All 28 saved calibration reports (four BR2 candidates across seven markets, 380
+matches each) were recomputed from the existing prediction archive and match the
+6 November audit exactly. No predictions were refitted or edited, no new matches
+were imported, and no improvement in model performance is claimed.
