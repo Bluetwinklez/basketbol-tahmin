@@ -1,7 +1,7 @@
 {
   "spec": "football-daily-v1",
-  "checked_at_utc": "2026-11-12T15:34:30.063788+00:00",
-  "collection_checked_at_utc": "2026-11-12T15:29:56.353956+00:00",
+  "checked_at_utc": "2026-11-13T14:52:10.799387+00:00",
+  "collection_checked_at_utc": "2026-11-13T14:47:28.491585+00:00",
   "source_errors": [
     {
       "league": "DE2",
@@ -26669,11 +26669,11 @@
     },
     {
       "event_id": "DE1_3e2390e999b8ece75e4456f2",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "FR1_e16adef39a75628dbdbd38f0",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "BR1_098d39bf8f02f7f0a10c2848",
@@ -26877,6 +26877,138 @@
     },
     {
       "event_id": "NL1_d0b30144defc28c7f8195dd9",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "DE1_14cc48088addffaac0bfc145",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "DE1_9ad1119a54f8e0a4bd324c49",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "EN2_9c86d624f540b11c747531c7",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "ES1_029c2b45bea91132258aa6cb",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "ES1_068eb0118ce1806f2880752d",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "ES1_513aa8ead5d2bd687b141c30",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "ES1_51e2a83513c23f347a0a3798",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "ES1_a3a1632fdf03eb4939819a46",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "ES1_b506deb638a292d9c082e7d6",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "ES1_c91b9ef5c8cc6f87585e6635",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "ES1_d07cb6eceb85e56038b5e911",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "ES1_d30a99a76949bc1a64bdf462",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "ES1_e42f8f06e53fd0e9c4ff1b11",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "FR1_601d466ee222a71876d56b43",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "FR1_b98320705e816cf814f4df72",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "FR1_d0ad0e5f8a6802334bada81a",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "IT1_41eacddf80858afc603a8841",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "IT1_709009dfbe09aa1c44ef38e4",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "IT1_719b27741bb9dd09c1121699",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "IT1_ab40e53e01b565a27372cdb6",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "NL1_389dce3bbbf52c6d5a3116b4",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "NL1_72f409a89bc721fdd4e665cf",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "NL1_a03f51296b04977992a1eb0f",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "NL1_ad8eea3c8d3d895175d97fe3",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "TR1_27aa4616d29e742232ed1402",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "TR1_322a0d08ccd2d9db4895e3c1",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "TR1_329fc70bb9e8b5559c78832c",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "TR1_4d7ae4ea43a608db8beee532",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "TR1_811ee8b73182e7098b0ef193",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "TR1_a0287ccae5f5994e6e710929",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "TR1_aaf42f29f9245daaf0db51b2",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "TR1_be58c0de58899ca159a47c1b",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "TR1_d16c2be04cb42c47ab28dfb4",
       "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
     }
   ],

@@ -1,7 +1,48 @@
 {
   "spec": "football-fixture-confirmation-v1",
-  "checked_at_utc": "2026-11-12T15:33:30.967927+00:00",
-  "reviews": [],
+  "checked_at_utc": "2026-11-13T14:51:06.174483+00:00",
+  "reviews": [
+    {
+      "status": "confirmed",
+      "event_id": "DE1_3e2390e999b8ece75e4456f2",
+      "observation": {
+        "provider_event_id": "401884736",
+        "league": "DE1",
+        "season_year": 2026,
+        "start_utc": "2026-11-20T19:30:00+00:00",
+        "captured_at": "2026-11-13T14:51:05.830139+00:00",
+        "home_name": "Bayern Munich",
+        "away_name": "FC Cologne",
+        "provider_home_id": "132",
+        "provider_away_id": "122",
+        "source_url": "https://www.espn.com/soccer/game/_/gameId/401884736",
+        "status": "scheduled",
+        "event_id": "DE1_3e2390e999b8ece75e4456f2",
+        "home": "fc bayern munchen",
+        "away": "1. fc koln"
+      }
+    },
+    {
+      "status": "confirmed",
+      "event_id": "FR1_e16adef39a75628dbdbd38f0",
+      "observation": {
+        "provider_event_id": "401876395",
+        "league": "FR1",
+        "season_year": 2026,
+        "start_utc": "2026-11-20T19:45:00+00:00",
+        "captured_at": "2026-11-13T14:51:06.062554+00:00",
+        "home_name": "Troyes",
+        "away_name": "Le Havre AC",
+        "provider_home_id": "170",
+        "provider_away_id": "3236",
+        "source_url": "https://www.espn.com/soccer/game/_/gameId/401876395",
+        "status": "scheduled",
+        "event_id": "FR1_e16adef39a75628dbdbd38f0",
+        "home": "es troyes ac",
+        "away": "le havre ac"
+      }
+    }
+  ],
   "errors": [],
   "note": "Publisher fixture validation and settlement facts only. No scores imported into model training archives; explicit aliases, ordered teams and unique same-day identity required."
 }

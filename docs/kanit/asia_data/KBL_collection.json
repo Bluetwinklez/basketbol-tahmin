@@ -91,15 +91,15 @@
     {
       "calendar_year": 2026,
       "returned": 307,
-      "accepted": 203,
+      "accepted": 204,
       "excluded": {
         "other_competitions": 42
       }
     }
   ],
-  "captured_at_utc": "2026-11-12T15:30:08.009500+00:00",
+  "captured_at_utc": "2026-11-13T14:47:38.453149+00:00",
   "limitations": "Senior men regular season only, exact source season/game identities; D-League/cups/playoffs excluded. Calendar-window responses are unpaginated in the observed client; independent completeness is unverified. Historical publication, relocations/ownership continuity and neutral venues require caution. Public web routing headers only; no authentication.",
-  "games": 2582,
+  "games": 2583,
   "teams": 13,
   "seasons": {
     "2016-17": 147,
@@ -112,8 +112,8 @@
     "2023-24": 269,
     "2024-25": 268,
     "2025-26": 270,
-    "2026-27": 65
+    "2026-27": 66
   },
-  "dataset_sha256": "1da4ff4b11933dd0a056435e8861781869a776a43c6d55b058445ce8c2ec4f8f",
+  "dataset_sha256": "6b87562c6a068754505f73de1a6fdcbe395ce316364dc618b467775a751e8f97",
   "trained": false
 }
