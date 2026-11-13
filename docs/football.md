@@ -118,3 +118,27 @@ All 28 saved calibration reports (four BR2 candidates across seven markets, 380
 matches each) were recomputed from the existing prediction archive and match the
 6 November audit exactly. No predictions were refitted or edited, no new matches
 were imported, and no improvement in model performance is claimed.
+
+## Turkish team last-50 inventory (2026-11-13)
+
+Reproduce the read-only coverage audit with:
+
+```sh
+PYTHONPATH=src python scripts/audit_football_team_history.py --season 2026-27 --cutoff 2026-11-13 --output docs/kanit/football/team_history_20261113.json
+```
+
+The report inventories clubs appearing in the archived season and lists up to 50
+earlier available league finals per team, across seasons. It includes exact event
+IDs, source-kind counts, date range, results/goals summaries and archive SHA-256
+fingerprints. It downloads nothing and does not alter archives or forecasts.
+Same-day/future results, unfinished fixtures and other leagues are excluded.
+Season membership is archive-derived, not an independently certified roster.
+
+Of 18 archived TR1 clubs, 15 have 50 available earlier league finals. Amed has 10,
+Çorum has 9 and Kocaelispor has 21, leaving 110 missing team-match records against
+the requested threshold. This is not 110 distinct missing fixtures: a match can
+contribute to both participating teams. The 50-record threshold does not certify
+complete recent history, all-competition coverage, official results or prediction
+readiness. Promoted clubs and source gaps need separate licensed backfills; the
+report does not invent missing matches. New imported records in this change: zero.
+No model evaluation or performance metric is changed by this inventory.

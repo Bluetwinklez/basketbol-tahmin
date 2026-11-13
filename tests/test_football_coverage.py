@@ -26,3 +26,34 @@ def test_current_coverage_does_not_equate_refresh_or_history_to_readiness():
     assert leagues['USL1']['historical_finals']==0
     assert all(not x['prediction_ready'] for x in leagues.values())
     assert league_coverage(pd.DataFrame(),now='2026-10-25T12:00Z')['leagues']
+
+
+def test_team_inventory_excludes_other_season_clubs_but_uses_prior_history():
+    from bbtahmin.football.coverage import team_history_coverage
+    records=[row('TR1','2025-26','2025-08-01','A','Old',[2,0],'source','2026-10-25'),
+             row('TR1','2026-27','2026-10-20','A','B',None,'source','2026-10-25'),
+             row('TR1','2026-27','2026-10-25','A','B',[9,0],'source','2026-11-01'),
+             row('EN1','2025-26','2025-08-01','A','B',[8,0],'source','2026-10-25')]
+    r=team_history_coverage(pd.DataFrame(records),'TR1','2026-27','2026-10-25',1)
+    teams={t['team']:t for t in r['teams']}
+    assert set(teams)=={'a','b'}
+    assert teams['a']['available']==1 and teams['a']['goals_for']==2
+    assert teams['b']['available']==0 and teams['b']['missing']==1
+    assert teams['a']['event_ids']==[records[0]['event_id']]
+    assert teams['a']['source_kinds']=={'community_CC0_not_official':1}
+    assert r['teams_with_requested_history']==1 and r['missing_team_match_records']==1
+    assert all(not t['complete_history_verified'] for t in teams.values())
+
+
+def test_empty_team_inventory_does_not_invent_membership():
+    from bbtahmin.football.coverage import team_history_coverage
+    r=team_history_coverage(pd.DataFrame(),'TR1','2026-27','2026-10-25')
+    assert r['teams']==[] and r['archived_season_teams']==0
+
+
+def test_team_inventory_rejects_noninteger_limits():
+    import pytest
+    from bbtahmin.football.coverage import team_history_coverage
+    for limit in (0,101,1.5,True):
+        with pytest.raises(ValueError):
+            team_history_coverage(pd.DataFrame(),'TR1','2026-27','2026-10-25',limit)
