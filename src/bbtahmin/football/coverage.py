@@ -41,3 +41,28 @@ def last_matches(frame, league, team, cutoff, limit=50):
     for r in rows:
         home=r['home']==team;goals_for.append(int(r['home_goals'] if home else r['away_goals']));goals_against.append(int(r['away_goals'] if home else r['home_goals']))
     return dict(league=league,team=team,cutoff_exclusive=cutoff,requested=limit,available=len(rows),missing=max(0,limit-len(rows)),last_date=rows[0]['date'] if rows else None,goals_for=sum(goals_for),goals_against=sum(goals_against),wins=sum(a>b for a,b in zip(goals_for,goals_against)),draws=sum(a==b for a,b in zip(goals_for,goals_against)),losses=sum(a<b for a,b in zip(goals_for,goals_against)),matches=rows,note='Last available league finals, not verified complete last matches across all competitions. Archive gaps and club aliases may reduce coverage.')
+
+
+def team_history_coverage(frame, league, season, cutoff, limit=50):
+    """Inventory archived season clubs and their earlier available league finals."""
+    from collections import Counter
+    if not isinstance(limit, int) or isinstance(limit, bool) or not 1 <= limit <= 100:
+        raise ValueError('Limit must be an integer between 1 and 100')
+    cutoff = pd.Timestamp(cutoff).strftime('%Y-%m-%d')
+    teams = []
+    if not frame.empty:
+        members = frame.loc[(frame.league == league) & (frame.season == season)]
+        clubs = sorted(set(members.home) | set(members.away))
+        for club in clubs:
+            history = last_matches(frame, league, club, cutoff, limit)
+            matches = history.pop('matches')
+            history.update(event_ids=[r['event_id'] for r in matches],
+                           source_kinds=dict(Counter(r.get('source_kind', 'unknown') for r in matches)),
+                           oldest_date=matches[-1]['date'] if matches else None,
+                           complete_history_verified=False)
+            teams.append(history)
+    return dict(league=league, season=season, cutoff_exclusive=cutoff, requested_per_team=limit,
+                teams=teams, archived_season_teams=len(teams),
+                teams_with_requested_history=sum(t['available'] == limit for t in teams),
+                missing_team_match_records=sum(t['missing'] for t in teams),
+                note='Club membership comes from archived season fixtures, not an official roster. Counts are available league finals before the cutoff, not verified last matches across competitions. Shared matches count once per participating team. No prediction-readiness or accuracy claim.')
