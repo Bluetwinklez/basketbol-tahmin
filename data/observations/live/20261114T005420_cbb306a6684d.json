@@ -1,0 +1,47 @@
+{
+  "captured_at_utc": "2026-11-14T00:54:20.763274+00:00",
+  "source_url": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard",
+  "provider": "espn",
+  "live_games": [
+    {
+      "event_id": "401909296",
+      "league": "NBA",
+      "home": "IND",
+      "away": "NY",
+      "home_score": 38,
+      "away_score": 33,
+      "period": 2,
+      "remaining_seconds": 446,
+      "regulation_minutes": 48,
+      "overtime": false,
+      "start_utc": "2026-11-14T00:00:00+00:00",
+      "captured_at_utc": "2026-11-14T00:54:20.763274+00:00",
+      "source_url": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard",
+      "source_updated_at": null,
+      "source_freshness_verified": false,
+      "used_for_prediction": false,
+      "note": "Public broadcaster scoreboard observation; source update timestamp unavailable, so live freshness is unverified."
+    },
+    {
+      "event_id": "401909297",
+      "league": "NBA",
+      "home": "ORL",
+      "away": "MIL",
+      "home_score": 34,
+      "away_score": 27,
+      "period": 2,
+      "remaining_seconds": 313,
+      "regulation_minutes": 48,
+      "overtime": false,
+      "start_utc": "2026-11-14T00:00:00+00:00",
+      "captured_at_utc": "2026-11-14T00:54:20.763274+00:00",
+      "source_url": "https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard",
+      "source_updated_at": null,
+      "source_freshness_verified": false,
+      "used_for_prediction": false,
+      "note": "Public broadcaster scoreboard observation; source update timestamp unavailable, so live freshness is unverified."
+    }
+  ],
+  "total_listed": 9,
+  "prediction_enabled": false
+}
