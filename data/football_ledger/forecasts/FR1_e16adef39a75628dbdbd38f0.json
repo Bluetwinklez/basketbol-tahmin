@@ -1,0 +1,125 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-11-14T13:44:05.131645+00:00",
+  "fixture": {
+    "event_id": "FR1_e16adef39a75628dbdbd38f0",
+    "league": "FR1",
+    "season": "2026-27",
+    "date": "2026-11-20",
+    "home": "es troyes ac",
+    "away": "le havre ac",
+    "home_name": "ES Troyes AC",
+    "away_name": "Le Havre AC",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/fr.1.json",
+    "captured_at_utc": "2026-11-14T13:44:01.969318+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null,
+    "original_date": null,
+    "date_correction_verified": null,
+    "license_url": null,
+    "source_sha256": null,
+    "fixture_verification_url": null,
+    "actual_start_utc": null,
+    "source_original_date": "2026-11-20",
+    "verified_start_utc": "2026-11-20T19:45:00+00:00",
+    "independent_fixture": {
+      "provider_event_id": "401876395",
+      "league": "FR1",
+      "season_year": 2026,
+      "start_utc": "2026-11-20T19:45:00+00:00",
+      "captured_at": "2026-11-13T14:51:06.062554+00:00",
+      "home_name": "Troyes",
+      "away_name": "Le Havre AC",
+      "provider_home_id": "170",
+      "provider_away_id": "3236",
+      "source_url": "https://www.espn.com/soccer/game/_/gameId/401876395",
+      "status": "scheduled",
+      "event_id": "FR1_e16adef39a75628dbdbd38f0",
+      "home": "es troyes ac",
+      "away": "le havre ac"
+    }
+  },
+  "prediction": {
+    "model": "football-opponent-v1",
+    "league": "FR1",
+    "home": "es troyes ac",
+    "away": "le havre ac",
+    "expected_home_goals": 1.3609064955730432,
+    "expected_away_goals": 1.075126969169687,
+    "probabilities": {
+      "home": 0.4332601561270311,
+      "draw": 0.27072976236272855,
+      "away": 0.2960100815102405
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.6993221103294429,
+      "2.5": 0.439676722177777,
+      "3.5": 0.2288417706765855
+    },
+    "both_teams_score": 0.48982462035177066,
+    "total_goals_80": [
+      1,
+      5
+    ],
+    "training_cutoff_exclusive": "2026-11-14",
+    "training_games": 902,
+    "prior_team_games": {
+      "es troyes ac": 10,
+      "le havre ac": 100
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "settings": {
+      "half_life_days": 180.0,
+      "shrinkage_games": 8.0,
+      "window_days": 1095
+    },
+    "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+    "low_score_rho": 0.0,
+    "research_candidate": false
+  },
+  "archive_sha256": "5abc89f3190b9e02d4ea6124e5a5866eb217807830373cf470b3738b975c6bb6",
+  "source_code_sha256": "4fe7ee8fbd6dd6b816e93b92e319b0791f8163cb25feb1ef429a8637d35ac115",
+  "requested_model_variant": "opponent",
+  "history_health": {
+    "spec": "football-history-health-v1",
+    "checked_at_utc": "2026-11-14T13:44:03.622326+00:00",
+    "information_cutoff_exclusive": "2026-11-14",
+    "teams": {
+      "es troyes ac": {
+        "prior_finals": 10,
+        "active_season_finals": 10,
+        "last_final_date": "2026-11-07",
+        "days_since_last_final": 7,
+        "unresolved_past_fixture_ids": []
+      },
+      "le havre ac": {
+        "prior_finals": 112,
+        "active_season_finals": 10,
+        "last_final_date": "2026-11-08",
+        "days_since_last_final": 6,
+        "unresolved_past_fixture_ids": []
+      }
+    },
+    "diagnostic_gate_passed": true,
+    "blocking_issues": [],
+    "max_history_age_days": 30,
+    "calendar_completeness_verified": false,
+    "note": "Diagnostic policy, not a validated success threshold. Unresolved fixtures may be postponed or missing results. Fresh source captures do not make old histories current."
+  },
+  "selection_policy": "Current-history diagnostic gate plus existing model issues; research only, no validated recommendation.",
+  "payload_sha256": "9442eecd9568ebc8c65f40e2d9125cfc50cbbbffe57ec8e5bef8248c7b168015"
+}

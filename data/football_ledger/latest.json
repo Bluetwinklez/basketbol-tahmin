@@ -1,7 +1,7 @@
 {
   "spec": "football-daily-v1",
-  "checked_at_utc": "2026-11-13T14:52:10.799387+00:00",
-  "collection_checked_at_utc": "2026-11-13T14:47:28.491585+00:00",
+  "checked_at_utc": "2026-11-14T13:48:38.705347+00:00",
+  "collection_checked_at_utc": "2026-11-14T13:44:01.969318+00:00",
   "source_errors": [
     {
       "league": "DE2",
@@ -1320,6 +1320,102 @@
         "verification": "community_source_final_not_official",
         "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Bundesliga"
       },
+      "fixture_review": null
+    },
+    {
+      "fixture": {
+        "event_id": "DE1_3e2390e999b8ece75e4456f2",
+        "league": "DE1",
+        "season": "2026-27",
+        "date": "2026-11-20",
+        "home": "fc bayern munchen",
+        "away": "1. fc koln",
+        "home_name": "FC Bayern München",
+        "away_name": "1. FC Köln",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/de.1.json",
+        "captured_at_utc": "2026-11-14T13:44:01.969318+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null,
+        "original_date": null,
+        "date_correction_verified": null,
+        "license_url": null,
+        "source_sha256": null,
+        "fixture_verification_url": null,
+        "actual_start_utc": null,
+        "source_original_date": "2026-11-20",
+        "verified_start_utc": "2026-11-20T19:30:00+00:00",
+        "independent_fixture": {
+          "provider_event_id": "401884736",
+          "league": "DE1",
+          "season_year": 2026,
+          "start_utc": "2026-11-20T19:30:00+00:00",
+          "captured_at": "2026-11-13T14:51:05.830139+00:00",
+          "home_name": "Bayern Munich",
+          "away_name": "FC Cologne",
+          "provider_home_id": "132",
+          "provider_away_id": "122",
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401884736",
+          "status": "scheduled",
+          "event_id": "DE1_3e2390e999b8ece75e4456f2",
+          "home": "fc bayern munchen",
+          "away": "1. fc koln"
+        }
+      },
+      "prediction": {
+        "model": "football-opponent-v1",
+        "league": "DE1",
+        "home": "fc bayern munchen",
+        "away": "1. fc koln",
+        "expected_home_goals": 3.4921987045195992,
+        "expected_away_goals": 0.9011942301111354,
+        "probabilities": {
+          "home": 0.8476314075824413,
+          "draw": 0.094950899466041,
+          "away": 0.057417692951517885
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          3,
+          0
+        ],
+        "over": {
+          "1.5": 0.9333445363723801,
+          "2.5": 0.8140710838807308,
+          "3.5": 0.6393993693921223
+        },
+        "both_teams_score": 0.5758404304006957,
+        "total_goals_80": [
+          2,
+          7
+        ],
+        "training_cutoff_exclusive": "2026-11-14",
+        "training_games": 900,
+        "prior_team_games": {
+          "fc bayern munchen": 100,
+          "1. fc koln": 66
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+        "low_score_rho": 0.0,
+        "research_candidate": false
+      },
+      "recorded_at_utc": "2026-11-14T13:44:05.083997+00:00",
+      "status": "pending",
+      "result": null,
       "fixture_review": null
     },
     {
@@ -16276,6 +16372,102 @@
     },
     {
       "fixture": {
+        "event_id": "FR1_e16adef39a75628dbdbd38f0",
+        "league": "FR1",
+        "season": "2026-27",
+        "date": "2026-11-20",
+        "home": "es troyes ac",
+        "away": "le havre ac",
+        "home_name": "ES Troyes AC",
+        "away_name": "Le Havre AC",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/fr.1.json",
+        "captured_at_utc": "2026-11-14T13:44:01.969318+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null,
+        "original_date": null,
+        "date_correction_verified": null,
+        "license_url": null,
+        "source_sha256": null,
+        "fixture_verification_url": null,
+        "actual_start_utc": null,
+        "source_original_date": "2026-11-20",
+        "verified_start_utc": "2026-11-20T19:45:00+00:00",
+        "independent_fixture": {
+          "provider_event_id": "401876395",
+          "league": "FR1",
+          "season_year": 2026,
+          "start_utc": "2026-11-20T19:45:00+00:00",
+          "captured_at": "2026-11-13T14:51:06.062554+00:00",
+          "home_name": "Troyes",
+          "away_name": "Le Havre AC",
+          "provider_home_id": "170",
+          "provider_away_id": "3236",
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401876395",
+          "status": "scheduled",
+          "event_id": "FR1_e16adef39a75628dbdbd38f0",
+          "home": "es troyes ac",
+          "away": "le havre ac"
+        }
+      },
+      "prediction": {
+        "model": "football-opponent-v1",
+        "league": "FR1",
+        "home": "es troyes ac",
+        "away": "le havre ac",
+        "expected_home_goals": 1.3609064955730432,
+        "expected_away_goals": 1.075126969169687,
+        "probabilities": {
+          "home": 0.4332601561270311,
+          "draw": 0.27072976236272855,
+          "away": 0.2960100815102405
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.6993221103294429,
+          "2.5": 0.439676722177777,
+          "3.5": 0.2288417706765855
+        },
+        "both_teams_score": 0.48982462035177066,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-11-14",
+        "training_games": 902,
+        "prior_team_games": {
+          "es troyes ac": 10,
+          "le havre ac": 100
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+        "low_score_rho": 0.0,
+        "research_candidate": false
+      },
+      "recorded_at_utc": "2026-11-14T13:44:05.131645+00:00",
+      "status": "pending",
+      "result": null,
+      "fixture_review": null
+    },
+    {
+      "fixture": {
         "event_id": "FR1_f23f9ab69c3d540ea9e3dbe6",
         "league": "FR1",
         "season": "2026-27",
@@ -26668,14 +26860,6 @@
       "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
     },
     {
-      "event_id": "DE1_3e2390e999b8ece75e4456f2",
-      "reason": "Fresh independent future scheduled fixture required"
-    },
-    {
-      "event_id": "FR1_e16adef39a75628dbdbd38f0",
-      "reason": "Fresh independent future scheduled fixture required"
-    },
-    {
       "event_id": "BR1_098d39bf8f02f7f0a10c2848",
       "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
     },
@@ -26717,167 +26901,151 @@
     },
     {
       "event_id": "DE1_04ae04c9577d8dc4c4420aa6",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "DE1_050591a43c743fe64549e4fb",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "DE1_0950cb78d84dd98d86d8680c",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "DE1_6b51ba9cc132887681b80f34",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "DE1_eef70585884381c3d931b12e",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "DE1_f51c852f2f5054d6331ab44f",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "EN1_0fae28f7912e9d12a18a1929",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "EN1_5a12260843bef919c27d0ac3",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "EN1_6771805eaeb4f61544686b99",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "EN1_80d00cb594c930e52f665edf",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
-    },
-    {
-      "event_id": "EN1_a5519dbbd7f5cad8942eb231",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "EN1_b32d832f7f4c81d73a40cb9a",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "EN1_cf0e4a1b68ffd3af9475250b",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "EN1_d2b916c602f69ab1a31a6d52",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "EN1_f2a06c2e2ac3e6544239cb65",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "EN1_fb22d609ea58b143f90b40b3",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "EN2_3a65fc7b5f4416c9021b7a1e",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
-    },
-    {
-      "event_id": "EN2_70bf7eae340fcae0f41790a9",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "EN2_b3cbd82e57fc5f7c58e38e17",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "EN2_b4e15d0ede8538f35b73fcd2",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "EN2_b8f2068bedc1055d3d1b5897",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "EN2_c0beab8d9e3d08b1d7164095",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "EN2_c112e96b33427e51a263af6b",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "EN2_d263da431e9d39ff82e01477",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
-    },
-    {
-      "event_id": "EN2_e30eeaf477b3223261ad29a4",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "EN2_ec5fb705c469c903787a8b4a",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
-    },
-    {
-      "event_id": "EN2_f0563cd38f4e69e3a37777be",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "FR1_022b68d8ff6fcb59fe450af2",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "FR1_0d636d3150f82ecb35082ea6",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "FR1_4ad5999ba1a6d869d91ef399",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "FR1_c77d747f52d6d2f1dd6638a9",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "FR1_e804150c48d7719cab9a6e53",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "IT1_3d9471fde8ee5b51dc835cfe",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "IT1_47d8739986ecf77a75101f64",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "IT1_9c574f7f4363d95539c35080",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "IT1_eb35c79c154757d34df3ca63",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "NL1_70b4bfcb68076a7220161e33",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "NL1_9cad894f6f2e0443139e97fb",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "NL1_a208c99770d09b46ca9e0ed3",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "NL1_c92fac83dcb5d1653cc67dab",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "NL1_d0b30144defc28c7f8195dd9",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "DE1_14cc48088addffaac0bfc145",
@@ -27010,9 +27178,33 @@
     {
       "event_id": "TR1_d16c2be04cb42c47ab28dfb4",
       "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "IT1_a7cddbb4a1b6ab553a1c4248",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "IT1_be8bd15ff7c97bd10a8aebad",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "record": "data/football_ledger/forecasts/EN1_a5519dbbd7f5cad8942eb231.json",
+      "reason": "Forecast was recorded after requested clock"
+    },
+    {
+      "record": "data/football_ledger/forecasts/EN2_70bf7eae340fcae0f41790a9.json",
+      "reason": "Forecast was recorded after requested clock"
+    },
+    {
+      "record": "data/football_ledger/forecasts/EN2_e30eeaf477b3223261ad29a4.json",
+      "reason": "Forecast was recorded after requested clock"
+    },
+    {
+      "record": "data/football_ledger/forecasts/EN2_f0563cd38f4e69e3a37777be.json",
+      "reason": "Forecast was recorded after requested clock"
     }
   ],
-  "pending": 39,
+  "pending": 41,
   "requested_model_variant": "opponent",
   "publisher_performance": {
     "games": 214,

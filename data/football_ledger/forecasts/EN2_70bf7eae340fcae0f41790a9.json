@@ -1,0 +1,125 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-11-14T13:48:40.142273+00:00",
+  "fixture": {
+    "event_id": "EN2_70bf7eae340fcae0f41790a9",
+    "league": "EN2",
+    "season": "2026-27",
+    "date": "2026-11-21",
+    "home": "southampton fc",
+    "away": "derby county fc",
+    "home_name": "Southampton FC",
+    "away_name": "Derby County FC",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/en.2.json",
+    "captured_at_utc": "2026-11-14T13:44:01.969318+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null,
+    "original_date": null,
+    "date_correction_verified": null,
+    "license_url": null,
+    "source_sha256": null,
+    "fixture_verification_url": null,
+    "actual_start_utc": null,
+    "source_original_date": "2026-11-21",
+    "verified_start_utc": "2026-11-21T12:30:00+00:00",
+    "independent_fixture": {
+      "provider_event_id": "401880153",
+      "league": "EN2",
+      "season_year": 2026,
+      "start_utc": "2026-11-21T12:30:00+00:00",
+      "captured_at": "2026-11-14T13:47:35.881973+00:00",
+      "home_name": "Southampton",
+      "away_name": "Derby County",
+      "provider_home_id": "376",
+      "provider_away_id": "374",
+      "source_url": "https://www.espn.com/soccer/game/_/gameId/401880153",
+      "status": "scheduled",
+      "event_id": "EN2_70bf7eae340fcae0f41790a9",
+      "home": "southampton fc",
+      "away": "derby county fc"
+    }
+  },
+  "prediction": {
+    "model": "football-opponent-v1",
+    "league": "EN2",
+    "home": "southampton fc",
+    "away": "derby county fc",
+    "expected_home_goals": 2.124231841421704,
+    "expected_away_goals": 0.9024152694342895,
+    "probabilities": {
+      "home": 0.6543994362809571,
+      "draw": 0.1966560835752962,
+      "away": 0.14894448014374667
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      2,
+      0
+    ],
+    "over": {
+      "1.5": 0.8047965758889968,
+      "2.5": 0.5827533946434352,
+      "3.5": 0.35873794364271794
+    },
+    "both_teams_score": 0.5233642906339547,
+    "total_goals_80": [
+      1,
+      5
+    ],
+    "training_cutoff_exclusive": "2026-11-14",
+    "training_games": 1659,
+    "prior_team_games": {
+      "southampton fc": 96,
+      "derby county fc": 107
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "settings": {
+      "half_life_days": 180.0,
+      "shrinkage_games": 8.0,
+      "window_days": 1095
+    },
+    "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+    "low_score_rho": 0.0,
+    "research_candidate": false
+  },
+  "archive_sha256": "5abc89f3190b9e02d4ea6124e5a5866eb217807830373cf470b3738b975c6bb6",
+  "source_code_sha256": "4fe7ee8fbd6dd6b816e93b92e319b0791f8163cb25feb1ef429a8637d35ac115",
+  "requested_model_variant": "opponent",
+  "history_health": {
+    "spec": "football-history-health-v1",
+    "checked_at_utc": "2026-11-14T13:48:38.705347+00:00",
+    "information_cutoff_exclusive": "2026-11-14",
+    "teams": {
+      "southampton fc": {
+        "prior_finals": 158,
+        "active_season_finals": 15,
+        "last_final_date": "2026-11-07",
+        "days_since_last_final": 7,
+        "unresolved_past_fixture_ids": []
+      },
+      "derby county fc": {
+        "prior_finals": 199,
+        "active_season_finals": 15,
+        "last_final_date": "2026-11-06",
+        "days_since_last_final": 8,
+        "unresolved_past_fixture_ids": []
+      }
+    },
+    "diagnostic_gate_passed": true,
+    "blocking_issues": [],
+    "max_history_age_days": 30,
+    "calendar_completeness_verified": false,
+    "note": "Diagnostic policy, not a validated success threshold. Unresolved fixtures may be postponed or missing results. Fresh source captures do not make old histories current."
+  },
+  "selection_policy": "Current-history diagnostic gate plus existing model issues; research only, no validated recommendation.",
+  "payload_sha256": "d074f63b3b8d61c1bdd918c039259e1715d925e5118f3bf74d77fb5f1490addc"
+}
