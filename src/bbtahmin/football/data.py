@@ -12,12 +12,12 @@ from pathlib import Path
 import pandas as pd
 
 ROOT = Path('data/football')
-LEAGUES = {'TR1': 'Turkish Süper Lig', 'EN1': 'Premier League', 'EN2': 'Championship',
+LEAGUES = {'TR2': 'Turkish 1. Lig', 'TR1': 'Turkish Süper Lig', 'EN1': 'Premier League', 'EN2': 'Championship',
            'DE1': 'Bundesliga', 'DE2': '2. Bundesliga', 'ES1': 'La Liga', 'ES2': 'Segunda División',
            'IT1': 'Serie A', 'IT2': 'Serie B', 'FR1': 'Ligue 1', 'FR2': 'Ligue 2',
            'NL1': 'Eredivisie', 'PT1': 'Primeira Liga', 'AT1': 'Austrian Bundesliga',
            'UY1': 'Uruguay Primera División', 'VE1': 'Venezuela Primera División', 'SV1': 'El Salvador Primera División', 'HN1': 'Honduras Liga Nacional', 'BO1': 'Bolivia División Profesional', 'AR2': 'Argentine Primera Nacional', 'MX2': 'Liga de Expansión MX', 'US1': 'Major League Soccer', 'JP1': 'Japan J1 League', 'CN1': 'Chinese Super League', 'BR1': 'Brazilian Série A', 'AR1': 'Argentine Primera División', 'CO1': 'Colombian Primera A', 'BR2': 'Brazilian Série B', 'BE1': 'Belgian Pro League', 'GR1': 'Greek Super League', 'SC1': 'Scottish Premiership'}
-JSON_CODES = {c: c[:2].lower()+'.'+c[2:] for c in LEAGUES if c not in ('TR1', 'BR2', 'BR1', 'AR1', 'CO1', 'US1', 'JP1', 'CN1', 'AR2', 'MX2', 'UY1', 'VE1', 'SV1', 'HN1', 'BO1')}
+JSON_CODES = {c: c[:2].lower()+'.'+c[2:] for c in LEAGUES if c not in ('TR2', 'TR1', 'BR2', 'BR1', 'AR1', 'CO1', 'US1', 'JP1', 'CN1', 'AR2', 'MX2', 'UY1', 'VE1', 'SV1', 'HN1', 'BO1')}
 JSON_CODES['SC1'] = 'sco.1'
 # Explicit identity aliases only; no fuzzy cross-club merges.
 ALIASES = {'kasimpasa sk': 'kasimpasa', 'kasimpasa': 'kasimpasa', 'konyaspor': 'atiker konyaspor',
@@ -121,8 +121,9 @@ def parse_turkey(text, season, source, captured):
 def parse_text(text, code, season, source, captured):
     """Two documented Football.TXT layouts; reject unparsed match-like lines."""
     label = r'(?:Süper Lig|Super Lig)' if code == 'TR1' else (r'Brasileiro Série A' if code == 'BR1' else r'Brasileiro Série B')
+    if code=='TR2': label=r'Turkish 1\. Lig'
     if code=='MX2': label=r'(?:Liga de Expansión MX|Ascenso MX)'
-    if code not in ('TR1', 'BR2', 'BR1', 'MX2') or not re.search(label, text.splitlines()[0]) or season[:4] not in text.splitlines()[0]:
+    if code not in ('TR2', 'TR1', 'BR2', 'BR1', 'MX2') or not re.search(label, text.splitlines()[0]) or season[:4] not in text.splitlines()[0]:
         raise ValueError('Wrong competition/season')
     result, day, year, previous_month = [], None, int(season[:4]), 0
     months = {m: i+1 for i,m in enumerate('Jan Feb Mar Apr May Jun Jul Aug Sep Oct Nov Dec'.split())}
@@ -133,6 +134,7 @@ def parse_text(text, code, season, source, captured):
             month = months[date[1]]
             year = int(date[3]) if date[3] else int(season[:4]) + (len(season)>4 and month < 7)
             if code == 'BR2' and season == '2020' and month == 1 and not date[3]: year = 2021
+            if code == 'TR2' and season == '2019-20' and month == 7 and not date[3]: year = 2020
             day = f'{year:04d}-{month:02d}-{int(date[2]):02d}'; previous_month=month
             continue
         if not line or line.startswith(('#', '▪', '(', ')', '=')) or not raw[:1].isspace(): continue
