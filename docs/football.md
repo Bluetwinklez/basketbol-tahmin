@@ -142,3 +142,32 @@ complete recent history, all-competition coverage, official results or predictio
 readiness. Promoted clubs and source gaps need separate licensed backfills; the
 report does not invent missing matches. New imported records in this change: zero.
 No model evaluation or performance metric is changed by this inventory.
+
+## Turkish second-tier historical expansion (2026-11-14)
+
+TR2 (Turkish 1. Lig) now has 306 normal-season finals for 2019–20, stored separately
+from TR1 and basketball. The source is OpenFootball Europe, CC0-1.0, pinned at
+`63df627f3c87ce71708f016522ea236cf74332c3`, path `turkey/2019-20_tr2.txt`.
+Archive metadata records its source URL, capture time and normalized source-text
+SHA-256. These are community results, not official federation verification.
+
+The importer requires the explicit playoff boundary and 306 games across 18
+clubs before writing. Five playoff games (including a penalty final) are excluded.
+July dates in this specific pandemic-extended season belong to 2020, not 2019.
+Duplicate/conflicting records retain the existing archive. Manual backfill:
+`PYTHONPATH=src python scripts/collect_turkish_second.py`. It is intentionally
+excluded from daily refresh and does not imply current TR2 coverage. It does not
+fill the current Amed/Çorum/Kocaelispor gaps or pool TR2 into their TR1 histories.
+
+Reproduce evaluation with `PYTHONPATH=src python scripts/evaluate_turkish_second.py`.
+Evidence is in `docs/kanit/football/TR2_2019-20_evaluation.json`. All four fixed
+candidates use identical monthly earlier-only cohorts: 194 of 306 games (63.40%);
+112 early games lack the required 100 earlier league finals and are excluded.
+The report includes 1/X/2 accuracy/log loss/Brier, goal-total and BTTS metrics,
+calibration bins, score errors, interval coverage and exact comparator event IDs.
+Winner accuracy is 43.81% baseline, 46.39% opponent/ensemble and 46.91% opponent-DC,
+versus 42.27% always-home. However, all candidates trail always-under (54.64%) on
+2.5-goal accuracy (52.06–54.12%). One historical season is limited retrospective
+evidence with unknown publication history, not prospective success or proof that
+more data improves the existing models. No model is promoted and no frozen
+prediction is changed.
