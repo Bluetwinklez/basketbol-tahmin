@@ -171,3 +171,22 @@ versus 42.27% always-home. However, all candidates trail always-under (54.64%) o
 evidence with unknown publication history, not prospective success or proof that
 more data improves the existing models. No model is promoted and no frozen
 prediction is changed.
+
+### Historical TR2 import integrity (2026-11-15)
+
+The 2019–20 regular-season importer now requires every directed pairing exactly
+once (18 clubs, 17 home and 17 away games each), final scores, the exact league
+and season, and dates within the archived regular-season window
+(2019-08-16 through 2020-07-19). A 306-row snapshot with a missing pairing and a
+replacement duplicate on another date previously passed the row-count guard.
+It now fails before any archive write, preserving an existing snapshot byte for
+byte. The guard is deliberately specific to this historical competition format.
+
+Run `PYTHONPATH=src python scripts/audit_turkish_second.py` offline to reproduce
+`docs/kanit/football/TR2_2019-20_structure.json`. The retained archive passes all
+306 pairing checks. No matches were added, no source was downloaded, no frozen
+prediction or result was changed, and no model was promoted. Structural
+completeness is not independent official score verification. The paired
+chronological evaluation and seven-market calibration remain in
+`TR2_2019-20_evaluation.json`; their limited historical findings are unchanged.
+Current-season source gaps remain separate from this historical integrity fix.
