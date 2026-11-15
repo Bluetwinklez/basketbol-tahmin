@@ -1,6 +1,6 @@
 # Daily basketball research
 
-Checked: 2026-11-15T12:23:35.948464+00:00
+Checked: 2026-11-15T14:16:06.884567+00:00
 
 | Tipoff (Istanbul) | League | Fixture | Score forecast | Home win | Data gate / probability filter |
 |---|---|---|---|---|---|
@@ -68,7 +68,9 @@ Checked: 2026-11-15T12:23:35.948464+00:00
 | 21 Nov 14:00 | UKR | KHARKIVSKI SOKOLY (Kharkiv) – DNIPRO (Dnipro) | 77.9–78.9 | 37.5% | not selected |
 | 21 Nov 17:00 | UKR | KYIV-BASKET (Kyiv) – ZAPORIZHZHYA (Zaporizhzhya) | 77.0–72.8 | 67.4% | passed |
 | 22 Nov 14:00 | UKR | KHARKIVSKI SOKOLY (Kharkiv) – ZAPORIZHZHYA (Zaporizhzhya) | 80.8–73.3 | 71.7% | passed |
-| 15 Nov 15:30 | TR_BSL | Yukatel Denizli Basket – Glint Çayırova Belediyesi | 85.4–83.6 | 52.0% | not selected |
+| 22 Nov 16:00 | UKR | PRYKARPATTIA-GOVERLA-KFV (Iv-Frankivsk) – NIKO-BASKET (Mykolaiv) | 78.4–79.9 | 54.7% | not selected |
+| 22 Nov 17:00 | UKR | KHMELNYTSKYI (Khmelnytskyi) – CHERKASKI MAVPY (Cherkasy) | 82.2–72.6 | 67.4% | passed |
+| 22 Nov 17:00 | UKR | KYIV-BASKET (Kyiv) – DNIPRO (Dnipro) | 74.2–78.5 | 32.9% | passed |
 | 15 Nov 18:00 | TR_BSL | Beşiktaş Basketbol – Bursaspor Basketbol | 89.8–77.8 | 81.4% | passed |
 | 15 Nov 20:30 | TR_BSL | Fenerbahçe Tarfin – Anadolu Efes | 85.8–80.5 | 65.3% | passed |
 | 16 Nov 03:00 | ARG_LNB | LA UNION FSA – ATENAS (C) | 83.7–76.9 | 69.1% | passed |
@@ -84,7 +86,7 @@ Checked: 2026-11-15T12:23:35.948464+00:00
 | 21 Nov 06:00 | ARG_LNB | LA UNION FSA – INDEPENDIENTE (O) | 83.9–81.0 | 57.6% | not selected |
 | 21 Nov 17:30 | ARG_LNB | QUIMSA – FERRO | 87.2–75.9 | 79.8% | passed |
 
-Settled: 276; pending: 127; winner accuracy: 68.5%.
+Settled: 276; pending: 130; winner accuracy: 68.5%.
 
 | Fixture ID | Status | Final | Winner correct | Team MAE | Total error | Margin error | Total / margin in 80% |
 |---|---|---|---|---|---|---|---|
@@ -174,6 +176,7 @@ Settled: 276; pending: 127; winner accuracy: 68.5%.
 | ABA_2026_54 | final | 69–89 | True | 9.35 | 14.67 | 18.71 | True / False |
 | ECW_F135322 | final | 72–62 | False | 14.47 | 10.10 | 28.95 | True / False |
 | ECW_F135312 | final | 72–91 | True | 7.82 | 15.64 | 6.37 | True / True |
+| UKR_2026_N55_UKR_2226_UKR_4638193 | pending | — | — | — | — | — | — |
 | UKR_2026_N49_UKR_4680419_UKR_2233 | final | 72–82 | False | 6.92 | 5.09 | 13.84 | True / True |
 | KBL_S49G01N63 | final | 79–86 | True | 3.35 | 5.70 | 6.70 | True / True |
 | ARG_LNB_de077cd7bf7843bd130312f0 | final | 57–58 | False | 19.38 | 38.75 | 3.30 | False / True |
@@ -342,6 +345,7 @@ Settled: 276; pending: 127; winner accuracy: 68.5%.
 | E2026_76 | final | 80–75 | True | 8.68 | 17.36 | 8.57 | True / True |
 | ECW_F135335 | final | 82–61 | True | 2.71 | 2.78 | 5.43 | True / True |
 | FEC_F135713 | pending | — | — | — | — | — | — |
+| UKR_2026_N56_UKR_4704541_UKR_21058 | pending | — | — | — | — | — | — |
 | KBL_S49G01N53 | final | 76–82 | False | 6.74 | 3.71 | 13.49 | True / True |
 | FEC_F135829 | final | 73–94 | True | 6.36 | 3.49 | 12.71 | True / True |
 | ABA_2026_72 | final | 104–100 | False | 19.86 | 39.73 | 13.08 | False / True |
@@ -457,6 +461,7 @@ Settled: 276; pending: 127; winner accuracy: 68.5%.
 | KBL_S49G01N70 | final | 89–83 | True | 1.70 | 1.68 | 3.39 | True / True |
 | E2026_78 | final | 82–75 | False | 5.93 | 11.85 | 8.67 | True / True |
 | UKR_2026_N39_UKR_334833_UKR_21058 | final | 74–65 | True | 9.72 | 19.43 | 4.37 | True / True |
+| UKR_2026_N58_UKR_4680419_UKR_2228 | pending | — | — | — | — | — | — |
 | ARG_LNB_c3fac9213d7ee139bb554581 | pending | — | — | — | — | — | — |
 | ARG_LNB_2bc6c20f33b962fd2ac804df | final | 76–85 | False | 5.04 | 0.05 | 10.07 | True / True |
 | FEC_F135678 | final | 112–92 | True | 18.66 | 37.31 | 12.02 | False / True |

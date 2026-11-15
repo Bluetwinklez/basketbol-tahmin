@@ -1,7 +1,7 @@
 {
   "spec": "football-daily-v1",
-  "checked_at_utc": "2026-11-15T12:24:52.063192+00:00",
-  "collection_checked_at_utc": "2026-11-15T12:18:12.388271+00:00",
+  "checked_at_utc": "2026-11-15T14:17:18.011553+00:00",
+  "collection_checked_at_utc": "2026-11-15T14:12:34.153556+00:00",
   "source_errors": [
     {
       "league": "DE2",
@@ -5822,6 +5822,102 @@
     },
     {
       "fixture": {
+        "event_id": "EN1_b32d832f7f4c81d73a40cb9a",
+        "league": "EN1",
+        "season": "2026-27",
+        "date": "2026-11-22",
+        "home": "hull city afc",
+        "away": "brighton & hove albion fc",
+        "home_name": "Hull City AFC",
+        "away_name": "Brighton & Hove Albion FC",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/en.1.json",
+        "captured_at_utc": "2026-11-15T14:12:34.153556+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null,
+        "original_date": null,
+        "date_correction_verified": null,
+        "license_url": null,
+        "source_sha256": null,
+        "fixture_verification_url": null,
+        "actual_start_utc": null,
+        "source_original_date": "2026-11-21",
+        "verified_start_utc": "2026-11-22T14:00:00+00:00",
+        "independent_fixture": {
+          "provider_event_id": "401879234",
+          "league": "EN1",
+          "season_year": 2026,
+          "start_utc": "2026-11-22T14:00:00+00:00",
+          "captured_at": "2026-11-15T12:23:41.859489+00:00",
+          "home_name": "Hull City",
+          "away_name": "Brighton & Hove Albion",
+          "provider_home_id": "306",
+          "provider_away_id": "331",
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401879234",
+          "status": "scheduled",
+          "event_id": "EN1_b32d832f7f4c81d73a40cb9a",
+          "home": "hull city afc",
+          "away": "brighton & hove albion fc"
+        }
+      },
+      "prediction": {
+        "model": "football-opponent-v1",
+        "league": "EN1",
+        "home": "hull city afc",
+        "away": "brighton & hove albion fc",
+        "expected_home_goals": 1.0991932242500058,
+        "expected_away_goals": 1.387994384220565,
+        "probabilities": {
+          "home": 0.297566593951875,
+          "draw": 0.26740990659400354,
+          "away": 0.43502349945412155
+        },
+        "predicted_outcome": "away",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.7100631214795111,
+          "2.5": 0.4528961199620681,
+          "3.5": 0.23968859346816243
+        },
+        "both_teams_score": 0.5004283704043888,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-11-15",
+        "training_games": 1120,
+        "prior_team_games": {
+          "hull city afc": 10,
+          "brighton & hove albion fc": 112
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+        "low_score_rho": 0.0,
+        "research_candidate": false
+      },
+      "recorded_at_utc": "2026-11-15T14:12:37.749951+00:00",
+      "status": "pending",
+      "result": null,
+      "fixture_review": null
+    },
+    {
+      "fixture": {
         "event_id": "EN1_c02c5ece2474ccb4ba560438",
         "league": "EN1",
         "season": "2026-27",
@@ -10687,6 +10783,102 @@
     },
     {
       "fixture": {
+        "event_id": "EN2_9c86d624f540b11c747531c7",
+        "league": "EN2",
+        "season": "2026-27",
+        "date": "2026-11-22",
+        "home": "burnley fc",
+        "away": "blackburn rovers fc",
+        "home_name": "Burnley FC",
+        "away_name": "Blackburn Rovers FC",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/en.2.json",
+        "captured_at_utc": "2026-11-15T12:18:12.388271+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null,
+        "original_date": null,
+        "date_correction_verified": null,
+        "license_url": null,
+        "source_sha256": null,
+        "fixture_verification_url": null,
+        "actual_start_utc": null,
+        "source_original_date": "2026-11-22",
+        "verified_start_utc": "2026-11-22T12:00:00+00:00",
+        "independent_fixture": {
+          "provider_event_id": "401880159",
+          "league": "EN2",
+          "season_year": 2026,
+          "start_utc": "2026-11-22T12:00:00+00:00",
+          "captured_at": "2026-11-15T12:23:42.526761+00:00",
+          "home_name": "Burnley",
+          "away_name": "Blackburn Rovers",
+          "provider_home_id": "379",
+          "provider_away_id": "365",
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401880159",
+          "status": "scheduled",
+          "event_id": "EN2_9c86d624f540b11c747531c7",
+          "home": "burnley fc",
+          "away": "blackburn rovers fc"
+        }
+      },
+      "prediction": {
+        "model": "football-opponent-v1",
+        "league": "EN2",
+        "home": "burnley fc",
+        "away": "blackburn rovers fc",
+        "expected_home_goals": 1.573762973765582,
+        "expected_away_goals": 1.2483313098550817,
+        "probabilities": {
+          "home": 0.44926563976724954,
+          "draw": 0.24792381198681696,
+          "away": 0.3028105482459337
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.772657086556194,
+          "2.5": 0.5357963542599962,
+          "3.5": 0.31298191471756126
+        },
+        "both_teams_score": 0.5652341729766183,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-11-15",
+        "training_games": 1659,
+        "prior_team_games": {
+          "burnley fc": 61,
+          "blackburn rovers fc": 137
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+        "low_score_rho": 0.0,
+        "research_candidate": false
+      },
+      "recorded_at_utc": "2026-11-15T12:24:53.553332+00:00",
+      "status": "pending",
+      "result": null,
+      "fixture_review": null
+    },
+    {
+      "fixture": {
         "event_id": "EN2_a393bd88f0e2f56c145bc3c4",
         "league": "EN2",
         "season": "2026-27",
@@ -13392,6 +13584,102 @@
     },
     {
       "fixture": {
+        "event_id": "ES1_029c2b45bea91132258aa6cb",
+        "league": "ES1",
+        "season": "2026-27",
+        "date": "2026-11-22",
+        "home": "fc barcelona",
+        "away": "villarreal cf",
+        "home_name": "FC Barcelona",
+        "away_name": "Villarreal CF",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/es.1.json",
+        "captured_at_utc": "2026-11-15T14:12:34.153556+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null,
+        "original_date": null,
+        "date_correction_verified": null,
+        "license_url": null,
+        "source_sha256": null,
+        "fixture_verification_url": null,
+        "actual_start_utc": null,
+        "source_original_date": "2026-11-22",
+        "verified_start_utc": "2026-11-22T13:00:00+00:00",
+        "independent_fixture": {
+          "provider_event_id": "401882804",
+          "league": "ES1",
+          "season_year": 2026,
+          "start_utc": "2026-11-22T13:00:00+00:00",
+          "captured_at": "2026-11-15T12:23:43.686044+00:00",
+          "home_name": "Barcelona",
+          "away_name": "Villarreal",
+          "provider_home_id": "83",
+          "provider_away_id": "102",
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401882804",
+          "status": "scheduled",
+          "event_id": "ES1_029c2b45bea91132258aa6cb",
+          "home": "fc barcelona",
+          "away": "villarreal cf"
+        }
+      },
+      "prediction": {
+        "model": "football-opponent-v1",
+        "league": "ES1",
+        "home": "fc barcelona",
+        "away": "villarreal cf",
+        "expected_home_goals": 2.8290350860151112,
+        "expected_away_goals": 1.1372996465782537,
+        "probabilities": {
+          "home": 0.7240315910214852,
+          "draw": 0.15046139196709696,
+          "away": 0.1255070170114178
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          2,
+          1
+        ],
+        "over": {
+          "1.5": 0.9059240310605691,
+          "2.5": 0.7569222558548144,
+          "3.5": 0.5599252837825969
+        },
+        "both_teams_score": 0.6391890994637656,
+        "total_goals_80": [
+          2,
+          7
+        ],
+        "training_cutoff_exclusive": "2026-11-15",
+        "training_games": 1121,
+        "prior_team_games": {
+          "fc barcelona": 112,
+          "villarreal cf": 112
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+        "low_score_rho": 0.0,
+        "research_candidate": false
+      },
+      "recorded_at_utc": "2026-11-15T14:12:37.799431+00:00",
+      "status": "pending",
+      "result": null,
+      "fixture_review": null
+    },
+    {
+      "fixture": {
         "event_id": "ES1_0a4ef4edd6f6b5b244e94cbb",
         "league": "ES1",
         "season": "2026-27",
@@ -14569,6 +14857,102 @@
     },
     {
       "fixture": {
+        "event_id": "ES1_51e2a83513c23f347a0a3798",
+        "league": "ES1",
+        "season": "2026-27",
+        "date": "2026-11-21",
+        "home": "sevilla fc",
+        "away": "real betis balompie",
+        "home_name": "Sevilla FC",
+        "away_name": "Real Betis Balompié",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/es.1.json",
+        "captured_at_utc": "2026-11-15T12:18:12.388271+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null,
+        "original_date": null,
+        "date_correction_verified": null,
+        "license_url": null,
+        "source_sha256": null,
+        "fixture_verification_url": null,
+        "actual_start_utc": null,
+        "source_original_date": "2026-11-22",
+        "verified_start_utc": "2026-11-21T17:30:00+00:00",
+        "independent_fixture": {
+          "provider_event_id": "401882797",
+          "league": "ES1",
+          "season_year": 2026,
+          "start_utc": "2026-11-21T17:30:00+00:00",
+          "captured_at": "2026-11-15T12:23:43.730423+00:00",
+          "home_name": "Sevilla",
+          "away_name": "Real Betis",
+          "provider_home_id": "243",
+          "provider_away_id": "244",
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401882797",
+          "status": "scheduled",
+          "event_id": "ES1_51e2a83513c23f347a0a3798",
+          "home": "sevilla fc",
+          "away": "real betis balompie"
+        }
+      },
+      "prediction": {
+        "model": "football-opponent-v1",
+        "league": "ES1",
+        "home": "sevilla fc",
+        "away": "real betis balompie",
+        "expected_home_goals": 1.3916198475054387,
+        "expected_away_goals": 1.4584461981253494,
+        "probabilities": {
+          "home": 0.359925863255596,
+          "draw": 0.250082222585824,
+          "away": 0.3899919141585799
+        },
+        "predicted_outcome": "away",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.7773102524377598,
+          "2.5": 0.5423946317820961,
+          "3.5": 0.31921962044243307
+        },
+        "both_teams_score": 0.5765709290387239,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-11-15",
+        "training_games": 1121,
+        "prior_team_games": {
+          "sevilla fc": 113,
+          "real betis balompie": 112
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+        "low_score_rho": 0.0,
+        "research_candidate": false
+      },
+      "recorded_at_utc": "2026-11-15T12:24:53.614140+00:00",
+      "status": "pending",
+      "result": null,
+      "fixture_review": null
+    },
+    {
+      "fixture": {
         "event_id": "ES1_8ad3fbe3cf6a4bd5016afbba",
         "league": "ES1",
         "season": "2026-27",
@@ -15495,6 +15879,102 @@
     },
     {
       "fixture": {
+        "event_id": "ES1_c91b9ef5c8cc6f87585e6635",
+        "league": "ES1",
+        "season": "2026-27",
+        "date": "2026-11-21",
+        "home": "deportivo alaves",
+        "away": "rc deportivo la coruna",
+        "home_name": "Deportivo Alavés",
+        "away_name": "RC Deportivo La Coruña",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/es.1.json",
+        "captured_at_utc": "2026-11-15T12:18:12.388271+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null,
+        "original_date": null,
+        "date_correction_verified": null,
+        "license_url": null,
+        "source_sha256": null,
+        "fixture_verification_url": null,
+        "actual_start_utc": null,
+        "source_original_date": "2026-11-22",
+        "verified_start_utc": "2026-11-21T13:00:00+00:00",
+        "independent_fixture": {
+          "provider_event_id": "401882806",
+          "league": "ES1",
+          "season_year": 2026,
+          "start_utc": "2026-11-21T13:00:00+00:00",
+          "captured_at": "2026-11-15T12:23:43.730423+00:00",
+          "home_name": "Alavés",
+          "away_name": "Deportivo",
+          "provider_home_id": "96",
+          "provider_away_id": "90",
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401882806",
+          "status": "scheduled",
+          "event_id": "ES1_c91b9ef5c8cc6f87585e6635",
+          "home": "deportivo alaves",
+          "away": "rc deportivo la coruna"
+        }
+      },
+      "prediction": {
+        "model": "football-opponent-v1",
+        "league": "ES1",
+        "home": "deportivo alaves",
+        "away": "rc deportivo la coruna",
+        "expected_home_goals": 1.3290852583942863,
+        "expected_away_goals": 1.118517250251234,
+        "probabilities": {
+          "home": 0.4147657495208915,
+          "draw": 0.2715576853901442,
+          "away": 0.31367656508896424
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.7017798909664186,
+          "2.5": 0.44267744056788444,
+          "3.5": 0.2312841713706667
+        },
+        "both_teams_score": 0.4950174777377172,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-11-15",
+        "training_games": 1121,
+        "prior_team_games": {
+          "deportivo alaves": 112,
+          "rc deportivo la coruna": 12
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+        "low_score_rho": 0.0,
+        "research_candidate": false
+      },
+      "recorded_at_utc": "2026-11-15T12:24:53.626294+00:00",
+      "status": "pending",
+      "result": null,
+      "fixture_review": null
+    },
+    {
+      "fixture": {
         "event_id": "ES1_cac5196900d198454c368b03",
         "league": "ES1",
         "season": "2026-27",
@@ -15733,6 +16213,102 @@
         "verification": "community_source_final_not_official",
         "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_La_Liga"
       },
+      "fixture_review": null
+    },
+    {
+      "fixture": {
+        "event_id": "ES1_e42f8f06e53fd0e9c4ff1b11",
+        "league": "ES1",
+        "season": "2026-27",
+        "date": "2026-11-21",
+        "home": "real madrid cf",
+        "away": "rc celta de vigo",
+        "home_name": "Real Madrid CF",
+        "away_name": "RC Celta de Vigo",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/es.1.json",
+        "captured_at_utc": "2026-11-15T12:18:12.388271+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null,
+        "original_date": null,
+        "date_correction_verified": null,
+        "license_url": null,
+        "source_sha256": null,
+        "fixture_verification_url": null,
+        "actual_start_utc": null,
+        "source_original_date": "2026-11-22",
+        "verified_start_utc": "2026-11-21T20:00:00+00:00",
+        "independent_fixture": {
+          "provider_event_id": "401882798",
+          "league": "ES1",
+          "season_year": 2026,
+          "start_utc": "2026-11-21T20:00:00+00:00",
+          "captured_at": "2026-11-15T12:23:43.730423+00:00",
+          "home_name": "Real Madrid",
+          "away_name": "Celta Vigo",
+          "provider_home_id": "86",
+          "provider_away_id": "85",
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401882798",
+          "status": "scheduled",
+          "event_id": "ES1_e42f8f06e53fd0e9c4ff1b11",
+          "home": "real madrid cf",
+          "away": "rc celta de vigo"
+        }
+      },
+      "prediction": {
+        "model": "football-opponent-v1",
+        "league": "ES1",
+        "home": "real madrid cf",
+        "away": "rc celta de vigo",
+        "expected_home_goals": 2.0382186436987455,
+        "expected_away_goals": 0.744048540985038,
+        "probabilities": {
+          "home": 0.6760583634082863,
+          "draw": 0.19795918214086755,
+          "away": 0.12598245445084633
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          2,
+          0
+        ],
+        "over": {
+          "1.5": 0.7658851730546243,
+          "2.5": 0.5263085793252485,
+          "3.5": 0.3041198810080618
+        },
+        "both_teams_score": 0.45645126405627606,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-11-15",
+        "training_games": 1121,
+        "prior_team_games": {
+          "real madrid cf": 112,
+          "rc celta de vigo": 112
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+        "low_score_rho": 0.0,
+        "research_candidate": false
+      },
+      "recorded_at_utc": "2026-11-15T12:24:53.638151+00:00",
+      "status": "pending",
+      "result": null,
       "fixture_review": null
     },
     {
@@ -18235,6 +18811,102 @@
         "status": "quarantined_date_conflict",
         "note": "Explicit prior audit identity review. Original forecast remains unchanged; provider date is not automatic rescheduling authority."
       }
+    },
+    {
+      "fixture": {
+        "event_id": "FR1_b98320705e816cf814f4df72",
+        "league": "FR1",
+        "season": "2026-27",
+        "date": "2026-11-22",
+        "home": "paris fc",
+        "away": "angers sco",
+        "home_name": "Paris FC",
+        "away_name": "Angers SCO",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/fr.1.json",
+        "captured_at_utc": "2026-11-15T14:12:34.153556+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null,
+        "original_date": null,
+        "date_correction_verified": null,
+        "license_url": null,
+        "source_sha256": null,
+        "fixture_verification_url": null,
+        "actual_start_utc": null,
+        "source_original_date": "2026-11-22",
+        "verified_start_utc": "2026-11-22T14:00:00+00:00",
+        "independent_fixture": {
+          "provider_event_id": "401876397",
+          "league": "FR1",
+          "season_year": 2026,
+          "start_utc": "2026-11-22T14:00:00+00:00",
+          "captured_at": "2026-11-15T12:23:44.254738+00:00",
+          "home_name": "Paris FC",
+          "away_name": "Angers",
+          "provider_home_id": "6851",
+          "provider_away_id": "7868",
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401876397",
+          "status": "scheduled",
+          "event_id": "FR1_b98320705e816cf814f4df72",
+          "home": "paris fc",
+          "away": "angers sco"
+        }
+      },
+      "prediction": {
+        "model": "football-opponent-v1",
+        "league": "FR1",
+        "home": "paris fc",
+        "away": "angers sco",
+        "expected_home_goals": 1.866496773613127,
+        "expected_away_goals": 0.7966324465796173,
+        "probabilities": {
+          "home": 0.6270071108825936,
+          "draw": 0.21894899987168537,
+          "away": 0.15404388924572088
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          0
+        ],
+        "over": {
+          "1.5": 0.7445711699668307,
+          "2.5": 0.49730075427945286,
+          "3.5": 0.27779639784403237
+        },
+        "both_teams_score": 0.4642204876606382,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-11-15",
+        "training_games": 902,
+        "prior_team_games": {
+          "paris fc": 44,
+          "angers sco": 78
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+        "low_score_rho": 0.0,
+        "research_candidate": false
+      },
+      "recorded_at_utc": "2026-11-15T14:12:37.911619+00:00",
+      "status": "pending",
+      "result": null,
+      "fixture_review": null
     },
     {
       "fixture": {
@@ -21103,6 +21775,102 @@
     },
     {
       "fixture": {
+        "event_id": "IT1_709009dfbe09aa1c44ef38e4",
+        "league": "IT1",
+        "season": "2026-27",
+        "date": "2026-11-22",
+        "home": "bologna fc 1909",
+        "away": "udinese calcio",
+        "home_name": "Bologna FC 1909",
+        "away_name": "Udinese Calcio",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/it.1.json",
+        "captured_at_utc": "2026-11-15T14:12:34.153556+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null,
+        "original_date": null,
+        "date_correction_verified": null,
+        "license_url": null,
+        "source_sha256": null,
+        "fixture_verification_url": null,
+        "actual_start_utc": null,
+        "source_original_date": "2026-11-22",
+        "verified_start_utc": "2026-11-22T14:00:00+00:00",
+        "independent_fixture": {
+          "provider_event_id": "401875047",
+          "league": "IT1",
+          "season_year": 2026,
+          "start_utc": "2026-11-22T14:00:00+00:00",
+          "captured_at": "2026-11-15T12:23:44.726085+00:00",
+          "home_name": "Bologna",
+          "away_name": "Udinese",
+          "provider_home_id": "107",
+          "provider_away_id": "118",
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401875047",
+          "status": "scheduled",
+          "event_id": "IT1_709009dfbe09aa1c44ef38e4",
+          "home": "bologna fc 1909",
+          "away": "udinese calcio"
+        }
+      },
+      "prediction": {
+        "model": "football-opponent-v1",
+        "league": "IT1",
+        "home": "bologna fc 1909",
+        "away": "udinese calcio",
+        "expected_home_goals": 1.6579470964967464,
+        "expected_away_goals": 1.0717441658827631,
+        "probabilities": {
+          "home": 0.510523325158583,
+          "draw": 0.24403955326721863,
+          "away": 0.24543712157419814
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.7566770738403988,
+          "2.5": 0.5136205899704279,
+          "3.5": 0.2924642032089125
+        },
+        "both_teams_score": 0.5322989353112576,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-11-15",
+        "training_games": 1120,
+        "prior_team_games": {
+          "bologna fc 1909": 112,
+          "udinese calcio": 112
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+        "low_score_rho": 0.0,
+        "research_candidate": false
+      },
+      "recorded_at_utc": "2026-11-15T14:12:37.962488+00:00",
+      "status": "pending",
+      "result": null,
+      "fixture_review": null
+    },
+    {
+      "fixture": {
         "event_id": "IT1_71a3cd3cbaed5bcdd8c0cd4b",
         "league": "IT1",
         "season": "2026-27",
@@ -21839,6 +22607,102 @@
         "verification": "community_source_final_not_official",
         "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Serie_A"
       },
+      "fixture_review": null
+    },
+    {
+      "fixture": {
+        "event_id": "IT1_ab40e53e01b565a27372cdb6",
+        "league": "IT1",
+        "season": "2026-27",
+        "date": "2026-11-22",
+        "home": "us sassuolo calcio",
+        "away": "genoa cfc",
+        "home_name": "US Sassuolo Calcio",
+        "away_name": "Genoa CFC",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/it.1.json",
+        "captured_at_utc": "2026-11-15T14:12:34.153556+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null,
+        "original_date": null,
+        "date_correction_verified": null,
+        "license_url": null,
+        "source_sha256": null,
+        "fixture_verification_url": null,
+        "actual_start_utc": null,
+        "source_original_date": "2026-11-22",
+        "verified_start_utc": "2026-11-22T14:00:00+00:00",
+        "independent_fixture": {
+          "provider_event_id": "401874960",
+          "league": "IT1",
+          "season_year": 2026,
+          "start_utc": "2026-11-22T14:00:00+00:00",
+          "captured_at": "2026-11-15T12:23:44.726085+00:00",
+          "home_name": "Sassuolo",
+          "away_name": "Genoa",
+          "provider_home_id": "3997",
+          "provider_away_id": "3263",
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401874960",
+          "status": "scheduled",
+          "event_id": "IT1_ab40e53e01b565a27372cdb6",
+          "home": "us sassuolo calcio",
+          "away": "genoa cfc"
+        }
+      },
+      "prediction": {
+        "model": "football-opponent-v1",
+        "league": "IT1",
+        "home": "us sassuolo calcio",
+        "away": "genoa cfc",
+        "expected_home_goals": 1.36558928045003,
+        "expected_away_goals": 1.3924687438044145,
+        "probabilities": {
+          "home": 0.36636792872661245,
+          "draw": 0.25499191313744246,
+          "away": 0.37864015813594515
+        },
+        "predicted_outcome": "away",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.7616835062833801,
+          "2.5": 0.5204889948074621,
+          "3.5": 0.2987461755466999
+        },
+        "both_teams_score": 0.5597234094693682,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-11-15",
+        "training_games": 1120,
+        "prior_team_games": {
+          "us sassuolo calcio": 75,
+          "genoa cfc": 112
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+        "low_score_rho": 0.0,
+        "research_candidate": false
+      },
+      "recorded_at_utc": "2026-11-15T14:12:37.983306+00:00",
+      "status": "pending",
+      "result": null,
       "fixture_review": null
     },
     {
@@ -24329,6 +25193,102 @@
     },
     {
       "fixture": {
+        "event_id": "NL1_389dce3bbbf52c6d5a3116b4",
+        "league": "NL1",
+        "season": "2026-27",
+        "date": "2026-11-22",
+        "home": "fc twente '65",
+        "away": "willem ii tilburg",
+        "home_name": "FC Twente '65",
+        "away_name": "Willem II Tilburg",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/nl.1.json",
+        "captured_at_utc": "2026-11-15T12:18:12.388271+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null,
+        "original_date": null,
+        "date_correction_verified": null,
+        "license_url": null,
+        "source_sha256": null,
+        "fixture_verification_url": null,
+        "actual_start_utc": null,
+        "source_original_date": "2026-11-22",
+        "verified_start_utc": "2026-11-22T11:15:00+00:00",
+        "independent_fixture": {
+          "provider_event_id": "401875545",
+          "league": "NL1",
+          "season_year": 2026,
+          "start_utc": "2026-11-22T11:15:00+00:00",
+          "captured_at": "2026-11-15T12:23:45.188544+00:00",
+          "home_name": "FC Twente",
+          "away_name": "Willem II",
+          "provider_home_id": "152",
+          "provider_away_id": "156",
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401875545",
+          "status": "scheduled",
+          "event_id": "NL1_389dce3bbbf52c6d5a3116b4",
+          "home": "fc twente '65",
+          "away": "willem ii tilburg"
+        }
+      },
+      "prediction": {
+        "model": "football-opponent-v1",
+        "league": "NL1",
+        "home": "fc twente '65",
+        "away": "willem ii tilburg",
+        "expected_home_goals": 3.0912273477899657,
+        "expected_away_goals": 0.8711195100577784,
+        "probabilities": {
+          "home": 0.8104065558980791,
+          "draw": 0.11696262749439255,
+          "away": 0.07263081660752826
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          3,
+          0
+        ],
+        "over": {
+          "1.5": 0.9056239619426404,
+          "2.5": 0.7563274678806984,
+          "3.5": 0.5591393031693583
+        },
+        "both_teams_score": 0.5550894951762826,
+        "total_goals_80": [
+          2,
+          7
+        ],
+        "training_cutoff_exclusive": "2026-11-15",
+        "training_games": 919,
+        "prior_team_games": {
+          "fc twente '65": 102,
+          "willem ii tilburg": 46
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+        "low_score_rho": 0.0,
+        "research_candidate": false
+      },
+      "recorded_at_utc": "2026-11-15T12:24:53.672440+00:00",
+      "status": "pending",
+      "result": null,
+      "fixture_review": null
+    },
+    {
+      "fixture": {
         "event_id": "NL1_392db10124850c1b690ba3d3",
         "league": "NL1",
         "season": "2026-27",
@@ -25855,6 +26815,102 @@
     },
     {
       "fixture": {
+        "event_id": "NL1_a03f51296b04977992a1eb0f",
+        "league": "NL1",
+        "season": "2026-27",
+        "date": "2026-11-22",
+        "home": "sparta rotterdam",
+        "away": "az",
+        "home_name": "Sparta Rotterdam",
+        "away_name": "AZ",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/nl.1.json",
+        "captured_at_utc": "2026-11-15T14:12:34.153556+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null,
+        "original_date": null,
+        "date_correction_verified": null,
+        "license_url": null,
+        "source_sha256": null,
+        "fixture_verification_url": null,
+        "actual_start_utc": null,
+        "source_original_date": "2026-11-22",
+        "verified_start_utc": "2026-11-22T13:30:00+00:00",
+        "independent_fixture": {
+          "provider_event_id": "401875540",
+          "league": "NL1",
+          "season_year": 2026,
+          "start_utc": "2026-11-22T13:30:00+00:00",
+          "captured_at": "2026-11-15T12:23:45.188544+00:00",
+          "home_name": "Sparta Rotterdam",
+          "away_name": "AZ Alkmaar",
+          "provider_home_id": "151",
+          "provider_away_id": "140",
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401875540",
+          "status": "scheduled",
+          "event_id": "NL1_a03f51296b04977992a1eb0f",
+          "home": "sparta rotterdam",
+          "away": "az"
+        }
+      },
+      "prediction": {
+        "model": "football-opponent-v1",
+        "league": "NL1",
+        "home": "sparta rotterdam",
+        "away": "az",
+        "expected_home_goals": 1.3526458193921178,
+        "expected_away_goals": 1.8792816189237034,
+        "probabilities": {
+          "home": 0.27674140886741366,
+          "draw": 0.22481181618505638,
+          "away": 0.49844677494753004
+        },
+        "predicted_outcome": "away",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.8329178865097221,
+          "2.5": 0.6267196459439526,
+          "3.5": 0.4045803954716338
+        },
+        "both_teams_score": 0.6282263002714438,
+        "total_goals_80": [
+          1,
+          6
+        ],
+        "training_cutoff_exclusive": "2026-11-15",
+        "training_games": 919,
+        "prior_team_games": {
+          "sparta rotterdam": 102,
+          "az": 103
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+        "low_score_rho": 0.0,
+        "research_candidate": false
+      },
+      "recorded_at_utc": "2026-11-15T14:12:38.029002+00:00",
+      "status": "pending",
+      "result": null,
+      "fixture_review": null
+    },
+    {
+      "fixture": {
         "event_id": "NL1_a208c99770d09b46ca9e0ed3",
         "league": "NL1",
         "season": "2026-27",
@@ -26077,6 +27133,102 @@
         "verification": "community_source_final_not_official",
         "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Eredivisie"
       },
+      "fixture_review": null
+    },
+    {
+      "fixture": {
+        "event_id": "NL1_ad8eea3c8d3d895175d97fe3",
+        "league": "NL1",
+        "season": "2026-27",
+        "date": "2026-11-22",
+        "home": "afc ajax",
+        "away": "ado den haag",
+        "home_name": "AFC Ajax",
+        "away_name": "ADO Den Haag",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/nl.1.json",
+        "captured_at_utc": "2026-11-15T14:12:34.153556+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null,
+        "original_date": null,
+        "date_correction_verified": null,
+        "license_url": null,
+        "source_sha256": null,
+        "fixture_verification_url": null,
+        "actual_start_utc": null,
+        "source_original_date": "2026-11-22",
+        "verified_start_utc": "2026-11-22T13:30:00+00:00",
+        "independent_fixture": {
+          "provider_event_id": "401875547",
+          "league": "NL1",
+          "season_year": 2026,
+          "start_utc": "2026-11-22T13:30:00+00:00",
+          "captured_at": "2026-11-15T12:23:45.188544+00:00",
+          "home_name": "Ajax Amsterdam",
+          "away_name": "ADO Den Haag",
+          "provider_home_id": "139",
+          "provider_away_id": "2726",
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401875547",
+          "status": "scheduled",
+          "event_id": "NL1_ad8eea3c8d3d895175d97fe3",
+          "home": "afc ajax",
+          "away": "ado den haag"
+        }
+      },
+      "prediction": {
+        "model": "football-opponent-v1",
+        "league": "NL1",
+        "home": "afc ajax",
+        "away": "ado den haag",
+        "expected_home_goals": 2.3024474185879504,
+        "expected_away_goals": 1.1339370810220566,
+        "probabilities": {
+          "home": 0.6353843086429337,
+          "draw": 0.18983545217023373,
+          "away": 0.17478023918683286
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          2,
+          1
+        ],
+        "over": {
+          "1.5": 0.8572334866290264,
+          "2.5": 0.6672260139912066,
+          "3.5": 0.4495797693969814
+        },
+        "both_teams_score": 0.6104031080045971,
+        "total_goals_80": [
+          1,
+          6
+        ],
+        "training_cutoff_exclusive": "2026-11-15",
+        "training_games": 919,
+        "prior_team_games": {
+          "afc ajax": 103,
+          "ado den haag": 12
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+        "low_score_rho": 0.0,
+        "research_candidate": false
+      },
+      "recorded_at_utc": "2026-11-15T14:12:38.046321+00:00",
+      "status": "pending",
+      "result": null,
       "fixture_review": null
     },
     {
@@ -30280,19 +31432,11 @@
       "reason": "Fresh independent future scheduled fixture required"
     },
     {
-      "event_id": "EN1_b32d832f7f4c81d73a40cb9a",
-      "reason": "Fresh independent future scheduled fixture required"
-    },
-    {
       "event_id": "DE1_14cc48088addffaac0bfc145",
       "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "DE1_9ad1119a54f8e0a4bd324c49",
-      "reason": "Fresh independent future scheduled fixture required"
-    },
-    {
-      "event_id": "ES1_029c2b45bea91132258aa6cb",
       "reason": "Fresh independent future scheduled fixture required"
     },
     {
@@ -30324,10 +31468,6 @@
       "reason": "Fresh independent future scheduled fixture required"
     },
     {
-      "event_id": "FR1_b98320705e816cf814f4df72",
-      "reason": "Fresh independent future scheduled fixture required"
-    },
-    {
       "event_id": "FR1_d0ad0e5f8a6802334bada81a",
       "reason": "Fresh independent future scheduled fixture required"
     },
@@ -30336,15 +31476,7 @@
       "reason": "Fresh independent future scheduled fixture required"
     },
     {
-      "event_id": "IT1_709009dfbe09aa1c44ef38e4",
-      "reason": "Fresh independent future scheduled fixture required"
-    },
-    {
       "event_id": "IT1_719b27741bb9dd09c1121699",
-      "reason": "Fresh independent future scheduled fixture required"
-    },
-    {
-      "event_id": "IT1_ab40e53e01b565a27372cdb6",
       "reason": "Fresh independent future scheduled fixture required"
     },
     {
@@ -30352,16 +31484,8 @@
       "reason": "Fresh independent future scheduled fixture required"
     },
     {
-      "event_id": "NL1_a03f51296b04977992a1eb0f",
-      "reason": "Fresh independent future scheduled fixture required"
-    },
-    {
-      "event_id": "NL1_ad8eea3c8d3d895175d97fe3",
-      "reason": "Fresh independent future scheduled fixture required"
-    },
-    {
       "event_id": "TR1_27aa4616d29e742232ed1402",
-      "reason": "Fresh independent future scheduled fixture required"
+      "reason": "Insufficient history (current coverage): atiker konyaspor: 1 unresolved past fixtures; refresh/review required; besiktas: 1 unresolved past fixtures; refresh/review required"
     },
     {
       "event_id": "TR1_322a0d08ccd2d9db4895e3c1",
@@ -30381,7 +31505,7 @@
     },
     {
       "event_id": "TR1_a0287ccae5f5994e6e710929",
-      "reason": "Fresh independent future scheduled fixture required"
+      "reason": "Insufficient history (current coverage): kasimpasa: 1 unresolved past fixtures; refresh/review required; aytemiz alanyaspor: 1 unresolved past fixtures; refresh/review required"
     },
     {
       "event_id": "TR1_aaf42f29f9245daaf0db51b2",
@@ -30434,29 +31558,9 @@
     {
       "event_id": "EN2_c704343bb0b5b2cc51726b00",
       "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
-    },
-    {
-      "record": "data/football_ledger/forecasts/EN2_9c86d624f540b11c747531c7.json",
-      "reason": "Forecast was recorded after requested clock"
-    },
-    {
-      "record": "data/football_ledger/forecasts/ES1_51e2a83513c23f347a0a3798.json",
-      "reason": "Forecast was recorded after requested clock"
-    },
-    {
-      "record": "data/football_ledger/forecasts/ES1_c91b9ef5c8cc6f87585e6635.json",
-      "reason": "Forecast was recorded after requested clock"
-    },
-    {
-      "record": "data/football_ledger/forecasts/ES1_e42f8f06e53fd0e9c4ff1b11.json",
-      "reason": "Forecast was recorded after requested clock"
-    },
-    {
-      "record": "data/football_ledger/forecasts/NL1_389dce3bbbf52c6d5a3116b4.json",
-      "reason": "Forecast was recorded after requested clock"
     }
   ],
-  "pending": 76,
+  "pending": 88,
   "requested_model_variant": "opponent",
   "publisher_performance": {
     "games": 214,
