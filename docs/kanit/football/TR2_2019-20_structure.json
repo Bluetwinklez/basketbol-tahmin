@@ -1,0 +1,16 @@
+{
+  "teams": 18,
+  "finals": 306,
+  "directed_pairings": 306,
+  "home_games_per_team": 17,
+  "away_games_per_team": 17,
+  "first_date": "2019-08-16",
+  "last_date": "2020-07-19",
+  "archive": "data/football/TR2_2019-20.json.gz",
+  "archive_sha256": "29bddc6abad986b86fa6aa291887cfc6f15bf279f777cb9b1353d572fe0c4006",
+  "source_url": "https://github.com/openfootball/europe/blob/63df627f3c87ce71708f016522ea236cf74332c3/turkey/2019-20_tr2.txt",
+  "license": "CC0-1.0",
+  "official_results_verified": false,
+  "new_matches": 0,
+  "note": "Structural completeness only, not independent score verification or evidence of predictive improvement. No downloads or archive writes."
+}
