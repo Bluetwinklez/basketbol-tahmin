@@ -1,0 +1,125 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-11-15T12:24:53.626294+00:00",
+  "fixture": {
+    "event_id": "ES1_c91b9ef5c8cc6f87585e6635",
+    "league": "ES1",
+    "season": "2026-27",
+    "date": "2026-11-21",
+    "home": "deportivo alaves",
+    "away": "rc deportivo la coruna",
+    "home_name": "Deportivo Alavés",
+    "away_name": "RC Deportivo La Coruña",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/es.1.json",
+    "captured_at_utc": "2026-11-15T12:18:12.388271+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null,
+    "original_date": null,
+    "date_correction_verified": null,
+    "license_url": null,
+    "source_sha256": null,
+    "fixture_verification_url": null,
+    "actual_start_utc": null,
+    "source_original_date": "2026-11-22",
+    "verified_start_utc": "2026-11-21T13:00:00+00:00",
+    "independent_fixture": {
+      "provider_event_id": "401882806",
+      "league": "ES1",
+      "season_year": 2026,
+      "start_utc": "2026-11-21T13:00:00+00:00",
+      "captured_at": "2026-11-15T12:23:43.730423+00:00",
+      "home_name": "Alavés",
+      "away_name": "Deportivo",
+      "provider_home_id": "96",
+      "provider_away_id": "90",
+      "source_url": "https://www.espn.com/soccer/game/_/gameId/401882806",
+      "status": "scheduled",
+      "event_id": "ES1_c91b9ef5c8cc6f87585e6635",
+      "home": "deportivo alaves",
+      "away": "rc deportivo la coruna"
+    }
+  },
+  "prediction": {
+    "model": "football-opponent-v1",
+    "league": "ES1",
+    "home": "deportivo alaves",
+    "away": "rc deportivo la coruna",
+    "expected_home_goals": 1.3290852583942863,
+    "expected_away_goals": 1.118517250251234,
+    "probabilities": {
+      "home": 0.4147657495208915,
+      "draw": 0.2715576853901442,
+      "away": 0.31367656508896424
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.7017798909664186,
+      "2.5": 0.44267744056788444,
+      "3.5": 0.2312841713706667
+    },
+    "both_teams_score": 0.4950174777377172,
+    "total_goals_80": [
+      1,
+      5
+    ],
+    "training_cutoff_exclusive": "2026-11-15",
+    "training_games": 1121,
+    "prior_team_games": {
+      "deportivo alaves": 112,
+      "rc deportivo la coruna": 12
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "settings": {
+      "half_life_days": 180.0,
+      "shrinkage_games": 8.0,
+      "window_days": 1095
+    },
+    "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+    "low_score_rho": 0.0,
+    "research_candidate": false
+  },
+  "archive_sha256": "d3416c72ecbe5a1f74e43ecaa108720b99cf6ec927553d56ef5e844f05d9bf07",
+  "source_code_sha256": "872a79ef7a219c008dc47609791f05cf4f684195b4e761af273908e452e2ad39",
+  "requested_model_variant": "opponent",
+  "history_health": {
+    "spec": "football-history-health-v1",
+    "checked_at_utc": "2026-11-15T12:24:52.063192+00:00",
+    "information_cutoff_exclusive": "2026-11-15",
+    "teams": {
+      "deportivo alaves": {
+        "prior_finals": 201,
+        "active_season_finals": 12,
+        "last_final_date": "2026-11-06",
+        "days_since_last_final": 9,
+        "unresolved_past_fixture_ids": []
+      },
+      "rc deportivo la coruna": {
+        "prior_finals": 12,
+        "active_season_finals": 12,
+        "last_final_date": "2026-11-07",
+        "days_since_last_final": 8,
+        "unresolved_past_fixture_ids": []
+      }
+    },
+    "diagnostic_gate_passed": true,
+    "blocking_issues": [],
+    "max_history_age_days": 30,
+    "calendar_completeness_verified": false,
+    "note": "Diagnostic policy, not a validated success threshold. Unresolved fixtures may be postponed or missing results. Fresh source captures do not make old histories current."
+  },
+  "selection_policy": "Current-history diagnostic gate plus existing model issues; research only, no validated recommendation.",
+  "payload_sha256": "a006fd34d3d3c84d7143f561d4853b2ab1cdbf2fc7c6cb101c37af8830b8233a"
+}

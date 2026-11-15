@@ -1,0 +1,125 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-11-15T12:18:18.174447+00:00",
+  "fixture": {
+    "event_id": "NL1_a208c99770d09b46ca9e0ed3",
+    "league": "NL1",
+    "season": "2026-27",
+    "date": "2026-11-21",
+    "home": "fc groningen",
+    "away": "sc heerenveen",
+    "home_name": "FC Groningen",
+    "away_name": "SC Heerenveen",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/nl.1.json",
+    "captured_at_utc": "2026-11-15T12:18:12.388271+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null,
+    "original_date": null,
+    "date_correction_verified": null,
+    "license_url": null,
+    "source_sha256": null,
+    "fixture_verification_url": null,
+    "actual_start_utc": null,
+    "source_original_date": "2026-11-21",
+    "verified_start_utc": "2026-11-21T20:00:00+00:00",
+    "independent_fixture": {
+      "provider_event_id": "401875546",
+      "league": "NL1",
+      "season_year": 2026,
+      "start_utc": "2026-11-21T20:00:00+00:00",
+      "captured_at": "2026-11-14T13:47:36.541232+00:00",
+      "home_name": "FC Groningen",
+      "away_name": "Heerenveen",
+      "provider_home_id": "145",
+      "provider_away_id": "146",
+      "source_url": "https://www.espn.com/soccer/game/_/gameId/401875546",
+      "status": "scheduled",
+      "event_id": "NL1_a208c99770d09b46ca9e0ed3",
+      "home": "fc groningen",
+      "away": "sc heerenveen"
+    }
+  },
+  "prediction": {
+    "model": "football-opponent-v1",
+    "league": "NL1",
+    "home": "fc groningen",
+    "away": "sc heerenveen",
+    "expected_home_goals": 1.7058787805484255,
+    "expected_away_goals": 1.781855896015155,
+    "probabilities": {
+      "home": 0.3728538046270339,
+      "draw": 0.22308273657886754,
+      "away": 0.40406345879409855
+    },
+    "predicted_outcome": "away",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.8628097497459275,
+      "2.5": 0.676878255908471,
+      "3.5": 0.4607183497344158
+    },
+    "both_teams_score": 0.6806318638785841,
+    "total_goals_80": [
+      1,
+      6
+    ],
+    "training_cutoff_exclusive": "2026-11-15",
+    "training_games": 919,
+    "prior_team_games": {
+      "fc groningen": 80,
+      "sc heerenveen": 101
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "settings": {
+      "half_life_days": 180.0,
+      "shrinkage_games": 8.0,
+      "window_days": 1095
+    },
+    "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+    "low_score_rho": 0.0,
+    "research_candidate": false
+  },
+  "archive_sha256": "ccec00f39c0788a8f46b4dd8c52d51e823433801a7640e81c29bf5175aabcc81",
+  "source_code_sha256": "872a79ef7a219c008dc47609791f05cf4f684195b4e761af273908e452e2ad39",
+  "requested_model_variant": "opponent",
+  "history_health": {
+    "spec": "football-history-health-v1",
+    "checked_at_utc": "2026-11-15T12:18:16.219037+00:00",
+    "information_cutoff_exclusive": "2026-11-15",
+    "teams": {
+      "fc groningen": {
+        "prior_finals": 242,
+        "active_season_finals": 12,
+        "last_final_date": "2026-11-08",
+        "days_since_last_final": 7,
+        "unresolved_past_fixture_ids": []
+      },
+      "sc heerenveen": {
+        "prior_finals": 275,
+        "active_season_finals": 12,
+        "last_final_date": "2026-11-08",
+        "days_since_last_final": 7,
+        "unresolved_past_fixture_ids": []
+      }
+    },
+    "diagnostic_gate_passed": true,
+    "blocking_issues": [],
+    "max_history_age_days": 30,
+    "calendar_completeness_verified": false,
+    "note": "Diagnostic policy, not a validated success threshold. Unresolved fixtures may be postponed or missing results. Fresh source captures do not make old histories current."
+  },
+  "selection_policy": "Current-history diagnostic gate plus existing model issues; research only, no validated recommendation.",
+  "payload_sha256": "bfab47402d8bb86a7018e93a8f1f5b36eebbd93255d9b08f9a4aa607c48dc40b"
+}

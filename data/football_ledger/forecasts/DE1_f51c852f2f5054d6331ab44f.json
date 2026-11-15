@@ -1,0 +1,125 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-11-15T12:18:17.716070+00:00",
+  "fixture": {
+    "event_id": "DE1_f51c852f2f5054d6331ab44f",
+    "league": "DE1",
+    "season": "2026-27",
+    "date": "2026-11-21",
+    "home": "eintracht frankfurt",
+    "away": "tsg 1899 hoffenheim",
+    "home_name": "Eintracht Frankfurt",
+    "away_name": "TSG 1899 Hoffenheim",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/de.1.json",
+    "captured_at_utc": "2026-11-15T12:18:12.388271+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null,
+    "original_date": null,
+    "date_correction_verified": null,
+    "license_url": null,
+    "source_sha256": null,
+    "fixture_verification_url": null,
+    "actual_start_utc": null,
+    "source_original_date": "2026-11-21",
+    "verified_start_utc": "2026-11-21T14:30:00+00:00",
+    "independent_fixture": {
+      "provider_event_id": "401884734",
+      "league": "DE1",
+      "season_year": 2026,
+      "start_utc": "2026-11-21T14:30:00+00:00",
+      "captured_at": "2026-11-14T13:47:36.130455+00:00",
+      "home_name": "Eintracht Frankfurt",
+      "away_name": "TSG Hoffenheim",
+      "provider_home_id": "125",
+      "provider_away_id": "7911",
+      "source_url": "https://www.espn.com/soccer/game/_/gameId/401884734",
+      "status": "scheduled",
+      "event_id": "DE1_f51c852f2f5054d6331ab44f",
+      "home": "eintracht frankfurt",
+      "away": "tsg 1899 hoffenheim"
+    }
+  },
+  "prediction": {
+    "model": "football-opponent-v1",
+    "league": "DE1",
+    "home": "eintracht frankfurt",
+    "away": "tsg 1899 hoffenheim",
+    "expected_home_goals": 2.0682065045114615,
+    "expected_away_goals": 1.6953012092378403,
+    "probabilities": {
+      "home": 0.4682970168191073,
+      "draw": 0.21067694349565944,
+      "away": 0.3210260396852331
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      2,
+      1
+    ],
+    "over": {
+      "1.5": 0.8894760900995173,
+      "2.5": 0.7251581459408936,
+      "3.5": 0.5190208624914244
+    },
+    "both_teams_score": 0.7132459767789247,
+    "total_goals_80": [
+      1,
+      6
+    ],
+    "training_cutoff_exclusive": "2026-11-15",
+    "training_games": 900,
+    "prior_team_games": {
+      "eintracht frankfurt": 100,
+      "tsg 1899 hoffenheim": 100
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "settings": {
+      "half_life_days": 180.0,
+      "shrinkage_games": 8.0,
+      "window_days": 1095
+    },
+    "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+    "low_score_rho": 0.0,
+    "research_candidate": false
+  },
+  "archive_sha256": "ccec00f39c0788a8f46b4dd8c52d51e823433801a7640e81c29bf5175aabcc81",
+  "source_code_sha256": "872a79ef7a219c008dc47609791f05cf4f684195b4e761af273908e452e2ad39",
+  "requested_model_variant": "opponent",
+  "history_health": {
+    "spec": "football-history-health-v1",
+    "checked_at_utc": "2026-11-15T12:18:16.219037+00:00",
+    "information_cutoff_exclusive": "2026-11-15",
+    "teams": {
+      "eintracht frankfurt": {
+        "prior_finals": 519,
+        "active_season_finals": 9,
+        "last_final_date": "2026-11-07",
+        "days_since_last_final": 8,
+        "unresolved_past_fixture_ids": []
+      },
+      "tsg 1899 hoffenheim": {
+        "prior_finals": 213,
+        "active_season_finals": 9,
+        "last_final_date": "2026-11-08",
+        "days_since_last_final": 7,
+        "unresolved_past_fixture_ids": []
+      }
+    },
+    "diagnostic_gate_passed": true,
+    "blocking_issues": [],
+    "max_history_age_days": 30,
+    "calendar_completeness_verified": false,
+    "note": "Diagnostic policy, not a validated success threshold. Unresolved fixtures may be postponed or missing results. Fresh source captures do not make old histories current."
+  },
+  "selection_policy": "Current-history diagnostic gate plus existing model issues; research only, no validated recommendation.",
+  "payload_sha256": "4304b7bab9b37a49bfbab4ed6d4d0c6cb5c94082e95884a5d2e41f439aa0e0e8"
+}
