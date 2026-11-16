@@ -190,3 +190,26 @@ completeness is not independent official score verification. The paired
 chronological evaluation and seven-market calibration remain in
 `TR2_2019-20_evaluation.json`; their limited historical findings are unchanged.
 Current-season source gaps remain separate from this historical integrity fix.
+
+### Paired gains and losses against fixed comparators (2026-11-16)
+
+`PYTHONPATH=src python scripts/audit_football_paired_accuracy.py` audits the saved
+BR2 2024 predictions without downloading data or refitting. It checks identical
+candidate event/score cohorts and valid goals/probabilities, then reports both
+correct, candidate-only correct, comparator-only correct, and both wrong for
+1/X/2, over/under 2.5 and both teams to score. Fixed comparators are always home,
+always under 2.5 and always BTTS no; binary probabilities use a fixed 0.5 threshold
+(ties select yes). No thresholds are tuned to these results.
+
+The 380-event cohort gives the opponent candidate 10 winner gains and 9 losses
+against always home: 200/380 versus 199/380, only +0.26 percentage points.
+The ensemble gains 5 and loses 2 for over/under 2.5: 241/380 versus 238/380
+(+0.79 points). Its BTTS result also has 5 gains and 2 losses. These are descriptive
+paired differences, not significance tests or evidence of prospective improvement.
+Other candidates can trail the fixed comparators. No model is promoted.
+
+`docs/kanit/requested_football/paired_accuracy_20261116.json` pins the saved
+prediction hash and links the existing seven-market calibration, score/total
+errors, intervals and cohort coverage report by hash. Results remain retrospective
+community data with unknown historical publication times, not independently
+verified official results. No new matches or frozen forecast edits are included.
