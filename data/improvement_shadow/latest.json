@@ -1,8 +1,8 @@
 {
-  "checked_at_utc": "2026-11-15T14:17:17.207994+00:00",
-  "experiment_id": "7e4703461a54c25ad6514a5feb89acd4ef771b4b915a5c0d61c621d98207d165",
-  "new_pairs": 10,
-  "reused_pairs": 101,
+  "checked_at_utc": "2026-11-16T16:19:40.964585+00:00",
+  "experiment_id": "b5c79acbceddcf0f1df21e8a79e19741cae8932c0e8bdb5728f1a3a49cac6580",
+  "new_pairs": 109,
+  "reused_pairs": 0,
   "skipped": [
     {
       "league": "E",
@@ -105,6 +105,61 @@
       "reason": "ValueError: Invalid challenger basketball finals"
     },
     {
+      "league": "ARG_LNB",
+      "event_id": "ARG_LNB_1e43ea275ab0f041ec3cf914",
+      "reason": "ValueError: Refresh stale/future fixture confirmation"
+    },
+    {
+      "league": "ARG_LNB",
+      "event_id": "ARG_LNB_8fe13897ffcebc2cc00922f7",
+      "reason": "ValueError: Refresh stale/future fixture confirmation"
+    },
+    {
+      "league": "ARG_LNB",
+      "event_id": "ARG_LNB_14b18be8a50413f36c299b0d",
+      "reason": "ValueError: Refresh stale/future fixture confirmation"
+    },
+    {
+      "league": "ARG_LNB",
+      "event_id": "ARG_LNB_c3fac9213d7ee139bb554581",
+      "reason": "ValueError: Refresh stale/future fixture confirmation"
+    },
+    {
+      "league": "ARG_LNB",
+      "event_id": "ARG_LNB_3b64f9a1f982de7ad3388d42",
+      "reason": "ValueError: Refresh stale/future fixture confirmation"
+    },
+    {
+      "league": "ARG_LNB",
+      "event_id": "ARG_LNB_bc16f313cea1389d7aa967ba",
+      "reason": "ValueError: Refresh stale/future fixture confirmation"
+    },
+    {
+      "league": "ARG_LNB",
+      "event_id": "ARG_LNB_3c7ec8aee008314b8d172aba",
+      "reason": "ValueError: Refresh stale/future fixture confirmation"
+    },
+    {
+      "league": "ARG_LNB",
+      "event_id": "ARG_LNB_19676f3c458483801346ac97",
+      "reason": "ValueError: Refresh stale/future fixture confirmation"
+    },
+    {
+      "league": "ARG_LNB",
+      "event_id": "ARG_LNB_5cc09a741834316179451213",
+      "reason": "ValueError: Refresh stale/future fixture confirmation"
+    },
+    {
+      "league": "ARG_LNB",
+      "event_id": "ARG_LNB_048e6f59e5cc8e0f512ddc4e",
+      "reason": "ValueError: Refresh stale/future fixture confirmation"
+    },
+    {
+      "league": "ARG_LNB",
+      "event_id": "ARG_LNB_1b80043e39533ec926bc9906",
+      "reason": "ValueError: Refresh stale/future fixture confirmation"
+    },
+    {
       "league": "DE1",
       "event_id": "DE1_0950cb78d84dd98d86d8680c",
       "reason": "Insufficient team history"
@@ -141,6 +196,11 @@
     },
     {
       "league": "TR1",
+      "event_id": "TR1_be58c0de58899ca159a47c1b",
+      "reason": "trabzonspor: 1 unresolved past fixtures; refresh/review required; eyupspor: 1 unresolved past fixtures; refresh/review required"
+    },
+    {
+      "league": "TR1",
       "event_id": "TR1_27aa4616d29e742232ed1402",
       "reason": "atiker konyaspor: 1 unresolved past fixtures; refresh/review required; besiktas: 1 unresolved past fixtures; refresh/review required"
     },
@@ -169,7 +229,7 @@
     {
       "experiment_id": "15b12c0b117715b0554551540e7c1c11a65c423f762c6bed7319b1bbe9c95989",
       "spec": "paired-forward-report-v1",
-      "checked_at_utc": "2026-11-15T14:17:13.703428+00:00",
+      "checked_at_utc": "2026-11-16T16:19:38.451795+00:00",
       "pending": 81,
       "settled_games": 78,
       "rejected": [],
@@ -4006,7 +4066,7 @@
     {
       "experiment_id": "2686a5054977ff037707465853178f1399ccfaea4cc644c5336247729031eaea",
       "spec": "paired-forward-report-v1",
-      "checked_at_utc": "2026-11-15T14:17:13.913121+00:00",
+      "checked_at_utc": "2026-11-16T16:19:38.596432+00:00",
       "pending": 77,
       "settled_games": 87,
       "rejected": [],
@@ -8453,7 +8513,7 @@
     {
       "experiment_id": "29d9f51a7ae193495934c846455910ac2c11d06a4349e864dc5b2f3064e05d96",
       "spec": "paired-forward-report-v1",
-      "checked_at_utc": "2026-11-15T14:17:14.160175+00:00",
+      "checked_at_utc": "2026-11-16T16:19:38.765458+00:00",
       "pending": 76,
       "settled_games": 73,
       "rejected": [],
@@ -12120,7 +12180,7 @@
     {
       "experiment_id": "3ca8c864cb8f30c78072ee9b7a96bb0466ae706f4a9262e6d1d0a0fc83723af4",
       "spec": "paired-forward-report-v1",
-      "checked_at_utc": "2026-11-15T14:17:14.351480+00:00",
+      "checked_at_utc": "2026-11-16T16:19:38.895631+00:00",
       "pending": 76,
       "settled_games": 73,
       "rejected": [],
@@ -15808,7 +15868,7 @@
     {
       "experiment_id": "51ffcc22a4b196c2b6a46b1ccaff7986d8b85dec47496f7c5da070e8679a9df6",
       "spec": "paired-forward-report-v1",
-      "checked_at_utc": "2026-11-15T14:17:14.536816+00:00",
+      "checked_at_utc": "2026-11-16T16:19:39.019392+00:00",
       "pending": 3,
       "settled_games": 74,
       "rejected": [],
@@ -19544,9 +19604,9 @@
     {
       "experiment_id": "5ffaab50cf78dccf8fb4c7a054f5d9541d72d815c2b4d83067f13bd0baaedd83",
       "spec": "paired-forward-report-v1",
-      "checked_at_utc": "2026-11-15T14:17:14.682463+00:00",
-      "pending": 63,
-      "settled_games": 7,
+      "checked_at_utc": "2026-11-16T16:19:39.116352+00:00",
+      "pending": 59,
+      "settled_games": 11,
       "rejected": [],
       "leagues": [
         {
@@ -19554,21 +19614,68 @@
           "summary": {
             "reference": {
               "all": {
-                "games": 2,
-                "accuracy": 0.0,
-                "log_loss": 1.5561463621150025,
-                "brier": 1.2451792771852717
+                "games": 5,
+                "accuracy": 0.6,
+                "log_loss": 0.7792780685536689,
+                "brier": 0.5651124198097272
               },
               "selected": {
-                "games": 2,
-                "accuracy": 0.0,
-                "log_loss": 1.5561463621150025,
-                "brier": 1.2451792771852717
+                "games": 5,
+                "accuracy": 0.6,
+                "log_loss": 0.7792780685536689,
+                "brier": 0.5651124198097272
               },
               "coverage": 1.0,
               "confusion_actual_by_predicted": [
                 [
+                  3,
+                  2
+                ],
+                [
                   0,
+                  0
+                ]
+              ],
+              "confidence_bins": [
+                {
+                  "lower": 0.7,
+                  "upper": 0.8,
+                  "games": 4,
+                  "mean_confidence": 0.7581534339113475,
+                  "accuracy": 0.5
+                },
+                {
+                  "lower": 0.8,
+                  "upper": 0.9,
+                  "games": 1,
+                  "mean_confidence": 0.8632548396512902,
+                  "accuracy": 1.0
+                }
+              ],
+              "brier_convention": "Sum over classes; binary value is twice the one-probability binary Brier.",
+              "score_errors": {
+                "team_mae": 7.66178258738536,
+                "total_mae": 11.051962049465157,
+                "margin_mae": 7.809598843410089
+              }
+            },
+            "candidate": {
+              "all": {
+                "games": 5,
+                "accuracy": 0.6,
+                "log_loss": 0.8351920380193423,
+                "brier": 0.5978076568416719
+              },
+              "selected": {
+                "games": 5,
+                "accuracy": 0.6,
+                "log_loss": 0.8351920380193423,
+                "brier": 0.5978076568416719
+              },
+              "coverage": 1.0,
+              "confusion_actual_by_predicted": [
+                [
+                  3,
                   2
                 ],
                 [
@@ -19581,61 +19688,35 @@
                   "lower": 0.7,
                   "upper": 0.8,
                   "games": 2,
-                  "mean_confidence": 0.7890401817885594,
-                  "accuracy": 0.0
-                }
-              ],
-              "brier_convention": "Sum over classes; binary value is twice the one-probability binary Brier.",
-              "score_errors": {
-                "team_mae": 13.800780267922406,
-                "total_mae": 20.391409333362105,
-                "margin_mae": 14.80281319790575
-              }
-            },
-            "candidate": {
-              "all": {
-                "games": 2,
-                "accuracy": 0.0,
-                "log_loss": 1.8148331783773388,
-                "brier": 1.4015095516030809
-              },
-              "selected": {
-                "games": 2,
-                "accuracy": 0.0,
-                "log_loss": 1.8148331783773388,
-                "brier": 1.4015095516030809
-              },
-              "coverage": 1.0,
-              "confusion_actual_by_predicted": [
-                [
-                  0,
-                  2
-                ],
-                [
-                  0,
-                  0
-                ]
-              ],
-              "confidence_bins": [
+                  "mean_confidence": 0.7910609550192949,
+                  "accuracy": 1.0
+                },
                 {
                   "lower": 0.8,
                   "upper": 0.9,
                   "games": 2,
                   "mean_confidence": 0.8371051828675142,
                   "accuracy": 0.0
+                },
+                {
+                  "lower": 0.9,
+                  "upper": 1.0,
+                  "games": 1,
+                  "mean_confidence": 0.9255065666484842,
+                  "accuracy": 1.0
                 }
               ],
               "brier_convention": "Sum over classes; binary value is twice the one-probability binary Brier.",
               "score_errors": {
-                "team_mae": 13.523814622194273,
-                "total_mae": 20.561247635010915,
-                "margin_mae": 13.968711021649483
+                "team_mae": 7.5647284730926945,
+                "total_mae": 11.283862689531821,
+                "margin_mae": 7.522476555198272
               }
             }
           },
           "paired": {
-            "games": 2,
-            "day_blocks": 1,
+            "games": 5,
+            "day_blocks": 2,
             "changes": {
               "accuracy": {
                 "delta": 0.0,
@@ -19645,16 +19726,16 @@
                 ]
               },
               "log_loss": {
-                "delta": 0.25868681626233647,
+                "delta": 0.05591396946567342,
                 "day_block_95_interval": [
-                  0.25868681626233647,
+                  -0.0792679283987686,
                   0.25868681626233647
                 ]
               },
               "brier": {
-                "delta": 0.15633027441780933,
+                "delta": 0.03269523703194477,
                 "day_block_95_interval": [
-                  0.15633027441780933,
+                  -0.04972812122529827,
                   0.15633027441780933
                 ]
               }
@@ -19663,74 +19744,74 @@
               {
                 "variant": "reference",
                 "requested_coverage": 0.25,
-                "coverage": 0.5,
-                "games": 1,
-                "accuracy": 0.0,
-                "log_loss": 1.566987451365568,
-                "brier": 1.2523972419925453
+                "coverage": 0.4,
+                "games": 2,
+                "accuracy": 0.5,
+                "log_loss": 0.8570163938892367,
+                "brier": 0.644897859875067
               },
               {
                 "variant": "reference",
                 "requested_coverage": 0.5,
-                "coverage": 0.5,
-                "games": 1,
-                "accuracy": 0.0,
-                "log_loss": 1.566987451365568,
-                "brier": 1.2523972419925453
+                "coverage": 0.6,
+                "games": 3,
+                "accuracy": 0.3333333333333333,
+                "log_loss": 1.0864460202143034,
+                "brier": 0.842585677376044
               },
               {
                 "variant": "reference",
                 "requested_coverage": 0.75,
-                "coverage": 1.0,
-                "games": 2,
-                "accuracy": 0.0,
-                "log_loss": 1.5561463621150025,
-                "brier": 1.2451792771852717
+                "coverage": 0.8,
+                "games": 4,
+                "accuracy": 0.5,
+                "log_loss": 0.8916353134117297,
+                "brier": 0.6669190822863202
               },
               {
                 "variant": "reference",
                 "requested_coverage": 1.0,
                 "coverage": 1.0,
-                "games": 2,
-                "accuracy": 0.0,
-                "log_loss": 1.5561463621150025,
-                "brier": 1.2451792771852717
+                "games": 5,
+                "accuracy": 0.6,
+                "log_loss": 0.7792780685536689,
+                "brier": 0.5651124198097272
               },
               {
                 "variant": "candidate",
                 "requested_coverage": 0.25,
-                "coverage": 0.5,
-                "games": 1,
-                "accuracy": 0.0,
-                "log_loss": 1.8339438748049788,
-                "brier": 1.4119320283799373
+                "coverage": 0.4,
+                "games": 2,
+                "accuracy": 0.5,
+                "log_loss": 0.9556789632772797,
+                "brier": 0.7115152858024654
               },
               {
                 "variant": "candidate",
                 "requested_coverage": 0.5,
-                "coverage": 0.5,
-                "games": 1,
-                "accuracy": 0.0,
-                "log_loss": 1.8339438748049788,
-                "brier": 1.4119320283799373
+                "coverage": 0.6,
+                "games": 3,
+                "accuracy": 0.3333333333333333,
+                "log_loss": 1.2356934695014195,
+                "brier": 0.9380392154770517
               },
               {
                 "variant": "candidate",
                 "requested_coverage": 0.75,
-                "coverage": 1.0,
-                "games": 2,
-                "accuracy": 0.0,
-                "log_loss": 1.8148331783773388,
-                "brier": 1.4015095516030809
+                "coverage": 0.8,
+                "games": 4,
+                "accuracy": 0.5,
+                "log_loss": 0.9826497244506555,
+                "brier": 0.723589435408634
               },
               {
                 "variant": "candidate",
                 "requested_coverage": 1.0,
                 "coverage": 1.0,
-                "games": 2,
-                "accuracy": 0.0,
-                "log_loss": 1.8148331783773388,
-                "brier": 1.4015095516030809
+                "games": 5,
+                "accuracy": 0.6,
+                "log_loss": 0.8351920380193422,
+                "brier": 0.5978076568416718
               }
             ],
             "replicates": 1000,
@@ -19739,10 +19820,16 @@
           },
           "temporal_stability": [
             {
-              "period": "later",
+              "period": "earlier",
               "games": 2,
               "accuracy_delta": 0.0,
               "log_loss_delta": 0.25868681626233647
+            },
+            {
+              "period": "later",
+              "games": 3,
+              "accuracy_delta": 0.0,
+              "log_loss_delta": -0.0792679283987686
             }
           ],
           "promotion_review_eligible": false,
@@ -19961,21 +20048,21 @@
           "summary": {
             "reference": {
               "all": {
-                "games": 3,
+                "games": 4,
                 "accuracy": 1.0,
-                "log_loss": 0.4928273491108075,
-                "brier": 0.3038321300539894
+                "log_loss": 0.44946545085489387,
+                "brier": 0.26524799611462624
               },
               "selected": {
-                "games": 1,
+                "games": 2,
                 "accuracy": 1.0,
-                "log_loss": 0.42333486297276235,
-                "brier": 0.23824419419330692
+                "log_loss": 0.3713573095299576,
+                "brier": 0.19386989424492188
               },
-              "coverage": 0.3333333333333333,
+              "coverage": 0.5,
               "confusion_actual_by_predicted": [
                 [
-                  3,
+                  4,
                   0
                 ],
                 [
@@ -19997,21 +20084,28 @@
                   "games": 2,
                   "mean_confidence": 0.636829358739625,
                   "accuracy": 1.0
+                },
+                {
+                  "lower": 0.7,
+                  "upper": 0.8,
+                  "games": 1,
+                  "mean_confidence": 0.7265995662983169,
+                  "accuracy": 1.0
                 }
               ],
               "brier_convention": "Sum over classes; binary value is twice the one-probability binary Brier.",
               "score_errors": {
-                "team_mae": 1.8086525558311308,
-                "total_mae": 3.514358910040945,
-                "margin_mae": 2.7162645592943684
+                "team_mae": 2.6622335255727805,
+                "total_mae": 5.247257399929573,
+                "margin_mae": 4.390475715899065
               }
             },
             "candidate": {
               "all": {
-                "games": 3,
+                "games": 4,
                 "accuracy": 1.0,
-                "log_loss": 0.5857776137595518,
-                "brier": 0.3932329056137394
+                "log_loss": 0.5589209566286929,
+                "brier": 0.36719894401595604
               },
               "selected": {
                 "games": 0,
@@ -20022,7 +20116,7 @@
               "coverage": 0.0,
               "confusion_actual_by_predicted": [
                 [
-                  3,
+                  4,
                   0
                 ],
                 [
@@ -20037,19 +20131,26 @@
                   "games": 3,
                   "mean_confidence": 0.5570237644919099,
                   "accuracy": 1.0
+                },
+                {
+                  "lower": 0.6,
+                  "upper": 0.7,
+                  "games": 1,
+                  "mean_confidence": 0.6198046165307857,
+                  "accuracy": 1.0
                 }
               ],
               "brier_convention": "Sum over classes; binary value is twice the one-probability binary Brier.",
               "score_errors": {
-                "team_mae": 1.6000355558337607,
-                "total_mae": 2.8011740871914887,
-                "margin_mae": 2.3599095908060974
+                "team_mae": 2.4039566082603123,
+                "total_mae": 4.5087404481636,
+                "margin_mae": 4.047431154302906
               }
             }
           },
           "paired": {
-            "games": 3,
-            "day_blocks": 1,
+            "games": 4,
+            "day_blocks": 2,
             "changes": {
               "accuracy": {
                 "delta": 0.0,
@@ -20059,17 +20160,17 @@
                 ]
               },
               "log_loss": {
-                "delta": 0.0929502646487443,
+                "delta": 0.10945550577379903,
                 "day_block_95_interval": [
                   0.0929502646487443,
-                  0.0929502646487443
+                  0.15897122914896322
                 ]
               },
               "brier": {
-                "delta": 0.08940077555975001,
+                "delta": 0.10195094790132977,
                 "day_block_95_interval": [
                   0.08940077555975001,
-                  0.08940077555975001
+                  0.13960146492606904
                 ]
               }
             },
@@ -20077,74 +20178,74 @@
               {
                 "variant": "reference",
                 "requested_coverage": 0.25,
-                "coverage": 0.3333333333333333,
+                "coverage": 0.25,
                 "games": 1,
                 "accuracy": 1.0,
-                "log_loss": 0.42333486297276235,
-                "brier": 0.23824419419330692
+                "log_loss": 0.3193797560871529,
+                "brier": 0.14949559429653683
               },
               {
                 "variant": "reference",
                 "requested_coverage": 0.5,
-                "coverage": 0.6666666666666666,
+                "coverage": 0.5,
                 "games": 2,
                 "accuracy": 1.0,
-                "log_loss": 0.45165448898602356,
-                "brier": 0.2644359875061612
+                "log_loss": 0.3713573095299576,
+                "brier": 0.19386989424492188
               },
               {
                 "variant": "reference",
                 "requested_coverage": 0.75,
-                "coverage": 1.0,
+                "coverage": 0.75,
                 "games": 3,
                 "accuracy": 1.0,
-                "log_loss": 0.4928273491108075,
-                "brier": 0.3038321300539894
+                "log_loss": 0.4075629113530666,
+                "brier": 0.2261225231029531
               },
               {
                 "variant": "reference",
                 "requested_coverage": 1.0,
                 "coverage": 1.0,
-                "games": 3,
+                "games": 4,
                 "accuracy": 1.0,
-                "log_loss": 0.4928273491108075,
-                "brier": 0.3038321300539894
+                "log_loss": 0.4494654508548938,
+                "brier": 0.2652479961146263
               },
               {
                 "variant": "candidate",
                 "requested_coverage": 0.25,
-                "coverage": 0.3333333333333333,
+                "coverage": 0.25,
                 "games": 1,
                 "accuracy": 1.0,
-                "log_loss": 0.5457944468503092,
-                "brier": 0.3538401600516106
+                "log_loss": 0.47835098523611613,
+                "brier": 0.28909705922260587
               },
               {
                 "variant": "candidate",
                 "requested_coverage": 0.5,
-                "coverage": 0.6666666666666666,
+                "coverage": 0.5,
                 "games": 2,
                 "accuracy": 1.0,
-                "log_loss": 0.5625720948377183,
-                "brier": 0.3702890936190047
+                "log_loss": 0.5120727160432127,
+                "brier": 0.3214686096371082
               },
               {
                 "variant": "candidate",
                 "requested_coverage": 0.75,
-                "coverage": 1.0,
+                "coverage": 0.75,
                 "games": 3,
                 "accuracy": 1.0,
-                "log_loss": 0.5857776137595518,
-                "brier": 0.3932329056137394
+                "log_loss": 0.5344983916371843,
+                "brier": 0.34322508215353836
               },
               {
                 "variant": "candidate",
                 "requested_coverage": 1.0,
                 "coverage": 1.0,
-                "games": 3,
+                "games": 4,
                 "accuracy": 1.0,
-                "log_loss": 0.5857776137595518,
-                "brier": 0.3932329056137394
+                "log_loss": 0.5589209566286929,
+                "brier": 0.36719894401595604
               }
             ],
             "replicates": 1000,
@@ -20153,10 +20254,16 @@
           },
           "temporal_stability": [
             {
-              "period": "later",
+              "period": "earlier",
               "games": 3,
               "accuracy_delta": 0.0,
               "log_loss_delta": 0.0929502646487443
+            },
+            {
+              "period": "later",
+              "games": 1,
+              "accuracy_delta": 0.0,
+              "log_loss_delta": 0.15897122914896322
             }
           ],
           "promotion_review_eligible": false,
@@ -20232,6 +20339,74 @@
           "margin_mae": 24.947779651383968,
           "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2Cm1fJZuVRWKxrrBmdvzVvVYHHNdpDRb_Qk-3M52j58SiTLHe21Oc0w==/independiente-o-vs-san-lorenzo",
           "record_sha256": "3fe03ee4a445d1ebbb2d2fcc85a631d3fec3bf7d6c2485dd84fd58eeba1c586a"
+        },
+        {
+          "event_id": "ABA_2026_78",
+          "league": "ABA",
+          "day": "2026-11-15",
+          "variant": "reference",
+          "y": 0,
+          "p": [
+            0.7355011370372749,
+            0.26449886296272507
+          ],
+          "selected": true,
+          "team_mae": 5.997406644747656,
+          "total_mae": 11.994813289495312,
+          "margin_mae": 0.02247630857027616,
+          "source_url": "https://www.aba-liga.com/match/78/26/1/Overview/q1/1/home/bosna-bh-telecom-mega-superbet/",
+          "record_sha256": "536c37318790b7d46b377d9a5373b7ef9ba686eeb470b282a8f0bc5801d43e5b"
+        },
+        {
+          "event_id": "ABA_2026_78",
+          "league": "ABA",
+          "day": "2026-11-15",
+          "variant": "candidate",
+          "y": 0,
+          "p": [
+            0.7997001058370465,
+            0.20029989416295343
+          ],
+          "selected": true,
+          "team_mae": 6.0821041039633315,
+          "total_mae": 12.164208207926663,
+          "margin_mae": 0.2871426984692107,
+          "source_url": "https://www.aba-liga.com/match/78/26/1/Overview/q1/1/home/bosna-bh-telecom-mega-superbet/",
+          "record_sha256": "536c37318790b7d46b377d9a5373b7ef9ba686eeb470b282a8f0bc5801d43e5b"
+        },
+        {
+          "event_id": "ABA_2026_77",
+          "league": "ABA",
+          "day": "2026-11-15",
+          "variant": "reference",
+          "y": 0,
+          "p": [
+            0.8632548396512902,
+            0.13674516034870976
+          ],
+          "selected": true,
+          "team_mae": 2.255104822355804,
+          "total_mae": 1.7873445821862788,
+          "margin_mae": 4.510209644711608,
+          "source_url": "https://www.aba-liga.com/match/77/26/1/Overview/q1/1/home/dubai-basketball-spartak-office-shoes/",
+          "record_sha256": "8d52cf0849ef0acefb3e6dcb803e073f2531348f18d380a6c908c94a54b618c8"
+        },
+        {
+          "event_id": "ABA_2026_77",
+          "league": "ABA",
+          "day": "2026-11-15",
+          "variant": "candidate",
+          "y": 0,
+          "p": [
+            0.9255065666484842,
+            0.07449343335151584
+          ],
+          "selected": true,
+          "team_mae": 2.2149211414892704,
+          "total_mae": 2.2794807076813015,
+          "margin_mae": 4.429842282978541,
+          "source_url": "https://www.aba-liga.com/match/77/26/1/Overview/q1/1/home/dubai-basketball-spartak-office-shoes/",
+          "record_sha256": "8d52cf0849ef0acefb3e6dcb803e073f2531348f18d380a6c908c94a54b618c8"
         },
         {
           "event_id": "ABA_2026_76",
@@ -20336,6 +20511,40 @@
           "record_sha256": "5d30249a210acf8ec11c641a200d9941020992be5a0ac01440476c2f92da1762"
         },
         {
+          "event_id": "ABA_2026_71",
+          "league": "ABA",
+          "day": "2026-11-15",
+          "variant": "reference",
+          "y": 0,
+          "p": [
+            0.7190322350309962,
+            0.2809677649690038
+          ],
+          "selected": true,
+          "team_mae": 2.454840933978531,
+          "total_mae": 0.6948337089199867,
+          "margin_mae": 4.909681867957062,
+          "source_url": "https://www.aba-liga.com/match/71/26/1/Overview/q1/1/home/crvena-zvezda-meridianbet-cedevita-olimpija/",
+          "record_sha256": "1147f284f49ab026dfaca7e5df2e9d01f8dd2751b05b6ec367a07a6617a9096a"
+        },
+        {
+          "event_id": "ABA_2026_71",
+          "league": "ABA",
+          "day": "2026-11-15",
+          "variant": "candidate",
+          "y": 0,
+          "p": [
+            0.7824218042015432,
+            0.21757819579845672
+          ],
+          "selected": true,
+          "team_mae": 2.478987875622323,
+          "total_mae": 0.8531292620293129,
+          "margin_mae": 4.957975751244646,
+          "source_url": "https://www.aba-liga.com/match/71/26/1/Overview/q1/1/home/crvena-zvezda-meridianbet-cedevita-olimpija/",
+          "record_sha256": "1147f284f49ab026dfaca7e5df2e9d01f8dd2751b05b6ec367a07a6617a9096a"
+        },
+        {
           "event_id": "ABA_2026_72",
           "league": "ABA",
           "day": "2026-11-14",
@@ -20368,6 +20577,40 @@
           "margin_mae": 13.107954583500742,
           "source_url": "https://www.aba-liga.com/match/72/26/1/Overview/q1/1/home/igokea-m-tel-buducnost-voli/",
           "record_sha256": "c89fe0a3a09f30fb6b1ac42b0f9a5fb47562a8c3e7cc26698d89b7a22618949f"
+        },
+        {
+          "event_id": "KBL_S49G01N73",
+          "league": "KBL",
+          "day": "2026-11-16",
+          "variant": "reference",
+          "y": 0,
+          "p": [
+            0.7265995662983169,
+            0.2734004337016831
+          ],
+          "selected": true,
+          "team_mae": 5.222976434797729,
+          "total_mae": 10.445952869595459,
+          "margin_mae": 9.413109185713154,
+          "source_url": "https://api.kbl.or.kr/match/S49G01N73",
+          "record_sha256": "16231f1b95ae62f8d33c5f1fd844858245b326db361a1e709d0f0835bcfea593"
+        },
+        {
+          "event_id": "KBL_S49G01N73",
+          "league": "KBL",
+          "day": "2026-11-16",
+          "variant": "candidate",
+          "y": 0,
+          "p": [
+            0.6198046165307857,
+            0.3801953834692143
+          ],
+          "selected": false,
+          "team_mae": 4.815719765539967,
+          "total_mae": 9.631439531079934,
+          "margin_mae": 9.109995844793332,
+          "source_url": "https://api.kbl.or.kr/match/S49G01N73",
+          "record_sha256": "16231f1b95ae62f8d33c5f1fd844858245b326db361a1e709d0f0835bcfea593"
         },
         {
           "event_id": "KBL_S49G01N70",
@@ -20411,7 +20654,7 @@
     {
       "experiment_id": "729422a44e261519d0c7d0478ca4009f28d3bf78d4c0957373c4c88b98432344",
       "spec": "paired-forward-report-v1",
-      "checked_at_utc": "2026-11-15T14:17:14.794906+00:00",
+      "checked_at_utc": "2026-11-16T16:19:39.197518+00:00",
       "pending": 65,
       "settled_games": 84,
       "rejected": [],
@@ -24736,7 +24979,7 @@
     {
       "experiment_id": "756cfe7cebbd46381df8e4c94ce0867b59fd864092b0cb6e81c8e4f163233a3f",
       "spec": "paired-forward-report-v1",
-      "checked_at_utc": "2026-11-15T14:17:15.029682+00:00",
+      "checked_at_utc": "2026-11-16T16:19:39.360927+00:00",
       "pending": 3,
       "settled_games": 94,
       "rejected": [],
@@ -29414,9 +29657,9 @@
     {
       "experiment_id": "780330d8e6e04f1a0f04e9b6e6ded7a94df4b4539ed6d0c18e1b39415a69755a",
       "spec": "paired-forward-report-v1",
-      "checked_at_utc": "2026-11-15T14:17:15.205787+00:00",
-      "pending": 29,
-      "settled_games": 64,
+      "checked_at_utc": "2026-11-16T16:19:39.483334+00:00",
+      "pending": 28,
+      "settled_games": 65,
       "rejected": [],
       "leagues": [
         {
@@ -29424,21 +29667,21 @@
           "summary": {
             "reference": {
               "all": {
-                "games": 8,
-                "accuracy": 0.375,
-                "log_loss": 0.8841431203389951,
-                "brier": 0.6681398402224257
+                "games": 9,
+                "accuracy": 0.4444444444444444,
+                "log_loss": 0.8011284843188893,
+                "brier": 0.597545228547252
               },
               "selected": {
-                "games": 6,
-                "accuracy": 0.5,
-                "log_loss": 0.8817098862790972,
-                "brier": 0.6591035750745641
+                "games": 7,
+                "accuracy": 0.5714285714285714,
+                "log_loss": 0.7753243876903753,
+                "brier": 0.569629969370464
               },
-              "coverage": 0.75,
+              "coverage": 0.7777777777777778,
               "confusion_actual_by_predicted": [
                 [
-                  2,
+                  3,
                   3
                 ],
                 [
@@ -29471,35 +29714,35 @@
                 {
                   "lower": 0.8,
                   "upper": 0.9,
-                  "games": 2,
-                  "mean_confidence": 0.8417142879747526,
+                  "games": 3,
+                  "mean_confidence": 0.8517962883425768,
                   "accuracy": 1.0
                 }
               ],
               "brier_convention": "Sum over classes; binary value is twice the one-probability binary Brier.",
               "score_errors": {
-                "team_mae": 9.499085390372754,
-                "total_mae": 17.268543932243883,
-                "margin_mae": 10.380440215275247
+                "team_mae": 8.671611649232188,
+                "total_mae": 15.58167748583172,
+                "margin_mae": 9.683018351379701
               }
             },
             "candidate": {
               "all": {
-                "games": 8,
-                "accuracy": 0.375,
-                "log_loss": 1.0091238507280633,
-                "brier": 0.7490772398549917
+                "games": 9,
+                "accuracy": 0.4444444444444444,
+                "log_loss": 0.9052895581187956,
+                "brier": 0.666995220561923
               },
               "selected": {
-                "games": 7,
-                "accuracy": 0.42857142857142855,
-                "log_loss": 1.0301358191828707,
-                "brier": 0.760734657508347
+                "games": 8,
+                "accuracy": 0.5,
+                "log_loss": 0.9106957439405936,
+                "brier": 0.6669352085969751
               },
-              "coverage": 0.875,
+              "coverage": 0.8888888888888888,
               "confusion_actual_by_predicted": [
                 [
-                  2,
+                  3,
                   3
                 ],
                 [
@@ -29539,22 +29782,22 @@
                 {
                   "lower": 0.9,
                   "upper": 1.0,
-                  "games": 1,
-                  "mean_confidence": 0.9094410303992644,
+                  "games": 2,
+                  "mean_confidence": 0.9187707825556829,
                   "accuracy": 1.0
                 }
               ],
               "brier_convention": "Sum over classes; binary value is twice the one-probability binary Brier.",
               "score_errors": {
-                "team_mae": 9.499085390372754,
-                "total_mae": 17.268543932243883,
-                "margin_mae": 10.380440215275247
+                "team_mae": 8.671611649232188,
+                "total_mae": 15.58167748583172,
+                "margin_mae": 9.683018351379701
               }
             }
           },
           "paired": {
-            "games": 8,
-            "day_blocks": 3,
+            "games": 9,
+            "day_blocks": 4,
             "changes": {
               "accuracy": {
                 "delta": 0.0,
@@ -29564,17 +29807,17 @@
                 ]
               },
               "log_loss": {
-                "delta": 0.12498073038906823,
+                "delta": 0.10416107379990631,
                 "day_block_95_interval": [
-                  0.07392175829396819,
-                  0.20329249248836861
+                  0.009156052053222787,
+                  0.17672362534819283
                 ]
               },
               "brier": {
-                "delta": 0.08093739963256612,
+                "delta": 0.06944999201467081,
                 "day_block_95_interval": [
-                  0.05004068371436256,
-                  0.11943517601106023
+                  0.014344762219757118,
+                  0.10524673151710506
                 ]
               }
             },
@@ -29582,74 +29825,74 @@
               {
                 "variant": "reference",
                 "requested_coverage": 0.25,
-                "coverage": 0.25,
-                "games": 2,
+                "coverage": 0.3333333333333333,
+                "games": 3,
                 "accuracy": 1.0,
-                "log_loss": 0.17235664145851498,
-                "brier": 0.05022773551506319
+                "log_loss": 0.16057489302502445,
+                "brier": 0.044414602058663176
               },
               {
                 "variant": "reference",
                 "requested_coverage": 0.5,
-                "coverage": 0.5,
-                "games": 4,
-                "accuracy": 0.5,
-                "log_loss": 0.871434440468999,
-                "brier": 0.6523540253425085
+                "coverage": 0.5555555555555556,
+                "games": 5,
+                "accuracy": 0.6,
+                "log_loss": 0.7245498316068079,
+                "brier": 0.5284408873031794
               },
               {
                 "variant": "reference",
                 "requested_coverage": 0.75,
-                "coverage": 0.75,
-                "games": 6,
-                "accuracy": 0.5,
-                "log_loss": 0.8817098862790974,
-                "brier": 0.6591035750745641
+                "coverage": 0.7777777777777778,
+                "games": 7,
+                "accuracy": 0.5714285714285714,
+                "log_loss": 0.7753243876903753,
+                "brier": 0.569629969370464
               },
               {
                 "variant": "reference",
                 "requested_coverage": 1.0,
                 "coverage": 1.0,
-                "games": 8,
-                "accuracy": 0.375,
-                "log_loss": 0.8841431203389951,
-                "brier": 0.6681398402224257
+                "games": 9,
+                "accuracy": 0.4444444444444444,
+                "log_loss": 0.8011284843188893,
+                "brier": 0.597545228547252
               },
               {
                 "variant": "candidate",
                 "requested_coverage": 0.25,
-                "coverage": 0.25,
-                "games": 2,
+                "coverage": 0.3333333333333333,
+                "games": 3,
                 "accuracy": 1.0,
-                "log_loss": 0.10243327740981079,
-                "brier": 0.019040526622945194
+                "log_loss": 0.093160590688092,
+                "brier": 0.01614003982108729
               },
               {
                 "variant": "candidate",
                 "requested_coverage": 0.5,
-                "coverage": 0.5,
-                "games": 4,
-                "accuracy": 0.5,
-                "log_loss": 1.0204959611714357,
-                "brier": 0.7421961289365324
+                "coverage": 0.5555555555555556,
+                "games": 5,
+                "accuracy": 0.6,
+                "log_loss": 0.8313198123860793,
+                "brier": 0.5958247163927003
               },
               {
                 "variant": "candidate",
                 "requested_coverage": 0.75,
-                "coverage": 0.75,
-                "games": 6,
-                "accuracy": 0.5,
-                "log_loss": 1.023710274033199,
-                "brier": 0.7438415049372754
+                "coverage": 0.7777777777777778,
+                "games": 7,
+                "accuracy": 0.5714285714285714,
+                "log_loss": 0.8881252659205495,
+                "brier": 0.6390554422630034
               },
               {
                 "variant": "candidate",
                 "requested_coverage": 1.0,
                 "coverage": 1.0,
-                "games": 8,
-                "accuracy": 0.375,
-                "log_loss": 1.0091238507280633,
-                "brier": 0.7490772398549919
+                "games": 9,
+                "accuracy": 0.4444444444444444,
+                "log_loss": 0.9052895581187956,
+                "brier": 0.666995220561923
               }
             ],
             "replicates": 1000,
@@ -29659,15 +29902,15 @@
           "temporal_stability": [
             {
               "period": "earlier",
-              "games": 3,
+              "games": 5,
               "accuracy_delta": 0.0,
-              "log_loss_delta": 0.08070828301983456
+              "log_loss_delta": 0.07799367312948802
             },
             {
               "period": "later",
-              "games": 5,
+              "games": 4,
               "accuracy_delta": 0.0,
-              "log_loss_delta": 0.15154419881060843
+              "log_loss_delta": 0.1368703246379292
             }
           ],
           "promotion_review_eligible": false,
@@ -31328,6 +31571,40 @@
           "record_sha256": "54021cfc2c1e2686f0556a90e029be6cbb0d7badcb5e58ada59d7ce5fab93924"
         },
         {
+          "event_id": "ABA_2026_77",
+          "league": "ABA",
+          "day": "2026-11-15",
+          "variant": "reference",
+          "y": 0,
+          "p": [
+            0.8719602890782255,
+            0.12803971092177446
+          ],
+          "selected": true,
+          "team_mae": 2.051821720107668,
+          "total_mae": 2.0867459145344185,
+          "margin_mae": 4.103643440215336,
+          "source_url": "https://www.aba-liga.com/match/77/26/1/Overview/q1/1/home/dubai-basketball-spartak-office-shoes/",
+          "record_sha256": "971d3ee611da00b87f0d213bc76f40cccf56a737fcfdfa91444b833aa72a64cd"
+        },
+        {
+          "event_id": "ABA_2026_77",
+          "league": "ABA",
+          "day": "2026-11-15",
+          "variant": "candidate",
+          "y": 0,
+          "p": [
+            0.9281005347121014,
+            0.07189946528789867
+          ],
+          "selected": true,
+          "team_mae": 2.051821720107668,
+          "total_mae": 2.0867459145344185,
+          "margin_mae": 4.103643440215336,
+          "source_url": "https://www.aba-liga.com/match/77/26/1/Overview/q1/1/home/dubai-basketball-spartak-office-shoes/",
+          "record_sha256": "971d3ee611da00b87f0d213bc76f40cccf56a737fcfdfa91444b833aa72a64cd"
+        },
+        {
           "event_id": "ARG_LNB_b641af1a077935f8eed456de",
           "league": "ARG_LNB",
           "day": "2026-11-11",
@@ -32831,22 +33108,9 @@
     {
       "experiment_id": "7e4703461a54c25ad6514a5feb89acd4ef771b4b915a5c0d61c621d98207d165",
       "spec": "paired-forward-report-v1",
-      "checked_at_utc": "2026-11-15T14:17:15.389751+00:00",
-      "pending": 112,
-      "settled_games": 0,
-      "rejected": [],
-      "leagues": [],
-      "rows": [],
-      "source_snapshot_verified": true,
-      "active_experiment": true,
-      "production_default_changed": false
-    },
-    {
-      "experiment_id": "a78c501ea7147ed7be5637d9f42fc908d0c8befd31695e61ea6d228080d45bcf",
-      "spec": "paired-forward-report-v1",
-      "checked_at_utc": "2026-11-15T14:17:15.484257+00:00",
-      "pending": 52,
-      "settled_games": 16,
+      "checked_at_utc": "2026-11-16T16:19:39.610703+00:00",
+      "pending": 109,
+      "settled_games": 3,
       "rejected": [],
       "leagues": [
         {
@@ -32854,21 +33118,538 @@
           "summary": {
             "reference": {
               "all": {
-                "games": 5,
-                "accuracy": 0.2,
-                "log_loss": 1.0496888608364388,
-                "brier": 0.8117112196887014
+                "games": 2,
+                "accuracy": 1.0,
+                "log_loss": 0.3185032858783865,
+                "brier": 0.1488843835392761
               },
               "selected": {
-                "games": 3,
-                "accuracy": 0.3333333333333333,
-                "log_loss": 1.1580942682191369,
-                "brier": 0.8916696474922446
+                "games": 2,
+                "accuracy": 1.0,
+                "log_loss": 0.3185032858783865,
+                "brier": 0.1488843835392761
               },
-              "coverage": 0.6,
+              "coverage": 1.0,
+              "confusion_actual_by_predicted": [
+                [
+                  2,
+                  0
+                ],
+                [
+                  0,
+                  0
+                ]
+              ],
+              "confidence_bins": [
+                {
+                  "lower": 0.7,
+                  "upper": 0.8,
+                  "games": 2,
+                  "mean_confidence": 0.7272832952923072,
+                  "accuracy": 1.0
+                }
+              ],
+              "brier_convention": "Sum over classes; binary value is twice the one-probability binary Brier.",
+              "score_errors": {
+                "team_mae": 4.228537506621933,
+                "total_mae": 6.3448234992076635,
+                "margin_mae": 2.466079088263669
+              }
+            },
+            "candidate": {
+              "all": {
+                "games": 2,
+                "accuracy": 1.0,
+                "log_loss": 0.23441911428677506,
+                "brier": 0.08744655789764394
+              },
+              "selected": {
+                "games": 2,
+                "accuracy": 1.0,
+                "log_loss": 0.23441911428677506,
+                "brier": 0.08744655789764394
+              },
+              "coverage": 1.0,
+              "confusion_actual_by_predicted": [
+                [
+                  2,
+                  0
+                ],
+                [
+                  0,
+                  0
+                ]
+              ],
+              "confidence_bins": [
+                {
+                  "lower": 0.7,
+                  "upper": 0.8,
+                  "games": 2,
+                  "mean_confidence": 0.7910773771340388,
+                  "accuracy": 1.0
+                }
+              ],
+              "brier_convention": "Sum over classes; binary value is twice the one-probability binary Brier.",
+              "score_errors": {
+                "team_mae": 4.283053688762443,
+                "total_mae": 6.508668734978002,
+                "margin_mae": 2.6225592248569143
+              }
+            }
+          },
+          "paired": {
+            "games": 2,
+            "day_blocks": 1,
+            "changes": {
+              "accuracy": {
+                "delta": 0.0,
+                "day_block_95_interval": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "log_loss": {
+                "delta": -0.08408417159161147,
+                "day_block_95_interval": [
+                  -0.08408417159161147,
+                  -0.08408417159161147
+                ]
+              },
+              "brier": {
+                "delta": -0.06143782564163217,
+                "day_block_95_interval": [
+                  -0.06143782564163217,
+                  -0.06143782564163217
+                ]
+              }
+            },
+            "equal_coverage": [
+              {
+                "variant": "reference",
+                "requested_coverage": 0.25,
+                "coverage": 0.5,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.3071818857703572,
+                "brier": 0.13990271696172177
+              },
+              {
+                "variant": "reference",
+                "requested_coverage": 0.5,
+                "coverage": 0.5,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.3071818857703572,
+                "brier": 0.13990271696172177
+              },
+              {
+                "variant": "reference",
+                "requested_coverage": 0.75,
+                "coverage": 1.0,
+                "games": 2,
+                "accuracy": 1.0,
+                "log_loss": 0.3185032858783865,
+                "brier": 0.1488843835392761
+              },
+              {
+                "variant": "reference",
+                "requested_coverage": 1.0,
+                "coverage": 1.0,
+                "games": 2,
+                "accuracy": 1.0,
+                "log_loss": 0.3185032858783865,
+                "brier": 0.1488843835392761
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 0.25,
+                "coverage": 0.5,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.22349928031478034,
+                "brier": 0.08022778798895601
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 0.5,
+                "coverage": 0.5,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.22349928031478034,
+                "brier": 0.08022778798895601
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 0.75,
+                "coverage": 1.0,
+                "games": 2,
+                "accuracy": 1.0,
+                "log_loss": 0.23441911428677506,
+                "brier": 0.08744655789764394
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 1.0,
+                "coverage": 1.0,
+                "games": 2,
+                "accuracy": 1.0,
+                "log_loss": 0.23441911428677506,
+                "brier": 0.08744655789764394
+              }
+            ],
+            "replicates": 1000,
+            "seed": 20261025,
+            "note": "Candidate minus reference. Higher accuracy/lower losses are better. Exploratory intervals are not corrected for multiple candidate searches; historical comparisons cannot promote a model automatically."
+          },
+          "temporal_stability": [
+            {
+              "period": "later",
+              "games": 2,
+              "accuracy_delta": 0.0,
+              "log_loss_delta": -0.08408417159161147
+            }
+          ],
+          "promotion_review_eligible": false,
+          "production_promoted": false,
+          "reason": "Sample checkpoints plus paired uncertainty, losses and coverage; independent temporal stability review still required. No automatic promotion."
+        },
+        {
+          "league": "KBL",
+          "summary": {
+            "reference": {
+              "all": {
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.3193797560871529,
+                "brier": 0.14949559429653683
+              },
+              "selected": {
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.3193797560871529,
+                "brier": 0.14949559429653683
+              },
+              "coverage": 1.0,
               "confusion_actual_by_predicted": [
                 [
                   1,
+                  0
+                ],
+                [
+                  0,
+                  0
+                ]
+              ],
+              "confidence_bins": [
+                {
+                  "lower": 0.7,
+                  "upper": 0.8,
+                  "games": 1,
+                  "mean_confidence": 0.7265995662983169,
+                  "accuracy": 1.0
+                }
+              ],
+              "brier_convention": "Sum over classes; binary value is twice the one-probability binary Brier.",
+              "score_errors": {
+                "team_mae": 5.223563407718274,
+                "total_mae": 10.447126815436548,
+                "margin_mae": 9.412854173297973
+              }
+            },
+            "candidate": {
+              "all": {
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.47835098523611613,
+                "brier": 0.28909705922260587
+              },
+              "selected": {
+                "games": 0,
+                "accuracy": null,
+                "log_loss": null,
+                "brier": null
+              },
+              "coverage": 0.0,
+              "confusion_actual_by_predicted": [
+                [
+                  1,
+                  0
+                ],
+                [
+                  0,
+                  0
+                ]
+              ],
+              "confidence_bins": [
+                {
+                  "lower": 0.6,
+                  "upper": 0.7,
+                  "games": 1,
+                  "mean_confidence": 0.6198046165307857,
+                  "accuracy": 1.0
+                }
+              ],
+              "brier_convention": "Sum over classes; binary value is twice the one-probability binary Brier.",
+              "score_errors": {
+                "team_mae": 4.8160256066996965,
+                "total_mae": 9.632051213399393,
+                "margin_mae": 9.108775811396384
+              }
+            }
+          },
+          "paired": {
+            "games": 1,
+            "day_blocks": 1,
+            "changes": {
+              "accuracy": {
+                "delta": 0.0,
+                "day_block_95_interval": [
+                  0.0,
+                  0.0
+                ]
+              },
+              "log_loss": {
+                "delta": 0.15897122914896322,
+                "day_block_95_interval": [
+                  0.15897122914896322,
+                  0.15897122914896322
+                ]
+              },
+              "brier": {
+                "delta": 0.13960146492606904,
+                "day_block_95_interval": [
+                  0.13960146492606904,
+                  0.13960146492606904
+                ]
+              }
+            },
+            "equal_coverage": [
+              {
+                "variant": "reference",
+                "requested_coverage": 0.25,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.3193797560871529,
+                "brier": 0.14949559429653683
+              },
+              {
+                "variant": "reference",
+                "requested_coverage": 0.5,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.3193797560871529,
+                "brier": 0.14949559429653683
+              },
+              {
+                "variant": "reference",
+                "requested_coverage": 0.75,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.3193797560871529,
+                "brier": 0.14949559429653683
+              },
+              {
+                "variant": "reference",
+                "requested_coverage": 1.0,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.3193797560871529,
+                "brier": 0.14949559429653683
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 0.25,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.47835098523611613,
+                "brier": 0.28909705922260587
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 0.5,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.47835098523611613,
+                "brier": 0.28909705922260587
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 0.75,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.47835098523611613,
+                "brier": 0.28909705922260587
+              },
+              {
+                "variant": "candidate",
+                "requested_coverage": 1.0,
+                "coverage": 1.0,
+                "games": 1,
+                "accuracy": 1.0,
+                "log_loss": 0.47835098523611613,
+                "brier": 0.28909705922260587
+              }
+            ],
+            "replicates": 1000,
+            "seed": 20261025,
+            "note": "Candidate minus reference. Higher accuracy/lower losses are better. Exploratory intervals are not corrected for multiple candidate searches; historical comparisons cannot promote a model automatically."
+          },
+          "temporal_stability": [
+            {
+              "period": "later",
+              "games": 1,
+              "accuracy_delta": 0.0,
+              "log_loss_delta": 0.15897122914896322
+            }
+          ],
+          "promotion_review_eligible": false,
+          "production_promoted": false,
+          "reason": "Sample checkpoints plus paired uncertainty, losses and coverage; independent temporal stability review still required. No automatic promotion."
+        }
+      ],
+      "rows": [
+        {
+          "event_id": "ABA_2026_78",
+          "league": "ABA",
+          "day": "2026-11-15",
+          "variant": "reference",
+          "y": 0,
+          "p": [
+            0.7355168086988119,
+            0.26448319130118814
+          ],
+          "selected": true,
+          "team_mae": 6.00262079944541,
+          "total_mae": 12.00524159889082,
+          "margin_mae": 0.023249748930425085,
+          "source_url": "https://www.aba-liga.com/match/78/26/1/Overview/q1/1/home/bosna-bh-telecom-mega-superbet/",
+          "record_sha256": "120e0628d665d11ed58b9484b7cce3f89247df40f8a22704e942019a25334ccd"
+        },
+        {
+          "event_id": "ABA_2026_78",
+          "league": "ABA",
+          "day": "2026-11-15",
+          "variant": "candidate",
+          "y": 0,
+          "p": [
+            0.7997154674107908,
+            0.20028453258920922
+          ],
+          "selected": true,
+          "team_mae": 6.0874753168253335,
+          "total_mae": 12.174950633650667,
+          "margin_mae": 0.28785432831472235,
+          "source_url": "https://www.aba-liga.com/match/78/26/1/Overview/q1/1/home/bosna-bh-telecom-mega-superbet/",
+          "record_sha256": "120e0628d665d11ed58b9484b7cce3f89247df40f8a22704e942019a25334ccd"
+        },
+        {
+          "event_id": "ABA_2026_71",
+          "league": "ABA",
+          "day": "2026-11-15",
+          "variant": "reference",
+          "y": 0,
+          "p": [
+            0.7190497818858024,
+            0.2809502181141976
+          ],
+          "selected": true,
+          "team_mae": 2.4544542137984564,
+          "total_mae": 0.6844053995245076,
+          "margin_mae": 4.908908427596913,
+          "source_url": "https://www.aba-liga.com/match/71/26/1/Overview/q1/1/home/crvena-zvezda-meridianbet-cedevita-olimpija/",
+          "record_sha256": "9af494016231b08f8a1f991ea112e5a11ca0357e0299ea145da9d2f28e6c038d"
+        },
+        {
+          "event_id": "ABA_2026_71",
+          "league": "ABA",
+          "day": "2026-11-15",
+          "variant": "candidate",
+          "y": 0,
+          "p": [
+            0.7824392868572868,
+            0.21756071314271314
+          ],
+          "selected": true,
+          "team_mae": 2.478632060699553,
+          "total_mae": 0.8423868363053373,
+          "margin_mae": 4.957264121399106,
+          "source_url": "https://www.aba-liga.com/match/71/26/1/Overview/q1/1/home/crvena-zvezda-meridianbet-cedevita-olimpija/",
+          "record_sha256": "9af494016231b08f8a1f991ea112e5a11ca0357e0299ea145da9d2f28e6c038d"
+        },
+        {
+          "event_id": "KBL_S49G01N73",
+          "league": "KBL",
+          "day": "2026-11-16",
+          "variant": "reference",
+          "y": 0,
+          "p": [
+            0.7265995662983169,
+            0.2734004337016831
+          ],
+          "selected": true,
+          "team_mae": 5.223563407718274,
+          "total_mae": 10.447126815436548,
+          "margin_mae": 9.412854173297973,
+          "source_url": "https://api.kbl.or.kr/match/S49G01N73",
+          "record_sha256": "5e5faae5dd3d60356a07499efef81ce6d808b8b8129a8a0d8e9c8da1933b21b3"
+        },
+        {
+          "event_id": "KBL_S49G01N73",
+          "league": "KBL",
+          "day": "2026-11-16",
+          "variant": "candidate",
+          "y": 0,
+          "p": [
+            0.6198046165307857,
+            0.3801953834692143
+          ],
+          "selected": false,
+          "team_mae": 4.8160256066996965,
+          "total_mae": 9.632051213399393,
+          "margin_mae": 9.108775811396384,
+          "source_url": "https://api.kbl.or.kr/match/S49G01N73",
+          "record_sha256": "5e5faae5dd3d60356a07499efef81ce6d808b8b8129a8a0d8e9c8da1933b21b3"
+        }
+      ],
+      "source_snapshot_verified": true,
+      "active_experiment": false,
+      "production_default_changed": false
+    },
+    {
+      "experiment_id": "a78c501ea7147ed7be5637d9f42fc908d0c8befd31695e61ea6d228080d45bcf",
+      "spec": "paired-forward-report-v1",
+      "checked_at_utc": "2026-11-16T16:19:39.699880+00:00",
+      "pending": 48,
+      "settled_games": 20,
+      "rejected": [],
+      "leagues": [
+        {
+          "league": "ABA",
+          "summary": {
+            "reference": {
+              "all": {
+                "games": 8,
+                "accuracy": 0.5,
+                "log_loss": 0.7540187431069444,
+                "brier": 0.5491840819568776
+              },
+              "selected": {
+                "games": 6,
+                "accuracy": 0.6666666666666666,
+                "log_loss": 0.7096647408884619,
+                "brier": 0.5016542499480413
+              },
+              "coverage": 0.75,
+              "confusion_actual_by_predicted": [
+                [
+                  4,
                   3
                 ],
                 [
@@ -32894,35 +33675,42 @@
                 {
                   "lower": 0.7,
                   "upper": 0.8,
-                  "games": 2,
-                  "mean_confidence": 0.7889409298552774,
-                  "accuracy": 0.0
+                  "games": 4,
+                  "mean_confidence": 0.7581613385295713,
+                  "accuracy": 0.5
+                },
+                {
+                  "lower": 0.8,
+                  "upper": 0.9,
+                  "games": 1,
+                  "mean_confidence": 0.863319880377155,
+                  "accuracy": 1.0
                 }
               ],
               "brier_convention": "Sum over classes; binary value is twice the one-probability binary Brier.",
               "score_errors": {
-                "team_mae": 11.353031975868111,
-                "total_mae": 18.692066683010403,
-                "margin_mae": 11.872045945718174
+                "team_mae": 8.433534616971789,
+                "total_mae": 13.49263929248676,
+                "margin_mae": 8.599558441632666
               }
             },
             "candidate": {
               "all": {
-                "games": 5,
-                "accuracy": 0.2,
-                "log_loss": 1.1806068819428404,
-                "brier": 0.9035495847307669
+                "games": 8,
+                "accuracy": 0.5,
+                "log_loss": 0.8061208316018363,
+                "brier": 0.5879434402443817
               },
               "selected": {
-                "games": 3,
-                "accuracy": 0.3333333333333333,
-                "log_loss": 1.2977955646446813,
-                "brier": 0.970237545521619
+                "games": 6,
+                "accuracy": 0.6666666666666666,
+                "log_loss": 0.7398864895057554,
+                "brier": 0.5160853724776797
               },
-              "coverage": 0.6,
+              "coverage": 0.75,
               "confusion_actual_by_predicted": [
                 [
-                  1,
+                  4,
                   3
                 ],
                 [
@@ -32941,8 +33729,8 @@
                 {
                   "lower": 0.7,
                   "upper": 0.8,
-                  "games": 1,
-                  "mean_confidence": 0.767179558535547,
+                  "games": 3,
+                  "mean_confidence": 0.783182214864341,
                   "accuracy": 1.0
                 },
                 {
@@ -32951,19 +33739,26 @@
                   "games": 2,
                   "mean_confidence": 0.8369980648765842,
                   "accuracy": 0.0
+                },
+                {
+                  "lower": 0.9,
+                  "upper": 1.0,
+                  "games": 1,
+                  "mean_confidence": 0.9255541582403461,
+                  "accuracy": 1.0
                 }
               ],
               "brier_convention": "Sum over classes; binary value is twice the one-probability binary Brier.",
               "score_errors": {
-                "team_mae": 11.402932185606844,
-                "total_mae": 18.967189369658364,
-                "margin_mae": 11.830813705234556
+                "team_mae": 8.473437984595355,
+                "total_mae": 13.767331461008052,
+                "margin_mae": 8.602864469431402
               }
             }
           },
           "paired": {
-            "games": 5,
-            "day_blocks": 2,
+            "games": 8,
+            "day_blocks": 3,
             "changes": {
               "accuracy": {
                 "delta": 0.0,
@@ -32973,16 +33768,16 @@
                 ]
               },
               "log_loss": {
-                "delta": 0.13091802110640133,
+                "delta": 0.0521020884948918,
                 "day_block_95_interval": [
-                  0.11774310812768674,
+                  -0.0792577991909574,
                   0.13970129642554438
                 ]
               },
               "brier": {
-                "delta": 0.0918383650420654,
+                "delta": 0.03875935828750423,
                 "day_block_95_interval": [
-                  0.07856789802937439,
+                  -0.04970565297009769,
                   0.11174406556110189
                 ]
               }
@@ -32991,74 +33786,74 @@
               {
                 "variant": "reference",
                 "requested_coverage": 0.25,
-                "coverage": 0.4,
+                "coverage": 0.25,
                 "games": 2,
-                "accuracy": 0.0,
-                "log_loss": 1.5556758481685455,
-                "brier": 1.2448660255449662
+                "accuracy": 0.5,
+                "log_loss": 0.8567366969662981,
+                "brier": 0.6447201856818324
               },
               {
                 "variant": "reference",
                 "requested_coverage": 0.5,
-                "coverage": 0.6,
-                "games": 3,
-                "accuracy": 0.3333333333333333,
-                "log_loss": 1.1580942682191369,
-                "brier": 0.8916696474922446
+                "coverage": 0.5,
+                "games": 4,
+                "accuracy": 0.5,
+                "log_loss": 0.8913443066797889,
+                "brier": 0.66672484302934
               },
               {
                 "variant": "reference",
                 "requested_coverage": 0.75,
-                "coverage": 0.8,
-                "games": 4,
-                "accuracy": 0.25,
-                "log_loss": 1.0950917550492227,
-                "brier": 0.8462985477094693
+                "coverage": 0.75,
+                "games": 6,
+                "accuracy": 0.6666666666666666,
+                "log_loss": 0.7096647408884619,
+                "brier": 0.5016542499480414
               },
               {
                 "variant": "reference",
                 "requested_coverage": 1.0,
                 "coverage": 1.0,
-                "games": 5,
-                "accuracy": 0.2,
-                "log_loss": 1.0496888608364388,
-                "brier": 0.8117112196887014
+                "games": 8,
+                "accuracy": 0.5,
+                "log_loss": 0.7540187431069444,
+                "brier": 0.5491840819568776
               },
               {
                 "variant": "candidate",
                 "requested_coverage": 0.25,
-                "coverage": 0.4,
+                "coverage": 0.25,
                 "games": 2,
-                "accuracy": 0.0,
-                "log_loss": 1.8141761469607882,
-                "brier": 1.4011509603187258
+                "accuracy": 0.5,
+                "log_loss": 0.9553336921737369,
+                "brier": 0.711336546725166
               },
               {
                 "variant": "candidate",
                 "requested_coverage": 0.5,
-                "coverage": 0.6,
-                "games": 3,
-                "accuracy": 0.3333333333333333,
-                "log_loss": 1.2977955646446813,
-                "brier": 0.970237545521619
+                "coverage": 0.5,
+                "games": 4,
+                "accuracy": 0.5,
+                "log_loss": 0.982272562312456,
+                "brier": 0.723383668430053
               },
               {
                 "variant": "candidate",
                 "requested_coverage": 0.75,
-                "coverage": 0.8,
-                "games": 4,
-                "accuracy": 0.25,
-                "log_loss": 1.2306778921824684,
-                "brier": 0.9342431832495603
+                "coverage": 0.75,
+                "games": 6,
+                "accuracy": 0.6666666666666666,
+                "log_loss": 0.7398864895057554,
+                "brier": 0.5160853724776796
               },
               {
                 "variant": "candidate",
                 "requested_coverage": 1.0,
                 "coverage": 1.0,
-                "games": 5,
-                "accuracy": 0.2,
-                "log_loss": 1.1806068819428404,
-                "brier": 0.9035495847307669
+                "games": 8,
+                "accuracy": 0.5,
+                "log_loss": 0.8061208316018362,
+                "brier": 0.5879434402443817
               }
             ],
             "replicates": 1000,
@@ -33074,9 +33869,9 @@
             },
             {
               "period": "later",
-              "games": 3,
+              "games": 6,
               "accuracy_delta": 0.0,
-              "log_loss_delta": 0.13970129642554438
+              "log_loss_delta": 0.030221748617293476
             }
           ],
           "promotion_review_eligible": false,
@@ -33315,21 +34110,21 @@
           "summary": {
             "reference": {
               "all": {
-                "games": 6,
-                "accuracy": 0.6666666666666666,
-                "log_loss": 0.7012064359959517,
-                "brier": 0.49847703053734405
+                "games": 7,
+                "accuracy": 0.7142857142857143,
+                "log_loss": 0.6435298206995018,
+                "brier": 0.4461820211528593
               },
               "selected": {
-                "games": 2,
-                "accuracy": 0.5,
-                "log_loss": 0.9027607932024323,
-                "brier": 0.6790242446310192
+                "games": 3,
+                "accuracy": 0.6666666666666666,
+                "log_loss": 0.700997238441889,
+                "brier": 0.49682015136933
               },
-              "coverage": 0.3333333333333333,
+              "coverage": 0.42857142857142855,
               "confusion_actual_by_predicted": [
                 [
-                  3,
+                  4,
                   1
                 ],
                 [
@@ -33355,24 +34150,24 @@
                 {
                   "lower": 0.7,
                   "upper": 0.8,
-                  "games": 1,
-                  "mean_confidence": 0.7524860091625246,
-                  "accuracy": 0.0
+                  "games": 2,
+                  "mean_confidence": 0.7475903885730989,
+                  "accuracy": 0.5
                 }
               ],
               "brier_convention": "Sum over classes; binary value is twice the one-probability binary Brier.",
               "score_errors": {
-                "team_mae": 3.807561388198773,
-                "total_mae": 6.9048643114036565,
-                "margin_mae": 5.0397980619602025
+                "team_mae": 3.9075526771693467,
+                "total_mae": 7.105693236466554,
+                "margin_mae": 5.607684170535257
               }
             },
             "candidate": {
               "all": {
-                "games": 6,
-                "accuracy": 0.6666666666666666,
-                "log_loss": 0.6874819313067859,
-                "brier": 0.4932628006191773
+                "games": 7,
+                "accuracy": 0.7142857142857143,
+                "log_loss": 0.6553919639727693,
+                "brier": 0.4620197876147833
               },
               "selected": {
                 "games": 0,
@@ -33383,7 +34178,7 @@
               "coverage": 0.0,
               "confusion_actual_by_predicted": [
                 [
-                  3,
+                  4,
                   1
                 ],
                 [
@@ -33402,22 +34197,22 @@
                 {
                   "lower": 0.6,
                   "upper": 0.7,
-                  "games": 1,
-                  "mean_confidence": 0.635516702981466,
-                  "accuracy": 0.0
+                  "games": 2,
+                  "mean_confidence": 0.6325011958973461,
+                  "accuracy": 0.5
                 }
               ],
               "brier_convention": "Sum over classes; binary value is twice the one-probability binary Brier.",
               "score_errors": {
-                "team_mae": 4.206152558594013,
-                "total_mae": 7.720355442578902,
-                "margin_mae": 4.9035943499416845
+                "team_mae": 4.208394476341179,
+                "total_mae": 7.671105275330474,
+                "margin_mae": 5.409322580756923
               }
             }
           },
           "paired": {
-            "games": 6,
-            "day_blocks": 2,
+            "games": 7,
+            "day_blocks": 3,
             "changes": {
               "accuracy": {
                 "delta": 0.0,
@@ -33427,17 +34222,17 @@
                 ]
               },
               "log_loss": {
-                "delta": -0.013724504689165548,
+                "delta": 0.01186214327326767,
                 "day_block_95_interval": [
-                  -0.11995041936607227,
-                  0.09250140998774119
+                  -0.11995041936607226,
+                  0.16538203104786697
                 ]
               },
               "brier": {
-                "delta": -0.005214229918166581,
+                "delta": 0.015837766461924006,
                 "day_block_95_interval": [
                   -0.09921404388554293,
-                  0.08878558404920978
+                  0.14214974474246753
                 ]
               }
             },
@@ -33445,74 +34240,74 @@
               {
                 "variant": "reference",
                 "requested_coverage": 0.25,
-                "coverage": 0.3333333333333333,
+                "coverage": 0.2857142857142857,
                 "games": 2,
                 "accuracy": 0.5,
-                "log_loss": 0.9027607932024323,
-                "brier": 0.6790242446310192
+                "log_loss": 0.8468791494278068,
+                "brier": 0.6324411764083189
               },
               {
                 "variant": "reference",
                 "requested_coverage": 0.5,
-                "coverage": 0.5,
-                "games": 3,
-                "accuracy": 0.6666666666666666,
-                "log_loss": 0.7671298032754108,
-                "brier": 0.5545815302552789
+                "coverage": 0.5714285714285714,
+                "games": 4,
+                "accuracy": 0.75,
+                "log_loss": 0.6497148846867588,
+                "brier": 0.44903913890294705
               },
               {
                 "variant": "reference",
                 "requested_coverage": 0.75,
-                "coverage": 0.8333333333333334,
-                "games": 5,
-                "accuracy": 0.8,
-                "log_loss": 0.7002714773437546,
-                "brier": 0.49562576325862057
+                "coverage": 0.8571428571428571,
+                "games": 6,
+                "accuracy": 0.8333333333333334,
+                "log_loss": 0.6331379192732626,
+                "brier": 0.4350901301898424
               },
               {
                 "variant": "reference",
                 "requested_coverage": 1.0,
                 "coverage": 1.0,
-                "games": 6,
-                "accuracy": 0.6666666666666666,
-                "log_loss": 0.7012064359959514,
-                "brier": 0.498477030537344
+                "games": 7,
+                "accuracy": 0.7142857142857143,
+                "log_loss": 0.6435298206995016,
+                "brier": 0.4461820211528593
               },
               {
                 "variant": "candidate",
                 "requested_coverage": 0.25,
-                "coverage": 0.3333333333333333,
+                "coverage": 0.2857142857142857,
                 "games": 2,
                 "accuracy": 0.5,
-                "log_loss": 0.7732054785028086,
-                "brier": 0.5765887152729534
+                "log_loss": 0.7360633564591119,
+                "brier": 0.5411623345626424
               },
               {
                 "variant": "candidate",
                 "requested_coverage": 0.5,
-                "coverage": 0.5,
-                "games": 3,
-                "accuracy": 0.6666666666666666,
-                "log_loss": 0.7116214801871186,
-                "brier": 0.5162992666753609
+                "coverage": 0.5714285714285714,
+                "games": 4,
+                "accuracy": 0.75,
+                "log_loss": 0.6494291501325062,
+                "brier": 0.45586487740362536
               },
               {
                 "variant": "candidate",
                 "requested_coverage": 0.75,
-                "coverage": 0.8333333333333334,
-                "games": 5,
-                "accuracy": 0.8,
-                "log_loss": 0.6850794794855211,
-                "brier": 0.4906459757372331
+                "coverage": 0.8571428571428571,
+                "games": 6,
+                "accuracy": 0.8333333333333334,
+                "log_loss": 0.6480415928993791,
+                "brier": 0.4546319313790974
               },
               {
                 "variant": "candidate",
                 "requested_coverage": 1.0,
                 "coverage": 1.0,
-                "games": 6,
-                "accuracy": 0.6666666666666666,
-                "log_loss": 0.6874819313067859,
-                "brier": 0.49326280061917743
+                "games": 7,
+                "accuracy": 0.7142857142857143,
+                "log_loss": 0.6553919639727692,
+                "brier": 0.46201978761478335
               }
             ],
             "replicates": 1000,
@@ -33528,9 +34323,9 @@
             },
             {
               "period": "later",
-              "games": 3,
+              "games": 4,
               "accuracy_delta": 0.0,
-              "log_loss_delta": 0.09250140998774119
+              "log_loss_delta": 0.11072156525277263
             }
           ],
           "promotion_review_eligible": false,
@@ -33856,6 +34651,40 @@
           "record_sha256": "2b7923d1aff48e50b53c71e018d7324949de8dd001a3c5c26f8ce9c875b0c447"
         },
         {
+          "event_id": "ABA_2026_78",
+          "league": "ABA",
+          "day": "2026-11-15",
+          "variant": "reference",
+          "y": 0,
+          "p": [
+            0.7356097478846877,
+            0.2643902521153123
+          ],
+          "selected": true,
+          "team_mae": 5.9993013168679,
+          "total_mae": 11.9986026337358,
+          "margin_mae": 0.028606325338756733,
+          "source_url": "https://www.aba-liga.com/match/78/26/1/Overview/q1/1/home/bosna-bh-telecom-mega-superbet/",
+          "record_sha256": "7de4a35ed6dc203cae35e5d1908418f49c31ce9708267317521795d482521dfb"
+        },
+        {
+          "event_id": "ABA_2026_78",
+          "league": "ABA",
+          "day": "2026-11-15",
+          "variant": "candidate",
+          "y": 0,
+          "p": [
+            0.7998146029649597,
+            0.20018539703504035
+          ],
+          "selected": true,
+          "team_mae": 6.085047435030987,
+          "total_mae": 12.170094870061973,
+          "margin_mae": 0.2932562018831675,
+          "source_url": "https://www.aba-liga.com/match/78/26/1/Overview/q1/1/home/bosna-bh-telecom-mega-superbet/",
+          "record_sha256": "7de4a35ed6dc203cae35e5d1908418f49c31ce9708267317521795d482521dfb"
+        },
+        {
           "event_id": "ABA_2026_74",
           "league": "ABA",
           "day": "2026-11-13",
@@ -33888,6 +34717,40 @@
           "margin_mae": 24.760949278172603,
           "source_url": "https://www.aba-liga.com/match/74/26/1/Overview/q1/1/home/krka-hkk-siroki-tt-kabeli/",
           "record_sha256": "0aeaac183bc4e1e3009dc99bc5e765bff29780eb4f4797fa1928f2d09270e333"
+        },
+        {
+          "event_id": "ABA_2026_77",
+          "league": "ABA",
+          "day": "2026-11-15",
+          "variant": "reference",
+          "y": 0,
+          "p": [
+            0.863319880377155,
+            0.136680119622845
+          ],
+          "selected": true,
+          "team_mae": 2.252039813971564,
+          "total_mae": 1.7911339264267667,
+          "margin_mae": 4.504079627943128,
+          "source_url": "https://www.aba-liga.com/match/77/26/1/Overview/q1/1/home/dubai-basketball-spartak-office-shoes/",
+          "record_sha256": "ecb7ef2157566d7be2044bbd22f739142c7cbee34965f368ab10f7f4925a3f07"
+        },
+        {
+          "event_id": "ABA_2026_77",
+          "league": "ABA",
+          "day": "2026-11-15",
+          "variant": "candidate",
+          "y": 0,
+          "p": [
+            0.9255541582403461,
+            0.07444584175965382
+          ],
+          "selected": true,
+          "team_mae": 2.211864389782292,
+          "total_mae": 2.2853673698165835,
+          "margin_mae": 4.423728779564584,
+          "source_url": "https://www.aba-liga.com/match/77/26/1/Overview/q1/1/home/dubai-basketball-spartak-office-shoes/",
+          "record_sha256": "ecb7ef2157566d7be2044bbd22f739142c7cbee34965f368ab10f7f4925a3f07"
         },
         {
           "event_id": "ABA_2026_76",
@@ -34024,6 +34887,40 @@
           "margin_mae": 0.16701421892085477,
           "source_url": "https://www.laliganacional.com.ar/laliga/partido/v25Ly7DRECNtIuR-E3ZuqhK1DCMh3BJTr-aMrvByWbSTAYk-95POe0yA==/gimnasia-cr-vs-platense",
           "record_sha256": "cf44c12e70b3a0205a9b45afb3922e73ea51967d8bdb3a88c729bcf5b1614ff9"
+        },
+        {
+          "event_id": "ABA_2026_71",
+          "league": "ABA",
+          "day": "2026-11-15",
+          "variant": "reference",
+          "y": 0,
+          "p": [
+            0.7191537465230425,
+            0.28084625347695746
+          ],
+          "selected": true,
+          "team_mae": 2.4517759255942906,
+          "total_mae": 0.6910443646794988,
+          "margin_mae": 4.903551851188581,
+          "source_url": "https://www.aba-liga.com/match/71/26/1/Overview/q1/1/home/crvena-zvezda-meridianbet-cedevita-olimpija/",
+          "record_sha256": "1885893e445fc17cbb4bcdd83d36d81ec690ac43d812a4a019b4443ec327ee38"
+        },
+        {
+          "event_id": "ABA_2026_71",
+          "league": "ABA",
+          "day": "2026-11-15",
+          "variant": "candidate",
+          "y": 0,
+          "p": [
+            0.7825524830925165,
+            0.21744751690748357
+          ],
+          "selected": true,
+          "team_mae": 2.4759311239153448,
+          "total_mae": 0.847242599894031,
+          "margin_mae": 4.9518622478306895,
+          "source_url": "https://www.aba-liga.com/match/71/26/1/Overview/q1/1/home/crvena-zvezda-meridianbet-cedevita-olimpija/",
+          "record_sha256": "1885893e445fc17cbb4bcdd83d36d81ec690ac43d812a4a019b4443ec327ee38"
         },
         {
           "event_id": "ARG_LNB_2bc6c20f33b962fd2ac804df",
@@ -34196,6 +35093,40 @@
           "record_sha256": "53c483e29ac120670cb0cb11af926797767165b699b2bb487e3ce22aea312daf"
         },
         {
+          "event_id": "KBL_S49G01N73",
+          "league": "KBL",
+          "day": "2026-11-16",
+          "variant": "reference",
+          "y": 0,
+          "p": [
+            0.7426947679836732,
+            0.2573052320163268
+          ],
+          "selected": true,
+          "team_mae": 4.50750041099279,
+          "total_mae": 8.310666786843939,
+          "margin_mae": 9.01500082198558,
+          "source_url": "https://api.kbl.or.kr/match/S49G01N73",
+          "record_sha256": "0e3fef4fd16244901004bb899cff086bd9cf6f038c3cc3ab158a17463c4f7853"
+        },
+        {
+          "event_id": "KBL_S49G01N73",
+          "league": "KBL",
+          "day": "2026-11-16",
+          "variant": "candidate",
+          "y": 0,
+          "p": [
+            0.6294856888132261,
+            0.37051431118677397
+          ],
+          "selected": false,
+          "team_mae": 4.221845982824178,
+          "total_mae": 7.375604271839904,
+          "margin_mae": 8.443691965648355,
+          "source_url": "https://api.kbl.or.kr/match/S49G01N73",
+          "record_sha256": "0e3fef4fd16244901004bb899cff086bd9cf6f038c3cc3ab158a17463c4f7853"
+        },
+        {
           "event_id": "KBL_S49G01N70",
           "league": "KBL",
           "day": "2026-11-15",
@@ -34303,11 +35234,24 @@
       "production_default_changed": false
     },
     {
+      "experiment_id": "b5c79acbceddcf0f1df21e8a79e19741cae8932c0e8bdb5728f1a3a49cac6580",
+      "spec": "paired-forward-report-v1",
+      "checked_at_utc": "2026-11-16T16:19:39.797910+00:00",
+      "pending": 109,
+      "settled_games": 0,
+      "rejected": [],
+      "leagues": [],
+      "rows": [],
+      "source_snapshot_verified": true,
+      "active_experiment": true,
+      "production_default_changed": false
+    },
+    {
       "experiment_id": "b74a4b48060f44ce077df1f22da476a8308601ed0ff1298f40edbb85ec88b256",
       "spec": "paired-forward-report-v1",
-      "checked_at_utc": "2026-11-15T14:17:15.624243+00:00",
-      "pending": 44,
-      "settled_games": 57,
+      "checked_at_utc": "2026-11-16T16:19:39.863149+00:00",
+      "pending": 40,
+      "settled_games": 61,
       "rejected": [],
       "leagues": [
         {
@@ -34315,21 +35259,21 @@
           "summary": {
             "reference": {
               "all": {
-                "games": 7,
-                "accuracy": 0.2857142857142857,
-                "log_loss": 0.9870628107360141,
-                "brier": 0.756331477634164
+                "games": 10,
+                "accuracy": 0.5,
+                "log_loss": 0.7703272553989767,
+                "brier": 0.5638810273110328
               },
               "selected": {
-                "games": 5,
-                "accuracy": 0.4,
-                "log_loss": 1.0365238390859906,
-                "brier": 0.7919737374908792
+                "games": 8,
+                "accuracy": 0.625,
+                "log_loss": 0.7470565092834527,
+                "brier": 0.538044827140697
               },
-              "coverage": 0.7142857142857143,
+              "coverage": 0.8,
               "confusion_actual_by_predicted": [
                 [
-                  1,
+                  4,
                   3
                 ],
                 [
@@ -34355,42 +35299,42 @@
                 {
                   "lower": 0.7,
                   "upper": 0.8,
-                  "games": 3,
-                  "mean_confidence": 0.7889477752621938,
-                  "accuracy": 0.0
+                  "games": 5,
+                  "mean_confidence": 0.7621128080508537,
+                  "accuracy": 0.4
                 },
                 {
                   "lower": 0.8,
                   "upper": 0.9,
-                  "games": 1,
-                  "mean_confidence": 0.8581455406266664,
+                  "games": 2,
+                  "mean_confidence": 0.8628900053418971,
                   "accuracy": 1.0
                 }
               ],
               "brier_convention": "Sum over classes; binary value is twice the one-probability binary Brier.",
               "score_errors": {
-                "team_mae": 10.568231172757434,
-                "total_mae": 18.97107963827836,
-                "margin_mae": 11.580225907744127
+                "team_mae": 8.367389717090463,
+                "total_mae": 14.520870378857651,
+                "margin_mae": 9.038118262972313
               }
             },
             "candidate": {
               "all": {
-                "games": 7,
-                "accuracy": 0.2857142857142857,
-                "log_loss": 1.1284576431031828,
-                "brier": 0.8488989692296102
+                "games": 10,
+                "accuracy": 0.5,
+                "log_loss": 0.8458522953428611,
+                "brier": 0.6137901725177486
               },
               "selected": {
-                "games": 6,
-                "accuracy": 0.3333333333333333,
-                "log_loss": 1.172903210105127,
-                "brier": 0.8791778548707493
+                "games": 9,
+                "accuracy": 0.5555555555555556,
+                "log_loss": 0.8440820791485657,
+                "brier": 0.6078528966438568
               },
-              "coverage": 0.8571428571428571,
+              "coverage": 0.9,
               "confusion_actual_by_predicted": [
                 [
-                  1,
+                  4,
                   3
                 ],
                 [
@@ -34416,8 +35360,8 @@
                 {
                   "lower": 0.7,
                   "upper": 0.8,
-                  "games": 1,
-                  "mean_confidence": 0.7674954504847267,
+                  "games": 3,
+                  "mean_confidence": 0.7790268353010542,
                   "accuracy": 1.0
                 },
                 {
@@ -34430,22 +35374,22 @@
                 {
                   "lower": 0.9,
                   "upper": 1.0,
-                  "games": 1,
-                  "mean_confidence": 0.9094745794173132,
+                  "games": 2,
+                  "mean_confidence": 0.918773383123146,
                   "accuracy": 1.0
                 }
               ],
               "brier_convention": "Sum over classes; binary value is twice the one-probability binary Brier.",
               "score_errors": {
-                "team_mae": 10.566769766934163,
-                "total_mae": 19.06813078896438,
-                "margin_mae": 11.50397463458406
+                "team_mae": 8.386498182328683,
+                "total_mae": 14.668150212871861,
+                "margin_mae": 8.971337094627486
               }
             }
           },
           "paired": {
-            "games": 7,
-            "day_blocks": 3,
+            "games": 10,
+            "day_blocks": 4,
             "changes": {
               "accuracy": {
                 "delta": 0.0,
@@ -34455,17 +35399,17 @@
                 ]
               },
               "log_loss": {
-                "delta": 0.1413948323671688,
+                "delta": 0.07552503994388424,
                 "day_block_95_interval": [
-                  0.10197294342655844,
-                  0.18398212710676642
+                  -0.03050691156186217,
+                  0.16347983118671444
                 ]
               },
               "brier": {
-                "delta": 0.09256749159544615,
+                "delta": 0.04990914520671578,
                 "day_block_95_interval": [
-                  0.07842994507932059,
-                  0.10877537014478718
+                  -0.020826566092120143,
+                  0.10317065148254032
                 ]
               }
             },
@@ -34473,74 +35417,74 @@
               {
                 "variant": "reference",
                 "requested_coverage": 0.25,
-                "coverage": 0.2857142857142857,
-                "games": 2,
-                "accuracy": 0.5,
-                "log_loss": 0.8592472026988492,
-                "brier": 0.6458340432444356
+                "coverage": 0.3,
+                "games": 3,
+                "accuracy": 0.6666666666666666,
+                "log_loss": 0.6201597252866812,
+                "brier": 0.4422364511743287
               },
               {
                 "variant": "reference",
                 "requested_coverage": 0.5,
-                "coverage": 0.5714285714285714,
-                "games": 4,
-                "accuracy": 0.25,
-                "log_loss": 1.2050125059369385,
-                "brier": 0.9437245630101836
+                "coverage": 0.5,
+                "games": 5,
+                "accuracy": 0.4,
+                "log_loss": 0.9924069588420197,
+                "brier": 0.7619879038149698
               },
               {
                 "variant": "reference",
                 "requested_coverage": 0.75,
-                "coverage": 0.8571428571428571,
-                "games": 6,
-                "accuracy": 0.3333333333333333,
-                "log_loss": 1.026081889871142,
-                "brier": 0.789097894115739
+                "coverage": 0.8,
+                "games": 8,
+                "accuracy": 0.625,
+                "log_loss": 0.7470565092834527,
+                "brier": 0.538044827140697
               },
               {
                 "variant": "reference",
                 "requested_coverage": 1.0,
                 "coverage": 1.0,
-                "games": 7,
-                "accuracy": 0.2857142857142857,
-                "log_loss": 0.9870628107360142,
-                "brier": 0.7563314776341639
+                "games": 10,
+                "accuracy": 0.5,
+                "log_loss": 0.7703272553989767,
+                "brier": 0.5638810273110327
               },
               {
                 "variant": "candidate",
                 "requested_coverage": 0.25,
-                "coverage": 0.2857142857142857,
-                "games": 2,
-                "accuracy": 0.5,
-                "log_loss": 1.039288777914079,
-                "brier": 0.751996236515691
+                "coverage": 0.3,
+                "games": 3,
+                "accuracy": 0.6666666666666666,
+                "log_loss": 0.7177411058393867,
+                "brier": 0.5047798978821709
               },
               {
                 "variant": "candidate",
                 "requested_coverage": 0.5,
-                "coverage": 0.5714285714285714,
-                "games": 4,
-                "accuracy": 0.25,
-                "log_loss": 1.425953601975367,
-                "brier": 1.0761481329728328
+                "coverage": 0.5,
+                "games": 5,
+                "accuracy": 0.4,
+                "log_loss": 1.155692033918294,
+                "brier": 0.8629879505012925
               },
               {
                 "variant": "candidate",
                 "requested_coverage": 0.75,
-                "coverage": 0.8571428571428571,
-                "games": 6,
-                "accuracy": 0.3333333333333333,
-                "log_loss": 1.172903210105127,
-                "brier": 0.8791778548707493
+                "coverage": 0.8,
+                "games": 8,
+                "accuracy": 0.625,
+                "log_loss": 0.8159695733566684,
+                "brier": 0.5760397754440184
               },
               {
                 "variant": "candidate",
                 "requested_coverage": 1.0,
                 "coverage": 1.0,
-                "games": 7,
-                "accuracy": 0.2857142857142857,
-                "log_loss": 1.128457643103183,
-                "brier": 0.8488989692296103
+                "games": 10,
+                "accuracy": 0.5,
+                "log_loss": 0.8458522953428609,
+                "brier": 0.6137901725177487
               }
             ],
             "replicates": 1000,
@@ -34550,15 +35494,15 @@
           "temporal_stability": [
             {
               "period": "earlier",
-              "games": 2,
+              "games": 4,
               "accuracy_delta": 0.0,
-              "log_loss_delta": 0.18398212710676642
+              "log_loss_delta": 0.14297753526666243
             },
             {
               "period": "later",
-              "games": 5,
+              "games": 6,
               "accuracy_delta": 0.0,
-              "log_loss_delta": 0.1243599144713297
+              "log_loss_delta": 0.030556709728698794
             }
           ],
           "promotion_review_eligible": false,
@@ -35066,21 +36010,21 @@
           "summary": {
             "reference": {
               "all": {
-                "games": 10,
-                "accuracy": 0.8,
-                "log_loss": 0.6568290732027544,
-                "brier": 0.46049610137182917
+                "games": 11,
+                "accuracy": 0.8181818181818182,
+                "log_loss": 0.6224551408700183,
+                "brier": 0.429390667519807
               },
               "selected": {
-                "games": 1,
-                "accuracy": 0.0,
-                "log_loss": 1.2830500512652117,
-                "brier": 1.0449069604316206
+                "games": 2,
+                "accuracy": 0.5,
+                "log_loss": 0.7808829344039347,
+                "brier": 0.581621644715603
               },
-              "coverage": 0.1,
+              "coverage": 0.18181818181818182,
               "confusion_actual_by_predicted": [
                 [
-                  5,
+                  6,
                   1
                 ],
                 [
@@ -35106,24 +36050,24 @@
                 {
                   "lower": 0.7,
                   "upper": 0.8,
-                  "games": 1,
-                  "mean_confidence": 0.7228094356162005,
-                  "accuracy": 0.0
+                  "games": 2,
+                  "mean_confidence": 0.7397821823759355,
+                  "accuracy": 0.5
                 }
               ],
               "brier_convention": "Sum over classes; binary value is twice the one-probability binary Brier.",
               "score_errors": {
-                "team_mae": 5.06782243299916,
-                "total_mae": 7.98114283332472,
-                "margin_mae": 7.8450098663795185
+                "team_mae": 4.987959882324494,
+                "total_mae": 8.017281553127534,
+                "margin_mae": 7.8617581841728645
               }
             },
             "candidate": {
               "all": {
-                "games": 10,
-                "accuracy": 0.8,
-                "log_loss": 0.6694971983077713,
-                "brier": 0.4760067780936727
+                "games": 11,
+                "accuracy": 0.8181818181818182,
+                "log_loss": 0.6494638849156291,
+                "brier": 0.45653557910335446
               },
               "selected": {
                 "games": 0,
@@ -35134,7 +36078,7 @@
               "coverage": 0.0,
               "confusion_actual_by_predicted": [
                 [
-                  5,
+                  6,
                   1
                 ],
                 [
@@ -35153,22 +36097,22 @@
                 {
                   "lower": 0.6,
                   "upper": 0.7,
-                  "games": 1,
-                  "mean_confidence": 0.6175637177038934,
-                  "accuracy": 0.0
+                  "games": 2,
+                  "mean_confidence": 0.6278731839631467,
+                  "accuracy": 0.5
                 }
               ],
               "brier_convention": "Sum over classes; binary value is twice the one-probability binary Brier.",
               "score_errors": {
-                "team_mae": 5.130696276861987,
-                "total_mae": 8.197397804942039,
-                "margin_mae": 7.453245447592013
+                "team_mae": 4.999673881110212,
+                "total_mae": 8.122988899691393,
+                "margin_mae": 7.43792226667214
               }
             }
           },
           "paired": {
-            "games": 10,
-            "day_blocks": 6,
+            "games": 11,
+            "day_blocks": 7,
             "changes": {
               "accuracy": {
                 "delta": 0.0,
@@ -35178,17 +36122,17 @@
                 ]
               },
               "log_loss": {
-                "delta": 0.012668125105016964,
+                "delta": 0.02700874404561081,
                 "day_block_95_interval": [
-                  -0.058491112474452794,
-                  0.07861484608186758
+                  -0.048269889239767216,
+                  0.1001628969861318
                 ]
               },
               "brier": {
-                "delta": 0.015510676721843563,
+                "delta": 0.027144911583547496,
                 "day_block_95_interval": [
-                  -0.049257599138819684,
-                  0.07644461369000524
+                  -0.04153689080232079,
+                  0.09148428738533762
                 ]
               }
             },
@@ -35196,74 +36140,74 @@
               {
                 "variant": "reference",
                 "requested_coverage": 0.25,
-                "coverage": 0.3,
+                "coverage": 0.2727272727272727,
                 "games": 3,
                 "accuracy": 0.6666666666666666,
-                "log_loss": 0.7403230389032903,
-                "brier": 0.5351525957692559
+                "log_loss": 0.6757326980304769,
+                "brier": 0.4800713962161434
               },
               {
                 "variant": "reference",
                 "requested_coverage": 0.5,
-                "coverage": 0.5,
-                "games": 5,
-                "accuracy": 0.8,
-                "log_loss": 0.6550723603930169,
-                "brier": 0.455446007201032
+                "coverage": 0.5454545454545454,
+                "games": 6,
+                "accuracy": 0.8333333333333334,
+                "log_loss": 0.592346269917957,
+                "brier": 0.3992610608341242
               },
               {
                 "variant": "reference",
                 "requested_coverage": 0.75,
-                "coverage": 0.8,
-                "games": 8,
-                "accuracy": 0.75,
-                "log_loss": 0.6560165592669525,
-                "brier": 0.4588801944703195
+                "coverage": 0.8181818181818182,
+                "games": 9,
+                "accuracy": 0.7777777777777778,
+                "log_loss": 0.6140942546309197,
+                "brier": 0.4210419871957935
               },
               {
                 "variant": "reference",
                 "requested_coverage": 1.0,
                 "coverage": 1.0,
-                "games": 10,
-                "accuracy": 0.8,
-                "log_loss": 0.6568290732027544,
-                "brier": 0.46049610137182917
+                "games": 11,
+                "accuracy": 0.8181818181818182,
+                "log_loss": 0.6224551408700184,
+                "brier": 0.429390667519807
               },
               {
                 "variant": "candidate",
                 "requested_coverage": 0.25,
-                "coverage": 0.3,
+                "coverage": 0.2727272727272727,
                 "games": 3,
                 "accuracy": 0.6666666666666666,
-                "log_loss": 0.702372338957892,
-                "brier": 0.5078894395151955
+                "log_loss": 0.6604103450943506,
+                "brier": 0.46767379158485656
               },
               {
                 "variant": "candidate",
                 "requested_coverage": 0.5,
-                "coverage": 0.5,
-                "games": 5,
-                "accuracy": 0.8,
-                "log_loss": 0.6637988508931129,
-                "brier": 0.46995091958524826
+                "coverage": 0.5454545454545454,
+                "games": 6,
+                "accuracy": 0.8333333333333334,
+                "log_loss": 0.6280208342432952,
+                "brier": 0.4352630311877355
               },
               {
                 "variant": "candidate",
                 "requested_coverage": 0.75,
-                "coverage": 0.8,
-                "games": 8,
-                "accuracy": 0.75,
-                "log_loss": 0.6677688407144143,
-                "brier": 0.4741917229080716
+                "coverage": 0.8181818181818182,
+                "games": 9,
+                "accuracy": 0.7777777777777778,
+                "log_loss": 0.6434757196343913,
+                "brier": 0.4505952636071938
               },
               {
                 "variant": "candidate",
                 "requested_coverage": 1.0,
                 "coverage": 1.0,
-                "games": 10,
-                "accuracy": 0.8,
-                "log_loss": 0.6694971983077713,
-                "brier": 0.4760067780936728
+                "games": 11,
+                "accuracy": 0.8181818181818182,
+                "log_loss": 0.6494638849156291,
+                "brier": 0.45653557910335446
               }
             ],
             "replicates": 1000,
@@ -35279,9 +36223,9 @@
             },
             {
               "period": "later",
-              "games": 7,
+              "games": 8,
               "accuracy_delta": 0.0,
-              "log_loss_delta": 0.0036158939360402503
+              "log_loss_delta": 0.02446577387547888
             }
           ],
           "promotion_review_eligible": false,
@@ -35906,6 +36850,40 @@
           "record_sha256": "c7585abeea4326abcbd0b839860c19270096ca81ef6fcfa8af1d6ce6a1c47944"
         },
         {
+          "event_id": "ABA_2026_78",
+          "league": "ABA",
+          "day": "2026-11-15",
+          "variant": "reference",
+          "y": 0,
+          "p": [
+            0.7211498776906503,
+            0.2788501223093497
+          ],
+          "selected": true,
+          "team_mae": 5.286941934271397,
+          "total_mae": 10.573883868542794,
+          "margin_mae": 0.5009272208518496,
+          "source_url": "https://www.aba-liga.com/match/78/26/1/Overview/q1/1/home/bosna-bh-telecom-mega-superbet/",
+          "record_sha256": "c756feee985c71c4cb06b6df99b46a49c8ad559ccb03255a30149047ad9a03fa"
+        },
+        {
+          "event_id": "ABA_2026_78",
+          "league": "ABA",
+          "day": "2026-11-15",
+          "variant": "candidate",
+          "y": 0,
+          "p": [
+            0.7837090799793452,
+            0.21629092002065475
+          ],
+          "selected": true,
+          "team_mae": 5.429807456019574,
+          "total_mae": 10.859614912039149,
+          "margin_mae": 0.24997650673020644,
+          "source_url": "https://www.aba-liga.com/match/78/26/1/Overview/q1/1/home/bosna-bh-telecom-mega-superbet/",
+          "record_sha256": "c756feee985c71c4cb06b6df99b46a49c8ad559ccb03255a30149047ad9a03fa"
+        },
+        {
           "event_id": "KBL_S49G01N66",
           "league": "KBL",
           "day": "2026-11-13",
@@ -36142,6 +37120,40 @@
           "margin_mae": 3.555010511312048,
           "source_url": "https://www.fiba.basketball/en/events/fiba-europe-cup-26-27/games",
           "record_sha256": "36f050664833fcafb77b43504eae2b59d92c2a88bfd472b3cd1b28a285204b0f"
+        },
+        {
+          "event_id": "ABA_2026_77",
+          "league": "ABA",
+          "day": "2026-11-15",
+          "variant": "reference",
+          "y": 0,
+          "p": [
+            0.8676344700571278,
+            0.1323655299428722
+          ],
+          "selected": true,
+          "team_mae": 2.0360970511952132,
+          "total_mae": 1.7428217050623687,
+          "margin_mae": 4.0721941023904265,
+          "source_url": "https://www.aba-liga.com/match/77/26/1/Overview/q1/1/home/dubai-basketball-spartak-office-shoes/",
+          "record_sha256": "d539568cc2f104645fa769013a72a27be49119948c99757441ec1f91f815dec2"
+        },
+        {
+          "event_id": "ABA_2026_77",
+          "league": "ABA",
+          "day": "2026-11-15",
+          "variant": "candidate",
+          "y": 0,
+          "p": [
+            0.9280721868289789,
+            0.07192781317102122
+          ],
+          "selected": true,
+          "team_mae": 2.0544272143664273,
+          "total_mae": 2.2272305322696013,
+          "margin_mae": 4.108854428732855,
+          "source_url": "https://www.aba-liga.com/match/77/26/1/Overview/q1/1/home/dubai-basketball-spartak-office-shoes/",
+          "record_sha256": "d539568cc2f104645fa769013a72a27be49119948c99757441ec1f91f815dec2"
         },
         {
           "event_id": "ARG_LNB_b641af1a077935f8eed456de",
@@ -36790,6 +37802,40 @@
           "record_sha256": "4f2d3e88a3d08a85cb63a5cfa44d92eedcdb4feb60f0c1a579a50c43eba5b2b7"
         },
         {
+          "event_id": "ABA_2026_71",
+          "league": "ABA",
+          "day": "2026-11-15",
+          "variant": "reference",
+          "y": 0,
+          "p": [
+            0.7225708367770372,
+            0.27742916322296285
+          ],
+          "selected": true,
+          "team_mae": 2.3732399761359773,
+          "total_mae": 0.09444074702281569,
+          "margin_mae": 4.7464799522719545,
+          "source_url": "https://www.aba-liga.com/match/71/26/1/Overview/q1/1/home/crvena-zvezda-meridianbet-cedevita-olimpija/",
+          "record_sha256": "ae3e15b8e9cfabf2c4dc6373b572607956c86052010f5c7fca204654af3ebf2e"
+        },
+        {
+          "event_id": "ABA_2026_71",
+          "league": "ABA",
+          "day": "2026-11-15",
+          "variant": "candidate",
+          "y": 0,
+          "p": [
+            0.7858759754390909,
+            0.21412402456090907
+          ],
+          "selected": true,
+          "team_mae": 2.413358784361691,
+          "total_mae": 0.117741161659211,
+          "margin_mae": 4.826717568723382,
+          "source_url": "https://www.aba-liga.com/match/71/26/1/Overview/q1/1/home/crvena-zvezda-meridianbet-cedevita-olimpija/",
+          "record_sha256": "ae3e15b8e9cfabf2c4dc6373b572607956c86052010f5c7fca204654af3ebf2e"
+        },
+        {
           "event_id": "FEC_F135860",
           "league": "FEC",
           "day": "2026-11-11",
@@ -37198,6 +38244,40 @@
           "record_sha256": "1ded1715a5b0cb0134343187c254db7ee6c57e1f988d35ab3de06c8a62591f78"
         },
         {
+          "event_id": "KBL_S49G01N73",
+          "league": "KBL",
+          "day": "2026-11-16",
+          "variant": "reference",
+          "y": 0,
+          "p": [
+            0.7567549291356706,
+            0.24324507086432945
+          ],
+          "selected": true,
+          "team_mae": 4.189334375577843,
+          "total_mae": 8.378668751155686,
+          "margin_mae": 8.029241362106319,
+          "source_url": "https://api.kbl.or.kr/match/S49G01N73",
+          "record_sha256": "4e09796d27296de4c2dc75f69062846bd88099a5894b3b1f6a1abc9c857580cb"
+        },
+        {
+          "event_id": "KBL_S49G01N73",
+          "league": "KBL",
+          "day": "2026-11-16",
+          "variant": "candidate",
+          "y": 0,
+          "p": [
+            0.6381826502224001,
+            0.3618173497775999
+          ],
+          "selected": false,
+          "team_mae": 3.6894499235924627,
+          "total_mae": 7.378899847184925,
+          "margin_mae": 7.284690457473403,
+          "source_url": "https://api.kbl.or.kr/match/S49G01N73",
+          "record_sha256": "4e09796d27296de4c2dc75f69062846bd88099a5894b3b1f6a1abc9c857580cb"
+        },
+        {
           "event_id": "ARG_LNB_4e653fb7b84a45d993c7c9ca",
           "league": "ARG_LNB",
           "day": "2026-11-09",
@@ -37477,7 +38557,7 @@
     {
       "experiment_id": "c3172d369677d38a013598d26cb3ef362612c8ca2bd71080bd9f337a24a470d3",
       "spec": "paired-forward-report-v1",
-      "checked_at_utc": "2026-11-15T14:17:15.816790+00:00",
+      "checked_at_utc": "2026-11-16T16:19:39.995617+00:00",
       "pending": 74,
       "settled_games": 74,
       "rejected": [],
@@ -41185,7 +42265,7 @@
     {
       "experiment_id": "c31a3a29494b964bd160dbb3904b4d30c23b35cb34bc26080481a9fa38ecc585",
       "spec": "paired-forward-report-v1",
-      "checked_at_utc": "2026-11-15T14:17:16.016340+00:00",
+      "checked_at_utc": "2026-11-16T16:19:40.130740+00:00",
       "pending": 156,
       "settled_games": 118,
       "rejected": [],
@@ -46686,7 +47766,7 @@
     {
       "experiment_id": "d4258944d099cb3c987e5fd6ba2b96f232e7c4c6ea9de3e5d8803b899ebba1ff",
       "spec": "paired-forward-report-v1",
-      "checked_at_utc": "2026-11-15T14:17:16.351853+00:00",
+      "checked_at_utc": "2026-11-16T16:19:40.341143+00:00",
       "pending": 74,
       "settled_games": 75,
       "rejected": [],
@@ -50428,7 +51508,7 @@
     {
       "experiment_id": "d616228c98b38645b428e8e52af45374aee5f802eb4521c3a447517987789d48",
       "spec": "paired-forward-report-v1",
-      "checked_at_utc": "2026-11-15T14:17:16.563968+00:00",
+      "checked_at_utc": "2026-11-16T16:19:40.479386+00:00",
       "pending": 69,
       "settled_games": 78,
       "rejected": [],
@@ -54335,7 +55415,7 @@
     {
       "experiment_id": "ecfd4f664298a4b608d6bc54dd838271cfb06bf08b75587fe1de7f75c782dc1f",
       "spec": "paired-forward-report-v1",
-      "checked_at_utc": "2026-11-15T14:17:16.784596+00:00",
+      "checked_at_utc": "2026-11-16T16:19:40.631940+00:00",
       "pending": 62,
       "settled_games": 67,
       "rejected": [],
@@ -57854,7 +58934,7 @@
     {
       "experiment_id": "ee048e77b85891c00d4643aea31b1d83ddbe9d27e54e3e29e447b6f8bed8c1a3",
       "spec": "paired-forward-report-v1",
-      "checked_at_utc": "2026-11-15T14:17:16.992167+00:00",
+      "checked_at_utc": "2026-11-16T16:19:40.817219+00:00",
       "pending": 82,
       "settled_games": 84,
       "rejected": [],

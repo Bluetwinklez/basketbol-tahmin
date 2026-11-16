@@ -1,7 +1,7 @@
 {
   "spec": "football-daily-v1",
-  "checked_at_utc": "2026-11-15T14:17:18.011553+00:00",
-  "collection_checked_at_utc": "2026-11-15T14:12:34.153556+00:00",
+  "checked_at_utc": "2026-11-16T16:19:41.600884+00:00",
+  "collection_checked_at_utc": "2026-11-16T16:15:11.774042+00:00",
   "source_errors": [
     {
       "league": "DE2",
@@ -31428,18 +31428,6 @@
       "reason": "Fresh independent future scheduled fixture required"
     },
     {
-      "event_id": "EN1_6771805eaeb4f61544686b99",
-      "reason": "Fresh independent future scheduled fixture required"
-    },
-    {
-      "event_id": "DE1_14cc48088addffaac0bfc145",
-      "reason": "Fresh independent future scheduled fixture required"
-    },
-    {
-      "event_id": "DE1_9ad1119a54f8e0a4bd324c49",
-      "reason": "Fresh independent future scheduled fixture required"
-    },
-    {
       "event_id": "ES1_068eb0118ce1806f2880752d",
       "reason": "Insufficient history (current coverage): athletic club: 1 unresolved past fixtures; refresh/review required"
     },
@@ -31448,39 +31436,7 @@
       "reason": "Insufficient history (current coverage): rayo vallecano de madrid: 1 unresolved past fixtures; refresh/review required"
     },
     {
-      "event_id": "ES1_a3a1632fdf03eb4939819a46",
-      "reason": "Fresh independent future scheduled fixture required"
-    },
-    {
-      "event_id": "ES1_b506deb638a292d9c082e7d6",
-      "reason": "Fresh independent future scheduled fixture required"
-    },
-    {
       "event_id": "ES1_d07cb6eceb85e56038b5e911",
-      "reason": "Fresh independent future scheduled fixture required"
-    },
-    {
-      "event_id": "ES1_d30a99a76949bc1a64bdf462",
-      "reason": "Fresh independent future scheduled fixture required"
-    },
-    {
-      "event_id": "FR1_601d466ee222a71876d56b43",
-      "reason": "Fresh independent future scheduled fixture required"
-    },
-    {
-      "event_id": "FR1_d0ad0e5f8a6802334bada81a",
-      "reason": "Fresh independent future scheduled fixture required"
-    },
-    {
-      "event_id": "IT1_41eacddf80858afc603a8841",
-      "reason": "Fresh independent future scheduled fixture required"
-    },
-    {
-      "event_id": "IT1_719b27741bb9dd09c1121699",
-      "reason": "Fresh independent future scheduled fixture required"
-    },
-    {
-      "event_id": "NL1_72f409a89bc721fdd4e665cf",
       "reason": "Fresh independent future scheduled fixture required"
     },
     {
@@ -31513,19 +31469,15 @@
     },
     {
       "event_id": "TR1_be58c0de58899ca159a47c1b",
-      "reason": "Fresh independent future scheduled fixture required"
+      "reason": "Insufficient history (current coverage): trabzonspor: 1 unresolved past fixtures; refresh/review required; eyupspor: 1 unresolved past fixtures; refresh/review required"
     },
     {
       "event_id": "TR1_d16c2be04cb42c47ab28dfb4",
       "reason": "Fresh independent future scheduled fixture required"
     },
     {
-      "event_id": "IT1_a7cddbb4a1b6ab553a1c4248",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
-    },
-    {
       "event_id": "IT1_be8bd15ff7c97bd10a8aebad",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "EN2_123248a7419330945446567e",
@@ -31558,6 +31510,70 @@
     {
       "event_id": "EN2_c704343bb0b5b2cc51726b00",
       "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "EN2_591a8fb95078d43a2d9b55b4",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "EN2_6f062c584b413ad641f4087e",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "EN2_80ac754b85936e94498721a9",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "EN2_9701f8f89f62e6ae9e137d02",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "record": "data/football_ledger/forecasts/DE1_14cc48088addffaac0bfc145.json",
+      "reason": "Forecast was recorded after requested clock"
+    },
+    {
+      "record": "data/football_ledger/forecasts/DE1_9ad1119a54f8e0a4bd324c49.json",
+      "reason": "Forecast was recorded after requested clock"
+    },
+    {
+      "record": "data/football_ledger/forecasts/EN1_6771805eaeb4f61544686b99.json",
+      "reason": "Forecast was recorded after requested clock"
+    },
+    {
+      "record": "data/football_ledger/forecasts/ES1_a3a1632fdf03eb4939819a46.json",
+      "reason": "Forecast was recorded after requested clock"
+    },
+    {
+      "record": "data/football_ledger/forecasts/ES1_b506deb638a292d9c082e7d6.json",
+      "reason": "Forecast was recorded after requested clock"
+    },
+    {
+      "record": "data/football_ledger/forecasts/ES1_d30a99a76949bc1a64bdf462.json",
+      "reason": "Forecast was recorded after requested clock"
+    },
+    {
+      "record": "data/football_ledger/forecasts/FR1_601d466ee222a71876d56b43.json",
+      "reason": "Forecast was recorded after requested clock"
+    },
+    {
+      "record": "data/football_ledger/forecasts/FR1_d0ad0e5f8a6802334bada81a.json",
+      "reason": "Forecast was recorded after requested clock"
+    },
+    {
+      "record": "data/football_ledger/forecasts/IT1_41eacddf80858afc603a8841.json",
+      "reason": "Forecast was recorded after requested clock"
+    },
+    {
+      "record": "data/football_ledger/forecasts/IT1_719b27741bb9dd09c1121699.json",
+      "reason": "Forecast was recorded after requested clock"
+    },
+    {
+      "record": "data/football_ledger/forecasts/IT1_a7cddbb4a1b6ab553a1c4248.json",
+      "reason": "Forecast was recorded after requested clock"
+    },
+    {
+      "record": "data/football_ledger/forecasts/NL1_72f409a89bc721fdd4e665cf.json",
+      "reason": "Forecast was recorded after requested clock"
     }
   ],
   "pending": 88,
