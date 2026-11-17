@@ -43,3 +43,27 @@ def test_invalid_response_does_not_poison_cache(tmp_path,monkeypatch,payload,err
     monkeypatch.setattr(c.urllib.request,'urlopen',lambda *a,**k:io.BytesIO(payload))
     with pytest.raises(error):c.fetch(URL,True)
     assert p.read_text()=='old'
+
+
+@pytest.mark.parametrize('recover', [True, False])
+def test_incomplete_read_discards_partial_bytes_and_bounds_retry(tmp_path, monkeypatch, recover):
+    from http.client import IncompleteRead
+    p, sleeps = setup(tmp_path, monkeypatch)
+    responses = []
+    class Broken(io.BytesIO):
+        def read(self, *args):
+            raise IncompleteRead(b'partial', 100)
+    def get(*args, **kwargs):
+        response = io.BytesIO(b'complete') if recover and responses else Broken()
+        responses.append(response)
+        return response
+    monkeypatch.setattr(c.urllib.request, 'urlopen', get)
+    if recover:
+        assert c.fetch(URL, True) == 'complete'
+        assert len(responses) == 2 and sleeps == [1]
+    else:
+        with pytest.raises(IncompleteRead): c.fetch(URL, True)
+        assert p.read_text() == 'old'
+        assert len(responses) == 3 and sleeps == [1, 2]
+    assert all(r.closed for r in responses)
+    assert not list(tmp_path.glob('*.part'))

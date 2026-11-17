@@ -6,6 +6,7 @@ import hashlib
 import json
 import re
 import subprocess
+import tempfile
 import unicodedata
 from pathlib import Path
 
@@ -68,7 +69,12 @@ def git_source(name, refresh=True):
     try:
         if not path.exists():
             path.parent.mkdir(parents=True, exist_ok=True)
-            subprocess.run(['git', 'clone', '--depth', '1', url, str(path)], check=True, timeout=180, capture_output=True)
+            # Failed initial clones must not become the next run's cache.
+            with tempfile.TemporaryDirectory(prefix=name+'-', dir=path.parent) as staging:
+                checkout = Path(staging) / 'checkout'
+                subprocess.run(['git', 'clone', '--depth', '1', url, str(checkout)],
+                               check=True, timeout=180, capture_output=True)
+                checkout.rename(path)
         elif refresh:
             subprocess.run(['git', '-C', str(path), 'pull', '--ff-only'], check=True, timeout=180, capture_output=True)
     except Exception as exc:

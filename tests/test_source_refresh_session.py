@@ -73,3 +73,33 @@ def test_refresh_retains_nested_source_errors_and_continues(monkeypatch):
     assert reports[0]['football']['errors'] == [dict(original, collector='screenshots')]
     assert 'collector' not in original
     assert calls == ['BR2', 'BR1', 'AR1', 'CO1', 'US1', 'JP1', 'CN1', 'settled']
+
+
+@pytest.mark.parametrize('failure', ['exit', 'timeout'])
+def test_failed_initial_clone_is_cleaned_and_next_session_recovers(tmp_path, monkeypatch, failure):
+    monkeypatch.chdir(tmp_path)
+    calls = []
+    def run(command, **kwargs):
+        calls.append(command)
+        checkout = Path(command[-1])
+        checkout.mkdir(parents=True)
+        (checkout / 'partial.txt').write_text('partial download')
+        if len(calls) == 1:
+            if failure == 'timeout':
+                raise subprocess.TimeoutExpired(command, 180)
+            raise subprocess.CalledProcessError(128, command)
+        (checkout / 'LICENSE.md').write_text('CC0')
+    monkeypatch.setattr(data.subprocess, 'run', run)
+    error = subprocess.TimeoutExpired if failure == 'timeout' else subprocess.CalledProcessError
+    with data.source_refresh_session():
+        for _ in range(3):
+            with pytest.raises(error): data.git_source('europe')
+        assert len(calls) == 1
+        assert not Path('.runtime/openfootball/europe').exists()
+        assert list(Path('.runtime/openfootball').iterdir()) == []
+    with data.source_refresh_session():
+        path = data.git_source('europe')
+        assert (path / 'LICENSE.md').read_text() == 'CC0'
+        assert data.git_source('europe') == path
+        assert len(calls) == 2
+        assert list(path.parent.iterdir()) == [path]

@@ -1,4 +1,5 @@
 """Separate, gender-checked ECW/FEC/VTB archives from public result pages."""
+from http.client import IncompleteRead
 import hashlib
 import json
 import re
@@ -26,6 +27,11 @@ def fetch(url,refresh=False):
                 with urllib.request.urlopen(urllib.request.Request(url,headers={'User-Agent':'bbtahmin/0.3 research'}),timeout=25) as r:
                     raw=r.read(6_000_001)
                 break
+            except IncompleteRead:
+                # Discard partial response bytes; retain the last complete cache.
+                if attempt == 2:
+                    raise
+                time.sleep(attempt + 1)
             except urllib.error.HTTPError as exc:
                 # Never retry access denials or ignore a longer server backoff.
                 retry_after=exc.headers.get('Retry-After') if exc.headers else None
