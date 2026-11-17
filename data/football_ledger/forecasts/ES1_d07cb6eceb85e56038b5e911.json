@@ -1,0 +1,125 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-11-17T16:26:39.748224+00:00",
+  "fixture": {
+    "event_id": "ES1_d07cb6eceb85e56038b5e911",
+    "league": "ES1",
+    "season": "2026-27",
+    "date": "2026-11-23",
+    "home": "levante ud",
+    "away": "elche cf",
+    "home_name": "Levante UD",
+    "away_name": "Elche CF",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/es.1.json",
+    "captured_at_utc": "2026-11-17T16:21:49.400453+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null,
+    "original_date": null,
+    "date_correction_verified": null,
+    "license_url": null,
+    "source_sha256": null,
+    "fixture_verification_url": null,
+    "actual_start_utc": null,
+    "source_original_date": "2026-11-22",
+    "verified_start_utc": "2026-11-23T20:00:00+00:00",
+    "independent_fixture": {
+      "provider_event_id": "401882802",
+      "league": "ES1",
+      "season_year": 2026,
+      "start_utc": "2026-11-23T20:00:00+00:00",
+      "captured_at": "2026-11-17T16:25:36.600279+00:00",
+      "home_name": "Levante",
+      "away_name": "Elche",
+      "provider_home_id": "1538",
+      "provider_away_id": "3751",
+      "source_url": "https://www.espn.com/soccer/game/_/gameId/401882802",
+      "status": "scheduled",
+      "event_id": "ES1_d07cb6eceb85e56038b5e911",
+      "home": "levante ud",
+      "away": "elche cf"
+    }
+  },
+  "prediction": {
+    "model": "football-opponent-v1",
+    "league": "ES1",
+    "home": "levante ud",
+    "away": "elche cf",
+    "expected_home_goals": 1.6511576447151615,
+    "expected_away_goals": 1.2317245610552676,
+    "probabilities": {
+      "home": 0.47194790144221527,
+      "draw": 0.24257438500408696,
+      "away": 0.28547771355369783
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.7826626428417108,
+      "2.5": 0.550065719704575,
+      "3.5": 0.3265492094282414
+    },
+    "both_teams_score": 0.5723565564452499,
+    "total_goals_80": [
+      1,
+      5
+    ],
+    "training_cutoff_exclusive": "2026-11-17",
+    "training_games": 1121,
+    "prior_team_games": {
+      "levante ud": 50,
+      "elche cf": 50
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "settings": {
+      "half_life_days": 180.0,
+      "shrinkage_games": 8.0,
+      "window_days": 1095
+    },
+    "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+    "low_score_rho": 0.0,
+    "research_candidate": false
+  },
+  "archive_sha256": "e610c52c72298e0708e21f2e17a54f122b6fe72e6f0debddc0628e553198f04a",
+  "source_code_sha256": "c1e6ddfededc35b38609ae5a143347dfeb9ec4dfe5f707f70a582433dfcd044f",
+  "requested_model_variant": "opponent",
+  "history_health": {
+    "spec": "football-history-health-v1",
+    "checked_at_utc": "2026-11-17T16:26:38.211980+00:00",
+    "information_cutoff_exclusive": "2026-11-17",
+    "teams": {
+      "levante ud": {
+        "prior_finals": 392,
+        "active_season_finals": 12,
+        "last_final_date": "2026-11-08",
+        "days_since_last_final": 9,
+        "unresolved_past_fixture_ids": []
+      },
+      "elche cf": {
+        "prior_finals": 240,
+        "active_season_finals": 12,
+        "last_final_date": "2026-11-08",
+        "days_since_last_final": 9,
+        "unresolved_past_fixture_ids": []
+      }
+    },
+    "diagnostic_gate_passed": true,
+    "blocking_issues": [],
+    "max_history_age_days": 30,
+    "calendar_completeness_verified": false,
+    "note": "Diagnostic policy, not a validated success threshold. Unresolved fixtures may be postponed or missing results. Fresh source captures do not make old histories current."
+  },
+  "selection_policy": "Current-history diagnostic gate plus existing model issues; research only, no validated recommendation.",
+  "payload_sha256": "a343249a7e14457c7e0b7c25edb5d6d31b4da5cc1f1bdaee2fc155cd772672ce"
+}

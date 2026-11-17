@@ -1,0 +1,125 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-11-17T16:26:39.668184+00:00",
+  "fixture": {
+    "event_id": "EN1_5a12260843bef919c27d0ac3",
+    "league": "EN1",
+    "season": "2026-27",
+    "date": "2026-11-23",
+    "home": "brentford fc",
+    "away": "everton fc",
+    "home_name": "Brentford FC",
+    "away_name": "Everton FC",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/en.1.json",
+    "captured_at_utc": "2026-11-17T16:21:49.400453+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null,
+    "original_date": null,
+    "date_correction_verified": null,
+    "license_url": null,
+    "source_sha256": null,
+    "fixture_verification_url": null,
+    "actual_start_utc": null,
+    "source_original_date": "2026-11-21",
+    "verified_start_utc": "2026-11-23T20:00:00+00:00",
+    "independent_fixture": {
+      "provider_event_id": "401879237",
+      "league": "EN1",
+      "season_year": 2026,
+      "start_utc": "2026-11-23T20:00:00+00:00",
+      "captured_at": "2026-11-17T16:25:35.944079+00:00",
+      "home_name": "Brentford",
+      "away_name": "Everton",
+      "provider_home_id": "337",
+      "provider_away_id": "368",
+      "source_url": "https://www.espn.com/soccer/game/_/gameId/401879237",
+      "status": "scheduled",
+      "event_id": "EN1_5a12260843bef919c27d0ac3",
+      "home": "brentford fc",
+      "away": "everton fc"
+    }
+  },
+  "prediction": {
+    "model": "football-opponent-v1",
+    "league": "EN1",
+    "home": "brentford fc",
+    "away": "everton fc",
+    "expected_home_goals": 1.4981835964761594,
+    "expected_away_goals": 1.0584171653296688,
+    "probabilities": {
+      "home": 0.473517110985777,
+      "draw": 0.25882694918252147,
+      "away": 0.26765593983170144
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.7241217173102489,
+      "2.5": 0.47062156241133146,
+      "3.5": 0.25458866603384217
+    },
+    "both_teams_score": 0.5070275151009297,
+    "total_goals_80": [
+      1,
+      5
+    ],
+    "training_cutoff_exclusive": "2026-11-17",
+    "training_games": 1120,
+    "prior_team_games": {
+      "brentford fc": 112,
+      "everton fc": 112
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "settings": {
+      "half_life_days": 180.0,
+      "shrinkage_games": 8.0,
+      "window_days": 1095
+    },
+    "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+    "low_score_rho": 0.0,
+    "research_candidate": false
+  },
+  "archive_sha256": "e610c52c72298e0708e21f2e17a54f122b6fe72e6f0debddc0628e553198f04a",
+  "source_code_sha256": "c1e6ddfededc35b38609ae5a143347dfeb9ec4dfe5f707f70a582433dfcd044f",
+  "requested_model_variant": "opponent",
+  "history_health": {
+    "spec": "football-history-health-v1",
+    "checked_at_utc": "2026-11-17T16:26:38.211980+00:00",
+    "information_cutoff_exclusive": "2026-11-17",
+    "teams": {
+      "brentford fc": {
+        "prior_finals": 200,
+        "active_season_finals": 10,
+        "last_final_date": "2026-11-08",
+        "days_since_last_final": 9,
+        "unresolved_past_fixture_ids": []
+      },
+      "everton fc": {
+        "prior_finals": 618,
+        "active_season_finals": 10,
+        "last_final_date": "2026-11-06",
+        "days_since_last_final": 11,
+        "unresolved_past_fixture_ids": []
+      }
+    },
+    "diagnostic_gate_passed": true,
+    "blocking_issues": [],
+    "max_history_age_days": 30,
+    "calendar_completeness_verified": false,
+    "note": "Diagnostic policy, not a validated success threshold. Unresolved fixtures may be postponed or missing results. Fresh source captures do not make old histories current."
+  },
+  "selection_policy": "Current-history diagnostic gate plus existing model issues; research only, no validated recommendation.",
+  "payload_sha256": "fa552bb9cd58f691a6233a1956e7e42eb1e7648396c500681f3d3e9dd4d5c7cd"
+}
