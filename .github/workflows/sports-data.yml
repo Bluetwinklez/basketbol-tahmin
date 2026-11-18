@@ -98,5 +98,31 @@ jobs:
             docs/kanit/competitions/*_collection.json
       - name: Surface incomplete source refresh
         if: steps.collect.outcome == 'failure' || steps.fixtures.outcome == 'failure' || steps.licensed_sources.outcome == 'failure' || steps.licensed.outcome == 'failure' || steps.shadow.outcome == 'failure' || steps.football.outcome == 'failure'
-        run: exit 1
+        shell: bash
+        env:
+          COLLECT_OUTCOME: ${{ steps.collect.outcome }}
+          FIXTURES_OUTCOME: ${{ steps.fixtures.outcome }}
+          LICENSED_SOURCES_OUTCOME: ${{ steps.licensed_sources.outcome }}
+          LICENSED_OUTCOME: ${{ steps.licensed.outcome }}
+          SHADOW_OUTCOME: ${{ steps.shadow.outcome }}
+          FOOTBALL_OUTCOME: ${{ steps.football.outcome }}
+        run: |
+          {
+            echo '### Sports refresh incomplete'
+            echo
+            echo 'At least one independent collection or forecast stage did not complete successfully.'
+            echo
+            echo '| Stage | Outcome |'
+            echo '|---|---|'
+            printf '| Data collection | %s |\n' "$COLLECT_OUTCOME"
+            printf '| Fixture confirmation | %s |\n' "$FIXTURES_OUTCOME"
+            printf '| Licensed-source inspection | %s |\n' "$LICENSED_SOURCES_OUTCOME"
+            printf '| Licensed supplement | %s |\n' "$LICENSED_OUTCOME"
+            printf '| Shadow forecasts | %s |\n' "$SHADOW_OUTCOME"
+            printf '| Football forecasts | %s |\n' "$FOOTBALL_OUTCOME"
+            echo
+            echo 'Inspect the failed stage logs and the `sports-refresh-evidence` artifact before retrying. Historical archives do not establish current fixture coverage.'
+          } >> "$GITHUB_STEP_SUMMARY"
+          echo '::error::Sports refresh incomplete; inspect stage outcomes in the job summary and the evidence artifact.'
+          exit 1
 
