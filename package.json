@@ -5,6 +5,6 @@
     "test:ui": "node --test tests/ui.test.cjs"
   },
   "devDependencies": {
-    "jsdom": "26.1.0"
+    "jsdom": "31.0.1"
   }
 }
