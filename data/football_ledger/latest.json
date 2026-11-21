@@ -1,7 +1,7 @@
 {
   "spec": "football-daily-v1",
-  "checked_at_utc": "2026-11-20T15:45:43.689820+00:00",
-  "collection_checked_at_utc": "2026-11-20T15:41:12.309048+00:00",
+  "checked_at_utc": "2026-11-21T14:56:11.260236+00:00",
+  "collection_checked_at_utc": "2026-11-21T14:51:50.879449+00:00",
   "source_errors": [
     {
       "league": "DE2",
@@ -1221,6 +1221,102 @@
     },
     {
       "fixture": {
+        "event_id": "DE1_07bd9fb4469afa435df25d38",
+        "league": "DE1",
+        "season": "2026-27",
+        "date": "2026-11-27",
+        "home": "sv werder bremen",
+        "away": "borussia monchengladbach",
+        "home_name": "SV Werder Bremen",
+        "away_name": "Borussia Mönchengladbach",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/de.1.json",
+        "captured_at_utc": "2026-11-21T14:51:50.879449+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null,
+        "original_date": null,
+        "date_correction_verified": null,
+        "license_url": null,
+        "source_sha256": null,
+        "fixture_verification_url": null,
+        "actual_start_utc": null,
+        "source_original_date": "2026-11-27",
+        "verified_start_utc": "2026-11-27T19:30:00+00:00",
+        "independent_fixture": {
+          "provider_event_id": "401884720",
+          "league": "DE1",
+          "season_year": 2026,
+          "start_utc": "2026-11-27T19:30:00+00:00",
+          "captured_at": "2026-11-20T15:44:53.702592+00:00",
+          "home_name": "Werder Bremen",
+          "away_name": "Borussia Mönchengladbach",
+          "provider_home_id": "137",
+          "provider_away_id": "268",
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401884720",
+          "status": "scheduled",
+          "event_id": "DE1_07bd9fb4469afa435df25d38",
+          "home": "sv werder bremen",
+          "away": "borussia monchengladbach"
+        }
+      },
+      "prediction": {
+        "model": "football-opponent-v1",
+        "league": "DE1",
+        "home": "sv werder bremen",
+        "away": "borussia monchengladbach",
+        "expected_home_goals": 1.910197598716448,
+        "expected_away_goals": 1.225094806973042,
+        "probabilities": {
+          "home": 0.533731342385521,
+          "draw": 0.22276421457204623,
+          "away": 0.24350444304243296
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.8201683898149389,
+          "2.5": 0.6064283359927776,
+          "3.5": 0.3830491468126826
+        },
+        "both_teams_score": 0.601706055756065,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-11-21",
+        "training_games": 900,
+        "prior_team_games": {
+          "sv werder bremen": 100,
+          "borussia monchengladbach": 100
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+        "low_score_rho": 0.0,
+        "research_candidate": false
+      },
+      "recorded_at_utc": "2026-11-21T14:51:54.245028+00:00",
+      "status": "pending",
+      "result": null,
+      "fixture_review": null
+    },
+    {
+      "fixture": {
         "event_id": "DE1_14cc48088addffaac0bfc145",
         "league": "DE1",
         "season": "2026-27",
@@ -1702,8 +1798,44 @@
         "research_candidate": false
       },
       "recorded_at_utc": "2026-11-14T13:44:05.083997+00:00",
-      "status": "pending",
-      "result": null,
+      "status": "publisher_final",
+      "result": {
+        "actual_home": 1,
+        "actual_away": 1,
+        "actual_outcome": "draw",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.004442950831412955
+          },
+          "over_2.5": {
+            "actual": false,
+            "correct": false,
+            "brier": 0.6627117296107479
+          },
+          "over_3.5": {
+            "actual": false,
+            "correct": false,
+            "brier": 0.4088315535790436
+          },
+          "both_teams_score": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.1799113404826671
+          }
+        },
+        "winner_correct": false,
+        "home_absolute_error": 2.4921987045195992,
+        "away_absolute_error": 0.09880576988886458,
+        "total_absolute_error": 2.393392934630735,
+        "margin_absolute_error": 2.591004474408464,
+        "total_in_80": true,
+        "log_loss": 2.3543953687193064,
+        "brier": 1.5408896689613938,
+        "verification": "community_source_final_not_official",
+        "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Bundesliga"
+      },
       "fixture_review": null
     },
     {
@@ -10021,6 +10153,102 @@
         "verification": "community_source_final_not_official",
         "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_EFL_Championship"
       },
+      "fixture_review": null
+    },
+    {
+      "fixture": {
+        "event_id": "EN2_6592d71a2b13e9ddf801e1ea",
+        "league": "EN2",
+        "season": "2026-27",
+        "date": "2026-11-27",
+        "home": "southampton fc",
+        "away": "middlesbrough fc",
+        "home_name": "Southampton FC",
+        "away_name": "Middlesbrough FC",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/en.2.json",
+        "captured_at_utc": "2026-11-21T14:51:50.879449+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null,
+        "original_date": null,
+        "date_correction_verified": null,
+        "license_url": null,
+        "source_sha256": null,
+        "fixture_verification_url": null,
+        "actual_start_utc": null,
+        "source_original_date": "2026-11-27",
+        "verified_start_utc": "2026-11-27T20:00:00+00:00",
+        "independent_fixture": {
+          "provider_event_id": "401880129",
+          "league": "EN2",
+          "season_year": 2026,
+          "start_utc": "2026-11-27T20:00:00+00:00",
+          "captured_at": "2026-11-20T15:44:53.175036+00:00",
+          "home_name": "Southampton",
+          "away_name": "Middlesbrough",
+          "provider_home_id": "376",
+          "provider_away_id": "369",
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401880129",
+          "status": "scheduled",
+          "event_id": "EN2_6592d71a2b13e9ddf801e1ea",
+          "home": "southampton fc",
+          "away": "middlesbrough fc"
+        }
+      },
+      "prediction": {
+        "model": "football-opponent-v1",
+        "league": "EN2",
+        "home": "southampton fc",
+        "away": "middlesbrough fc",
+        "expected_home_goals": 1.641958629976961,
+        "expected_away_goals": 1.1681709577585522,
+        "probabilities": {
+          "home": 0.48411914917809185,
+          "draw": 0.24435710325133025,
+          "away": 0.2715237475705779
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.7706409012085524,
+          "2.5": 0.5329574602045608,
+          "3.5": 0.3103170368445257
+        },
+        "both_teams_score": 0.5556615770925839,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-11-21",
+        "training_games": 1659,
+        "prior_team_games": {
+          "southampton fc": 96,
+          "middlesbrough fc": 140
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+        "low_score_rho": 0.0,
+        "research_candidate": false
+      },
+      "recorded_at_utc": "2026-11-21T14:51:54.304825+00:00",
+      "status": "pending",
+      "result": null,
       "fixture_review": null
     },
     {
@@ -21646,8 +21874,44 @@
         "research_candidate": false
       },
       "recorded_at_utc": "2026-11-14T13:44:05.131645+00:00",
-      "status": "pending",
-      "result": null,
+      "status": "publisher_final",
+      "result": {
+        "actual_home": 3,
+        "actual_away": 1,
+        "actual_outcome": "home",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.0904071933367397
+          },
+          "over_2.5": {
+            "actual": true,
+            "correct": false,
+            "brier": 0.3139621756694401
+          },
+          "over_3.5": {
+            "actual": true,
+            "correct": false,
+            "brier": 0.594685014653224
+          },
+          "both_teams_score": {
+            "actual": true,
+            "correct": false,
+            "brier": 0.26027891799921493
+          }
+        },
+        "winner_correct": true,
+        "home_absolute_error": 1.6390935044269568,
+        "away_absolute_error": 0.07512696916968697,
+        "total_absolute_error": 1.5639665352572698,
+        "margin_absolute_error": 1.7142204735966438,
+        "total_in_80": true,
+        "log_loss": 0.836416908936925,
+        "brier": 0.48211062321783593,
+        "verification": "community_source_final_not_official",
+        "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Ligue_1"
+      },
       "fixture_review": null
     },
     {
@@ -21874,6 +22138,102 @@
         "verification": "community_source_final_not_official",
         "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Ligue_1"
       },
+      "fixture_review": null
+    },
+    {
+      "fixture": {
+        "event_id": "FR1_f68edc918f2b32527ae2dd08",
+        "league": "FR1",
+        "season": "2026-27",
+        "date": "2026-11-27",
+        "home": "stade brestois 29",
+        "away": "paris fc",
+        "home_name": "Stade Brestois 29",
+        "away_name": "Paris FC",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/fr.1.json",
+        "captured_at_utc": "2026-11-21T14:51:50.879449+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null,
+        "original_date": null,
+        "date_correction_verified": null,
+        "license_url": null,
+        "source_sha256": null,
+        "fixture_verification_url": null,
+        "actual_start_utc": null,
+        "source_original_date": "2026-11-27",
+        "verified_start_utc": "2026-11-27T19:45:00+00:00",
+        "independent_fixture": {
+          "provider_event_id": "401876392",
+          "league": "FR1",
+          "season_year": 2026,
+          "start_utc": "2026-11-27T19:45:00+00:00",
+          "captured_at": "2026-11-20T15:44:54.103434+00:00",
+          "home_name": "Brest",
+          "away_name": "Paris FC",
+          "provider_home_id": "6997",
+          "provider_away_id": "6851",
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401876392",
+          "status": "scheduled",
+          "event_id": "FR1_f68edc918f2b32527ae2dd08",
+          "home": "stade brestois 29",
+          "away": "paris fc"
+        }
+      },
+      "prediction": {
+        "model": "football-opponent-v1",
+        "league": "FR1",
+        "home": "stade brestois 29",
+        "away": "paris fc",
+        "expected_home_goals": 1.4390223277704044,
+        "expected_away_goals": 1.3989494422293063,
+        "probabilities": {
+          "home": 0.38363525568574264,
+          "draw": 0.2507949365430808,
+          "away": 0.3655698077711767
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.7753086795538284,
+          "2.5": 0.5395483841280121,
+          "3.5": 0.31652136315959245
+        },
+        "both_teams_score": 0.5745286128386182,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-11-21",
+        "training_games": 902,
+        "prior_team_games": {
+          "stade brestois 29": 101,
+          "paris fc": 44
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+        "low_score_rho": 0.0,
+        "research_candidate": false
+      },
+      "recorded_at_utc": "2026-11-21T14:51:54.356721+00:00",
+      "status": "pending",
+      "result": null,
       "fixture_review": null
     },
     {
@@ -29181,6 +29541,102 @@
     },
     {
       "fixture": {
+        "event_id": "NL1_880c224165e63fbfca2a0326",
+        "league": "NL1",
+        "season": "2026-27",
+        "date": "2026-11-27",
+        "home": "fc groningen",
+        "away": "willem ii tilburg",
+        "home_name": "FC Groningen",
+        "away_name": "Willem II Tilburg",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/nl.1.json",
+        "captured_at_utc": "2026-11-21T14:51:50.879449+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null,
+        "original_date": null,
+        "date_correction_verified": null,
+        "license_url": null,
+        "source_sha256": null,
+        "fixture_verification_url": null,
+        "actual_start_utc": null,
+        "source_original_date": "2026-11-27",
+        "verified_start_utc": "2026-11-27T19:00:00+00:00",
+        "independent_fixture": {
+          "provider_event_id": "401875536",
+          "league": "NL1",
+          "season_year": 2026,
+          "start_utc": "2026-11-27T19:00:00+00:00",
+          "captured_at": "2026-11-20T15:44:54.594470+00:00",
+          "home_name": "FC Groningen",
+          "away_name": "Willem II",
+          "provider_home_id": "145",
+          "provider_away_id": "156",
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401875536",
+          "status": "scheduled",
+          "event_id": "NL1_880c224165e63fbfca2a0326",
+          "home": "fc groningen",
+          "away": "willem ii tilburg"
+        }
+      },
+      "prediction": {
+        "model": "football-opponent-v1",
+        "league": "NL1",
+        "home": "fc groningen",
+        "away": "willem ii tilburg",
+        "expected_home_goals": 2.796630019432858,
+        "expected_away_goals": 1.2175501630517993,
+        "probabilities": {
+          "home": 0.7029053367885096,
+          "draw": 0.15653614468925767,
+          "away": 0.14055851852223264
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          2,
+          1
+        ],
+        "over": {
+          "1.5": 0.9094551750440438,
+          "2.5": 0.7639670902666919,
+          "3.5": 0.5692952946997274
+        },
+        "both_teams_score": 0.6610880961395469,
+        "total_goals_80": [
+          2,
+          7
+        ],
+        "training_cutoff_exclusive": "2026-11-21",
+        "training_games": 919,
+        "prior_team_games": {
+          "fc groningen": 80,
+          "willem ii tilburg": 46
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+        "low_score_rho": 0.0,
+        "research_candidate": false
+      },
+      "recorded_at_utc": "2026-11-21T14:51:54.404404+00:00",
+      "status": "pending",
+      "result": null,
+      "fixture_review": null
+    },
+    {
+      "fixture": {
         "event_id": "NL1_9cad894f6f2e0443139e97fb",
         "league": "NL1",
         "season": "2026-27",
@@ -33924,62 +34380,6 @@
   ],
   "skipped": [
     {
-      "event_id": "BR1_098d39bf8f02f7f0a10c2848",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
-    },
-    {
-      "event_id": "BR1_132873176f5f6e776f6ab13c",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
-    },
-    {
-      "event_id": "BR1_478f5a6da2ce1a93766cbe7a",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
-    },
-    {
-      "event_id": "BR1_62543f245e708dcf7c165a26",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
-    },
-    {
-      "event_id": "BR1_6b5e6bff274e88b91fcfec70",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
-    },
-    {
-      "event_id": "BR1_9267a274fb7fcf7bf3696b44",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
-    },
-    {
-      "event_id": "BR1_c5eec389f59070ab061bcb00",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
-    },
-    {
-      "event_id": "BR1_dcbff52077bf2bdc8e96d030",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
-    },
-    {
-      "event_id": "BR1_eec9d714280a8a6ab21003ab",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
-    },
-    {
-      "event_id": "BR1_f6ccfbf6cbdd104a638e22ea",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
-    },
-    {
-      "event_id": "DE1_0950cb78d84dd98d86d8680c",
-      "reason": "Insufficient history: sc paderborn 07: fewer than 10 prior matches"
-    },
-    {
-      "event_id": "DE1_6b51ba9cc132887681b80f34",
-      "reason": "Insufficient history: sv 07 elversberg: fewer than 10 prior matches"
-    },
-    {
-      "event_id": "DE1_eef70585884381c3d931b12e",
-      "reason": "Insufficient history: fc schalke 04: fewer than 10 prior matches"
-    },
-    {
-      "event_id": "ES1_068eb0118ce1806f2880752d",
-      "reason": "Insufficient history (current coverage): athletic club: 1 unresolved past fixtures; refresh/review required"
-    },
-    {
       "event_id": "ES1_513aa8ead5d2bd687b141c30",
       "reason": "Insufficient history (current coverage): rayo vallecano de madrid: 1 unresolved past fixtures; refresh/review required"
     },
@@ -33989,7 +34389,7 @@
     },
     {
       "event_id": "TR1_322a0d08ccd2d9db4895e3c1",
-      "reason": "Insufficient history (current coverage): genclerbirligi: 1 unresolved past fixtures; refresh/review required; gaziantep fk: 1 unresolved past fixtures; refresh/review required"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "TR1_329fc70bb9e8b5559c78832c",
@@ -33997,7 +34397,7 @@
     },
     {
       "event_id": "TR1_4d7ae4ea43a608db8beee532",
-      "reason": "Insufficient history (current coverage): amed: 1 unresolved past fixtures; refresh/review required; caykur rizespor: 2 unresolved past fixtures; refresh/review required"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "TR1_811ee8b73182e7098b0ef193",
@@ -34009,7 +34409,7 @@
     },
     {
       "event_id": "TR1_aaf42f29f9245daaf0db51b2",
-      "reason": "Insufficient history (current coverage): galatasaray: 1 unresolved past fixtures; refresh/review required; samsunspor: 1 unresolved past fixtures; refresh/review required"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "TR1_be58c0de58899ca159a47c1b",
@@ -34020,24 +34420,8 @@
       "reason": "Insufficient history (current coverage): istanbul basaksehir: 1 unresolved past fixtures; refresh/review required; corum: 2 unresolved past fixtures; refresh/review required"
     },
     {
-      "event_id": "DE1_07bd9fb4469afa435df25d38",
-      "reason": "Fresh independent future scheduled fixture required"
-    },
-    {
-      "event_id": "EN2_6592d71a2b13e9ddf801e1ea",
-      "reason": "Fresh independent future scheduled fixture required"
-    },
-    {
-      "event_id": "FR1_f68edc918f2b32527ae2dd08",
-      "reason": "Fresh independent future scheduled fixture required"
-    },
-    {
-      "event_id": "NL1_880c224165e63fbfca2a0326",
-      "reason": "Fresh independent future scheduled fixture required"
-    },
-    {
       "event_id": "PT1_371b6daf76308734617c4af9",
-      "reason": "Fresh independent future scheduled fixture required"
+      "reason": "Insufficient history (current coverage): cs maritimo: 1 unresolved past fixtures; refresh/review required"
     },
     {
       "event_id": "BR1_324c366a5b6a0dfbdd775fa5",
@@ -34080,152 +34464,128 @@
       "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
     },
     {
-      "event_id": "DE1_04bac190e766484c76cde9e4",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
-    },
-    {
       "event_id": "DE1_49e4f7b050dc987ba3348c91",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
-    },
-    {
-      "event_id": "DE1_becf7a4c2d71ba39aab5725b",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Insufficient history: sv 07 elversberg: fewer than 10 prior matches"
     },
     {
       "event_id": "DE1_c0555104b45f46e13f2e52f7",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Insufficient history: sc paderborn 07: fewer than 10 prior matches; fc schalke 04: fewer than 10 prior matches"
     },
     {
       "event_id": "DE1_cd375c6dae901be50d71f824",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "EN1_003d5fd152a00e0f8148f996",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "EN1_012f93b4faf0c10d0156ef60",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
-    },
-    {
-      "event_id": "EN1_0b18e432a43461f6b00a4cea",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "EN1_42a9bde6b4d00eef6e27d1a4",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "EN1_7b89b736c0c4aebe5af7fa91",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "EN1_9bde785a6a4ec54399160a24",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "EN1_9fde6a02be7ed45885f285dc",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "EN1_ab6b0e7e6f68350890cddf8a",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "EN1_bd1ab0b32d2a2bf86c1df3fc",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "EN1_be87e054d09fa15628f22ba6",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
-    },
-    {
-      "event_id": "EN2_143b1945c0915af8731602e8",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "EN2_1f6dd74ce25ef7decf28c1ab",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "EN2_21b39b160bdb70a9e213ee6a",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "EN2_3f5e3f4cda1a3bf88e805418",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "EN2_42294780be4941ae71ea3016",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "EN2_57822baec389a6613b3533b6",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "EN2_6bdac22d0903431908679829",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "EN2_8b05139cec74470e9ccdae5c",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
-    },
-    {
-      "event_id": "EN2_a4f03cc259f69e49e84e143b",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
-    },
-    {
-      "event_id": "EN2_b6198ac50d7aeb6ab7916533",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "FR1_0b76ac90c7c955efd2813c97",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "FR1_540b3d01e762ca4427959387",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "FR1_668ba7ad6a47e879293fb894",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "FR1_6b7242eb47a8f93e0e0602d0",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "FR1_95edc839e2877652037574a0",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "NL1_3a6448bc0c08dbc8e83e9866",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "NL1_400e9cb5ddbe5d5b1991d19f",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "NL1_477219b0536215efa31e7be2",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "PT1_16ff5031c2fa00975ab8144b",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "PT1_67dd0c6988f1d37af5f447fc",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "PT1_a31b004c69bfbd0d9393f903",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "PT1_cc2ff6fdcbfc8ea3c9668022",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "DE1_027d3921942f7326d176219b",
@@ -34398,38 +34758,70 @@
     {
       "event_id": "TR1_ece6663d322b3badd2fb8f3e",
       "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "PT1_404283c949497e42c328671a",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "PT1_c311720ab0332f139ead9dc3",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "record": "data/football_ledger/forecasts/DE1_04bac190e766484c76cde9e4.json",
+      "reason": "Forecast was recorded after requested clock"
+    },
+    {
+      "record": "data/football_ledger/forecasts/DE1_becf7a4c2d71ba39aab5725b.json",
+      "reason": "Forecast was recorded after requested clock"
+    },
+    {
+      "record": "data/football_ledger/forecasts/EN1_0b18e432a43461f6b00a4cea.json",
+      "reason": "Forecast was recorded after requested clock"
+    },
+    {
+      "record": "data/football_ledger/forecasts/EN2_143b1945c0915af8731602e8.json",
+      "reason": "Forecast was recorded after requested clock"
+    },
+    {
+      "record": "data/football_ledger/forecasts/EN2_a4f03cc259f69e49e84e143b.json",
+      "reason": "Forecast was recorded after requested clock"
+    },
+    {
+      "record": "data/football_ledger/forecasts/EN2_b6198ac50d7aeb6ab7916533.json",
+      "reason": "Forecast was recorded after requested clock"
     }
   ],
-  "pending": 115,
+  "pending": 117,
   "requested_model_variant": "opponent",
   "publisher_performance": {
-    "games": 214,
-    "winner_accuracy": 0.5841121495327103,
-    "log_loss": 0.9804465023036071,
-    "brier": 0.582212795764962,
-    "total_mae": 1.4705566147375846,
-    "margin_mae": 1.410508267032304,
-    "total_in_80": 0.8598130841121495,
-    "team_score_games": 214,
-    "home_score_mae": 0.9936767796597258,
-    "away_score_mae": 1.0470650710275402,
-    "team_score_mae": 1.0203709253436328,
+    "games": 216,
+    "winner_accuracy": 0.5833333333333334,
+    "log_loss": 0.9861405730121673,
+    "brier": 0.5861876786383384,
+    "total_mae": 1.4752614584431996,
+    "margin_mae": 1.4173796022820282,
+    "total_in_80": 0.8611111111111112,
+    "team_score_games": 216,
+    "home_score_mae": 1.0036024215561474,
+    "away_score_mae": 1.0381752682358896,
+    "team_score_mae": 1.0208888448960185,
     "goal_markets": {
       "over_1.5": {
-        "accuracy": 0.7897196261682243,
-        "brier": 0.1679874094889246
+        "accuracy": 0.7916666666666666,
+        "brier": 0.1668710915499908
       },
       "over_2.5": {
-        "accuracy": 0.5373831775700935,
-        "brier": 0.25327282133218404
+        "accuracy": 0.5324074074074074,
+        "brier": 0.2554493410665165
       },
       "over_3.5": {
-        "accuracy": 0.6962616822429907,
-        "brier": 0.21787815890662016
+        "accuracy": 0.6898148148148148,
+        "brier": 0.22050667858448603
       },
       "both_teams_score": {
-        "accuracy": 0.5327102803738317,
-        "brier": 0.24967368787242175
+        "accuracy": 0.5324074074074074,
+        "brier": 0.2493998123295376
       }
     }
   },

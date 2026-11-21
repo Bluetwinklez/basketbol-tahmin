@@ -1,0 +1,125 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-11-21T14:51:54.356721+00:00",
+  "fixture": {
+    "event_id": "FR1_f68edc918f2b32527ae2dd08",
+    "league": "FR1",
+    "season": "2026-27",
+    "date": "2026-11-27",
+    "home": "stade brestois 29",
+    "away": "paris fc",
+    "home_name": "Stade Brestois 29",
+    "away_name": "Paris FC",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/fr.1.json",
+    "captured_at_utc": "2026-11-21T14:51:50.879449+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null,
+    "original_date": null,
+    "date_correction_verified": null,
+    "license_url": null,
+    "source_sha256": null,
+    "fixture_verification_url": null,
+    "actual_start_utc": null,
+    "source_original_date": "2026-11-27",
+    "verified_start_utc": "2026-11-27T19:45:00+00:00",
+    "independent_fixture": {
+      "provider_event_id": "401876392",
+      "league": "FR1",
+      "season_year": 2026,
+      "start_utc": "2026-11-27T19:45:00+00:00",
+      "captured_at": "2026-11-20T15:44:54.103434+00:00",
+      "home_name": "Brest",
+      "away_name": "Paris FC",
+      "provider_home_id": "6997",
+      "provider_away_id": "6851",
+      "source_url": "https://www.espn.com/soccer/game/_/gameId/401876392",
+      "status": "scheduled",
+      "event_id": "FR1_f68edc918f2b32527ae2dd08",
+      "home": "stade brestois 29",
+      "away": "paris fc"
+    }
+  },
+  "prediction": {
+    "model": "football-opponent-v1",
+    "league": "FR1",
+    "home": "stade brestois 29",
+    "away": "paris fc",
+    "expected_home_goals": 1.4390223277704044,
+    "expected_away_goals": 1.3989494422293063,
+    "probabilities": {
+      "home": 0.38363525568574264,
+      "draw": 0.2507949365430808,
+      "away": 0.3655698077711767
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.7753086795538284,
+      "2.5": 0.5395483841280121,
+      "3.5": 0.31652136315959245
+    },
+    "both_teams_score": 0.5745286128386182,
+    "total_goals_80": [
+      1,
+      5
+    ],
+    "training_cutoff_exclusive": "2026-11-21",
+    "training_games": 902,
+    "prior_team_games": {
+      "stade brestois 29": 101,
+      "paris fc": 44
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "settings": {
+      "half_life_days": 180.0,
+      "shrinkage_games": 8.0,
+      "window_days": 1095
+    },
+    "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+    "low_score_rho": 0.0,
+    "research_candidate": false
+  },
+  "archive_sha256": "ca31f3d217f0686abee2e5b75adc41d9870074e20a4e43a84d29928ad30c3f4e",
+  "source_code_sha256": "c1e6ddfededc35b38609ae5a143347dfeb9ec4dfe5f707f70a582433dfcd044f",
+  "requested_model_variant": "opponent",
+  "history_health": {
+    "spec": "football-history-health-v1",
+    "checked_at_utc": "2026-11-21T14:51:52.572719+00:00",
+    "information_cutoff_exclusive": "2026-11-21",
+    "teams": {
+      "stade brestois 29": {
+        "prior_finals": 254,
+        "active_season_finals": 10,
+        "last_final_date": "2026-11-08",
+        "days_since_last_final": 13,
+        "unresolved_past_fixture_ids": []
+      },
+      "paris fc": {
+        "prior_finals": 44,
+        "active_season_finals": 10,
+        "last_final_date": "2026-11-07",
+        "days_since_last_final": 14,
+        "unresolved_past_fixture_ids": []
+      }
+    },
+    "diagnostic_gate_passed": true,
+    "blocking_issues": [],
+    "max_history_age_days": 30,
+    "calendar_completeness_verified": false,
+    "note": "Diagnostic policy, not a validated success threshold. Unresolved fixtures may be postponed or missing results. Fresh source captures do not make old histories current."
+  },
+  "selection_policy": "Current-history diagnostic gate plus existing model issues; research only, no validated recommendation.",
+  "payload_sha256": "24f1a9b41034b739a4221a278480640ca48aeff8ebf61c047829d7159e59e7b7"
+}
