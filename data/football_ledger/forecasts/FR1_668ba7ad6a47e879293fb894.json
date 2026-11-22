@@ -1,0 +1,125 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-11-22T12:54:03.380984+00:00",
+  "fixture": {
+    "event_id": "FR1_668ba7ad6a47e879293fb894",
+    "league": "FR1",
+    "season": "2026-27",
+    "date": "2026-11-28",
+    "home": "ogc nice",
+    "away": "es troyes ac",
+    "home_name": "OGC Nice",
+    "away_name": "ES Troyes AC",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/fr.1.json",
+    "captured_at_utc": "2026-11-22T12:53:55.250046+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null,
+    "original_date": null,
+    "date_correction_verified": null,
+    "license_url": null,
+    "source_sha256": null,
+    "fixture_verification_url": null,
+    "actual_start_utc": null,
+    "source_original_date": "2026-11-28",
+    "verified_start_utc": "2026-11-28T19:45:00+00:00",
+    "independent_fixture": {
+      "provider_event_id": "401876388",
+      "league": "FR1",
+      "season_year": 2026,
+      "start_utc": "2026-11-28T19:45:00+00:00",
+      "captured_at": "2026-11-21T14:55:27.651827+00:00",
+      "home_name": "Nice",
+      "away_name": "Troyes",
+      "provider_home_id": "2502",
+      "provider_away_id": "170",
+      "source_url": "https://www.espn.com/soccer/game/_/gameId/401876388",
+      "status": "scheduled",
+      "event_id": "FR1_668ba7ad6a47e879293fb894",
+      "home": "ogc nice",
+      "away": "es troyes ac"
+    }
+  },
+  "prediction": {
+    "model": "football-opponent-v1",
+    "league": "FR1",
+    "home": "ogc nice",
+    "away": "es troyes ac",
+    "expected_home_goals": 1.5909810528933817,
+    "expected_away_goals": 1.0572969462958377,
+    "probabilities": {
+      "home": 0.4974057525905786,
+      "draw": 0.25029815064402916,
+      "away": 0.2522960967653922
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.7418004966195861,
+      "2.5": 0.4936217265491721,
+      "3.5": 0.27453960100139957
+    },
+    "both_teams_score": 0.519653765468746,
+    "total_goals_80": [
+      1,
+      5
+    ],
+    "training_cutoff_exclusive": "2026-11-22",
+    "training_games": 903,
+    "prior_team_games": {
+      "ogc nice": 100,
+      "es troyes ac": 11
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "settings": {
+      "half_life_days": 180.0,
+      "shrinkage_games": 8.0,
+      "window_days": 1095
+    },
+    "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+    "low_score_rho": 0.0,
+    "research_candidate": false
+  },
+  "archive_sha256": "c9b4a40717c19897cb6175f068564bced94b97db07416ef36c69b4ec32d355ff",
+  "source_code_sha256": "c1e6ddfededc35b38609ae5a143347dfeb9ec4dfe5f707f70a582433dfcd044f",
+  "requested_model_variant": "opponent",
+  "history_health": {
+    "spec": "football-history-health-v1",
+    "checked_at_utc": "2026-11-22T12:54:00.800383+00:00",
+    "information_cutoff_exclusive": "2026-11-22",
+    "teams": {
+      "ogc nice": {
+        "prior_finals": 444,
+        "active_season_finals": 10,
+        "last_final_date": "2026-11-08",
+        "days_since_last_final": 14,
+        "unresolved_past_fixture_ids": []
+      },
+      "es troyes ac": {
+        "prior_finals": 11,
+        "active_season_finals": 11,
+        "last_final_date": "2026-11-20",
+        "days_since_last_final": 2,
+        "unresolved_past_fixture_ids": []
+      }
+    },
+    "diagnostic_gate_passed": true,
+    "blocking_issues": [],
+    "max_history_age_days": 30,
+    "calendar_completeness_verified": false,
+    "note": "Diagnostic policy, not a validated success threshold. Unresolved fixtures may be postponed or missing results. Fresh source captures do not make old histories current."
+  },
+  "selection_policy": "Current-history diagnostic gate plus existing model issues; research only, no validated recommendation.",
+  "payload_sha256": "27b54cb32610882600e69a2cbe5a08a866f1526caf229a28ceeada26d28587c2"
+}
