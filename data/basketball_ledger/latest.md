@@ -1,6 +1,6 @@
 # Daily basketball research
 
-Checked: 2026-11-22T13:00:09.357276+00:00
+Checked: 2026-11-22T14:51:22.081623+00:00
 
 | Tipoff (Istanbul) | League | Fixture | Score forecast | Home win | Data gate / probability filter |
 |---|---|---|---|---|---|
@@ -40,8 +40,6 @@ Checked: 2026-11-22T13:00:09.357276+00:00
 | 26 Nov 22:00 | ECW | Lattes-Montpellier – M.G.S PANSERRAIKOS | 83.0–67.0 | 82.0% | not selected |
 | 26 Nov 22:30 | ECW | Basket Namur Capitale – MBK Ruzomberok | 72.5–70.1 | 55.4% | not selected |
 | 26 Nov 23:00 | ECW | SL Benfica – Univerzitetski zenski kosarkaski klub Student | 80.7–66.6 | 79.0% | passed |
-| 22 Nov 17:00 | UKR | KHMELNYTSKYI (Khmelnytskyi) – CHERKASKI MAVPY (Cherkasy) | 82.2–72.6 | 67.4% | passed |
-| 22 Nov 17:00 | UKR | KYIV-BASKET (Kyiv) – DNIPRO (Dnipro) | 74.2–78.5 | 32.9% | passed |
 | 28 Nov 01:00 | UKR | DNIPRO (Dnipro) – KHMELNYTSKYI (Khmelnytskyi) | 84.5–68.7 | 87.0% | passed |
 | 28 Nov 01:00 | UKR | ZAPORIZHZHYA (Zaporizhzhya) – PRYKARPATTIA-GOVERLA-KFV (Iv-Frankivsk) | 79.6–75.0 | 62.3% | not selected |
 | 29 Nov 01:00 | UKR | DNIPRO (Dnipro) – PRYKARPATTIA-GOVERLA-KFV (Iv-Frankivsk) | 81.6–70.5 | 85.7% | passed |
