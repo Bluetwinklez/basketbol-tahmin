@@ -1,7 +1,7 @@
 {
   "spec": "football-daily-v1",
-  "checked_at_utc": "2026-11-22T14:52:07.360972+00:00",
-  "collection_checked_at_utc": "2026-11-22T14:47:58.699839+00:00",
+  "checked_at_utc": "2026-11-23T18:40:38.014012+00:00",
+  "collection_checked_at_utc": "2026-11-23T18:36:02.653364+00:00",
   "source_errors": [
     {
       "league": "DE2",
@@ -1671,8 +1671,44 @@
         "research_candidate": false
       },
       "recorded_at_utc": "2026-11-16T16:19:43.069765+00:00",
-      "status": "pending",
-      "result": null,
+      "status": "publisher_final",
+      "result": {
+        "actual_home": 4,
+        "actual_away": 0,
+        "actual_outcome": "home",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.04237104505942408
+          },
+          "over_2.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.18762483614453515
+          },
+          "over_3.5": {
+            "actual": true,
+            "correct": false,
+            "brier": 0.4318133929875612
+          },
+          "both_teams_score": {
+            "actual": false,
+            "correct": false,
+            "brier": 0.3266367011620648
+          }
+        },
+        "winner_correct": true,
+        "home_absolute_error": 2.19719682417308,
+        "away_absolute_error": 1.1530341379542317,
+        "total_absolute_error": 1.044162686218848,
+        "margin_absolute_error": 3.3502309621273114,
+        "total_in_80": true,
+        "log_loss": 0.6427100306767113,
+        "brier": 0.33727363807412725,
+        "verification": "community_source_final_not_official",
+        "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Bundesliga"
+      },
       "fixture_review": null
     },
     {
@@ -3462,8 +3498,44 @@
         "research_candidate": false
       },
       "recorded_at_utc": "2026-11-16T16:19:43.087615+00:00",
-      "status": "pending",
-      "result": null,
+      "status": "publisher_final",
+      "result": {
+        "actual_home": 3,
+        "actual_away": 1,
+        "actual_outcome": "home",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.02052808007643796
+          },
+          "over_2.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.11132179025780438
+          },
+          "over_3.5": {
+            "actual": true,
+            "correct": false,
+            "brier": 0.3040663167076654
+          },
+          "both_teams_score": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.11098494597670076
+          }
+        },
+        "winner_correct": true,
+        "home_absolute_error": 1.1037226179182,
+        "away_absolute_error": 0.5355053225645805,
+        "total_absolute_error": 0.5682172953536195,
+        "margin_absolute_error": 1.6392279404827805,
+        "total_in_80": true,
+        "log_loss": 0.7690222435075093,
+        "brier": 0.43613973885103796,
+        "verification": "community_source_final_not_official",
+        "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Bundesliga"
+      },
       "fixture_review": null
     },
     {
@@ -6198,8 +6270,44 @@
         "research_candidate": false
       },
       "recorded_at_utc": "2026-11-16T16:19:43.051523+00:00",
-      "status": "pending",
-      "result": null,
+      "status": "publisher_final",
+      "result": {
+        "actual_home": 4,
+        "actual_away": 0,
+        "actual_outcome": "home",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.03015245695111393
+          },
+          "over_2.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.1473037773229099
+          },
+          "over_3.5": {
+            "actual": true,
+            "correct": false,
+            "brier": 0.36804301240181964
+          },
+          "both_teams_score": {
+            "actual": false,
+            "correct": false,
+            "brier": 0.3749348893251535
+          }
+        },
+        "winner_correct": true,
+        "home_absolute_error": 2.084859138052958,
+        "away_absolute_error": 1.2662467213329711,
+        "total_absolute_error": 0.8186124167199873,
+        "margin_absolute_error": 3.351105859385929,
+        "total_in_80": true,
+        "log_loss": 0.6432808360255466,
+        "brier": 0.33806602410249,
+        "verification": "community_source_final_not_official",
+        "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Premier_League"
+      },
       "fixture_review": null
     },
     {
@@ -7988,8 +8096,44 @@
         "research_candidate": false
       },
       "recorded_at_utc": "2026-11-15T14:12:37.749951+00:00",
-      "status": "pending",
-      "result": null,
+      "status": "publisher_final",
+      "result": {
+        "actual_home": 2,
+        "actual_away": 0,
+        "actual_outcome": "home",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.08406339352620473
+          },
+          "over_2.5": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.20511489547669595
+          },
+          "over_3.5": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.05745062183874604
+          },
+          "both_teams_score": {
+            "actual": false,
+            "correct": false,
+            "brier": 0.25042855390559216
+          }
+        },
+        "winner_correct": false,
+        "home_absolute_error": 0.9008067757499942,
+        "away_absolute_error": 1.387994384220565,
+        "total_absolute_error": 0.48718760847057085,
+        "margin_absolute_error": 2.2888011599705593,
+        "total_in_80": true,
+        "log_loss": 1.2121172338296684,
+        "brier": 0.7541661931542939,
+        "verification": "community_source_final_not_official",
+        "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Premier_League"
+      },
       "fixture_review": null
     },
     {
@@ -15085,8 +15229,44 @@
         "research_candidate": false
       },
       "recorded_at_utc": "2026-11-15T12:24:53.553332+00:00",
-      "status": "pending",
-      "result": null,
+      "status": "publisher_final",
+      "result": {
+        "actual_home": 2,
+        "actual_away": 2,
+        "actual_outcome": "draw",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.05168480029311785
+          },
+          "over_2.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.215485024718311
+          },
+          "over_3.5": {
+            "actual": true,
+            "correct": false,
+            "brier": 0.47199384950514833
+          },
+          "both_teams_score": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.18902132434732508
+          }
+        },
+        "winner_correct": false,
+        "home_absolute_error": 0.42623702623441795,
+        "away_absolute_error": 0.7516686901449183,
+        "total_absolute_error": 1.1779057163793363,
+        "margin_absolute_error": 0.3254316639105004,
+        "total_in_80": true,
+        "log_loss": 1.3946337897463077,
+        "brier": 0.8591524357809195,
+        "verification": "community_source_final_not_official",
+        "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_EFL_Championship"
+      },
       "fixture_review": null
     },
     {
@@ -18690,8 +18870,44 @@
         "research_candidate": false
       },
       "recorded_at_utc": "2026-11-15T14:12:37.799431+00:00",
-      "status": "pending",
-      "result": null,
+      "status": "publisher_final",
+      "result": {
+        "actual_home": 3,
+        "actual_away": 2,
+        "actual_outcome": "home",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.008850287931892773
+          },
+          "over_2.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.0590867896987123
+          },
+          "over_3.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.1936657558538279
+          },
+          "both_teams_score": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.13018450594576847
+          }
+        },
+        "winner_correct": true,
+        "home_absolute_error": 0.17096491398488878,
+        "away_absolute_error": 0.8627003534217463,
+        "total_absolute_error": 1.0336652674066351,
+        "margin_absolute_error": 0.6917354394368576,
+        "total_in_80": true,
+        "log_loss": 0.3229202535407801,
+        "brier": 0.11454920454591354,
+        "verification": "community_source_final_not_official",
+        "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_La_Liga"
+      },
       "fixture_review": null
     },
     {
@@ -21204,8 +21420,44 @@
         "research_candidate": false
       },
       "recorded_at_utc": "2026-11-16T16:19:43.168119+00:00",
-      "status": "pending",
-      "result": null,
+      "status": "publisher_final",
+      "result": {
+        "actual_home": 3,
+        "actual_away": 2,
+        "actual_outcome": "home",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.011982699433910081
+          },
+          "over_2.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.07444548686663509
+          },
+          "over_3.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.22893597853636807
+          },
+          "both_teams_score": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.07873665567537048
+          }
+        },
+        "winner_correct": false,
+        "home_absolute_error": 1.1813647277312889,
+        "away_absolute_error": 0.042952661836647144,
+        "total_absolute_error": 1.2243173895679362,
+        "margin_absolute_error": 1.1384120658946417,
+        "total_in_80": true,
+        "log_loss": 1.0051097795596076,
+        "brier": 0.6244775151782448,
+        "verification": "community_source_final_not_official",
+        "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_La_Liga"
+      },
       "fixture_review": null
     },
     {
@@ -21430,8 +21682,44 @@
         "research_candidate": false
       },
       "recorded_at_utc": "2026-11-16T16:19:43.185479+00:00",
-      "status": "pending",
-      "result": null,
+      "status": "publisher_final",
+      "result": {
+        "actual_home": 1,
+        "actual_away": 0,
+        "actual_outcome": "home",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": false,
+            "correct": false,
+            "brier": 0.5550848600400288
+          },
+          "over_2.5": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.2479298622980015
+          },
+          "over_3.5": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.07747944969417213
+          },
+          "both_teams_score": {
+            "actual": false,
+            "correct": false,
+            "brier": 0.2632160234007354
+          }
+        },
+        "winner_correct": true,
+        "home_absolute_error": 0.6631976378424362,
+        "away_absolute_error": 1.0024591857441731,
+        "total_absolute_error": 1.6656568235866094,
+        "margin_absolute_error": 0.3392615479017369,
+        "total_in_80": true,
+        "log_loss": 0.63781956625508,
+        "brier": 0.33367744287386897,
+        "verification": "community_source_final_not_official",
+        "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_La_Liga"
+      },
       "fixture_review": null
     },
     {
@@ -21971,8 +22259,44 @@
         "research_candidate": false
       },
       "recorded_at_utc": "2026-11-16T16:19:43.201769+00:00",
-      "status": "pending",
-      "result": null,
+      "status": "publisher_final",
+      "result": {
+        "actual_home": 0,
+        "actual_away": 3,
+        "actual_outcome": "away",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.1456454830010409
+          },
+          "over_2.5": {
+            "actual": true,
+            "correct": false,
+            "brier": 0.4247764380125768
+          },
+          "over_3.5": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.02556089073127146
+          },
+          "both_teams_score": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.16562442211398415
+          }
+        },
+        "winner_correct": true,
+        "home_absolute_error": 0.8480221004617661,
+        "away_absolute_error": 1.755862425313459,
+        "total_absolute_error": 0.9078403248516929,
+        "margin_absolute_error": 2.603884525775225,
+        "total_in_80": true,
+        "log_loss": 0.7876383318522655,
+        "brier": 0.44645141488722195,
+        "verification": "community_source_final_not_official",
+        "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_La_Liga"
+      },
       "fixture_review": null
     },
     {
@@ -23928,8 +24252,44 @@
         "research_candidate": false
       },
       "recorded_at_utc": "2026-11-16T16:19:43.243889+00:00",
-      "status": "pending",
-      "result": null,
+      "status": "publisher_final",
+      "result": {
+        "actual_home": 2,
+        "actual_away": 3,
+        "actual_outcome": "away",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.02015105583798863
+          },
+          "over_2.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.10981081603686946
+          },
+          "over_3.5": {
+            "actual": true,
+            "correct": false,
+            "brier": 0.3012017419519871
+          },
+          "both_teams_score": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.14984842166271586
+          }
+        },
+        "winner_correct": false,
+        "home_absolute_error": 0.30075828901246293,
+        "away_absolute_error": 1.8570109844940759,
+        "total_absolute_error": 1.556252695481613,
+        "margin_absolute_error": 2.157769273506539,
+        "total_in_80": true,
+        "log_loss": 1.7333748490135994,
+        "brier": 1.1147897661270572,
+        "verification": "community_source_final_not_official",
+        "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Ligue_1"
+      },
       "fixture_review": null
     },
     {
@@ -25576,8 +25936,44 @@
         "research_candidate": false
       },
       "recorded_at_utc": "2026-11-15T14:12:37.911619+00:00",
-      "status": "pending",
-      "result": null,
+      "status": "publisher_final",
+      "result": {
+        "actual_home": 4,
+        "actual_away": 0,
+        "actual_outcome": "home",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.06524388721211369
+          },
+          "over_2.5": {
+            "actual": true,
+            "correct": false,
+            "brier": 0.25270653164800705
+          },
+          "over_3.5": {
+            "actual": true,
+            "correct": false,
+            "brier": 0.5215780429670552
+          },
+          "both_teams_score": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.21550066116388078
+          }
+        },
+        "winner_correct": true,
+        "home_absolute_error": 2.133503226386873,
+        "away_absolute_error": 0.7966324465796173,
+        "total_absolute_error": 1.3368707798072554,
+        "margin_absolute_error": 2.9301356729664905,
+        "total_in_80": true,
+        "log_loss": 0.4667973972929624,
+        "brier": 0.21079187969090898,
+        "verification": "community_source_final_not_official",
+        "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Ligue_1"
+      },
       "fixture_review": null
     },
     {
@@ -26167,8 +26563,44 @@
         "research_candidate": false
       },
       "recorded_at_utc": "2026-11-16T16:19:43.260903+00:00",
-      "status": "pending",
-      "result": null,
+      "status": "publisher_final",
+      "result": {
+        "actual_home": 1,
+        "actual_away": 1,
+        "actual_outcome": "draw",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.03958499817588053
+          },
+          "over_2.5": {
+            "actual": false,
+            "correct": false,
+            "brier": 0.33303598789734373
+          },
+          "over_3.5": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.1246449767395462
+          },
+          "both_teams_score": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.15871912363188198
+          }
+        },
+        "winner_correct": false,
+        "home_absolute_error": 0.5985837123534341,
+        "away_absolute_error": 0.4026787470384472,
+        "total_absolute_error": 1.0012624593918815,
+        "margin_absolute_error": 0.1959049653149869,
+        "total_in_80": true,
+        "log_loss": 1.4201156736804794,
+        "brier": 0.86625971624666,
+        "verification": "community_source_final_not_official",
+        "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Ligue_1"
+      },
       "fixture_review": null
     },
     {
@@ -28027,8 +28459,44 @@
         "research_candidate": false
       },
       "recorded_at_utc": "2026-11-16T16:19:43.305023+00:00",
-      "status": "pending",
-      "result": null,
+      "status": "publisher_final",
+      "result": {
+        "actual_home": 4,
+        "actual_away": 4,
+        "actual_outcome": "draw",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.02809558259744743
+          },
+          "over_2.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.13998429227622658
+          },
+          "over_3.5": {
+            "actual": true,
+            "correct": false,
+            "brier": 0.35563358508720416
+          },
+          "both_teams_score": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.1466149674110956
+          }
+        },
+        "winner_correct": false,
+        "home_absolute_error": 2.733854739350274,
+        "away_absolute_error": 2.038406530790488,
+        "total_absolute_error": 4.772261270140762,
+        "margin_absolute_error": 0.695448208559786,
+        "total_in_80": false,
+        "log_loss": 1.5185492632670436,
+        "brier": 0.9571303013926646,
+        "verification": "community_source_final_not_official",
+        "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Serie_A"
+      },
       "fixture_review": null
     },
     {
@@ -29005,8 +29473,44 @@
         "research_candidate": false
       },
       "recorded_at_utc": "2026-11-15T14:12:37.962488+00:00",
-      "status": "pending",
-      "result": null,
+      "status": "publisher_final",
+      "result": {
+        "actual_home": 1,
+        "actual_away": 1,
+        "actual_outcome": "draw",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.05920604639487072
+          },
+          "over_2.5": {
+            "actual": false,
+            "correct": false,
+            "brier": 0.26380611044157043
+          },
+          "over_3.5": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.08553531015862405
+          },
+          "both_teams_score": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.2187442859109832
+          }
+        },
+        "winner_correct": false,
+        "home_absolute_error": 0.6579470964967464,
+        "away_absolute_error": 0.07174416588276311,
+        "total_absolute_error": 0.7296912623795095,
+        "margin_absolute_error": 0.5862029306139833,
+        "total_in_80": true,
+        "log_loss": 1.410424963272122,
+        "brier": 0.8923496432020304,
+        "verification": "community_source_final_not_official",
+        "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Serie_A"
+      },
       "fixture_review": null
     },
     {
@@ -29101,8 +29605,44 @@
         "research_candidate": false
       },
       "recorded_at_utc": "2026-11-16T16:19:43.321898+00:00",
-      "status": "pending",
-      "result": null,
+      "status": "publisher_final",
+      "result": {
+        "actual_home": 5,
+        "actual_away": 1,
+        "actual_outcome": "home",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.027910616258472024
+          },
+          "over_2.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.13931722338077804
+          },
+          "over_3.5": {
+            "actual": true,
+            "correct": false,
+            "brier": 0.35448841864304687
+          },
+          "both_teams_score": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.13077942827447048
+          }
+        },
+        "winner_correct": true,
+        "home_absolute_error": 3.246889510258253,
+        "away_absolute_error": 0.47895337022084505,
+        "total_absolute_error": 2.767936140037408,
+        "margin_absolute_error": 3.7258428804790977,
+        "total_in_80": true,
+        "log_loss": 0.8146886905820695,
+        "brier": 0.47033177250594976,
+        "verification": "community_source_final_not_official",
+        "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Serie_A"
+      },
       "fixture_review": null
     },
     {
@@ -29973,8 +30513,44 @@
         "research_candidate": false
       },
       "recorded_at_utc": "2026-11-16T16:19:43.490772+00:00",
-      "status": "pending",
-      "result": null,
+      "status": "publisher_final",
+      "result": {
+        "actual_home": 4,
+        "actual_away": 0,
+        "actual_outcome": "home",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.08643956312928132
+          },
+          "over_2.5": {
+            "actual": true,
+            "correct": false,
+            "brier": 0.3048633817116017
+          },
+          "over_3.5": {
+            "actual": true,
+            "correct": false,
+            "brier": 0.5844202299396377
+          },
+          "both_teams_score": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.19318192740591575
+          }
+        },
+        "winner_correct": true,
+        "home_absolute_error": 2.305493632427286,
+        "away_absolute_error": 0.7731183826852118,
+        "total_absolute_error": 1.5323752497420742,
+        "margin_absolute_error": 3.078612015112498,
+        "total_in_80": true,
+        "log_loss": 0.5212231119121213,
+        "brier": 0.2499395149959132,
+        "verification": "community_source_final_not_official",
+        "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Serie_A"
+      },
       "fixture_review": null
     },
     {
@@ -30069,8 +30645,44 @@
         "research_candidate": false
       },
       "recorded_at_utc": "2026-11-15T14:12:37.983306+00:00",
-      "status": "pending",
-      "result": null,
+      "status": "publisher_final",
+      "result": {
+        "actual_home": 0,
+        "actual_away": 2,
+        "actual_outcome": "away",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.05679475117738373
+          },
+          "over_2.5": {
+            "actual": false,
+            "correct": false,
+            "brier": 0.27090879371568233
+          },
+          "over_3.5": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.08924927740377964
+          },
+          "both_teams_score": {
+            "actual": false,
+            "correct": false,
+            "brier": 0.313290295108014
+          }
+        },
+        "winner_correct": true,
+        "home_absolute_error": 1.36558928045003,
+        "away_absolute_error": 0.6075312561955855,
+        "total_absolute_error": 0.7580580242544448,
+        "margin_absolute_error": 1.9731205366456155,
+        "total_in_80": true,
+        "log_loss": 0.9711689757422891,
+        "brier": 0.5853343880462445,
+        "verification": "community_source_final_not_official",
+        "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Serie_A"
+      },
       "fixture_review": null
     },
     {
@@ -33455,8 +34067,44 @@
         "research_candidate": false
       },
       "recorded_at_utc": "2026-11-15T12:24:53.672440+00:00",
-      "status": "pending",
-      "result": null,
+      "status": "publisher_final",
+      "result": {
+        "actual_home": 2,
+        "actual_away": 1,
+        "actual_outcome": "home",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.00890683655940419
+          },
+          "over_2.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.05937630290943208
+          },
+          "over_3.5": {
+            "actual": false,
+            "correct": false,
+            "brier": 0.3126367603487156
+          },
+          "both_teams_score": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.19794535730249507
+          }
+        },
+        "winner_correct": true,
+        "home_absolute_error": 1.0912273477899657,
+        "away_absolute_error": 0.12888048994222157,
+        "total_absolute_error": 0.9623468578477441,
+        "margin_absolute_error": 1.2201078377321872,
+        "total_in_80": true,
+        "log_loss": 0.21021923637396947,
+        "brier": 0.05490116579789665,
+        "verification": "community_source_final_not_official",
+        "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Eredivisie"
+      },
       "fixture_review": null
     },
     {
@@ -34978,8 +35626,44 @@
         "research_candidate": false
       },
       "recorded_at_utc": "2026-11-16T16:19:43.364164+00:00",
-      "status": "pending",
-      "result": null,
+      "status": "publisher_final",
+      "result": {
+        "actual_home": 0,
+        "actual_away": 1,
+        "actual_outcome": "away",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": false,
+            "correct": false,
+            "brier": 0.7120593595066637
+          },
+          "over_2.5": {
+            "actual": false,
+            "correct": false,
+            "brier": 0.4155109519916639
+          },
+          "over_3.5": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.17986585178613632
+          },
+          "both_teams_score": {
+            "actual": false,
+            "correct": false,
+            "brier": 0.42704030492461464
+          }
+        },
+        "winner_correct": false,
+        "home_absolute_error": 1.7726564539817589,
+        "away_absolute_error": 0.5474796107067177,
+        "total_absolute_error": 2.3201360646884766,
+        "margin_absolute_error": 1.2251768432750412,
+        "total_in_80": true,
+        "log_loss": 1.0824191329059467,
+        "brier": 0.6768820361949167,
+        "verification": "community_source_final_not_official",
+        "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Eredivisie"
+      },
       "fixture_review": null
     },
     {
@@ -35629,8 +36313,44 @@
         "research_candidate": false
       },
       "recorded_at_utc": "2026-11-15T14:12:38.029002+00:00",
-      "status": "pending",
-      "result": null,
+      "status": "publisher_final",
+      "result": {
+        "actual_home": 1,
+        "actual_away": 5,
+        "actual_outcome": "away",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.027916432648378106
+          },
+          "over_2.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.13933822272420812
+          },
+          "over_3.5": {
+            "actual": true,
+            "correct": false,
+            "brier": 0.354524505456716
+          },
+          "both_teams_score": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.13821568380985869
+          }
+        },
+        "winner_correct": true,
+        "home_absolute_error": 0.3526458193921178,
+        "away_absolute_error": 3.120718381076297,
+        "total_absolute_error": 2.768072561684179,
+        "margin_absolute_error": 3.4733642004684144,
+        "total_in_80": true,
+        "log_loss": 0.6962584656967992,
+        "brier": 0.3786817976388781,
+        "verification": "community_source_final_not_official",
+        "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Eredivisie"
+      },
       "fixture_review": null
     },
     {
@@ -35987,8 +36707,44 @@
         "research_candidate": false
       },
       "recorded_at_utc": "2026-11-15T14:12:38.046321+00:00",
-      "status": "pending",
-      "result": null,
+      "status": "publisher_final",
+      "result": {
+        "actual_home": 3,
+        "actual_away": 0,
+        "actual_outcome": "home",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.020382277340104376
+          },
+          "over_2.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.11073852576418061
+          },
+          "over_3.5": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.202121969051043
+          },
+          "both_teams_score": {
+            "actual": false,
+            "correct": false,
+            "brier": 0.3725919542616718
+          }
+        },
+        "winner_correct": true,
+        "home_absolute_error": 0.6975525814120496,
+        "away_absolute_error": 1.1339370810220566,
+        "total_absolute_error": 0.436384499610007,
+        "margin_absolute_error": 1.8314896624341062,
+        "total_in_80": true,
+        "log_loss": 0.45352525269412514,
+        "brier": 0.199530233294675,
+        "verification": "community_source_final_not_official",
+        "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Eredivisie"
+      },
       "fixture_review": null
     },
     {
@@ -40592,10 +41348,6 @@
       "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
     },
     {
-      "event_id": "EN1_be87e054d09fa15628f22ba6",
-      "reason": "Fresh independent future scheduled fixture required"
-    },
-    {
       "event_id": "PT1_16ff5031c2fa00975ab8144b",
       "reason": "Insufficient history (current coverage): cf estrela da amadora: 1 unresolved past fixtures; refresh/review required"
     },
@@ -40604,43 +41356,15 @@
       "reason": "Insufficient history (current coverage): moreirense fc: 1 unresolved past fixtures; refresh/review required"
     },
     {
-      "event_id": "DE1_42deefd9f47aad356ab2aecc",
-      "reason": "Fresh independent future scheduled fixture required"
-    },
-    {
-      "event_id": "DE1_621c30983957e007942f8498",
-      "reason": "Fresh independent future scheduled fixture required"
-    },
-    {
       "event_id": "ES1_21e8b5cfa76a6292d942a075",
       "reason": "Insufficient history (current coverage): rayo vallecano de madrid: 1 unresolved past fixtures; refresh/review required"
-    },
-    {
-      "event_id": "ES1_2f64b783ef969116a7a2ff91",
-      "reason": "Fresh independent future scheduled fixture required"
-    },
-    {
-      "event_id": "ES1_663521ca057bab9ec5351eef",
-      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "ES1_6896cc6310a2b1ba70dee6b5",
       "reason": "Insufficient history (current coverage): athletic club: 1 unresolved past fixtures; refresh/review required"
     },
     {
-      "event_id": "ES1_8e6ba6387b3d460b79b6686d",
-      "reason": "Fresh independent future scheduled fixture required"
-    },
-    {
       "event_id": "ES1_9c6fb25e0a2c8e8c1a398684",
-      "reason": "Fresh independent future scheduled fixture required"
-    },
-    {
-      "event_id": "FR1_6c5d8cd91182e631c5feb930",
-      "reason": "Fresh independent future scheduled fixture required"
-    },
-    {
-      "event_id": "FR1_c80039521fe72587190baf30",
       "reason": "Fresh independent future scheduled fixture required"
     },
     {
@@ -40648,32 +41372,12 @@
       "reason": "Fresh independent future scheduled fixture required"
     },
     {
-      "event_id": "IT1_2d5a0421184b4b766b47b438",
-      "reason": "Fresh independent future scheduled fixture required"
-    },
-    {
-      "event_id": "IT1_35fadeea09e36c981ff5c1bc",
-      "reason": "Fresh independent future scheduled fixture required"
-    },
-    {
-      "event_id": "IT1_8433a63efe46cfa49cbba76a",
-      "reason": "Fresh independent future scheduled fixture required"
-    },
-    {
-      "event_id": "NL1_4c4f59b62f2b1f6f6cba28aa",
-      "reason": "Fresh independent future scheduled fixture required"
-    },
-    {
-      "event_id": "NL1_98cd443952a33a36f03d898f",
-      "reason": "Fresh independent future scheduled fixture required"
-    },
-    {
       "event_id": "PT1_5b2d02b3efff439331761b05",
-      "reason": "Fresh independent future scheduled fixture required"
+      "reason": "Insufficient history (current coverage): gil vicente fc: 1 unresolved past fixtures; refresh/review required; gd estoril praia: 2 unresolved past fixtures; refresh/review required"
     },
     {
       "event_id": "PT1_baa158283fb2a046b6f9e30c",
-      "reason": "Fresh independent future scheduled fixture required"
+      "reason": "Insufficient history (current coverage): fc porto: 1 unresolved past fixtures; refresh/review required"
     },
     {
       "event_id": "TR1_56d4673507b428a9032b3ace",
@@ -40685,11 +41389,11 @@
     },
     {
       "event_id": "TR1_5c5bf8aa8d6bdd7191dca036",
-      "reason": "Fresh independent future scheduled fixture required"
+      "reason": "Insufficient history (current coverage): fenerbahce: 1 unresolved past fixtures; refresh/review required; bb erzurumspor: 1 unresolved past fixtures; refresh/review required"
     },
     {
       "event_id": "TR1_6a3a9b31f0af2b5822cb3290",
-      "reason": "Fresh independent future scheduled fixture required"
+      "reason": "Insufficient history (current coverage): goztepe: 1 unresolved past fixtures; refresh/review required; trabzonspor: 1 unresolved past fixtures; refresh/review required"
     },
     {
       "event_id": "TR1_7dcf7a416564c35c015ad644",
@@ -40709,47 +41413,179 @@
     },
     {
       "event_id": "TR1_ece6663d322b3badd2fb8f3e",
-      "reason": "Fresh independent future scheduled fixture required"
+      "reason": "Insufficient history (current coverage): besiktas: 1 unresolved past fixtures; refresh/review required; galatasaray: 1 unresolved past fixtures; refresh/review required"
     },
     {
       "event_id": "PT1_404283c949497e42c328671a",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "PT1_c311720ab0332f139ead9dc3",
+      "reason": "Fresh independent future scheduled fixture required"
+    },
+    {
+      "event_id": "BR1_0bb146ce9f90fc706f9baa23",
       "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "BR1_10b2f0a50474aea50c0d7e53",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "BR1_34b1ba0e2df850dc5cb60f84",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "BR1_3c7d8c979510449e60c6e9ed",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "BR1_82534da380f0f9aef2da97eb",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "BR1_9de1881eedb64cd3e8211eeb",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "BR1_b08bc6a08b095be4d442a33d",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "BR1_b669b6ea4235ca4ecf29ffb0",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "BR1_e7477291e38cb2233748d901",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "BR1_f0d81724840d13cdc96b0bf7",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "EN1_2429837f6fecc8c088b79b1d",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "EN1_2fc1a60c346cbfc3e7ab9b78",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "EN1_4b0a282071ae94c82e11dd45",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "EN1_50e624fca7f379044427797e",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "EN1_588801be2195100ae7dc73a4",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "EN1_74665ab8dcf70593f511aafc",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "EN1_8f473733886dd5fc15994c3f",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "EN1_c9160aa05f4d4c726114026e",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "EN1_e20081e702db5b2026f21e68",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "EN1_eea0b1282d4cd1a065ac7cbd",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "record": "data/football_ledger/forecasts/DE1_42deefd9f47aad356ab2aecc.json",
+      "reason": "Forecast was recorded after requested clock"
+    },
+    {
+      "record": "data/football_ledger/forecasts/DE1_621c30983957e007942f8498.json",
+      "reason": "Forecast was recorded after requested clock"
+    },
+    {
+      "record": "data/football_ledger/forecasts/EN1_be87e054d09fa15628f22ba6.json",
+      "reason": "Forecast was recorded after requested clock"
+    },
+    {
+      "record": "data/football_ledger/forecasts/ES1_2f64b783ef969116a7a2ff91.json",
+      "reason": "Forecast was recorded after requested clock"
+    },
+    {
+      "record": "data/football_ledger/forecasts/ES1_663521ca057bab9ec5351eef.json",
+      "reason": "Forecast was recorded after requested clock"
+    },
+    {
+      "record": "data/football_ledger/forecasts/ES1_8e6ba6387b3d460b79b6686d.json",
+      "reason": "Forecast was recorded after requested clock"
+    },
+    {
+      "record": "data/football_ledger/forecasts/FR1_6c5d8cd91182e631c5feb930.json",
+      "reason": "Forecast was recorded after requested clock"
+    },
+    {
+      "record": "data/football_ledger/forecasts/FR1_c80039521fe72587190baf30.json",
+      "reason": "Forecast was recorded after requested clock"
+    },
+    {
+      "record": "data/football_ledger/forecasts/IT1_2d5a0421184b4b766b47b438.json",
+      "reason": "Forecast was recorded after requested clock"
+    },
+    {
+      "record": "data/football_ledger/forecasts/IT1_35fadeea09e36c981ff5c1bc.json",
+      "reason": "Forecast was recorded after requested clock"
+    },
+    {
+      "record": "data/football_ledger/forecasts/IT1_8433a63efe46cfa49cbba76a.json",
+      "reason": "Forecast was recorded after requested clock"
+    },
+    {
+      "record": "data/football_ledger/forecasts/NL1_4c4f59b62f2b1f6f6cba28aa.json",
+      "reason": "Forecast was recorded after requested clock"
+    },
+    {
+      "record": "data/football_ledger/forecasts/NL1_98cd443952a33a36f03d898f.json",
+      "reason": "Forecast was recorded after requested clock"
     }
   ],
-  "pending": 129,
+  "pending": 108,
   "requested_model_variant": "opponent",
   "publisher_performance": {
-    "games": 254,
-    "winner_accuracy": 0.5787401574803149,
-    "log_loss": 0.982789862345266,
-    "brier": 0.5841259000674444,
-    "total_mae": 1.4628173152588557,
-    "margin_mae": 1.3907883323700319,
-    "total_in_80": 0.8740157480314961,
-    "team_score_games": 254,
-    "home_score_mae": 0.9753551391929894,
-    "away_score_mae": 1.0232963304042906,
-    "team_score_mae": 0.99932573479864,
+    "games": 275,
+    "winner_accuracy": 0.5818181818181818,
+    "log_loss": 0.9757914258659073,
+    "brier": 0.5791594706898646,
+    "total_mae": 1.4597265871613454,
+    "margin_mae": 1.4257509185962995,
+    "total_in_80": 0.88,
+    "team_score_games": 275,
+    "home_score_mae": 0.9984482865690167,
+    "away_score_mae": 1.0204828481885722,
+    "team_score_mae": 1.0094655673787947,
     "goal_markets": {
       "over_1.5": {
-        "accuracy": 0.7874015748031497,
-        "brier": 0.16879065648518415
+        "accuracy": 0.7963636363636364,
+        "brier": 0.16354865912868338
       },
       "over_2.5": {
-        "accuracy": 0.5078740157480315,
-        "brier": 0.25544138205493017
+        "accuracy": 0.52,
+        "brier": 0.25125308030271276
       },
       "over_3.5": {
-        "accuracy": 0.6850393700787402,
-        "brier": 0.22155296235817842
+        "accuracy": 0.6690909090909091,
+        "brier": 0.22508859046097235
       },
       "both_teams_score": {
-        "accuracy": 0.531496062992126,
-        "brier": 0.2469895004449614
+        "accuracy": 0.5418181818181819,
+        "brier": 0.24468208562087448
       }
     }
   },
