@@ -4,6 +4,9 @@ const token = document.querySelector('meta[name="app-token"]').content;
 let state = null, busy = false, fetching = false, interactionError = null, pollingError = null, renderedKey = null;
 const pct = n => typeof n === 'number' && Number.isFinite(n) ? `${(100*n).toFixed(1)}%` : '—';
 function el(tag, text) { const n = document.createElement(tag); if (text !== undefined) n.textContent = text; return n; }
+function mostLikely(options) {
+  return options.reduce((best, option) => option[1] > best[1] ? option : best);
+}
 function controls() {
   const running = busy || state?.job?.status === 'running';
   $('saved').disabled = running; $('refresh').disabled = running;
@@ -29,10 +32,15 @@ function render() {
     const reviewRequired = item.status === 'fixture_review_required';
     if (status && !(status === 'pending' ? !item.result : item.status === status)) continue;
     if (search && !`${f.home_name} ${f.away_name}`.toLocaleLowerCase().includes(search)) continue;
+    const {home, draw, away} = p.probabilities;
+    const topPick = p.predicted_outcome ?? mostLikely(Object.entries({home, draw, away}))[0];
+    const pickLabel = {home: 'Home', draw: 'Draw', away: 'Away'}[topPick];
+    const [chance, chanceProbability] = mostLikely([['1X', home + draw], ['X2', draw + away], ['12', home + away]]);
     const card = el('article'); card.className = 'forecast-card match-card'; card.dataset.event = f.event_id || `${f.league}:${f.date}:${f.home_name}`;
     card.append(el('small', `${f.league} · ${f.date}${reviewRequired ? ' · disputed original date' : f.verified_start_utc ? ` · confirmed kickoff ${f.verified_start_utc}` : ' · time unavailable'}`), el('h2', `${f.home_name} - ${f.away_name}`),
       el('p', `Expected goals ${p.expected_home_goals.toFixed(2)} - ${p.expected_away_goals.toFixed(2)}`),
-      el('p', `Home ${pct(p.probabilities.home)} · Draw ${pct(p.probabilities.draw)} · Away ${pct(p.probabilities.away)}`),
+      el('p', `Top pick: ${pickLabel} · Draw ${pct(draw)}`),
+      el('p', `Home ${pct(home)} · Away ${pct(away)} · Best double chance: ${chance} ${pct(chanceProbability)}`),
       el('p', `Over 1.5 ${pct(p.over['1.5'])} · Over 2.5 ${pct(p.over['2.5'])} · Over 3.5 ${pct(p.over['3.5'])}`),
       el('p', `Both teams score ${pct(p.both_teams_score)} · Total 80% range ${p.total_goals_80.join('-')}`),
       el('p', reviewRequired ? `Review required · fixture date conflict. Provider start: ${item.fixture_review?.observed_start_utc || 'unavailable'}. Original forecast retained; result scoring withheld.` : item.result ? `Community final ${item.result.actual_home}-${item.result.actual_away}; outcome ${item.result.winner_correct ? 'correct' : 'incorrect'}; total error ${item.result.total_absolute_error.toFixed(2)}; margin error ${item.result.margin_absolute_error.toFixed(2)}` : 'Pending · no final result'));

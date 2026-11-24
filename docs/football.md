@@ -43,6 +43,10 @@ Per-league accuracy, log loss, multiclass Brier score, goal-market accuracy/Brie
 
 The `Refresh sports data and frozen forecasts` workflow runs daily at **06:30 UTC / 09:30 Europe/Istanbul**, plus manual dispatch. Football and the 10 existing daily basketball competitions refresh independently. Earlier season backfills are not repeated every day. Compressed source snapshots, source failures and both sports' forecast ledgers are persisted to the repository. Frozen forecasts are never regenerated using their outcome. Partial refreshes are persisted but mark the job failed; missing provider data cannot become a successful empty refresh. GitHub scheduling/provider availability is not guaranteed. This is scheduled data collection and forecasting, not autonomous model promotion: changes must pass evaluation and tests.
 
+## Draw and double chance
+
+The match board shows the draw probability beside the top 1X2 pick and gives the highest double-chance probability. The Markdown report adds a **Best double chance** column. The CSV appends `prob_1x` (home or draw), `prob_x2` (draw or away), and `prob_12` (home or away). Each CSV value adds the two stored probabilities and is rounded to six decimal places at export time.
+
 ## Calendar source isolation (2026-11-04)
 
 AR1, CO1, US1, JP1 and CN1 calendar imports fetch only `openfootball/football.json`.
