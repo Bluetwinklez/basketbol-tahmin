@@ -83,7 +83,7 @@ pytz==2026.6
     # via pandas
 requests==2.34.2
     # via nba-api
-scikit-learn==1.6.1
+scikit-learn==1.9.1
     # via -r requirements.txt
 scipy==1.15.3
     # via
