@@ -24,6 +24,8 @@ Fixed-model results on the last five completed core basketball seasons (**2021�
 
 - **Confidence filtering vs. full coverage:** on the same 6,605 NBA games, filtering to ≥70% predicted winner probability yields 79.69% accuracy on 1,684 games (25.50% coverage; [confidence.csv](docs/kanit/pregame_verified/confidence.csv)). This is a subset diagnostic, not overall accuracy.
 - **October 2026 accuracy review:** per-league extended basketball features gave small gains (e.g. NBA 65.78% → 66.03%), while promoting the opponent-adjusted football default raised same-cohort 2025–26 1/X/2 accuracy from 47.80% to 49.18% across 3,973 games in 17 leagues ([docs/accuracy-review.md](docs/accuracy-review.md)).
+- **NBA closing odds:** On 6,758 matched games (2017–18 through 2022–23), the no-vig market outperformed the score model. The blend fitted on earlier seasons stayed close to the market. See the [market comparison](docs/kanit/piyasa.csv) and [betting simulation](docs/kanit/bahis.csv).
+- **NBA odds in the CLI:** Add `@1.65/2.30` to a `tahmin` matchup to see `Piyasa` (no-vig market), `Birleşik` (fixed 90% market, 10% model logit blend), and `Harman` when [fitted coefficients](docs/kanit/harman.json) are available. SBR odds collection via `topla --sbr-izni` requires written permission.
 - **Other leagues:** Asian, regional, domestic and CBA retrospective evaluations (and partial-season caveats) are documented in [docs/INDEX.md](docs/INDEX.md). Historical snapshots in [docs/sonuclar.md](docs/sonuclar.md) include legacy absence features and must not be presented as current pregame performance.
 
 ## Install
@@ -51,8 +53,8 @@ python -m bbtahmin app
 # 2. Run daily basketball refresh, freeze pregame forecasts and write rapor/daily/latest.md
 python -m bbtahmin gunluk --guncelle
 
-# 3. Inspect a single pregame basketball prediction (hypothetical example)
-python -m bbtahmin tahmin "Celtics - Lakers" --lig NBA --tarih 2026-10-25T20:00 --json
+# 3. Inspect a pregame basketball prediction with hypothetical decimal odds
+python -m bbtahmin tahmin "BOS - LAL @1.65/2.30" --lig NBA --tarih 2026-10-25T20:00 --json
 
 # 4. Refresh the experimental Iddaa basketball bulletin snapshot (3 read-only GETs)
 python -m bbtahmin bulten --guncelle --limit 10
