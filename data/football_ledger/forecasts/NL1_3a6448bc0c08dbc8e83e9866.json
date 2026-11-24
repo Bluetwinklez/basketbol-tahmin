@@ -1,0 +1,125 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-11-22T12:54:03.478199+00:00",
+  "fixture": {
+    "event_id": "NL1_3a6448bc0c08dbc8e83e9866",
+    "league": "NL1",
+    "season": "2026-27",
+    "date": "2026-11-28",
+    "home": "sbv excelsior",
+    "away": "telstar 1963",
+    "home_name": "SBV Excelsior",
+    "away_name": "Telstar 1963",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/nl.1.json",
+    "captured_at_utc": "2026-11-22T12:53:55.250046+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null,
+    "original_date": null,
+    "date_correction_verified": null,
+    "license_url": null,
+    "source_sha256": null,
+    "fixture_verification_url": null,
+    "actual_start_utc": null,
+    "source_original_date": "2026-11-28",
+    "verified_start_utc": "2026-11-28T15:30:00+00:00",
+    "independent_fixture": {
+      "provider_event_id": "401875537",
+      "league": "NL1",
+      "season_year": 2026,
+      "start_utc": "2026-11-28T15:30:00+00:00",
+      "captured_at": "2026-11-21T14:55:28.360923+00:00",
+      "home_name": "Excelsior",
+      "away_name": "Telstar",
+      "provider_home_id": "2566",
+      "provider_away_id": "3735",
+      "source_url": "https://www.espn.com/soccer/game/_/gameId/401875537",
+      "status": "scheduled",
+      "event_id": "NL1_3a6448bc0c08dbc8e83e9866",
+      "home": "sbv excelsior",
+      "away": "telstar 1963"
+    }
+  },
+  "prediction": {
+    "model": "football-opponent-v1",
+    "league": "NL1",
+    "home": "sbv excelsior",
+    "away": "telstar 1963",
+    "expected_home_goals": 1.5693206935562296,
+    "expected_away_goals": 1.7488198076206452,
+    "probabilities": {
+      "home": 0.348015225970576,
+      "draw": 0.22861621568713889,
+      "away": 0.42336855834228504
+    },
+    "predicted_outcome": "away",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.8435964309516308,
+      "2.5": 0.644203646759623,
+      "3.5": 0.4236658891363159
+    },
+    "both_teams_score": 0.6540544124388066,
+    "total_goals_80": [
+      1,
+      6
+    ],
+    "training_cutoff_exclusive": "2026-11-22",
+    "training_games": 919,
+    "prior_team_games": {
+      "sbv excelsior": 68,
+      "telstar 1963": 46
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "settings": {
+      "half_life_days": 180.0,
+      "shrinkage_games": 8.0,
+      "window_days": 1095
+    },
+    "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+    "low_score_rho": 0.0,
+    "research_candidate": false
+  },
+  "archive_sha256": "c9b4a40717c19897cb6175f068564bced94b97db07416ef36c69b4ec32d355ff",
+  "source_code_sha256": "c1e6ddfededc35b38609ae5a143347dfeb9ec4dfe5f707f70a582433dfcd044f",
+  "requested_model_variant": "opponent",
+  "history_health": {
+    "spec": "football-history-health-v1",
+    "checked_at_utc": "2026-11-22T12:54:00.800383+00:00",
+    "information_cutoff_exclusive": "2026-11-22",
+    "teams": {
+      "sbv excelsior": {
+        "prior_finals": 148,
+        "active_season_finals": 12,
+        "last_final_date": "2026-11-07",
+        "days_since_last_final": 15,
+        "unresolved_past_fixture_ids": []
+      },
+      "telstar 1963": {
+        "prior_finals": 46,
+        "active_season_finals": 12,
+        "last_final_date": "2026-11-07",
+        "days_since_last_final": 15,
+        "unresolved_past_fixture_ids": []
+      }
+    },
+    "diagnostic_gate_passed": true,
+    "blocking_issues": [],
+    "max_history_age_days": 30,
+    "calendar_completeness_verified": false,
+    "note": "Diagnostic policy, not a validated success threshold. Unresolved fixtures may be postponed or missing results. Fresh source captures do not make old histories current."
+  },
+  "selection_policy": "Current-history diagnostic gate plus existing model issues; research only, no validated recommendation.",
+  "payload_sha256": "24b8a29d4d34ae029d406cf77d8e4e5d07f7d9b10a7c7d086ea4d16c21c0bcfd"
+}

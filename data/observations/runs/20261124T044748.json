@@ -1,0 +1,29 @@
+{
+  "started_at_utc": "2026-11-24T04:47:48.816674+00:00",
+  "providers": {
+    "nba_injuries": {
+      "status": "captured",
+      "result": {
+        "path": "data/observations/injuries/20261124T044500Z_dd91d0c5b468.json",
+        "rows": 126,
+        "published_at_utc": "2026-11-24T04:45:00+00:00",
+        "sha256": "dd91d0c5b468e18841f9af4392ffd0b1bef52da53799383321ad79e3ad60243a"
+      }
+    },
+    "espn_scoreboard": {
+      "status": "captured",
+      "result": {
+        "live_games": 2,
+        "listed": 10
+      }
+    },
+    "iddaa_observed_odds": {
+      "status": "captured",
+      "result": {
+        "captured_at_utc": "2026-11-24T04:47:52.097573+00:00",
+        "events": 22,
+        "rejected": 0
+      }
+    }
+  }
+}
