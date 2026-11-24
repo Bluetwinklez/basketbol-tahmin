@@ -1,11 +1,9 @@
 # Daily basketball research
 
-Checked: 2026-11-23T18:39:43.943714+00:00
+Checked: 2026-11-24T18:09:16.765665+00:00
 
 | Tipoff (Istanbul) | League | Fixture | Score forecast | Home win | Data gate / probability filter |
 |---|---|---|---|---|---|
-| 24 Nov 20:00 | E | Besiktas Fuzul Istanbul – Paris Basketball | 91.4–90.6 | 52.6% | not selected |
-| 24 Nov 21:00 | E | Crvena Zvezda Meridianbet Belgrade – Virtus Bologna | 90.6–79.8 | 82.5% | passed |
 | 24 Nov 22:00 | E | FC Bayern Munich – Maccabi Rapyd Tel Aviv | 94.8–90.4 | 64.9% | not selected |
 | 24 Nov 22:30 | E | Valencia Basket – Panathinaikos AKTOR Athens | 89.7–83.9 | 69.2% | passed |
 | 24 Nov 22:45 | E | LDLC ASVEL Villeurbanne – Armani Olimpia Milan | 88.4–88.4 | 50.2% | not selected |
@@ -37,12 +35,10 @@ Checked: 2026-11-23T18:39:43.943714+00:00
 | 26 Nov 22:00 | ECW | Lattes-Montpellier – M.G.S PANSERRAIKOS | 83.0–67.0 | 82.0% | not selected |
 | 26 Nov 22:30 | ECW | Basket Namur Capitale – MBK Ruzomberok | 72.5–70.1 | 55.4% | not selected |
 | 26 Nov 23:00 | ECW | SL Benfica – Univerzitetski zenski kosarkaski klub Student | 80.7–66.6 | 79.0% | passed |
-| 28 Nov 01:00 | UKR | DNIPRO (Dnipro) – KHMELNYTSKYI (Khmelnytskyi) | 84.5–68.7 | 87.0% | passed |
-| 28 Nov 01:00 | UKR | ZAPORIZHZHYA (Zaporizhzhya) – PRYKARPATTIA-GOVERLA-KFV (Iv-Frankivsk) | 79.6–75.0 | 62.3% | not selected |
-| 29 Nov 01:00 | UKR | DNIPRO (Dnipro) – PRYKARPATTIA-GOVERLA-KFV (Iv-Frankivsk) | 81.6–70.5 | 85.7% | passed |
-| 29 Nov 01:00 | UKR | ZAPORIZHZHYA (Zaporizhzhya) – KHMELNYTSKYI (Khmelnytskyi) | 80.5–74.0 | 60.3% | not selected |
+| 01 Dec 18:30 | ECW | CS Universitatea Cluj – Elitzur Landco Ramla | 61.6–87.0 | 7.3% | not selected |
+| 01 Dec 20:30 | ECW | BC Montana 2003 – SBS Ostrava | 83.7–61.2 | 90.1% | not selected |
 
-Settled: 360; pending: 99; winner accuracy: 68.6%.
+Settled: 360; pending: 101; winner accuracy: 68.6%.
 
 | Fixture ID | Status | Final | Winner correct | Team MAE | Total error | Margin error | Total / margin in 80% |
 |---|---|---|---|---|---|---|---|
@@ -237,6 +233,7 @@ Settled: 360; pending: 99; winner accuracy: 68.6%.
 | E2026_98 | final | 75–93 | True | 7.89 | 6.42 | 15.77 | True / False |
 | ARG_LNB_e09a3d42912f230bc370e14f | pending | — | — | — | — | — | — |
 | TR_BSL_BID2026_1518171 | pending | — | — | — | — | — | — |
+| ECW_F135319 | pending | — | — | — | — | — | — |
 | E2026_93 | final | 90–93 | False | 4.36 | 6.68 | 8.71 | True / True |
 | UKR_2026_N44_UKR_334833_UKR_2226 | pending | — | — | — | — | — | — |
 | FEC_F135733 | final | 69–67 | False | 12.96 | 25.93 | 10.26 | False / True |
@@ -291,6 +288,7 @@ Settled: 360; pending: 99; winner accuracy: 68.6%.
 | TR_BSL_BID2026_1518173 | pending | — | — | — | — | — | — |
 | ECW_F135341 | pending | — | — | — | — | — | — |
 | E2026_81 | final | 103–73 | True | 10.83 | 3.09 | 21.65 | True / False |
+| ECW_F135361 | pending | — | — | — | — | — | — |
 | ABA_2026_58 | final | 104–109 | False | 22.70 | 45.40 | 5.04 | False / True |
 | ABA_2026_69 | final | 67–51 | True | 21.40 | 42.80 | 12.76 | False / True |
 | ECW_F135284 | pending | — | — | — | — | — | — |
@@ -533,8 +531,13 @@ Settled: 360; pending: 99; winner accuracy: 68.6%.
 - JP_B2_507407: B.PREMIER/B.ONE are separate 2026-27 competitions; legacy B1/B2 model transfer is not validated
 - JP_B2_507408: B.PREMIER/B.ONE are separate 2026-27 competitions; legacy B1/B2 model transfer is not validated
 - ECW_F135294: Fixture changed; original forecast retained, manual review required
+- UKR_2026_N43_UKR_2228_UKR_4704541: Fixture changed; original forecast retained, manual review required
+- UKR_2026_N44_UKR_334833_UKR_2226: Fixture changed; original forecast retained, manual review required
+- UKR_2026_N47_UKR_2228_UKR_2226: Fixture changed; original forecast retained, manual review required
+- UKR_2026_N48_UKR_334833_UKR_4704541: Fixture changed; original forecast retained, manual review required
+- NBA: No NBA schedule snapshot; run with --guncelle
 - data/basketball_ledger/forecasts/0c5b33bf9264fa036fbd9da2c10bebe5fe997ef378bbad0856b469539ddde9cd.json: Rescheduled fixture requires explicit review
 
-Source refresh failed (PBA_GOV): HTTPError: HTTP Error 503: Service Unavailable
+Source refresh failed (NBA): RuntimeError: HTTP 403: https://site.api.espn.com/robots.txt
 
 Model probabilities are not measured accuracy. Rejected/low-probability forecasts remain visible. Only source-confirmed timestamped finals settle. No live predictor. Small batches do not establish general accuracy.

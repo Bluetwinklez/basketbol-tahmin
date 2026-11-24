@@ -1,0 +1,125 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-11-24T18:05:53.088627+00:00",
+  "fixture": {
+    "event_id": "ES1_9c6fb25e0a2c8e8c1a398684",
+    "league": "ES1",
+    "season": "2026-27",
+    "date": "2026-11-30",
+    "home": "rcd espanyol de barcelona",
+    "away": "getafe cf",
+    "home_name": "RCD Espanyol de Barcelona",
+    "away_name": "Getafe CF",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/es.1.json",
+    "captured_at_utc": "2026-11-24T18:05:49.685175+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null,
+    "original_date": null,
+    "date_correction_verified": null,
+    "license_url": null,
+    "source_sha256": null,
+    "fixture_verification_url": null,
+    "actual_start_utc": null,
+    "source_original_date": "2026-11-29",
+    "verified_start_utc": "2026-11-30T20:00:00+00:00",
+    "independent_fixture": {
+      "provider_event_id": "401882792",
+      "league": "ES1",
+      "season_year": 2026,
+      "start_utc": "2026-11-30T20:00:00+00:00",
+      "captured_at": "2026-11-23T18:39:49.700767+00:00",
+      "home_name": "Espanyol",
+      "away_name": "Getafe",
+      "provider_home_id": "88",
+      "provider_away_id": "2922",
+      "source_url": "https://www.espn.com/soccer/game/_/gameId/401882792",
+      "status": "scheduled",
+      "event_id": "ES1_9c6fb25e0a2c8e8c1a398684",
+      "home": "rcd espanyol de barcelona",
+      "away": "getafe cf"
+    }
+  },
+  "prediction": {
+    "model": "football-opponent-v1",
+    "league": "ES1",
+    "home": "rcd espanyol de barcelona",
+    "away": "getafe cf",
+    "expected_home_goals": 1.1860002218860182,
+    "expected_away_goals": 0.7256243799384479,
+    "probabilities": {
+      "home": 0.4689122581706686,
+      "draw": 0.30520613042828065,
+      "away": 0.2258816114010507
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      1,
+      0
+    ],
+    "over": {
+      "1.5": 0.5695453890511359,
+      "2.5": 0.29941887727623717,
+      "3.5": 0.1272920487715962
+    },
+    "both_teams_score": 0.35837723107345926,
+    "total_goals_80": [
+      0,
+      4
+    ],
+    "training_cutoff_exclusive": "2026-11-24",
+    "training_games": 1129,
+    "prior_team_games": {
+      "rcd espanyol de barcelona": 88,
+      "getafe cf": 113
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "settings": {
+      "half_life_days": 180.0,
+      "shrinkage_games": 8.0,
+      "window_days": 1095
+    },
+    "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+    "low_score_rho": 0.0,
+    "research_candidate": false
+  },
+  "archive_sha256": "485627733164d20ce5d2c2da47650bb369c9c596ebdb8980d01e3de3b9d41efd",
+  "source_code_sha256": "2f67819270f704adef06f926c1f52d046f1bea76923d5f560ea5114c673f5380",
+  "requested_model_variant": "opponent",
+  "history_health": {
+    "spec": "football-history-health-v1",
+    "checked_at_utc": "2026-11-24T18:05:51.179294+00:00",
+    "information_cutoff_exclusive": "2026-11-24",
+    "teams": {
+      "rcd espanyol de barcelona": {
+        "prior_finals": 164,
+        "active_season_finals": 13,
+        "last_final_date": "2026-11-20",
+        "days_since_last_final": 4,
+        "unresolved_past_fixture_ids": []
+      },
+      "getafe cf": {
+        "prior_finals": 506,
+        "active_season_finals": 13,
+        "last_final_date": "2026-11-22",
+        "days_since_last_final": 2,
+        "unresolved_past_fixture_ids": []
+      }
+    },
+    "diagnostic_gate_passed": true,
+    "blocking_issues": [],
+    "max_history_age_days": 30,
+    "calendar_completeness_verified": false,
+    "note": "Diagnostic policy, not a validated success threshold. Unresolved fixtures may be postponed or missing results. Fresh source captures do not make old histories current."
+  },
+  "selection_policy": "Current-history diagnostic gate plus existing model issues; research only, no validated recommendation.",
+  "payload_sha256": "051312df85acb20f92d14632cfdcae953fef4584e4e731ebf02e3796866ba719"
+}
