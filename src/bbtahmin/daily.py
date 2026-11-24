@@ -9,13 +9,14 @@ import io
 import json
 import sys
 from pathlib import Path
+from tempfile import NamedTemporaryFile
 
 import pandas as pd
 
 from .prospective import freeze, settle, verify
 from .quality import timestamp
 
-LEAGUES = ('E', 'KBL', 'JP_B1', 'JP_B2', 'PBA_GOV', 'ABA', 'ECW', 'FEC', 'UKR', 'TR_BSL', 'ARG_LNB')
+LEAGUES = ('E', 'KBL', 'JP_B1', 'JP_B2', 'PBA_GOV', 'ABA', 'ECW', 'FEC', 'UKR', 'TR_BSL', 'ARG_LNB', 'NBA')
 EURO_URL = 'https://api-live.euroleague.net/v2/competitions/E/seasons/{season}/games'
 
 
@@ -24,7 +25,8 @@ def refresh(leagues):
     outcomes = {}
     groups = [('E', ['E']), ('KBL', ['KBL']),
               ('Japan', [c for c in leagues if c.startswith('JP_')]), ('PBA', ['PBA_GOV']), ('ABA', ['ABA']),
-              ('ECW', ['ECW']), ('FEC', ['FEC']), ('UKR', ['UKR']), ('TR_BSL', ['TR_BSL']), ('ARG_LNB', ['ARG_LNB'])]
+              ('ECW', ['ECW']), ('FEC', ['FEC']), ('UKR', ['UKR']), ('TR_BSL', ['TR_BSL']), ('ARG_LNB', ['ARG_LNB']),
+              ('NBA', ['NBA'])]
     today = pd.Timestamp.now(tz='UTC')
     year = today.year if today.month >= 7 else today.year - 1
     for source, codes in groups:
@@ -47,6 +49,21 @@ def refresh(leagues):
                     target = Path('data/schedules/E.json')
                     target.parent.mkdir(parents=True, exist_ok=True)
                     target.write_text(json.dumps(dict(fixtures=fixtures, results=results), indent=2),encoding='utf8')
+                elif source == 'NBA':
+                    from .veri.nba_schedule import collect
+                    fixtures, results = collect()
+                    target = Path('data/schedules/NBA.json')
+                    target.parent.mkdir(parents=True, exist_ok=True)
+                    staged = None
+                    try:
+                        with NamedTemporaryFile(mode='w', encoding='utf8', dir=target.parent,
+                                                suffix='.part', delete=False) as stream:
+                            staged = Path(stream.name)
+                            json.dump(dict(fixtures=fixtures, results=results), stream, indent=2)
+                        staged.replace(target)
+                    finally:
+                        if staged is not None:
+                            staged.unlink(missing_ok=True)
                 elif source == 'KBL':
                     from .veri.korea import collect
                     collect(first=today.year, last=today.year)
@@ -81,10 +98,11 @@ def refresh(leagues):
 
 def source_facts(code):
     """Read fixture capture times and finals without claiming archive freshness."""
-    if code == 'E':
-        path = Path('data/schedules/E.json')
+    if code in ('E', 'NBA'):
+        path = Path(f'data/schedules/{code}.json')
         if not path.exists():
-            raise ValueError('No EuroLeague schedule snapshot; run with --guncelle')
+            league = 'EuroLeague' if code == 'E' else code
+            raise ValueError(f'No {league} schedule snapshot; run with --guncelle')
         payload = json.loads(path.read_text(encoding='utf8'))
         return payload['fixtures'], payload['results']
     root = Path('data/competitions' if code in ('ABA', 'ECW', 'FEC', 'UKR', 'TR_BSL', 'ARG_LNB') else 'data/asia')
