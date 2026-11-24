@@ -15,8 +15,10 @@ import numpy as np
 import pandas as pd
 
 from .experiment_metrics import metrics, paired, validate
-from .prospective import canonical, fingerprint
+from .prospective import canonical, prediction_fingerprint, prediction_source_paths
 from .quality import timestamp
+
+POLICY_SPEC = 'paired-forward-policy-v4'
 
 
 def checksum(value):
@@ -42,12 +44,21 @@ def save_new(path,payload):
     return record
 
 
-def register(root,policy):
+def _snapshot_code_sha256(files):
+    digest = hashlib.sha256()
+    for name, raw in sorted(files.items()):
+        digest.update(name.encode() + b'\0' + base64.b64decode(raw))
+    return digest.hexdigest()
+
+
+def register(root,policy,*,source_root=Path('.')):
     # Identity: policy + code + pinned numeric packages. The interpreter's patch version is
     # deliberately excluded (CI's unpinned 3.12.x moves on its own and would reset the cohort);
     # it is still recorded next to the code in source_snapshot.json.gz.
     runtime=dict(packages={p:importlib.metadata.version(p) for p in ('numpy','pandas','scipy','scikit-learn')})
-    payload=dict(spec='paired-forward-policy-v3',policy=policy,source_code_sha256=fingerprint(),runtime=runtime)
+    source_root = Path(source_root)
+    code_hash = prediction_fingerprint(source_root)
+    payload=dict(spec=POLICY_SPEC,policy=policy,prediction_code_sha256=code_hash,runtime=runtime)
     identity=checksum(payload);directory=Path(root)/'experiments'/identity
     target=directory/'protocol.json'
     if target.exists():
@@ -56,12 +67,18 @@ def register(root,policy):
         # Compare the canonical representation used by the identity itself.
         if canonical({k:v for k,v in saved.items() if k!='sha256'})!=canonical(payload):
             raise ValueError('Experiment policy conflict')
-    else: save_new(target,payload)
     snapshot_path=directory/'source_snapshot.json.gz'
+    encoded = None
     if not snapshot_path.exists():
-        files={p.as_posix():base64.b64encode(p.read_bytes()).decode('ascii') for p in sorted(Path('src').rglob('*.py'))}
-        snapshot=dict(files=files,python=sys.version,packages={p:importlib.metadata.version(p) for p in ('numpy','pandas','scipy','scikit-learn')})
+        files = {p.relative_to(source_root).as_posix(): base64.b64encode(p.read_bytes()).decode('ascii')
+                 for p in prediction_source_paths(source_root)}
+        if _snapshot_code_sha256(files) != code_hash:
+            raise ValueError('Prediction code changed during experiment registration')
+        snapshot=dict(files=files,python=sys.version,packages=runtime['packages'])
         encoded=gzip.compress(canonical(snapshot),mtime=0)
+    if not target.exists():
+        save_new(target,payload)
+    if encoded is not None:
         with snapshot_path.open('xb') as stream:stream.write(encoded)
     return directory,identity
 
@@ -106,9 +123,9 @@ def evaluate(directory,results,now=None,active=False):
     snapshot_verified=False
     if snapshot_path.exists():
         snapshot=json.loads(gzip.decompress(snapshot_path.read_bytes()))
-        # fingerprint uses paths relative to repository root, including src/.
-        content=b''.join(name.encode()+b'\0'+base64.b64decode(raw) for name,raw in sorted(snapshot['files'].items()))
-        snapshot_verified=hashlib.sha256(content).hexdigest()==protocol['source_code_sha256']
+        # Verify the bytes frozen for this cohort, even after the allowlist changes.
+        field = 'prediction_code_sha256' if 'prediction_code_sha256' in protocol else 'source_code_sha256'
+        snapshot_verified = _snapshot_code_sha256(snapshot['files']) == protocol[field]
         if not snapshot_verified:raise ValueError('Frozen source snapshot fingerprint mismatch')
     indexed={}
     provider_index={}
