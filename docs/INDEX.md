@@ -7,6 +7,8 @@ Guide to the documents under `docs/` and the `docs/kanit/` evidence directory. F
 - [daily-workflow.md](daily-workflow.md) — Daily basketball forecast refresh (`gunluk --guncelle`), immutable ledger and settlement rules, and historical backfill commands.
 - [local-app.md](local-app.md) — Startup, daily usage, security boundaries and testing for the local browser application (`python -m bbtahmin app`).
 - [sports-upgrade.md](sports-upgrade.md) — Cross-sport reliability expansion adding Belgium/Greece/Scotland football archives, explicit football research candidates, Turkish basketball duplicate/identity safeguards, board exports and weekly refresh/Playwright checks.
+- [live-scorecard.md](live-scorecard.md) — Offline prospective scorecard (`scripts/live_scorecard.py`) evaluating frozen basketball and football forecasts against local ledger finals, with metric definitions, baselines, calibration and interpretation limits.
+- [refresh-known-missing.md](refresh-known-missing.md) — Operational rules for `data/refresh/known_missing.json`, error classification, exit codes, and `PBA_GOV` auto-disable/retry behavior in `scripts/refresh_sports.py`.
 
 ## Basketball models and leagues
 
