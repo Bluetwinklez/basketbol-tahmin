@@ -57,3 +57,25 @@ def test_team_inventory_rejects_noninteger_limits():
     for limit in (0,101,1.5,True):
         with pytest.raises(ValueError):
             team_history_coverage(pd.DataFrame(),'TR1','2026-27','2026-10-25',limit)
+
+
+def test_empty_archive_returns_explicit_missing_history():
+    for frame in (pd.DataFrame(), pd.DataFrame(columns=['league','status'])):
+        r=last_matches(frame,'TR1','A','2026-11-24')
+        assert r['available']==0 and r['missing']==50 and r['matches']==[]
+        assert r['last_date'] is None
+        assert r['wins']==r['draws']==r['losses']==r['goals_for']==r['goals_against']==0
+        assert r['team']=='a' and r['cutoff_exclusive']=='2026-11-24'
+
+
+def test_direct_history_rejects_invalid_limits_before_empty_archive():
+    import pytest
+    for limit in (0,101,1.5,True,'50',None):
+        with pytest.raises(ValueError,match='integer'):
+            last_matches(pd.DataFrame(),'TR1','A','2026-11-24',limit)
+
+
+def test_missing_team_in_populated_archive_returns_empty_history():
+    frame=pd.DataFrame([row('TR1','2026-27','2026-10-20','A','B',[1,0],'source','2026-11-24')])
+    r=last_matches(frame,'TR1','Unknown','2026-11-24',10)
+    assert r['available']==0 and r['missing']==10

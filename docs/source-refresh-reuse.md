@@ -43,3 +43,21 @@ within its existing three-attempt budget (one- and two-second waits). It discard
 partial bytes, closes each response and preserves the last complete cache if all
 attempts fail. Tests cover recovery and exhaustion. This is tested recovery logic,
 not a claim that the upstream service has recovered or that new results were added.
+
+## Offline failure transitions (2026-11-23)
+
+Run `PYTHONPATH=src python scripts/audit_refresh_health.py PREVIOUS CURRENT
+--output REPORT` (on one line) to compare two archived refresh reports without
+network requests. The report pins both input SHA-256 hashes and distinguishes
+new failures, continuing failures, failures no longer reported and unresolved
+failures in an unobserved sport. A missing or wholly failed sport cannot clear
+previous failures. First observations are baselines, not newly detected outages.
+Collector, source, league, season, stage and repository define failure identity;
+duplicate identities are rejected rather than silently overwriting evidence.
+
+`docs/kanit/source_health_20261123.json` compares the final reports of November 21
+and 22. This is diagnostic evidence only: a failure no longer appearing does not
+prove complete data or upstream recovery. In particular, historical-backfill
+stages may not run daily. No downloads, new matches, forecast edits, model refits
+or accuracy claims accompany this tool. Existing chronological model/calibration
+reports remain unchanged.

@@ -213,3 +213,23 @@ prediction hash and links the existing seven-market calibration, score/total
 errors, intervals and cohort coverage report by hash. Results remain retrospective
 community data with unknown historical publication times, not independently
 verified official results. No new matches or frozen forecast edits are included.
+
+### Empty-history handling and current Turkish coverage (2026-11-24)
+
+The direct `last_matches` query now returns an explicit zero-available history
+with the full requested shortfall when the archive is empty, including a newly
+initialized archive without columns. Previously this path raised an attribute
+error before it could explain missing data. Invalid non-integer limits (including
+booleans) are rejected consistently with the season inventory API. No fake matches
+or success rates are created; existing same-day, league and final-status filters
+remain in force.
+
+The offline inventory `team_history_20261124.json` pins current archive hashes.
+Of 18 archived TR1 season clubs, 15 have 50 available prior league finals; Amed has
+11, Corum 9 and Kocaelispor 22. The total shortfall is 108 team-match records
+(shared fixtures count for each club). This is available archive coverage, not an
+official all-competition last-50 certification. The earlier November 13 inventory
+had 110 missing team-match records; intervening existing archive updates account
+for the difference. This PR adds no match data, downloads or model changes and
+makes no predictive improvement claim. Earliest frozen forecasts and existing
+chronological calibration/error reports remain unchanged.
