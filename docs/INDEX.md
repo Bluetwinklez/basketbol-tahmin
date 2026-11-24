@@ -9,6 +9,7 @@ Guide to the documents under `docs/` and the `docs/kanit/` evidence directory. F
 - [sports-upgrade.md](sports-upgrade.md) — Cross-sport reliability expansion adding Belgium/Greece/Scotland football archives, explicit football research candidates, Turkish basketball duplicate/identity safeguards, board exports and weekly refresh/Playwright checks.
 - [live-scorecard.md](live-scorecard.md) — Offline prospective scorecard (`scripts/live_scorecard.py`) evaluating frozen basketball and football forecasts against local ledger finals, with metric definitions, baselines, calibration and interpretation limits.
 - [refresh-known-missing.md](refresh-known-missing.md) — Operational rules for `data/refresh/known_missing.json`, error classification, exit codes, and `PBA_GOV` auto-disable/retry behavior in `scripts/refresh_sports.py`.
+- [nba-daily.md](nba-daily.md) — Daily NBA schedule integration via dated ESPN scoreboards, `data/schedules/NBA.json` schema, team code mapping, freshness/final rules, failure handling and offline verification limits.
 
 ## Basketball models and leagues
 
@@ -32,6 +33,7 @@ Guide to the documents under `docs/` and the `docs/kanit/` evidence directory. F
 - [licensed-football-supplement.md](licensed-football-supplement.md) — CC BY-SA 4.0 Wikipedia score-matrix overlay rules (`data/football/licensed_overlays/`), exact fixture/score verification and quarantine safeguards leaving CC0 base snapshots unchanged.
 - [argentina-source-gap-reporting.md](argentina-source-gap-reporting.md) — Structured missing/ineligible season CSV reporting in the Argentina football adapter, four verified 26 October CC BY-SA 4.0 finals (`AR1` 447→449, `AR2` 628→630) and a four-match same-cohort retrospective check.
 - [turkish-history-coverage.md](turkish-history-coverage.md) — Audit of available Turkish Süper Lig last-50 league histories (noting missing seasons, cups and aliases) and addition of 1,391 partial historical CC0 finals across MLS, Japan J1 and China Super League.
+- [football-double-chance.md](football-double-chance.md) — Display-only football draw and double-chance (`1X`/`X2`/`12`) views in the local board, Markdown table and CSV export (`prob_1x`, `prob_x2`, `prob_12`) without altering models or frozen forecasts.
 
 ## Data sources, audits and roadmap
 
