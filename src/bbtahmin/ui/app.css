@@ -929,4 +929,23 @@ footer {
   .card-top { flex-wrap: wrap; }
   .card-time { flex-wrap: wrap; gap: 6px; }
 }
+.sport-tabs { display: flex; gap: 10px; margin-bottom: 14px; }
+.sport-tab { padding: 9px 16px; border: 1px solid var(--line); border-radius: 6px; background: #fff; color: #355048; font-size: 13px; font-weight: 600; }
+.sport-tab.active { background: var(--green); border-color: var(--green); color: #fff; }
+.perf-meta { font-size: 12px; margin: 0 0 18px; }
+.perf-row-model td { font-weight: 600; color: #182c2b; }
+.perf-row-muted td { color: var(--muted); }
+.perf-cal-select { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--muted); }
+.perf-cal-select select { padding: 7px 10px; background: #fff; border: 1px solid var(--line); border-radius: 6px; font-size: 12px; color: #355048; }
+.perf-bar-cell { min-width: 140px; }
+.perf-bar-stack { display: flex; flex-direction: column; gap: 4px; }
+.perf-bar-track { height: 6px; background: #edf1eb; border-radius: 4px; overflow: hidden; }
+.perf-bar-fill { height: 100%; border-radius: 4px; }
+.perf-bar-forecast { background: #94b4a3; }
+.perf-bar-observed { background: var(--green); }
+.perf-definitions { margin-top: 28px; }
+.perf-def-list { margin: 0; padding: 8px 16px 16px; font-size: 12px; line-height: 1.6; }
+.perf-def-list dt { font-weight: 600; color: #304d37; margin-top: 10px; }
+.perf-def-list dd { margin: 3px 0 0; color: var(--muted); }
+
 
