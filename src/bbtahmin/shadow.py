@@ -43,8 +43,11 @@ def save_new(path,payload):
 
 
 def register(root,policy):
-    runtime=dict(python=sys.version,packages={p:importlib.metadata.version(p) for p in ('numpy','pandas','scipy','scikit-learn')})
-    payload=dict(spec='paired-forward-policy-v2',policy=policy,source_code_sha256=fingerprint(),runtime=runtime)
+    # Identity: policy + code + pinned numeric packages. The interpreter's patch version is
+    # deliberately excluded (CI's unpinned 3.12.x moves on its own and would reset the cohort);
+    # it is still recorded next to the code in source_snapshot.json.gz.
+    runtime=dict(packages={p:importlib.metadata.version(p) for p in ('numpy','pandas','scipy','scikit-learn')})
+    payload=dict(spec='paired-forward-policy-v3',policy=policy,source_code_sha256=fingerprint(),runtime=runtime)
     identity=checksum(payload);directory=Path(root)/'experiments'/identity
     target=directory/'protocol.json'
     if target.exists():

@@ -65,3 +65,26 @@ def test_publisher_id_keeps_one_pair_when_archive_date_hash_changes(tmp_path):
     assert len(list((directory/'forecasts').glob('*.json')))==1
     result=dict(changed,status='final',home_score=90,away_score=80,captured_at='2026-10-27T15:00Z')
     assert evaluate(directory,[result],now='2026-10-27T16:00Z')['settled_games']==1
+
+
+def test_identity_ignores_interpreter_patch_version(tmp_path,monkeypatch):
+    import sys
+    directory,identity=register(tmp_path,dict(version=1))
+    monkeypatch.setattr(sys,'version','3.12.99 (synthetic patch release)')
+    again,again_id=register(tmp_path,dict(version=1))
+    assert (again,again_id)==(directory,identity)
+    protocol=json.loads((directory/'protocol.json').read_text(encoding='utf8'))
+    assert 'python' not in protocol['runtime'] and set(protocol['runtime']['packages'])=={'numpy','pandas','scipy','scikit-learn'}
+
+
+def test_forfeit_allowlist_matches_archive_exactly():
+    from pathlib import Path
+    import pandas as pd
+    from bbtahmin.shadow_models import FORFEIT_GAMES
+    frames=[pd.read_parquet(p) for p in [Path('data/maclar.parquet'),*Path('data/competitions').glob('*.parquet'),*Path('data/asia').glob('*.parquet')]]
+    games=pd.concat([f[['mac_id','ev_skor','dep_skor']] for f in frames if {'mac_id','ev_skor','dep_skor'}<=set(f.columns)])
+    games=games.dropna(subset=['ev_skor','dep_skor'])
+    invalid=games[(games.ev_skor<=0)|(games.dep_skor<=0)|(games.ev_skor==games.dep_skor)]
+    # Every invalid final is an explicitly reviewed forfeit, and every allowlisted id is a real zero-score row.
+    assert set(invalid.mac_id)==set(FORFEIT_GAMES)
+    assert (invalid[['ev_skor','dep_skor']].min(axis=1)==0).all()
