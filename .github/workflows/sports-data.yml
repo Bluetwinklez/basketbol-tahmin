@@ -111,6 +111,7 @@ jobs:
             echo '### Sports refresh incomplete'
             echo
             echo 'At least one independent collection or forecast stage did not complete successfully.'
+            echo 'Data collection reports unexpected source failures, whole-sport failures, and expired known-missing exceptions as errors. Current known-missing failures remain in the refresh report.'
             echo
             echo '| Stage | Outcome |'
             echo '|---|---|'
