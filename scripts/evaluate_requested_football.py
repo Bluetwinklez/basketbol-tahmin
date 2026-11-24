@@ -5,6 +5,7 @@ from pathlib import Path
 from bbtahmin.football.data import load, write_json, key
 from bbtahmin.football.challenger import compare, VARIANTS, fit
 from evaluate_football_ensemble import reliability
+from bbtahmin.football.evaluation_audit import simple_baselines
 
 
 def main():
@@ -31,7 +32,7 @@ def main():
             item['available_history']={team:last_matches(frame,league,team,'2026-10-25')['available'] for team in (home,away)}
         coverage.append(item)
     target_games=br.loc[(br.season=='2024') & (br.status=='final')]
-    report['simple_baselines']={'always_home_accuracy':float((target_games.home_goals>target_games.away_goals).mean()),'always_under_2_5_accuracy':float(((target_games.home_goals+target_games.away_goals)<=2).mean()),'always_btts_no_accuracy':float(((target_games.home_goals==0)|(target_games.away_goals==0)).mean())}
+    report['simple_baselines']=simple_baselines(rows, VARIANTS, target_games.event_id.tolist())
     report.update(requested_coverage=coverage,imported_finals=len(br),source_kind='community_CC0_not_official',new_current_forecasts=0)
     target=Path('docs/kanit/requested_football');target.mkdir(parents=True,exist_ok=True)
     write_json(target/'evaluation.json',report)

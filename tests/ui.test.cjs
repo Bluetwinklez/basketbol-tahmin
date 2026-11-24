@@ -261,10 +261,14 @@ test('football board separates draws, goal markets and unverified results', asyn
   const w=dom.window;w.setInterval=()=>1;
   w.fetch=async()=>({ok:true,json:async()=>({sample:true,job:{status:'idle',message:'Ready'},report:{
     checked_at_utc:'2026-10-23T12:00Z',pending:1,publisher_performance:{games:0},source_errors:[],skipped:[],
-    forecasts:[{fixture:{league:'TR1',date:'2026-10-25',home_name:'<img src=x onerror=alert(1)>',away_name:'B',source_url:'javascript:alert(1)'},prediction:{expected_home_goals:1.5,expected_away_goals:1,probabilities:{home:.45,draw:.3,away:.25},over:{'1.5':.7,'2.5':.4,'3.5':.2},both_teams_score:.5,total_goals_80:[0,5],issues:[]},result:null}]
+    forecasts:[{fixture:{league:'TR1',date:'2026-10-25',home_name:'<img src=x onerror=alert(1)>',away_name:'B',source_url:'javascript:alert(1)'},prediction:{expected_home_goals:1.5,expected_away_goals:1,predicted_outcome:'home',probabilities:{home:.45,draw:.3,away:.25},over:{'1.5':.7,'2.5':.4,'3.5':.2},both_teams_score:.5,total_goals_80:[0,5],issues:[]},result:null}]
   }})});w.eval(script);await new Promise(setImmediate);
   const text=w.document.body.textContent;
-  assert.match(text,/Draw 30.0%/);assert.match(text,/Over 2.5 40.0%/);assert.match(text,/Pending · no final result/);
+  const card=w.document.querySelector('#cards article');
+  assert.match(card.textContent,/Top pick: Home · Draw 30\.0%/);
+  assert.match(card.textContent,/Best double chance: 1X 75\.0%/);
+  assert.match(text,/A draw can be nearly as likely as the top pick/);
+  assert.match(text,/Over 2.5 40.0%/);assert.match(text,/Pending · no final result/);
   assert.match(text,/0 officially verified/);assert.match(text,/Saved demonstration/);
   assert.equal(w.document.querySelectorAll('#cards img').length,0);
   assert.equal(w.document.querySelector('#cards a').getAttribute('href'),'#');

@@ -9,18 +9,24 @@ def safe_cell(value):
     return value
 
 
+def _double_chance(probabilities):
+    home, draw, away = (probabilities[k] for k in ('home', 'draw', 'away'))
+    return {'1X': home + draw, 'X2': draw + away, '12': home + away}
+
+
 def export_csv(report):
     stream = io.StringIO(newline=''); writer = csv.writer(stream)
     fields = ('league','date','home','away','status','model','home_probability','draw_probability',
               'away_probability','over_1.5','over_2.5','over_3.5','both_teams_score',
               'actual_home','actual_away','winner_correct','total_absolute_error','margin_absolute_error')
-    writer.writerow(fields)
+    writer.writerow((*fields, 'prob_1x', 'prob_x2', 'prob_12'))
     for item in report['forecasts']:
         f, p, r = item['fixture'], item['prediction'], item.get('result') or {}
         values = [f['league'], f['date'], f['home_name'], f['away_name'], item['status'], p['model'],
                   *[p['probabilities'][k] for k in ('home','draw','away')],
                   *[p['over'][k] for k in ('1.5','2.5','3.5')], p['both_teams_score'],
-                  *[r.get(k) for k in fields[-5:]]]
+                  *[r.get(k) for k in fields[-5:]],
+                  *[round(value, 6) for value in _double_chance(p['probabilities']).values()]]
         writer.writerow([safe_cell(v) for v in values])
     return stream.getvalue().encode('utf-8-sig')
 
@@ -30,11 +36,13 @@ def markdown(report):
         return str(value).replace('|', '\\|').replace('\n', ' ').replace('\r', ' ')
     lines = ['# Football research', '', 'Community-source finals; official accuracy unavailable.',
              'Full report; display filters do not restrict this export.', '',
-             '| Date | League | Fixture | Home / draw / away | Over 2.5 | Status |',
-             '|---|---|---|---|---|---|']
+             '| Date | League | Fixture | Home / draw / away | Over 2.5 | Status | Best double chance |',
+             '|---|---|---|---|---|---|---|']
     for item in report['forecasts']:
         f, p = item['fixture'], item['prediction']
         probabilities = ' / '.join(f"{100*p['probabilities'][k]:.1f}%" for k in ('home','draw','away'))
+        chance, probability = max(_double_chance(p['probabilities']).items(), key=lambda pair: pair[1])
         lines.append('| '+' | '.join(map(clean, [f['date'], f['league'], f"{f['home_name']} - {f['away_name']}",
-                                                probabilities, f"{100*p['over']['2.5']:.1f}%", item['status']]))+' |')
+                                                probabilities, f"{100*p['over']['2.5']:.1f}%", item['status'],
+                                                f'{chance} {100*probability:.1f}%']))+' |')
     return ('\n'.join(lines)+'\n').encode('utf8')

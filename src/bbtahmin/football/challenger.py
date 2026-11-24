@@ -11,6 +11,9 @@ from .distributions import poisson
 from .model import GoalModel, metrics, score
 
 VARIANTS = ('baseline', 'opponent', 'opponent_dc', 'ensemble')
+# Same-cohort 2025-26 comparison (3,973 finals, docs/football-ensemble.md): opponent-adjusted strengths
+# lower multiclass log loss in 14 of 17 leagues and raise 1/X/2 accuracy from 47.80% to 49.18%.
+DEFAULT_VARIANT = 'opponent'
 
 
 class OpponentGoalModel(GoalModel):
@@ -82,12 +85,12 @@ class OpponentGoalModel(GoalModel):
                       over={str(line): float(grid[totals > line].sum()) for line in (1.5, 2.5, 3.5)},
                       both_teams_score=float(grid[1:, 1:].sum()),
                       total_goals_80=[int(np.searchsorted(cdf, .1)), int(np.searchsorted(cdf, .9))],
-                      low_score_rho=rho, research_candidate=True,
-                      note='Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Explicit research candidate, no automatic promotion or lineup/xG/odds inputs.')
+                      low_score_rho=rho, research_candidate=False,
+                      note='Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.')
         return result
 
 
-def fit(history, league, cutoff, variant='baseline'):
+def fit(history, league, cutoff, variant=DEFAULT_VARIANT):
     if variant not in VARIANTS:
         raise ValueError('Unknown football model candidate')
     if variant=='ensemble':

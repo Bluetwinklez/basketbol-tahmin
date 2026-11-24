@@ -1,0 +1,125 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-11-22T12:54:03.065879+00:00",
+  "fixture": {
+    "event_id": "EN1_9bde785a6a4ec54399160a24",
+    "league": "EN1",
+    "season": "2026-27",
+    "date": "2026-11-29",
+    "home": "everton fc",
+    "away": "liverpool fc",
+    "home_name": "Everton FC",
+    "away_name": "Liverpool FC",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/en.1.json",
+    "captured_at_utc": "2026-11-22T12:53:55.250046+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null,
+    "original_date": null,
+    "date_correction_verified": null,
+    "license_url": null,
+    "source_sha256": null,
+    "fixture_verification_url": null,
+    "actual_start_utc": null,
+    "source_original_date": "2026-11-28",
+    "verified_start_utc": "2026-11-29T12:00:00+00:00",
+    "independent_fixture": {
+      "provider_event_id": "401879229",
+      "league": "EN1",
+      "season_year": 2026,
+      "start_utc": "2026-11-29T12:00:00+00:00",
+      "captured_at": "2026-11-21T14:55:26.513309+00:00",
+      "home_name": "Everton",
+      "away_name": "Liverpool",
+      "provider_home_id": "368",
+      "provider_away_id": "364",
+      "source_url": "https://www.espn.com/soccer/game/_/gameId/401879229",
+      "status": "scheduled",
+      "event_id": "EN1_9bde785a6a4ec54399160a24",
+      "home": "everton fc",
+      "away": "liverpool fc"
+    }
+  },
+  "prediction": {
+    "model": "football-opponent-v1",
+    "league": "EN1",
+    "home": "everton fc",
+    "away": "liverpool fc",
+    "expected_home_goals": 1.2577238991790112,
+    "expected_away_goals": 1.3058848358673123,
+    "probabilities": {
+      "home": 0.3556460421524407,
+      "draw": 0.2660044170843962,
+      "away": 0.37834954076316313
+    },
+    "predicted_outcome": "away",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.72550850826093,
+      "2.5": 0.4723967257309483,
+      "3.5": 0.25610353351861276
+    },
+    "both_teams_score": 0.5217931859225112,
+    "total_goals_80": [
+      1,
+      5
+    ],
+    "training_cutoff_exclusive": "2026-11-22",
+    "training_games": 1120,
+    "prior_team_games": {
+      "everton fc": 112,
+      "liverpool fc": 112
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "settings": {
+      "half_life_days": 180.0,
+      "shrinkage_games": 8.0,
+      "window_days": 1095
+    },
+    "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+    "low_score_rho": 0.0,
+    "research_candidate": false
+  },
+  "archive_sha256": "c9b4a40717c19897cb6175f068564bced94b97db07416ef36c69b4ec32d355ff",
+  "source_code_sha256": "c1e6ddfededc35b38609ae5a143347dfeb9ec4dfe5f707f70a582433dfcd044f",
+  "requested_model_variant": "opponent",
+  "history_health": {
+    "spec": "football-history-health-v1",
+    "checked_at_utc": "2026-11-22T12:54:00.800383+00:00",
+    "information_cutoff_exclusive": "2026-11-22",
+    "teams": {
+      "everton fc": {
+        "prior_finals": 618,
+        "active_season_finals": 10,
+        "last_final_date": "2026-11-06",
+        "days_since_last_final": 16,
+        "unresolved_past_fixture_ids": []
+      },
+      "liverpool fc": {
+        "prior_finals": 618,
+        "active_season_finals": 10,
+        "last_final_date": "2026-11-08",
+        "days_since_last_final": 14,
+        "unresolved_past_fixture_ids": []
+      }
+    },
+    "diagnostic_gate_passed": true,
+    "blocking_issues": [],
+    "max_history_age_days": 30,
+    "calendar_completeness_verified": false,
+    "note": "Diagnostic policy, not a validated success threshold. Unresolved fixtures may be postponed or missing results. Fresh source captures do not make old histories current."
+  },
+  "selection_policy": "Current-history diagnostic gate plus existing model issues; research only, no validated recommendation.",
+  "payload_sha256": "45b862a62841b7cb9eb0de5082cce9c65006378f41a5b6a1ebd891eed074ce64"
+}

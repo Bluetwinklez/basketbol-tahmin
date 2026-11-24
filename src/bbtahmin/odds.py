@@ -8,6 +8,15 @@ def american_decimal(odds):
 def no_vig(home,away):
     p=np.array([decimal_probability(home),decimal_probability(away)])
     return p/p.sum()
+# NBA 2017-18…2022-23 (6.758 oranlı maç, ardışık sezon testi): kapanış oranı tek başına log loss 0,6070 /
+# isabet %67,15; model tek başına 0,6277 / %64,84. Model ağırlığı 0,1 ile 0,6069 / %66,91: model piyasaya
+# neredeyse hiçbir şey eklemiyor. Yalnız kapanışa yakın, düşük marjlı oranlar için doğrulandı.
+MARKET_BLEND_MODEL_WEIGHT=.1
+def market_blend(model_p,market_p,model_weight=MARKET_BLEND_MODEL_WEIGHT):
+    """Logit uzayında model ve marjı çıkarılmış piyasa olasılığı karışımı (ev kazanır olasılığı)."""
+    if not 0<=model_weight<=1: raise ValueError('Model ağırlığı 0-1 arasında olmalı')
+    logit=lambda p:float(np.log(np.clip(p,1e-4,1-1e-4)/(1-np.clip(p,1e-4,1-1e-4))))
+    return float(1/(1+np.exp(-(model_weight*logit(model_p)+(1-model_weight)*logit(market_p)))))
 def simulate(probabilities,outcomes,home_odds,away_odds,threshold,method):
     if method not in ('fixed','kelly'): raise ValueError('method must be fixed or kelly')
     if not np.isfinite(threshold) or not 0<=threshold<=1: raise ValueError('Invalid threshold')

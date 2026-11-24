@@ -1,0 +1,125 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-11-18T15:53:50.156404+00:00",
+  "fixture": {
+    "event_id": "EN2_123248a7419330945446567e",
+    "league": "EN2",
+    "season": "2026-27",
+    "date": "2026-11-24",
+    "home": "portsmouth fc",
+    "away": "west ham united fc",
+    "home_name": "Portsmouth FC",
+    "away_name": "West Ham United FC",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/en.2.json",
+    "captured_at_utc": "2026-11-18T15:53:46.025564+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null,
+    "original_date": null,
+    "date_correction_verified": null,
+    "license_url": null,
+    "source_sha256": null,
+    "fixture_verification_url": null,
+    "actual_start_utc": null,
+    "source_original_date": "2026-11-24",
+    "verified_start_utc": "2026-11-24T19:45:00+00:00",
+    "independent_fixture": {
+      "provider_event_id": "401880143",
+      "league": "EN2",
+      "season_year": 2026,
+      "start_utc": "2026-11-24T19:45:00+00:00",
+      "captured_at": "2026-11-17T16:25:36.103372+00:00",
+      "home_name": "Portsmouth",
+      "away_name": "West Ham United",
+      "provider_home_id": "385",
+      "provider_away_id": "371",
+      "source_url": "https://www.espn.com/soccer/game/_/gameId/401880143",
+      "status": "scheduled",
+      "event_id": "EN2_123248a7419330945446567e",
+      "home": "portsmouth fc",
+      "away": "west ham united fc"
+    }
+  },
+  "prediction": {
+    "model": "football-opponent-v1",
+    "league": "EN2",
+    "home": "portsmouth fc",
+    "away": "west ham united fc",
+    "expected_home_goals": 1.5263358139434604,
+    "expected_away_goals": 1.746647979912265,
+    "probabilities": {
+      "home": 0.3385490115715913,
+      "draw": 0.22989585261848736,
+      "away": 0.43155513580992155
+    },
+    "predicted_outcome": "away",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.8380830014837535,
+      "2.5": 0.6351190483203872,
+      "3.5": 0.41368647184019053
+    },
+    "both_teams_score": 0.646205228494775,
+    "total_goals_80": [
+      1,
+      6
+    ],
+    "training_cutoff_exclusive": "2026-11-18",
+    "training_games": 1659,
+    "prior_team_games": {
+      "portsmouth fc": 107,
+      "west ham united fc": 15
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "settings": {
+      "half_life_days": 180.0,
+      "shrinkage_games": 8.0,
+      "window_days": 1095
+    },
+    "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+    "low_score_rho": 0.0,
+    "research_candidate": false
+  },
+  "archive_sha256": "ab8269a2d0dcd9525a6684cc3d1b9e04e2b02414af3ae784605fd3a147f342dd",
+  "source_code_sha256": "c1e6ddfededc35b38609ae5a143347dfeb9ec4dfe5f707f70a582433dfcd044f",
+  "requested_model_variant": "opponent",
+  "history_health": {
+    "spec": "football-history-health-v1",
+    "checked_at_utc": "2026-11-18T15:53:48.182852+00:00",
+    "information_cutoff_exclusive": "2026-11-18",
+    "teams": {
+      "portsmouth fc": {
+        "prior_finals": 199,
+        "active_season_finals": 15,
+        "last_final_date": "2026-11-07",
+        "days_since_last_final": 11,
+        "unresolved_past_fixture_ids": []
+      },
+      "west ham united fc": {
+        "prior_finals": 15,
+        "active_season_finals": 15,
+        "last_final_date": "2026-11-07",
+        "days_since_last_final": 11,
+        "unresolved_past_fixture_ids": []
+      }
+    },
+    "diagnostic_gate_passed": true,
+    "blocking_issues": [],
+    "max_history_age_days": 30,
+    "calendar_completeness_verified": false,
+    "note": "Diagnostic policy, not a validated success threshold. Unresolved fixtures may be postponed or missing results. Fresh source captures do not make old histories current."
+  },
+  "selection_policy": "Current-history diagnostic gate plus existing model issues; research only, no validated recommendation.",
+  "payload_sha256": "af1277b369bc05ded6a64d004365d88caaafd82e4534ed0ff903d7263d1e1579"
+}

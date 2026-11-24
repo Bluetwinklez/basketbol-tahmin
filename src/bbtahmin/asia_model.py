@@ -11,7 +11,7 @@ from scipy.stats import norm
 from sklearn.linear_model import Ridge,LogisticRegression
 from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler
-from .ozellik import build_features,FEATURES
+from .ozellik import build_features,select_columns,FEATURES
 from .veri.asia import CODES,NAMES
 
 SPEC='asia-separate-prior-policy-v1'
@@ -34,7 +34,7 @@ def load(code,expanded_history=False):
     return g
 
 
-def fit_fold(g,x,season):
+def fit_fold(g,x,season,select=True):
     counts=g.groupby('sezon').size()
     earlier=sorted(s for s,n in counts.items() if s<season and n>=50)
     if len(earlier)<2:raise ValueError('Two earlier seasons are required')
@@ -43,10 +43,12 @@ def fit_fold(g,x,season):
     if train.sum()<150 or val.sum()<50:raise ValueError('Need 150 training and 50 previous-season calibration games')
     target=(g.ev_skor-g.dep_skor).to_numpy(float);total=(g.ev_skor+g.dep_skor).to_numpy(float)
     y=(target>0).astype(int);score_predictions=[];calibration=[];validation=[]
+    # Frozen shadow pipelines keep their original base columns (select=False).
+    cols=select_columns(x,target,train,val) if select else FEATURES
     for values in (target,total):
         make=lambda:make_pipeline(StandardScaler(),Ridge(alpha=10.))
-        inner=make().fit(x.loc[train,FEATURES],values[train]);pv=inner.predict(x.loc[val,FEATURES])
-        final=make().fit(x.loc[final_train,FEATURES],values[final_train]);pt=final.predict(x.loc[test,FEATURES])
+        inner=make().fit(x.loc[train,cols],values[train]);pv=inner.predict(x.loc[val,cols])
+        final=make().fit(x.loc[final_train,cols],values[final_train]);pt=final.predict(x.loc[test,cols])
         residual=values[val]-pv;validation.append(pv);score_predictions.append(pt)
         calibration.append(dict(sigma=max(float(np.std(residual,ddof=1)),1.),bias=float(np.mean(residual))))
     days=g.loc[val,'tarih_utc'].dt.floor('D');unique=sorted(days.unique());boundary=unique[len(unique)//2]
@@ -54,11 +56,11 @@ def fit_fold(g,x,season):
     if min(cal.sum(),selection.sum())<20:raise ValueError('Need 20 games in disjoint calibration/selection halves')
     selection_sigma=max(float(np.std((target[val]-validation[0])[cal],ddof=1)),1.)
     clf=lambda:make_pipeline(StandardScaler(),LogisticRegression(C=1.,max_iter=1000))
-    inner=clf().fit(x.loc[train,FEATURES],y[train]);final=clf().fit(x.loc[final_train,FEATURES],y[final_train])
-    pv={'score':norm.cdf(validation[0]/selection_sigma),'logistic':inner.predict_proba(x.loc[val,FEATURES])[:,1],
+    inner=clf().fit(x.loc[train,cols],y[train]);final=clf().fit(x.loc[final_train,cols],y[final_train])
+    pv={'score':norm.cdf(validation[0]/selection_sigma),'logistic':inner.predict_proba(x.loc[val,cols])[:,1],
         'elo':x.loc[val,'elo_p'].to_numpy()}
     pt={'score':norm.cdf(score_predictions[0]/calibration[0]['sigma']),
-        'logistic':final.predict_proba(x.loc[test,FEATURES])[:,1],'elo':x.loc[test,'elo_p'].to_numpy()}
+        'logistic':final.predict_proba(x.loc[test,cols])[:,1],'elo':x.loc[test,'elo_p'].to_numpy()}
     pv['ensemble']=np.mean(list(pv.values()),axis=0);pt['ensemble']=np.mean(list(pt.values()),axis=0)
     def loss(p):
         p=np.clip(p[selection],1e-12,1-1e-12);labels=y[val][selection]
@@ -68,7 +70,7 @@ def fit_fold(g,x,season):
     selected=min(losses,key=lambda name:(losses[name],name))
     info=dict(season=season,previous_season=previous,training_games=int(train.sum()),calibration_games=int(cal.sum()),
         final_training_games=int(final_train.sum()),calibration_season_gap=int(season[:4])-int(previous[:4]),
-        selection_games=int(selection.sum()),selection_window_start_utc=boundary.isoformat(),selected=selected,
+        selection_games=int(selection.sum()),selection_window_start_utc=boundary.isoformat(),selected=selected,extended_features=len(cols)>len(FEATURES),
         selection_log_loss=losses,rule='Lowest log loss on the second UTC-day half of the preceding season. Score probabilities calibrate on its first half. Fixed learners; test outcomes never select a candidate.')
     return pt,score_predictions,calibration,info
 

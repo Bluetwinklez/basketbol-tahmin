@@ -1,0 +1,123 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-11-01T11:30:44.808504+00:00",
+  "fixture": {
+    "event_id": "DE1_6b10a84879997b3690d13d2a",
+    "league": "DE1",
+    "season": "2026-27",
+    "date": "2026-11-07",
+    "home": "1. fsv mainz 05",
+    "away": "fc bayern munchen",
+    "home_name": "1. FSV Mainz 05",
+    "away_name": "FC Bayern München",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/de.1.json",
+    "captured_at_utc": "2026-11-01T11:30:39.754502+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null,
+    "original_date": null,
+    "date_correction_verified": null,
+    "license_url": null,
+    "source_sha256": null,
+    "fixture_verification_url": null,
+    "actual_start_utc": null,
+    "source_original_date": "2026-11-07",
+    "verified_start_utc": "2026-11-07T14:30:00+00:00",
+    "independent_fixture": {
+      "provider_event_id": "401884740",
+      "league": "DE1",
+      "season_year": 2026,
+      "start_utc": "2026-11-07T14:30:00+00:00",
+      "captured_at": "2026-10-31T13:00:03.985540+00:00",
+      "home_name": "Mainz",
+      "away_name": "Bayern Munich",
+      "provider_home_id": "2950",
+      "provider_away_id": "132",
+      "source_url": "https://www.espn.com/soccer/game/_/gameId/401884740",
+      "status": "scheduled",
+      "event_id": "DE1_6b10a84879997b3690d13d2a",
+      "home": "1. fsv mainz 05",
+      "away": "fc bayern munchen"
+    }
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "DE1",
+    "home": "1. fsv mainz 05",
+    "away": "fc bayern munchen",
+    "expected_home_goals": 1.2211084481258911,
+    "expected_away_goals": 2.433709904084157,
+    "probabilities": {
+      "home": 0.17667029048698996,
+      "draw": 0.18266060551992686,
+      "away": 0.6406691039930833
+    },
+    "predicted_outcome": "away",
+    "most_likely_score": [
+      1,
+      2
+    ],
+    "over": {
+      "1.5": 0.8795975580485159,
+      "2.5": 0.7068411539798051,
+      "3.5": 0.4963767286290923
+    },
+    "both_teams_score": 0.6432522652219232,
+    "total_goals_80": [
+      1,
+      6
+    ],
+    "training_cutoff_exclusive": "2026-11-01",
+    "training_games": 901,
+    "prior_team_games": {
+      "1. fsv mainz 05": 101,
+      "fc bayern munchen": 100
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "settings": {
+      "half_life_days": 180.0,
+      "shrinkage_games": 8.0,
+      "window_days": 1095
+    },
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "82238da3574c0407c41bdd468d4da3c850847dce984531e441615d916b91db52",
+  "source_code_sha256": "a8d9ce5c692529e6af6dfbcfc8112b7939f37ce83631889026a0559ee22fb8a5",
+  "requested_model_variant": "baseline",
+  "history_health": {
+    "spec": "football-history-health-v1",
+    "checked_at_utc": "2026-11-01T11:30:43.538127+00:00",
+    "information_cutoff_exclusive": "2026-11-01",
+    "teams": {
+      "1. fsv mainz 05": {
+        "prior_finals": 552,
+        "active_season_finals": 8,
+        "last_final_date": "2026-10-30",
+        "days_since_last_final": 2,
+        "unresolved_past_fixture_ids": []
+      },
+      "fc bayern munchen": {
+        "prior_finals": 211,
+        "active_season_finals": 7,
+        "last_final_date": "2026-10-25",
+        "days_since_last_final": 7,
+        "unresolved_past_fixture_ids": []
+      }
+    },
+    "diagnostic_gate_passed": true,
+    "blocking_issues": [],
+    "max_history_age_days": 30,
+    "calendar_completeness_verified": false,
+    "note": "Diagnostic policy, not a validated success threshold. Unresolved fixtures may be postponed or missing results. Fresh source captures do not make old histories current."
+  },
+  "selection_policy": "Current-history diagnostic gate plus existing model issues; research only, no validated recommendation.",
+  "payload_sha256": "11cfc2c5b29cd6f508dae128419a11cb0b53d7a2a0f91a1659f857e380b785bd"
+}

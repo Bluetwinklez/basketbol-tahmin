@@ -11,6 +11,10 @@ RATING_FEATURES=[f'{kind}_{int(rate*100):02d}' for rate in RATING_RATES for kind
 FEATURES=['elo_diff','home','points_for_diff','points_against_diff','margin_diff','total_mean',
           'rest_diff','back_to_back_diff','load7_diff','road_streak_diff','games_diff','europe_load_diff',
           *RATING_FEATURES]
+# Sezon evresi, sezon içi fark, iç saha/deplasman formu ve geçen sezon farkı. Her zaman üretilir; bir ligde
+# kullanılıp kullanılmayacağına select_columns yalnız önceki sezonun doğrulamasıyla karar verir.
+EXTENDED_FEATURES=['min_games_log','early','elo_diff_early','rmarj_12_early','season_margin_diff',
+                   'venue_form_diff','prev_margin_diff']
 def build_features(games,k=20,advantage=50,shrink=.25,alpha=.2,mov=True):
     """Same UTC-day outcomes are withheld until all that day's predictions exist."""
     data=games.sort_values(['tarih_utc','mac_id']).copy()
@@ -30,14 +34,16 @@ def build_features(games,k=20,advantage=50,shrink=.25,alpha=.2,mov=True):
                 identity=(row.lig,name)
                 if identity not in state:
                     state[identity]=dict(elo=1500.,season=row.sezon,pf=0.,pa=0.,n=0,seen=False,
-                        dates=deque(),last=None,road=0,off={r:0. for r in RATING_RATES},dfn={r:0. for r in RATING_RATES})
+                        dates=deque(),last=None,road=0,off={r:0. for r in RATING_RATES},dfn={r:0. for r in RATING_RATES},
+                        hm=0.,am=0.,hseen=False,aseen=False,sm=0.,prev=0.)
                 s=state[identity]
                 if s['season']!=row.sezon:
                     s['elo']=1500+(1-shrink)*(s['elo']-1500)
                     for r in RATING_RATES:
                         s['off'][r]*=1-shrink; s['dfn'][r]*=1-shrink
                     s['season']=row.sezon
-                    s['n']=0
+                    s['prev']=s['sm']/s['n'] if s['n'] else 0.
+                    s['n']=0; s['sm']=0.
                 while s['dates'] and (day-s['dates'][0]).days>7: s['dates'].popleft()
                 teams.append(s)
             h,a=teams
@@ -62,6 +68,11 @@ def build_features(games,k=20,advantage=50,shrink=.25,alpha=.2,mov=True):
                 load7_diff=len(h['dates'])-len(a['dates']),road_streak_diff=h['road']-a['road'],
                 games_diff=h['n']-a['n'],europe_load_diff=loads[0]-loads[1],
                 elo_p=expected(h['elo'],a['elo'],advantage*home))
+            least=min(h['n'],a['n'])
+            early=1/(1+least/5)
+            record.update(min_games_log=np.log1p(least),early=early,elo_diff_early=record['elo_diff']*early,
+                season_margin_diff=h['sm']/(h['n']+5)-a['sm']/(a['n']+5),
+                venue_form_diff=(h['hm']-a['am'])*home,prev_margin_diff=h['prev']-a['prev'])
             # Beklenen sayı = lig ortalaması ± ev avantajının yarısı + kendi hücumu − rakibin savunması.
             hsum,hcount=league_home[row.lig]
             half=home*(hsum/hcount if hcount else 0.)/2
@@ -75,6 +86,7 @@ def build_features(games,k=20,advantage=50,shrink=.25,alpha=.2,mov=True):
                 tag=f'{int(r*100):02d}'
                 record[f'rmarj_{tag}']=eh-ea
                 record[f'rtop_{tag}']=eh+ea
+            record['rmarj_12_early']=record['rmarj_12']*early
             out.append(record)
             prepared.append((row,h,a,home,expected_points))
         for row,h,a,home,expected_points in prepared:
@@ -94,6 +106,11 @@ def build_features(games,k=20,advantage=50,shrink=.25,alpha=.2,mov=True):
                                        (a,row.dep_skor,row.ev_skor,True,row.dep)]:
                 s['pf']=float(pf) if not s['n'] else alpha*pf+(1-alpha)*s['pf']
                 s['pa']=float(pa) if not s['n'] else alpha*pa+(1-alpha)*s['pa']
+                s['sm']+=float(pf-pa)
+                if home:
+                    side,seen=('am','aseen') if is_away else ('hm','hseen')
+                    s[side]=float(pf-pa) if not s[seen] else alpha*(pf-pa)+(1-alpha)*s[side]
+                    s[seen]=True
                 s['n']+=1; s['seen']=True; s['last']=day; s['dates'].append(day)
                 league_points[row.lig][0]+=float(pf); league_points[row.lig][1]+=1
                 s['road']=s['road']+1 if is_away else 0
@@ -108,3 +125,30 @@ def features_for_match(history,match,**params):
     combined=pd.DataFrame(past.to_dict('records')+[query])
     combined['tarih_utc']=pd.to_datetime(combined.tarih_utc,utc=True)
     return build_features(combined,**params).set_index('mac_id').loc[query['mac_id']]
+
+def select_columns(x,margin,train,validation,base=None):
+    """Temel ya da genişletilmiş özellik kümesi; seçim yalnız önceki sezonun (doğrulama) log loss'uyla yapılır.
+
+    Genişletilmiş küme her ligde yardım etmiyor (FEC, VTB, ABA, TR_BSL'de geçmiş testte kötüleştirdi);
+    bu yüzden ligden lige sabit bir tercih yerine her katlamada yeniden seçilir. Eşitlikte temel küme kalır.
+    """
+    from scipy.stats import norm
+    from sklearn.linear_model import Ridge
+    from sklearn.metrics import log_loss
+    from sklearn.pipeline import make_pipeline
+    from sklearn.preprocessing import StandardScaler
+    base=list(base or FEATURES)
+    extended=base+[c for c in EXTENDED_FEATURES if c in x.columns and c not in base]
+    train=np.asarray(train,dtype=bool);validation=np.asarray(validation,dtype=bool);margin=np.asarray(margin,dtype=float)
+    if len(extended)==len(base) or train.sum()<50 or validation.sum()<20:
+        return base
+    labels=(margin[validation]>0).astype(int)
+    if labels.min()==labels.max():
+        return base
+    losses=[]
+    for cols in (base,extended):
+        model=make_pipeline(StandardScaler(),Ridge(alpha=10.)).fit(x.loc[train,cols],margin[train])
+        pv=model.predict(x.loc[validation,cols])
+        sigma=max(float(np.std(margin[validation]-pv,ddof=1)),1e-6)
+        losses.append(log_loss(labels,np.clip(norm.cdf(pv/sigma),1e-6,1-1e-6),labels=[0,1]))
+    return extended if losses[1]<losses[0] else base

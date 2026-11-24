@@ -1,0 +1,125 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-11-16T16:19:43.305023+00:00",
+  "fixture": {
+    "event_id": "IT1_41eacddf80858afc603a8841",
+    "league": "IT1",
+    "season": "2026-27",
+    "date": "2026-11-22",
+    "home": "atalanta bc",
+    "away": "fc internazionale milano",
+    "home_name": "Atalanta BC",
+    "away_name": "FC Internazionale Milano",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/it.1.json",
+    "captured_at_utc": "2026-11-16T16:15:11.774042+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null,
+    "original_date": null,
+    "date_correction_verified": null,
+    "license_url": null,
+    "source_sha256": null,
+    "fixture_verification_url": null,
+    "actual_start_utc": null,
+    "source_original_date": "2026-11-22",
+    "verified_start_utc": "2026-11-22T19:45:00+00:00",
+    "independent_fixture": {
+      "provider_event_id": "401875001",
+      "league": "IT1",
+      "season_year": 2026,
+      "start_utc": "2026-11-22T19:45:00+00:00",
+      "captured_at": "2026-11-16T16:18:41.376123+00:00",
+      "home_name": "Atalanta",
+      "away_name": "Internazionale",
+      "provider_home_id": "105",
+      "provider_away_id": "110",
+      "source_url": "https://www.espn.com/soccer/game/_/gameId/401875001",
+      "status": "scheduled",
+      "event_id": "IT1_41eacddf80858afc603a8841",
+      "home": "atalanta bc",
+      "away": "fc internazionale milano"
+    }
+  },
+  "prediction": {
+    "model": "football-opponent-v1",
+    "league": "IT1",
+    "home": "atalanta bc",
+    "away": "fc internazionale milano",
+    "expected_home_goals": 1.266145260649726,
+    "expected_away_goals": 1.961593469209512,
+    "probabilities": {
+      "home": 0.24512761672024327,
+      "draw": 0.21902941058646108,
+      "away": 0.5358429726932955
+    },
+    "predicted_outcome": "away",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.8323826303826258,
+      "2.5": 0.6258552522402238,
+      "3.5": 0.4036497798380517
+    },
+    "both_teams_score": 0.6170966604858407,
+    "total_goals_80": [
+      1,
+      6
+    ],
+    "training_cutoff_exclusive": "2026-11-16",
+    "training_games": 1120,
+    "prior_team_games": {
+      "atalanta bc": 112,
+      "fc internazionale milano": 112
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "settings": {
+      "half_life_days": 180.0,
+      "shrinkage_games": 8.0,
+      "window_days": 1095
+    },
+    "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+    "low_score_rho": 0.0,
+    "research_candidate": false
+  },
+  "archive_sha256": "9f5e6469c4b49c74e0b8187d57b9c9fd24ff590459b75029db734e5b443ab2c5",
+  "source_code_sha256": "9ae7a915e48252a51fd91ee21ca83246f5300ebbf4aa27ae8654671ae69b3baf",
+  "requested_model_variant": "opponent",
+  "history_health": {
+    "spec": "football-history-health-v1",
+    "checked_at_utc": "2026-11-16T16:19:41.600884+00:00",
+    "information_cutoff_exclusive": "2026-11-16",
+    "teams": {
+      "atalanta bc": {
+        "prior_finals": 238,
+        "active_season_finals": 11,
+        "last_final_date": "2026-11-08",
+        "days_since_last_final": 8,
+        "unresolved_past_fixture_ids": []
+      },
+      "fc internazionale milano": {
+        "prior_finals": 238,
+        "active_season_finals": 11,
+        "last_final_date": "2026-11-08",
+        "days_since_last_final": 8,
+        "unresolved_past_fixture_ids": []
+      }
+    },
+    "diagnostic_gate_passed": true,
+    "blocking_issues": [],
+    "max_history_age_days": 30,
+    "calendar_completeness_verified": false,
+    "note": "Diagnostic policy, not a validated success threshold. Unresolved fixtures may be postponed or missing results. Fresh source captures do not make old histories current."
+  },
+  "selection_policy": "Current-history diagnostic gate plus existing model issues; research only, no validated recommendation.",
+  "payload_sha256": "e41018991c99753e740d9167e5db3c0894aa62c1b1086dc8ba7171fddc72542e"
+}

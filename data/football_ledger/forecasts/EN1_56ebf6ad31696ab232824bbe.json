@@ -1,0 +1,123 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-10-31T13:01:07.439571+00:00",
+  "fixture": {
+    "event_id": "EN1_56ebf6ad31696ab232824bbe",
+    "league": "EN1",
+    "season": "2026-27",
+    "date": "2026-11-07",
+    "home": "leeds united fc",
+    "away": "tottenham hotspur fc",
+    "home_name": "Leeds United FC",
+    "away_name": "Tottenham Hotspur FC",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/en.1.json",
+    "captured_at_utc": "2026-10-31T12:56:06.672847+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null,
+    "original_date": null,
+    "date_correction_verified": null,
+    "license_url": null,
+    "source_sha256": null,
+    "fixture_verification_url": null,
+    "actual_start_utc": null,
+    "source_original_date": "2026-11-07",
+    "verified_start_utc": "2026-11-07T12:30:00+00:00",
+    "independent_fixture": {
+      "provider_event_id": "401878758",
+      "league": "EN1",
+      "season_year": 2026,
+      "start_utc": "2026-11-07T12:30:00+00:00",
+      "captured_at": "2026-10-31T13:00:03.490483+00:00",
+      "home_name": "Leeds United",
+      "away_name": "Tottenham Hotspur",
+      "provider_home_id": "357",
+      "provider_away_id": "367",
+      "source_url": "https://www.espn.com/soccer/game/_/gameId/401878758",
+      "status": "scheduled",
+      "event_id": "EN1_56ebf6ad31696ab232824bbe",
+      "home": "leeds united fc",
+      "away": "tottenham hotspur fc"
+    }
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "EN1",
+    "home": "leeds united fc",
+    "away": "tottenham hotspur fc",
+    "expected_home_goals": 1.3958882060250664,
+    "expected_away_goals": 1.0255616801588332,
+    "probabilities": {
+      "home": 0.45427757488849113,
+      "draw": 0.2693208809603386,
+      "away": 0.2764015441511704
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.6961999370522929,
+      "2.5": 0.43588526227555113,
+      "3.5": 0.22577228240550448
+    },
+    "both_teams_score": 0.48258478421559176,
+    "total_goals_80": [
+      1,
+      4
+    ],
+    "training_cutoff_exclusive": "2026-10-31",
+    "training_games": 1120,
+    "prior_team_games": {
+      "leeds united fc": 46,
+      "tottenham hotspur fc": 112
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "settings": {
+      "half_life_days": 180.0,
+      "shrinkage_games": 8.0,
+      "window_days": 1095
+    },
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "c81b6729c8b62733beea937248ebd8a982e7a27b20ce9ef3b82e55c9732aeb0e",
+  "source_code_sha256": "a8d9ce5c692529e6af6dfbcfc8112b7939f37ce83631889026a0559ee22fb8a5",
+  "requested_model_variant": "baseline",
+  "history_health": {
+    "spec": "football-history-health-v1",
+    "checked_at_utc": "2026-10-31T13:01:05.236923+00:00",
+    "information_cutoff_exclusive": "2026-10-31",
+    "teams": {
+      "leeds united fc": {
+        "prior_finals": 160,
+        "active_season_finals": 8,
+        "last_final_date": "2026-10-25",
+        "days_since_last_final": 6,
+        "unresolved_past_fixture_ids": []
+      },
+      "tottenham hotspur fc": {
+        "prior_finals": 236,
+        "active_season_finals": 8,
+        "last_final_date": "2026-10-24",
+        "days_since_last_final": 7,
+        "unresolved_past_fixture_ids": []
+      }
+    },
+    "diagnostic_gate_passed": true,
+    "blocking_issues": [],
+    "max_history_age_days": 30,
+    "calendar_completeness_verified": false,
+    "note": "Diagnostic policy, not a validated success threshold. Unresolved fixtures may be postponed or missing results. Fresh source captures do not make old histories current."
+  },
+  "selection_policy": "Current-history diagnostic gate plus existing model issues; research only, no validated recommendation.",
+  "payload_sha256": "3db882e52d71289ab3abacd63de3acaab97f08ebe2158ec75250fd47a4372197"
+}

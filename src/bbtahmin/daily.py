@@ -9,13 +9,14 @@ import io
 import json
 import sys
 from pathlib import Path
+from tempfile import NamedTemporaryFile
 
 import pandas as pd
 
 from .prospective import freeze, settle, verify
 from .quality import timestamp
 
-LEAGUES = ('E', 'KBL', 'JP_B1', 'JP_B2', 'PBA_GOV', 'ABA', 'ECW', 'FEC', 'UKR', 'TR_BSL', 'ARG_LNB')
+LEAGUES = ('E', 'KBL', 'JP_B1', 'JP_B2', 'PBA_GOV', 'ABA', 'ECW', 'FEC', 'UKR', 'TR_BSL', 'ARG_LNB', 'NBA')
 EURO_URL = 'https://api-live.euroleague.net/v2/competitions/E/seasons/{season}/games'
 
 
@@ -24,7 +25,8 @@ def refresh(leagues):
     outcomes = {}
     groups = [('E', ['E']), ('KBL', ['KBL']),
               ('Japan', [c for c in leagues if c.startswith('JP_')]), ('PBA', ['PBA_GOV']), ('ABA', ['ABA']),
-              ('ECW', ['ECW']), ('FEC', ['FEC']), ('UKR', ['UKR']), ('TR_BSL', ['TR_BSL']), ('ARG_LNB', ['ARG_LNB'])]
+              ('ECW', ['ECW']), ('FEC', ['FEC']), ('UKR', ['UKR']), ('TR_BSL', ['TR_BSL']), ('ARG_LNB', ['ARG_LNB']),
+              ('NBA', ['NBA'])]
     today = pd.Timestamp.now(tz='UTC')
     year = today.year if today.month >= 7 else today.year - 1
     for source, codes in groups:
@@ -47,6 +49,21 @@ def refresh(leagues):
                     target = Path('data/schedules/E.json')
                     target.parent.mkdir(parents=True, exist_ok=True)
                     target.write_text(json.dumps(dict(fixtures=fixtures, results=results), indent=2),encoding='utf8')
+                elif source == 'NBA':
+                    from .veri.nba_schedule import collect
+                    fixtures, results = collect()
+                    target = Path('data/schedules/NBA.json')
+                    target.parent.mkdir(parents=True, exist_ok=True)
+                    staged = None
+                    try:
+                        with NamedTemporaryFile(mode='w', encoding='utf8', dir=target.parent,
+                                                suffix='.part', delete=False) as stream:
+                            staged = Path(stream.name)
+                            json.dump(dict(fixtures=fixtures, results=results), stream, indent=2)
+                        staged.replace(target)
+                    finally:
+                        if staged is not None:
+                            staged.unlink(missing_ok=True)
                 elif source == 'KBL':
                     from .veri.korea import collect
                     collect(first=today.year, last=today.year)
@@ -81,10 +98,11 @@ def refresh(leagues):
 
 def source_facts(code):
     """Read fixture capture times and finals without claiming archive freshness."""
-    if code == 'E':
-        path = Path('data/schedules/E.json')
+    if code in ('E', 'NBA'):
+        path = Path(f'data/schedules/{code}.json')
         if not path.exists():
-            raise ValueError('No EuroLeague schedule snapshot; run with --guncelle')
+            league = 'EuroLeague' if code == 'E' else code
+            raise ValueError(f'No {league} schedule snapshot; run with --guncelle')
         payload = json.loads(path.read_text(encoding='utf8'))
         return payload['fixtures'], payload['results']
     root = Path('data/competitions' if code in ('ABA', 'ECW', 'FEC', 'UKR', 'TR_BSL', 'ARG_LNB') else 'data/asia')
@@ -123,7 +141,7 @@ def record_path(root, fixture):
     return root / 'forecasts' / (hashlib.sha256(identity.encode()).hexdigest() + '.json')
 
 
-def run(leagues=LEAGUES, output='rapor/daily', update=False, hours=48, threshold=.65, now=None):
+def run(leagues=LEAGUES, output='rapor/daily', update=False, hours=48, threshold=.65, now=None, *, skip_sources=()):
     if not leagues or any(c not in LEAGUES for c in leagues):
         raise ValueError('Unsupported daily schedule league')
     if not 1 <= hours <= 168 or not .5 <= threshold <= 1:
@@ -132,7 +150,8 @@ def run(leagues=LEAGUES, output='rapor/daily', update=False, hours=48, threshold
         raise ValueError('Historical clock cannot refresh current providers')
     root = Path(output)
     root.mkdir(parents=True, exist_ok=True)
-    refreshed = refresh(leagues) if update else {}
+    refresh_leagues = [code for code in leagues if code not in skip_sources] if skip_sources else leagues
+    refreshed = refresh(refresh_leagues) if update else {}
     clock = timestamp(now or pd.Timestamp.now(tz='UTC'))
     report = dict(spec='daily-research-v1', checked_at_utc=clock.isoformat(), sources=refreshed,
                   probability_threshold=threshold, upcoming=[], skipped=[], settlements=[])
@@ -165,6 +184,8 @@ def run(leagues=LEAGUES, output='rapor/daily', update=False, hours=48, threshold
     from .tahmin import tahmin_et
     from threadpoolctl import threadpool_limits
     for code in dict.fromkeys(leagues):
+        source_skipped = code in skip_sources
+        source_failed = refreshed.get(code, {}).get('status') == 'failed'
         try:
             fixtures, results = source_facts(code)
             all_results.extend(results)
@@ -190,7 +211,9 @@ def run(leagues=LEAGUES, output='rapor/daily', update=False, hours=48, threshold
                     p = item['prediction']
                     entry['record_status'] = 'existing_immutable'
                 else:
-                    if refreshed.get(code, {}).get('status') == 'failed':
+                    if source_skipped:
+                        raise ValueError('Refresh skipped; no new forecast from this source')
+                    if source_failed:
                         raise ValueError('Refresh failed; no new forecast from this source')
                     captured = timestamp(f['captured_at'])
                     if not captured <= clock or clock - captured > pd.Timedelta(hours=24):
@@ -210,11 +233,11 @@ def run(leagues=LEAGUES, output='rapor/daily', update=False, hours=48, threshold
                              threshold_passed=max(p['ev_kazanir'], 1-p['ev_kazanir']) >= threshold,
                              source_confirmation_fresh=bool(timestamp(f['captured_at']) <= clock and
                                  clock-timestamp(f['captured_at']) <= pd.Timedelta(hours=24) and
-                                 refreshed.get(code, {}).get('status') != 'failed'),
+                                 not source_skipped and not source_failed),
                              selected=bool(p.get('selection_eligible', False) and
                                            timestamp(f['captured_at']) <= clock and
                                            clock-timestamp(f['captured_at']) <= pd.Timedelta(hours=24) and
-                                           refreshed.get(code, {}).get('status') != 'failed' and
+                                           not source_skipped and not source_failed and
                                            max(p['ev_kazanir'], 1-p['ev_kazanir']) >= threshold))
                 report['upcoming'].append(entry)
             except Exception as exc:

@@ -1,0 +1,125 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-11-15T14:12:37.911619+00:00",
+  "fixture": {
+    "event_id": "FR1_b98320705e816cf814f4df72",
+    "league": "FR1",
+    "season": "2026-27",
+    "date": "2026-11-22",
+    "home": "paris fc",
+    "away": "angers sco",
+    "home_name": "Paris FC",
+    "away_name": "Angers SCO",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/fr.1.json",
+    "captured_at_utc": "2026-11-15T14:12:34.153556+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null,
+    "original_date": null,
+    "date_correction_verified": null,
+    "license_url": null,
+    "source_sha256": null,
+    "fixture_verification_url": null,
+    "actual_start_utc": null,
+    "source_original_date": "2026-11-22",
+    "verified_start_utc": "2026-11-22T14:00:00+00:00",
+    "independent_fixture": {
+      "provider_event_id": "401876397",
+      "league": "FR1",
+      "season_year": 2026,
+      "start_utc": "2026-11-22T14:00:00+00:00",
+      "captured_at": "2026-11-15T12:23:44.254738+00:00",
+      "home_name": "Paris FC",
+      "away_name": "Angers",
+      "provider_home_id": "6851",
+      "provider_away_id": "7868",
+      "source_url": "https://www.espn.com/soccer/game/_/gameId/401876397",
+      "status": "scheduled",
+      "event_id": "FR1_b98320705e816cf814f4df72",
+      "home": "paris fc",
+      "away": "angers sco"
+    }
+  },
+  "prediction": {
+    "model": "football-opponent-v1",
+    "league": "FR1",
+    "home": "paris fc",
+    "away": "angers sco",
+    "expected_home_goals": 1.866496773613127,
+    "expected_away_goals": 0.7966324465796173,
+    "probabilities": {
+      "home": 0.6270071108825936,
+      "draw": 0.21894899987168537,
+      "away": 0.15404388924572088
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      1,
+      0
+    ],
+    "over": {
+      "1.5": 0.7445711699668307,
+      "2.5": 0.49730075427945286,
+      "3.5": 0.27779639784403237
+    },
+    "both_teams_score": 0.4642204876606382,
+    "total_goals_80": [
+      1,
+      5
+    ],
+    "training_cutoff_exclusive": "2026-11-15",
+    "training_games": 902,
+    "prior_team_games": {
+      "paris fc": 44,
+      "angers sco": 78
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "settings": {
+      "half_life_days": 180.0,
+      "shrinkage_games": 8.0,
+      "window_days": 1095
+    },
+    "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+    "low_score_rho": 0.0,
+    "research_candidate": false
+  },
+  "archive_sha256": "866a347e5473f8ff444889d0623ccb4cd1bb893121a5f8fac1c6a2ce4a09d5cb",
+  "source_code_sha256": "872a79ef7a219c008dc47609791f05cf4f684195b4e761af273908e452e2ad39",
+  "requested_model_variant": "opponent",
+  "history_health": {
+    "spec": "football-history-health-v1",
+    "checked_at_utc": "2026-11-15T14:12:35.996646+00:00",
+    "information_cutoff_exclusive": "2026-11-15",
+    "teams": {
+      "paris fc": {
+        "prior_finals": 44,
+        "active_season_finals": 10,
+        "last_final_date": "2026-11-07",
+        "days_since_last_final": 8,
+        "unresolved_past_fixture_ids": []
+      },
+      "angers sco": {
+        "prior_finals": 372,
+        "active_season_finals": 10,
+        "last_final_date": "2026-11-08",
+        "days_since_last_final": 7,
+        "unresolved_past_fixture_ids": []
+      }
+    },
+    "diagnostic_gate_passed": true,
+    "blocking_issues": [],
+    "max_history_age_days": 30,
+    "calendar_completeness_verified": false,
+    "note": "Diagnostic policy, not a validated success threshold. Unresolved fixtures may be postponed or missing results. Fresh source captures do not make old histories current."
+  },
+  "selection_policy": "Current-history diagnostic gate plus existing model issues; research only, no validated recommendation.",
+  "payload_sha256": "1f034bd8e9622d5a43c8a4fd1a30e8685fc624646a7cfd313420e790b1c73de3"
+}

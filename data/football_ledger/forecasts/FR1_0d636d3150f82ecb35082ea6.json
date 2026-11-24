@@ -1,0 +1,125 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-11-15T12:18:18.007725+00:00",
+  "fixture": {
+    "event_id": "FR1_0d636d3150f82ecb35082ea6",
+    "league": "FR1",
+    "season": "2026-27",
+    "date": "2026-11-21",
+    "home": "rc strasbourg alsace",
+    "away": "stade brestois 29",
+    "home_name": "RC Strasbourg Alsace",
+    "away_name": "Stade Brestois 29",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/fr.1.json",
+    "captured_at_utc": "2026-11-15T12:18:12.388271+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null,
+    "original_date": null,
+    "date_correction_verified": null,
+    "license_url": null,
+    "source_sha256": null,
+    "fixture_verification_url": null,
+    "actual_start_utc": null,
+    "source_original_date": "2026-11-21",
+    "verified_start_utc": "2026-11-21T19:45:00+00:00",
+    "independent_fixture": {
+      "provider_event_id": "401876396",
+      "league": "FR1",
+      "season_year": 2026,
+      "start_utc": "2026-11-21T19:45:00+00:00",
+      "captured_at": "2026-11-14T13:47:36.229339+00:00",
+      "home_name": "Strasbourg",
+      "away_name": "Brest",
+      "provider_home_id": "180",
+      "provider_away_id": "6997",
+      "source_url": "https://www.espn.com/soccer/game/_/gameId/401876396",
+      "status": "scheduled",
+      "event_id": "FR1_0d636d3150f82ecb35082ea6",
+      "home": "rc strasbourg alsace",
+      "away": "stade brestois 29"
+    }
+  },
+  "prediction": {
+    "model": "football-opponent-v1",
+    "league": "FR1",
+    "home": "rc strasbourg alsace",
+    "away": "stade brestois 29",
+    "expected_home_goals": 1.8889351779546344,
+    "expected_away_goals": 1.5024998533850027,
+    "probabilities": {
+      "home": 0.4686707643151748,
+      "draw": 0.222608928473115,
+      "away": 0.3087203072117102
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.8521828099772331,
+      "2.5": 0.6586050374581178,
+      "3.5": 0.4397695577881101
+    },
+    "both_teams_score": 0.6598545153966047,
+    "total_goals_80": [
+      1,
+      6
+    ],
+    "training_cutoff_exclusive": "2026-11-15",
+    "training_games": 902,
+    "prior_team_games": {
+      "rc strasbourg alsace": 101,
+      "stade brestois 29": 101
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "settings": {
+      "half_life_days": 180.0,
+      "shrinkage_games": 8.0,
+      "window_days": 1095
+    },
+    "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+    "low_score_rho": 0.0,
+    "research_candidate": false
+  },
+  "archive_sha256": "ccec00f39c0788a8f46b4dd8c52d51e823433801a7640e81c29bf5175aabcc81",
+  "source_code_sha256": "872a79ef7a219c008dc47609791f05cf4f684195b4e761af273908e452e2ad39",
+  "requested_model_variant": "opponent",
+  "history_health": {
+    "spec": "football-history-health-v1",
+    "checked_at_utc": "2026-11-15T12:18:16.219037+00:00",
+    "information_cutoff_exclusive": "2026-11-15",
+    "teams": {
+      "rc strasbourg alsace": {
+        "prior_finals": 112,
+        "active_season_finals": 10,
+        "last_final_date": "2026-11-06",
+        "days_since_last_final": 9,
+        "unresolved_past_fixture_ids": []
+      },
+      "stade brestois 29": {
+        "prior_finals": 254,
+        "active_season_finals": 10,
+        "last_final_date": "2026-11-08",
+        "days_since_last_final": 7,
+        "unresolved_past_fixture_ids": []
+      }
+    },
+    "diagnostic_gate_passed": true,
+    "blocking_issues": [],
+    "max_history_age_days": 30,
+    "calendar_completeness_verified": false,
+    "note": "Diagnostic policy, not a validated success threshold. Unresolved fixtures may be postponed or missing results. Fresh source captures do not make old histories current."
+  },
+  "selection_policy": "Current-history diagnostic gate plus existing model issues; research only, no validated recommendation.",
+  "payload_sha256": "296af8a1910122784b7ccd4656375cd5439a0bf28ea8ecce6db05979f9392a38"
+}

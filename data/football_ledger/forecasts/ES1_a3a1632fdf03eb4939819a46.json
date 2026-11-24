@@ -1,0 +1,125 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-11-16T16:19:43.168119+00:00",
+  "fixture": {
+    "event_id": "ES1_a3a1632fdf03eb4939819a46",
+    "league": "ES1",
+    "season": "2026-27",
+    "date": "2026-11-22",
+    "home": "real racing club de santander",
+    "away": "real sociedad de futbol",
+    "home_name": "Real Racing Club de Santander",
+    "away_name": "Real Sociedad de Fútbol",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/es.1.json",
+    "captured_at_utc": "2026-11-16T16:15:11.774042+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null,
+    "original_date": null,
+    "date_correction_verified": null,
+    "license_url": null,
+    "source_sha256": null,
+    "fixture_verification_url": null,
+    "actual_start_utc": null,
+    "source_original_date": "2026-11-22",
+    "verified_start_utc": "2026-11-22T15:15:00+00:00",
+    "independent_fixture": {
+      "provider_event_id": "401882800",
+      "league": "ES1",
+      "season_year": 2026,
+      "start_utc": "2026-11-22T15:15:00+00:00",
+      "captured_at": "2026-11-16T16:18:40.851222+00:00",
+      "home_name": "Racing Santander",
+      "away_name": "Real Sociedad",
+      "provider_home_id": "87",
+      "provider_away_id": "89",
+      "source_url": "https://www.espn.com/soccer/game/_/gameId/401882800",
+      "status": "scheduled",
+      "event_id": "ES1_a3a1632fdf03eb4939819a46",
+      "home": "real racing club de santander",
+      "away": "real sociedad de futbol"
+    }
+  },
+  "prediction": {
+    "model": "football-opponent-v1",
+    "league": "ES1",
+    "home": "real racing club de santander",
+    "away": "real sociedad de futbol",
+    "expected_home_goals": 1.8186352722687111,
+    "expected_away_goals": 1.9570473381633529,
+    "probabilities": {
+      "home": 0.36600445279083205,
+      "draw": 0.21319029709959847,
+      "away": 0.4208052501095696
+    },
+    "predicted_outcome": "away",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.8905344829002755,
+      "2.5": 0.7271529973288416,
+      "3.5": 0.521527452682635
+    },
+    "both_teams_score": 0.7193994731377532,
+    "total_goals_80": [
+      1,
+      6
+    ],
+    "training_cutoff_exclusive": "2026-11-16",
+    "training_games": 1121,
+    "prior_team_games": {
+      "real racing club de santander": 12,
+      "real sociedad de futbol": 112
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "settings": {
+      "half_life_days": 180.0,
+      "shrinkage_games": 8.0,
+      "window_days": 1095
+    },
+    "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+    "low_score_rho": 0.0,
+    "research_candidate": false
+  },
+  "archive_sha256": "9f5e6469c4b49c74e0b8187d57b9c9fd24ff590459b75029db734e5b443ab2c5",
+  "source_code_sha256": "9ae7a915e48252a51fd91ee21ca83246f5300ebbf4aa27ae8654671ae69b3baf",
+  "requested_model_variant": "opponent",
+  "history_health": {
+    "spec": "football-history-health-v1",
+    "checked_at_utc": "2026-11-16T16:19:41.600884+00:00",
+    "information_cutoff_exclusive": "2026-11-16",
+    "teams": {
+      "real racing club de santander": {
+        "prior_finals": 12,
+        "active_season_finals": 12,
+        "last_final_date": "2026-11-07",
+        "days_since_last_final": 9,
+        "unresolved_past_fixture_ids": []
+      },
+      "real sociedad de futbol": {
+        "prior_finals": 239,
+        "active_season_finals": 12,
+        "last_final_date": "2026-11-08",
+        "days_since_last_final": 8,
+        "unresolved_past_fixture_ids": []
+      }
+    },
+    "diagnostic_gate_passed": true,
+    "blocking_issues": [],
+    "max_history_age_days": 30,
+    "calendar_completeness_verified": false,
+    "note": "Diagnostic policy, not a validated success threshold. Unresolved fixtures may be postponed or missing results. Fresh source captures do not make old histories current."
+  },
+  "selection_policy": "Current-history diagnostic gate plus existing model issues; research only, no validated recommendation.",
+  "payload_sha256": "865ef2312bf986ac482eee94c5ff8a4c88d2b693bb4c9e659d48614394cd1dfc"
+}

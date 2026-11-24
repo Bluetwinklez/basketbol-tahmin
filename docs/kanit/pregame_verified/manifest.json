@@ -1,6 +1,14 @@
 {
-  "timestamp": "2026-10-22T10:22:06.663243+00:00",
+  "timestamp": "2026-10-29T09:02:45.932261+00:00",
   "first_test": 2021,
+  "python": "3.13.17 (main, Oct 22 2026, 14:06:04) [GCC 13.3.0]",
+  "packages": {
+    "numpy": "2.2.6",
+    "pandas": "2.2.3",
+    "scipy": "1.15.3",
+    "scikit-learn": "1.6.1"
+  },
+  "prediction_sha256": "97f226965c602469239838969297f7bf2429918fc4054f3566e40044b0d7fe21",
   "dataset_sha256": "b47d00dbc49469d0511f23e1f2282a123e40302cca080aa3e6dcd85e619262b4",
   "absence_leagues": [],
   "box_leagues": [],
@@ -23,32 +31,7 @@
     "rtop_12"
   ],
   "files": {
-    "parametreler.json": "5331e59de442764d8e3b0a3333d260f23244ee204446ad4cabe31dff9f1b28d1",
-    "metrikler.csv": "d7513186b6f8dccedda28a4b8488b94b9aa2e84ddc92823233089d48d38857bd",
-    "bahis.csv": "58e3eb5340e1bc112b49a155de8d4fa1847e173682b6437d0cacd4005a1b9209",
-    "completed_seasons.csv": "cfde9770d932622349755724d1706163ef881af6f4711edf57952378f575be5c",
-    "confidence.csv": "fd868583b5d67c0d1e191369b19a86ff104b3ed200bf581de8314937b075ba55",
-    "harman.json": "6df710163cc712838b14b779ced316367cdc2bf0740db85ad57dc7f42153f9e8",
-    "kalibrasyon.csv": "e067ea9f97ab214f09803aa9c907b1da03e2f31b017fa04f40f3ecad3873b84f",
-    "mac_sayilari.csv": "ff7b661a639712d896465415f47c41580d36a7582193e277a0163b8d44c1a95c",
-    "piyasa.csv": "fe8a1214c1f9766982086c36121a328d70e846cea171a390fd5e467b8527121e",
-    "piyasa_ozet.csv": "72b042d1d72174a8fd701e55452184450a2173b4598db9770ffb6ffa3ac6bda7",
-    "profil.json": "65959336061e2b58fe2d7e709ff1f78cb4abbc470a9ca0608b5123d8b26f394f",
-    "tahminler.csv.gz": "599ba2662be26ae6ee40f182899bf7b1b770f29ba6b32c1c302d7950efa471a7",
-    "toplam.csv": "1fbced596b20c4ced0162d38aa9fb03fc1b065b5d1913c6f0204aae8be6f1205"
-  },
-  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
-  "packages": {
-    "numpy": "2.3.5",
-    "pandas": "2.2.3",
-    "scipy": "1.17.0",
-    "scikit-learn": "1.6.1"
-  },
-  "prediction_sha256": "38c10a57b69ca7d28dd7b2e661b6fcc711710d1e6ecccb7b7d015dba6bde25a3",
-  "derived_reports": {
-    "timestamp": "2026-10-29T15:54:46.573416+00:00",
-    "method": "Existing signed predictions; no model refit. Market summary uses common blend seasons.",
-    "odds_dataset_sha256": "60bd03ee13d42117934528b0962de2dc6c0a1bcec6cb72b614bce8a5422ed9ab",
-    "command": "python scripts/refresh_verified_evidence.py"
+    "parametreler.json": "e5ba16babfcbf1996e3eea7104fba9741c9758645b9688d98cbbc1c672fafc93",
+    "metrikler.csv": "b602613db75060222b1fa4b8404ed3ee8a61816e278d82a5c1a6e8da330f4529"
   }
 }
