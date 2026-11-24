@@ -1,4 +1,19 @@
-"""Append-only pretipoff forecasts and explicit point/percentage settlement errors."""
+"""Append-only pretipoff forecasts and explicit point/percentage settlement errors.
+
+The paired forecast fingerprint follows tahmin.tahmin_et through core, Asian,
+CBA, regional, competition, adaptive and hierarchical models. This covers
+feature construction, Elo, score fitting, team identities, archive validation,
+runtime history overlays and verified model parameter selection. The winner
+research path also uses domestic and club-strength features. Some modules in
+veri provide runtime league/team mappings or validate context on read.
+
+shadow_models uses Asia fold fitting, rolling features, runtime history,
+prior-policy calibration and quality gates. Football model, challenger and
+ensemble share goal distributions and team keys. Football archive loading
+applies licensed overlays, and football.health gates the paired forecasts.
+Evaluation and experiment metrics cover stored numbers and policy scoring.
+Collectors, fixture transport and report consumers stay outside this scope.
+"""
 import hashlib,json,subprocess
 from pathlib import Path
 import numpy as np
@@ -6,6 +21,47 @@ import pandas as pd
 from .quality import timestamp,validate_prediction,ARCHIVES
 
 SPEC='prospective-v1'
+
+# Relative to src/bbtahmin. Classify each new module explicitly in the scope test.
+PREDICTION_MODULES = (
+    'adaptive.py',
+    'archive_checks.py',
+    'artifacts.py',
+    'asia_model.py',
+    'cba_model.py',
+    'club_context.py',
+    'club_strength.py',
+    'competition_model.py',
+    'domestic_features.py',
+    'eksik_ozellik.py',
+    'elo.py',
+    'evaluation.py',
+    'experiment_metrics.py',
+    'football/challenger.py',
+    'football/data.py',
+    'football/distributions.py',
+    'football/ensemble.py',
+    'football/health.py',
+    'football/licensed.py',
+    'football/model.py',
+    'hierarchical.py',
+    'kutu_ozellik.py',
+    'model.py',
+    'odds.py',
+    'ozellik.py',
+    'prior_policy.py',
+    'quality.py',
+    'regional_model.py',
+    'runtime_history.py',
+    'shadow_models.py',
+    'tahmin.py',
+    'takim_ad.py',
+    'veri/asia.py',
+    'veri/club_context.py',
+    'veri/nbl.py',
+    'veri/teams.py',
+    'winner_model.py',
+)
 
 
 def canonical(value):
@@ -15,6 +71,20 @@ def canonical(value):
 def fingerprint(root=Path('.')):
     paths=sorted((root/'src').rglob('*.py'))
     return hashlib.sha256(b''.join(p.relative_to(root).as_posix().encode()+b'\0'+p.read_bytes() for p in paths)).hexdigest()
+
+
+def prediction_source_paths(root):
+    """Return sorted source paths under the given repository root."""
+    return sorted(root / 'src' / 'bbtahmin' / name for name in PREDICTION_MODULES)
+
+
+def prediction_fingerprint(root=Path('.')):
+    """Hash the reviewed prediction source, failing if any listed file is absent."""
+    root = Path(root)
+    digest = hashlib.sha256()
+    for path in prediction_source_paths(root):
+        digest.update(path.relative_to(root).as_posix().encode() + b'\0' + path.read_bytes())
+    return digest.hexdigest()
 
 
 def dataset_hashes():
