@@ -30,7 +30,7 @@ joblib==1.6.0
     # via scikit-learn
 kiwisolver==1.5.1
     # via matplotlib
-matplotlib==3.10.3
+matplotlib==3.11.2
     # via -r requirements.txt
 nba-api==1.11.3
     # via -r requirements.txt
