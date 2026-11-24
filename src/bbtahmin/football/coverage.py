@@ -34,9 +34,10 @@ def league_coverage(frame, now=None):
 
 
 def last_matches(frame, league, team, cutoff, limit=50):
-    if not 1 <= limit <= 100: raise ValueError('Limit must be between 1 and 100')
+    if not isinstance(limit, int) or isinstance(limit, bool) or not 1 <= limit <= 100:
+        raise ValueError('Limit must be an integer between 1 and 100')
     team=key(team); cutoff=pd.Timestamp(cutoff).strftime('%Y-%m-%d')
-    games=frame.loc[(frame.league==league)&(frame.status=='final')&(frame.date<cutoff)&((frame.home==team)|(frame.away==team))].sort_values(['date','event_id'],ascending=False).head(limit)
+    games=frame if frame.empty else frame.loc[(frame.league==league)&(frame.status=='final')&(frame.date<cutoff)&((frame.home==team)|(frame.away==team))].sort_values(['date','event_id'],ascending=False).head(limit)
     rows=games.to_dict('records'); goals_for=[]; goals_against=[]
     for r in rows:
         home=r['home']==team;goals_for.append(int(r['home_goals'] if home else r['away_goals']));goals_against.append(int(r['away_goals'] if home else r['home_goals']))

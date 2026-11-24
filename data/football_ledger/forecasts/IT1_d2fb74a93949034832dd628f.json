@@ -1,0 +1,125 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-11-22T13:01:29.260270+00:00",
+  "fixture": {
+    "event_id": "IT1_d2fb74a93949034832dd628f",
+    "league": "IT1",
+    "season": "2026-27",
+    "date": "2026-11-29",
+    "home": "udinese calcio",
+    "away": "acf fiorentina",
+    "home_name": "Udinese Calcio",
+    "away_name": "ACF Fiorentina",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/it.1.json",
+    "captured_at_utc": "2026-11-22T12:53:55.250046+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null,
+    "original_date": null,
+    "date_correction_verified": null,
+    "license_url": null,
+    "source_sha256": null,
+    "fixture_verification_url": null,
+    "actual_start_utc": null,
+    "source_original_date": "2026-11-29",
+    "verified_start_utc": "2026-11-29T11:30:00+00:00",
+    "independent_fixture": {
+      "provider_event_id": "401875031",
+      "league": "IT1",
+      "season_year": 2026,
+      "start_utc": "2026-11-29T11:30:00+00:00",
+      "captured_at": "2026-11-22T13:00:20.030275+00:00",
+      "home_name": "Udinese",
+      "away_name": "Fiorentina",
+      "provider_home_id": "118",
+      "provider_away_id": "109",
+      "source_url": "https://www.espn.com/soccer/game/_/gameId/401875031",
+      "status": "scheduled",
+      "event_id": "IT1_d2fb74a93949034832dd628f",
+      "home": "udinese calcio",
+      "away": "acf fiorentina"
+    }
+  },
+  "prediction": {
+    "model": "football-opponent-v1",
+    "league": "IT1",
+    "home": "udinese calcio",
+    "away": "acf fiorentina",
+    "expected_home_goals": 1.374379077663864,
+    "expected_away_goals": 1.5035090842187013,
+    "probabilities": {
+      "home": 0.3469558889257877,
+      "draw": 0.24826932486139927,
+      "away": 0.404774786212813
+    },
+    "predicted_outcome": "away",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.7818554679022437,
+      "2.5": 0.5489032328839685,
+      "3.5": 0.3254330730695755
+    },
+    "both_teams_score": 0.580908247527912,
+    "total_goals_80": [
+      1,
+      5
+    ],
+    "training_cutoff_exclusive": "2026-11-22",
+    "training_games": 1124,
+    "prior_team_games": {
+      "udinese calcio": 112,
+      "acf fiorentina": 112
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "settings": {
+      "half_life_days": 180.0,
+      "shrinkage_games": 8.0,
+      "window_days": 1095
+    },
+    "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+    "low_score_rho": 0.0,
+    "research_candidate": false
+  },
+  "archive_sha256": "745f0c0476ffe4fca903413f3d2fe1005c3a64f4133fc15a6c81d9e352214325",
+  "source_code_sha256": "c1e6ddfededc35b38609ae5a143347dfeb9ec4dfe5f707f70a582433dfcd044f",
+  "requested_model_variant": "opponent",
+  "history_health": {
+    "spec": "football-history-health-v1",
+    "checked_at_utc": "2026-11-22T13:01:26.785784+00:00",
+    "information_cutoff_exclusive": "2026-11-22",
+    "teams": {
+      "udinese calcio": {
+        "prior_finals": 504,
+        "active_season_finals": 11,
+        "last_final_date": "2026-11-06",
+        "days_since_last_final": 16,
+        "unresolved_past_fixture_ids": []
+      },
+      "acf fiorentina": {
+        "prior_finals": 504,
+        "active_season_finals": 11,
+        "last_final_date": "2026-11-08",
+        "days_since_last_final": 14,
+        "unresolved_past_fixture_ids": []
+      }
+    },
+    "diagnostic_gate_passed": true,
+    "blocking_issues": [],
+    "max_history_age_days": 30,
+    "calendar_completeness_verified": false,
+    "note": "Diagnostic policy, not a validated success threshold. Unresolved fixtures may be postponed or missing results. Fresh source captures do not make old histories current."
+  },
+  "selection_policy": "Current-history diagnostic gate plus existing model issues; research only, no validated recommendation.",
+  "payload_sha256": "b2792b191d10a5675b618a153cccb0a1d707844333c5cda274d50b2a1a0be31c"
+}
