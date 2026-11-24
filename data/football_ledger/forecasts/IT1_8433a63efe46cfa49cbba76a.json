@@ -1,0 +1,125 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-11-23T18:40:39.754790+00:00",
+  "fixture": {
+    "event_id": "IT1_8433a63efe46cfa49cbba76a",
+    "league": "IT1",
+    "season": "2026-27",
+    "date": "2026-11-29",
+    "home": "as roma",
+    "away": "ac monza",
+    "home_name": "AS Roma",
+    "away_name": "AC Monza",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/it.1.json",
+    "captured_at_utc": "2026-11-23T18:36:02.653364+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null,
+    "original_date": null,
+    "date_correction_verified": null,
+    "license_url": null,
+    "source_sha256": null,
+    "fixture_verification_url": null,
+    "actual_start_utc": null,
+    "source_original_date": "2026-11-29",
+    "verified_start_utc": "2026-11-29T17:00:00+00:00",
+    "independent_fixture": {
+      "provider_event_id": "401874769",
+      "league": "IT1",
+      "season_year": 2026,
+      "start_utc": "2026-11-29T17:00:00+00:00",
+      "captured_at": "2026-11-23T18:39:50.533538+00:00",
+      "home_name": "AS Roma",
+      "away_name": "Monza",
+      "provider_home_id": "104",
+      "provider_away_id": "4007",
+      "source_url": "https://www.espn.com/soccer/game/_/gameId/401874769",
+      "status": "scheduled",
+      "event_id": "IT1_8433a63efe46cfa49cbba76a",
+      "home": "as roma",
+      "away": "ac monza"
+    }
+  },
+  "prediction": {
+    "model": "football-opponent-v1",
+    "league": "IT1",
+    "home": "as roma",
+    "away": "ac monza",
+    "expected_home_goals": 2.8500012704709343,
+    "expected_away_goals": 0.976150077591806,
+    "probabilities": {
+      "home": 0.7593260922495473,
+      "draw": 0.14016554855509492,
+      "away": 0.10050835919535799
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      2,
+      0
+    ],
+    "over": {
+      "1.5": 0.8948220940662802,
+      "2.5": 0.7353010890591315,
+      "3.5": 0.5318505862749898
+    },
+    "both_teams_score": 0.5871902795419188,
+    "total_goals_80": [
+      1,
+      6
+    ],
+    "training_cutoff_exclusive": "2026-11-23",
+    "training_games": 1129,
+    "prior_team_games": {
+      "as roma": 113,
+      "ac monza": 74
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "settings": {
+      "half_life_days": 180.0,
+      "shrinkage_games": 8.0,
+      "window_days": 1095
+    },
+    "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+    "low_score_rho": 0.0,
+    "research_candidate": false
+  },
+  "archive_sha256": "10a3955627423d66fecbeb57f96ae29c75ffaa20b414731c91b62d8f8152d835",
+  "source_code_sha256": "2f9eacd61e976d4c84a9d5c8c259160a0c69f62040f78b08a195b1e6f9adf7f8",
+  "requested_model_variant": "opponent",
+  "history_health": {
+    "spec": "football-history-health-v1",
+    "checked_at_utc": "2026-11-23T18:40:38.014012+00:00",
+    "information_cutoff_exclusive": "2026-11-23",
+    "teams": {
+      "as roma": {
+        "prior_finals": 505,
+        "active_season_finals": 12,
+        "last_final_date": "2026-11-21",
+        "days_since_last_final": 2,
+        "unresolved_past_fixture_ids": []
+      },
+      "ac monza": {
+        "prior_finals": 124,
+        "active_season_finals": 11,
+        "last_final_date": "2026-11-08",
+        "days_since_last_final": 15,
+        "unresolved_past_fixture_ids": []
+      }
+    },
+    "diagnostic_gate_passed": true,
+    "blocking_issues": [],
+    "max_history_age_days": 30,
+    "calendar_completeness_verified": false,
+    "note": "Diagnostic policy, not a validated success threshold. Unresolved fixtures may be postponed or missing results. Fresh source captures do not make old histories current."
+  },
+  "selection_policy": "Current-history diagnostic gate plus existing model issues; research only, no validated recommendation.",
+  "payload_sha256": "f5da7165ae38286125010cead8a16965daab48f17ab3b74d78aa775f0deaae52"
+}
