@@ -1,3 +1,5 @@
+Türkçe: [README.tr.md](README.tr.md)
+
 # Basketball and Football Pregame Research
 
 A Python research package (`bbtahmin`) for pregame basketball and football probabilities, score/goal margins and totals. It combines reproducible historical archives, chronological walk-forward evaluation, an experimental Iddaa bulletin reader, a local browser app and a read-only local MCP server.
