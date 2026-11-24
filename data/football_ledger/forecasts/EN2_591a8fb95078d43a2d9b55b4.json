@@ -1,0 +1,125 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-11-19T16:03:22.207388+00:00",
+  "fixture": {
+    "event_id": "EN2_591a8fb95078d43a2d9b55b4",
+    "league": "EN2",
+    "season": "2026-27",
+    "date": "2026-11-25",
+    "home": "watford fc",
+    "away": "blackburn rovers fc",
+    "home_name": "Watford FC",
+    "away_name": "Blackburn Rovers FC",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/en.2.json",
+    "captured_at_utc": "2026-11-19T15:57:45.418521+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null,
+    "original_date": null,
+    "date_correction_verified": null,
+    "license_url": null,
+    "source_sha256": null,
+    "fixture_verification_url": null,
+    "actual_start_utc": null,
+    "source_original_date": "2026-11-25",
+    "verified_start_utc": "2026-11-25T19:45:00+00:00",
+    "independent_fixture": {
+      "provider_event_id": "401880137",
+      "league": "EN2",
+      "season_year": 2026,
+      "start_utc": "2026-11-25T19:45:00+00:00",
+      "captured_at": "2026-11-19T16:01:57.530157+00:00",
+      "home_name": "Watford",
+      "away_name": "Blackburn Rovers",
+      "provider_home_id": "395",
+      "provider_away_id": "365",
+      "source_url": "https://www.espn.com/soccer/game/_/gameId/401880137",
+      "status": "scheduled",
+      "event_id": "EN2_591a8fb95078d43a2d9b55b4",
+      "home": "watford fc",
+      "away": "blackburn rovers fc"
+    }
+  },
+  "prediction": {
+    "model": "football-opponent-v1",
+    "league": "EN2",
+    "home": "watford fc",
+    "away": "blackburn rovers fc",
+    "expected_home_goals": 1.1548367705594584,
+    "expected_away_goals": 1.1528619506671256,
+    "probabilities": {
+      "home": 0.3589223089687027,
+      "draw": 0.28312958698757634,
+      "away": 0.35794810404372096
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.6709172447133651,
+      "2.5": 0.4060017243750103,
+      "3.5": 0.2022199885357115
+    },
+    "both_teams_score": 0.46864910856670505,
+    "total_goals_80": [
+      1,
+      4
+    ],
+    "training_cutoff_exclusive": "2026-11-19",
+    "training_games": 1659,
+    "prior_team_games": {
+      "watford fc": 137,
+      "blackburn rovers fc": 137
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "settings": {
+      "half_life_days": 180.0,
+      "shrinkage_games": 8.0,
+      "window_days": 1095
+    },
+    "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+    "low_score_rho": 0.0,
+    "research_candidate": false
+  },
+  "archive_sha256": "8664b9cd9b2c1c4a3742704aa1fa8c99accfbb51ab9eb2d6358a7c05c32c4135",
+  "source_code_sha256": "c1e6ddfededc35b38609ae5a143347dfeb9ec4dfe5f707f70a582433dfcd044f",
+  "requested_model_variant": "opponent",
+  "history_health": {
+    "spec": "football-history-health-v1",
+    "checked_at_utc": "2026-11-19T16:03:19.867201+00:00",
+    "information_cutoff_exclusive": "2026-11-19",
+    "teams": {
+      "watford fc": {
+        "prior_finals": 475,
+        "active_season_finals": 15,
+        "last_final_date": "2026-11-07",
+        "days_since_last_final": 12,
+        "unresolved_past_fixture_ids": []
+      },
+      "blackburn rovers fc": {
+        "prior_finals": 291,
+        "active_season_finals": 15,
+        "last_final_date": "2026-11-07",
+        "days_since_last_final": 12,
+        "unresolved_past_fixture_ids": []
+      }
+    },
+    "diagnostic_gate_passed": true,
+    "blocking_issues": [],
+    "max_history_age_days": 30,
+    "calendar_completeness_verified": false,
+    "note": "Diagnostic policy, not a validated success threshold. Unresolved fixtures may be postponed or missing results. Fresh source captures do not make old histories current."
+  },
+  "selection_policy": "Current-history diagnostic gate plus existing model issues; research only, no validated recommendation.",
+  "payload_sha256": "cc01f8d826ea15b36d0b3bd65da6eff990b73c07b0345761904173e5d3e0be9f"
+}

@@ -1,0 +1,138 @@
+{
+  "sports": {
+    "basketball": {
+      "status": "partial",
+      "new_failures": [],
+      "continuing_failures": [
+        {
+          "league": "PBA_GOV",
+          "status": "failed",
+          "error": "HTTPError: HTTP Error 503: Service Unavailable"
+        }
+      ],
+      "no_longer_reported": [
+        {
+          "league": "TR_BSL",
+          "status": "failed",
+          "error": "ValueError: TR_BSL current source refresh failed; previous observations retained: [{'source': 'https://beinsports.com.tr/lig/basketbol-super-ligi/', 'error': 'ValueError: Missing beIN fixture data', 'retained_previous_snapshot': True}]"
+        }
+      ],
+      "unresolved_unobserved": [],
+      "baseline_failures": [],
+      "comparison_available": true
+    },
+    "football": {
+      "status": "partial",
+      "new_failures": [],
+      "continuing_failures": [
+        {
+          "league": "AR1",
+          "season": "2026",
+          "error": "Source file unavailable; historical data is not current coverage",
+          "source": "AR1",
+          "collector": "AR1"
+        },
+        {
+          "league": "BR2",
+          "season": "2026",
+          "error": "Source file unavailable; historical data is not current coverage",
+          "source": "BR2",
+          "collector": "BR2"
+        },
+        {
+          "league": "CN1",
+          "season": "2026",
+          "error": "Source file unavailable; historical data is not current coverage",
+          "source": "CN1",
+          "collector": "CN1"
+        },
+        {
+          "league": "CO1",
+          "season": "2026",
+          "error": "Source file unavailable; historical data is not current coverage",
+          "source": "CO1",
+          "collector": "CO1"
+        },
+        {
+          "league": "JP1",
+          "season": "2026",
+          "error": "Source file unavailable; historical data is not current coverage",
+          "source": "JP1",
+          "collector": "JP1"
+        },
+        {
+          "league": "US1",
+          "season": "2026",
+          "error": "Source file unavailable; historical data is not current coverage",
+          "source": "US1",
+          "collector": "US1"
+        },
+        {
+          "league": "AT1",
+          "season": "2026-27",
+          "error": "Source file unavailable",
+          "source": "football",
+          "collector": "football"
+        },
+        {
+          "league": "BE1",
+          "season": "2026-27",
+          "error": "Source file unavailable",
+          "source": "football",
+          "collector": "football"
+        },
+        {
+          "league": "DE2",
+          "season": "2026-27",
+          "error": "Source file unavailable",
+          "source": "football",
+          "collector": "football"
+        },
+        {
+          "league": "ES2",
+          "season": "2026-27",
+          "error": "Source file unavailable",
+          "source": "football",
+          "collector": "football"
+        },
+        {
+          "league": "FR2",
+          "season": "2026-27",
+          "error": "Source file unavailable",
+          "source": "football",
+          "collector": "football"
+        },
+        {
+          "league": "GR1",
+          "season": "2026-27",
+          "error": "Source file unavailable",
+          "source": "football",
+          "collector": "football"
+        },
+        {
+          "league": "IT2",
+          "season": "2026-27",
+          "error": "Source file unavailable",
+          "source": "football",
+          "collector": "football"
+        },
+        {
+          "league": "SC1",
+          "season": "2026-27",
+          "error": "Source file unavailable",
+          "source": "football",
+          "collector": "football"
+        }
+      ],
+      "no_longer_reported": [],
+      "unresolved_unobserved": [],
+      "baseline_failures": [],
+      "comparison_available": true
+    }
+  },
+  "note": "Failure transitions only, not proof of complete data, source freshness or official result verification. A missing sport or failed whole-sport refresh cannot clear previous failures.",
+  "inputs": {
+    "data/refresh/20261121T145523Z.json": "a4cb4f74747f6926d2a550fd6c0bfa6a5ee980d53f0635e00ea15f138cc1df9b",
+    "data/refresh/20261122T145124Z.json": "22f8680f74a13e9a560e3c17bcdd2618088d52e1fee63de4a1d2ce5841a7c58f"
+  }
+}

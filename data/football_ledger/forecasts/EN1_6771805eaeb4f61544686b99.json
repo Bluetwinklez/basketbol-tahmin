@@ -1,0 +1,125 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-11-16T16:19:43.051523+00:00",
+  "fixture": {
+    "event_id": "EN1_6771805eaeb4f61544686b99",
+    "league": "EN1",
+    "season": "2026-27",
+    "date": "2026-11-22",
+    "home": "liverpool fc",
+    "away": "manchester united fc",
+    "home_name": "Liverpool FC",
+    "away_name": "Manchester United FC",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/en.1.json",
+    "captured_at_utc": "2026-11-16T16:15:11.774042+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null,
+    "original_date": null,
+    "date_correction_verified": null,
+    "license_url": null,
+    "source_sha256": null,
+    "fixture_verification_url": null,
+    "actual_start_utc": null,
+    "source_original_date": "2026-11-21",
+    "verified_start_utc": "2026-11-22T16:30:00+00:00",
+    "independent_fixture": {
+      "provider_event_id": "401878755",
+      "league": "EN1",
+      "season_year": 2026,
+      "start_utc": "2026-11-22T16:30:00+00:00",
+      "captured_at": "2026-11-16T16:18:40.295897+00:00",
+      "home_name": "Liverpool",
+      "away_name": "Manchester United",
+      "provider_home_id": "364",
+      "provider_away_id": "360",
+      "source_url": "https://www.espn.com/soccer/game/_/gameId/401878755",
+      "status": "scheduled",
+      "event_id": "EN1_6771805eaeb4f61544686b99",
+      "home": "liverpool fc",
+      "away": "manchester united fc"
+    }
+  },
+  "prediction": {
+    "model": "football-opponent-v1",
+    "league": "EN1",
+    "home": "liverpool fc",
+    "away": "manchester united fc",
+    "expected_home_goals": 1.9151408619470418,
+    "expected_away_goals": 1.2662467213329711,
+    "probabilities": {
+      "home": 0.525565298818793,
+      "draw": 0.22249329586477878,
+      "away": 0.2519414053164283
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.8263553716606415,
+      "2.5": 0.6161982577906793,
+      "3.5": 0.39333451358939203
+    },
+    "both_teams_score": 0.612319270744563,
+    "total_goals_80": [
+      1,
+      6
+    ],
+    "training_cutoff_exclusive": "2026-11-16",
+    "training_games": 1120,
+    "prior_team_games": {
+      "liverpool fc": 112,
+      "manchester united fc": 112
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "settings": {
+      "half_life_days": 180.0,
+      "shrinkage_games": 8.0,
+      "window_days": 1095
+    },
+    "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+    "low_score_rho": 0.0,
+    "research_candidate": false
+  },
+  "archive_sha256": "9f5e6469c4b49c74e0b8187d57b9c9fd24ff590459b75029db734e5b443ab2c5",
+  "source_code_sha256": "9ae7a915e48252a51fd91ee21ca83246f5300ebbf4aa27ae8654671ae69b3baf",
+  "requested_model_variant": "opponent",
+  "history_health": {
+    "spec": "football-history-health-v1",
+    "checked_at_utc": "2026-11-16T16:19:41.600884+00:00",
+    "information_cutoff_exclusive": "2026-11-16",
+    "teams": {
+      "liverpool fc": {
+        "prior_finals": 618,
+        "active_season_finals": 10,
+        "last_final_date": "2026-11-08",
+        "days_since_last_final": 8,
+        "unresolved_past_fixture_ids": []
+      },
+      "manchester united fc": {
+        "prior_finals": 238,
+        "active_season_finals": 10,
+        "last_final_date": "2026-11-08",
+        "days_since_last_final": 8,
+        "unresolved_past_fixture_ids": []
+      }
+    },
+    "diagnostic_gate_passed": true,
+    "blocking_issues": [],
+    "max_history_age_days": 30,
+    "calendar_completeness_verified": false,
+    "note": "Diagnostic policy, not a validated success threshold. Unresolved fixtures may be postponed or missing results. Fresh source captures do not make old histories current."
+  },
+  "selection_policy": "Current-history diagnostic gate plus existing model issues; research only, no validated recommendation.",
+  "payload_sha256": "bc2400a111dc5f1ee177d362ea5046f1fb2b1e3675c43519b629cfd54b153fbc"
+}

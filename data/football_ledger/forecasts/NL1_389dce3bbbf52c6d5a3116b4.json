@@ -1,0 +1,125 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-11-15T12:24:53.672440+00:00",
+  "fixture": {
+    "event_id": "NL1_389dce3bbbf52c6d5a3116b4",
+    "league": "NL1",
+    "season": "2026-27",
+    "date": "2026-11-22",
+    "home": "fc twente '65",
+    "away": "willem ii tilburg",
+    "home_name": "FC Twente '65",
+    "away_name": "Willem II Tilburg",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/nl.1.json",
+    "captured_at_utc": "2026-11-15T12:18:12.388271+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null,
+    "original_date": null,
+    "date_correction_verified": null,
+    "license_url": null,
+    "source_sha256": null,
+    "fixture_verification_url": null,
+    "actual_start_utc": null,
+    "source_original_date": "2026-11-22",
+    "verified_start_utc": "2026-11-22T11:15:00+00:00",
+    "independent_fixture": {
+      "provider_event_id": "401875545",
+      "league": "NL1",
+      "season_year": 2026,
+      "start_utc": "2026-11-22T11:15:00+00:00",
+      "captured_at": "2026-11-15T12:23:45.188544+00:00",
+      "home_name": "FC Twente",
+      "away_name": "Willem II",
+      "provider_home_id": "152",
+      "provider_away_id": "156",
+      "source_url": "https://www.espn.com/soccer/game/_/gameId/401875545",
+      "status": "scheduled",
+      "event_id": "NL1_389dce3bbbf52c6d5a3116b4",
+      "home": "fc twente '65",
+      "away": "willem ii tilburg"
+    }
+  },
+  "prediction": {
+    "model": "football-opponent-v1",
+    "league": "NL1",
+    "home": "fc twente '65",
+    "away": "willem ii tilburg",
+    "expected_home_goals": 3.0912273477899657,
+    "expected_away_goals": 0.8711195100577784,
+    "probabilities": {
+      "home": 0.8104065558980791,
+      "draw": 0.11696262749439255,
+      "away": 0.07263081660752826
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      3,
+      0
+    ],
+    "over": {
+      "1.5": 0.9056239619426404,
+      "2.5": 0.7563274678806984,
+      "3.5": 0.5591393031693583
+    },
+    "both_teams_score": 0.5550894951762826,
+    "total_goals_80": [
+      2,
+      7
+    ],
+    "training_cutoff_exclusive": "2026-11-15",
+    "training_games": 919,
+    "prior_team_games": {
+      "fc twente '65": 102,
+      "willem ii tilburg": 46
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "settings": {
+      "half_life_days": 180.0,
+      "shrinkage_games": 8.0,
+      "window_days": 1095
+    },
+    "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+    "low_score_rho": 0.0,
+    "research_candidate": false
+  },
+  "archive_sha256": "d3416c72ecbe5a1f74e43ecaa108720b99cf6ec927553d56ef5e844f05d9bf07",
+  "source_code_sha256": "872a79ef7a219c008dc47609791f05cf4f684195b4e761af273908e452e2ad39",
+  "requested_model_variant": "opponent",
+  "history_health": {
+    "spec": "football-history-health-v1",
+    "checked_at_utc": "2026-11-15T12:24:52.063192+00:00",
+    "information_cutoff_exclusive": "2026-11-15",
+    "teams": {
+      "fc twente '65": {
+        "prior_finals": 114,
+        "active_season_finals": 12,
+        "last_final_date": "2026-11-08",
+        "days_since_last_final": 7,
+        "unresolved_past_fixture_ids": []
+      },
+      "willem ii tilburg": {
+        "prior_finals": 46,
+        "active_season_finals": 12,
+        "last_final_date": "2026-11-06",
+        "days_since_last_final": 9,
+        "unresolved_past_fixture_ids": []
+      }
+    },
+    "diagnostic_gate_passed": true,
+    "blocking_issues": [],
+    "max_history_age_days": 30,
+    "calendar_completeness_verified": false,
+    "note": "Diagnostic policy, not a validated success threshold. Unresolved fixtures may be postponed or missing results. Fresh source captures do not make old histories current."
+  },
+  "selection_policy": "Current-history diagnostic gate plus existing model issues; research only, no validated recommendation.",
+  "payload_sha256": "fd3cc58663c39ed300bbb4e085d7630d111d19df9903a05572e3163d71675063"
+}

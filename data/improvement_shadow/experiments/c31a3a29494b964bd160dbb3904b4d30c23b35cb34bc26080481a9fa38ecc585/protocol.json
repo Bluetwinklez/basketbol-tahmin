@@ -1,0 +1,1009 @@
+{
+  "spec": "paired-forward-policy-v2",
+  "policy": {
+    "version": "paired-shadow-v1",
+    "basketball_reference": "unchanged runtime model",
+    "basketball_candidate": "frozen earlier-OOS league pipeline and calibration",
+    "basketball_leagues": [
+      "E",
+      "KBL",
+      "ABA",
+      "ECW",
+      "FEC",
+      "UKR",
+      "TR_BSL",
+      "ARG_LNB"
+    ],
+    "football_reference": "baseline",
+    "football_candidate": "frozen earlier-OOS league pipeline and calibration",
+    "confidence_threshold": 0.65,
+    "minimum_review_games": 100,
+    "minimum_review_days": 20,
+    "note": "Independent future experiment, fixed before outcomes; historical candidate reports cannot promote production. Skipped source/history fixtures are explicitly counted outside the frozen cohort.",
+    "frozen_pipelines": {
+      "spec": "prior-oos-forward-policy-v1",
+      "input_hashes": {
+        "docs/kanit/improvement/football/DE1.json.gz": "d6fa8e3c92ef6060eb5e5892a150d4442d343c64860e354afa1f0944aed6f32d",
+        "docs/kanit/improvement/football/EN1.json.gz": "54c10815ab3b87fb65afd8f1eb6691531c746101feb6a395b9be195be47e4af6",
+        "docs/kanit/improvement/football/EN2.json.gz": "11aaf29ed79d16d98a1ef0029fe89bd5f72a9f656f1577ea1b9f531973baff8d",
+        "docs/kanit/improvement/football/ES1.json.gz": "6f511a7578a1d138c16441e0abfc742c7624e41838a1dcfbfa47cee6fb5bb49d",
+        "docs/kanit/improvement/football/FR1.json.gz": "5a397489bcac41590d99c5b171a02c56a7cb2a73374ce2c20d67005580babadc",
+        "docs/kanit/improvement/football/IT1.json.gz": "64681a3b3ea9d4ed3618648ff86613e009e15570afc48c216d325be2b8cacf10",
+        "docs/kanit/improvement/football/NL1.json.gz": "b41aceb25120908dda55cdb473a11a6224db4f86e4ea4dd066172f08f4cfc0e4",
+        "docs/kanit/improvement/football/PT1.json.gz": "4ab1ed31760500e69332562ebacf176eb74ed50adf8d51005b377e84aa831fec",
+        "docs/kanit/improvement/football/TR1.json.gz": "b708b965589f08d20b6accad4b30cb4e063e6a8c0ad02093b9c0c9a79e8fa5e6",
+        "docs/kanit/improvement/basketball/ABA.json.gz": "a737c009dc3344639e3d764e2c31a9d1b362d00f007feaa351562b6eb49d5d52",
+        "docs/kanit/improvement/basketball/ARG_LNB.json.gz": "748f4676d2da0a5b0f92a50228a8cb618bde37ae25d7dacb5a5f650eb6424784",
+        "docs/kanit/improvement/basketball/E.json.gz": "378921cc0fe35cdedc594449139124bf70db983dbe0790c0d48102bf4b18923a",
+        "docs/kanit/improvement/basketball/ECW.json.gz": "c0e01d84b40b1a470f1349a3611456533d0dbb4d9a7e67e296ebc9447613eb23",
+        "docs/kanit/improvement/basketball/FEC.json.gz": "ae14a2d4cffee142199e0dfe506b7ea860ff106d97f21042ef84edb5678c006a",
+        "docs/kanit/improvement/basketball/KBL.json.gz": "8a9bf94d9425b98ba038dd18027f291ce80a2f9c62bcf01f9cb8c4ee09a95b16",
+        "docs/kanit/improvement/basketball/TR_BSL.json.gz": "0378fdbda90fcd9e9c2df7f4d9728fcb9fd663a372fc7dc0cfc7c213a8c9151d",
+        "docs/kanit/improvement/basketball/UKR.json.gz": "8bc4858a831cdaf24347c73968dd92a0f41040830bc9d6443f917292f23c3432"
+      },
+      "policies": {
+        "football": {
+          "DE1": {
+            "variant": "opponent_dc",
+            "temperature": 0.75,
+            "prior_season": "2025-26",
+            "last_prior_day": "2026-05-16",
+            "calibration_before_day": "2026-01-15",
+            "prior_games": 306,
+            "validation": {
+              "baseline": {
+                "games": 157,
+                "accuracy": 0.4968152866242038,
+                "log_loss": 1.0243017465230166,
+                "brier": 0.6090411941635528
+              },
+              "recency90": {
+                "games": 157,
+                "accuracy": 0.5095541401273885,
+                "log_loss": 1.0334504373893936,
+                "brier": 0.615647500179956
+              },
+              "shrinkage16": {
+                "games": 157,
+                "accuracy": 0.5031847133757962,
+                "log_loss": 1.0274016560638237,
+                "brier": 0.6114763237288742
+              },
+              "opponent": {
+                "games": 157,
+                "accuracy": 0.554140127388535,
+                "log_loss": 1.0073380446923317,
+                "brier": 0.594757918735722
+              },
+              "opponent_dc": {
+                "games": 157,
+                "accuracy": 0.554140127388535,
+                "log_loss": 1.0009209985237322,
+                "brier": 0.5916425870614199
+              },
+              "ensemble": {
+                "games": 157,
+                "accuracy": 0.5222929936305732,
+                "log_loss": 1.0096664507989626,
+                "brier": 0.5984734030517124
+              }
+            },
+            "temperatures": {
+              "baseline": 0.75,
+              "recency90": 0.75,
+              "shrinkage16": 0.75,
+              "opponent": 0.75,
+              "opponent_dc": 0.75,
+              "ensemble": 0.75
+            },
+            "rule": "First prior OOS UTC-day half calibrates; second half selects. Require +1 percentage point accuracy, -0.005 log loss and no worse Brier versus calibrated baseline. Otherwise retain baseline. No current/future outcome selection."
+          },
+          "EN1": {
+            "variant": "baseline",
+            "temperature": 0.75,
+            "prior_season": "2025-26",
+            "last_prior_day": "2026-05-24",
+            "calibration_before_day": "2026-01-08",
+            "prior_games": 380,
+            "validation": {
+              "baseline": {
+                "games": 171,
+                "accuracy": 0.4444444444444444,
+                "log_loss": 1.0875883656941936,
+                "brier": 0.6593363174376173
+              },
+              "recency90": {
+                "games": 171,
+                "accuracy": 0.4327485380116959,
+                "log_loss": 1.0837194181226804,
+                "brier": 0.6561115667936094
+              },
+              "shrinkage16": {
+                "games": 171,
+                "accuracy": 0.43859649122807015,
+                "log_loss": 1.0816360348802168,
+                "brier": 0.654072597393936
+              },
+              "opponent": {
+                "games": 171,
+                "accuracy": 0.4093567251461988,
+                "log_loss": 1.0873037388575026,
+                "brier": 0.6594059887801732
+              },
+              "opponent_dc": {
+                "games": 171,
+                "accuracy": 0.4093567251461988,
+                "log_loss": 1.0807360398018286,
+                "brier": 0.6558761930726787
+              },
+              "ensemble": {
+                "games": 171,
+                "accuracy": 0.4269005847953216,
+                "log_loss": 1.0811909691966202,
+                "brier": 0.6556583012904238
+              }
+            },
+            "temperatures": {
+              "baseline": 0.75,
+              "recency90": 0.75,
+              "shrinkage16": 0.75,
+              "opponent": 0.75,
+              "opponent_dc": 0.75,
+              "ensemble": 0.75
+            },
+            "rule": "First prior OOS UTC-day half calibrates; second half selects. Require +1 percentage point accuracy, -0.005 log loss and no worse Brier versus calibrated baseline. Otherwise retain baseline. No current/future outcome selection."
+          },
+          "EN2": {
+            "variant": "opponent_dc",
+            "temperature": 1.25,
+            "prior_season": "2025-26",
+            "last_prior_day": "2026-05-23",
+            "calibration_before_day": "2026-01-20",
+            "prior_games": 557,
+            "validation": {
+              "baseline": {
+                "games": 238,
+                "accuracy": 0.42857142857142855,
+                "log_loss": 1.066717497041311,
+                "brier": 0.6451780314211621
+              },
+              "recency90": {
+                "games": 238,
+                "accuracy": 0.4411764705882353,
+                "log_loss": 1.0681119753537887,
+                "brier": 0.6461503070225306
+              },
+              "shrinkage16": {
+                "games": 238,
+                "accuracy": 0.4327731092436975,
+                "log_loss": 1.069670420955337,
+                "brier": 0.647095816233448
+              },
+              "opponent": {
+                "games": 238,
+                "accuracy": 0.453781512605042,
+                "log_loss": 1.0517372982843434,
+                "brier": 0.6339049646305198
+              },
+              "opponent_dc": {
+                "games": 238,
+                "accuracy": 0.453781512605042,
+                "log_loss": 1.0515036816254837,
+                "brier": 0.6338614519754119
+              },
+              "ensemble": {
+                "games": 238,
+                "accuracy": 0.4369747899159664,
+                "log_loss": 1.05801001764216,
+                "brier": 0.6387249724877136
+              }
+            },
+            "temperatures": {
+              "baseline": 1.25,
+              "recency90": 1.25,
+              "shrinkage16": 1.0,
+              "opponent": 1.25,
+              "opponent_dc": 1.25,
+              "ensemble": 1.25
+            },
+            "rule": "First prior OOS UTC-day half calibrates; second half selects. Require +1 percentage point accuracy, -0.005 log loss and no worse Brier versus calibrated baseline. Otherwise retain baseline. No current/future outcome selection."
+          },
+          "ES1": {
+            "variant": "baseline",
+            "temperature": 0.75,
+            "prior_season": "2025-26",
+            "last_prior_day": "2026-05-24",
+            "calibration_before_day": "2026-01-11",
+            "prior_games": 380,
+            "validation": {
+              "baseline": {
+                "games": 194,
+                "accuracy": 0.5103092783505154,
+                "log_loss": 0.9916288379686128,
+                "brier": 0.5910051075146249
+              },
+              "recency90": {
+                "games": 194,
+                "accuracy": 0.5154639175257731,
+                "log_loss": 0.9969225075239226,
+                "brier": 0.5942219744888788
+              },
+              "shrinkage16": {
+                "games": 194,
+                "accuracy": 0.5154639175257731,
+                "log_loss": 0.9868250645242853,
+                "brier": 0.5869184199410626
+              },
+              "opponent": {
+                "games": 194,
+                "accuracy": 0.5154639175257731,
+                "log_loss": 0.9991229057372844,
+                "brier": 0.5944308817890365
+              },
+              "opponent_dc": {
+                "games": 194,
+                "accuracy": 0.5154639175257731,
+                "log_loss": 0.9985284952800705,
+                "brier": 0.5941000900682241
+              },
+              "ensemble": {
+                "games": 194,
+                "accuracy": 0.5,
+                "log_loss": 0.992076035042692,
+                "brier": 0.5905786682646809
+              }
+            },
+            "temperatures": {
+              "baseline": 0.75,
+              "recency90": 0.75,
+              "shrinkage16": 0.75,
+              "opponent": 0.75,
+              "opponent_dc": 0.75,
+              "ensemble": 0.75
+            },
+            "rule": "First prior OOS UTC-day half calibrates; second half selects. Require +1 percentage point accuracy, -0.005 log loss and no worse Brier versus calibrated baseline. Otherwise retain baseline. No current/future outcome selection."
+          },
+          "FR1": {
+            "variant": "baseline",
+            "temperature": 0.75,
+            "prior_season": "2025-26",
+            "last_prior_day": "2026-05-17",
+            "calibration_before_day": "2026-01-16",
+            "prior_games": 305,
+            "validation": {
+              "baseline": {
+                "games": 152,
+                "accuracy": 0.4868421052631579,
+                "log_loss": 1.0482978405934442,
+                "brier": 0.6306179333320048
+              },
+              "recency90": {
+                "games": 152,
+                "accuracy": 0.4276315789473684,
+                "log_loss": 1.054614800702375,
+                "brier": 0.6349672304936089
+              },
+              "shrinkage16": {
+                "games": 152,
+                "accuracy": 0.4473684210526316,
+                "log_loss": 1.0472363663998983,
+                "brier": 0.6301558948203626
+              },
+              "opponent": {
+                "games": 152,
+                "accuracy": 0.48026315789473684,
+                "log_loss": 1.0213970036670383,
+                "brier": 0.6154662902594539
+              },
+              "opponent_dc": {
+                "games": 152,
+                "accuracy": 0.48026315789473684,
+                "log_loss": 1.0155915193704006,
+                "brier": 0.609470198565006
+              },
+              "ensemble": {
+                "games": 152,
+                "accuracy": 0.47368421052631576,
+                "log_loss": 1.0345023598243877,
+                "brier": 0.6225836271176759
+              }
+            },
+            "temperatures": {
+              "baseline": 0.75,
+              "recency90": 0.75,
+              "shrinkage16": 0.75,
+              "opponent": 0.75,
+              "opponent_dc": 1.0,
+              "ensemble": 0.75
+            },
+            "rule": "First prior OOS UTC-day half calibrates; second half selects. Require +1 percentage point accuracy, -0.005 log loss and no worse Brier versus calibrated baseline. Otherwise retain baseline. No current/future outcome selection."
+          },
+          "IT1": {
+            "variant": "opponent_dc",
+            "temperature": 0.75,
+            "prior_season": "2025-26",
+            "last_prior_day": "2026-05-24",
+            "calibration_before_day": "2026-01-18",
+            "prior_games": 380,
+            "validation": {
+              "baseline": {
+                "games": 176,
+                "accuracy": 0.5340909090909091,
+                "log_loss": 0.9920795454286929,
+                "brier": 0.5901358352061911
+              },
+              "recency90": {
+                "games": 176,
+                "accuracy": 0.5340909090909091,
+                "log_loss": 0.9887918925179803,
+                "brier": 0.5872640514862736
+              },
+              "shrinkage16": {
+                "games": 176,
+                "accuracy": 0.5397727272727273,
+                "log_loss": 0.9926775032066133,
+                "brier": 0.5906336496209541
+              },
+              "opponent": {
+                "games": 176,
+                "accuracy": 0.5568181818181818,
+                "log_loss": 0.9797996891002579,
+                "brier": 0.5818379834134485
+              },
+              "opponent_dc": {
+                "games": 176,
+                "accuracy": 0.5568181818181818,
+                "log_loss": 0.977237662038508,
+                "brier": 0.5789853493674453
+              },
+              "ensemble": {
+                "games": 176,
+                "accuracy": 0.5511363636363636,
+                "log_loss": 0.9788509009254316,
+                "brier": 0.5803071711133492
+              }
+            },
+            "temperatures": {
+              "baseline": 1.0,
+              "recency90": 0.75,
+              "shrinkage16": 0.75,
+              "opponent": 1.0,
+              "opponent_dc": 0.75,
+              "ensemble": 0.75
+            },
+            "rule": "First prior OOS UTC-day half calibrates; second half selects. Require +1 percentage point accuracy, -0.005 log loss and no worse Brier versus calibrated baseline. Otherwise retain baseline. No current/future outcome selection."
+          },
+          "NL1": {
+            "variant": "opponent_dc",
+            "temperature": 0.75,
+            "prior_season": "2025-26",
+            "last_prior_day": "2026-05-17",
+            "calibration_before_day": "2025-12-21",
+            "prior_games": 305,
+            "validation": {
+              "baseline": {
+                "games": 158,
+                "accuracy": 0.4810126582278481,
+                "log_loss": 1.0332881036304966,
+                "brier": 0.6183097632689029
+              },
+              "recency90": {
+                "games": 158,
+                "accuracy": 0.46835443037974683,
+                "log_loss": 1.047459176976817,
+                "brier": 0.6280632230418356
+              },
+              "shrinkage16": {
+                "games": 158,
+                "accuracy": 0.4936708860759494,
+                "log_loss": 1.0522307765476047,
+                "brier": 0.6301083287547911
+              },
+              "opponent": {
+                "games": 158,
+                "accuracy": 0.4936708860759494,
+                "log_loss": 1.0285453845992196,
+                "brier": 0.6138006862594577
+              },
+              "opponent_dc": {
+                "games": 158,
+                "accuracy": 0.4936708860759494,
+                "log_loss": 1.026817457188565,
+                "brier": 0.6130441943952164
+              },
+              "ensemble": {
+                "games": 158,
+                "accuracy": 0.4936708860759494,
+                "log_loss": 1.0345444343951116,
+                "brier": 0.6187085741521119
+              }
+            },
+            "temperatures": {
+              "baseline": 1.0,
+              "recency90": 1.0,
+              "shrinkage16": 0.75,
+              "opponent": 0.75,
+              "opponent_dc": 0.75,
+              "ensemble": 0.75
+            },
+            "rule": "First prior OOS UTC-day half calibrates; second half selects. Require +1 percentage point accuracy, -0.005 log loss and no worse Brier versus calibrated baseline. Otherwise retain baseline. No current/future outcome selection."
+          },
+          "PT1": {
+            "variant": "opponent",
+            "temperature": 0.75,
+            "prior_season": "2025-26",
+            "last_prior_day": "2026-05-16",
+            "calibration_before_day": "2026-01-03",
+            "prior_games": 306,
+            "validation": {
+              "baseline": {
+                "games": 162,
+                "accuracy": 0.5246913580246914,
+                "log_loss": 0.9650953022334557,
+                "brier": 0.5741975284716212
+              },
+              "recency90": {
+                "games": 162,
+                "accuracy": 0.5308641975308642,
+                "log_loss": 0.9852749176115772,
+                "brier": 0.5871345528933463
+              },
+              "shrinkage16": {
+                "games": 162,
+                "accuracy": 0.5432098765432098,
+                "log_loss": 0.9708219824933089,
+                "brier": 0.5763277605730582
+              },
+              "opponent": {
+                "games": 162,
+                "accuracy": 0.5432098765432098,
+                "log_loss": 0.9506773736545965,
+                "brier": 0.5649405794880487
+              },
+              "opponent_dc": {
+                "games": 162,
+                "accuracy": 0.5432098765432098,
+                "log_loss": 0.9517645864337975,
+                "brier": 0.5657974114867477
+              },
+              "ensemble": {
+                "games": 162,
+                "accuracy": 0.5246913580246914,
+                "log_loss": 0.9562457050507667,
+                "brier": 0.5686651563840113
+              }
+            },
+            "temperatures": {
+              "baseline": 0.75,
+              "recency90": 0.75,
+              "shrinkage16": 0.75,
+              "opponent": 0.75,
+              "opponent_dc": 0.75,
+              "ensemble": 0.75
+            },
+            "rule": "First prior OOS UTC-day half calibrates; second half selects. Require +1 percentage point accuracy, -0.005 log loss and no worse Brier versus calibrated baseline. Otherwise retain baseline. No current/future outcome selection."
+          },
+          "TR1": {
+            "variant": "opponent_dc",
+            "temperature": 1.0,
+            "prior_season": "2025-26",
+            "last_prior_day": "2025-11-03",
+            "calibration_before_day": "2025-09-21",
+            "prior_games": 99,
+            "validation": {
+              "baseline": {
+                "games": 53,
+                "accuracy": 0.4339622641509434,
+                "log_loss": 1.033046966326835,
+                "brier": 0.6184757816733186
+              },
+              "recency90": {
+                "games": 53,
+                "accuracy": 0.4716981132075472,
+                "log_loss": 1.045662607616368,
+                "brier": 0.6256552894359659
+              },
+              "shrinkage16": {
+                "games": 53,
+                "accuracy": 0.41509433962264153,
+                "log_loss": 1.047774004320359,
+                "brier": 0.6282010167424381
+              },
+              "opponent": {
+                "games": 53,
+                "accuracy": 0.49056603773584906,
+                "log_loss": 1.0102604093063352,
+                "brier": 0.6018144441389589
+              },
+              "opponent_dc": {
+                "games": 53,
+                "accuracy": 0.49056603773584906,
+                "log_loss": 1.0056830206926697,
+                "brier": 0.599819208231061
+              },
+              "ensemble": {
+                "games": 53,
+                "accuracy": 0.4528301886792453,
+                "log_loss": 1.016462720399793,
+                "brier": 0.6067185142934177
+              }
+            },
+            "temperatures": {
+              "baseline": 1.25,
+              "recency90": 1.0,
+              "shrinkage16": 1.0,
+              "opponent": 1.0,
+              "opponent_dc": 1.0,
+              "ensemble": 1.0
+            },
+            "rule": "First prior OOS UTC-day half calibrates; second half selects. Require +1 percentage point accuracy, -0.005 log loss and no worse Brier versus calibrated baseline. Otherwise retain baseline. No current/future outcome selection."
+          }
+        },
+        "basketball": {
+          "ABA": {
+            "variant": "baseline",
+            "temperature": 0.75,
+            "prior_season": "2025-26",
+            "last_prior_day": "2026-06-12",
+            "calibration_before_day": "2026-02-07",
+            "prior_games": 248,
+            "validation": {
+              "baseline": {
+                "games": 111,
+                "accuracy": 0.6846846846846847,
+                "log_loss": 0.6172993906082213,
+                "brier": 0.4284974619996701
+              },
+              "form_slow": {
+                "games": 111,
+                "accuracy": 0.6936936936936937,
+                "log_loss": 0.6111051718542929,
+                "brier": 0.42450708564712825
+              },
+              "form_fast": {
+                "games": 111,
+                "accuracy": 0.6846846846846847,
+                "log_loss": 0.6235419029534947,
+                "brier": 0.432275120199478
+              },
+              "without_rest": {
+                "games": 111,
+                "accuracy": 0.6936936936936937,
+                "log_loss": 0.6174139618423882,
+                "brier": 0.4285444931345738
+              },
+              "without_opponent_ratings": {
+                "games": 111,
+                "accuracy": 0.6936936936936937,
+                "log_loss": 0.6230501085342539,
+                "brier": 0.43505911628472355
+              },
+              "without_home": {
+                "games": 111,
+                "accuracy": 0.6846846846846847,
+                "log_loss": 0.6172993906082213,
+                "brier": 0.4284974619996701
+              }
+            },
+            "temperatures": {
+              "baseline": 0.75,
+              "form_slow": 0.75,
+              "form_fast": 0.75,
+              "without_rest": 0.75,
+              "without_opponent_ratings": 0.75,
+              "without_home": 0.75
+            },
+            "rule": "First prior OOS UTC-day half calibrates; second half selects. Require +1 percentage point accuracy, -0.005 log loss and no worse Brier versus calibrated baseline. Otherwise retain baseline. No current/future outcome selection."
+          },
+          "ARG_LNB": {
+            "variant": "baseline",
+            "temperature": 1.25,
+            "prior_season": "2025-26",
+            "last_prior_day": "2026-06-20",
+            "calibration_before_day": "2026-01-29",
+            "prior_games": 395,
+            "validation": {
+              "baseline": {
+                "games": 198,
+                "accuracy": 0.696969696969697,
+                "log_loss": 0.6406922802249644,
+                "brier": 0.449070878163949
+              },
+              "form_slow": {
+                "games": 198,
+                "accuracy": 0.696969696969697,
+                "log_loss": 0.6406922802249644,
+                "brier": 0.449070878163949
+              },
+              "form_fast": {
+                "games": 198,
+                "accuracy": 0.696969696969697,
+                "log_loss": 0.6406922802249644,
+                "brier": 0.449070878163949
+              },
+              "without_rest": {
+                "games": 198,
+                "accuracy": 0.696969696969697,
+                "log_loss": 0.6406922802249644,
+                "brier": 0.449070878163949
+              },
+              "without_opponent_ratings": {
+                "games": 198,
+                "accuracy": 0.696969696969697,
+                "log_loss": 0.6406922802249644,
+                "brier": 0.449070878163949
+              },
+              "without_home": {
+                "games": 198,
+                "accuracy": 0.696969696969697,
+                "log_loss": 0.6406922802249644,
+                "brier": 0.449070878163949
+              }
+            },
+            "temperatures": {
+              "baseline": 1.25,
+              "form_slow": 1.25,
+              "form_fast": 1.25,
+              "without_rest": 1.25,
+              "without_opponent_ratings": 1.25,
+              "without_home": 1.25
+            },
+            "rule": "First prior OOS UTC-day half calibrates; second half selects. Require +1 percentage point accuracy, -0.005 log loss and no worse Brier versus calibrated baseline. Otherwise retain baseline. No current/future outcome selection."
+          },
+          "E": {
+            "variant": "baseline",
+            "temperature": 1.25,
+            "prior_season": "2025-26",
+            "last_prior_day": "2026-05-24",
+            "calibration_before_day": "2026-01-21",
+            "prior_games": 402,
+            "validation": {
+              "baseline": {
+                "games": 175,
+                "accuracy": 0.6514285714285715,
+                "log_loss": 0.6250886827978054,
+                "brier": 0.43585308210076845
+              },
+              "form_slow": {
+                "games": 175,
+                "accuracy": 0.6457142857142857,
+                "log_loss": 0.6247445807023351,
+                "brier": 0.4355305877536264
+              },
+              "form_fast": {
+                "games": 175,
+                "accuracy": 0.6571428571428571,
+                "log_loss": 0.6240901492756493,
+                "brier": 0.43496522032463664
+              },
+              "without_rest": {
+                "games": 175,
+                "accuracy": 0.6571428571428571,
+                "log_loss": 0.6264618432985112,
+                "brier": 0.4370876981562475
+              },
+              "without_opponent_ratings": {
+                "games": 175,
+                "accuracy": 0.6342857142857142,
+                "log_loss": 0.625284992039803,
+                "brier": 0.4359287621211583
+              },
+              "without_home": {
+                "games": 175,
+                "accuracy": 0.6571428571428571,
+                "log_loss": 0.6253238480278365,
+                "brier": 0.4360211784141548
+              }
+            },
+            "temperatures": {
+              "baseline": 1.25,
+              "form_slow": 1.25,
+              "form_fast": 1.25,
+              "without_rest": 1.25,
+              "without_opponent_ratings": 1.25,
+              "without_home": 1.25
+            },
+            "rule": "First prior OOS UTC-day half calibrates; second half selects. Require +1 percentage point accuracy, -0.005 log loss and no worse Brier versus calibrated baseline. Otherwise retain baseline. No current/future outcome selection."
+          },
+          "ECW": {
+            "variant": "baseline",
+            "temperature": 0.75,
+            "prior_season": "2025-26",
+            "last_prior_day": "2026-04-09",
+            "calibration_before_day": "2025-11-26",
+            "prior_games": 214,
+            "validation": {
+              "baseline": {
+                "games": 84,
+                "accuracy": 0.5833333333333334,
+                "log_loss": 0.7462463696956141,
+                "brier": 0.5444938201146738
+              },
+              "form_slow": {
+                "games": 84,
+                "accuracy": 0.5833333333333334,
+                "log_loss": 0.7441246759966431,
+                "brier": 0.5432320541117295
+              },
+              "form_fast": {
+                "games": 84,
+                "accuracy": 0.5714285714285714,
+                "log_loss": 0.7568989489582141,
+                "brier": 0.5511612912750282
+              },
+              "without_rest": {
+                "games": 84,
+                "accuracy": 0.5714285714285714,
+                "log_loss": 0.7501955127386217,
+                "brier": 0.5373175511005628
+              },
+              "without_opponent_ratings": {
+                "games": 84,
+                "accuracy": 0.5595238095238095,
+                "log_loss": 0.7677365957949885,
+                "brier": 0.5582956373190663
+              },
+              "without_home": {
+                "games": 84,
+                "accuracy": 0.5833333333333334,
+                "log_loss": 0.7462463696956141,
+                "brier": 0.5444938201146738
+              }
+            },
+            "temperatures": {
+              "baseline": 0.75,
+              "form_slow": 0.75,
+              "form_fast": 0.75,
+              "without_rest": 1.0,
+              "without_opponent_ratings": 0.75,
+              "without_home": 0.75
+            },
+            "rule": "First prior OOS UTC-day half calibrates; second half selects. Require +1 percentage point accuracy, -0.005 log loss and no worse Brier versus calibrated baseline. Otherwise retain baseline. No current/future outcome selection."
+          },
+          "FEC": {
+            "variant": "baseline",
+            "temperature": 1.0,
+            "prior_season": "2025-26",
+            "last_prior_day": "2026-04-29",
+            "calibration_before_day": "2025-12-17",
+            "prior_games": 195,
+            "validation": {
+              "baseline": {
+                "games": 54,
+                "accuracy": 0.7222222222222222,
+                "log_loss": 0.556701134833996,
+                "brier": 0.3789229261557813
+              },
+              "form_slow": {
+                "games": 54,
+                "accuracy": 0.7222222222222222,
+                "log_loss": 0.5604999886153718,
+                "brier": 0.38219449818187895
+              },
+              "form_fast": {
+                "games": 54,
+                "accuracy": 0.7222222222222222,
+                "log_loss": 0.5525268573451485,
+                "brier": 0.3753510912893085
+              },
+              "without_rest": {
+                "games": 54,
+                "accuracy": 0.7222222222222222,
+                "log_loss": 0.5549447769824611,
+                "brier": 0.37790092073345033
+              },
+              "without_opponent_ratings": {
+                "games": 54,
+                "accuracy": 0.7222222222222222,
+                "log_loss": 0.5634040921121971,
+                "brier": 0.385073560559627
+              },
+              "without_home": {
+                "games": 54,
+                "accuracy": 0.7222222222222222,
+                "log_loss": 0.556701134833996,
+                "brier": 0.3789229261557813
+              }
+            },
+            "temperatures": {
+              "baseline": 1.0,
+              "form_slow": 1.0,
+              "form_fast": 1.0,
+              "without_rest": 1.0,
+              "without_opponent_ratings": 1.0,
+              "without_home": 1.0
+            },
+            "rule": "First prior OOS UTC-day half calibrates; second half selects. Require +1 percentage point accuracy, -0.005 log loss and no worse Brier versus calibrated baseline. Otherwise retain baseline. No current/future outcome selection."
+          },
+          "KBL": {
+            "variant": "baseline",
+            "temperature": 2.0,
+            "prior_season": "2025-26",
+            "last_prior_day": "2026-04-08",
+            "calibration_before_day": "2026-01-02",
+            "prior_games": 270,
+            "validation": {
+              "baseline": {
+                "games": 136,
+                "accuracy": 0.6691176470588235,
+                "log_loss": 0.6587466641142937,
+                "brier": 0.46575793022267314
+              },
+              "form_slow": {
+                "games": 136,
+                "accuracy": 0.6764705882352942,
+                "log_loss": 0.6511183667507217,
+                "brier": 0.45822950294820325
+              },
+              "form_fast": {
+                "games": 136,
+                "accuracy": 0.6764705882352942,
+                "log_loss": 0.658553764195,
+                "brier": 0.46557055039327555
+              },
+              "without_rest": {
+                "games": 136,
+                "accuracy": 0.6691176470588235,
+                "log_loss": 0.6580617344265232,
+                "brier": 0.46508858501694156
+              },
+              "without_opponent_ratings": {
+                "games": 136,
+                "accuracy": 0.6838235294117647,
+                "log_loss": 0.6550416866472348,
+                "brier": 0.462180397825568
+              },
+              "without_home": {
+                "games": 136,
+                "accuracy": 0.6691176470588235,
+                "log_loss": 0.6587466641142937,
+                "brier": 0.46575793022267314
+              }
+            },
+            "temperatures": {
+              "baseline": 2.0,
+              "form_slow": 1.5,
+              "form_fast": 2.0,
+              "without_rest": 2.0,
+              "without_opponent_ratings": 2.0,
+              "without_home": 2.0
+            },
+            "rule": "First prior OOS UTC-day half calibrates; second half selects. Require +1 percentage point accuracy, -0.005 log loss and no worse Brier versus calibrated baseline. Otherwise retain baseline. No current/future outcome selection."
+          },
+          "TR_BSL": {
+            "variant": "baseline",
+            "temperature": 0.75,
+            "prior_season": "2025-26",
+            "last_prior_day": "2026-06-19",
+            "calibration_before_day": "2026-02-07",
+            "prior_games": 261,
+            "validation": {
+              "baseline": {
+                "games": 117,
+                "accuracy": 0.7264957264957265,
+                "log_loss": 0.6363125398922794,
+                "brier": 0.4167481918442241
+              },
+              "form_slow": {
+                "games": 117,
+                "accuracy": 0.7264957264957265,
+                "log_loss": 0.6337539141926247,
+                "brier": 0.41530670559559796
+              },
+              "form_fast": {
+                "games": 117,
+                "accuracy": 0.7264957264957265,
+                "log_loss": 0.6052670842771828,
+                "brier": 0.40442820040269617
+              },
+              "without_rest": {
+                "games": 117,
+                "accuracy": 0.7350427350427351,
+                "log_loss": 0.62922523900927,
+                "brier": 0.4107503951450061
+              },
+              "without_opponent_ratings": {
+                "games": 117,
+                "accuracy": 0.7264957264957265,
+                "log_loss": 0.6264076903996181,
+                "brier": 0.414283167991483
+              },
+              "without_home": {
+                "games": 117,
+                "accuracy": 0.7264957264957265,
+                "log_loss": 0.6363125398922794,
+                "brier": 0.4167481918442241
+              }
+            },
+            "temperatures": {
+              "baseline": 0.75,
+              "form_slow": 0.75,
+              "form_fast": 0.75,
+              "without_rest": 0.75,
+              "without_opponent_ratings": 0.75,
+              "without_home": 0.75
+            },
+            "rule": "First prior OOS UTC-day half calibrates; second half selects. Require +1 percentage point accuracy, -0.005 log loss and no worse Brier versus calibrated baseline. Otherwise retain baseline. No current/future outcome selection."
+          },
+          "UKR": {
+            "variant": "without_opponent_ratings",
+            "temperature": 1.0,
+            "prior_season": "2025-26",
+            "last_prior_day": "2026-05-02",
+            "calibration_before_day": "2026-02-06",
+            "prior_games": 127,
+            "validation": {
+              "baseline": {
+                "games": 54,
+                "accuracy": 0.6481481481481481,
+                "log_loss": 0.5875240811933226,
+                "brier": 0.4227914721930936
+              },
+              "form_slow": {
+                "games": 54,
+                "accuracy": 0.6851851851851852,
+                "log_loss": 0.5861685306228404,
+                "brier": 0.4199175002404154
+              },
+              "form_fast": {
+                "games": 54,
+                "accuracy": 0.6296296296296297,
+                "log_loss": 0.5880835588623866,
+                "brier": 0.42417935375930566
+              },
+              "without_rest": {
+                "games": 54,
+                "accuracy": 0.6296296296296297,
+                "log_loss": 0.5893244307738196,
+                "brier": 0.4242190044029137
+              },
+              "without_opponent_ratings": {
+                "games": 54,
+                "accuracy": 0.6666666666666666,
+                "log_loss": 0.573679145120376,
+                "brier": 0.40992817780450774
+              },
+              "without_home": {
+                "games": 54,
+                "accuracy": 0.6481481481481481,
+                "log_loss": 0.5875240811933226,
+                "brier": 0.4227914721930936
+              }
+            },
+            "temperatures": {
+              "baseline": 1.0,
+              "form_slow": 1.0,
+              "form_fast": 1.0,
+              "without_rest": 1.0,
+              "without_opponent_ratings": 1.0,
+              "without_home": 1.0
+            },
+            "rule": "First prior OOS UTC-day half calibrates; second half selects. Require +1 percentage point accuracy, -0.005 log loss and no worse Brier versus calibrated baseline. Otherwise retain baseline. No current/future outcome selection."
+          }
+        }
+      },
+      "errors": [],
+      "temperature_grid": [
+        0.75,
+        1.0,
+        1.25,
+        1.5,
+        2.0
+      ],
+      "script_sha256": "bf8567cab86a8879ddd5125fec9cbde31ca41bf1925dc56b1a1c9c1a331be328",
+      "note": "Research challenger registry; no production promotion. Available past season completeness unverified. Current outcomes excluded."
+    },
+    "cycle_script_sha256": "5ef1bf2f8314ef90b1a945959772f6319efd212511efefffb33b711157f5e8e5"
+  },
+  "source_code_sha256": "a8d9ce5c692529e6af6dfbcfc8112b7939f37ce83631889026a0559ee22fb8a5",
+  "runtime": {
+    "python": "3.12.15 (main, Oct  1 2026, 02:35:59) [GCC 13.3.0]",
+    "packages": {
+      "numpy": "2.2.6",
+      "pandas": "2.2.3",
+      "scipy": "1.15.3",
+      "scikit-learn": "1.6.1"
+    }
+  },
+  "sha256": "c31a3a29494b964bd160dbb3904b4d30c23b35cb34bc26080481a9fa38ecc585"
+}

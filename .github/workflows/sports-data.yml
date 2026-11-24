@@ -14,17 +14,17 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 60
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           ref: main
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
         with:
           python-version: '3.12'
           cache: pip
       - run: python -m pip install -r requirements.txt
       - run: python -m pip install --no-deps -e .
       - name: Restore source repositories for incremental updates
-        uses: actions/cache/restore@v4
+        uses: actions/cache/restore@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
         with:
           path: |
             .runtime/openfootball/
@@ -37,7 +37,7 @@ jobs:
         run: python scripts/refresh_sports.py ${{ github.event.schedule == '45 4 * * 0' && '--backfill' || '' }}
       - name: Save source repositories even after partial collection
         if: always() && steps.collect.outcome != 'skipped'
-        uses: actions/cache/save@v4
+        uses: actions/cache/save@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
         with:
           path: |
             .runtime/openfootball/
@@ -83,7 +83,7 @@ jobs:
           git diff --exit-code
           git pull --rebase origin main
           git push origin HEAD:main
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
         if: always()
         with:
           name: sports-refresh-evidence
@@ -98,5 +98,32 @@ jobs:
             docs/kanit/competitions/*_collection.json
       - name: Surface incomplete source refresh
         if: steps.collect.outcome == 'failure' || steps.fixtures.outcome == 'failure' || steps.licensed_sources.outcome == 'failure' || steps.licensed.outcome == 'failure' || steps.shadow.outcome == 'failure' || steps.football.outcome == 'failure'
-        run: exit 1
+        shell: bash
+        env:
+          COLLECT_OUTCOME: ${{ steps.collect.outcome }}
+          FIXTURES_OUTCOME: ${{ steps.fixtures.outcome }}
+          LICENSED_SOURCES_OUTCOME: ${{ steps.licensed_sources.outcome }}
+          LICENSED_OUTCOME: ${{ steps.licensed.outcome }}
+          SHADOW_OUTCOME: ${{ steps.shadow.outcome }}
+          FOOTBALL_OUTCOME: ${{ steps.football.outcome }}
+        run: |
+          {
+            echo '### Sports refresh incomplete'
+            echo
+            echo 'At least one independent collection or forecast stage did not complete successfully.'
+            echo 'Data collection reports unexpected source failures, whole-sport failures, and expired known-missing exceptions as errors. Current known-missing failures remain in the refresh report.'
+            echo
+            echo '| Stage | Outcome |'
+            echo '|---|---|'
+            printf '| Data collection | %s |\n' "$COLLECT_OUTCOME"
+            printf '| Fixture confirmation | %s |\n' "$FIXTURES_OUTCOME"
+            printf '| Licensed-source inspection | %s |\n' "$LICENSED_SOURCES_OUTCOME"
+            printf '| Licensed supplement | %s |\n' "$LICENSED_OUTCOME"
+            printf '| Shadow forecasts | %s |\n' "$SHADOW_OUTCOME"
+            printf '| Football forecasts | %s |\n' "$FOOTBALL_OUTCOME"
+            echo
+            echo 'Inspect the failed stage logs and the `sports-refresh-evidence` artifact before retrying. Historical archives do not establish current fixture coverage.'
+          } >> "$GITHUB_STEP_SUMMARY"
+          echo '::error::Sports refresh incomplete; inspect stage outcomes in the job summary and the evidence artifact.'
+          exit 1
 

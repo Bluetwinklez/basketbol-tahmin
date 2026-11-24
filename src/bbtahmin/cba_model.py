@@ -14,7 +14,7 @@ from sklearn.linear_model import Ridge
 from sklearn.pipeline import make_pipeline
 from sklearn.preprocessing import StandardScaler
 
-from .ozellik import FEATURES,build_features
+from .ozellik import build_features,select_columns
 
 DATA=Path('data/cba_games.parquet')
 SPEC='cba-ridge-per40-v1'
@@ -36,12 +36,13 @@ def prepare(g):
 def fit(x,g,train,calibration,test):
     if train.sum()<200 or calibration.sum()<100:raise ValueError('Insufficient CBA training/calibration history')
     models=[];details=[]
+    cols=select_columns(x,(g.ev_skor-g.dep_skor).to_numpy(float),train,calibration)
     for target in [(g.ev_skor-g.dep_skor).to_numpy(),(g.ev_skor+g.dep_skor).to_numpy()]:
         def estimator():return make_pipeline(StandardScaler(),Ridge(alpha=10.))
-        inner=estimator().fit(x.loc[train,FEATURES],target[train])
-        residual=target[calibration]-inner.predict(x.loc[calibration,FEATURES])
-        final=estimator().fit(x.loc[train|calibration,FEATURES],target[train|calibration])
-        models.append(final.predict(x.loc[test,FEATURES]))
+        inner=estimator().fit(x.loc[train,cols],target[train])
+        residual=target[calibration]-inner.predict(x.loc[calibration,cols])
+        final=estimator().fit(x.loc[train|calibration,cols],target[train|calibration])
+        models.append(final.predict(x.loc[test,cols]))
         details.append(dict(sigma=max(float(np.std(residual,ddof=1)),1.),bias=float(np.mean(residual))))
     return models,details
 

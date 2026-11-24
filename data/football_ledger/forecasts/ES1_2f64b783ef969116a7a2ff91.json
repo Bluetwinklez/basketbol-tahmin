@@ -1,0 +1,125 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-11-23T18:40:39.568093+00:00",
+  "fixture": {
+    "event_id": "ES1_2f64b783ef969116a7a2ff91",
+    "league": "ES1",
+    "season": "2026-27",
+    "date": "2026-11-29",
+    "home": "real sociedad de futbol",
+    "away": "sevilla fc",
+    "home_name": "Real Sociedad de Fútbol",
+    "away_name": "Sevilla FC",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/es.1.json",
+    "captured_at_utc": "2026-11-23T18:36:02.653364+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null,
+    "original_date": null,
+    "date_correction_verified": null,
+    "license_url": null,
+    "source_sha256": null,
+    "fixture_verification_url": null,
+    "actual_start_utc": null,
+    "source_original_date": "2026-11-29",
+    "verified_start_utc": "2026-11-29T20:00:00+00:00",
+    "independent_fixture": {
+      "provider_event_id": "401882788",
+      "league": "ES1",
+      "season_year": 2026,
+      "start_utc": "2026-11-29T20:00:00+00:00",
+      "captured_at": "2026-11-23T18:39:49.662473+00:00",
+      "home_name": "Real Sociedad",
+      "away_name": "Sevilla",
+      "provider_home_id": "89",
+      "provider_away_id": "243",
+      "source_url": "https://www.espn.com/soccer/game/_/gameId/401882788",
+      "status": "scheduled",
+      "event_id": "ES1_2f64b783ef969116a7a2ff91",
+      "home": "real sociedad de futbol",
+      "away": "sevilla fc"
+    }
+  },
+  "prediction": {
+    "model": "football-opponent-v1",
+    "league": "ES1",
+    "home": "real sociedad de futbol",
+    "away": "sevilla fc",
+    "expected_home_goals": 1.9272107247144326,
+    "expected_away_goals": 1.2973724383736747,
+    "probabilities": {
+      "home": 0.521309076443821,
+      "draw": 0.22163224110819355,
+      "away": 0.2570586824479852
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.8319783714960342,
+      "2.5": 0.6252031502398673,
+      "3.5": 0.4029485179043827
+    },
+    "both_teams_score": 0.6209699060548869,
+    "total_goals_80": [
+      1,
+      6
+    ],
+    "training_cutoff_exclusive": "2026-11-23",
+    "training_games": 1130,
+    "prior_team_games": {
+      "real sociedad de futbol": 113,
+      "sevilla fc": 114
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "settings": {
+      "half_life_days": 180.0,
+      "shrinkage_games": 8.0,
+      "window_days": 1095
+    },
+    "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+    "low_score_rho": 0.0,
+    "research_candidate": false
+  },
+  "archive_sha256": "10a3955627423d66fecbeb57f96ae29c75ffaa20b414731c91b62d8f8152d835",
+  "source_code_sha256": "2f9eacd61e976d4c84a9d5c8c259160a0c69f62040f78b08a195b1e6f9adf7f8",
+  "requested_model_variant": "opponent",
+  "history_health": {
+    "spec": "football-history-health-v1",
+    "checked_at_utc": "2026-11-23T18:40:38.014012+00:00",
+    "information_cutoff_exclusive": "2026-11-23",
+    "teams": {
+      "real sociedad de futbol": {
+        "prior_finals": 240,
+        "active_season_finals": 13,
+        "last_final_date": "2026-11-22",
+        "days_since_last_final": 1,
+        "unresolved_past_fixture_ids": []
+      },
+      "sevilla fc": {
+        "prior_finals": 544,
+        "active_season_finals": 13,
+        "last_final_date": "2026-11-21",
+        "days_since_last_final": 2,
+        "unresolved_past_fixture_ids": []
+      }
+    },
+    "diagnostic_gate_passed": true,
+    "blocking_issues": [],
+    "max_history_age_days": 30,
+    "calendar_completeness_verified": false,
+    "note": "Diagnostic policy, not a validated success threshold. Unresolved fixtures may be postponed or missing results. Fresh source captures do not make old histories current."
+  },
+  "selection_policy": "Current-history diagnostic gate plus existing model issues; research only, no validated recommendation.",
+  "payload_sha256": "43418001ae9fd928d735188b2d9146ebd0df822a39d6d74bc6986a3da7efe306"
+}

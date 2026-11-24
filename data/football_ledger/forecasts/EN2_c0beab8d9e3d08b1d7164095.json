@@ -1,0 +1,125 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-11-15T12:18:17.919456+00:00",
+  "fixture": {
+    "event_id": "EN2_c0beab8d9e3d08b1d7164095",
+    "league": "EN2",
+    "season": "2026-27",
+    "date": "2026-11-21",
+    "home": "wolverhampton wanderers fc",
+    "away": "charlton athletic fc",
+    "home_name": "Wolverhampton Wanderers FC",
+    "away_name": "Charlton Athletic FC",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/en.2.json",
+    "captured_at_utc": "2026-11-15T12:18:12.388271+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null,
+    "original_date": null,
+    "date_correction_verified": null,
+    "license_url": null,
+    "source_sha256": null,
+    "fixture_verification_url": null,
+    "actual_start_utc": null,
+    "source_original_date": "2026-11-21",
+    "verified_start_utc": "2026-11-21T15:00:00+00:00",
+    "independent_fixture": {
+      "provider_event_id": "401880149",
+      "league": "EN2",
+      "season_year": 2026,
+      "start_utc": "2026-11-21T15:00:00+00:00",
+      "captured_at": "2026-11-14T13:47:35.881973+00:00",
+      "home_name": "Wolverhampton Wanderers",
+      "away_name": "Charlton Athletic",
+      "provider_home_id": "380",
+      "provider_away_id": "372",
+      "source_url": "https://www.espn.com/soccer/game/_/gameId/401880149",
+      "status": "scheduled",
+      "event_id": "EN2_c0beab8d9e3d08b1d7164095",
+      "home": "wolverhampton wanderers fc",
+      "away": "charlton athletic fc"
+    }
+  },
+  "prediction": {
+    "model": "football-opponent-v1",
+    "league": "EN2",
+    "home": "wolverhampton wanderers fc",
+    "away": "charlton athletic fc",
+    "expected_home_goals": 1.754051766950153,
+    "expected_away_goals": 0.8002061084638828,
+    "probabilities": {
+      "home": 0.6007601010129795,
+      "draw": 0.2317003575047581,
+      "away": 0.1675395414822623
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      1,
+      0
+    ],
+    "over": {
+      "1.5": 0.7236567672881801,
+      "2.5": 0.47002748901701663,
+      "3.5": 0.2540826285304508
+    },
+    "both_teams_score": 0.4554422712122976,
+    "total_goals_80": [
+      1,
+      5
+    ],
+    "training_cutoff_exclusive": "2026-11-15",
+    "training_games": 1659,
+    "prior_team_games": {
+      "wolverhampton wanderers fc": 15,
+      "charlton athletic fc": 61
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "settings": {
+      "half_life_days": 180.0,
+      "shrinkage_games": 8.0,
+      "window_days": 1095
+    },
+    "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+    "low_score_rho": 0.0,
+    "research_candidate": false
+  },
+  "archive_sha256": "ccec00f39c0788a8f46b4dd8c52d51e823433801a7640e81c29bf5175aabcc81",
+  "source_code_sha256": "872a79ef7a219c008dc47609791f05cf4f684195b4e761af273908e452e2ad39",
+  "requested_model_variant": "opponent",
+  "history_health": {
+    "spec": "football-history-health-v1",
+    "checked_at_utc": "2026-11-15T12:18:16.219037+00:00",
+    "information_cutoff_exclusive": "2026-11-15",
+    "teams": {
+      "wolverhampton wanderers fc": {
+        "prior_finals": 15,
+        "active_season_finals": 15,
+        "last_final_date": "2026-11-07",
+        "days_since_last_final": 8,
+        "unresolved_past_fixture_ids": []
+      },
+      "charlton athletic fc": {
+        "prior_finals": 61,
+        "active_season_finals": 15,
+        "last_final_date": "2026-11-07",
+        "days_since_last_final": 8,
+        "unresolved_past_fixture_ids": []
+      }
+    },
+    "diagnostic_gate_passed": true,
+    "blocking_issues": [],
+    "max_history_age_days": 30,
+    "calendar_completeness_verified": false,
+    "note": "Diagnostic policy, not a validated success threshold. Unresolved fixtures may be postponed or missing results. Fresh source captures do not make old histories current."
+  },
+  "selection_policy": "Current-history diagnostic gate plus existing model issues; research only, no validated recommendation.",
+  "payload_sha256": "2b03fad633a705ee299de9a0c64d358a80a649f701d148885d2687774a050816"
+}

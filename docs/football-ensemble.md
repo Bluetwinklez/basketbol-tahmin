@@ -8,7 +8,7 @@ python -m bbtahmin futbol daily --model ensemble --output rapor/football-ensembl
 python scripts/evaluate_football_ensemble.py
 ```
 
-Use a separate daily output directory for each experiment. Existing earliest forecasts are reused rather than overwritten. Read-only MCP `predict_football` accepts optional `model_variant`; the baseline remains its default. Manual fixture identity is not verified. The browser and scheduled daily workflow continue using their established baseline.
+Use a separate daily output directory for each experiment. Existing earliest forecasts are reused rather than overwritten. Read-only MCP `predict_football` accepts optional `model_variant`. Since the [accuracy review](accuracy-review.md) the opponent-adjusted candidate is the default for MCP, CLI, the browser and the scheduled daily workflow; `--model baseline` remains available. Manual fixture identity is not verified.
 
 ## Matched historical evaluation
 

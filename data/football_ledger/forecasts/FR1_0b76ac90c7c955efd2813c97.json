@@ -1,0 +1,125 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-11-22T12:54:03.337388+00:00",
+  "fixture": {
+    "event_id": "FR1_0b76ac90c7c955efd2813c97",
+    "league": "FR1",
+    "season": "2026-27",
+    "date": "2026-11-28",
+    "home": "le mans fc",
+    "away": "lille osc",
+    "home_name": "Le Mans FC",
+    "away_name": "Lille OSC",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/fr.1.json",
+    "captured_at_utc": "2026-11-22T12:53:55.250046+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null,
+    "original_date": null,
+    "date_correction_verified": null,
+    "license_url": null,
+    "source_sha256": null,
+    "fixture_verification_url": null,
+    "actual_start_utc": null,
+    "source_original_date": "2026-11-28",
+    "verified_start_utc": "2026-11-28T19:45:00+00:00",
+    "independent_fixture": {
+      "provider_event_id": "401876390",
+      "league": "FR1",
+      "season_year": 2026,
+      "start_utc": "2026-11-28T19:45:00+00:00",
+      "captured_at": "2026-11-21T14:55:27.651827+00:00",
+      "home_name": "Le Mans",
+      "away_name": "Lille",
+      "provider_home_id": "2697",
+      "provider_away_id": "166",
+      "source_url": "https://www.espn.com/soccer/game/_/gameId/401876390",
+      "status": "scheduled",
+      "event_id": "FR1_0b76ac90c7c955efd2813c97",
+      "home": "le mans fc",
+      "away": "lille osc"
+    }
+  },
+  "prediction": {
+    "model": "football-opponent-v1",
+    "league": "FR1",
+    "home": "le mans fc",
+    "away": "lille osc",
+    "expected_home_goals": 1.028365986906297,
+    "expected_away_goals": 1.442268194294412,
+    "probabilities": {
+      "home": 0.2691910598555043,
+      "draw": 0.26480992891969496,
+      "away": 0.4659990112248009
+    },
+    "predicted_outcome": "away",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.706623010317207,
+      "2.5": 0.4486322788745949,
+      "3.5": 0.2361653723628983
+    },
+    "both_teams_score": 0.4905494729059909,
+    "total_goals_80": [
+      1,
+      5
+    ],
+    "training_cutoff_exclusive": "2026-11-22",
+    "training_games": 903,
+    "prior_team_games": {
+      "le mans fc": 10,
+      "lille osc": 100
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "settings": {
+      "half_life_days": 180.0,
+      "shrinkage_games": 8.0,
+      "window_days": 1095
+    },
+    "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+    "low_score_rho": 0.0,
+    "research_candidate": false
+  },
+  "archive_sha256": "c9b4a40717c19897cb6175f068564bced94b97db07416ef36c69b4ec32d355ff",
+  "source_code_sha256": "c1e6ddfededc35b38609ae5a143347dfeb9ec4dfe5f707f70a582433dfcd044f",
+  "requested_model_variant": "opponent",
+  "history_health": {
+    "spec": "football-history-health-v1",
+    "checked_at_utc": "2026-11-22T12:54:00.800383+00:00",
+    "information_cutoff_exclusive": "2026-11-22",
+    "teams": {
+      "le mans fc": {
+        "prior_finals": 10,
+        "active_season_finals": 10,
+        "last_final_date": "2026-11-08",
+        "days_since_last_final": 14,
+        "unresolved_past_fixture_ids": []
+      },
+      "lille osc": {
+        "prior_finals": 444,
+        "active_season_finals": 10,
+        "last_final_date": "2026-11-08",
+        "days_since_last_final": 14,
+        "unresolved_past_fixture_ids": []
+      }
+    },
+    "diagnostic_gate_passed": true,
+    "blocking_issues": [],
+    "max_history_age_days": 30,
+    "calendar_completeness_verified": false,
+    "note": "Diagnostic policy, not a validated success threshold. Unresolved fixtures may be postponed or missing results. Fresh source captures do not make old histories current."
+  },
+  "selection_policy": "Current-history diagnostic gate plus existing model issues; research only, no validated recommendation.",
+  "payload_sha256": "2e717777f6da650a0e6aade6da9f7559b414a258952403cc6ffc0376843edde9"
+}

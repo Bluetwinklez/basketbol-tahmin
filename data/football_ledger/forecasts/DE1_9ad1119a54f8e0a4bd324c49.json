@@ -1,0 +1,125 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-11-16T16:19:43.087615+00:00",
+  "fixture": {
+    "event_id": "DE1_9ad1119a54f8e0a4bd324c49",
+    "league": "DE1",
+    "season": "2026-27",
+    "date": "2026-11-22",
+    "home": "fc augsburg",
+    "away": "1. fsv mainz 05",
+    "home_name": "FC Augsburg",
+    "away_name": "1. FSV Mainz 05",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/de.1.json",
+    "captured_at_utc": "2026-11-16T16:15:11.774042+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null,
+    "original_date": null,
+    "date_correction_verified": null,
+    "license_url": null,
+    "source_sha256": null,
+    "fixture_verification_url": null,
+    "actual_start_utc": null,
+    "source_original_date": "2026-11-22",
+    "verified_start_utc": "2026-11-22T14:30:00+00:00",
+    "independent_fixture": {
+      "provider_event_id": "401884733",
+      "league": "DE1",
+      "season_year": 2026,
+      "start_utc": "2026-11-22T14:30:00+00:00",
+      "captured_at": "2026-11-16T16:18:40.748026+00:00",
+      "home_name": "FC Augsburg",
+      "away_name": "Mainz",
+      "provider_home_id": "3841",
+      "provider_away_id": "2950",
+      "source_url": "https://www.espn.com/soccer/game/_/gameId/401884733",
+      "status": "scheduled",
+      "event_id": "DE1_9ad1119a54f8e0a4bd324c49",
+      "home": "fc augsburg",
+      "away": "1. fsv mainz 05"
+    }
+  },
+  "prediction": {
+    "model": "football-opponent-v1",
+    "league": "DE1",
+    "home": "fc augsburg",
+    "away": "1. fsv mainz 05",
+    "expected_home_goals": 1.8962773820818,
+    "expected_away_goals": 1.5355053225645805,
+    "probabilities": {
+      "home": 0.46346600373907093,
+      "draw": 0.2217017474844406,
+      "away": 0.3148322487764885
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.8567237630434203,
+      "2.5": 0.6663507976065215,
+      "3.5": 0.44857791420032395
+    },
+    "both_teams_score": 0.666855968120843,
+    "total_goals_80": [
+      1,
+      6
+    ],
+    "training_cutoff_exclusive": "2026-11-16",
+    "training_games": 900,
+    "prior_team_games": {
+      "fc augsburg": 100,
+      "1. fsv mainz 05": 100
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "settings": {
+      "half_life_days": 180.0,
+      "shrinkage_games": 8.0,
+      "window_days": 1095
+    },
+    "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+    "low_score_rho": 0.0,
+    "research_candidate": false
+  },
+  "archive_sha256": "9f5e6469c4b49c74e0b8187d57b9c9fd24ff590459b75029db734e5b443ab2c5",
+  "source_code_sha256": "9ae7a915e48252a51fd91ee21ca83246f5300ebbf4aa27ae8654671ae69b3baf",
+  "requested_model_variant": "opponent",
+  "history_health": {
+    "spec": "football-history-health-v1",
+    "checked_at_utc": "2026-11-16T16:19:41.600884+00:00",
+    "information_cutoff_exclusive": "2026-11-16",
+    "teams": {
+      "fc augsburg": {
+        "prior_finals": 519,
+        "active_season_finals": 9,
+        "last_final_date": "2026-11-07",
+        "days_since_last_final": 9,
+        "unresolved_past_fixture_ids": []
+      },
+      "1. fsv mainz 05": {
+        "prior_finals": 553,
+        "active_season_finals": 9,
+        "last_final_date": "2026-11-07",
+        "days_since_last_final": 9,
+        "unresolved_past_fixture_ids": []
+      }
+    },
+    "diagnostic_gate_passed": true,
+    "blocking_issues": [],
+    "max_history_age_days": 30,
+    "calendar_completeness_verified": false,
+    "note": "Diagnostic policy, not a validated success threshold. Unresolved fixtures may be postponed or missing results. Fresh source captures do not make old histories current."
+  },
+  "selection_policy": "Current-history diagnostic gate plus existing model issues; research only, no validated recommendation.",
+  "payload_sha256": "fd35efbd2eb7cb5a74c602ef30ec15b2edf0fd0e695ba14288b040a17a0bc99d"
+}

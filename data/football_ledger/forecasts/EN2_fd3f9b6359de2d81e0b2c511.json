@@ -1,0 +1,123 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-10-29T13:36:01.611970+00:00",
+  "fixture": {
+    "event_id": "EN2_fd3f9b6359de2d81e0b2c511",
+    "league": "EN2",
+    "season": "2026-27",
+    "date": "2026-11-04",
+    "home": "wrexham afc",
+    "away": "middlesbrough fc",
+    "home_name": "Wrexham AFC",
+    "away_name": "Middlesbrough FC",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/en.2.json",
+    "captured_at_utc": "2026-10-29T13:30:54.560799+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null,
+    "original_date": null,
+    "date_correction_verified": null,
+    "license_url": null,
+    "source_sha256": null,
+    "fixture_verification_url": null,
+    "actual_start_utc": null,
+    "source_original_date": "2026-11-04",
+    "verified_start_utc": "2026-11-04T19:45:00+00:00",
+    "independent_fixture": {
+      "provider_event_id": "401880173",
+      "league": "EN2",
+      "season_year": 2026,
+      "start_utc": "2026-11-04T19:45:00+00:00",
+      "captured_at": "2026-10-29T13:34:33.942693+00:00",
+      "home_name": "Wrexham",
+      "away_name": "Middlesbrough",
+      "provider_home_id": "352",
+      "provider_away_id": "369",
+      "source_url": "https://www.espn.com/soccer/game/_/gameId/401880173",
+      "status": "scheduled",
+      "event_id": "EN2_fd3f9b6359de2d81e0b2c511",
+      "home": "wrexham afc",
+      "away": "middlesbrough fc"
+    }
+  },
+  "prediction": {
+    "model": "football-poisson-v1",
+    "league": "EN2",
+    "home": "wrexham afc",
+    "away": "middlesbrough fc",
+    "expected_home_goals": 1.5169571212452488,
+    "expected_away_goals": 1.8029912038850888,
+    "probabilities": {
+      "home": 0.3265201810482361,
+      "draw": 0.22712959708648242,
+      "away": 0.4463502218652816
+    },
+    "predicted_outcome": "away",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.8438135643102094,
+      "2.5": 0.6445639843693128,
+      "3.5": 0.4240645479667453
+    },
+    "both_teams_score": 0.6519711014245329,
+    "total_goals_80": [
+      1,
+      6
+    ],
+    "training_cutoff_exclusive": "2026-10-29",
+    "training_games": 1649,
+    "prior_team_games": {
+      "wrexham afc": 58,
+      "middlesbrough fc": 139
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "settings": {
+      "half_life_days": 180.0,
+      "shrinkage_games": 8.0,
+      "window_days": 1095
+    },
+    "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
+  },
+  "archive_sha256": "fe96cf1948a58d1e26a84c7b9885730b07087466ba2e13625c010a6f9ea35f17",
+  "source_code_sha256": "a8d9ce5c692529e6af6dfbcfc8112b7939f37ce83631889026a0559ee22fb8a5",
+  "requested_model_variant": "baseline",
+  "history_health": {
+    "spec": "football-history-health-v1",
+    "checked_at_utc": "2026-10-29T13:35:59.166022+00:00",
+    "information_cutoff_exclusive": "2026-10-29",
+    "teams": {
+      "wrexham afc": {
+        "prior_finals": 58,
+        "active_season_finals": 12,
+        "last_final_date": "2026-10-24",
+        "days_since_last_final": 5,
+        "unresolved_past_fixture_ids": []
+      },
+      "middlesbrough fc": {
+        "prior_finals": 661,
+        "active_season_finals": 12,
+        "last_final_date": "2026-10-23",
+        "days_since_last_final": 6,
+        "unresolved_past_fixture_ids": []
+      }
+    },
+    "diagnostic_gate_passed": true,
+    "blocking_issues": [],
+    "max_history_age_days": 30,
+    "calendar_completeness_verified": false,
+    "note": "Diagnostic policy, not a validated success threshold. Unresolved fixtures may be postponed or missing results. Fresh source captures do not make old histories current."
+  },
+  "selection_policy": "Current-history diagnostic gate plus existing model issues; research only, no validated recommendation.",
+  "payload_sha256": "1f80d9f298ef90135fd5034b1138f052ec410eee5c416b1dc2abbf91226b19a0"
+}

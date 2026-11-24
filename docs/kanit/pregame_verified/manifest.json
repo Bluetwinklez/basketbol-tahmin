@@ -1,6 +1,14 @@
 {
-  "timestamp": "2026-10-22T10:22:06.663243+00:00",
+  "timestamp": "2026-10-29T09:02:45.932261+00:00",
   "first_test": 2021,
+  "python": "3.13.17 (main, Oct 22 2026, 14:06:04) [GCC 13.3.0]",
+  "packages": {
+    "numpy": "2.2.6",
+    "pandas": "2.2.3",
+    "scipy": "1.15.3",
+    "scikit-learn": "1.6.1"
+  },
+  "prediction_sha256": "97f226965c602469239838969297f7bf2429918fc4054f3566e40044b0d7fe21",
   "dataset_sha256": "b47d00dbc49469d0511f23e1f2282a123e40302cca080aa3e6dcd85e619262b4",
   "absence_leagues": [],
   "box_leagues": [],
@@ -23,15 +31,7 @@
     "rtop_12"
   ],
   "files": {
-    "parametreler.json": "2eb49c8c7d7347f326dd3fc8a5a9ba8a201a0819466fda02c73730bf5e5ace63",
-    "metrikler.csv": "6a0c600cff3e78be4d2bffccef9c4f72ce5f7f062dca7f4b7a436028cf42f26e"
-  },
-  "python": "3.12.14 (main, Aug 25 2026, 14:00:49) [Clang 22.1.3 ]",
-  "packages": {
-    "numpy": "2.3.5",
-    "pandas": "2.2.3",
-    "scipy": "1.17.0",
-    "scikit-learn": "1.6.1"
-  },
-  "prediction_sha256": "38c10a57b69ca7d28dd7b2e661b6fcc711710d1e6ecccb7b7d015dba6bde25a3"
+    "parametreler.json": "e5ba16babfcbf1996e3eea7104fba9741c9758645b9688d98cbbc1c672fafc93",
+    "metrikler.csv": "b602613db75060222b1fa4b8404ed3ee8a61816e278d82a5c1a6e8da330f4529"
+  }
 }

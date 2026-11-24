@@ -10,6 +10,8 @@ from bbtahmin.daily import LEAGUES, run as basketball_run
 from bbtahmin.football.data import collect, write_json, source_refresh_session
 from bbtahmin.football.daily import run as football_run
 from bbtahmin.football.calendar import collect as calendar_collect
+from bbtahmin.refresh_health import (auto_disabled, classify_errors, load_known_missing,
+                                    refresh_exit_code, saved_reports)
 
 
 def main():
@@ -22,9 +24,12 @@ def main():
 
 
 def refresh(args):
-    results={}; failed=False
+    directory=Path('data/refresh')
+    entries=load_known_missing(directory/'known_missing.json')
+    results={}
     for sport in ('football','basketball'):
         if args.sport not in (sport,'all'): continue
+        skipped=[]
         try:
             if sport=='football':
                 from refresh_screenshot_leagues import run as screenshot_refresh
@@ -46,21 +51,28 @@ def refresh(args):
                 attempt('football_ledger',lambda: football_run(output='data/football_ledger'))
 
             else:
+                skip=auto_disabled(saved_reports(directory),sport,'PBA_GOV',pd.Timestamp.now(tz='UTC'),
+                                   threshold=3,retry_days=7)
+                if skip:
+                    skipped.append(skip)
                 backfill_errors=[]
                 if args.backfill:
                     from bbtahmin.veri import turkey,ukraine,argentina
                     for name,collector,first in [('TR_BSL',turkey.collect,2010),('UKR',ukraine.collect,2016),('ARG_LNB',argentina.collect,2022)]:
                         try: collector(first=first)
                         except Exception as exc: backfill_errors.append(dict(league=name,error=str(exc),stage='historical_backfill'))
-                report=basketball_run(leagues=list(LEAGUES),output='data/basketball_ledger',update=True,hours=168)
+                report=basketball_run(leagues=list(LEAGUES),output='data/basketball_ledger',update=True,hours=168,
+                                      skip_sources={item['league'] for item in skipped})
                 errors=backfill_errors+[dict(league=c,**s) for c,s in report['sources'].items() if s['status']=='failed']
             results[sport]=dict(status='partial' if errors else 'succeeded',errors=errors)
-            # Keep data on partial success, but never report a green refresh.
-            failed=failed or bool(errors)
         except Exception as exc:
-            failed=True;results[sport]=dict(status='failed',error=f'{type(exc).__name__}: {exc}')
-    write_json(Path('data/refresh')/(pd.Timestamp.now(tz='UTC').strftime('%Y%m%dT%H%M%SZ')+'.json'),results)
-    print(json.dumps(results,indent=2));return 1 if failed else 0
+            results[sport]=dict(status='failed',error=f'{type(exc).__name__}: {exc}')
+        results[sport].update(classify_errors(sport,results[sport].get('errors',[]),entries))
+        if skipped:
+            results[sport]['skipped_auto_disabled']=skipped
+    finished=pd.Timestamp.now(tz='UTC')
+    write_json(directory/(finished.strftime('%Y%m%dT%H%M%SZ')+'.json'),results)
+    print(json.dumps(results,indent=2));return refresh_exit_code(results,entries,finished.date())
 
 
 if __name__=='__main__': sys.exit(main())

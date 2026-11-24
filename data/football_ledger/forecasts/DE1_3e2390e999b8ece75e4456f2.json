@@ -1,0 +1,125 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-11-14T13:44:05.083997+00:00",
+  "fixture": {
+    "event_id": "DE1_3e2390e999b8ece75e4456f2",
+    "league": "DE1",
+    "season": "2026-27",
+    "date": "2026-11-20",
+    "home": "fc bayern munchen",
+    "away": "1. fc koln",
+    "home_name": "FC Bayern München",
+    "away_name": "1. FC Köln",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/de.1.json",
+    "captured_at_utc": "2026-11-14T13:44:01.969318+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null,
+    "original_date": null,
+    "date_correction_verified": null,
+    "license_url": null,
+    "source_sha256": null,
+    "fixture_verification_url": null,
+    "actual_start_utc": null,
+    "source_original_date": "2026-11-20",
+    "verified_start_utc": "2026-11-20T19:30:00+00:00",
+    "independent_fixture": {
+      "provider_event_id": "401884736",
+      "league": "DE1",
+      "season_year": 2026,
+      "start_utc": "2026-11-20T19:30:00+00:00",
+      "captured_at": "2026-11-13T14:51:05.830139+00:00",
+      "home_name": "Bayern Munich",
+      "away_name": "FC Cologne",
+      "provider_home_id": "132",
+      "provider_away_id": "122",
+      "source_url": "https://www.espn.com/soccer/game/_/gameId/401884736",
+      "status": "scheduled",
+      "event_id": "DE1_3e2390e999b8ece75e4456f2",
+      "home": "fc bayern munchen",
+      "away": "1. fc koln"
+    }
+  },
+  "prediction": {
+    "model": "football-opponent-v1",
+    "league": "DE1",
+    "home": "fc bayern munchen",
+    "away": "1. fc koln",
+    "expected_home_goals": 3.4921987045195992,
+    "expected_away_goals": 0.9011942301111354,
+    "probabilities": {
+      "home": 0.8476314075824413,
+      "draw": 0.094950899466041,
+      "away": 0.057417692951517885
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      3,
+      0
+    ],
+    "over": {
+      "1.5": 0.9333445363723801,
+      "2.5": 0.8140710838807308,
+      "3.5": 0.6393993693921223
+    },
+    "both_teams_score": 0.5758404304006957,
+    "total_goals_80": [
+      2,
+      7
+    ],
+    "training_cutoff_exclusive": "2026-11-14",
+    "training_games": 900,
+    "prior_team_games": {
+      "fc bayern munchen": 100,
+      "1. fc koln": 66
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "settings": {
+      "half_life_days": 180.0,
+      "shrinkage_games": 8.0,
+      "window_days": 1095
+    },
+    "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+    "low_score_rho": 0.0,
+    "research_candidate": false
+  },
+  "archive_sha256": "5abc89f3190b9e02d4ea6124e5a5866eb217807830373cf470b3738b975c6bb6",
+  "source_code_sha256": "4fe7ee8fbd6dd6b816e93b92e319b0791f8163cb25feb1ef429a8637d35ac115",
+  "requested_model_variant": "opponent",
+  "history_health": {
+    "spec": "football-history-health-v1",
+    "checked_at_utc": "2026-11-14T13:44:03.622326+00:00",
+    "information_cutoff_exclusive": "2026-11-14",
+    "teams": {
+      "fc bayern munchen": {
+        "prior_finals": 213,
+        "active_season_finals": 9,
+        "last_final_date": "2026-11-07",
+        "days_since_last_final": 7,
+        "unresolved_past_fixture_ids": []
+      },
+      "1. fc koln": {
+        "prior_finals": 417,
+        "active_season_finals": 9,
+        "last_final_date": "2026-11-08",
+        "days_since_last_final": 6,
+        "unresolved_past_fixture_ids": []
+      }
+    },
+    "diagnostic_gate_passed": true,
+    "blocking_issues": [],
+    "max_history_age_days": 30,
+    "calendar_completeness_verified": false,
+    "note": "Diagnostic policy, not a validated success threshold. Unresolved fixtures may be postponed or missing results. Fresh source captures do not make old histories current."
+  },
+  "selection_policy": "Current-history diagnostic gate plus existing model issues; research only, no validated recommendation.",
+  "payload_sha256": "b5e8d5ad26ddb659f8a36ca34085309f4c7eeac9e6d4cb9a292b5f95c6b1642d"
+}

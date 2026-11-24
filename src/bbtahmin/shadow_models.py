@@ -5,6 +5,11 @@ from scipy.stats import norm
 
 from .quality import assess
 
+# Awarded (forfeit) results kept in the frozen archives: the 2-0 / 20-0 / 0-5 scores are
+# sporting placeholders, not played games, so the challenger never trains on them. This is an
+# explicit allowlist; any other nonpositive or tied final still fails loudly.
+FORFEIT_GAMES=frozenset({'E2001_264','E2003_200','U2008_72','NBL_314773'})
+
 
 def basketball(p,clock):
     return dict(league=p['lig'],home=p['ev'],away=p['dep'],model=p['model'],
@@ -24,6 +29,7 @@ def slow_form(code,fixture,clock,policy):
     if code=='E': games=core();games=games.loc[games.lig==code].copy()
     else: games=pd.read_parquet(Path('data/asia' if code=='KBL' else 'data/competitions')/(code+'.parquet'))
     if set(games.lig)!={code} or games.mac_id.duplicated().any():raise ValueError('Mixed or duplicate challenger league history')
+    forfeits=games.mac_id.isin(FORFEIT_GAMES);games=games.loc[~forfeits].copy()
     scores=games[['ev_skor','dep_skor']].to_numpy(float)
     if not np.isfinite(scores).all() or (scores<=0).any() or (scores[:,0]==scores[:,1]).any():
         raise ValueError('Invalid challenger basketball finals')
@@ -40,7 +46,7 @@ def slow_form(code,fixture,clock,policy):
     removed=(('rest_diff','back_to_back_diff','load7_diff','road_streak_diff','europe_load_diff') if variant=='without_rest'
              else RATING_FEATURES if variant=='without_opponent_ratings' else ('home',) if variant=='without_home' else ())
     for column in removed:features[column]=0.
-    probabilities,scores,errors,info=fit_fold(combined,features,season)
+    probabilities,scores,errors,info=fit_fold(combined,features,season,select=False)
     i=combined.loc[combined.sezon==season,'mac_id'].tolist().index('SHADOW_QUERY')
     total=max(0.,float(scores[1][i]+errors[1]['bias']));margin=float(np.clip(scores[0][i],-total,total))
     p=float(probabilities[info['selected']][i]);z=float(norm.ppf(.9))
@@ -52,6 +58,7 @@ def slow_form(code,fixture,clock,policy):
     health=assess(native,games,now=clock)
     native['selection_eligible']=health['diagnostic_gate_passed']
     result=basketball(native,clock);result['history_health']=health;result['prior_selection']=info
+    result['excluded_forfeit_games']=int(forfeits.sum())
     result['probabilities']=calibrated(result['probabilities'],policy['temperature']).tolist()
     result['eligible']=bool(health['diagnostic_gate_passed'] and max(result['probabilities'])>=.65)
     result['frozen_pipeline_policy']=policy

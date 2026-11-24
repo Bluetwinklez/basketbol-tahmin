@@ -123,7 +123,7 @@ def record_path(root, fixture):
     return root / 'forecasts' / (hashlib.sha256(identity.encode()).hexdigest() + '.json')
 
 
-def run(leagues=LEAGUES, output='rapor/daily', update=False, hours=48, threshold=.65, now=None):
+def run(leagues=LEAGUES, output='rapor/daily', update=False, hours=48, threshold=.65, now=None, *, skip_sources=()):
     if not leagues or any(c not in LEAGUES for c in leagues):
         raise ValueError('Unsupported daily schedule league')
     if not 1 <= hours <= 168 or not .5 <= threshold <= 1:
@@ -132,7 +132,8 @@ def run(leagues=LEAGUES, output='rapor/daily', update=False, hours=48, threshold
         raise ValueError('Historical clock cannot refresh current providers')
     root = Path(output)
     root.mkdir(parents=True, exist_ok=True)
-    refreshed = refresh(leagues) if update else {}
+    refresh_leagues = [code for code in leagues if code not in skip_sources] if skip_sources else leagues
+    refreshed = refresh(refresh_leagues) if update else {}
     clock = timestamp(now or pd.Timestamp.now(tz='UTC'))
     report = dict(spec='daily-research-v1', checked_at_utc=clock.isoformat(), sources=refreshed,
                   probability_threshold=threshold, upcoming=[], skipped=[], settlements=[])
@@ -165,6 +166,8 @@ def run(leagues=LEAGUES, output='rapor/daily', update=False, hours=48, threshold
     from .tahmin import tahmin_et
     from threadpoolctl import threadpool_limits
     for code in dict.fromkeys(leagues):
+        source_skipped = code in skip_sources
+        source_failed = refreshed.get(code, {}).get('status') == 'failed'
         try:
             fixtures, results = source_facts(code)
             all_results.extend(results)
@@ -190,7 +193,9 @@ def run(leagues=LEAGUES, output='rapor/daily', update=False, hours=48, threshold
                     p = item['prediction']
                     entry['record_status'] = 'existing_immutable'
                 else:
-                    if refreshed.get(code, {}).get('status') == 'failed':
+                    if source_skipped:
+                        raise ValueError('Refresh skipped; no new forecast from this source')
+                    if source_failed:
                         raise ValueError('Refresh failed; no new forecast from this source')
                     captured = timestamp(f['captured_at'])
                     if not captured <= clock or clock - captured > pd.Timedelta(hours=24):
@@ -210,11 +215,11 @@ def run(leagues=LEAGUES, output='rapor/daily', update=False, hours=48, threshold
                              threshold_passed=max(p['ev_kazanir'], 1-p['ev_kazanir']) >= threshold,
                              source_confirmation_fresh=bool(timestamp(f['captured_at']) <= clock and
                                  clock-timestamp(f['captured_at']) <= pd.Timedelta(hours=24) and
-                                 refreshed.get(code, {}).get('status') != 'failed'),
+                                 not source_skipped and not source_failed),
                              selected=bool(p.get('selection_eligible', False) and
                                            timestamp(f['captured_at']) <= clock and
                                            clock-timestamp(f['captured_at']) <= pd.Timedelta(hours=24) and
-                                           refreshed.get(code, {}).get('status') != 'failed' and
+                                           not source_skipped and not source_failed and
                                            max(p['ev_kazanir'], 1-p['ev_kazanir']) >= threshold))
                 report['upcoming'].append(entry)
             except Exception as exc:

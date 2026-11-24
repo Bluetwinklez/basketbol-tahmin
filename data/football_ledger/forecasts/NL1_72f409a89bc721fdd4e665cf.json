@@ -1,0 +1,125 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-11-16T16:19:43.364164+00:00",
+  "fixture": {
+    "event_id": "NL1_72f409a89bc721fdd4e665cf",
+    "league": "NL1",
+    "season": "2026-27",
+    "date": "2026-11-22",
+    "home": "go ahead eagles",
+    "away": "fortuna sittard",
+    "home_name": "Go Ahead Eagles",
+    "away_name": "Fortuna Sittard",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/nl.1.json",
+    "captured_at_utc": "2026-11-16T16:15:11.774042+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null,
+    "original_date": null,
+    "date_correction_verified": null,
+    "license_url": null,
+    "source_sha256": null,
+    "fixture_verification_url": null,
+    "actual_start_utc": null,
+    "source_original_date": "2026-11-22",
+    "verified_start_utc": "2026-11-22T15:45:00+00:00",
+    "independent_fixture": {
+      "provider_event_id": "401875542",
+      "league": "NL1",
+      "season_year": 2026,
+      "start_utc": "2026-11-22T15:45:00+00:00",
+      "captured_at": "2026-11-16T16:18:41.578187+00:00",
+      "home_name": "Go Ahead Eagles",
+      "away_name": "Fortuna Sittard",
+      "provider_home_id": "3706",
+      "provider_away_id": "143",
+      "source_url": "https://www.espn.com/soccer/game/_/gameId/401875542",
+      "status": "scheduled",
+      "event_id": "NL1_72f409a89bc721fdd4e665cf",
+      "home": "go ahead eagles",
+      "away": "fortuna sittard"
+    }
+  },
+  "prediction": {
+    "model": "football-opponent-v1",
+    "league": "NL1",
+    "home": "go ahead eagles",
+    "away": "fortuna sittard",
+    "expected_home_goals": 1.7726564539817589,
+    "expected_away_goals": 1.5474796107067177,
+    "probabilities": {
+      "home": 0.4332143292173528,
+      "draw": 0.2280106789581644,
+      "away": 0.33877499182448284
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.8438360975371128,
+      "2.5": 0.6446013900013433,
+      "3.5": 0.42410594405895363
+    },
+    "both_teams_score": 0.6534832093670155,
+    "total_goals_80": [
+      1,
+      6
+    ],
+    "training_cutoff_exclusive": "2026-11-16",
+    "training_games": 919,
+    "prior_team_games": {
+      "go ahead eagles": 102,
+      "fortuna sittard": 102
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "settings": {
+      "half_life_days": 180.0,
+      "shrinkage_games": 8.0,
+      "window_days": 1095
+    },
+    "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+    "low_score_rho": 0.0,
+    "research_candidate": false
+  },
+  "archive_sha256": "9f5e6469c4b49c74e0b8187d57b9c9fd24ff590459b75029db734e5b443ab2c5",
+  "source_code_sha256": "9ae7a915e48252a51fd91ee21ca83246f5300ebbf4aa27ae8654671ae69b3baf",
+  "requested_model_variant": "opponent",
+  "history_health": {
+    "spec": "football-history-health-v1",
+    "checked_at_utc": "2026-11-16T16:19:41.600884+00:00",
+    "information_cutoff_exclusive": "2026-11-16",
+    "teams": {
+      "go ahead eagles": {
+        "prior_finals": 182,
+        "active_season_finals": 12,
+        "last_final_date": "2026-11-07",
+        "days_since_last_final": 9,
+        "unresolved_past_fixture_ids": []
+      },
+      "fortuna sittard": {
+        "prior_finals": 276,
+        "active_season_finals": 12,
+        "last_final_date": "2026-11-07",
+        "days_since_last_final": 9,
+        "unresolved_past_fixture_ids": []
+      }
+    },
+    "diagnostic_gate_passed": true,
+    "blocking_issues": [],
+    "max_history_age_days": 30,
+    "calendar_completeness_verified": false,
+    "note": "Diagnostic policy, not a validated success threshold. Unresolved fixtures may be postponed or missing results. Fresh source captures do not make old histories current."
+  },
+  "selection_policy": "Current-history diagnostic gate plus existing model issues; research only, no validated recommendation.",
+  "payload_sha256": "e3aa48cb2ac85329301d47e793bf95c74a7c30c23af4bed7b410d7a2dd1de640"
+}
