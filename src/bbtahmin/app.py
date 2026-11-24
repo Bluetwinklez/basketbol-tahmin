@@ -226,6 +226,8 @@ class Handler(BaseHTTPRequestHandler):
         path = urlsplit(self.path).path
         assets = {'/football': ('football.html', 'text/html; charset=utf-8'),
                   '/football.js': ('football.js', 'text/javascript; charset=utf-8'),
+                  '/performance': ('performance.html', 'text/html; charset=utf-8'),
+                  '/performance.js': ('performance.js', 'text/javascript; charset=utf-8'),
                   '/': ('index.html', 'text/html; charset=utf-8'),
                   '/app.js': ('app.js', 'text/javascript; charset=utf-8'),
                   '/app.css': ('app.css', 'text/css; charset=utf-8')}
@@ -235,6 +237,15 @@ class Handler(BaseHTTPRequestHandler):
             if name in ('index.html','football.html'):
                 raw = raw.replace('__CSRF_TOKEN__', self.server.state.token)
             return self.send(raw.encode('utf8'), kind)
+        if path == '/api/performance':
+            scorecard_path = Path('docs/kanit/live_scorecard/scorecard.json')
+            try:
+                scorecard = json.loads(scorecard_path.read_text('utf8'))
+                if isinstance(scorecard, dict) and scorecard.get('spec') == 'live-scorecard-v1':
+                    return self.send(scorecard)
+            except (OSError, ValueError):
+                pass
+            return self.send(dict(error='No live scorecard available'), status=404)
         if path == '/api/football/coverage':
             from .football.data import load
             from .football.coverage import league_coverage

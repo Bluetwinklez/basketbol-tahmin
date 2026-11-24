@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CourtSignal · Live Performance</title>
+    <link rel="stylesheet" href="/app.css" />
+    <script src="/performance.js" defer></script>
+  </head>
+  <body>
+    <aside class="sidebar">
+      <a class="brand" href="/"
+        ><span class="brand-mark">◉</span
+        ><span>CourtSignal<small>SPORTS RESEARCH</small></span></a
+      >
+      <div class="nav-label">WORKSPACE</div>
+      <a class="nav" href="/"><span>▦</span> Basketball</a>
+      <a class="nav" href="/football"><span>⚽</span> Football</a>
+      <a class="nav active" href="/performance"><span>◔</span> Live performance</a>
+      <div class="sidebar-bottom">
+        <span class="connection-dot"></span> Local workspace<small
+          >Evaluates immutable frozen forecasts from local ledgers.</small
+        >
+      </div>
+    </aside>
+    <main>
+      <nav class="sport-switch" aria-label="Sport">
+        <a href="/">Basketball</a>
+        <a href="/football">Football</a>
+        <a href="/performance" aria-current="page">Performance</a>
+      </nav>
+      <header class="topbar">
+        <span>Research workspace <span class="slash">/</span> Live performance</span>
+        <span id="data-cutoff">Data cutoff (UTC): loading…</span>
+      </header>
+      <section class="heading">
+        <div>
+          <div class="eyebrow">PROSPECTIVE · LEDGER · BASELINES</div>
+          <h1>Live forecast scorecard.</h1>
+          <p id="sport-cutoff">
+            Immutable frozen forecasts evaluated against saved finals.
+          </p>
+        </div>
+      </section>
+      <p class="notice" id="baseline-disclaimer">
+        Baselines are on the same games. This is not evidence of beating the market.
+      </p>
+      <div
+        id="perf-error"
+        class="notice error"
+        role="status"
+        aria-live="polite"
+        hidden
+      ></div>
+      <div class="sport-tabs" role="tablist" aria-label="Scorecard sport">
+        <button
+          id="tab-basketball"
+          type="button"
+          class="sport-tab"
+          role="tab"
+          data-sport="basketball"
+          aria-selected="true"
+        >
+          Basketball
+        </button>
+        <button
+          id="tab-football"
+          type="button"
+          class="sport-tab"
+          role="tab"
+          data-sport="football"
+          aria-selected="false"
+        >
+          Football
+        </button>
+      </div>
+      <p id="sport-meta" class="muted perf-meta"></p>
+      <section class="metrics" aria-label="Total model metrics">
+        <article>
+          <div class="metric-label">SCORED GAMES <span>◎</span></div>
+          <strong id="perf-total-n">—</strong>
+          <small id="perf-total-note">Frozen forecasts with saved finals</small>
+        </article>
+        <article>
+          <div class="metric-label">MODEL ACCURACY <span>✓</span></div>
+          <strong id="perf-total-acc">—</strong>
+          <small id="perf-total-acc-ci">95% Wilson CI</small>
+        </article>
+        <article>
+          <div class="metric-label">MODEL LOG LOSS <span>≋</span></div>
+          <strong id="perf-total-ll">—</strong>
+          <small id="perf-total-ll-ci">95% bootstrap CI · lower is better</small>
+        </article>
+        <article>
+          <div class="metric-label">MODEL BRIER <span>≈</span></div>
+          <strong id="perf-total-brier">—</strong>
+          <small id="perf-total-brier-ci">95% bootstrap CI · lower is better</small>
+        </article>
+      </section>
+      <section id="leagues-section" class="results-section">
+        <div class="section-heading">
+          <div>
+            <h2>League comparison</h2>
+            <p>
+              Model versus Always home, Expanding league rate, and Market on the same scored games.
+            </p>
+          </div>
+          <span class="neutral-pill">95% CONFIDENCE INTERVALS</span>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>League</th>
+                <th>Forecast</th>
+                <th>n</th>
+                <th>Accuracy (95% CI)</th>
+                <th>Log loss (95% CI)</th>
+                <th>Brier (95% CI)</th>
+              </tr>
+            </thead>
+            <tbody id="league-table-body"></tbody>
+          </table>
+        </div>
+        <p id="league-table-empty" class="table-empty" hidden>
+          No league scorecard data available.
+        </p>
+      </section>
+      <section id="calibration-section" class="results-section">
+        <div class="section-heading">
+          <div>
+            <h2>Model calibration</h2>
+            <p>
+              Grouped by highest forecast probability in 10 percentage-point bins.
+            </p>
+          </div>
+          <label class="perf-cal-select">
+            Scope
+            <select id="calibration-scope" aria-label="Calibration scope">
+              <option value="total">Total</option>
+            </select>
+          </label>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Favourite probability</th>
+                <th>n</th>
+                <th>Forecast mean</th>
+                <th>Observed frequency</th>
+                <th>Forecast vs. observed</th>
+              </tr>
+            </thead>
+            <tbody id="calibration-body"></tbody>
+          </table>
+        </div>
+        <p id="calibration-empty" class="table-empty" hidden>
+          No calibration bins available.
+        </p>
+      </section>
+      <section id="class-freq-section" class="results-section" hidden>
+        <div class="section-heading">
+          <div>
+            <h2>Top picks vs. actual outcomes</h2>
+            <p>Total class distribution for the selected sport.</p>
+          </div>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Class</th>
+                <th>Top pick n</th>
+                <th>Top pick rate</th>
+                <th>Actual n</th>
+                <th>Actual rate</th>
+              </tr>
+            </thead>
+            <tbody id="class-freq-body"></tbody>
+          </table>
+        </div>
+      </section>
+      <details class="run-settings perf-definitions">
+        <summary>Methodology &amp; definitions</summary>
+        <dl id="definitions-list" class="perf-def-list"></dl>
+      </details>
+      <footer>
+        Offline evaluation from local ledgers. Baselines are on the same games.
+        <span>This is not evidence of beating the market.</span>
+      </footer>
+    </main>
+  </body>
+</html>

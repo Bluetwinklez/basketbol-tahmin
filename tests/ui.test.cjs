@@ -289,3 +289,130 @@ test('football date conflicts remain visible in pending and review filters', asy
     assert.equal(w.document.querySelectorAll('#cards article').length,1);
   }
 });
+
+test('performance page renders sport tabs, baselines, market availability, zero-game leagues and calibration', async (t) => {
+  const perfHtml = fs.readFileSync('src/bbtahmin/ui/performance.html', 'utf8');
+  const perfScript = fs.readFileSync('src/bbtahmin/ui/performance.js', 'utf8');
+  const emptyMetrics = { n: 0, accuracy: null, log_loss: null, brier: null, ci95: { accuracy: null, log_loss: null, brier: null } };
+  const sampleMetric = (n, acc, ll, brier) => ({
+    n, accuracy: acc, log_loss: ll, brier,
+    ci95: { accuracy: [acc - 0.1, acc + 0.1], log_loss: [ll - 0.05, ll + 0.05], brier: [brier - 0.02, brier + 0.02] },
+  });
+  const syntheticScorecard = {
+    spec: 'live-scorecard-v1',
+    data_cutoff_utc: '2026-11-23T18:40:38+00:00',
+    definitions: { cohort: 'Synthetic cohort <img src=x onerror=alert(1)>' },
+    sports: {
+      basketball: {
+        cutoff_utc: '2026-11-23T18:39:45+00:00',
+        class_order: ['home', 'away'],
+        total: {
+          model: sampleMetric(10, 0.7, 0.58, 0.2),
+          always_home: sampleMetric(10, 0.5, 14.0, 0.4),
+          expanding_rate: sampleMetric(10, 0.6, 0.69, 0.25),
+          market: {
+            status: 'available',
+            metrics: sampleMetric(8, 0.75, 0.55, 0.19),
+            model_same_games: sampleMetric(8, 0.625, 0.6, 0.21),
+          },
+          calibration: [
+            { lower: 0.5, upper: 0.6, n: 6, forecast_mean: 0.55, observed_frequency: 0.667 },
+            { lower: 0.9, upper: 1.0, n: 0, forecast_mean: null, observed_frequency: null },
+          ],
+        },
+        leagues: {
+          ABA: {
+            model: sampleMetric(10, 0.7, 0.58, 0.2),
+            always_home: sampleMetric(10, 0.5, 14.0, 0.4),
+            expanding_rate: sampleMetric(10, 0.6, 0.69, 0.25),
+            market: {
+              status: 'available',
+              metrics: sampleMetric(8, 0.75, 0.55, 0.19),
+              model_same_games: sampleMetric(8, 0.625, 0.6, 0.21),
+            },
+            calibration: [
+              { lower: 0.5, upper: 0.6, n: 6, forecast_mean: 0.55, observed_frequency: 0.667 },
+            ],
+          },
+        },
+      },
+      football: {
+        cutoff_utc: '2026-11-23T18:40:38+00:00',
+        class_order: ['home', 'draw', 'away'],
+        publisher_finals_excluded_no_verified_kickoff: 5,
+        kickoff_exclusions_by_league: { TR1: 5 },
+        total: {
+          model: sampleMetric(12, 0.583, 0.95, 0.56),
+          always_home: sampleMetric(12, 0.417, 19.2, 1.1),
+          expanding_rate: sampleMetric(12, 0.417, 1.0986, 0.6667),
+          market: { status: 'no market data', metrics: emptyMetrics, model_same_games: emptyMetrics },
+          calibration: [
+            { lower: 0.3, upper: 0.4, n: 4, forecast_mean: 0.38, observed_frequency: 0.5 },
+            { lower: 0.9, upper: 1.0, n: 0, forecast_mean: null, observed_frequency: null },
+          ],
+          class_frequencies: {
+            home: { top_pick_n: 8, top_pick_rate: 0.667, actual_n: 5, actual_rate: 0.417 },
+            draw: { top_pick_n: 0, top_pick_rate: 0.0, actual_n: 3, actual_rate: 0.25 },
+            away: { top_pick_n: 4, top_pick_rate: 0.333, actual_n: 4, actual_rate: 0.333 },
+          },
+        },
+        leagues: {
+          DE1: {
+            model: sampleMetric(12, 0.583, 0.95, 0.56),
+            always_home: sampleMetric(12, 0.417, 19.2, 1.1),
+            expanding_rate: sampleMetric(12, 0.417, 1.0986, 0.6667),
+            market: { status: 'no market data', metrics: emptyMetrics, model_same_games: emptyMetrics },
+            calibration: [{ lower: 0.3, upper: 0.4, n: 4, forecast_mean: 0.38, observed_frequency: 0.5 }],
+          },
+          TR1: {
+            model: emptyMetrics,
+            always_home: emptyMetrics,
+            expanding_rate: emptyMetrics,
+            market: { status: 'no market data', metrics: emptyMetrics, model_same_games: emptyMetrics },
+            calibration: [{ lower: 0.3, upper: 0.4, n: 0, forecast_mean: null, observed_frequency: null }],
+          },
+        },
+      },
+    },
+  };
+  const dom = new JSDOM(perfHtml, { url: 'http://127.0.0.1:8765/performance', runScripts: 'outside-only' });
+  t.after(() => dom.window.close());
+  const w = dom.window;
+  w.fetch = async (url) => {
+    assert.equal(url, '/api/performance');
+    return { ok: true, json: async () => structuredClone(syntheticScorecard) };
+  };
+  w.eval(perfScript);
+  await new Promise(setImmediate);
+
+  const d = w.document;
+  assert.match(d.querySelector('#data-cutoff').textContent, /2026-11-23T18:40:38\+00:00/);
+  assert.match(d.body.textContent, /Baselines are on the same games\. This is not evidence of beating the market\./);
+  assert.equal(d.querySelectorAll('img').length, 0);
+
+  const bbText = d.querySelector('#league-table-body').textContent;
+  assert.match(bbText, /Total/);
+  assert.match(bbText, /ABA/);
+  assert.match(bbText, /Model/);
+  assert.match(bbText, /Always home/);
+  assert.match(bbText, /Expanding league rate/);
+  assert.match(bbText, /Market/);
+  assert.match(bbText, /Model on market games/);
+  assert.match(bbText, /70\.0%/);
+  assert.match(d.querySelector('#calibration-body').textContent, /50%–60%/);
+  assert.match(d.querySelector('#calibration-body').textContent, /90%–100%/);
+  assert.equal(d.querySelector('#class-freq-section').hidden, true);
+
+  d.querySelector('#tab-football').click();
+  const fbText = d.querySelector('#league-table-body').textContent;
+  assert.match(fbText, /DE1/);
+  assert.match(fbText, /TR1/);
+  assert.match(fbText, /no market data/);
+  assert.doesNotMatch(fbText, /NaN/);
+  const tr1Rows = [...d.querySelectorAll('#league-table-body tr')].filter((tr) => tr.firstChild.textContent === 'TR1');
+  assert.equal(tr1Rows.length, 4);
+  assert.equal(tr1Rows[0].children[2].textContent, '0');
+  assert.equal(tr1Rows[0].children[3].textContent, '—');
+  assert.equal(d.querySelector('#class-freq-section').hidden, false);
+  assert.match(d.querySelector('#sport-meta').textContent, /Excluded 5 publisher finals/);
+});
