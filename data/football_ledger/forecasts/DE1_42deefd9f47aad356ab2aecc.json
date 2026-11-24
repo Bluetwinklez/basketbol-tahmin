@@ -1,0 +1,125 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-11-23T18:40:39.488715+00:00",
+  "fixture": {
+    "event_id": "DE1_42deefd9f47aad356ab2aecc",
+    "league": "DE1",
+    "season": "2026-27",
+    "date": "2026-11-29",
+    "home": "tsg 1899 hoffenheim",
+    "away": "fc augsburg",
+    "home_name": "TSG 1899 Hoffenheim",
+    "away_name": "FC Augsburg",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/de.1.json",
+    "captured_at_utc": "2026-11-23T18:36:02.653364+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null,
+    "original_date": null,
+    "date_correction_verified": null,
+    "license_url": null,
+    "source_sha256": null,
+    "fixture_verification_url": null,
+    "actual_start_utc": null,
+    "source_original_date": "2026-11-29",
+    "verified_start_utc": "2026-11-29T16:30:00+00:00",
+    "independent_fixture": {
+      "provider_event_id": "401884725",
+      "league": "DE1",
+      "season_year": 2026,
+      "start_utc": "2026-11-29T16:30:00+00:00",
+      "captured_at": "2026-11-23T18:39:49.312178+00:00",
+      "home_name": "TSG Hoffenheim",
+      "away_name": "FC Augsburg",
+      "provider_home_id": "7911",
+      "provider_away_id": "3841",
+      "source_url": "https://www.espn.com/soccer/game/_/gameId/401884725",
+      "status": "scheduled",
+      "event_id": "DE1_42deefd9f47aad356ab2aecc",
+      "home": "tsg 1899 hoffenheim",
+      "away": "fc augsburg"
+    }
+  },
+  "prediction": {
+    "model": "football-opponent-v1",
+    "league": "DE1",
+    "home": "tsg 1899 hoffenheim",
+    "away": "fc augsburg",
+    "expected_home_goals": 2.1028568444809714,
+    "expected_away_goals": 1.5000352662316792,
+    "probabilities": {
+      "home": 0.5154760174903866,
+      "draw": 0.21003784007437742,
+      "away": 0.2744861424352357
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      2,
+      1
+    ],
+    "over": {
+      "1.5": 0.874595063440993,
+      "2.5": 0.6977648967446755,
+      "3.5": 0.48539822590262016
+    },
+    "both_teams_score": 0.6820154335275133,
+    "total_goals_80": [
+      1,
+      6
+    ],
+    "training_cutoff_exclusive": "2026-11-23",
+    "training_games": 909,
+    "prior_team_games": {
+      "tsg 1899 hoffenheim": 101,
+      "fc augsburg": 101
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "settings": {
+      "half_life_days": 180.0,
+      "shrinkage_games": 8.0,
+      "window_days": 1095
+    },
+    "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+    "low_score_rho": 0.0,
+    "research_candidate": false
+  },
+  "archive_sha256": "10a3955627423d66fecbeb57f96ae29c75ffaa20b414731c91b62d8f8152d835",
+  "source_code_sha256": "2f9eacd61e976d4c84a9d5c8c259160a0c69f62040f78b08a195b1e6f9adf7f8",
+  "requested_model_variant": "opponent",
+  "history_health": {
+    "spec": "football-history-health-v1",
+    "checked_at_utc": "2026-11-23T18:40:38.014012+00:00",
+    "information_cutoff_exclusive": "2026-11-23",
+    "teams": {
+      "tsg 1899 hoffenheim": {
+        "prior_finals": 214,
+        "active_season_finals": 10,
+        "last_final_date": "2026-11-21",
+        "days_since_last_final": 2,
+        "unresolved_past_fixture_ids": []
+      },
+      "fc augsburg": {
+        "prior_finals": 520,
+        "active_season_finals": 10,
+        "last_final_date": "2026-11-22",
+        "days_since_last_final": 1,
+        "unresolved_past_fixture_ids": []
+      }
+    },
+    "diagnostic_gate_passed": true,
+    "blocking_issues": [],
+    "max_history_age_days": 30,
+    "calendar_completeness_verified": false,
+    "note": "Diagnostic policy, not a validated success threshold. Unresolved fixtures may be postponed or missing results. Fresh source captures do not make old histories current."
+  },
+  "selection_policy": "Current-history diagnostic gate plus existing model issues; research only, no validated recommendation.",
+  "payload_sha256": "cb86e842859eea381c88e242992d3eff00013e27cb268cb2508de9e0f1c150fd"
+}
