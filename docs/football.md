@@ -237,3 +237,18 @@ had 110 missing team-match records; intervening existing archive updates account
 for the difference. This PR adds no match data, downloads or model changes and
 makes no predictive improvement claim. Earliest frozen forecasts and existing
 chronological calibration/error reports remain unchanged.
+
+### Isolated archive staging files (2026-11-25)
+
+Football snapshot storage now allocates a unique temporary file beside the target
+archive and cleans up its own staging file after success or failure. The old fixed
+`.part` path could overwrite another writer's staging bytes and left partial files
+behind when replacement failed. Validation and compression still complete before
+replacement; failed replacement retains the previous archive byte for byte.
+Regression tests cover failed replacement and successful writes alongside an
+unrelated staging file. This does not serialize concurrent read/merge operations;
+collectors targeting the same archive must still run sequentially.
+
+No source download, new match data, model selection or frozen forecast changes are
+part of this storage fix. Existing chronological evaluation, calibration and
+coverage findings remain unchanged; no predictive improvement is claimed.
