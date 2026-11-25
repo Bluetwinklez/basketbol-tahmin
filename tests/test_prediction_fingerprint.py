@@ -37,6 +37,7 @@ NON_PREDICTION = {
     'football/screenshots.py': 'Football snapshot import.',
     'football/storage.py': 'Collector-side archive validation and writes.',
     'football/turkey_second.py': 'Historical football archive import.',
+    'football_calibration_report.py': 'Post-hoc calibration reporting on the settled football ledger.',
     'four_factors.py': 'Historical feature ablation outside the pregame forecast paths.',
     'live.py': 'Separate in-game prediction models.',
     'live_feed.py': 'Live observation ingestion.',
