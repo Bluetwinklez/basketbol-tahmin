@@ -1,5 +1,11 @@
 # Daily NBA schedule and forecast integration
 
+## Current status
+
+Daily NBA forecasts are currently unavailable because schedule access is blocked. In the scheduled refresh on 2026-11-25 (run `45665285596`), the only unexpected failure was `{"league": "NBA", "status": "failed", "error": "RuntimeError: HTTP 403: https://site.api.espn.com/robots.txt"}`. All football failures were classified as `known_missing`, football's `unexpected` list was empty, and `PBA_GOV` was recorded under `skipped_auto_disabled`.
+
+Manual checks found that `https://site.api.espn.com/robots.txt`, `https://cdn.nba.com/robots.txt`, and `https://cdn.nba.com/static/json/staticData/scheduleLeagueV2.json` all returned HTTP 403 “Access Denied” to automated clients. The robots-aware HTTP helper in `src/bbtahmin/veri/http.py` refuses to fetch the schedule when it cannot read `robots.txt`. The project respects robots rules and bot protection. Daily NBA forecasting can begin once a permitted schedule source with a readable `robots.txt` or a licensed feed is available.
+
 ## How NBA enters the daily forecast list
 
 `NBA` is included in `daily.LEAGUES` (`src/bbtahmin/daily.py`) alongside the other daily basketball competitions (`E`, `KBL`, `JP_B1`, `JP_B2`, `PBA_GOV`, `ABA`, `ECW`, `FEC`, `UKR`, `TR_BSL`, `ARG_LNB`).

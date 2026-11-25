@@ -13,5 +13,6 @@
   {"sport": "football", "league": "US1", "source": "US1", "collector": "US1", "reason": "Current-season calendar source unavailable in the November 17–23 refresh reports.", "review_by": "2026-12-08"},
   {"sport": "football", "league": "JP1", "source": "JP1", "collector": "JP1", "reason": "Current-season calendar source unavailable in the November 17–23 refresh reports.", "review_by": "2026-12-08"},
   {"sport": "football", "league": "CN1", "source": "CN1", "collector": "CN1", "reason": "Current-season calendar source unavailable in the November 17–23 refresh reports.", "review_by": "2026-12-08"},
-  {"sport": "basketball", "league": "PBA_GOV", "reason": "PBA source returned HTTP 503 in consecutive November 17–23 refresh reports.", "review_by": "2026-12-08"}
+  {"sport": "basketball", "league": "PBA_GOV", "reason": "PBA source returned HTTP 503 in consecutive November 17–23 refresh reports.", "review_by": "2026-12-08"},
+  {"sport": "basketball", "league": "NBA", "reason": "ESPN and NBA CDN return HTTP 403 (bot protection) to automated clients, including robots.txt; no permitted schedule source. No bypass.", "review_by": "2026-12-09"}
 ]

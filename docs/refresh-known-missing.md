@@ -82,7 +82,7 @@ Each refresh writes `data/refresh/<YYYYMMDDTHHMMSSZ>.json` keyed by sport (`foot
 
 ## Current known-missing entries
 
-As recorded in `data/refresh/known_missing.json` (all 15 entries have `review_by`: **`2026-12-08`**):
+`data/refresh/known_missing.json` has 16 entries. The 14 football leagues and `PBA_GOV` are due for review on **`2026-12-08`**, and `NBA` is due on **`2026-12-09`**. The NBA entry matches all reported basketball errors for that league because the schema matches `league` and does not support matching `status` or `error` text.
 
 | Sport | League | Source | Collector | Reason | `review_by` |
 |---|---|---|---|---|---|
@@ -101,3 +101,4 @@ As recorded in `data/refresh/known_missing.json` (all 15 entries have `review_by
 | `football` | `JP1` | `JP1` | `JP1` | Current-season calendar source unavailable in the November 17–23 refresh reports. | `2026-12-08` |
 | `football` | `CN1` | `CN1` | `CN1` | Current-season calendar source unavailable in the November 17–23 refresh reports. | `2026-12-08` |
 | `basketball` | `PBA_GOV` | *(not set)* | *(not set)* | PBA source returned HTTP 503 in consecutive November 17–23 refresh reports. | `2026-12-08` |
+| `basketball` | `NBA` | *(not set)* | *(not set)* | ESPN and NBA CDN return HTTP 403 (bot protection) to automated clients, including robots.txt; no permitted schedule source. No bypass. | `2026-12-09` |
