@@ -1,0 +1,1627 @@
+{
+  "spec": "football-calibration-report-v1",
+  "cutoff_utc": "2026-11-23T18:40:38.014012+00:00",
+  "n": 149,
+  "exclusions": {
+    "total_snapshot_rows_excluded": 234,
+    "publisher_finals_without_verified_kickoff": 126,
+    "missing_kickoff_by_league": {
+      "DE1": 15,
+      "EN1": 16,
+      "EN2": 19,
+      "ES1": 7,
+      "FR1": 11,
+      "IT1": 27,
+      "NL1": 15,
+      "PT1": 11,
+      "TR1": 5
+    },
+    "fixture_review": 27,
+    "other_nonfinal_by_status": {
+      "pending": 81
+    },
+    "frozen_fixtures_absent_from_snapshot": 13
+  },
+  "protocol": {
+    "minimum_prior_games": 30,
+    "minimum_evaluation_games": 30,
+    "temperature_grid": [
+      0.5,
+      0.6,
+      0.75,
+      1.0,
+      1.25,
+      1.5,
+      2.0
+    ],
+    "bootstrap_seed": 20261124,
+    "bootstrap_replicates": 2000,
+    "availability": "Scorecard known_at, the saved daily report check time. Require known_at < frozen_at.",
+    "binary_baseline": "A constant-rate prediction for each game, set before freeze from the per-league expanding rate with one prior count per outcome.",
+    "improvement_sign": "Positive favors the candidate.",
+    "verdict_rule": "A verdict requires at least 30 comparable games, counting only games with a fitted temperature toward the 1X2 minimum. A smaller sample or an unavailable interval yields `inconclusive (n too small)`. A strictly positive lower 95% bound on mean log-loss improvement yields `skill_over_baseline` for goal markets and `supports recalibration` for 1X2. A lower bound at or below zero yields `no_skill_over_baseline` for goal markets and `does not support recalibration` for 1X2.",
+    "multiple_comparisons": "The three verdicts use the same 149-game cohort without any adjustment for multiple comparisons, so a borderline confidence interval (for example, a lower bound within 0.005 of zero) is weak evidence at most."
+  },
+  "one_x_two": {
+    "reliability": {
+      "home": {
+        "bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.1,
+            "n": 0,
+            "forecast_mean": null,
+            "observed_frequency": null
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "n": 2,
+            "forecast_mean": 0.1654087496718705,
+            "observed_frequency": 0.0
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "n": 22,
+            "forecast_mean": 0.26106744293663753,
+            "observed_frequency": 0.22727272727272727
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "n": 39,
+            "forecast_mean": 0.3571584297199791,
+            "observed_frequency": 0.28205128205128205
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "n": 42,
+            "forecast_mean": 0.44895304450277224,
+            "observed_frequency": 0.47619047619047616
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "n": 25,
+            "forecast_mean": 0.544939270563017,
+            "observed_frequency": 0.64
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "n": 14,
+            "forecast_mean": 0.6423257860807228,
+            "observed_frequency": 0.8571428571428571
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "n": 3,
+            "forecast_mean": 0.7088542149384739,
+            "observed_frequency": 0.3333333333333333
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "n": 2,
+            "forecast_mean": 0.8290189817402602,
+            "observed_frequency": 0.5
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "n": 0,
+            "forecast_mean": null,
+            "observed_frequency": null
+          }
+        ],
+        "logistic": {
+          "intercept": 0.1179728588738908,
+          "slope": 1.396583828193713,
+          "ci95": {
+            "intercept": [
+              -0.2613075699631409,
+              0.552116428495192
+            ],
+            "slope": [
+              0.7236613614351247,
+              2.3368029237636962
+            ]
+          },
+          "valid_bootstrap_fits": 2000
+        }
+      },
+      "draw": {
+        "bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.1,
+            "n": 1,
+            "forecast_mean": 0.094950899466041,
+            "observed_frequency": 1.0
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "n": 17,
+            "forecast_mean": 0.1784759534058379,
+            "observed_frequency": 0.058823529411764705
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "n": 131,
+            "forecast_mean": 0.24451219775241195,
+            "observed_frequency": 0.22137404580152673
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "n": 0,
+            "forecast_mean": null,
+            "observed_frequency": null
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "n": 0,
+            "forecast_mean": null,
+            "observed_frequency": null
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "n": 0,
+            "forecast_mean": null,
+            "observed_frequency": null
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "n": 0,
+            "forecast_mean": null,
+            "observed_frequency": null
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "n": 0,
+            "forecast_mean": null,
+            "observed_frequency": null
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "n": 0,
+            "forecast_mean": null,
+            "observed_frequency": null
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "n": 0,
+            "forecast_mean": null,
+            "observed_frequency": null
+          }
+        ],
+        "logistic": {
+          "intercept": -0.9932582178955168,
+          "slope": 0.29071374618429924,
+          "ci95": {
+            "intercept": [
+              -3.388407889588571,
+              3.3103591419037355
+            ],
+            "slope": [
+              -1.6278053295560588,
+              4.080237731407786
+            ]
+          },
+          "valid_bootstrap_fits": 2000
+        }
+      },
+      "away": {
+        "bins": [
+          {
+            "lower": 0.0,
+            "upper": 0.1,
+            "n": 2,
+            "forecast_mean": 0.06502425477952307,
+            "observed_frequency": 0.0
+          },
+          {
+            "lower": 0.1,
+            "upper": 0.2,
+            "n": 22,
+            "forecast_mean": 0.15882504804298653,
+            "observed_frequency": 0.13636363636363635
+          },
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "n": 40,
+            "forecast_mean": 0.2591964460311586,
+            "observed_frequency": 0.275
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "n": 47,
+            "forecast_mean": 0.35273970865084475,
+            "observed_frequency": 0.3191489361702128
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "n": 27,
+            "forecast_mean": 0.44219144427549545,
+            "observed_frequency": 0.5555555555555556
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "n": 9,
+            "forecast_mean": 0.5343087040113301,
+            "observed_frequency": 0.6666666666666666
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "n": 2,
+            "forecast_mean": 0.6304688457703699,
+            "observed_frequency": 1.0
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "n": 0,
+            "forecast_mean": null,
+            "observed_frequency": null
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "n": 0,
+            "forecast_mean": null,
+            "observed_frequency": null
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "n": 0,
+            "forecast_mean": null,
+            "observed_frequency": null
+          }
+        ],
+        "logistic": {
+          "intercept": 0.543050380047355,
+          "slope": 1.6586923506588285,
+          "ci95": {
+            "intercept": [
+              -0.017866808165903244,
+              1.214002309649325
+            ],
+            "slope": [
+              1.0320838163456532,
+              2.568188916970876
+            ]
+          },
+          "valid_bootstrap_fits": 2000
+        }
+      }
+    },
+    "top_pick_bins": [
+      {
+        "lower": 0.0,
+        "upper": 0.1,
+        "n": 0,
+        "forecast_mean": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.1,
+        "upper": 0.2,
+        "n": 0,
+        "forecast_mean": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.2,
+        "upper": 0.3,
+        "n": 0,
+        "forecast_mean": null,
+        "observed_frequency": null
+      },
+      {
+        "lower": 0.3,
+        "upper": 0.4,
+        "n": 25,
+        "forecast_mean": 0.3867636746746831,
+        "observed_frequency": 0.4
+      },
+      {
+        "lower": 0.4,
+        "upper": 0.5,
+        "n": 69,
+        "forecast_mean": 0.4463072009355771,
+        "observed_frequency": 0.5072463768115942
+      },
+      {
+        "lower": 0.5,
+        "upper": 0.6,
+        "n": 34,
+        "forecast_mean": 0.542125297064041,
+        "observed_frequency": 0.6470588235294118
+      },
+      {
+        "lower": 0.6,
+        "upper": 0.7,
+        "n": 16,
+        "forecast_mean": 0.6408436685419286,
+        "observed_frequency": 0.875
+      },
+      {
+        "lower": 0.7,
+        "upper": 0.8,
+        "n": 3,
+        "forecast_mean": 0.7088542149384739,
+        "observed_frequency": 0.3333333333333333
+      },
+      {
+        "lower": 0.8,
+        "upper": 0.9,
+        "n": 2,
+        "forecast_mean": 0.8290189817402602,
+        "observed_frequency": 0.5
+      },
+      {
+        "lower": 0.9,
+        "upper": 1.0,
+        "n": 0,
+        "forecast_mean": null,
+        "observed_frequency": null
+      }
+    ],
+    "reliability_scope": "Reliability bins and logistic slopes are descriptive only for the original frozen forecasts.",
+    "temperature": {
+      "n": 149,
+      "reference": {
+        "accuracy": 0.5570469798657718,
+        "log_loss": 0.9800630564093281,
+        "brier": 0.5821105254665915,
+        "ci95": {
+          "accuracy": [
+            0.47651006711409394,
+            0.6375838926174496
+          ],
+          "log_loss": [
+            0.9177362365642462,
+            1.0408417577384053
+          ],
+          "brier": [
+            0.5382334011268064,
+            0.6246856529801275
+          ]
+        }
+      },
+      "candidate": {
+        "accuracy": 0.5570469798657718,
+        "log_loss": 0.9800630564093281,
+        "brier": 0.5821105254665915,
+        "ci95": {
+          "accuracy": [
+            0.47651006711409394,
+            0.6375838926174496
+          ],
+          "log_loss": [
+            0.9177362365642462,
+            1.0408417577384053
+          ],
+          "brier": [
+            0.5382334011268064,
+            0.6246856529801275
+          ]
+        }
+      },
+      "improvement": {
+        "accuracy": 0.0,
+        "log_loss": 0.0,
+        "brier": 0.0,
+        "ci95": {
+          "accuracy": [
+            0.0,
+            0.0
+          ],
+          "log_loss": [
+            0.0,
+            0.0
+          ],
+          "brier": [
+            0.0,
+            0.0
+          ]
+        }
+      },
+      "walk_forward_ran": false,
+      "fitted_n": 0,
+      "fallback_n": 149,
+      "choices": [
+        {
+          "league": "EN2",
+          "event_id": "EN2_60c3ee9c6dec64c5392cbb7f",
+          "frozen_at_utc": "2026-10-25T17:50:31.926819+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "EN2",
+          "event_id": "EN2_83eda3fdfb0546d3b8adf7cb",
+          "frozen_at_utc": "2026-10-25T17:50:31.963087+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "EN2",
+          "event_id": "EN2_87f5fcfc4d3f9b5bdd4f4747",
+          "frozen_at_utc": "2026-10-25T17:50:31.996707+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "EN2",
+          "event_id": "EN2_d4eb4e797be9ce54ec2da5cd",
+          "frozen_at_utc": "2026-10-25T17:50:32.031877+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "NL1",
+          "event_id": "NL1_43f338326ad680b40fc05a85",
+          "frozen_at_utc": "2026-10-25T17:50:32.217798+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "ES1",
+          "event_id": "ES1_94352ffb3b53332045458b89",
+          "frozen_at_utc": "2026-10-25T17:50:32.330187+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "ES1",
+          "event_id": "ES1_9d7e5c3a054369ed88f800fa",
+          "frozen_at_utc": "2026-10-25T17:50:32.365687+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "NL1",
+          "event_id": "NL1_cf22325d49b4921f4f0bdb9a",
+          "frozen_at_utc": "2026-10-25T17:50:32.398851+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "EN1",
+          "event_id": "EN1_17d13b215a5ab42ec4b29185",
+          "frozen_at_utc": "2026-10-27T12:32:47.121512+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "IT1",
+          "event_id": "IT1_afddf8da8ebf82fe28075e55",
+          "frozen_at_utc": "2026-10-27T12:32:47.158857+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "IT1",
+          "event_id": "IT1_e1cebcae9e6d0e40323e73ba",
+          "frozen_at_utc": "2026-10-27T12:32:47.173581+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "PT1",
+          "event_id": "PT1_8c6b724276b74e16f9620607",
+          "frozen_at_utc": "2026-10-27T12:32:47.199275+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "ES1",
+          "event_id": "ES1_f7f112b2042eeb5e9087b255",
+          "frozen_at_utc": "2026-10-27T12:37:03.227929+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "EN2",
+          "event_id": "EN2_0304f15ee256be6639c15167",
+          "frozen_at_utc": "2026-10-28T13:25:52.819246+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "EN2",
+          "event_id": "EN2_366f442672efc7a71d950857",
+          "frozen_at_utc": "2026-10-28T13:25:52.838727+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "EN2",
+          "event_id": "EN2_4a36eb531e67d3ae6b31caee",
+          "frozen_at_utc": "2026-10-28T13:25:52.856227+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "EN2",
+          "event_id": "EN2_5e949510a303cb2945d92d32",
+          "frozen_at_utc": "2026-10-28T13:25:52.873762+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "EN2",
+          "event_id": "EN2_675f83451f3556d5e403f0cd",
+          "frozen_at_utc": "2026-10-28T13:25:52.891374+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "EN2",
+          "event_id": "EN2_ba26e2c7f7b26b791bf7519a",
+          "frozen_at_utc": "2026-10-28T13:25:52.909344+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "EN2",
+          "event_id": "EN2_bb2c01da82fd0691f6304b8a",
+          "frozen_at_utc": "2026-10-28T13:25:52.927868+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "EN2",
+          "event_id": "EN2_be96610e4e49202ba526aa0a",
+          "frozen_at_utc": "2026-10-28T13:25:52.946171+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "EN2",
+          "event_id": "EN2_e868515ebf4e07b49bfffc1c",
+          "frozen_at_utc": "2026-10-28T13:25:52.964197+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "EN2",
+          "event_id": "EN2_bbe2a92603d0916c7a2783bd",
+          "frozen_at_utc": "2026-10-29T13:36:01.561009+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "EN2",
+          "event_id": "EN2_e59ac54d7018c96fcd35d77b",
+          "frozen_at_utc": "2026-10-29T13:36:01.586293+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "EN2",
+          "event_id": "EN2_fd3f9b6359de2d81e0b2c511",
+          "frozen_at_utc": "2026-10-29T13:36:01.611970+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "DE1",
+          "event_id": "DE1_4f66ac822ad24292bccc1556",
+          "frozen_at_utc": "2026-10-31T12:56:10.877366+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "EN2",
+          "event_id": "EN2_8f2e5244e1047a0ad7ecdf56",
+          "frozen_at_utc": "2026-10-31T12:56:10.949950+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "FR1",
+          "event_id": "FR1_496a4281675ef10553a37e28",
+          "frozen_at_utc": "2026-10-31T12:56:11.007865+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "IT1",
+          "event_id": "IT1_dd9b9c6574aba6a75f754c2f",
+          "frozen_at_utc": "2026-10-31T12:56:11.069297+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "NL1",
+          "event_id": "NL1_186bbde1c6fc1f6f62c2ca9f",
+          "frozen_at_utc": "2026-10-31T12:56:11.125376+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "PT1",
+          "event_id": "PT1_c5a846702195eba8d488237d",
+          "frozen_at_utc": "2026-10-31T12:56:11.145860+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "EN1",
+          "event_id": "EN1_56ebf6ad31696ab232824bbe",
+          "frozen_at_utc": "2026-10-31T13:01:07.439571+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "EN2",
+          "event_id": "EN2_711a3ad87b0222d819a19e06",
+          "frozen_at_utc": "2026-10-31T13:01:07.533265+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "EN2",
+          "event_id": "EN2_86327a06c7919175b68492e4",
+          "frozen_at_utc": "2026-10-31T13:01:07.558532+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "EN2",
+          "event_id": "EN2_86656847b2d78c8c9f24b49b",
+          "frozen_at_utc": "2026-10-31T13:01:07.583021+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "DE1",
+          "event_id": "DE1_6b10a84879997b3690d13d2a",
+          "frozen_at_utc": "2026-11-01T11:30:44.808504+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "DE1",
+          "event_id": "DE1_e2872d3d6d1f035cc5a8fc05",
+          "frozen_at_utc": "2026-11-01T11:30:44.860061+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "DE1",
+          "event_id": "DE1_f639e9954acf490a176275ec",
+          "frozen_at_utc": "2026-11-01T11:30:44.877284+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "EN1",
+          "event_id": "EN1_8e32d8d87545e1f63bc28a3f",
+          "frozen_at_utc": "2026-11-01T11:30:44.937111+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "EN1",
+          "event_id": "EN1_c02c5ece2474ccb4ba560438",
+          "frozen_at_utc": "2026-11-01T11:30:44.953951+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "EN2",
+          "event_id": "EN2_0002b1aae56819e67ed84501",
+          "frozen_at_utc": "2026-11-01T11:30:45.016875+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "EN2",
+          "event_id": "EN2_13a3f02c48da4a81721a3058",
+          "frozen_at_utc": "2026-11-01T11:30:45.034842+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "EN2",
+          "event_id": "EN2_20ad9aad2b7bc58eaffbe3f5",
+          "frozen_at_utc": "2026-11-01T11:30:45.053372+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "EN2",
+          "event_id": "EN2_78c471003f4c8436b48ce921",
+          "frozen_at_utc": "2026-11-01T11:30:45.071061+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "EN2",
+          "event_id": "EN2_8177945e06ad36b7a0a6d25b",
+          "frozen_at_utc": "2026-11-01T11:30:45.088713+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "EN2",
+          "event_id": "EN2_8f9843ef60aee35acd30e669",
+          "frozen_at_utc": "2026-11-01T11:30:45.106763+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "EN2",
+          "event_id": "EN2_983795d7737ed41b022b1dda",
+          "frozen_at_utc": "2026-11-01T11:30:45.123805+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "EN2",
+          "event_id": "EN2_d2aea1a2dab53a5662429dde",
+          "frozen_at_utc": "2026-11-01T11:30:45.141387+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "FR1",
+          "event_id": "FR1_f23f9ab69c3d540ea9e3dbe6",
+          "frozen_at_utc": "2026-11-01T11:30:45.196145+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "IT1",
+          "event_id": "IT1_07b31fd3fe8b37271a1fe639",
+          "frozen_at_utc": "2026-11-01T11:30:45.236767+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "IT1",
+          "event_id": "IT1_4e8dd4e4261e704c6cad749d",
+          "frozen_at_utc": "2026-11-01T11:30:45.253656+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "IT1",
+          "event_id": "IT1_7ff226f07576383f525bb6f7",
+          "frozen_at_utc": "2026-11-01T11:30:45.270962+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "IT1",
+          "event_id": "IT1_d0744a5728d4ab13db0ef3ce",
+          "frozen_at_utc": "2026-11-01T11:30:45.287618+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "NL1",
+          "event_id": "NL1_4b059bf0a812a2f7e503cdab",
+          "frozen_at_utc": "2026-11-01T11:30:45.325113+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "NL1",
+          "event_id": "NL1_a5ca9958033922edddc0f37b",
+          "frozen_at_utc": "2026-11-01T11:30:45.340924+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "NL1",
+          "event_id": "NL1_f91456f01f8b9a41ebb1f861",
+          "frozen_at_utc": "2026-11-01T11:30:45.356781+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "PT1",
+          "event_id": "PT1_7d31db6c471b62bd173a04d0",
+          "frozen_at_utc": "2026-11-01T11:30:45.411893+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "PT1",
+          "event_id": "PT1_b607851c11841ab2e80ccd43",
+          "frozen_at_utc": "2026-11-01T11:30:45.427871+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "ES1",
+          "event_id": "ES1_29f888c6805f2ed64da60c46",
+          "frozen_at_utc": "2026-11-01T11:36:53.594298+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "ES1",
+          "event_id": "ES1_2fc9c99c1519876b8c76b149",
+          "frozen_at_utc": "2026-11-01T11:36:53.608544+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "ES1",
+          "event_id": "ES1_a3596f82bbb9421ab694df73",
+          "frozen_at_utc": "2026-11-01T11:36:53.622418+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "ES1",
+          "event_id": "ES1_b113b01059b1fbc1f7abb72e",
+          "frozen_at_utc": "2026-11-01T11:36:53.636439+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "IT1",
+          "event_id": "IT1_3323c759b08087190dfe5273",
+          "frozen_at_utc": "2026-11-01T11:36:53.688902+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "NL1",
+          "event_id": "NL1_3e3296897c44b2a6fa1a98d1",
+          "frozen_at_utc": "2026-11-01T11:36:53.726433+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "ES1",
+          "event_id": "ES1_a2bd11d84dc413552d1eb2cf",
+          "frozen_at_utc": "2026-11-01T13:41:48.082075+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "NL1",
+          "event_id": "NL1_39820da742fee499f791a4a7",
+          "frozen_at_utc": "2026-11-01T13:41:48.139389+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "EN1",
+          "event_id": "EN1_67abd5c97e6e78c74a4a33b2",
+          "frozen_at_utc": "2026-11-02T16:32:33.433977+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "EN1",
+          "event_id": "EN1_6c61a15bf89ff3d9e87ac7f3",
+          "frozen_at_utc": "2026-11-02T16:32:33.453938+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "EN1",
+          "event_id": "EN1_6d39e1f6e343e0e8ba0e484f",
+          "frozen_at_utc": "2026-11-02T16:32:33.473892+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "EN1",
+          "event_id": "EN1_ab0ae78395e60662c0d17090",
+          "frozen_at_utc": "2026-11-02T16:32:33.494136+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "EN1",
+          "event_id": "EN1_f1605cac75844d6afe479734",
+          "frozen_at_utc": "2026-11-02T16:32:33.532235+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "DE1",
+          "event_id": "DE1_05384ac1e7f715bd921b8823",
+          "frozen_at_utc": "2026-11-02T16:32:33.658127+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "DE1",
+          "event_id": "DE1_415540262602a361773ef429",
+          "frozen_at_utc": "2026-11-02T16:32:33.677809+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "ES1",
+          "event_id": "ES1_3443b5ec67655412b7ff486a",
+          "frozen_at_utc": "2026-11-02T16:32:33.772248+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "ES1",
+          "event_id": "ES1_8ad3fbe3cf6a4bd5016afbba",
+          "frozen_at_utc": "2026-11-02T16:32:33.793243+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "ES1",
+          "event_id": "ES1_fc607ebcd460decf7587ffb0",
+          "frozen_at_utc": "2026-11-02T16:32:33.828485+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "FR1",
+          "event_id": "FR1_204f17e4f5faf1f6eb7a9eff",
+          "frozen_at_utc": "2026-11-02T16:32:33.864257+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "FR1",
+          "event_id": "FR1_3670fd07ddddf443b4944c4b",
+          "frozen_at_utc": "2026-11-02T16:32:33.882102+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "FR1",
+          "event_id": "FR1_55a24e5e282c69d55f425c5f",
+          "frozen_at_utc": "2026-11-02T16:32:33.900431+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "FR1",
+          "event_id": "FR1_6e26afd5a2167076ec80f43b",
+          "frozen_at_utc": "2026-11-02T16:32:33.918641+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "FR1",
+          "event_id": "FR1_850be46f1452422a22b75cfb",
+          "frozen_at_utc": "2026-11-02T16:32:33.936727+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "IT1",
+          "event_id": "IT1_05157dcbb02a4cc7524a2ba0",
+          "frozen_at_utc": "2026-11-02T16:32:33.992467+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "IT1",
+          "event_id": "IT1_581a0769f9648f1ac5cb27af",
+          "frozen_at_utc": "2026-11-02T16:32:34.012791+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "IT1",
+          "event_id": "IT1_75ad8338008a127595e188a5",
+          "frozen_at_utc": "2026-11-02T16:32:34.031793+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "IT1",
+          "event_id": "IT1_cc2a07d2a7b0d97137ece4b0",
+          "frozen_at_utc": "2026-11-02T16:32:34.050450+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "NL1",
+          "event_id": "NL1_0255899a5251cfb08787034f",
+          "frozen_at_utc": "2026-11-02T16:32:34.103237+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "NL1",
+          "event_id": "NL1_9d9a8437b0cc6edc85b97ec6",
+          "frozen_at_utc": "2026-11-02T16:32:34.121762+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "NL1",
+          "event_id": "NL1_b4bbf1d668dfa8deaa02588e",
+          "frozen_at_utc": "2026-11-02T16:32:34.138866+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "DE1",
+          "event_id": "DE1_3e2390e999b8ece75e4456f2",
+          "frozen_at_utc": "2026-11-14T13:44:05.083997+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "FR1",
+          "event_id": "FR1_e16adef39a75628dbdbd38f0",
+          "frozen_at_utc": "2026-11-14T13:44:05.131645+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "EN1",
+          "event_id": "EN1_a5519dbbd7f5cad8942eb231",
+          "frozen_at_utc": "2026-11-14T13:48:40.090766+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "EN2",
+          "event_id": "EN2_70bf7eae340fcae0f41790a9",
+          "frozen_at_utc": "2026-11-14T13:48:40.142273+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "EN2",
+          "event_id": "EN2_e30eeaf477b3223261ad29a4",
+          "frozen_at_utc": "2026-11-14T13:48:40.160607+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "EN2",
+          "event_id": "EN2_f0563cd38f4e69e3a37777be",
+          "frozen_at_utc": "2026-11-14T13:48:40.178819+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "DE1",
+          "event_id": "DE1_04ae04c9577d8dc4c4420aa6",
+          "frozen_at_utc": "2026-11-15T12:18:17.656507+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "DE1",
+          "event_id": "DE1_050591a43c743fe64549e4fb",
+          "frozen_at_utc": "2026-11-15T12:18:17.669256+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "DE1",
+          "event_id": "DE1_f51c852f2f5054d6331ab44f",
+          "frozen_at_utc": "2026-11-15T12:18:17.716070+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "EN1",
+          "event_id": "EN1_0fae28f7912e9d12a18a1929",
+          "frozen_at_utc": "2026-11-15T12:18:17.757612+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "EN1",
+          "event_id": "EN1_80d00cb594c930e52f665edf",
+          "frozen_at_utc": "2026-11-15T12:18:17.770591+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "EN1",
+          "event_id": "EN1_cf0e4a1b68ffd3af9475250b",
+          "frozen_at_utc": "2026-11-15T12:18:17.783195+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "EN1",
+          "event_id": "EN1_d2b916c602f69ab1a31a6d52",
+          "frozen_at_utc": "2026-11-15T12:18:17.795543+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "EN1",
+          "event_id": "EN1_f2a06c2e2ac3e6544239cb65",
+          "frozen_at_utc": "2026-11-15T12:18:17.807573+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "EN1",
+          "event_id": "EN1_fb22d609ea58b143f90b40b3",
+          "frozen_at_utc": "2026-11-15T12:18:17.819501+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "EN2",
+          "event_id": "EN2_3a65fc7b5f4416c9021b7a1e",
+          "frozen_at_utc": "2026-11-15T12:18:17.867213+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "EN2",
+          "event_id": "EN2_b3cbd82e57fc5f7c58e38e17",
+          "frozen_at_utc": "2026-11-15T12:18:17.880768+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "EN2",
+          "event_id": "EN2_b4e15d0ede8538f35b73fcd2",
+          "frozen_at_utc": "2026-11-15T12:18:17.893945+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "EN2",
+          "event_id": "EN2_b8f2068bedc1055d3d1b5897",
+          "frozen_at_utc": "2026-11-15T12:18:17.906825+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "EN2",
+          "event_id": "EN2_c0beab8d9e3d08b1d7164095",
+          "frozen_at_utc": "2026-11-15T12:18:17.919456+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "EN2",
+          "event_id": "EN2_c112e96b33427e51a263af6b",
+          "frozen_at_utc": "2026-11-15T12:18:17.932751+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "EN2",
+          "event_id": "EN2_d263da431e9d39ff82e01477",
+          "frozen_at_utc": "2026-11-15T12:18:17.945613+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "EN2",
+          "event_id": "EN2_ec5fb705c469c903787a8b4a",
+          "frozen_at_utc": "2026-11-15T12:18:17.958620+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "FR1",
+          "event_id": "FR1_022b68d8ff6fcb59fe450af2",
+          "frozen_at_utc": "2026-11-15T12:18:17.995850+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "FR1",
+          "event_id": "FR1_0d636d3150f82ecb35082ea6",
+          "frozen_at_utc": "2026-11-15T12:18:18.007725+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "FR1",
+          "event_id": "FR1_4ad5999ba1a6d869d91ef399",
+          "frozen_at_utc": "2026-11-15T12:18:18.019800+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "FR1",
+          "event_id": "FR1_c77d747f52d6d2f1dd6638a9",
+          "frozen_at_utc": "2026-11-15T12:18:18.031358+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "FR1",
+          "event_id": "FR1_e804150c48d7719cab9a6e53",
+          "frozen_at_utc": "2026-11-15T12:18:18.042588+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "IT1",
+          "event_id": "IT1_3d9471fde8ee5b51dc835cfe",
+          "frozen_at_utc": "2026-11-15T12:18:18.081763+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "IT1",
+          "event_id": "IT1_47d8739986ecf77a75101f64",
+          "frozen_at_utc": "2026-11-15T12:18:18.094512+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "IT1",
+          "event_id": "IT1_9c574f7f4363d95539c35080",
+          "frozen_at_utc": "2026-11-15T12:18:18.106507+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "IT1",
+          "event_id": "IT1_eb35c79c154757d34df3ca63",
+          "frozen_at_utc": "2026-11-15T12:18:18.118801+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "NL1",
+          "event_id": "NL1_70b4bfcb68076a7220161e33",
+          "frozen_at_utc": "2026-11-15T12:18:18.152878+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "NL1",
+          "event_id": "NL1_9cad894f6f2e0443139e97fb",
+          "frozen_at_utc": "2026-11-15T12:18:18.163616+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "NL1",
+          "event_id": "NL1_a208c99770d09b46ca9e0ed3",
+          "frozen_at_utc": "2026-11-15T12:18:18.174447+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "NL1",
+          "event_id": "NL1_c92fac83dcb5d1653cc67dab",
+          "frozen_at_utc": "2026-11-15T12:18:18.185500+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "NL1",
+          "event_id": "NL1_d0b30144defc28c7f8195dd9",
+          "frozen_at_utc": "2026-11-15T12:18:18.196068+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "EN2",
+          "event_id": "EN2_9c86d624f540b11c747531c7",
+          "frozen_at_utc": "2026-11-15T12:24:53.553332+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "ES1",
+          "event_id": "ES1_51e2a83513c23f347a0a3798",
+          "frozen_at_utc": "2026-11-15T12:24:53.614140+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "ES1",
+          "event_id": "ES1_c91b9ef5c8cc6f87585e6635",
+          "frozen_at_utc": "2026-11-15T12:24:53.626294+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "ES1",
+          "event_id": "ES1_e42f8f06e53fd0e9c4ff1b11",
+          "frozen_at_utc": "2026-11-15T12:24:53.638151+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "NL1",
+          "event_id": "NL1_389dce3bbbf52c6d5a3116b4",
+          "frozen_at_utc": "2026-11-15T12:24:53.672440+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "EN1",
+          "event_id": "EN1_b32d832f7f4c81d73a40cb9a",
+          "frozen_at_utc": "2026-11-15T14:12:37.749951+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "ES1",
+          "event_id": "ES1_029c2b45bea91132258aa6cb",
+          "frozen_at_utc": "2026-11-15T14:12:37.799431+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "FR1",
+          "event_id": "FR1_b98320705e816cf814f4df72",
+          "frozen_at_utc": "2026-11-15T14:12:37.911619+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "IT1",
+          "event_id": "IT1_709009dfbe09aa1c44ef38e4",
+          "frozen_at_utc": "2026-11-15T14:12:37.962488+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "IT1",
+          "event_id": "IT1_ab40e53e01b565a27372cdb6",
+          "frozen_at_utc": "2026-11-15T14:12:37.983306+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "NL1",
+          "event_id": "NL1_a03f51296b04977992a1eb0f",
+          "frozen_at_utc": "2026-11-15T14:12:38.029002+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "NL1",
+          "event_id": "NL1_ad8eea3c8d3d895175d97fe3",
+          "frozen_at_utc": "2026-11-15T14:12:38.046321+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "EN1",
+          "event_id": "EN1_6771805eaeb4f61544686b99",
+          "frozen_at_utc": "2026-11-16T16:19:43.051523+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "DE1",
+          "event_id": "DE1_14cc48088addffaac0bfc145",
+          "frozen_at_utc": "2026-11-16T16:19:43.069765+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "DE1",
+          "event_id": "DE1_9ad1119a54f8e0a4bd324c49",
+          "frozen_at_utc": "2026-11-16T16:19:43.087615+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "ES1",
+          "event_id": "ES1_a3a1632fdf03eb4939819a46",
+          "frozen_at_utc": "2026-11-16T16:19:43.168119+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "ES1",
+          "event_id": "ES1_b506deb638a292d9c082e7d6",
+          "frozen_at_utc": "2026-11-16T16:19:43.185479+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "ES1",
+          "event_id": "ES1_d30a99a76949bc1a64bdf462",
+          "frozen_at_utc": "2026-11-16T16:19:43.201769+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "FR1",
+          "event_id": "FR1_601d466ee222a71876d56b43",
+          "frozen_at_utc": "2026-11-16T16:19:43.243889+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "FR1",
+          "event_id": "FR1_d0ad0e5f8a6802334bada81a",
+          "frozen_at_utc": "2026-11-16T16:19:43.260903+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "IT1",
+          "event_id": "IT1_41eacddf80858afc603a8841",
+          "frozen_at_utc": "2026-11-16T16:19:43.305023+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "IT1",
+          "event_id": "IT1_719b27741bb9dd09c1121699",
+          "frozen_at_utc": "2026-11-16T16:19:43.321898+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "NL1",
+          "event_id": "NL1_72f409a89bc721fdd4e665cf",
+          "frozen_at_utc": "2026-11-16T16:19:43.364164+00:00",
+          "prior_n": 0,
+          "temperature": null
+        },
+        {
+          "league": "IT1",
+          "event_id": "IT1_a7cddbb4a1b6ab553a1c4248",
+          "frozen_at_utc": "2026-11-16T16:19:43.490772+00:00",
+          "prior_n": 0,
+          "temperature": null
+        }
+      ],
+      "recalibration_verdict": "inconclusive (n too small)",
+      "walk_forward_limitation": "Walk-forward temperature fitting could not run at all. 0 of 149 games had at least 30 earlier finals known before freeze because the football ledger has no per-game result times. No temperature was applied, and no calibration conclusion is possible yet. Reliability bins and logistic slopes are descriptive only for the original frozen forecasts."
+    }
+  },
+  "markets": {
+    "over_2_5": {
+      "n": 149,
+      "reference": {
+        "hit_rate": 0.5771812080536913,
+        "log_loss": 0.6931471805599463,
+        "brier": 0.25,
+        "ci95": {
+          "hit_rate": [
+            0.4966442953020134,
+            0.6577181208053692
+          ],
+          "log_loss": [
+            0.6931471805599463,
+            0.6931471805599463
+          ],
+          "brier": [
+            0.25,
+            0.25
+          ]
+        }
+      },
+      "candidate": {
+        "hit_rate": 0.5234899328859061,
+        "log_loss": 0.6826217720146203,
+        "brier": 0.24484699536822235,
+        "ci95": {
+          "hit_rate": [
+            0.4429530201342282,
+            0.6040268456375839
+          ],
+          "log_loss": [
+            0.6480032965353804,
+            0.7190279430205401
+          ],
+          "brier": [
+            0.2286301337919332,
+            0.2619420789267899
+          ]
+        }
+      },
+      "improvement": {
+        "hit_rate": -0.053691275167785234,
+        "log_loss": 0.010525408545325217,
+        "brier": 0.005153004631777791,
+        "ci95": {
+          "hit_rate": [
+            -0.14093959731543623,
+            0.03372483221476418
+          ],
+          "log_loss": [
+            -0.02588076246059465,
+            0.045143884024564686
+          ],
+          "brier": [
+            -0.011942078926789895,
+            0.021369866208066794
+          ]
+        }
+      },
+      "missing_probability": 0,
+      "baseline_mean_probability": 0.5,
+      "skill_verdict": "no_skill_over_baseline"
+    },
+    "btts": {
+      "n": 149,
+      "reference": {
+        "hit_rate": 0.5704697986577181,
+        "log_loss": 0.6931471805599463,
+        "brier": 0.25,
+        "ci95": {
+          "hit_rate": [
+            0.4899328859060403,
+            0.6510067114093959
+          ],
+          "log_loss": [
+            0.6931471805599463,
+            0.6931471805599463
+          ],
+          "brier": [
+            0.25,
+            0.25
+          ]
+        }
+      },
+      "candidate": {
+        "hit_rate": 0.5771812080536913,
+        "log_loss": 0.6615137883244459,
+        "brier": 0.23460629848438871,
+        "ci95": {
+          "hit_rate": [
+            0.4966442953020134,
+            0.6577181208053692
+          ],
+          "log_loss": [
+            0.6316990103840764,
+            0.6917098721480218
+          ],
+          "brier": [
+            0.22028185466441672,
+            0.2493184687827477
+          ]
+        }
+      },
+      "improvement": {
+        "hit_rate": 0.006711409395973154,
+        "log_loss": 0.03163339223549938,
+        "brier": 0.015393701515611315,
+        "ci95": {
+          "hit_rate": [
+            -0.06040268456375839,
+            0.08053691275167785
+          ],
+          "log_loss": [
+            0.0014373084119234522,
+            0.06144817017586875
+          ],
+          "brier": [
+            0.000681531217252389,
+            0.029718145335583205
+          ]
+        }
+      },
+      "missing_probability": 0,
+      "baseline_mean_probability": 0.5,
+      "skill_verdict": "skill_over_baseline"
+    }
+  }
+}
