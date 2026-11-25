@@ -1,6 +1,7 @@
 """Validate an entire source snapshot before merging or replacing any archive."""
 import gzip
 import json
+import tempfile
 from pathlib import Path
 
 
@@ -47,7 +48,14 @@ def save(rows, code, season, root, metadata=None):
     target.parent.mkdir(parents=True, exist_ok=True)
     payload = dict(metadata or {}, rows=rows)
     encoded = gzip.compress(json.dumps(payload, ensure_ascii=False, allow_nan=False).encode(), mtime=0)
-    temporary = target.with_suffix('.part')
-    temporary.write_bytes(encoded)
-    temporary.replace(target)
+    temporary = None
+    try:
+        with tempfile.NamedTemporaryFile(dir=target.parent, prefix=target.name+'.',
+                                         suffix='.part', delete=False) as handle:
+            temporary = Path(handle.name)
+            handle.write(encoded)
+        temporary.replace(target)
+    finally:
+        if temporary is not None:
+            temporary.unlink(missing_ok=True)
     return rows
