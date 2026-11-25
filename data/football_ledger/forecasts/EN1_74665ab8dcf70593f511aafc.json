@@ -1,0 +1,125 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-11-25T17:34:26.190056+00:00",
+  "fixture": {
+    "event_id": "EN1_74665ab8dcf70593f511aafc",
+    "league": "EN1",
+    "season": "2026-27",
+    "date": "2026-12-01",
+    "home": "coventry city fc",
+    "away": "ipswich town fc",
+    "home_name": "Coventry City FC",
+    "away_name": "Ipswich Town FC",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/en.1.json",
+    "captured_at_utc": "2026-11-25T17:30:07.760252+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null,
+    "original_date": null,
+    "date_correction_verified": null,
+    "license_url": null,
+    "source_sha256": null,
+    "fixture_verification_url": null,
+    "actual_start_utc": null,
+    "source_original_date": "2026-12-02",
+    "verified_start_utc": "2026-12-01T20:00:00+00:00",
+    "independent_fixture": {
+      "provider_event_id": "401879221",
+      "league": "EN1",
+      "season_year": 2026,
+      "start_utc": "2026-12-01T20:00:00+00:00",
+      "captured_at": "2026-11-25T17:33:48.916955+00:00",
+      "home_name": "Coventry City",
+      "away_name": "Ipswich Town",
+      "provider_home_id": "388",
+      "provider_away_id": "373",
+      "source_url": "https://www.espn.com/soccer/game/_/gameId/401879221",
+      "status": "scheduled",
+      "event_id": "EN1_74665ab8dcf70593f511aafc",
+      "home": "coventry city fc",
+      "away": "ipswich town fc"
+    }
+  },
+  "prediction": {
+    "model": "football-opponent-v1",
+    "league": "EN1",
+    "home": "coventry city fc",
+    "away": "ipswich town fc",
+    "expected_home_goals": 1.9341521324783728,
+    "expected_away_goals": 1.4457646430136215,
+    "probabilities": {
+      "home": 0.4906244768247459,
+      "draw": 0.22056340404363603,
+      "away": 0.28881211913161803
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.8508625704723987,
+      "2.5": 0.6563700910615602,
+      "3.5": 0.4372472931056522
+    },
+    "both_teams_score": 0.6539376311725289,
+    "total_goals_80": [
+      1,
+      6
+    ],
+    "training_cutoff_exclusive": "2026-11-25",
+    "training_games": 1122,
+    "prior_team_games": {
+      "coventry city fc": 11,
+      "ipswich town fc": 49
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "settings": {
+      "half_life_days": 180.0,
+      "shrinkage_games": 8.0,
+      "window_days": 1095
+    },
+    "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+    "low_score_rho": 0.0,
+    "research_candidate": false
+  },
+  "archive_sha256": "8857d285d5734d9fe3e6abd4ef4d245c91995d58e3515c282ce571e048cb26e6",
+  "source_code_sha256": "121c31afeede2fed38008f18ff2eaaeab455f4e67336810e10e4a57e1259d9bc",
+  "requested_model_variant": "opponent",
+  "history_health": {
+    "spec": "football-history-health-v1",
+    "checked_at_utc": "2026-11-25T17:34:24.215088+00:00",
+    "information_cutoff_exclusive": "2026-11-25",
+    "teams": {
+      "coventry city fc": {
+        "prior_finals": 11,
+        "active_season_finals": 11,
+        "last_final_date": "2026-11-21",
+        "days_since_last_final": 4,
+        "unresolved_past_fixture_ids": []
+      },
+      "ipswich town fc": {
+        "prior_finals": 49,
+        "active_season_finals": 11,
+        "last_final_date": "2026-11-21",
+        "days_since_last_final": 4,
+        "unresolved_past_fixture_ids": []
+      }
+    },
+    "diagnostic_gate_passed": true,
+    "blocking_issues": [],
+    "max_history_age_days": 30,
+    "calendar_completeness_verified": false,
+    "note": "Diagnostic policy, not a validated success threshold. Unresolved fixtures may be postponed or missing results. Fresh source captures do not make old histories current."
+  },
+  "selection_policy": "Current-history diagnostic gate plus existing model issues; research only, no validated recommendation.",
+  "payload_sha256": "340394fcc45320e4acd121f756cb7d32be52a440a44b69da529e40913e1ea83e"
+}
