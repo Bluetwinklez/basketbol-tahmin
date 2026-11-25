@@ -1,5 +1,6 @@
 import json
 from datetime import date
+from pathlib import Path
 from types import SimpleNamespace
 
 import pytest
@@ -11,6 +12,19 @@ from scripts import refresh_sports
 TODAY = date(2026, 11, 24)
 EXCEPTION = dict(sport='basketball', league='PBA_GOV', reason='Repeated HTTP 503', review_by='2026-11-24')
 FAILURE = dict(league='PBA_GOV', status='failed', error='HTTP 503')
+
+
+def test_repository_nba_entry_classifies_by_league():
+    path = Path(__file__).resolve().parents[1] / 'data' / 'refresh' / 'known_missing.json'
+    entries = load_known_missing(path)
+    blocked = dict(league='NBA', status='failed',
+                   error='RuntimeError: HTTP 403: https://site.api.espn.com/robots.txt')
+    different_error = dict(blocked, error='ValueError: Invalid scoreboard payload')
+
+    assert classify_errors('basketball', [blocked, different_error], entries) == {
+        'known_missing': [blocked, different_error],
+        'unexpected': [],
+    }
 
 
 @pytest.mark.parametrize(('entry', 'error', 'expected'), [
