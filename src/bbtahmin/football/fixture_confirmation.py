@@ -12,6 +12,78 @@ from ..quality import timestamp
 CODES={'EN1':'eng.1','EN2':'eng.2','DE1':'ger.1','ES1':'esp.1','FR1':'fra.1',
        'IT1':'ita.1','NL1':'ned.1','PT1':'por.1','TR1':'tur.1'}
 
+SETTLEMENT_SPEC = "football-settlement-evidence-v1"
+SETTLEMENT_FILE = "settlement_finals.json"
+RESULT_FIELDS = ("league", "season_year", "provider_event_id", "provider_home_id", "provider_away_id",
+                 "home", "away", "start_utc", "status", "home_score", "away_score")
+
+
+def read_settlement_evidence(path):
+    if not path.exists():
+        return {"spec": SETTLEMENT_SPEC, "fixtures": {}}
+    evidence = json.loads(path.read_text(encoding="utf8"))
+    if evidence.get("spec") != SETTLEMENT_SPEC or not isinstance(evidence.get("fixtures"), dict):
+        raise ValueError("Invalid football settlement evidence")
+    return evidence
+
+
+def retain_settlement_facts(evidence, report):
+    """Keep the earliest observation of each distinct fact, including disagreements."""
+    if report.get("spec") != "football-fixture-confirmation-v1":
+        raise ValueError("Invalid football fixture confirmation")
+    cutoff = timestamp(report["checked_at_utc"])
+    for review in report["reviews"]:
+        if review["status"] not in ("confirmed", "date_conflict"):
+            continue
+        fact = review["observation"]
+        provider_id = str(fact.get("provider_event_id", ""))
+        league = fact["league"]
+        if league not in CODES or not provider_id.isascii() or not provider_id.isdigit():
+            raise ValueError("Invalid football settlement provider identity")
+        identity = f"{league}:{provider_id}"
+        book = evidence["fixtures"]
+        state = fact["status"]
+        if state != "final" and identity not in book:
+            continue
+        start = timestamp(fact["start_utc"])
+        captured = timestamp(fact["captured_at"])
+        if (captured > cutoff or fact["event_id"] != review["event_id"]
+                or fact["home"] == fact["away"]
+                or fact["source_url"] != f"https://www.espn.com/soccer/game/_/gameId/{provider_id}"):
+            raise ValueError("Invalid football settlement provenance")
+        if state == "final" and (start >= captured or any(
+            type(fact.get(side)) is not int or fact[side] < 0 for side in ("home_score", "away_score")
+        )):
+            raise ValueError("Invalid observed football final")
+        observations = book.setdefault(identity, [])
+        fields = (*RESULT_FIELDS, "event_id")
+        signature = tuple(fact.get(field) for field in fields)
+        if not any(tuple(old.get(field) for field in fields) == signature for old in observations):
+            observations.append(fact)
+    return evidence
+
+
+def settlement_finals(evidence, held_ids=(), held_provider_keys=(), now=None):
+    """Filter disputes at the provider and archive identities before settlement."""
+    clock = timestamp(now or pd.Timestamp.now(tz="UTC"))
+    by_event = {}
+    providers = {}
+    for key, observations in evidence["fixtures"].items():
+        visible = [fact for fact in observations if timestamp(fact["captured_at"]) <= clock]
+        for fact in visible:
+            identity = (fact["league"], fact["event_id"])
+            providers.setdefault(identity, set()).add(key)
+        signatures = {tuple(fact.get(field) for field in RESULT_FIELDS) for fact in visible}
+        if (len(signatures) != 1 or key in held_provider_keys
+                or any(fact["event_id"] in held_ids for fact in visible)):
+            continue
+        fact = min(visible, key=lambda row: timestamp(row["captured_at"]))
+        identity = (fact["league"], fact["event_id"])
+        if fact["status"] != "final":
+            continue
+        by_event[identity] = fact
+    return [fact for identity, fact in sorted(by_event.items()) if len(providers[identity]) == 1]
+
 
 def facts(payload,code,captured):
     captured=timestamp(captured)
@@ -95,7 +167,7 @@ def refresh(lookback=2,root=None):
             unique={}
             for row in observations:
                 prior=unique.get(row['provider_event_id'])
-                if prior and any(prior[k]!=row[k] for k in ('start_utc','home_name','away_name','status')):
+                if prior and any(prior.get(k)!=row.get(k) for k in (*RESULT_FIELDS, 'home_name', 'away_name')):
                     raise ValueError('Conflicting publisher fixture pages')
                 unique[row['provider_event_id']]=row
             group=groups[code]
@@ -103,5 +175,10 @@ def refresh(lookback=2,root=None):
         except Exception as exc: errors.append(dict(league=code,reason=f'{type(exc).__name__}: {exc}'))
     result=dict(spec='football-fixture-confirmation-v1',checked_at_utc=pd.Timestamp.now(tz='UTC').isoformat(),
                 reviews=reports,errors=errors,note='Publisher fixture validation and settlement facts only. No scores imported into model training archives; explicit aliases, ordered teams and unique same-day identity required.')
-    write_json(root.parent/'football_fixture_checks/latest.json',result)
+    output = root.parent/'football_fixture_checks'
+    evidence_path = output / SETTLEMENT_FILE
+    evidence = read_settlement_evidence(evidence_path)
+    retain_settlement_facts(evidence, result)
+    write_json(evidence_path, evidence)
+    write_json(output/'latest.json',result)
     return result

@@ -9,6 +9,9 @@ from threadpoolctl import threadpool_limits
 
 from bbtahmin.daily import source_facts
 from bbtahmin.football.data import load,write_json
+from bbtahmin.football.fixture_confirmation import (
+    SETTLEMENT_FILE, read_settlement_evidence, retain_settlement_facts, settlement_finals,
+)
 from bbtahmin.football.health import assess, defer_held_history, held_fixture_reviews
 from bbtahmin.prospective import dataset_hashes,fingerprint
 from bbtahmin.quality import timestamp
@@ -75,24 +78,30 @@ def run(root='data/improvement_shadow',record=True):
                     freeze(directory,identity,fixture,pair,hashes,now=recorded);new+=1
                 except Exception as exc:skipped.append(dict(league=code,event_id=fixture['event_id'],reason=f'{type(exc).__name__}: {exc}'))
         facts_path=Path('data/football_fixture_checks/latest.json')
+        quarantine_path=Path('data/football/fixture_reviews.json')
+        quarantine=json.loads(quarantine_path.read_text(encoding='utf8'))['reviews'] if quarantine_path.exists() else {}
+        held_fixtures=held_fixture_reviews(quarantine)
+        provider_prefix='https://www.espn.com/soccer/game/_/gameId/'
+        held_providers={f"{review['league']}:{review['source_url'][len(provider_prefix):]}"
+                        for review in held_fixtures.values() if review['source_url'].startswith(provider_prefix)}
+        evidence=read_settlement_evidence(facts_path.with_name(SETTLEMENT_FILE))
         if facts_path.exists():
             confirmations=json.loads(facts_path.read_text(encoding='utf8'))
+            retain_settlement_facts(evidence,confirmations)
             skipped.extend(confirmations.get('errors',[]));frame=load();models={}
             bad_leagues={e['league'] for e in confirmations.get('errors',[]) if e.get('league')}
             known_future={r['event_id'] for r in confirmations['reviews'] if r['status'] in ('confirmed','date_conflict') and
                           r['observation']['status']=='scheduled' and clock<timestamp(r['observation']['start_utc']) and
                           timestamp(r['observation']['captured_at'])<=clock and clock-timestamp(r['observation']['captured_at'])<=pd.Timedelta(hours=24)}
-            quarantine_path=Path('data/football/fixture_reviews.json')
-            quarantine=json.loads(quarantine_path.read_text(encoding='utf8'))['reviews'] if quarantine_path.exists() else {}
-            held_fixtures=held_fixture_reviews(quarantine)
             health_frame=defer_held_history(frame.loc[~frame.event_id.isin(known_future - held_fixtures.keys())], held_fixtures, clock)
             for review in confirmations['reviews']:
                 if review['status'] not in ('confirmed','date_conflict'):continue
                 fixture=review['observation'];code=fixture['league']
-                if fixture['event_id'] in held_fixtures:
+                if (fixture['event_id'] in held_fixtures
+                        or f"{code}:{fixture.get('provider_event_id')}" in held_providers):
                     skipped.append(dict(league=code,event_id=fixture['event_id'],reason='Postponed or interrupted fixture requires explicit review'))
                     continue
-                if fixture['status']=='final':results.append(fixture);continue
+                if fixture['status']=='final':continue
                 if not record or not clock<timestamp(fixture['start_utc'])<=clock+pd.Timedelta(days=7):continue
                 try:
                     if code in bad_leagues:raise ValueError('Independent fixture refresh incomplete')
@@ -125,6 +134,7 @@ def run(root='data/improvement_shadow',record=True):
                     new+=1
                 except Exception as exc:skipped.append(dict(league=code,event_id=fixture['event_id'],reason=str(exc)))
         else: skipped.append(dict(sport='football',reason='No independent fixture confirmations; run confirm_football_fixtures.py'))
+        results.extend(settlement_finals(evidence,held_fixtures,held_providers,now=clock))
     checks=[]
     for experiment in sorted((root/'experiments').iterdir()):
         if experiment.is_dir():checks.append(dict(experiment_id=experiment.name,**evaluate(experiment,results,active=experiment.name==identity)))
