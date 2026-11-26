@@ -37,7 +37,7 @@ def test_failure_preserves_previous_cache_and_stays_failure(tmp_path,monkeypatch
     assert sleeps==([1,2] if attempts==3 else [])
 
 
-@pytest.mark.parametrize('payload,error',[(b'\xff',UnicodeDecodeError),(b'x'*6_000_001,ValueError)])
+@pytest.mark.parametrize('payload,error',[(b'\xff',UnicodeDecodeError),(b'x'*6_000_001,ValueError)], ids=['invalid-utf8', 'oversized'])
 def test_invalid_response_does_not_poison_cache(tmp_path,monkeypatch,payload,error):
     p,_=setup(tmp_path,monkeypatch)
     monkeypatch.setattr(c.urllib.request,'urlopen',lambda *a,**k:io.BytesIO(payload))
