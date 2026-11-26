@@ -43,6 +43,7 @@ Guide to the documents under `docs/` and the `docs/kanit/` evidence directory. F
 - [Football draw research](kanit/improvement/football-draw-experiment.md) — Chronological comparison of alternative draw forecasts.
 - [Premier League promotion prior](kanit/improvement/football-promoted-prior.md) — Chronological comparison of a common promoted-club adjustment and club-specific Championship transfer.
 - [Football refit frequency](kanit/improvement/football-refit-cadence.md) — Daily, weekly and monthly fitting compared at matching one- and seven-day forecast leads.
+- [Football opponent-model recency](kanit/improvement/football-opponent-half-life.md) — Matched replay of 90-, 180- and 360-day half-lives with previous-season selection.
 
 ## Data sources, audits and roadmap
 
