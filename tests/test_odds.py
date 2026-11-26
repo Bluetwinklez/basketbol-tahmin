@@ -96,3 +96,8 @@ def test_tahmin_harman_needs_odds_and_coefficients(tmp_path):
     assert harman(t,yol)==pytest.approx(.65)
     assert harman(dict(t,piyasa_ev=None),yol) is None
     assert harman(dict(t,lig='E'),yol) is None
+    yol.write_text(json.dumps({'NBA':{'skor':{'katsayi':[0.,1.,0.],'sezonlar':['2021-22','2022-23']}}}),'utf8')
+    assert harman(t,yol) is None  # no cutoff: cannot establish prior training
+    assert harman(dict(t,tarih_utc='2022-12-01T20:00Z'),yol) is None
+    assert harman(dict(t,tarih_utc='2021-12-01T20:00Z'),yol) is None
+    assert harman(dict(t,tarih_utc='2023-12-01T20:00Z'),yol)==pytest.approx(.65)

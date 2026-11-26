@@ -82,10 +82,19 @@ def harman(t, yol='docs/kanit/harman.json'):
     """Oran verilmişse piyasa ve model olasılığının backtest'te öğrenilen birleşimi; yoksa None."""
     if t.get('piyasa_ev') is None:
         return None
+    if str(yol)=='docs/kanit/harman.json':
+        from .artifacts import verified_path
+        yol=verified_path('harman.json')
+        if yol is None: return None
     try:
         kayit = json.loads(Path(yol).read_text('utf8'))[t['lig']][t['model']]
     except (OSError, KeyError, ValueError):
         return None
+    # All-history coefficients are for future use only. A historical query
+    # must not reuse coefficients fitted on its own season or later seasons.
+    if kayit.get('sezonlar'):
+        if not t.get('tarih_utc') or max(kayit['sezonlar'])>=sezon_adi(pd.Timestamp(t['tarih_utc'])):
+            return None
     a, bm, bp = kayit['katsayi']
     logit = lambda p: np.log(np.clip(p, 1e-6, 1 - 1e-6) / np.clip(1 - p, 1e-6, 1 - 1e-6))
     return float(1 / (1 + np.exp(-(a + bm * logit(t['piyasa_ev']) + bp * logit(t['ev_kazanir'])))))

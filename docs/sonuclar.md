@@ -1,4 +1,8 @@
-# Gerçek çalıştırma sonuçları
+# Tarihsel çalıştırma sonuçları — güncel değerlendirme değildir
+
+Bu rapor maç sonrası oyuncu katılımından türetilen sızıntılı özellikleri içerir.
+Güncel NBA performansı için kullanmayın. Geçerli kanıt ve yeniden üretim yolu:
+[pregame_verified/README.md](kanit/pregame_verified/README.md).
 
 Rapor zamanı (UTC): 2026-10-22T06:45:41.984752+00:00. Toplama: 2026-10-22T06:41:56.963445+00:00.
 
