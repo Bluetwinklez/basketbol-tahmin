@@ -65,3 +65,39 @@ sıfırı içeriyor ve ligler arasında fark var. Bu, daha sonraki bir arşiv
 karşılaştırmasıdır. Maç öncesi yayımlanmış eşli tahminlerin yerine geçmez.
 
 `python -m scripts.evaluate_football_opponent_followup --output football-opponent-result.json`
+
+## Beklenen gol toplamıyla beraberlik düzeltmesi
+
+Antigravity'nin önerisiyle maç öncesi beklenen gol toplamı da modele
+eklendi. Düzeltme önceki sezonun ilk bölümünde öğrenildi ve ikinci bölümde
+Poisson, sıcaklık, sabit çarpan ve maç dengesi adaylarıyla karşılaştırıldı.
+Her iki sezonda da dokuz ligin hiçbiri seçim koşulunu geçmedi.
+
+| Arşiv dönemi | Maç | Poisson isabeti | Yeni aday | Poisson / aday log loss |
+| --- | ---: | ---: | ---: | ---: |
+| 2025–26 | 3.018 | %49,14 | %49,07 | 1,01895 / 1,02107 |
+| 2026–27 (kısmi) | 1.052 | %50,48 | %50,57 | 1,01045 / 1,01278 |
+
+Dengeli ve beklenen toplamı 2,5'in altındaki maçlarda beraberlik Brier
+skoru her iki dönemde de kötüleşti (0,2085 → 0,2107 ve 0,2041 → 0,2049).
+Bu dilim Poisson'un maç öncesi galibiyet olasılığı farkı en fazla 0,15
+olan maçlardan oluşuyor. 2026–27 için şu komut aynı protokolü yeniden çalıştırır:
+
+`python -m scripts.evaluate_football_draw --development 2025-26 --target 2026-27 --output football-draw-2026.json`
+
+## Mevcut gölge politikasına karşı rakip gücü
+
+2026–27 arşivindeki aynı 1.052 maçta gölge politikası lig başına kayıtlı
+algoritma ve sıcaklıkla tekrar oynatıldı. Algoritmalar ay başında, o aydan
+önceki verilerle eğitildi. Bu arşiv tekrarı, canlı koşudaki kaynak kontrollerini
+ve maç öncesi yayımlama koşulunu kanıtlamaz.
+
+| Yöntem | İsabet | Log loss | Brier | %65 eşiği ve model geçmişi koşulunu geçenler |
+| --- | ---: | ---: | ---: | ---: |
+| Gölge politikası | %51,05 | 0,99769 | 0,59543 | %10,08 |
+| Sabit rakip gücü | %51,71 | 0,99680 | 0,59457 | %5,23 |
+
+Sabit rakip gücünün isabet farkı +0,67 yüzde puanı (gün bloklu %95 aralık
+[−0,26; +1,70]). İlk dönemde −0,23, ikinci dönemde +1,28 yüzde puanı.
+Log loss farkının aralığı da sıfırı içeriyor [−0,00755; +0,00686].
+Bu bulgularla mevcut gölge politikasını değiştirmek için yeterli kanıt yok.

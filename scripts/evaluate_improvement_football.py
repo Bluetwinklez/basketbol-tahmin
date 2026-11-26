@@ -48,7 +48,8 @@ def season_predictions(frame,league,season,*,variants=VARIANTS):
                 probs=[prediction['probabilities'][k] for k in ('home','draw','away')]
                 rows.append(dict(event_id=game['event_id'],day=game['date'],league=league,season=season,
                                  variant=variant,p=probs,y=('home','draw','away').index(result['actual_outcome']),
-                                 data_gate_passed=not prediction['issues'],result=result))
+                                 data_gate_passed=not prediction['issues'],result=result,
+                                 expected_total_goals=prediction['expected_home_goals']+prediction['expected_away_goals']))
     return rows,skipped
 
 
