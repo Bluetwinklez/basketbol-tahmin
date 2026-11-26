@@ -26,3 +26,30 @@ sentetik testle doğrulandı. Bu geçmiş arşiv deneyi üretim değişikliği
 için yeterli kanıt sağlamadı.
 
 `python -m scripts.evaluate_basketball_carryover --output basketball-carryover.json`
+
+## ABA'da 0,05 oranının ayrı arşiv kontrolü
+
+Kısmi 2026–27 sezonunda seçilmiş olan 0,05 oranı sabit tutuldu ve
+2017–18 ila 2025–26 arasındaki dokuz arşiv sezonunda 0,25 ile
+karşılaştırıldı. İlk altı sezon, kısmi 2026–27 seçiminin kullandığı üç
+sezondan ayrı raporlandı. Antigravity'nin önerdiği sezon bazında
+tekrarlanabilirlik kontrolü uygulandı. Maç başına skorlar sadece
+önceki UTC günlerindeki sonuçlarla oluşturuldu.
+
+| Dönem | Maç | 0,25 isabeti | 0,05 isabeti | 0,25 / 0,05 log loss |
+| --- | ---: | ---: | ---: | ---: |
+| 2017–18 ila 2022–23 | 975 | %73,33 | %72,92 | 0,54646 / 0,53823 |
+| 2023–24 ila 2025–26 (seçimde kullanılan) | 705 | %75,46 | %74,61 | 0,51584 / 0,50645 |
+| Önceki dokuz sezon | 1.680 | %74,23 | %73,63 | 0,53361 / 0,52489 |
+| Önceki dokuz sezon, ilk 45 gün | 407 | %72,48 | %72,73 | 0,55747 / 0,54842 |
+| 2026–27 (kısmi, hipotezin kaynağı) | 80 | %67,50 | %72,50 | 0,56291 / 0,54193 |
+
+0,05 dokuz sezonun sekizinde log loss'u düşürdü. Önceki 1.680 maçta
+log loss farkı −0,00872 (%95 gün bloklu aralık [−0,01346; −0,00373]),
+ancak aday 10 daha az doğru tahmin yaptı. İlk 45 günde bir ek doğru
+vardı; isabet farkının aralığı [−1,67; +2,18] yüzde puanı.
+Kısmi sezondaki dört ek doğru eski dönemlerde tekrarlanmadı. Bu tarihsel
+bulgu olasılıkları araştırmaya değer kılıyor, fakat isabet hedefi için
+canlı modele geçişi desteklemiyor.
+
+`python -m scripts.evaluate_basketball_carryover --aba-replication --output aba-replication.json`
