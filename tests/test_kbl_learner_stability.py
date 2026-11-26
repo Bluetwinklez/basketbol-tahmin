@@ -2,6 +2,7 @@ import numpy as np
 import pandas as pd
 import pytest
 
+from scripts.evaluate_basketball_logit_blend import CANDIDATE, build
 from scripts.evaluate_kbl_learner_stability import build_target
 
 
@@ -37,3 +38,16 @@ def test_kbl_rejects_prior_season_label_with_target_date():
     rows.loc[rows["mac_id"].eq("2024-1"), "tarih_utc"] = pd.Timestamp("2025-12-01", tz="UTC")
     with pytest.raises(ValueError, match="must precede"):
         build_target(rows, "2025-26")
+
+
+def test_regularized_basketball_blend_fixes_target_probabilities_before_outcomes():
+    rows = fixtures()
+    spec, result = build(rows, "2025-26", "KBL")
+    target = rows["sezon"].eq("2025-26")
+    rows.loc[target, "y"] = 1 - rows.loc[target, "y"]
+    changed, again = build(rows, "2025-26", "KBL")
+    assert changed == spec
+    old = [(r["event_id"], r["p"]) for r in result if r["variant"] == CANDIDATE]
+    new = [(r["event_id"], r["p"]) for r in again if r["variant"] == CANDIDATE]
+    assert len(old) == len(new) == 52
+    assert old == new
