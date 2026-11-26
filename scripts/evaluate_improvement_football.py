@@ -33,12 +33,12 @@ def model(frame,league,cutoff,variant):
     return fit(frame,league,cutoff,variant)
 
 
-def season_predictions(frame,league,season):
+def season_predictions(frame,league,season,*,variants=VARIANTS):
     target=frame.loc[(frame.league==league)&(frame.season==season)&(frame.status=='final')]
     rows=[];skipped=[]
     for month,games in target.sort_values(['date','event_id']).groupby(target.date.str[:7]):
         cutoff=month+'-01'
-        try: models={v:model(frame,league,cutoff,v) for v in VARIANTS}
+        try: models={v:model(frame,league,cutoff,v) for v in variants}
         except ValueError as exc:
             skipped.append(dict(month=month,games=len(games),reason=str(exc)));continue
         for game in games.to_dict('records'):
