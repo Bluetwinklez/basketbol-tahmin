@@ -74,3 +74,24 @@ def test_italian_calendar_uses_ordered_first_leg_scores_and_received_date():
         dict(home_name='Konyaspor',away_name='Beşiktaş',home_goals=2,away_goals=4,date='2026-11-22'),
         dict(home_name='Erzurumspor',away_name='Göztepe',home_goals=0,away_goals=1,date='2026-11-22'),
     ]
+
+
+def test_spanish_calendar_keeps_shared_fixture_date_and_scopes_provenance():
+    from bbtahmin.football.licensed import licensed_page
+    from scripts.inspect_wikipedia_football import parse_spanish_primeira_liga
+
+    raw = """<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.es">CC</a>
+    <table><tr><th colspan="6">Jornada 10</th></tr>
+    <tr><th>Local</th><th>Resultado</th><th>Visitante</th><th>Estadio</th><th>Fecha</th><th>Hora</th></tr>
+    <tr><td>Moreirense</td><td>2 – 1</td><td>Estrela</td><td>G</td><td rowspan="2">31 de octubre</td><td>15:30</td></tr>
+    <tr><td>Porto</td><td>4 – 0</td><td>Estoril</td><td>D</td><td>20:30</td></tr>
+    <tr><td>A</td><td>–</td><td>B</td><td>G</td><td>1 de noviembre</td><td>15:30</td></tr>
+    </table>""".encode()
+    assert parse_spanish_primeira_liga(raw, 2026, 10) == [
+        dict(home_name="Moreirense", away_name="Estrela", home_goals=2, away_goals=1, date="2026-10-31"),
+        dict(home_name="Porto", away_name="Estoril", home_goals=4, away_goals=0, date="2026-10-31"),
+    ]
+    source = dict(league="PT1", season="2026-27", source_url="https://es.wikipedia.org/wiki/Primeira_Liga_2026-27")
+    assert licensed_page(source)
+    assert not licensed_page(dict(source, season="2025-26"))
+    assert not licensed_page(dict(source, league="ES1"))

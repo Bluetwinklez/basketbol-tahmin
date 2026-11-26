@@ -101,6 +101,56 @@ def parse_italian_super_lig(raw, season_year, rounds):
     return scores
 
 
+def parse_spanish_primeira_liga(raw, season_year, round_number):
+    """Read dated, played games from one identified Spanish calendar round."""
+    soup = BeautifulSoup(raw, "html.parser")
+    if not soup.find(["a", "link"], href=re.compile(r"^https://creativecommons\.org/licenses/by-sa/4\.0/")):
+        raise ValueError("Page-specific CC BY-SA license required")
+    headers = [
+        cell for cell in soup.find_all("th", colspan="6")
+        if cell.get_text(" ", strip=True) == f"Jornada {round_number}"
+    ]
+    if len(headers) != 1:
+        raise ValueError("Unique Primeira Liga calendar round required")
+    header, *games = headers[0].parent.find_next_siblings("tr")
+    if [c.get_text(" ", strip=True) for c in header.find_all("th", recursive=False)] != [
+        "Local", "Resultado", "Visitante", "Estadio", "Fecha", "Hora",
+    ]:
+        raise ValueError("Unexpected Primeira Liga calendar columns")
+    months = dict(zip(
+        "agosto septiembre octubre noviembre diciembre enero febrero marzo abril mayo junio julio".split(),
+        (8, 9, 10, 11, 12, 1, 2, 3, 4, 5, 6, 7),
+    ))
+    dates_remaining = 0
+    scores = []
+    for game in games:
+        cells = game.find_all("td", recursive=False)
+        if len(cells) < 4:
+            raise ValueError("Incomplete Primeira Liga fixture")
+        if dates_remaining == 0:
+            if len(cells) < 5:
+                raise ValueError("Explicit Primeira Liga calendar date required")
+            match = re.fullmatch(r"(\d{1,2}) de ([a-z]+)", cells[4].get_text(" ", strip=True))
+            if not match or match[2] not in months:
+                raise ValueError("Invalid Primeira Liga calendar date")
+            month = months[match[2]]
+            dated = pd.Timestamp(year=season_year + (month < 7), month=month, day=int(match[1])).strftime("%Y-%m-%d")
+            dates_remaining = int(cells[4].get("rowspan", 1))
+            if dates_remaining < 1:
+                raise ValueError("Invalid Primeira Liga calendar date span")
+        dates_remaining -= 1
+        score = re.fullmatch(r"(\d{1,2})\s*[–-]\s*(\d{1,2})", cells[1].get_text(" ", strip=True))
+        if score:
+            home, away = (cells[i].get_text(" ", strip=True) for i in (0, 2))
+            if not home or not away or home == away or max(map(int, score.groups())) > 30:
+                raise ValueError("Invalid Primeira Liga score or clubs")
+            scores.append(dict(home_name=home, away_name=away, home_goals=int(score[1]),
+                               away_goals=int(score[2]), date=dated))
+    if dates_remaining:
+        raise ValueError("Incomplete Primeira Liga calendar date span")
+    return scores
+
+
 def main():
     clock=pd.Timestamp.now(tz='UTC');year=clock.year if clock.month>=7 else clock.year-1
     season=f'{year}–{str(year+1)[-2:]}'

@@ -9,7 +9,11 @@ def licensed_page(row):
     if url.startswith("https://en.wikipedia.org/wiki/"):
         return True
     season = row.get("season", "")
-    if row.get("league") != "TR1" or len(season) != 7 or not season[:4].isdigit():
+    if len(season) != 7 or not season[:4].isdigit():
+        return False
+    if row.get("league") == "PT1":
+        return unquote(url) == f"https://es.wikipedia.org/wiki/Primeira_Liga_{season}"
+    if row.get("league") != "TR1":
         return False
     expected = f"https://it.wikipedia.org/wiki/Süper_Lig_{season[:4]}-{int(season[:4]) + 1}"
     return unquote(url) == expected
