@@ -786,6 +786,18 @@
       "checked_at_utc": "2026-11-24T18:09:28.368011+00:00",
       "status": "quarantined_date_conflict",
       "note": "Training date independently checked against licensed score; original forecast settlement still requires timing review."
+    },
+    "EN1_5a12260843bef919c27d0ac3": {
+      "league": "EN1",
+      "home": "brentford fc",
+      "away": "everton fc",
+      "original_date": "2026-11-21",
+      "observed_start_utc": "2026-11-23T20:00:00+00:00",
+      "source_url": "https://www.espn.com/soccer/game/_/gameId/401879237",
+      "official_result_url": "https://www.brentfordfc.com/en/matches/mens/results/premier-league",
+      "checked_at_utc": "2026-11-26T14:54:44.238671+00:00",
+      "status": "quarantined_date_conflict",
+      "note": "Training result verified at corrected date; original forecast settlement still requires timing review."
     }
   }
 }
