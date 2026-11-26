@@ -52,6 +52,8 @@ def build(frame,source,reviews,now,aliases=None):
         wiki=lookup.get((key(observation['home_name']),key(observation['away_name'])))
         if wiki is None:
             skipped.append(dict(event_id=original['event_id'],reason='No exact licensed club/score pair'));continue
+        if wiki.get('date') is not None and wiki['date'] != actual_date:
+            raise ValueError(f'Licensed/publisher date conflict: {original["event_id"]}')
         if [wiki['home_goals'],wiki['away_goals']]!=[observation['home_score'],observation['away_score']]:
             raise ValueError(f'Licensed/publisher score conflict: {original["event_id"]}')
         if not timestamp(observation['start_utc'])<timestamp(observation['captured_at'])<=now:

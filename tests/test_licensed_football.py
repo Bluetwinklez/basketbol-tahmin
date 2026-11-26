@@ -60,3 +60,17 @@ def test_conflicting_new_base_snapshot_retains_previous_bytes(tmp_path):
     path=tmp_path/'EN1_2026-27.json.gz';original=path.read_bytes()
     with pytest.raises(ValueError):save([dict(base(),status='final',home_goals=0,away_goals=0)],'EN1','2026-27',tmp_path)
     assert path.read_bytes()==original
+
+
+def test_italian_calendar_uses_ordered_first_leg_scores_and_received_date():
+    from scripts.inspect_wikipedia_football import parse_italian_super_lig
+
+    raw='''<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.it">CC</a>
+    <table><tr><td>andata (12ª)</td><td>12ª giornata</td><td>ritorno (29ª)</td></tr>
+    <tr><td rowspan="2">22 nov.</td><td>2-4</td><td>Konyaspor-Beşiktaş</td><td>1-0</td><td rowspan="2">-</td></tr>
+    <tr><td>0-1</td><td>Erzurumspor-Göztepe</td><td>3-2</td></tr></table>'''.encode()
+    scores=parse_italian_super_lig(raw,2026,(12,))
+    assert scores==[
+        dict(home_name='Konyaspor',away_name='Beşiktaş',home_goals=2,away_goals=4,date='2026-11-22'),
+        dict(home_name='Erzurumspor',away_name='Göztepe',home_goals=0,away_goals=1,date='2026-11-22'),
+    ]

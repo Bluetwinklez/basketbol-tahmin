@@ -1,5 +1,18 @@
 """CC BY-SA score overlays, independently checked against exact dated fixtures."""
+from urllib.parse import unquote
+
 from ..quality import timestamp
+
+
+def licensed_page(row):
+    url = row.get("source_url", "")
+    if url.startswith("https://en.wikipedia.org/wiki/"):
+        return True
+    season = row.get("season", "")
+    if row.get("league") != "TR1" or len(season) != 7 or not season[:4].isdigit():
+        return False
+    expected = f"https://it.wikipedia.org/wiki/Süper_Lig_{season[:4]}-{int(season[:4]) + 1}"
+    return unquote(url) == expected
 
 
 def merge(base,overlays):
@@ -13,7 +26,7 @@ def merge(base,overlays):
         if previous is not None and row['date']!=previous['date'] and not (row.get('date_correction_verified') is True and row.get('original_date')==previous['date']):
             raise ValueError('Explicit independently verified original-date correction required')
         if (row.get('license')!='CC-BY-SA-4.0' or row.get('source_kind')!='wikipedia_CC_BY_SA_independently_checked'
-                or not row.get('source_url','').startswith('https://en.wikipedia.org/wiki/')
+                or not licensed_page(row)
                 or not row.get('fixture_verification_url','').startswith('https://www.espn.com/soccer/game/')
                 or not row.get('attribution') or not row.get('source_sha256')):
             raise ValueError('Licensed overlay provenance missing')
