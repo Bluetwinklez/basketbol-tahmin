@@ -1,0 +1,125 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-11-26T14:36:28.688802+00:00",
+  "fixture": {
+    "event_id": "EN1_2fc1a60c346cbfc3e7ab9b78",
+    "league": "EN1",
+    "season": "2026-27",
+    "date": "2026-12-02",
+    "home": "chelsea fc",
+    "away": "crystal palace fc",
+    "home_name": "Chelsea FC",
+    "away_name": "Crystal Palace FC",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/en.1.json",
+    "captured_at_utc": "2026-11-26T14:36:25.943165+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null,
+    "original_date": null,
+    "date_correction_verified": null,
+    "license_url": null,
+    "source_sha256": null,
+    "fixture_verification_url": null,
+    "actual_start_utc": null,
+    "source_original_date": "2026-12-02",
+    "verified_start_utc": "2026-12-02T19:30:00+00:00",
+    "independent_fixture": {
+      "provider_event_id": "401879222",
+      "league": "EN1",
+      "season_year": 2026,
+      "start_utc": "2026-12-02T19:30:00+00:00",
+      "captured_at": "2026-11-25T17:33:48.903018+00:00",
+      "home_name": "Chelsea",
+      "away_name": "Crystal Palace",
+      "provider_home_id": "363",
+      "provider_away_id": "384",
+      "source_url": "https://www.espn.com/soccer/game/_/gameId/401879222",
+      "status": "scheduled",
+      "event_id": "EN1_2fc1a60c346cbfc3e7ab9b78",
+      "home": "chelsea fc",
+      "away": "crystal palace fc"
+    }
+  },
+  "prediction": {
+    "model": "football-opponent-v1",
+    "league": "EN1",
+    "home": "chelsea fc",
+    "away": "crystal palace fc",
+    "expected_home_goals": 2.146096669806104,
+    "expected_away_goals": 1.1852289988216018,
+    "probabilities": {
+      "home": 0.5930841735557217,
+      "draw": 0.2037101793484744,
+      "away": 0.20320564709580366
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      2,
+      1
+    ],
+    "over": {
+      "1.5": 0.8451737896161484,
+      "2.5": 0.6468257870397157,
+      "3.5": 0.4265718562717478
+    },
+    "both_teams_score": 0.613129792273739,
+    "total_goals_80": [
+      1,
+      6
+    ],
+    "training_cutoff_exclusive": "2026-11-26",
+    "training_games": 1120,
+    "prior_team_games": {
+      "chelsea fc": 112,
+      "crystal palace fc": 112
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "settings": {
+      "half_life_days": 180.0,
+      "shrinkage_games": 8.0,
+      "window_days": 1095
+    },
+    "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+    "low_score_rho": 0.0,
+    "research_candidate": false
+  },
+  "archive_sha256": "b4c1660088a9622a7e67538c5115a868d7213321fc19f466a63caaa766501979",
+  "source_code_sha256": "b9734af7d30f803ae33c9f0e4a926a310551d475c503c375314767bf7fc268b9",
+  "requested_model_variant": "opponent",
+  "history_health": {
+    "spec": "football-history-health-v1",
+    "checked_at_utc": "2026-11-26T14:36:27.106176+00:00",
+    "information_cutoff_exclusive": "2026-11-26",
+    "teams": {
+      "chelsea fc": {
+        "prior_finals": 619,
+        "active_season_finals": 11,
+        "last_final_date": "2026-11-21",
+        "days_since_last_final": 5,
+        "unresolved_past_fixture_ids": []
+      },
+      "crystal palace fc": {
+        "prior_finals": 239,
+        "active_season_finals": 11,
+        "last_final_date": "2026-11-21",
+        "days_since_last_final": 5,
+        "unresolved_past_fixture_ids": []
+      }
+    },
+    "diagnostic_gate_passed": true,
+    "blocking_issues": [],
+    "max_history_age_days": 30,
+    "calendar_completeness_verified": false,
+    "note": "Diagnostic policy, not a validated success threshold. Unresolved fixtures may be postponed or missing results. Fresh source captures do not make old histories current."
+  },
+  "selection_policy": "Current-history diagnostic gate plus existing model issues; research only, no validated recommendation.",
+  "payload_sha256": "3120227ad9c25b82033aa0b3f88556d032fed715d6305f3ba0c7c262da097e4c"
+}

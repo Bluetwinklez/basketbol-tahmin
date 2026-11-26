@@ -1,0 +1,125 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-11-26T14:36:28.713654+00:00",
+  "fixture": {
+    "event_id": "EN1_50e624fca7f379044427797e",
+    "league": "EN1",
+    "season": "2026-27",
+    "date": "2026-12-02",
+    "home": "hull city afc",
+    "away": "nottingham forest fc",
+    "home_name": "Hull City AFC",
+    "away_name": "Nottingham Forest FC",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/en.1.json",
+    "captured_at_utc": "2026-11-26T14:36:25.943165+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null,
+    "original_date": null,
+    "date_correction_verified": null,
+    "license_url": null,
+    "source_sha256": null,
+    "fixture_verification_url": null,
+    "actual_start_utc": null,
+    "source_original_date": "2026-12-02",
+    "verified_start_utc": "2026-12-02T19:30:00+00:00",
+    "independent_fixture": {
+      "provider_event_id": "401879220",
+      "league": "EN1",
+      "season_year": 2026,
+      "start_utc": "2026-12-02T19:30:00+00:00",
+      "captured_at": "2026-11-25T17:33:48.903018+00:00",
+      "home_name": "Hull City",
+      "away_name": "Nottingham Forest",
+      "provider_home_id": "306",
+      "provider_away_id": "393",
+      "source_url": "https://www.espn.com/soccer/game/_/gameId/401879220",
+      "status": "scheduled",
+      "event_id": "EN1_50e624fca7f379044427797e",
+      "home": "hull city afc",
+      "away": "nottingham forest fc"
+    }
+  },
+  "prediction": {
+    "model": "football-opponent-v1",
+    "league": "EN1",
+    "home": "hull city afc",
+    "away": "nottingham forest fc",
+    "expected_home_goals": 1.3300366272125108,
+    "expected_away_goals": 0.9432133251633394,
+    "probabilities": {
+      "home": 0.45597186760822067,
+      "draw": 0.2787918194150627,
+      "away": 0.26523631297671657
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      1,
+      0
+    ],
+    "over": {
+      "1.5": 0.6629306528141553,
+      "2.5": 0.3968554049738544,
+      "3.5": 0.19523689014673556
+    },
+    "both_teams_score": 0.44913475536343433,
+    "total_goals_80": [
+      0,
+      4
+    ],
+    "training_cutoff_exclusive": "2026-11-26",
+    "training_games": 1120,
+    "prior_team_games": {
+      "hull city afc": 11,
+      "nottingham forest fc": 112
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "settings": {
+      "half_life_days": 180.0,
+      "shrinkage_games": 8.0,
+      "window_days": 1095
+    },
+    "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+    "low_score_rho": 0.0,
+    "research_candidate": false
+  },
+  "archive_sha256": "b4c1660088a9622a7e67538c5115a868d7213321fc19f466a63caaa766501979",
+  "source_code_sha256": "b9734af7d30f803ae33c9f0e4a926a310551d475c503c375314767bf7fc268b9",
+  "requested_model_variant": "opponent",
+  "history_health": {
+    "spec": "football-history-health-v1",
+    "checked_at_utc": "2026-11-26T14:36:27.106176+00:00",
+    "information_cutoff_exclusive": "2026-11-26",
+    "teams": {
+      "hull city afc": {
+        "prior_finals": 11,
+        "active_season_finals": 11,
+        "last_final_date": "2026-11-22",
+        "days_since_last_final": 4,
+        "unresolved_past_fixture_ids": []
+      },
+      "nottingham forest fc": {
+        "prior_finals": 163,
+        "active_season_finals": 11,
+        "last_final_date": "2026-11-21",
+        "days_since_last_final": 5,
+        "unresolved_past_fixture_ids": []
+      }
+    },
+    "diagnostic_gate_passed": true,
+    "blocking_issues": [],
+    "max_history_age_days": 30,
+    "calendar_completeness_verified": false,
+    "note": "Diagnostic policy, not a validated success threshold. Unresolved fixtures may be postponed or missing results. Fresh source captures do not make old histories current."
+  },
+  "selection_policy": "Current-history diagnostic gate plus existing model issues; research only, no validated recommendation.",
+  "payload_sha256": "2c79b8e321af176d7bea939cc7721c5aa6586e92351a6d443c01204dad08a06d"
+}

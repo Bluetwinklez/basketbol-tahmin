@@ -1,0 +1,125 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-11-26T14:36:28.725720+00:00",
+  "fixture": {
+    "event_id": "EN1_588801be2195100ae7dc73a4",
+    "league": "EN1",
+    "season": "2026-27",
+    "date": "2026-12-02",
+    "home": "manchester city fc",
+    "away": "leeds united fc",
+    "home_name": "Manchester City FC",
+    "away_name": "Leeds United FC",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/en.1.json",
+    "captured_at_utc": "2026-11-26T14:36:25.943165+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null,
+    "original_date": null,
+    "date_correction_verified": null,
+    "license_url": null,
+    "source_sha256": null,
+    "fixture_verification_url": null,
+    "actual_start_utc": null,
+    "source_original_date": "2026-12-02",
+    "verified_start_utc": "2026-12-02T19:30:00+00:00",
+    "independent_fixture": {
+      "provider_event_id": "401879218",
+      "league": "EN1",
+      "season_year": 2026,
+      "start_utc": "2026-12-02T19:30:00+00:00",
+      "captured_at": "2026-11-25T17:33:48.903018+00:00",
+      "home_name": "Manchester City",
+      "away_name": "Leeds United",
+      "provider_home_id": "382",
+      "provider_away_id": "357",
+      "source_url": "https://www.espn.com/soccer/game/_/gameId/401879218",
+      "status": "scheduled",
+      "event_id": "EN1_588801be2195100ae7dc73a4",
+      "home": "manchester city fc",
+      "away": "leeds united fc"
+    }
+  },
+  "prediction": {
+    "model": "football-opponent-v1",
+    "league": "EN1",
+    "home": "manchester city fc",
+    "away": "leeds united fc",
+    "expected_home_goals": 1.7240225022260416,
+    "expected_away_goals": 0.9974352391051268,
+    "probabilities": {
+      "home": 0.5443143624658963,
+      "draw": 0.23788120996911077,
+      "away": 0.2178044275649929
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      1,
+      0
+    ],
+    "over": {
+      "1.5": 0.7552069902896094,
+      "2.5": 0.5116171814785319,
+      "3.5": 0.29064405784577013
+    },
+    "both_teams_score": 0.5186073203815114,
+    "total_goals_80": [
+      1,
+      5
+    ],
+    "training_cutoff_exclusive": "2026-11-26",
+    "training_games": 1120,
+    "prior_team_games": {
+      "manchester city fc": 112,
+      "leeds united fc": 49
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "settings": {
+      "half_life_days": 180.0,
+      "shrinkage_games": 8.0,
+      "window_days": 1095
+    },
+    "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+    "low_score_rho": 0.0,
+    "research_candidate": false
+  },
+  "archive_sha256": "b4c1660088a9622a7e67538c5115a868d7213321fc19f466a63caaa766501979",
+  "source_code_sha256": "b9734af7d30f803ae33c9f0e4a926a310551d475c503c375314767bf7fc268b9",
+  "requested_model_variant": "opponent",
+  "history_health": {
+    "spec": "football-history-health-v1",
+    "checked_at_utc": "2026-11-26T14:36:27.106176+00:00",
+    "information_cutoff_exclusive": "2026-11-26",
+    "teams": {
+      "manchester city fc": {
+        "prior_finals": 239,
+        "active_season_finals": 11,
+        "last_final_date": "2026-11-21",
+        "days_since_last_final": 5,
+        "unresolved_past_fixture_ids": []
+      },
+      "leeds united fc": {
+        "prior_finals": 163,
+        "active_season_finals": 11,
+        "last_final_date": "2026-11-21",
+        "days_since_last_final": 5,
+        "unresolved_past_fixture_ids": []
+      }
+    },
+    "diagnostic_gate_passed": true,
+    "blocking_issues": [],
+    "max_history_age_days": 30,
+    "calendar_completeness_verified": false,
+    "note": "Diagnostic policy, not a validated success threshold. Unresolved fixtures may be postponed or missing results. Fresh source captures do not make old histories current."
+  },
+  "selection_policy": "Current-history diagnostic gate plus existing model issues; research only, no validated recommendation.",
+  "payload_sha256": "854c68f26b73f8d6a20707fbf70777cb50a3eb5813cd3ca80cff7ee90a8ac7f3"
+}
