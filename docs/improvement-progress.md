@@ -2,7 +2,13 @@
 
 User authorization: implement the detailed 13-step improvement plan in order, without questions; preserve original predictions, complete checks and reviewable GitHub delivery. On 25 October user also explicitly requested waiting for usage capacity and automatic continuation when it returns. A thread heartbeat named `Tahmin iyileştirmelerine limit açılınca devam` is active hourly (id `tahmin-iyile-tirmelerine-limit-a-l-nca-devam`). Do not create duplicates. Check account limits before resumed work. Stop heartbeat when the authorized work is complete.
 
-## Current checkout
+## Published status
+
+The [current paired report](../data/improvement_shadow/latest.json) shows the active experiment, source verification and settled sample. The [live scorecard](kanit/live_scorecard/scorecard.md) measures the published original forecasts separately. Use the [changelog](CHANGELOG.md) for later releases and the [sports-data workflow](../.github/workflows/sports-data.yml) for the canonical refresh.
+
+The 26 November 2026 scheduled run verified the original forecast hashes and published six additional pairs in the same active experiment. At that cutoff, 131 distinct paired fixtures were pending. The Portuguese calendar and result repairs restored six previously skipped upcoming forecasts, and the workload-decay replay remained research-only. [Scheduled run](https://github.com/Bluetwinklez/basketbol-tahmin/actions/runs/45865584564) · [Workload replay](kanit/improvement/basketball-rest-decay.md)
+
+## Initial checkout record
 
 `work/basketbol-tahmin`, branch `feat/measured-improvement-cycle`, based on main `7d4e3f29b9ff4f310d0cf0dce87706ff470b5fd6`. Five existing dirty BSL/Ukraine archive/report files came from our earlier audit refresh; do not discard. Additional nine football active-season snapshots and collection report changed in the current CC0 refresh. No original forecast has been intentionally changed.
 

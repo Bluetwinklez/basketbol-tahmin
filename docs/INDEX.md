@@ -2,6 +2,10 @@
 
 Guide to the documents under `docs/` and the `docs/kanit/` evidence directory. For project overview, installation and common commands, see [README.md](../README.md).
 
+- [Current scorecard](kanit/live_scorecard/scorecard.md) — Saved forecasts with measured outcomes by sport and league.
+- [Latest paired experiment report](../data/improvement_shadow/latest.json) — Active experiment, source verification, and pending and settled sample sizes.
+- [Published basketball ledger](../data/basketball_ledger/forecasts) and [published football ledger](../data/football_ledger/forecasts) — Original pregame forecast records.
+
 ## Operations and daily workflow
 
 - [daily-workflow.md](daily-workflow.md) — Daily basketball forecast refresh (`gunluk --guncelle`), immutable ledger and settlement rules, and historical backfill commands.
@@ -21,6 +25,7 @@ Guide to the documents under `docs/` and the `docs/kanit/` evidence directory. F
 - [regional-expansion.md](regional-expansion.md) — 23 October 2026 expansion adding the 3,023-game senior ABA League archive/model and connecting `ABA`, `ECW` and `FEC` to the daily workflow.
 - [domestic-expansion.md](domestic-expansion.md) — Separate senior men's archives, sources and chronological evaluations for Turkish BSL (2,523 games) and Ukrainian SuperLeague (997 games), noting that Swedish SBL remains disabled.
 - [argentina.md](argentina.md) — Separate senior men's Argentina Liga Nacional (`ARG_LNB`) archive, sources, prior-season model evaluation, promoted-team diagnostics and immutable-ledger checks.
+- Recent basketball replays: [workload decay](kanit/improvement/basketball-rest-decay.md), [home-court advantage](kanit/improvement/basketball-home-advantage.md), [offseason Elo carryover](kanit/improvement/basketball-carryover.md), and [logit blend](kanit/improvement/basketball-logit-blend.md).
 
 ## Football models and coverage
 
@@ -34,6 +39,7 @@ Guide to the documents under `docs/` and the `docs/kanit/` evidence directory. F
 - [argentina-source-gap-reporting.md](argentina-source-gap-reporting.md) — Structured missing/ineligible season CSV reporting in the Argentina football adapter, four verified 26 October CC BY-SA 4.0 finals (`AR1` 447→449, `AR2` 628→630) and a four-match same-cohort retrospective check.
 - [turkish-history-coverage.md](turkish-history-coverage.md) — Audit of available Turkish Süper Lig last-50 league histories (noting missing seasons, cups and aliases) and addition of 1,391 partial historical CC0 finals across MLS, Japan J1 and China Super League.
 - [football-double-chance.md](football-double-chance.md) — Display-only football draw and double-chance (`1X`/`X2`/`12`) views in the local board, Markdown table and CSV export (`prob_1x`, `prob_x2`, `prob_12`) without altering models or frozen forecasts.
+- [Football draw research](kanit/improvement/football-draw-experiment.md) — Chronological comparison of alternative draw forecasts.
 
 ## Data sources, audits and roadmap
 
@@ -50,7 +56,7 @@ Guide to the documents under `docs/` and the `docs/kanit/` evidence directory. F
 ## Evaluation, evidence and historical records
 
 - [sonuclar.md](sonuclar.md) — **[Historical / Superseded]** Early Turkish-language backtest snapshot (2026-10-22, 26,200 games) retained as a historical record only; includes legacy absence-enhanced results that must not be presented as current pregame performance.
-- [CHANGELOG.md](CHANGELOG.md) — Verbatim archive of release-history, expansion and detailed operational sections moved out of the root `README.md`.
+- [CHANGELOG.md](CHANGELOG.md) — Recent changes and dated historical README sections.
 - [requested-matches.json](requested-matches.json) — Machine-readable scope ledger (`requested-match-scope-v1`, checked 2026-10-25) tracking 39 requested football and basketball screenshot pairings, identity verification status and unverified-date limitations.
 - `kalibrasyon_*.png` — Calibration curve plots stored directly under `docs/` for historical evaluation snapshots.
 - `kanit/` — Evidence directory storing reproducible evaluation summaries, dataset audits, collection manifests, test XMLs, calibration reports and frozen prospective records, including:

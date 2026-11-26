@@ -1,4 +1,4 @@
-# Local basketball application
+# Local basketball and football application
 
 The browser interface uses the same models, diagnostic gates and immutable forecast ledger as the command line. It adds a match board, search and league filters, forecast intervals, a results/error table and JSON/CSV/Markdown downloads. It does not change model selection or establish an accuracy improvement.
 
@@ -13,6 +13,8 @@ python -m bbtahmin app
 ```
 
 The command opens `http://127.0.0.1:8765` in your browser. There are no additional runtime web dependencies and no frontend build step. The HTML, CSS and JavaScript are included in the Python installation package.
+
+The home page shows basketball. Open `/football` for 1/X/2, goal markets, result checks and exports. Open `/performance` for the [scorecard](live-scorecard.md) by sport and league. The performance view reads the repository's saved report.
 
 ```bash
 # Print the address without opening a browser.
@@ -52,7 +54,7 @@ npm run test:ui
 
 The Python suite covers local HTTP routing, exports, request validation, concurrent-job rejection and failure preservation. DOM tests cover search/filter behavior, input escaping, pending versus observed accuracy, separate error columns, request errors, and keeping details expanded across polling. These are software/DOM tests, not rendered-browser visual verification. Both Python and UI suites run in GitHub Actions.
 
-The integration check exercised the actual local server with saved-source and refreshed EuroLeague runs. A remote test browser could not reach the isolated loopback server, so rendered desktop/mobile visual verification remains incomplete. The responsive styles are included, but a visual pass on the user's local browser is still needed. [Recorded validation](kanit/local_app/validation.json).
+The initial EuroLeague integration check exercised the local server with saved and refreshed sources. GitHub Actions also runs Playwright against the local server in Chromium and uploads screenshots. See the [test workflow](../.github/workflows/tests.yml) and the [original integration record](kanit/local_app/validation.json).
 
 
 ## Added competitions
