@@ -149,6 +149,8 @@ def evaluate(directory,results,now=None,active=False):
         if not result or result.get('status')!='final': pending+=1;continue
         try:
             if any(result[k]!=f[k] for k in ('league','home','away')): raise ValueError('Final team identity mismatch')
+            if f.get('provider_event_id') and result.get('provider_event_id') != f['provider_event_id']:
+                raise ValueError('Final publisher identity mismatch')
             actual=timestamp(result['start_utc']);captured=timestamp(result['captured_at'])
             if not timestamp(record['recorded_at_utc'])<actual<captured<=clock:
                 raise ValueError('Invalid pregame/final evidence timing')

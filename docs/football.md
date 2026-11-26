@@ -349,3 +349,11 @@ maç öncesi tahmin kaydı oluşturmadı.
 - TFF 8. hafta: https://www.tff.org/Default.aspx?hafta=8&pageID=198
 - TFF 12. hafta: https://www.tff.org/Default.aspx?hafta=12&pageID=198
 - Lisanslı takvim: https://it.wikipedia.org/wiki/S%C3%BCper_Lig_2026-2027
+
+## Retaining observed football finals
+
+The independent fixture check keeps its rolling schedule report in [`latest.json`](../data/football_fixture_checks/latest.json). It also retains validated publisher observations for paired settlement in [`settlement_finals.json`](../data/football_fixture_checks/settlement_finals.json). Older finals can still settle their original prediction pairs after they leave the rolling window. This file supplies settlement evidence only. It does not add training rows.
+
+The initial archive was reconstructed from 41 first-parent versions of the checked-in fixture report through `341fa69`. It contains 647 distinct publisher fixture identities. In a settlement-only reconstruction at the 26 November 2026 report cutoff, the archive restored scores for 220 distinct matches across older experiments. The diagnostic deduplicates by league and publisher event ID. Each experiment still reports its own results.
+
+The evidence retains publisher and ordered team identities, score, kickoff, first capture time and source URL. A conflicting score, kickoff or status published after a final keeps the match pending until reviewed. Explicitly interrupted or postponed fixtures remain quarantined, and the grader checks the frozen publisher identity and pregame timestamp before scoring.

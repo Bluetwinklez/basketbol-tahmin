@@ -65,6 +65,46 @@ def test_publisher_id_keeps_one_pair_when_archive_date_hash_changes(tmp_path):
     assert len(list((directory/'forecasts').glob('*.json')))==1
     result=dict(changed,status='final',home_score=90,away_score=80,captured_at='2026-10-27T15:00Z')
     assert evaluate(directory,[result],now='2026-10-27T16:00Z')['settled_games']==1
+    wrong=dict(result,event_id=f['event_id'],provider_event_id='124')
+    rejected=evaluate(directory,[wrong],now='2026-10-27T16:00Z')
+    assert rejected['settled_games']==0
+    assert rejected['rejected'][0]['reason']=='Final publisher identity mismatch'
+
+
+def test_football_final_survives_rolling_confirmation_and_disputes_stay_pending(tmp_path):
+    from bbtahmin.football.data import write_json
+    from bbtahmin.football.fixture_confirmation import (
+        read_settlement_evidence, retain_settlement_facts, settlement_finals,
+    )
+
+    path=tmp_path/'settlement_finals.json'
+    fact=dict(fixture(),league='EN1',provider_event_id='123',status='final',
+              source_url='https://www.espn.com/soccer/game/_/gameId/123',
+              home_score=2,away_score=1,captured_at='2026-10-27T15:00Z')
+    def report(*facts,checked_at='2026-11-07T10:00Z'):
+        return dict(spec='football-fixture-confirmation-v1',checked_at_utc=checked_at,
+                    reviews=[dict(status='confirmed',event_id=f['event_id'],observation=f) for f in facts])
+
+    book=retain_settlement_facts(read_settlement_evidence(path),report(fact))
+    write_json(path,book)
+    original=path.read_bytes()
+    again=retain_settlement_facts(read_settlement_evidence(path),report())
+    assert settlement_finals(again,now='2026-11-01T00:00Z')==[fact]
+    assert not settlement_finals(again,now='2026-10-27T14:59Z')
+    assert not settlement_finals(again,held_ids={'one'},now='2026-11-01T00:00Z')
+    assert not settlement_finals(again,held_provider_keys={'EN1:123'},now='2026-11-01T00:00Z')
+    alias=dict(fact,event_id='new-hash',captured_at='2026-10-28T15:00Z')
+    retain_settlement_facts(again,report(alias))
+    assert settlement_finals(again,now='2026-11-01T00:00Z')==[fact]
+    rescheduled=dict(alias,status='scheduled',start_utc='2026-11-09T19:00Z',captured_at='2026-11-02T00:00Z')
+    retain_settlement_facts(again,report(rescheduled))
+    assert settlement_finals(again,now='2026-11-01T00:00Z')==[fact]
+    assert not settlement_finals(again,now='2026-11-02T00:00Z')
+    reused_archive_id=dict(fact,provider_event_id='124',
+                           source_url='https://www.espn.com/soccer/game/_/gameId/124')
+    retain_settlement_facts(again,report(reused_archive_id))
+    assert not settlement_finals(again,now='2026-11-02T00:00Z')
+    assert path.read_bytes()==original
 
 
 def test_identity_ignores_interpreter_patch_version(tmp_path,monkeypatch):
