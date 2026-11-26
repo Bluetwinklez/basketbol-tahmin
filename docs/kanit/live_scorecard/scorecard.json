@@ -1,6 +1,6 @@
 {
   "spec": "live-scorecard-v1",
-  "data_cutoff_utc": "2026-11-26T15:17:07.793327+00:00",
+  "data_cutoff_utc": "2026-11-26T15:29:04.742831+00:00",
   "definitions": {
     "cohort": "One game per league and event ID, using the earliest checksum-verified frozen forecast. A timezone-aware start must be present and strictly later than the freeze. Basketball finals are joined by forecast checksum and fixture identity across saved settlement checks, including checks that reference earlier Argentina and prospective forecast records. Football uses publisher finals from the saved daily report joined to immutable forecasts by fixture identity and freeze time. Community publisher finals lack official verification. Football finals with date-only kickoff evidence and matches flagged for fixture review are excluded.",
     "cutoff": "Latest saved settlement check timestamp used, with each sport's cutoff reported separately. Basketball includes the per-record check timestamps, which can follow the report's start time.",
@@ -15,7 +15,7 @@
   },
   "sports": {
     "basketball": {
-      "cutoff_utc": "2026-11-26T15:16:02.704591+00:00",
+      "cutoff_utc": "2026-11-26T15:28:11.653202+00:00",
       "class_order": [
         "home",
         "away"
@@ -1016,7 +1016,7 @@
       }
     },
     "football": {
-      "cutoff_utc": "2026-11-26T15:17:07.793327+00:00",
+      "cutoff_utc": "2026-11-26T15:29:04.742831+00:00",
       "class_order": [
         "home",
         "draw",
@@ -2577,7 +2577,7 @@
           }
         }
       },
-      "publisher_finals_excluded_no_verified_kickoff": 126,
+      "publisher_finals_excluded_no_verified_kickoff": 128,
       "kickoff_exclusions_by_league": {
         "DE1": 15,
         "EN1": 16,
@@ -2586,7 +2586,7 @@
         "FR1": 11,
         "IT1": 27,
         "NL1": 15,
-        "PT1": 11,
+        "PT1": 13,
         "TR1": 5
       }
     }

@@ -1,0 +1,126 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-11-26T15:25:05.332635+00:00",
+  "fixture": {
+    "event_id": "PT1_67dd0c6988f1d37af5f447fc",
+    "league": "PT1",
+    "season": "2026-27",
+    "date": "2026-11-28",
+    "home": "moreirense fc",
+    "away": "cd santa clara",
+    "home_name": "Moreirense FC",
+    "away_name": "CD Santa Clara",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/pt.1.json",
+    "captured_at_utc": "2026-11-26T15:25:01.508762+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null,
+    "original_date": null,
+    "date_correction_verified": null,
+    "license_url": null,
+    "source_sha256": null,
+    "fixture_verification_url": null,
+    "actual_start_utc": null,
+    "official_result_url": null,
+    "source_original_date": "2026-11-28",
+    "verified_start_utc": "2026-11-28T15:30:00+00:00",
+    "independent_fixture": {
+      "provider_event_id": "401885388",
+      "league": "PT1",
+      "season_year": 2026,
+      "start_utc": "2026-11-28T15:30:00+00:00",
+      "captured_at": "2026-11-26T15:16:08.016567+00:00",
+      "home_name": "Moreirense",
+      "away_name": "Santa Clara",
+      "provider_home_id": "3696",
+      "provider_away_id": "12215",
+      "source_url": "https://www.espn.com/soccer/game/_/gameId/401885388",
+      "status": "scheduled",
+      "event_id": "PT1_67dd0c6988f1d37af5f447fc",
+      "home": "moreirense fc",
+      "away": "cd santa clara"
+    }
+  },
+  "prediction": {
+    "model": "football-opponent-v1",
+    "league": "PT1",
+    "home": "moreirense fc",
+    "away": "cd santa clara",
+    "expected_home_goals": 1.014598209079864,
+    "expected_away_goals": 1.2317315682907102,
+    "probabilities": {
+      "home": 0.30319369094939286,
+      "draw": 0.2855003086640273,
+      "away": 0.4113060003865797
+    },
+    "predicted_outcome": "away",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.6565812456995098,
+      "2.5": 0.3896813489323112,
+      "3.5": 0.1898329537038813
+    },
+    "both_teams_score": 0.45145181378410293,
+    "total_goals_80": [
+      0,
+      4
+    ],
+    "training_cutoff_exclusive": "2026-11-26",
+    "training_games": 917,
+    "prior_team_games": {
+      "moreirense fc": 102,
+      "cd santa clara": 79
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "settings": {
+      "half_life_days": 180.0,
+      "shrinkage_games": 8.0,
+      "window_days": 1095
+    },
+    "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+    "low_score_rho": 0.0,
+    "research_candidate": false
+  },
+  "archive_sha256": "84fdd7f77a9a3ce08b91dbe91388e00b3d72d5b28020e0739dde18c36a725bc9",
+  "source_code_sha256": "87f8a1a9303ec778ecb18ac0de5f1e02ca1184b48bc8614bea90a20275850bed",
+  "requested_model_variant": "opponent",
+  "history_health": {
+    "spec": "football-history-health-v1",
+    "checked_at_utc": "2026-11-26T15:25:03.529528+00:00",
+    "information_cutoff_exclusive": "2026-11-26",
+    "teams": {
+      "moreirense fc": {
+        "prior_finals": 249,
+        "active_season_finals": 11,
+        "last_final_date": "2026-11-07",
+        "days_since_last_final": 19,
+        "unresolved_past_fixture_ids": []
+      },
+      "cd santa clara": {
+        "prior_finals": 249,
+        "active_season_finals": 11,
+        "last_final_date": "2026-11-08",
+        "days_since_last_final": 18,
+        "unresolved_past_fixture_ids": []
+      }
+    },
+    "diagnostic_gate_passed": true,
+    "blocking_issues": [],
+    "max_history_age_days": 30,
+    "calendar_completeness_verified": false,
+    "note": "Diagnostic policy, not a validated success threshold. Unresolved fixtures may be postponed or missing results. Fresh source captures do not make old histories current."
+  },
+  "selection_policy": "Current-history diagnostic gate plus existing model issues; research only, no validated recommendation.",
+  "payload_sha256": "c0ac2700092ede4fc578d783c2527a64778ca76115de6d0227fa27ab04f824c1"
+}

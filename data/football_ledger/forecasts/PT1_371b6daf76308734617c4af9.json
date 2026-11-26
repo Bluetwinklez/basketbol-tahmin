@@ -1,0 +1,126 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-11-26T15:25:05.297308+00:00",
+  "fixture": {
+    "event_id": "PT1_371b6daf76308734617c4af9",
+    "league": "PT1",
+    "season": "2026-27",
+    "date": "2026-11-27",
+    "home": "cs maritimo",
+    "away": "cd nacional",
+    "home_name": "CS Marítimo",
+    "away_name": "CD Nacional",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/pt.1.json",
+    "captured_at_utc": "2026-11-26T15:25:01.508762+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null,
+    "original_date": null,
+    "date_correction_verified": null,
+    "license_url": null,
+    "source_sha256": null,
+    "fixture_verification_url": null,
+    "actual_start_utc": null,
+    "official_result_url": null,
+    "source_original_date": "2026-11-27",
+    "verified_start_utc": "2026-11-27T20:15:00+00:00",
+    "independent_fixture": {
+      "provider_event_id": "401885389",
+      "league": "PT1",
+      "season_year": 2026,
+      "start_utc": "2026-11-27T20:15:00+00:00",
+      "captured_at": "2026-11-26T15:16:07.793031+00:00",
+      "home_name": "Maritimo",
+      "away_name": "C.D. Nacional",
+      "provider_home_id": "552",
+      "provider_away_id": "3472",
+      "source_url": "https://www.espn.com/soccer/game/_/gameId/401885389",
+      "status": "scheduled",
+      "event_id": "PT1_371b6daf76308734617c4af9",
+      "home": "cs maritimo",
+      "away": "cd nacional"
+    }
+  },
+  "prediction": {
+    "model": "football-opponent-v1",
+    "league": "PT1",
+    "home": "cs maritimo",
+    "away": "cd nacional",
+    "expected_home_goals": 1.3037899940606703,
+    "expected_away_goals": 1.3598630156046045,
+    "probabilities": {
+      "home": 0.35695278082057696,
+      "draw": 0.2601006621866988,
+      "away": 0.38294655699272406
+    },
+    "predicted_outcome": "away",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.744668421319113,
+      "2.5": 0.4974302634725506,
+      "3.5": 0.2779113757218525
+    },
+    "both_teams_score": 0.5414963744574951,
+    "total_goals_80": [
+      1,
+      5
+    ],
+    "training_cutoff_exclusive": "2026-11-26",
+    "training_games": 917,
+    "prior_team_games": {
+      "cs maritimo": 10,
+      "cd nacional": 79
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "settings": {
+      "half_life_days": 180.0,
+      "shrinkage_games": 8.0,
+      "window_days": 1095
+    },
+    "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+    "low_score_rho": 0.0,
+    "research_candidate": false
+  },
+  "archive_sha256": "84fdd7f77a9a3ce08b91dbe91388e00b3d72d5b28020e0739dde18c36a725bc9",
+  "source_code_sha256": "87f8a1a9303ec778ecb18ac0de5f1e02ca1184b48bc8614bea90a20275850bed",
+  "requested_model_variant": "opponent",
+  "history_health": {
+    "spec": "football-history-health-v1",
+    "checked_at_utc": "2026-11-26T15:25:03.529528+00:00",
+    "information_cutoff_exclusive": "2026-11-26",
+    "teams": {
+      "cs maritimo": {
+        "prior_finals": 180,
+        "active_season_finals": 10,
+        "last_final_date": "2026-11-01",
+        "days_since_last_final": 25,
+        "unresolved_past_fixture_ids": []
+      },
+      "cd nacional": {
+        "prior_finals": 147,
+        "active_season_finals": 11,
+        "last_final_date": "2026-11-08",
+        "days_since_last_final": 18,
+        "unresolved_past_fixture_ids": []
+      }
+    },
+    "diagnostic_gate_passed": true,
+    "blocking_issues": [],
+    "max_history_age_days": 30,
+    "calendar_completeness_verified": false,
+    "note": "Diagnostic policy, not a validated success threshold. Unresolved fixtures may be postponed or missing results. Fresh source captures do not make old histories current."
+  },
+  "selection_policy": "Current-history diagnostic gate plus existing model issues; research only, no validated recommendation.",
+  "payload_sha256": "e7f6d0cf8d46190b90429fd2263b44327b2474d8d49100fcd522a9e916acb37b"
+}

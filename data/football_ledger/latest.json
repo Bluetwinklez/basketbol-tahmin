@@ -1,7 +1,7 @@
 {
   "spec": "football-daily-v1",
-  "checked_at_utc": "2026-11-26T15:17:07.793327+00:00",
-  "collection_checked_at_utc": "2026-11-26T15:12:23.502669+00:00",
+  "checked_at_utc": "2026-11-26T15:29:04.742831+00:00",
+  "collection_checked_at_utc": "2026-11-26T15:25:01.508762+00:00",
   "source_errors": [
     {
       "league": "DE2",
@@ -41031,6 +41031,103 @@
     },
     {
       "fixture": {
+        "event_id": "PT1_16ff5031c2fa00975ab8144b",
+        "league": "PT1",
+        "season": "2026-27",
+        "date": "2026-11-28",
+        "home": "vitoria guimaraes",
+        "away": "cf estrela da amadora",
+        "home_name": "Vitória Guimarães",
+        "away_name": "CF Estrela da Amadora",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/pt.1.json",
+        "captured_at_utc": "2026-11-26T15:25:01.508762+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null,
+        "original_date": null,
+        "date_correction_verified": null,
+        "license_url": null,
+        "source_sha256": null,
+        "fixture_verification_url": null,
+        "actual_start_utc": null,
+        "official_result_url": null,
+        "source_original_date": "2026-11-28",
+        "verified_start_utc": "2026-11-28T20:30:00+00:00",
+        "independent_fixture": {
+          "provider_event_id": "401885385",
+          "league": "PT1",
+          "season_year": 2026,
+          "start_utc": "2026-11-28T20:30:00+00:00",
+          "captured_at": "2026-11-26T15:16:08.016567+00:00",
+          "home_name": "Vitória de Guimaraes",
+          "away_name": "Estrela",
+          "provider_home_id": "5309",
+          "provider_away_id": "21610",
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401885385",
+          "status": "scheduled",
+          "event_id": "PT1_16ff5031c2fa00975ab8144b",
+          "home": "vitoria guimaraes",
+          "away": "cf estrela da amadora"
+        }
+      },
+      "prediction": {
+        "model": "football-opponent-v1",
+        "league": "PT1",
+        "home": "vitoria guimaraes",
+        "away": "cf estrela da amadora",
+        "expected_home_goals": 1.5847555599508962,
+        "expected_away_goals": 1.128583417457367,
+        "probabilities": {
+          "home": 0.4791119225618598,
+          "draw": 0.24975967490002018,
+          "away": 0.27112840253811993
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.7537498800023669,
+          "2.5": 0.5096374094557173,
+          "3.5": 0.2888507823871668
+        },
+        "both_teams_score": 0.537825931657578,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-11-26",
+        "training_games": 917,
+        "prior_team_games": {
+          "vitoria guimaraes": 102,
+          "cf estrela da amadora": 102
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+        "low_score_rho": 0.0,
+        "research_candidate": false
+      },
+      "recorded_at_utc": "2026-11-26T15:25:05.315442+00:00",
+      "status": "pending",
+      "result": null,
+      "fixture_review": null
+    },
+    {
+      "fixture": {
         "event_id": "PT1_26526de6d4a0aaccb76b8e42",
         "league": "PT1",
         "season": "2026-27",
@@ -41236,6 +41333,200 @@
     },
     {
       "fixture": {
+        "event_id": "PT1_371b6daf76308734617c4af9",
+        "league": "PT1",
+        "season": "2026-27",
+        "date": "2026-11-27",
+        "home": "cs maritimo",
+        "away": "cd nacional",
+        "home_name": "CS Marítimo",
+        "away_name": "CD Nacional",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/pt.1.json",
+        "captured_at_utc": "2026-11-26T15:25:01.508762+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null,
+        "original_date": null,
+        "date_correction_verified": null,
+        "license_url": null,
+        "source_sha256": null,
+        "fixture_verification_url": null,
+        "actual_start_utc": null,
+        "official_result_url": null,
+        "source_original_date": "2026-11-27",
+        "verified_start_utc": "2026-11-27T20:15:00+00:00",
+        "independent_fixture": {
+          "provider_event_id": "401885389",
+          "league": "PT1",
+          "season_year": 2026,
+          "start_utc": "2026-11-27T20:15:00+00:00",
+          "captured_at": "2026-11-26T15:16:07.793031+00:00",
+          "home_name": "Maritimo",
+          "away_name": "C.D. Nacional",
+          "provider_home_id": "552",
+          "provider_away_id": "3472",
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401885389",
+          "status": "scheduled",
+          "event_id": "PT1_371b6daf76308734617c4af9",
+          "home": "cs maritimo",
+          "away": "cd nacional"
+        }
+      },
+      "prediction": {
+        "model": "football-opponent-v1",
+        "league": "PT1",
+        "home": "cs maritimo",
+        "away": "cd nacional",
+        "expected_home_goals": 1.3037899940606703,
+        "expected_away_goals": 1.3598630156046045,
+        "probabilities": {
+          "home": 0.35695278082057696,
+          "draw": 0.2601006621866988,
+          "away": 0.38294655699272406
+        },
+        "predicted_outcome": "away",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.744668421319113,
+          "2.5": 0.4974302634725506,
+          "3.5": 0.2779113757218525
+        },
+        "both_teams_score": 0.5414963744574951,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-11-26",
+        "training_games": 917,
+        "prior_team_games": {
+          "cs maritimo": 10,
+          "cd nacional": 79
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+        "low_score_rho": 0.0,
+        "research_candidate": false
+      },
+      "recorded_at_utc": "2026-11-26T15:25:05.297308+00:00",
+      "status": "pending",
+      "result": null,
+      "fixture_review": null
+    },
+    {
+      "fixture": {
+        "event_id": "PT1_404283c949497e42c328671a",
+        "league": "PT1",
+        "season": "2026-27",
+        "date": "2026-11-30",
+        "home": "casa pia ac",
+        "away": "sporting clube de braga",
+        "home_name": "Casa Pia AC",
+        "away_name": "Sporting Clube de Braga",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/pt.1.json",
+        "captured_at_utc": "2026-11-26T15:25:01.508762+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null,
+        "original_date": null,
+        "date_correction_verified": null,
+        "license_url": null,
+        "source_sha256": null,
+        "fixture_verification_url": null,
+        "actual_start_utc": null,
+        "official_result_url": null,
+        "source_original_date": "2026-11-30",
+        "verified_start_utc": "2026-11-30T20:15:00+00:00",
+        "independent_fixture": {
+          "provider_event_id": "401885391",
+          "league": "PT1",
+          "season_year": 2026,
+          "start_utc": "2026-11-30T20:15:00+00:00",
+          "captured_at": "2026-11-26T15:16:07.873949+00:00",
+          "home_name": "Casa Pia",
+          "away_name": "Braga",
+          "provider_home_id": "21581",
+          "provider_away_id": "2994",
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401885391",
+          "status": "scheduled",
+          "event_id": "PT1_404283c949497e42c328671a",
+          "home": "casa pia ac",
+          "away": "sporting clube de braga"
+        }
+      },
+      "prediction": {
+        "model": "football-opponent-v1",
+        "league": "PT1",
+        "home": "casa pia ac",
+        "away": "sporting clube de braga",
+        "expected_home_goals": 0.8721351045635646,
+        "expected_away_goals": 1.5863064892683452,
+        "probabilities": {
+          "home": 0.20647186598446673,
+          "draw": 0.25176336481510897,
+          "away": 0.5417647692004244
+        },
+        "predicted_outcome": "away",
+        "most_likely_score": [
+          0,
+          1
+        ],
+        "over": {
+          "1.5": 0.7040673879684742,
+          "2.5": 0.44548307422906214,
+          "3.5": 0.2335782634259118
+        },
+        "both_teams_score": 0.4628299931232984,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-11-26",
+        "training_games": 917,
+        "prior_team_games": {
+          "casa pia ac": 102,
+          "sporting clube de braga": 102
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+        "low_score_rho": 0.0,
+        "research_candidate": false
+      },
+      "recorded_at_utc": "2026-11-26T15:25:05.379893+00:00",
+      "status": "pending",
+      "result": null,
+      "fixture_review": null
+    },
+    {
+      "fixture": {
         "event_id": "PT1_46dc30b0445b2364af01d7d7",
         "league": "PT1",
         "season": "2026-27",
@@ -41424,6 +41715,200 @@
         "verification": "community_source_final_not_official",
         "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Primeira_Liga"
       },
+      "fixture_review": null
+    },
+    {
+      "fixture": {
+        "event_id": "PT1_5b2d02b3efff439331761b05",
+        "league": "PT1",
+        "season": "2026-27",
+        "date": "2026-11-29",
+        "home": "gil vicente fc",
+        "away": "gd estoril praia",
+        "home_name": "Gil Vicente FC",
+        "away_name": "GD Estoril Praia",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/pt.1.json",
+        "captured_at_utc": "2026-11-26T15:25:01.508762+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null,
+        "original_date": null,
+        "date_correction_verified": null,
+        "license_url": null,
+        "source_sha256": null,
+        "fixture_verification_url": null,
+        "actual_start_utc": null,
+        "official_result_url": null,
+        "source_original_date": "2026-11-29",
+        "verified_start_utc": "2026-11-29T18:00:00+00:00",
+        "independent_fixture": {
+          "provider_event_id": "401885390",
+          "league": "PT1",
+          "season_year": 2026,
+          "start_utc": "2026-11-29T18:00:00+00:00",
+          "captured_at": "2026-11-26T15:16:07.914308+00:00",
+          "home_name": "Gil Vicente",
+          "away_name": "Estoril",
+          "provider_home_id": "3699",
+          "provider_away_id": "12216",
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401885390",
+          "status": "scheduled",
+          "event_id": "PT1_5b2d02b3efff439331761b05",
+          "home": "gil vicente fc",
+          "away": "gd estoril praia"
+        }
+      },
+      "prediction": {
+        "model": "football-opponent-v1",
+        "league": "PT1",
+        "home": "gil vicente fc",
+        "away": "gd estoril praia",
+        "expected_home_goals": 1.5316958037363615,
+        "expected_away_goals": 0.9694730323488109,
+        "probabilities": {
+          "home": 0.5035680557277021,
+          "draw": 0.25712735895787486,
+          "away": 0.23930458531442303
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          0
+        ],
+        "over": {
+          "1.5": 0.712942280491361,
+          "2.5": 0.4564866737668537,
+          "3.5": 0.24267374997396937
+        },
+        "both_teams_score": 0.4865374790217613,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-11-26",
+        "training_games": 917,
+        "prior_team_games": {
+          "gil vicente fc": 102,
+          "gd estoril praia": 101
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+        "low_score_rho": 0.0,
+        "research_candidate": false
+      },
+      "recorded_at_utc": "2026-11-26T15:25:05.348576+00:00",
+      "status": "pending",
+      "result": null,
+      "fixture_review": null
+    },
+    {
+      "fixture": {
+        "event_id": "PT1_67dd0c6988f1d37af5f447fc",
+        "league": "PT1",
+        "season": "2026-27",
+        "date": "2026-11-28",
+        "home": "moreirense fc",
+        "away": "cd santa clara",
+        "home_name": "Moreirense FC",
+        "away_name": "CD Santa Clara",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/pt.1.json",
+        "captured_at_utc": "2026-11-26T15:25:01.508762+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null,
+        "original_date": null,
+        "date_correction_verified": null,
+        "license_url": null,
+        "source_sha256": null,
+        "fixture_verification_url": null,
+        "actual_start_utc": null,
+        "official_result_url": null,
+        "source_original_date": "2026-11-28",
+        "verified_start_utc": "2026-11-28T15:30:00+00:00",
+        "independent_fixture": {
+          "provider_event_id": "401885388",
+          "league": "PT1",
+          "season_year": 2026,
+          "start_utc": "2026-11-28T15:30:00+00:00",
+          "captured_at": "2026-11-26T15:16:08.016567+00:00",
+          "home_name": "Moreirense",
+          "away_name": "Santa Clara",
+          "provider_home_id": "3696",
+          "provider_away_id": "12215",
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401885388",
+          "status": "scheduled",
+          "event_id": "PT1_67dd0c6988f1d37af5f447fc",
+          "home": "moreirense fc",
+          "away": "cd santa clara"
+        }
+      },
+      "prediction": {
+        "model": "football-opponent-v1",
+        "league": "PT1",
+        "home": "moreirense fc",
+        "away": "cd santa clara",
+        "expected_home_goals": 1.014598209079864,
+        "expected_away_goals": 1.2317315682907102,
+        "probabilities": {
+          "home": 0.30319369094939286,
+          "draw": 0.2855003086640273,
+          "away": 0.4113060003865797
+        },
+        "predicted_outcome": "away",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.6565812456995098,
+          "2.5": 0.3896813489323112,
+          "3.5": 0.1898329537038813
+        },
+        "both_teams_score": 0.45145181378410293,
+        "total_goals_80": [
+          0,
+          4
+        ],
+        "training_cutoff_exclusive": "2026-11-26",
+        "training_games": 917,
+        "prior_team_games": {
+          "moreirense fc": 102,
+          "cd santa clara": 79
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+        "low_score_rho": 0.0,
+        "research_candidate": false
+      },
+      "recorded_at_utc": "2026-11-26T15:25:05.332635+00:00",
+      "status": "pending",
+      "result": null,
       "fixture_review": null
     },
     {
@@ -42042,8 +42527,44 @@
         "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
       },
       "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
-      "status": "pending",
-      "result": null,
+      "status": "publisher_final",
+      "result": {
+        "actual_home": 2,
+        "actual_away": 1,
+        "actual_outcome": "home",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.0376659509110071
+          },
+          "over_2.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.17267354580010014
+          },
+          "over_3.5": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.12993273072785977
+          },
+          "both_teams_score": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.15343671533123768
+          }
+        },
+        "winner_correct": true,
+        "home_absolute_error": 0.410326528744444,
+        "away_absolute_error": 0.4446693145870262,
+        "total_absolute_error": 0.03434278584258221,
+        "margin_absolute_error": 0.8549958433314702,
+        "total_in_80": true,
+        "log_loss": 0.8883721374831755,
+        "brier": 0.5255507506948378,
+        "verification": "community_source_final_not_official",
+        "source_url": "https://es.wikipedia.org/wiki/Primeira_Liga_2026-27"
+      },
       "fixture_review": null
     },
     {
@@ -42558,6 +43079,103 @@
         "verification": "community_source_final_not_official",
         "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Primeira_Liga"
       },
+      "fixture_review": null
+    },
+    {
+      "fixture": {
+        "event_id": "PT1_baa158283fb2a046b6f9e30c",
+        "league": "PT1",
+        "season": "2026-27",
+        "date": "2026-11-29",
+        "home": "fc porto",
+        "away": "sporting clube de portugal",
+        "home_name": "FC Porto",
+        "away_name": "Sporting Clube de Portugal",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/pt.1.json",
+        "captured_at_utc": "2026-11-26T15:25:01.508762+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null,
+        "original_date": null,
+        "date_correction_verified": null,
+        "license_url": null,
+        "source_sha256": null,
+        "fixture_verification_url": null,
+        "actual_start_utc": null,
+        "official_result_url": null,
+        "source_original_date": "2026-11-29",
+        "verified_start_utc": "2026-11-29T20:30:00+00:00",
+        "independent_fixture": {
+          "provider_event_id": "401885387",
+          "league": "PT1",
+          "season_year": 2026,
+          "start_utc": "2026-11-29T20:30:00+00:00",
+          "captured_at": "2026-11-26T15:16:07.914308+00:00",
+          "home_name": "FC Porto",
+          "away_name": "Sporting CP",
+          "provider_home_id": "437",
+          "provider_away_id": "2250",
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401885387",
+          "status": "scheduled",
+          "event_id": "PT1_baa158283fb2a046b6f9e30c",
+          "home": "fc porto",
+          "away": "sporting clube de portugal"
+        }
+      },
+      "prediction": {
+        "model": "football-opponent-v1",
+        "league": "PT1",
+        "home": "fc porto",
+        "away": "sporting clube de portugal",
+        "expected_home_goals": 1.5091930043792912,
+        "expected_away_goals": 1.2201948431388328,
+        "probabilities": {
+          "home": 0.43930903920306796,
+          "draw": 0.25348516088624806,
+          "away": 0.3072057999106841
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.7566230354661522,
+          "2.5": 0.5135468400305632,
+          "3.5": 0.2923971020829509
+        },
+        "both_teams_score": 0.5489982537887699,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-11-26",
+        "training_games": 917,
+        "prior_team_games": {
+          "fc porto": 102,
+          "sporting clube de portugal": 102
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+        "low_score_rho": 0.0,
+        "research_candidate": false
+      },
+      "recorded_at_utc": "2026-11-26T15:25:05.363898+00:00",
+      "status": "pending",
+      "result": null,
       "fixture_review": null
     },
     {
@@ -43135,8 +43753,44 @@
         "note": "Regulation only. Draw is a separate outcome. Independent Poisson assumptions; no injuries, lineups, xG or odds. Not a calibrated guarantee."
       },
       "recorded_at_utc": "2026-10-25T12:01:28.001360+00:00",
-      "status": "pending",
-      "result": null,
+      "status": "publisher_final",
+      "result": {
+        "actual_home": 4,
+        "actual_away": 0,
+        "actual_outcome": "home",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.05583648609141618
+          },
+          "over_2.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.22726276657341082
+          },
+          "over_3.5": {
+            "actual": true,
+            "correct": false,
+            "brier": 0.48815835433573346
+          },
+          "both_teams_score": {
+            "actual": false,
+            "correct": true,
+            "brier": 0.2177344063399608
+          }
+        },
+        "winner_correct": true,
+        "home_absolute_error": 2.0075211632778838,
+        "away_absolute_error": 0.7771657657200827,
+        "total_absolute_error": 1.2303553975578012,
+        "margin_absolute_error": 2.7846869289979663,
+        "total_in_80": true,
+        "log_loss": 0.4176620709527899,
+        "brier": 0.17712468446386564,
+        "verification": "community_source_final_not_official",
+        "source_url": "https://es.wikipedia.org/wiki/Primeira_Liga_2026-27"
+      },
       "fixture_review": null
     },
     {
@@ -45313,10 +45967,6 @@
   ],
   "skipped": [
     {
-      "event_id": "PT1_371b6daf76308734617c4af9",
-      "reason": "Insufficient history (current coverage): cs maritimo: 1 unresolved past fixtures; refresh/review required"
-    },
-    {
       "event_id": "BR1_324c366a5b6a0dfbdd775fa5",
       "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
     },
@@ -45355,26 +46005,6 @@
     {
       "event_id": "BR1_f926cff72ff4e87dcb21f062",
       "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
-    },
-    {
-      "event_id": "PT1_16ff5031c2fa00975ab8144b",
-      "reason": "Insufficient history (current coverage): cf estrela da amadora: 1 unresolved past fixtures; refresh/review required"
-    },
-    {
-      "event_id": "PT1_67dd0c6988f1d37af5f447fc",
-      "reason": "Insufficient history (current coverage): moreirense fc: 1 unresolved past fixtures; refresh/review required"
-    },
-    {
-      "event_id": "PT1_5b2d02b3efff439331761b05",
-      "reason": "Insufficient history (current coverage): gil vicente fc: 1 unresolved past fixtures; refresh/review required; gd estoril praia: latest completed history is 32 days old; gd estoril praia: 2 unresolved past fixtures; refresh/review required"
-    },
-    {
-      "event_id": "PT1_baa158283fb2a046b6f9e30c",
-      "reason": "Insufficient history (current coverage): fc porto: 1 unresolved past fixtures; refresh/review required"
-    },
-    {
-      "event_id": "PT1_404283c949497e42c328671a",
-      "reason": "Insufficient history (current coverage): sporting clube de braga: 1 unresolved past fixtures; refresh/review required"
     },
     {
       "event_id": "BR1_0bb146ce9f90fc706f9baa23",
@@ -45597,36 +46227,36 @@
       "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
     }
   ],
-  "pending": 129,
+  "pending": 133,
   "requested_model_variant": "opponent",
   "publisher_performance": {
-    "games": 290,
-    "winner_accuracy": 0.5758620689655173,
-    "log_loss": 0.9797191651345225,
-    "brier": 0.5819562313795343,
-    "total_mae": 1.4336848823987798,
-    "margin_mae": 1.4409908296988738,
-    "total_in_80": 0.8862068965517241,
-    "team_score_games": 290,
-    "home_score_mae": 1.0027475498608582,
-    "away_score_mae": 1.013020301936251,
-    "team_score_mae": 1.0078839258985546,
+    "games": 292,
+    "winner_accuracy": 0.5787671232876712,
+    "log_loss": 0.9774814797857793,
+    "brier": 0.5803766525178893,
+    "total_mae": 1.428196281092625,
+    "margin_mae": 1.4435856965239824,
+    "total_in_80": 0.886986301369863,
+    "team_score_games": 292,
+    "home_score_mae": 1.0041597162728466,
+    "away_score_mae": 1.01026617343089,
+    "team_score_mae": 1.0072129448518683,
     "goal_markets": {
       "over_1.5": {
-        "accuracy": 0.8,
-        "brier": 0.1615462744148551
+        "accuracy": 0.8013698630136986,
+        "brier": 0.16076000690859726
       },
       "over_2.5": {
-        "accuracy": 0.5172413793103449,
-        "brier": 0.2518257399510491
+        "accuracy": 0.5205479452054794,
+        "brier": 0.25147055102115673
       },
       "over_3.5": {
-        "accuracy": 0.6724137931034483,
-        "brier": 0.22462780283243575
+        "accuracy": 0.6712328767123288,
+        "brier": 0.22520600652900674
       },
       "both_teams_score": {
-        "accuracy": 0.5448275862068965,
-        "brier": 0.24560752850009773
+        "accuracy": 0.547945205479452,
+        "brier": 0.2451964191325327
       }
     }
   },

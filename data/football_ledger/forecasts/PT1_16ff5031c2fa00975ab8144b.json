@@ -1,0 +1,126 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-11-26T15:25:05.315442+00:00",
+  "fixture": {
+    "event_id": "PT1_16ff5031c2fa00975ab8144b",
+    "league": "PT1",
+    "season": "2026-27",
+    "date": "2026-11-28",
+    "home": "vitoria guimaraes",
+    "away": "cf estrela da amadora",
+    "home_name": "Vitória Guimarães",
+    "away_name": "CF Estrela da Amadora",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/pt.1.json",
+    "captured_at_utc": "2026-11-26T15:25:01.508762+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null,
+    "original_date": null,
+    "date_correction_verified": null,
+    "license_url": null,
+    "source_sha256": null,
+    "fixture_verification_url": null,
+    "actual_start_utc": null,
+    "official_result_url": null,
+    "source_original_date": "2026-11-28",
+    "verified_start_utc": "2026-11-28T20:30:00+00:00",
+    "independent_fixture": {
+      "provider_event_id": "401885385",
+      "league": "PT1",
+      "season_year": 2026,
+      "start_utc": "2026-11-28T20:30:00+00:00",
+      "captured_at": "2026-11-26T15:16:08.016567+00:00",
+      "home_name": "Vitória de Guimaraes",
+      "away_name": "Estrela",
+      "provider_home_id": "5309",
+      "provider_away_id": "21610",
+      "source_url": "https://www.espn.com/soccer/game/_/gameId/401885385",
+      "status": "scheduled",
+      "event_id": "PT1_16ff5031c2fa00975ab8144b",
+      "home": "vitoria guimaraes",
+      "away": "cf estrela da amadora"
+    }
+  },
+  "prediction": {
+    "model": "football-opponent-v1",
+    "league": "PT1",
+    "home": "vitoria guimaraes",
+    "away": "cf estrela da amadora",
+    "expected_home_goals": 1.5847555599508962,
+    "expected_away_goals": 1.128583417457367,
+    "probabilities": {
+      "home": 0.4791119225618598,
+      "draw": 0.24975967490002018,
+      "away": 0.27112840253811993
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.7537498800023669,
+      "2.5": 0.5096374094557173,
+      "3.5": 0.2888507823871668
+    },
+    "both_teams_score": 0.537825931657578,
+    "total_goals_80": [
+      1,
+      5
+    ],
+    "training_cutoff_exclusive": "2026-11-26",
+    "training_games": 917,
+    "prior_team_games": {
+      "vitoria guimaraes": 102,
+      "cf estrela da amadora": 102
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "settings": {
+      "half_life_days": 180.0,
+      "shrinkage_games": 8.0,
+      "window_days": 1095
+    },
+    "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+    "low_score_rho": 0.0,
+    "research_candidate": false
+  },
+  "archive_sha256": "84fdd7f77a9a3ce08b91dbe91388e00b3d72d5b28020e0739dde18c36a725bc9",
+  "source_code_sha256": "87f8a1a9303ec778ecb18ac0de5f1e02ca1184b48bc8614bea90a20275850bed",
+  "requested_model_variant": "opponent",
+  "history_health": {
+    "spec": "football-history-health-v1",
+    "checked_at_utc": "2026-11-26T15:25:03.529528+00:00",
+    "information_cutoff_exclusive": "2026-11-26",
+    "teams": {
+      "vitoria guimaraes": {
+        "prior_finals": 283,
+        "active_season_finals": 11,
+        "last_final_date": "2026-11-08",
+        "days_since_last_final": 18,
+        "unresolved_past_fixture_ids": []
+      },
+      "cf estrela da amadora": {
+        "prior_finals": 113,
+        "active_season_finals": 11,
+        "last_final_date": "2026-11-08",
+        "days_since_last_final": 18,
+        "unresolved_past_fixture_ids": []
+      }
+    },
+    "diagnostic_gate_passed": true,
+    "blocking_issues": [],
+    "max_history_age_days": 30,
+    "calendar_completeness_verified": false,
+    "note": "Diagnostic policy, not a validated success threshold. Unresolved fixtures may be postponed or missing results. Fresh source captures do not make old histories current."
+  },
+  "selection_policy": "Current-history diagnostic gate plus existing model issues; research only, no validated recommendation.",
+  "payload_sha256": "9a1617db03cf531229d05badfd5229c8173e1db360cdb0e2fa98192d4b14c161"
+}
