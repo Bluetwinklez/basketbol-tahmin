@@ -329,3 +329,23 @@ eksik geçmiş kayıtları var. Yeni maç öncesi tahminler yalnızca
 kanonik akışta bir sonraki uygun koşuda kaydedilebilir.
 
 - TFF: https://www.tff.org/Default.aspx?hafta=5&pageID=198
+
+## Süper Lig 8. ve 12. haftadan altı final
+
+26 Kasım 2026. İngilizce skor matrisi kalan altı sonucu içermiyordu.
+İtalyanca sezon sayfasının CC BY-SA 4.0 lisanslı takvimi, ilk devre
+karşılaşmalarında tarihli skorlar sağladı. Ev sahibi ve deplasman
+sırası, tarih ve skor bağımsız ESPN finali ve resmî TFF fikstürüyle
+eşleştirildi. Erzurumspor adı, aynı sezon ve maçtaki ESPN kulüp
+kimliğiyle açıkça doğrulandı. İkinci devre skorları içe aktarılmadı.
+
+Altı sonuç ayrı lisanslı katmana eklendi. Çorum–Rizespor ve
+Başakşehir–Çorum'un temel arşivdeki tarihleri doğrulanmış tarihten
+farklıydı. Eski olay kimlikleri korundu ve tarih incelemesi
+işaretlendi. Yerel geçmiş kontrolünde yaklaşan dokuz Süper Lig
+maçından daha önce engellenen yedisi geçti. Bu deneme hiçbir yeni
+maç öncesi tahmin kaydı oluşturmadı.
+
+- TFF 8. hafta: https://www.tff.org/Default.aspx?hafta=8&pageID=198
+- TFF 12. hafta: https://www.tff.org/Default.aspx?hafta=12&pageID=198
+- Lisanslı takvim: https://it.wikipedia.org/wiki/S%C3%BCper_Lig_2026-2027

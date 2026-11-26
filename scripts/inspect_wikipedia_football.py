@@ -55,6 +55,52 @@ def parse(raw):
     return results
 
 
+def parse_italian_super_lig(raw, season_year, rounds):
+    """Read only first-leg scores with explicit calendar dates."""
+    soup = BeautifulSoup(raw, "html.parser")
+    if not soup.find(["a", "link"], href=re.compile(r"^https://creativecommons\.org/licenses/by-sa/4\.0/")):
+        raise ValueError("Page-specific CC BY-SA license required")
+    first_half_months = {"ago": 8, "set": 9, "ott": 10, "nov": 11, "dic": 12, "gen": 1}
+    scores = []
+    for round_number in rounds:
+        header = f"andata ({round_number}ª)"
+        headers = [
+            tr for tr in soup.find_all("tr")
+            if (cells := tr.find_all("td", recursive=False)) and len(cells) == 3
+            and cells[0].get_text(" ", strip=True) == header
+            and cells[1].get_text(" ", strip=True) == f"{round_number}ª giornata"
+            and cells[2].get_text(" ", strip=True) == f"ritorno ({round_number + 17}ª)"
+        ]
+        if len(headers) != 1:
+            raise ValueError(f"Unique Italian calendar round {round_number} required")
+        dated = None
+        for tr in headers[0].find_next_siblings("tr"):
+            if tr.find("th", recursive=False):
+                continue
+            cells = tr.find_all("td", recursive=False)
+            text = [c.get_text(" ", strip=True) for c in cells]
+            if cells and cells[0].has_attr("rowspan"):
+                match = re.fullmatch(r"(\d{1,2}) ([a-z]{3})\.", text.pop(0))
+                if not match or match[2] not in first_half_months:
+                    raise ValueError("Explicit Italian calendar date required")
+                month = first_half_months[match[2]]
+                dated = pd.Timestamp(year=season_year + (month < 7), month=month, day=int(match[1])).strftime("%Y-%m-%d")
+            if cells and cells[-1].has_attr("rowspan"):
+                text.pop()
+            if len(text) != 3 or dated is None:
+                raise ValueError("Expected first result, ordered clubs, return result")
+            first, clubs, _ = text
+            if first == "-" or re.fullmatch(r"\d{1,2}:\d{2}", first):
+                continue
+            score = re.fullmatch(r"(\d{1,2})[–-](\d{1,2})", first)
+            if not score or clubs.count("-") != 1 or max(map(int, score.groups())) > 30:
+                raise ValueError("Invalid Italian calendar score or clubs")
+            home, away = clubs.split("-")
+            scores.append(dict(home_name=home, away_name=away, home_goals=int(score[1]),
+                               away_goals=int(score[2]), date=dated))
+    return scores
+
+
 def main():
     clock=pd.Timestamp.now(tz='UTC');year=clock.year if clock.month>=7 else clock.year-1
     season=f'{year}–{str(year+1)[-2:]}'

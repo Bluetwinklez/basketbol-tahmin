@@ -811,6 +811,30 @@
       "source_url": "https://www.laliga.com/partido/temporada-2026-2027-laliga-ea-sports-rayo-vallecano-athletic-club-8",
       "interruption_source_url": "https://www.athletic-club.eus/en/news/2026/10/10/the-athletic-club-squad-returns-to-bilbao/",
       "note": "Interrupted after kickoff. The continuation is not a new pregame fixture. Hold forecasts, scoring and training until explicit review."
+    },
+    "TR1_c084713adf5988a46cde555f": {
+      "league": "TR1",
+      "home": "corum",
+      "away": "caykur rizespor",
+      "original_date": "2026-10-18",
+      "observed_start_utc": "2026-10-16T17:00:00+00:00",
+      "source_url": "https://www.espn.com/soccer/game/_/gameId/401888377",
+      "official_result_url": "https://www.tff.org/Default.aspx?hafta=8&pageID=198",
+      "checked_at_utc": "2026-11-26T15:07:48.347436+00:00",
+      "status": "quarantined_date_conflict",
+      "note": "Training date independently verified; original forecast requires timing review."
+    },
+    "TR1_d16c2be04cb42c47ab28dfb4": {
+      "league": "TR1",
+      "home": "istanbul basaksehir",
+      "away": "corum",
+      "original_date": "2026-11-22",
+      "observed_start_utc": "2026-11-23T17:00:00+00:00",
+      "source_url": "https://www.espn.com/soccer/game/_/gameId/401888370",
+      "official_result_url": "https://www.tff.org/Default.aspx?hafta=12&pageID=198",
+      "checked_at_utc": "2026-11-26T15:07:48.347436+00:00",
+      "status": "quarantined_date_conflict",
+      "note": "Training date independently verified; original forecast requires timing review."
     }
   }
 }
