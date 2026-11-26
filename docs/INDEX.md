@@ -27,6 +27,7 @@ Guide to the documents under `docs/` and the `docs/kanit/` evidence directory. F
 - [argentina.md](argentina.md) — Separate senior men's Argentina Liga Nacional (`ARG_LNB`) archive, sources, prior-season model evaluation, promoted-team diagnostics and immutable-ledger checks.
 - Recent basketball replays: [workload decay](kanit/improvement/basketball-rest-decay.md), [home-court advantage](kanit/improvement/basketball-home-advantage.md), [offseason Elo carryover](kanit/improvement/basketball-carryover.md), and [logit blend](kanit/improvement/basketball-logit-blend.md).
 - [Basketball confidence ranking](kanit/improvement/basketball-consensus-coverage.md) — Same-day comparison of the confidence threshold and cross-model support at equal coverage.
+- [Basketball winner disagreements](kanit/improvement/basketball-winner-disagreement.md) — Score-regression override measured against the prior-season learner and frozen live forecasts.
 
 ## Football models and coverage
 
