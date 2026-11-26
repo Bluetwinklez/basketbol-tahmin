@@ -252,3 +252,29 @@ collectors targeting the same archive must still run sequentially.
 No source download, new match data, model selection or frozen forecast changes are
 part of this storage fix. Existing chronological evaluation, calibration and
 coverage findings remain unchanged; no predictive improvement is claimed.
+
+### Frozen goal-market reliability (2026-11-26)
+
+The offline football calibration report now includes ten-bin reliability tables,
+expected calibration error (ECE), and frozen-probability coverage for Over 2.5
+and BTTS. Each market uses exactly the same available frozen probabilities and
+eligible results as its paired baseline comparison. Missing probabilities are
+excluded, empty cohorts have null ECE/coverage, and probability 1 belongs to the
+last bin. ECE is the count-weighted absolute difference between each bin's mean
+forecast and observed frequency. It is descriptive and sensitive to sample size
+and binning; it is not a fitted recalibration or proof of predictive improvement.
+Report JSON pins every input forecast and result snapshot with SHA-256 hashes.
+
+Regenerated offline from the November 25 snapshot: 159 eligible publisher finals,
+159 available probabilities per market (100% within this eligible cohort).
+Over 2.5 accuracy is 52.20%, ECE 0.084792; BTTS accuracy is 57.86%, ECE 0.025645.
+Neither market demonstrates superiority over its pre-freeze expanding-rate
+baseline under the existing paired log-loss rule. Publisher finals remain
+separate from independently verified official results. The small cohort and
+confidence intervals do not establish future success.
+
+This change adds zero matches, performs no downloads, and changes no model or
+frozen forecast. The latest refresh report still lists 14 unavailable football
+source/season combinations, an NBA HTTP 403, and an automatically disabled PBA
+source. Main already includes the subsequent NBA known-blocked classification;
+classifying an access restriction does not restore data coverage.

@@ -155,6 +155,16 @@ def _binary_market(games, probabilities, outcomes):
     y = np.asarray(outcomes, dtype=bool)[keep]
     comparison = _paired(_binary_losses(y, baseline[keep]), _binary_losses(y, p),
                          ("hit_rate", "log_loss", "brier"))
+    bins = _bins(p, y)
+    comparison["reliability"] = {
+        "bins": bins,
+        "ece": sum(row["n"] * abs(row["forecast_mean"] - row["observed_frequency"])
+                   for row in bins if row["n"]) / len(p) if len(p) else None,
+        "scope": "Descriptive ten-bin expected calibration error on original frozen probabilities; "
+                 "not a calibration fit, significance test or evidence of future success.",
+    }
+    comparison["eligible_games"] = len(games)
+    comparison["probability_coverage"] = len(p) / len(games) if games else None
     comparison["missing_probability"] = int((~keep).sum())
     comparison["baseline_mean_probability"] = float(baseline[keep].mean()) if len(p) else None
     comparison["skill_verdict"] = verdict(
@@ -378,6 +388,15 @@ def markdown(report):
                   f"Mean baseline probability **{_format(market['baseline_mean_probability'], True)}**.", ""]
         lines += _comparison_table(market, ("hit_rate", "log_loss", "brier"),
                                    ("Pre-freeze rate", "Frozen forecast", "Hit rate"))
+        reliability = market["reliability"]
+        lines += ["", f"Frozen probability coverage **{_format(market['probability_coverage'], True)}** "
+                  f"of **{market['eligible_games']}** eligible games. "
+                  f"Ten-bin ECE **{_format(reliability['ece'])}**.", "",
+                  reliability["scope"],
+                  "Bins are [lower, upper), with probability 1 included in the last bin. "
+                  "ECE weights each nonempty bin's absolute forecast-frequency gap by its game count; "
+                  "it depends on binning and sample size. Empty cohorts have no ECE.", ""]
+        lines += _bin_table(reliability["bins"])
         lines.append("")
     lines += [
         "## Confidence intervals and verdicts", "",
