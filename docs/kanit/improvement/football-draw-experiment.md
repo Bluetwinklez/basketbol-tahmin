@@ -27,3 +27,21 @@ Tekrar üretmek için depo kökünde:
 
 Çıktı lig bazında veri karmalarını, seçilen çarpanları, hata ölçülerini,
 beraberlik sayılarını ve eşit kapsamdaki sonuçları içerir.
+
+## Maç dengesine göre değişen düzeltme
+
+Antigravity'nin önerdiği maç dengesi değişkeniyle iki katsayılı bir aday da
+sınandı. Ev ve deplasman galibiyet olasılıklarının mutlak farkı küçüldükçe
+beraberlik düzeltmesi değişebiliyor. Katsayılar yalnız önceki sezonun ilk
+bölümünde, sabit L2 cezasıyla (0,01) öğrenildi. İkinci bölümde adayın sabit
+beraberlik çarpanını da geçmesi istendi.
+
+- Aynı 3.018 maçta isabet %49,11, log loss 1,02049 ve Brier 0,61091.
+  59 beraberlik seçildi, 16'sı doğru çıktı.
+- Mevcut modele göre isabet farkı −0,03 yüzde puanı (%95 aralık
+  [−0,40; +0,35]), log loss farkı +0,00154 (aralık [−0,00156; +0,00437]).
+- Mevcut modelin galibiyet olasılıkları en fazla 15 yüzde puanı ayrışan
+  1.271 maçında isabet %38,71'den %38,63'e düştü. Bu dilim yalnızca
+  maç öncesi model olasılıklarıyla belirlendi.
+- Dokuz ligin hiçbiri ikinci bölümde seçim koşullarını geçmedi. Aynı geçmiş
+  hedef sezon yeniden kullanıldığı için iki deney de keşif niteliğindedir.
