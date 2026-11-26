@@ -45,6 +45,7 @@ Guide to the documents under `docs/` and the `docs/kanit/` evidence directory. F
 - [Premier League promotion prior](kanit/improvement/football-promoted-prior.md) — Chronological comparison of a common promoted-club adjustment and club-specific Championship transfer.
 - [Football refit frequency](kanit/improvement/football-refit-cadence.md) — Daily, weekly and monthly fitting compared at matching one- and seven-day forecast leads.
 - [Football opponent-model recency](kanit/improvement/football-opponent-half-life.md) — Matched replay of 90-, 180- and 360-day half-lives with previous-season selection.
+- [Football Davidson–Elo](kanit/improvement/football-davidson-elo.md) — Explicit draw probabilities and confidence ranking against the opponent-adjusted model.
 
 ## Data sources, audits and roadmap
 
