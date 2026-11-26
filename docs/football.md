@@ -312,3 +312,20 @@ olarak kullanılamaz. Kaynak arşiv ve kaydedilmiş tahminler değişmez.
 
 - Athletic Club: https://www.athletic-club.eus/en/news/2026/10/10/the-athletic-club-squad-returns-to-bilbao/
 - LaLiga: https://www.laliga.com/partido/temporada-2026-2027-laliga-ea-sports-rayo-vallecano-athletic-club-8
+
+## Süper Lig 5. hafta sonuçlarının arşive eklenmesi
+
+26 Kasım 2026. 11–14 Eylül tarihli dokuz 2026–27 Süper Lig
+sonucunun CC0 temel arşivinde yalnız fikstür kaydı vardı. CC BY-SA
+skor matrisi, bağımsız yayıncının benzersiz final kaydı ve TFF 5. hafta
+sonuçları aynı takımları, skoru ve günü gösteriyor. Bağımsız başlama
+saatleri TFF yerel saatlerinden UTC'ye çevrildikten sonra eşleşiyor.
+
+Dokuz sonuç ayrı lisanslı katmana eklendi. Eski olay kimlikleri
+ve temel dosyalar korundu. Son doğrulanmış fikstür anlık görüntüsüyle
+yapılan yerel kontrolde dokuz yaklaşan Süper Lig maçından ikisi
+ilk kez geçmiş veri koşulunu geçti. Kalan yedi maçta hâlâ başka
+eksik geçmiş kayıtları var. Yeni maç öncesi tahminler yalnızca
+kanonik akışta bir sonraki uygun koşuda kaydedilebilir.
+
+- TFF: https://www.tff.org/Default.aspx?hafta=5&pageID=198
