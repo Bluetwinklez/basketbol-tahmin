@@ -9,7 +9,7 @@ from threadpoolctl import threadpool_limits
 
 from bbtahmin.daily import source_facts
 from bbtahmin.football.data import load,write_json
-from bbtahmin.football.health import assess
+from bbtahmin.football.health import assess, defer_interrupted_history, interrupted_reviews
 from bbtahmin.prospective import dataset_hashes,fingerprint
 from bbtahmin.quality import timestamp
 from bbtahmin.shadow import checked,evaluate,forecast_path,freeze,register
@@ -82,12 +82,16 @@ def run(root='data/improvement_shadow',record=True):
             known_future={r['event_id'] for r in confirmations['reviews'] if r['status'] in ('confirmed','date_conflict') and
                           r['observation']['status']=='scheduled' and clock<timestamp(r['observation']['start_utc']) and
                           timestamp(r['observation']['captured_at'])<=clock and clock-timestamp(r['observation']['captured_at'])<=pd.Timedelta(hours=24)}
-            health_frame=frame.loc[~frame.event_id.isin(known_future)]
             quarantine_path=Path('data/football/fixture_reviews.json')
             quarantine=json.loads(quarantine_path.read_text(encoding='utf8'))['reviews'] if quarantine_path.exists() else {}
+            interrupted=interrupted_reviews(quarantine)
+            health_frame=defer_interrupted_history(frame.loc[~frame.event_id.isin(known_future - interrupted.keys())], interrupted, clock)
             for review in confirmations['reviews']:
                 if review['status'] not in ('confirmed','date_conflict'):continue
                 fixture=review['observation'];code=fixture['league']
+                if fixture['event_id'] in interrupted:
+                    skipped.append(dict(league=code,event_id=fixture['event_id'],reason='Interrupted fixture requires explicit review'))
+                    continue
                 if fixture['status']=='final':results.append(fixture);continue
                 if not record or not clock<timestamp(fixture['start_utc'])<=clock+pd.Timedelta(days=7):continue
                 try:
