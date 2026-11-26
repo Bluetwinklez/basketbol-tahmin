@@ -41,6 +41,7 @@ Guide to the documents under `docs/` and the `docs/kanit/` evidence directory. F
 - [turkish-history-coverage.md](turkish-history-coverage.md) — Audit of available Turkish Süper Lig last-50 league histories (noting missing seasons, cups and aliases) and addition of 1,391 partial historical CC0 finals across MLS, Japan J1 and China Super League.
 - [football-double-chance.md](football-double-chance.md) — Display-only football draw and double-chance (`1X`/`X2`/`12`) views in the local board, Markdown table and CSV export (`prob_1x`, `prob_x2`, `prob_12`) without altering models or frozen forecasts.
 - [Football draw research](kanit/improvement/football-draw-experiment.md) — Chronological comparison of alternative draw forecasts.
+- [Premier League promotion prior](kanit/improvement/football-promoted-prior.md) — Chronological comparison of a common promoted-club adjustment and club-specific Championship transfer.
 
 ## Data sources, audits and roadmap
 
