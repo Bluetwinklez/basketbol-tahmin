@@ -63,34 +63,42 @@ def inventory(frame, now):
                 note='Observed source rows only; absent fixtures cannot be discovered from this archive alone.')
 
 
-def interrupted_reviews(reviews):
-    """Index both archive IDs for explicitly reviewed interrupted fixtures."""
+def held_fixture_reviews(reviews):
+    """Index both archive IDs for fixtures held for a scheduling review."""
     from .data import row
 
     result = {}
     for event_id, review in reviews.items():
-        if review.get("status") != "interrupted_pending_review":
+        status = review.get("status")
+        if status == "interrupted_pending_review":
+            resume = timestamp(review["resume_at_utc"])
+            notice_url = review["interruption_source_url"]
+        elif status == "postponed_pending_review":
+            resume = timestamp(review["rescheduled_start_utc"])
+            notice_url = review["postponement_source_url"]
+            if not review["reschedule_source_url"].startswith("https://"):
+                raise ValueError("Club or league rescheduling evidence required")
+        else:
             continue
-        resume = timestamp(review["resume_at_utc"])
         checked = timestamp(review["checked_at_utc"])
         resume_day = resume.strftime("%Y-%m-%d")
         if not (review["original_date"] < resume_day and pd.Timestamp(review["original_date"], tz="UTC") <= checked < resume):
-            raise ValueError("Interruption requires observed review before future resumption")
-        if not review["source_url"].startswith("https://") or not review["interruption_source_url"].startswith("https://"):
-            raise ValueError("Official interruption and resumption evidence required")
+            raise ValueError("Fixture review must precede the new start and follow the original date")
+        if not review["source_url"].startswith("https://") or not notice_url.startswith("https://"):
+            raise ValueError("Fixture hold requires a postponement or interruption notice and new start evidence")
         for day in (review["original_date"], resume_day):
             alias = row(review["league"], review["season"], day, review["home"], review["away"],
                         None, review["source_url"], checked.isoformat())["event_id"]
             if (day == review["original_date"] and alias != event_id) or alias in result:
-                raise ValueError("Invalid or ambiguous interrupted fixture identity")
-            result[alias] = review
+                raise ValueError("Invalid or ambiguous held fixture identity")
+            result[alias] = dict(review, reviewed_start_utc=resume.isoformat())
     return result
 
 
-def defer_interrupted_history(frame, interruptions, now):
+def defer_held_history(frame, held_fixtures, now):
     clock = timestamp(now)
     pending = {
-        identity for identity, review in interruptions.items()
-        if timestamp(review["checked_at_utc"]) <= clock < timestamp(review["resume_at_utc"])
+        identity for identity, review in held_fixtures.items()
+        if timestamp(review["checked_at_utc"]) <= clock < timestamp(review["reviewed_start_utc"])
     }
     return frame.loc[~(frame["event_id"].isin(pending) & frame["status"].ne("final"))]

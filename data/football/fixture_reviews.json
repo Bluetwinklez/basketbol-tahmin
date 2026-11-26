@@ -846,6 +846,20 @@
       "checked_at_utc": "2026-11-26T15:13:12.741300+00:00",
       "status": "quarantined_date_conflict",
       "note": "Liga Portugal round 2 final was played on 19 October, verified against ESPN 401885480 and the licensed 1-2 result. Original forecast settlement still requires timing review."
+    },
+    "PT1_9b0e6d26cf6a6d2755352ce0": {
+      "status": "postponed_pending_review",
+      "league": "PT1",
+      "season": "2026-27",
+      "home": "gd estoril praia",
+      "away": "cs maritimo",
+      "original_date": "2026-11-08",
+      "rescheduled_start_utc": "2027-01-04T20:15:00+00:00",
+      "checked_at_utc": "2026-11-26T15:17:26.684230+00:00",
+      "source_url": "https://www.espn.com/soccer/game/_/gameId/401885400",
+      "postponement_source_url": "https://www.ligaportugal.pt/news/29049/nota-de-imprensa",
+      "reschedule_source_url": "https://csmaritimo.pt/noticias/estoril-praia-x-cs-maritimo-reagendado-para-4-de-janeiro",
+      "note": "Round 11 was postponed before kickoff. The club and independent fixture check agree on 4 January; both archive dates remain held until result and timing review."
     }
   }
 }

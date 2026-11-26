@@ -31,6 +31,7 @@ function render() {
     if (league && f.league !== league) continue;
     const reviewRequired = item.status === 'fixture_review_required';
     const interrupted = item.fixture_review?.status === 'interrupted_pending_review';
+    const postponed = item.fixture_review?.status === 'postponed_pending_review';
     if (status && !(status === 'pending' ? !item.result : item.status === status)) continue;
     if (search && !`${f.home_name} ${f.away_name}`.toLocaleLowerCase().includes(search)) continue;
     const {home, draw, away} = p.probabilities;
@@ -38,13 +39,13 @@ function render() {
     const pickLabel = {home: 'Home', draw: 'Draw', away: 'Away'}[topPick];
     const [chance, chanceProbability] = mostLikely([['1X', home + draw], ['X2', draw + away], ['12', home + away]]);
     const card = el('article'); card.className = 'forecast-card match-card'; card.dataset.event = f.event_id || `${f.league}:${f.date}:${f.home_name}`;
-    card.append(el('small', `${f.league} · ${f.date}${reviewRequired ? ' · disputed original date' : f.verified_start_utc ? ` · confirmed kickoff ${f.verified_start_utc}` : ' · time unavailable'}`), el('h2', `${f.home_name} - ${f.away_name}`),
+    card.append(el('small', `${f.league} · ${f.date}${postponed ? ' · postponed fixture' : reviewRequired ? ' · disputed original date' : f.verified_start_utc ? ` · confirmed kickoff ${f.verified_start_utc}` : ' · time unavailable'}`), el('h2', `${f.home_name} - ${f.away_name}`),
       el('p', `Expected goals ${p.expected_home_goals.toFixed(2)} - ${p.expected_away_goals.toFixed(2)}`),
       el('p', `Top pick: ${pickLabel} · Draw ${pct(draw)}`),
       el('p', `Home ${pct(home)} · Away ${pct(away)} · Best double chance: ${chance} ${pct(chanceProbability)}`),
       el('p', `Over 1.5 ${pct(p.over['1.5'])} · Over 2.5 ${pct(p.over['2.5'])} · Over 3.5 ${pct(p.over['3.5'])}`),
       el('p', `Both teams score ${pct(p.both_teams_score)} · Total 80% range ${p.total_goals_80.join('-')}`),
-      el('p', reviewRequired ? interrupted ? `Match interrupted · scheduled to resume ${item.fixture_review.resume_at_utc}. Result pending review.` : `Review required · fixture date conflict. Provider start: ${item.fixture_review?.observed_start_utc || 'unavailable'}. Original forecast retained; result scoring withheld.` : item.result ? `Community final ${item.result.actual_home}-${item.result.actual_away}; outcome ${item.result.winner_correct ? 'correct' : 'incorrect'}; total error ${item.result.total_absolute_error.toFixed(2)}; margin error ${item.result.margin_absolute_error.toFixed(2)}` : 'Pending · no final result'));
+      el('p', reviewRequired ? interrupted ? `Match interrupted · scheduled to resume ${item.fixture_review.resume_at_utc}. Result pending review.` : postponed ? `Match postponed · rescheduled kickoff ${item.fixture_review.rescheduled_start_utc}. Result pending review.` : `Review required · fixture date conflict. Provider start: ${item.fixture_review?.observed_start_utc || 'unavailable'}. Original forecast retained; result scoring withheld.` : item.result ? `Community final ${item.result.actual_home}-${item.result.actual_away}; outcome ${item.result.winner_correct ? 'correct' : 'incorrect'}; total error ${item.result.total_absolute_error.toFixed(2)}; margin error ${item.result.margin_absolute_error.toFixed(2)}` : 'Pending · no final result'));
     if (reviewRequired && ((interrupted && /^https:\/\/www\.laliga\.com\/partido\//.test(item.fixture_review?.source_url || '')) || /^https:\/\/www\.espn\.com\/soccer\/game\//.test(item.fixture_review?.source_url || ''))) {
       const reviewLink = el('a', 'Fixture review source'); reviewLink.href = item.fixture_review.source_url;
       reviewLink.target = '_blank'; reviewLink.rel = 'noopener noreferrer'; card.append(reviewLink);
