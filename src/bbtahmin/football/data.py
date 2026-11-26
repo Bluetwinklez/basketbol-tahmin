@@ -217,6 +217,16 @@ def load(root=ROOT,include_licensed=True):
             from .licensed import merge
             rows=merge(rows,overlays)
     frame=pd.DataFrame(rows)
+    review_path=Path(root)/'fixture_reviews.json'
+    if len(frame) and include_licensed and review_path.exists():
+        from .health import interrupted_reviews
+        review_file=json.loads(review_path.read_text(encoding='utf8'))
+        if review_file.get('spec')!='football-fixture-reviews-v1' or not isinstance(review_file.get('reviews'),dict):
+            raise ValueError('Invalid fixture review registry')
+        interrupted=interrupted_reviews(review_file['reviews'])
+        held=frame.event_id.isin(interrupted)
+        frame.loc[held,'status']='unverified'
+        frame.loc[held,['home_goals','away_goals']]=None
     if len(frame):
         if frame.event_id.duplicated().any(): raise ValueError('Duplicate archive fixtures')
         if frame.duplicated(['league','date','home','away']).any():

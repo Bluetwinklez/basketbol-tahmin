@@ -295,3 +295,20 @@ yapılmadan sonuçlandırılmasını engellemek üzere tutulur.
 - Premier League: https://www.premierleague.com/ar/news/4725630
 - Brentford resmî sonuçları: https://www.brentfordfc.com/en/matches/mens/results/premier-league
 - Bağımsız final: https://www.espn.com/soccer/game/_/gameId/401879237
+
+## Yarıda kalan Rayo Vallecano–Athletic Club maçı
+
+Athletic Club, 10 Ekim 2026'da maçın yarıda kaldığını duyurdu.
+LaLiga aynı sezon ve 8. hafta maçını 9 Aralık saat 20.00 Madrid
+(19.00 UTC) için gösteriyor. İnceleme kaydı eski tarih ve devam
+tarihiyle üretilen arşiv kimliklerini kapsar.
+
+Sadece doğrulamanın ardından ve devam saati gelene kadar bu maç,
+diğer fikstürlerin eksik geçmiş kontrolünü bloke etmez. Bu süre
+bittiğinde sonuç hâlâ incelenmediyse eksik geçmiş engeli geri gelir.
+Her iki kimlik için yeni tahmin, eğitim skoru ve sonuçlandırma açık
+inceleme tamamlanana kadar bekler. Devam zamanı yeni bir başlangıç
+olarak kullanılamaz. Kaynak arşiv ve kaydedilmiş tahminler değişmez.
+
+- Athletic Club: https://www.athletic-club.eus/en/news/2026/10/10/the-athletic-club-squad-returns-to-bilbao/
+- LaLiga: https://www.laliga.com/partido/temporada-2026-2027-laliga-ea-sports-rayo-vallecano-athletic-club-8

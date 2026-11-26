@@ -5,6 +5,8 @@ conservative diagnostics never certify calendar completeness or model accuracy.
 """
 import pandas as pd
 
+from ..quality import timestamp
+
 
 def assess(frame, fixture, now, max_age_days=30):
     clock = pd.Timestamp(now)
@@ -59,3 +61,36 @@ def inventory(frame, now):
                          completeness_verified=False))
     return dict(checked_at_utc=clock.isoformat(), leagues=rows,
                 note='Observed source rows only; absent fixtures cannot be discovered from this archive alone.')
+
+
+def interrupted_reviews(reviews):
+    """Index both archive IDs for explicitly reviewed interrupted fixtures."""
+    from .data import row
+
+    result = {}
+    for event_id, review in reviews.items():
+        if review.get("status") != "interrupted_pending_review":
+            continue
+        resume = timestamp(review["resume_at_utc"])
+        checked = timestamp(review["checked_at_utc"])
+        resume_day = resume.strftime("%Y-%m-%d")
+        if not (review["original_date"] < resume_day and pd.Timestamp(review["original_date"], tz="UTC") <= checked < resume):
+            raise ValueError("Interruption requires observed review before future resumption")
+        if not review["source_url"].startswith("https://") or not review["interruption_source_url"].startswith("https://"):
+            raise ValueError("Official interruption and resumption evidence required")
+        for day in (review["original_date"], resume_day):
+            alias = row(review["league"], review["season"], day, review["home"], review["away"],
+                        None, review["source_url"], checked.isoformat())["event_id"]
+            if (day == review["original_date"] and alias != event_id) or alias in result:
+                raise ValueError("Invalid or ambiguous interrupted fixture identity")
+            result[alias] = review
+    return result
+
+
+def defer_interrupted_history(frame, interruptions, now):
+    clock = timestamp(now)
+    pending = {
+        identity for identity, review in interruptions.items()
+        if timestamp(review["checked_at_utc"]) <= clock < timestamp(review["resume_at_utc"])
+    }
+    return frame.loc[~(frame["event_id"].isin(pending) & frame["status"].ne("final"))]

@@ -8,6 +8,7 @@ import pandas as pd
 from .data import ROOT, load, write_json
 from .model import GoalModel, metrics, score
 from .health import assess as assess_history
+from .health import defer_interrupted_history, interrupted_reviews
 
 
 def digest(payload):
@@ -37,6 +38,7 @@ def run(days=7, output='rapor/football', root=ROOT, now=None, model_variant=None
         if review_file.get('spec')!='football-fixture-reviews-v1' or not isinstance(review_file.get('reviews'),dict):
             raise ValueError('Invalid fixture review registry')
         reviews=review_file['reviews']
+    interrupted=interrupted_reviews(reviews)
     forecasts=[]; skipped=[]; models={}
     known_provider={}
     for existing in sorted(ledger.glob('*.json')):
@@ -73,7 +75,7 @@ def run(days=7, output='rapor/football', root=ROOT, now=None, model_variant=None
     known_future={identity for identity,check in confirmations.items() if check['status'] in ('confirmed','date_conflict') and
                   check['observation']['status']=='scheduled' and pd.Timestamp(check['observation']['start_utc'])>now and
                   pd.Timestamp(check['observation']['captured_at'])<=now and now-pd.Timestamp(check['observation']['captured_at'])<=pd.Timedelta(hours=24)}
-    health_frame=frame.loc[~frame.event_id.isin(known_future)]
+    health_frame=defer_interrupted_history(frame.loc[~frame.event_id.isin(known_future - interrupted.keys())], interrupted, now)
     archive_sha=digest(frame.to_json(orient='records'))
     from ..prospective import fingerprint
     code_sha=fingerprint()
@@ -82,7 +84,7 @@ def run(days=7, output='rapor/football', root=ROOT, now=None, model_variant=None
         path=ledger/(g['event_id']+'.json')
         if path.exists(): continue
         try:
-            if g['event_id'] in reviews:
+            if g['event_id'] in reviews or g['event_id'] in interrupted:
                 raise ValueError('Fixture date/identity is quarantined; original record retained for review')
             # A future fixture is valid only if actually captured before its date.
             if not require_fixture_confirmation and g['captured_at_utc'][:10]>=g['date']: raise ValueError('Not a pregame source capture')
@@ -143,8 +145,9 @@ def run(days=7, output='rapor/football', root=ROOT, now=None, model_variant=None
             if pd.Timestamp(record['recorded_at_utc'])>=pd.Timestamp(fixture['verified_start_utc']):raise ValueError('Forecast was not recorded before verified kickoff')
         elif record['recorded_at_utc'][:10]>=fixture['date']: raise ValueError('Forecast was not recorded before fixture date')
         # Community scores are explicitly separate from official verification.
-        review=reviews.get(fixture['event_id'])
-        if review and fixture.get('verified_start_utc') and pd.Timestamp(fixture['verified_start_utc'])==pd.Timestamp(review['observed_start_utc']) and fixture['date']==review['observed_start_utc'][:10]:
+        hold=interrupted.get(fixture['event_id']) or (interrupted.get(g['event_id']) if g else None)
+        review=hold or reviews.get(fixture['event_id'])
+        if review and not hold and fixture.get('verified_start_utc') and pd.Timestamp(fixture['verified_start_utc'])==pd.Timestamp(review['observed_start_utc']) and fixture['date']==review['observed_start_utc'][:10]:
             review=None  # This new immutable record already used the checked time.
         if g and g['status']=='final' and g['date']<today and not review:
             if any(g[k]!=fixture[k] for k in ('home','away','date','league')): raise ValueError('Result identity mismatch')

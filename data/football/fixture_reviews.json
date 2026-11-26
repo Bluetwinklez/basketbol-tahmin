@@ -798,6 +798,19 @@
       "checked_at_utc": "2026-11-26T14:54:44.238671+00:00",
       "status": "quarantined_date_conflict",
       "note": "Training result verified at corrected date; original forecast settlement still requires timing review."
+    },
+    "ES1_84277c539b32178541875aac": {
+      "status": "interrupted_pending_review",
+      "league": "ES1",
+      "season": "2026-27",
+      "home": "rayo vallecano de madrid",
+      "away": "athletic club",
+      "original_date": "2026-10-10",
+      "resume_at_utc": "2026-12-09T19:00:00Z",
+      "checked_at_utc": "2026-11-26T14:58:07.081893+00:00",
+      "source_url": "https://www.laliga.com/partido/temporada-2026-2027-laliga-ea-sports-rayo-vallecano-athletic-club-8",
+      "interruption_source_url": "https://www.athletic-club.eus/en/news/2026/10/10/the-athletic-club-squad-returns-to-bilbao/",
+      "note": "Interrupted after kickoff. The continuation is not a new pregame fixture. Hold forecasts, scoring and training until explicit review."
     }
   }
 }
