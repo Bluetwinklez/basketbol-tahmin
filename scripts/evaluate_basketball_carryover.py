@@ -78,10 +78,10 @@ def choose(frame, target):
     return selected, prior, options
 
 
-def paired_rows(frame, league, selected):
+def paired_rows(frame, league, selected, candidate_name="prior_selected"):
     rows = []
     for _, game in frame.iterrows():
-        for name, shrinkage in (("reference", DEFAULT), ("prior_selected", selected)):
+        for name, shrinkage in (("reference", DEFAULT), (candidate_name, selected)):
             p = float(game[shrinkage])
             rows.append(dict(
                 event_id=f"{league}:{game['mac_id']}", day=game["day"].strftime("%Y-%m-%d"),
@@ -91,7 +91,7 @@ def paired_rows(frame, league, selected):
     return rows
 
 
-def summarize(rows):
+def summarize(rows, candidate_name="prior_selected"):
     result = {}
     cohorts = {
         "all": rows,
@@ -103,8 +103,8 @@ def summarize(rows):
         if not group:
             result[name] = None
             continue
-        summary = paired(group, "reference", "prior_selected", replicates=2000)
-        for variant in ("reference", "prior_selected"):
+        summary = paired(group, "reference", candidate_name, replicates=2000)
+        for variant in ("reference", candidate_name):
             part = [r for r in group if r["variant"] == variant]
             p = [r["p"] for r in part]
             stats = metrics([r["y"] for r in part], p, [max(prob) >= .65 for prob in p])
@@ -113,10 +113,53 @@ def summarize(rows):
     return result
 
 
+def aba_replication():
+    """Apply the fixed ABA setting beyond the seasons that selected it."""
+    league, candidate, name = "ABA", .05, "fixed_005"
+    games, hashes = load(league)
+    valid = ~games["mac_id"].isin(FORFEIT_GAMES)
+    frame = scored_fixtures(games.loc[valid].reset_index(drop=True))
+    cohorts = {
+        "older": [f"{year}-{(year + 1) % 100:02}" for year in range(2017, 2023)],
+        "recent_prior": ["2023-24", "2024-25", "2025-26"],
+        "partial": ["2026-27"],
+    }
+    reports = {}
+    prior_rows = []
+    for cohort, seasons in cohorts.items():
+        groups = {}
+        for season in seasons:
+            fixtures = frame.loc[frame["sezon"].eq(season)]
+            if fixtures.empty:
+                raise ValueError(f"Missing ABA replication season {season}")
+            groups[season] = paired_rows(fixtures, league, candidate, name)
+        rows = [r for season_rows in groups.values() for r in season_rows]
+        reports[cohort] = {
+            "seasons": {season: summarize(rows, name) for season, rows in groups.items()},
+            "results": summarize(rows, name),
+        }
+        if cohort != "partial":
+            prior_rows.extend(rows)
+    if any(hashlib.sha256(Path(p).read_bytes()).hexdigest() != h for p, h in hashes.items()):
+        raise ValueError("ABA archive changed during replication")
+    return {
+        "evidence_kind": "exploratory_retrospective",
+        "hypothesis_origin": "2026-27 partial ABA data already inspected",
+        "league": league, "candidate_shrinkage": candidate, "baseline_shrinkage": DEFAULT,
+        "early_days": EARLY_DAYS, "input_sha256": hashes,
+        "excluded_forfeits": int((~valid).sum()), "cohorts": reports,
+        "all_prior": summarize(prior_rows, name),
+    }
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--output", type=Path, required=True)
+    parser.add_argument("--aba-replication", action="store_true", help="Compare fixed 0.05 and 0.25 in ABA")
     args = parser.parse_args()
+    if args.aba_replication:
+        args.output.write_text(json.dumps(aba_replication(), indent=2, allow_nan=False) + "\n", encoding="utf-8")
+        return
     leagues = {}
     pooled = {target: [] for target in TARGETS}
     for league in LEAGUES:
