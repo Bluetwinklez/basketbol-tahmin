@@ -1,6 +1,6 @@
 # Live forecast scorecard
 
-Data cutoff (UTC) **2026-11-26T15:29:04.742831+00:00**.
+Data cutoff (UTC) **2026-11-26T17:16:39.684351+00:00**.
 
 ## Definitions
 
@@ -17,7 +17,7 @@ Data cutoff (UTC) **2026-11-26T15:29:04.742831+00:00**.
 
 ## Basketball
 
-Ledger cutoff (UTC) **2026-11-26T15:28:11.653202+00:00**.
+Ledger cutoff (UTC) **2026-11-26T17:16:02.695083+00:00**.
 Class order is home, away.
 
 | League | Forecast | n | Accuracy (95% CI) | Log loss (95% CI) | Brier (95% CI) |
@@ -102,7 +102,7 @@ Class order is home, away.
 
 ## Football
 
-Ledger cutoff (UTC) **2026-11-26T15:29:04.742831+00:00**.
+Ledger cutoff (UTC) **2026-11-26T17:16:39.684351+00:00**.
 Class order is home, draw, away.
 Excluded 128 publisher finals without a verified kickoff timestamp.
 Kickoff exclusions by league (DE1 15, EN1 16, EN2 19, ES1 7, FR1 11, IT1 27, NL1 15, PT1 13, TR1 5).
