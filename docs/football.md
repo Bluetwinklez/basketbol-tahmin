@@ -278,3 +278,20 @@ frozen forecast. The latest refresh report still lists 14 unavailable football
 source/season combinations, an NBA HTTP 403, and an automatically disabled PBA
 source. Main already includes the subsequent NBA known-blocked classification;
 classifying an access restriction does not restore data coverage.
+
+## Brentford–Everton tarih ve skor düzeltmesi
+
+26 Kasım 2026. CC0 temel arşivde 21 Kasım tarihli Brentford–Everton
+kaydı tamamlanmamış görünüyordu. Premier League tarih değişikliğini,
+Brentford resmî sonuç listesi 23 Kasım tarihini ve 4–0 sonucunu doğruluyor.
+CC BY-SA skor matrisi ile bağımsız yayıncıdaki 23 Kasım 20:00 UTC
+başlangıcı ve 4–0 finali aynı sıralı takım kimlikleriyle eşleşti.
+
+Eğitimde kullanılan lisanslı katman doğrulanmış tarihe bir sonuç ekler.
+Temel arşiv, olay kimliği ve geçmiş tahmin dosyaları korunur.
+Fikstür inceleme kaydı, eski tarihe dayalı tahminlerin zaman kontrolü
+yapılmadan sonuçlandırılmasını engellemek üzere tutulur.
+
+- Premier League: https://www.premierleague.com/ar/news/4725630
+- Brentford resmî sonuçları: https://www.brentfordfc.com/en/matches/mens/results/premier-league
+- Bağımsız final: https://www.espn.com/soccer/game/_/gameId/401879237
