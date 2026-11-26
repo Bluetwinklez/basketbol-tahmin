@@ -42,6 +42,7 @@ Guide to the documents under `docs/` and the `docs/kanit/` evidence directory. F
 - [football-double-chance.md](football-double-chance.md) — Display-only football draw and double-chance (`1X`/`X2`/`12`) views in the local board, Markdown table and CSV export (`prob_1x`, `prob_x2`, `prob_12`) without altering models or frozen forecasts.
 - [Football draw research](kanit/improvement/football-draw-experiment.md) — Chronological comparison of alternative draw forecasts.
 - [Premier League promotion prior](kanit/improvement/football-promoted-prior.md) — Chronological comparison of a common promoted-club adjustment and club-specific Championship transfer.
+- [Football refit frequency](kanit/improvement/football-refit-cadence.md) — Daily, weekly and monthly fitting compared at matching one- and seven-day forecast leads.
 
 ## Data sources, audits and roadmap
 
