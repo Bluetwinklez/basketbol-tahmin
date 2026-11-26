@@ -1,5 +1,6 @@
 """Write the football calibration report from the local live scorecard inputs."""
 
+import hashlib
 import json
 import sys
 from pathlib import Path
@@ -12,12 +13,17 @@ def run(root, output):
 
     ledger = root / "data/football_ledger"
     snapshot = ledger / "latest.json"
+    paths = sorted((ledger / "forecasts").glob("*.json"))
     report = build_report(
-        [_read(path) for path in sorted((ledger / "forecasts").glob("*.json"))],
+        [_read(path) for path in paths],
         _read(snapshot) if snapshot.exists() else None,
         (.5, .6, *TEMPERATURES),
         temperature,
     )
+    report["input_sha256"] = {
+        path.relative_to(root).as_posix(): hashlib.sha256(path.read_bytes()).hexdigest()
+        for path in [*paths, *([snapshot] if snapshot.exists() else [])]
+    }
     output.mkdir(parents=True, exist_ok=True)
     (output / "report.json").write_text(
         json.dumps(report, ensure_ascii=False, indent=2, allow_nan=False) + "\n", encoding="utf-8"

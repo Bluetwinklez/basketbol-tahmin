@@ -101,6 +101,10 @@ def test_local_ledgers_are_deterministic_and_use_frozen_market_fields(tmp_path):
     assert report == run(tmp_path, output)
     assert original == [path.read_bytes() for path in files]
 
+    import hashlib
+    assert report["input_sha256"]["data/football_ledger/latest.json"] == hashlib.sha256(
+        (ledger / "latest.json").read_bytes()).hexdigest()
+    assert len(report["input_sha256"]) == 5
     assert report["n"] == 2
     assert report["exclusions"]["publisher_finals_without_verified_kickoff"] == 1
     assert report["exclusions"]["fixture_review"] == 1
@@ -126,3 +130,36 @@ def test_local_ledgers_are_deterministic_and_use_frozen_market_fields(tmp_path):
         assert market["candidate"]["hit_rate"] == 1
         assert market["candidate"]["log_loss"] == pytest.approx(-np.log(.8))
         assert market["candidate"]["brier"] == pytest.approx(.04)
+        assert market["probability_coverage"] == .5
+        assert market["reliability"]["ece"] == pytest.approx(.2)
+        assert market["reliability"]["bins"][8]["n"] == 1
+    assert "Ten-bin ECE" in rendered
+    assert "Descriptive ten-bin" in rendered
+
+
+@pytest.mark.parametrize(("probabilities", "outcomes", "expected_ece", "expected_coverage"), [
+    ([0., .5, 1., None], [False, True, True, False], 1/6, .75),
+    ([.2, .2, .2, .8], [False, False, True, True], .15, 1.),
+    ([None], [True], None, 0.),
+    ([], [], None, None),
+])
+def test_binary_calibration_uses_only_available_frozen_probabilities(
+    probabilities, outcomes, expected_ece, expected_coverage,
+):
+    from bbtahmin.football_calibration_report import _binary_market
+    games = [game(i, 1, 2, 0) for i in range(len(probabilities))]
+    report = _binary_market(games, probabilities, outcomes)
+    bins = report["reliability"]["bins"]
+    assert sum(row["n"] for row in bins) == report["n"]
+    assert report["eligible_games"] == len(games)
+    assert report["probability_coverage"] == expected_coverage
+    if expected_ece is None:
+        assert report["reliability"]["ece"] is None
+    else:
+        assert report["reliability"]["ece"] == pytest.approx(expected_ece)
+    if probabilities and probabilities[0] == 0.:
+        assert [bins[i]["n"] for i in (0, 5, 9)] == [1, 1, 1]
+        assert bins[5]["forecast_mean"] == .5
+        assert bins[5]["observed_frequency"] == 1.
+    assert all(row["forecast_mean"] is None and row["observed_frequency"] is None
+               for row in bins if not row["n"])
