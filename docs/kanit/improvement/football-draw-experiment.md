@@ -45,3 +45,23 @@ beraberlik çarpanını da geçmesi istendi.
   maç öncesi model olasılıklarıyla belirlendi.
 - Dokuz ligin hiçbiri ikinci bölümde seçim koşullarını geçmedi. Aynı geçmiş
   hedef sezon yeniden kullanıldığı için iki deney de keşif niteliğindedir.
+
+## Rakip gücünü hesaba katan model, sonraki arşiv dönemi
+
+Sonraki sezon arşivindeki 1.052 maç (7 Ağustos–24 Kasım 2026, 74 farklı
+gün) üzerinde mevcut sabit rakip gücü modelini yeniden ayarlamadan
+karşılaştırdık. Her hedef ay boyunca iki model de ay başlamadan önceki
+sonuçlarla eğitildi.
+
+| Yöntem | Doğru | İsabet | Log loss | Brier |
+| --- | ---: | ---: | ---: | ---: |
+| Poisson | 531 | %50,48 | 1,01045 | 0,60403 |
+| Rakip gücü | 544 | %51,71 | 0,99680 | 0,59457 |
+
+İsabet farkı +1,24 yüzde puanı, %95 gün bloklu aralık [−0,50; +3,15].
+Log loss farkı −0,01365, aralık [−0,01879; −0,00846].
+Brier farkı −0,00946, aralık [−0,01311; −0,00575]. İsabet için aralık
+sıfırı içeriyor ve ligler arasında fark var. Bu, daha sonraki bir arşiv
+karşılaştırmasıdır. Maç öncesi yayımlanmış eşli tahminlerin yerine geçmez.
+
+`python -m scripts.evaluate_football_opponent_followup --output football-opponent-result.json`
