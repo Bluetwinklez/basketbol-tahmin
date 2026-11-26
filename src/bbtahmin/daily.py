@@ -10,6 +10,7 @@ import json
 import sys
 from pathlib import Path
 from tempfile import NamedTemporaryFile
+from uuid import uuid4
 
 import pandas as pd
 
@@ -274,10 +275,22 @@ def run(leagues=LEAGUES, output='rapor/daily', update=False, hours=48, threshold
     report['note'] = ('Model probabilities are not measured accuracy. Rejected/low-probability forecasts remain visible. '
                       'Only source-confirmed timestamped finals settle. No live predictor. Small batches do not establish general accuracy.')
     stamp = pd.Timestamp.now(tz='UTC').strftime('%Y%m%dT%H%M%S%fZ')
-    with (root / f'check_{stamp}.json').open('x',encoding='utf8') as stream:
-        json.dump(report, stream, ensure_ascii=False, indent=2, allow_nan=False)
+    write_check(root, stamp, report)
     (root / 'latest.md').write_text(markdown(report), encoding='utf8')
     return report
+
+
+def write_check(root, stamp, report):
+    payload = json.dumps(report, ensure_ascii=False, indent=2, allow_nan=False)
+    path = root / f'check_{stamp}.json'
+    try:
+        stream = path.open('x', encoding='utf8')
+    except FileExistsError:
+        # Distinct runs can share a timestamp on hosts with a coarse clock.
+        path = root / f'check_{stamp}_{uuid4().hex}.json'
+        stream = path.open('x', encoding='utf8')
+    with stream:
+        stream.write(payload)
 
 
 def markdown(report):

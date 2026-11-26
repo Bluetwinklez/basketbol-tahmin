@@ -202,3 +202,13 @@ def test_daily_euroleague_source_failure_blocks_new_forecast_and_preserves_exist
         for item in failed['skipped']
     )
     assert 'HTTP 503' in Path('rapor/daily/latest.md').read_text(encoding='utf8')
+
+
+def test_check_reports_preserve_two_runs_at_the_same_timestamp(tmp_path):
+    stamp = '20261126T120000000000Z'
+    daily.write_check(tmp_path, stamp, {'run': 1})
+    daily.write_check(tmp_path, stamp, {'run': 2})
+    reports = sorted(tmp_path.glob('check_*.json'))
+    assert len(reports) == 2
+    assert json.loads(reports[0].read_text(encoding='utf8')) == {'run': 1}
+    assert json.loads(reports[1].read_text(encoding='utf8')) == {'run': 2}
