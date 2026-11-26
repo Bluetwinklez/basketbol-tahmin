@@ -1,0 +1,126 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-11-26T15:12:27.802887+00:00",
+  "fixture": {
+    "event_id": "TR1_ece6663d322b3badd2fb8f3e",
+    "league": "TR1",
+    "season": "2026-27",
+    "date": "2026-11-30",
+    "home": "besiktas",
+    "away": "galatasaray",
+    "home_name": "Beşiktaş",
+    "away_name": "Galatasaray",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/europe/blob/63df627f3c87ce71708f016522ea236cf74332c3/turkey/2026-27_tr1.txt",
+    "captured_at_utc": "2026-11-26T15:12:23.502669+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null,
+    "original_date": null,
+    "date_correction_verified": null,
+    "license_url": null,
+    "source_sha256": null,
+    "fixture_verification_url": null,
+    "actual_start_utc": null,
+    "official_result_url": null,
+    "source_original_date": "2026-11-29",
+    "verified_start_utc": "2026-11-30T18:00:00+00:00",
+    "independent_fixture": {
+      "provider_event_id": "401888237",
+      "league": "TR1",
+      "season_year": 2026,
+      "start_utc": "2026-11-30T18:00:00+00:00",
+      "captured_at": "2026-11-26T14:39:56.240078+00:00",
+      "home_name": "Besiktas",
+      "away_name": "Galatasaray",
+      "provider_home_id": "1895",
+      "provider_away_id": "432",
+      "source_url": "https://www.espn.com/soccer/game/_/gameId/401888237",
+      "status": "scheduled",
+      "event_id": "TR1_ece6663d322b3badd2fb8f3e",
+      "home": "besiktas",
+      "away": "galatasaray"
+    }
+  },
+  "prediction": {
+    "model": "football-opponent-v1",
+    "league": "TR1",
+    "home": "besiktas",
+    "away": "galatasaray",
+    "expected_home_goals": 1.6873343166636385,
+    "expected_away_goals": 1.6458909096366445,
+    "probabilities": {
+      "home": 0.39423617423759716,
+      "draw": 0.22890904707709261,
+      "away": 0.3768547786853101
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.8453998396435558,
+      "2.5": 0.6472024174940428,
+      "3.5": 0.426990201728562
+    },
+    "both_teams_score": 0.6578251167655993,
+    "total_goals_80": [
+      1,
+      6
+    ],
+    "training_cutoff_exclusive": "2026-11-26",
+    "training_games": 796,
+    "prior_team_games": {
+      "besiktas": 83,
+      "galatasaray": 83
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "settings": {
+      "half_life_days": 180.0,
+      "shrinkage_games": 8.0,
+      "window_days": 1095
+    },
+    "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+    "low_score_rho": 0.0,
+    "research_candidate": false
+  },
+  "archive_sha256": "5144eee0b06b10b855186672f8cf75720ac703bdee17a2d2bcc8929902bdcbc4",
+  "source_code_sha256": "e3e1c78c693680e35d3f2f91504853f1e3dd016eeed4ab35bedfaf6f13278a26",
+  "requested_model_variant": "opponent",
+  "history_health": {
+    "spec": "football-history-health-v1",
+    "checked_at_utc": "2026-11-26T15:12:25.398864+00:00",
+    "information_cutoff_exclusive": "2026-11-26",
+    "teams": {
+      "besiktas": {
+        "prior_finals": 204,
+        "active_season_finals": 12,
+        "last_final_date": "2026-11-22",
+        "days_since_last_final": 4,
+        "unresolved_past_fixture_ids": []
+      },
+      "galatasaray": {
+        "prior_finals": 204,
+        "active_season_finals": 12,
+        "last_final_date": "2026-11-21",
+        "days_since_last_final": 5,
+        "unresolved_past_fixture_ids": []
+      }
+    },
+    "diagnostic_gate_passed": true,
+    "blocking_issues": [],
+    "max_history_age_days": 30,
+    "calendar_completeness_verified": false,
+    "note": "Diagnostic policy, not a validated success threshold. Unresolved fixtures may be postponed or missing results. Fresh source captures do not make old histories current."
+  },
+  "selection_policy": "Current-history diagnostic gate plus existing model issues; research only, no validated recommendation.",
+  "payload_sha256": "b300537a8b5f456ab31b0e39d572312e33723be2eaf6492453138fec89114fa6"
+}

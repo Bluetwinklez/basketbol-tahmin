@@ -1,6 +1,6 @@
 # Daily basketball research
 
-Checked: 2026-11-26T14:39:49.205269+00:00
+Checked: 2026-11-26T15:15:59.527770+00:00
 
 | Tipoff (Istanbul) | League | Fixture | Score forecast | Home win | Data gate / probability filter |
 |---|---|---|---|---|---|

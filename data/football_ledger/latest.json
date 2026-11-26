@@ -1,7 +1,7 @@
 {
   "spec": "football-daily-v1",
-  "checked_at_utc": "2026-11-26T14:40:25.995575+00:00",
-  "collection_checked_at_utc": "2026-11-26T14:36:25.943165+00:00",
+  "checked_at_utc": "2026-11-26T15:17:07.793327+00:00",
+  "collection_checked_at_utc": "2026-11-26T15:12:23.502669+00:00",
   "source_errors": [
     {
       "league": "DE2",
@@ -6750,8 +6750,44 @@
         "research_candidate": false
       },
       "recorded_at_utc": "2026-11-17T16:26:39.668184+00:00",
-      "status": "pending",
-      "result": null,
+      "status": "publisher_final",
+      "result": {
+        "actual_home": 4,
+        "actual_away": 0,
+        "actual_outcome": "home",
+        "goal_markets": {
+          "over_1.5": {
+            "actual": true,
+            "correct": true,
+            "brier": 0.07610882685984623
+          },
+          "over_2.5": {
+            "actual": true,
+            "correct": false,
+            "brier": 0.2802415301838198
+          },
+          "over_3.5": {
+            "actual": true,
+            "correct": false,
+            "brier": 0.555638056805207
+          },
+          "both_teams_score": {
+            "actual": false,
+            "correct": false,
+            "brier": 0.2570769010694235
+          }
+        },
+        "winner_correct": true,
+        "home_absolute_error": 2.501816403523841,
+        "away_absolute_error": 1.0584171653296688,
+        "total_absolute_error": 1.4433992381941718,
+        "margin_absolute_error": 3.5602335688535094,
+        "total_in_80": true,
+        "log_loss": 0.7475672297633695,
+        "brier": 0.41581532417508565,
+        "verification": "community_source_final_not_official",
+        "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Premier_League"
+      },
       "fixture_review": null
     },
     {
@@ -9324,6 +9360,103 @@
     },
     {
       "fixture": {
+        "event_id": "EN1_c9160aa05f4d4c726114026e",
+        "league": "EN1",
+        "season": "2026-27",
+        "date": "2026-12-02",
+        "home": "brentford fc",
+        "away": "arsenal fc",
+        "home_name": "Brentford FC",
+        "away_name": "Arsenal FC",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/en.1.json",
+        "captured_at_utc": "2026-11-26T15:12:23.502669+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null,
+        "original_date": null,
+        "date_correction_verified": null,
+        "license_url": null,
+        "source_sha256": null,
+        "fixture_verification_url": null,
+        "actual_start_utc": null,
+        "official_result_url": null,
+        "source_original_date": "2026-12-02",
+        "verified_start_utc": "2026-12-02T20:15:00+00:00",
+        "independent_fixture": {
+          "provider_event_id": "401878750",
+          "league": "EN1",
+          "season_year": 2026,
+          "start_utc": "2026-12-02T20:15:00+00:00",
+          "captured_at": "2026-11-26T14:39:55.158556+00:00",
+          "home_name": "Brentford",
+          "away_name": "Arsenal",
+          "provider_home_id": "337",
+          "provider_away_id": "359",
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401878750",
+          "status": "scheduled",
+          "event_id": "EN1_c9160aa05f4d4c726114026e",
+          "home": "brentford fc",
+          "away": "arsenal fc"
+        }
+      },
+      "prediction": {
+        "model": "football-opponent-v1",
+        "league": "EN1",
+        "home": "brentford fc",
+        "away": "arsenal fc",
+        "expected_home_goals": 1.1228964129422099,
+        "expected_away_goals": 1.3343904700187845,
+        "probabilities": {
+          "home": 0.31386285067150105,
+          "draw": 0.2709147860469583,
+          "away": 0.4152223632815405
+        },
+        "predicted_outcome": "away",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.7038243946826928,
+          "2.5": 0.4451844519834231,
+          "3.5": 0.2333336057818569
+        },
+        "both_teams_score": 0.4970123126705021,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-11-26",
+        "training_games": 1121,
+        "prior_team_games": {
+          "brentford fc": 112,
+          "arsenal fc": 112
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+        "low_score_rho": 0.0,
+        "research_candidate": false
+      },
+      "recorded_at_utc": "2026-11-26T15:12:27.882218+00:00",
+      "status": "pending",
+      "result": null,
+      "fixture_review": null
+    },
+    {
+      "fixture": {
         "event_id": "EN1_cc4f54b81e55e89b34a61fdc",
         "league": "EN1",
         "season": "2026-27",
@@ -9682,6 +9815,103 @@
         "verification": "community_source_final_not_official",
         "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Premier_League"
       },
+      "fixture_review": null
+    },
+    {
+      "fixture": {
+        "event_id": "EN1_e20081e702db5b2026f21e68",
+        "league": "EN1",
+        "season": "2026-27",
+        "date": "2026-12-02",
+        "home": "aston villa fc",
+        "away": "everton fc",
+        "home_name": "Aston Villa FC",
+        "away_name": "Everton FC",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/en.1.json",
+        "captured_at_utc": "2026-11-26T15:12:23.502669+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null,
+        "original_date": null,
+        "date_correction_verified": null,
+        "license_url": null,
+        "source_sha256": null,
+        "fixture_verification_url": null,
+        "actual_start_utc": null,
+        "official_result_url": null,
+        "source_original_date": "2026-12-02",
+        "verified_start_utc": "2026-12-02T20:15:00+00:00",
+        "independent_fixture": {
+          "provider_event_id": "401878751",
+          "league": "EN1",
+          "season_year": 2026,
+          "start_utc": "2026-12-02T20:15:00+00:00",
+          "captured_at": "2026-11-26T14:39:55.158556+00:00",
+          "home_name": "Aston Villa",
+          "away_name": "Everton",
+          "provider_home_id": "362",
+          "provider_away_id": "368",
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401878751",
+          "status": "scheduled",
+          "event_id": "EN1_e20081e702db5b2026f21e68",
+          "home": "aston villa fc",
+          "away": "everton fc"
+        }
+      },
+      "prediction": {
+        "model": "football-opponent-v1",
+        "league": "EN1",
+        "home": "aston villa fc",
+        "away": "everton fc",
+        "expected_home_goals": 1.5756784812396092,
+        "expected_away_goals": 1.0934656011703425,
+        "probabilities": {
+          "home": 0.4850244505796858,
+          "draw": 0.2511551483189113,
+          "away": 0.2638204011014028
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.7456860286389997,
+          "2.5": 0.49878693601266,
+          "3.5": 0.27911718533399976
+        },
+        "both_teams_score": 0.5273910571571417,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-11-26",
+        "training_games": 1121,
+        "prior_team_games": {
+          "aston villa fc": 112,
+          "everton fc": 112
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+        "low_score_rho": 0.0,
+        "research_candidate": false
+      },
+      "recorded_at_utc": "2026-11-26T15:12:27.903277+00:00",
+      "status": "pending",
+      "result": null,
       "fixture_review": null
     },
     {
@@ -20748,6 +20978,103 @@
     },
     {
       "fixture": {
+        "event_id": "ES1_21e8b5cfa76a6292d942a075",
+        "league": "ES1",
+        "season": "2026-27",
+        "date": "2026-11-28",
+        "home": "real betis balompie",
+        "away": "rayo vallecano de madrid",
+        "home_name": "Real Betis Balompié",
+        "away_name": "Rayo Vallecano de Madrid",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/es.1.json",
+        "captured_at_utc": "2026-11-26T15:12:23.502669+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null,
+        "original_date": null,
+        "date_correction_verified": null,
+        "license_url": null,
+        "source_sha256": null,
+        "fixture_verification_url": null,
+        "actual_start_utc": null,
+        "official_result_url": null,
+        "source_original_date": "2026-11-29",
+        "verified_start_utc": "2026-11-28T13:00:00+00:00",
+        "independent_fixture": {
+          "provider_event_id": "401882796",
+          "league": "ES1",
+          "season_year": 2026,
+          "start_utc": "2026-11-28T13:00:00+00:00",
+          "captured_at": "2026-11-26T14:39:55.562698+00:00",
+          "home_name": "Real Betis",
+          "away_name": "Rayo Vallecano",
+          "provider_home_id": "244",
+          "provider_away_id": "101",
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401882796",
+          "status": "scheduled",
+          "event_id": "ES1_21e8b5cfa76a6292d942a075",
+          "home": "real betis balompie",
+          "away": "rayo vallecano de madrid"
+        }
+      },
+      "prediction": {
+        "model": "football-opponent-v1",
+        "league": "ES1",
+        "home": "real betis balompie",
+        "away": "rayo vallecano de madrid",
+        "expected_home_goals": 1.7643141757336482,
+        "expected_away_goals": 0.9695826466222168,
+        "probabilities": {
+          "home": 0.5606147604673924,
+          "draw": 0.2336953592716729,
+          "away": 0.20568988026093468
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          0
+        ],
+        "over": {
+          "1.5": 0.7574250173397504,
+          "2.5": 0.5146422034187812,
+          "3.5": 0.2933944822517303
+        },
+        "both_teams_score": 0.5144201227091569,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-11-26",
+        "training_games": 1122,
+        "prior_team_games": {
+          "real betis balompie": 112,
+          "rayo vallecano de madrid": 111
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+        "low_score_rho": 0.0,
+        "research_candidate": false
+      },
+      "recorded_at_utc": "2026-11-26T15:12:27.550309+00:00",
+      "status": "pending",
+      "result": null,
+      "fixture_review": null
+    },
+    {
+      "fixture": {
         "event_id": "ES1_29f888c6805f2ed64da60c46",
         "league": "ES1",
         "season": "2026-27",
@@ -21991,6 +22318,103 @@
         "research_candidate": false
       },
       "recorded_at_utc": "2026-11-23T18:40:39.585554+00:00",
+      "status": "pending",
+      "result": null,
+      "fixture_review": null
+    },
+    {
+      "fixture": {
+        "event_id": "ES1_6896cc6310a2b1ba70dee6b5",
+        "league": "ES1",
+        "season": "2026-27",
+        "date": "2026-11-28",
+        "home": "malaga cf",
+        "away": "athletic club",
+        "home_name": "Málaga CF",
+        "away_name": "Athletic Club",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/es.1.json",
+        "captured_at_utc": "2026-11-26T15:12:23.502669+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null,
+        "original_date": null,
+        "date_correction_verified": null,
+        "license_url": null,
+        "source_sha256": null,
+        "fixture_verification_url": null,
+        "actual_start_utc": null,
+        "official_result_url": null,
+        "source_original_date": "2026-11-29",
+        "verified_start_utc": "2026-11-28T15:15:00+00:00",
+        "independent_fixture": {
+          "provider_event_id": "401882790",
+          "league": "ES1",
+          "season_year": 2026,
+          "start_utc": "2026-11-28T15:15:00+00:00",
+          "captured_at": "2026-11-26T14:39:55.562698+00:00",
+          "home_name": "Málaga",
+          "away_name": "Athletic Club",
+          "provider_home_id": "99",
+          "provider_away_id": "93",
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401882790",
+          "status": "scheduled",
+          "event_id": "ES1_6896cc6310a2b1ba70dee6b5",
+          "home": "malaga cf",
+          "away": "athletic club"
+        }
+      },
+      "prediction": {
+        "model": "football-opponent-v1",
+        "league": "ES1",
+        "home": "malaga cf",
+        "away": "athletic club",
+        "expected_home_goals": 1.0381961135292685,
+        "expected_away_goals": 1.3004226973301516,
+        "probabilities": {
+          "home": 0.29697125775183236,
+          "draw": 0.27782938853526606,
+          "away": 0.42519935371290146
+        },
+        "predicted_outcome": "away",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.677954235925215,
+          "2.5": 0.4141755886301681,
+          "3.5": 0.20854968647441863
+        },
+        "both_teams_score": 0.4699513084302399,
+        "total_goals_80": [
+          1,
+          4
+        ],
+        "training_cutoff_exclusive": "2026-11-26",
+        "training_games": 1122,
+        "prior_team_games": {
+          "malaga cf": 13,
+          "athletic club": 112
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+        "low_score_rho": 0.0,
+        "research_candidate": false
+      },
+      "recorded_at_utc": "2026-11-26T15:12:27.571124+00:00",
       "status": "pending",
       "result": null,
       "fixture_review": null
@@ -43158,6 +43582,394 @@
     },
     {
       "fixture": {
+        "event_id": "TR1_56d4673507b428a9032b3ace",
+        "league": "TR1",
+        "season": "2026-27",
+        "date": "2026-11-27",
+        "home": "caykur rizespor",
+        "away": "kasimpasa",
+        "home_name": "Çaykur Rizespor",
+        "away_name": "Kasimpasa",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/europe/blob/63df627f3c87ce71708f016522ea236cf74332c3/turkey/2026-27_tr1.txt",
+        "captured_at_utc": "2026-11-26T15:12:23.502669+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null,
+        "original_date": null,
+        "date_correction_verified": null,
+        "license_url": null,
+        "source_sha256": null,
+        "fixture_verification_url": null,
+        "actual_start_utc": null,
+        "official_result_url": null,
+        "source_original_date": "2026-11-29",
+        "verified_start_utc": "2026-11-27T17:00:00+00:00",
+        "independent_fixture": {
+          "provider_event_id": "401888240",
+          "league": "TR1",
+          "season_year": 2026,
+          "start_utc": "2026-11-27T17:00:00+00:00",
+          "captured_at": "2026-11-26T14:39:56.193338+00:00",
+          "home_name": "Caykur Rizespor",
+          "away_name": "Kasimpasa",
+          "provider_home_id": "7656",
+          "provider_away_id": "6870",
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401888240",
+          "status": "scheduled",
+          "event_id": "TR1_56d4673507b428a9032b3ace",
+          "home": "caykur rizespor",
+          "away": "kasimpasa"
+        }
+      },
+      "prediction": {
+        "model": "football-opponent-v1",
+        "league": "TR1",
+        "home": "caykur rizespor",
+        "away": "kasimpasa",
+        "expected_home_goals": 1.359921431749193,
+        "expected_away_goals": 1.3145910147410116,
+        "probabilities": {
+          "home": 0.38072469523122876,
+          "draw": 0.25952790778020496,
+          "away": 0.35974739698856634
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.7466775232565525,
+          "2.5": 0.5001114869392914,
+          "3.5": 0.2802968426018681
+        },
+        "both_teams_score": 0.5436753414812132,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-11-26",
+        "training_games": 796,
+        "prior_team_games": {
+          "caykur rizespor": 84,
+          "kasimpasa": 84
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+        "low_score_rho": 0.0,
+        "research_candidate": false
+      },
+      "recorded_at_utc": "2026-11-26T15:12:27.659393+00:00",
+      "status": "pending",
+      "result": null,
+      "fixture_review": null
+    },
+    {
+      "fixture": {
+        "event_id": "TR1_58f28b86723d52568c188d29",
+        "league": "TR1",
+        "season": "2026-27",
+        "date": "2026-11-28",
+        "home": "gaziantep fk",
+        "away": "amed",
+        "home_name": "Gaziantep FK",
+        "away_name": "Amed",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/europe/blob/63df627f3c87ce71708f016522ea236cf74332c3/turkey/2026-27_tr1.txt",
+        "captured_at_utc": "2026-11-26T15:12:23.502669+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null,
+        "original_date": null,
+        "date_correction_verified": null,
+        "license_url": null,
+        "source_sha256": null,
+        "fixture_verification_url": null,
+        "actual_start_utc": null,
+        "official_result_url": null,
+        "source_original_date": "2026-11-29",
+        "verified_start_utc": "2026-11-28T16:00:00+00:00",
+        "independent_fixture": {
+          "provider_event_id": "401888368",
+          "league": "TR1",
+          "season_year": 2026,
+          "start_utc": "2026-11-28T16:00:00+00:00",
+          "captured_at": "2026-11-26T14:39:56.280807+00:00",
+          "home_name": "Gaziantep FK",
+          "away_name": "Amed SFK",
+          "provider_home_id": "20070",
+          "provider_away_id": "132335",
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401888368",
+          "status": "scheduled",
+          "event_id": "TR1_58f28b86723d52568c188d29",
+          "home": "gaziantep fk",
+          "away": "amed"
+        }
+      },
+      "prediction": {
+        "model": "football-opponent-v1",
+        "league": "TR1",
+        "home": "gaziantep fk",
+        "away": "amed",
+        "expected_home_goals": 1.2497609410246266,
+        "expected_away_goals": 1.877508718834738,
+        "probabilities": {
+          "home": 0.2538526432490905,
+          "draw": 0.22530820374177984,
+          "away": 0.5208391530091293
+        },
+        "predicted_outcome": "away",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.8190715393396418,
+          "2.5": 0.6047110644504022,
+          "3.5": 0.3812567279856811
+        },
+        "both_teams_score": 0.6042933036891682,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-11-26",
+        "training_games": 796,
+        "prior_team_games": {
+          "gaziantep fk": 83,
+          "amed": 12
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+        "low_score_rho": 0.0,
+        "research_candidate": false
+      },
+      "recorded_at_utc": "2026-11-26T15:12:27.677551+00:00",
+      "status": "pending",
+      "result": null,
+      "fixture_review": null
+    },
+    {
+      "fixture": {
+        "event_id": "TR1_5c5bf8aa8d6bdd7191dca036",
+        "league": "TR1",
+        "season": "2026-27",
+        "date": "2026-11-29",
+        "home": "fenerbahce",
+        "away": "bb erzurumspor",
+        "home_name": "Fenerbahçe",
+        "away_name": "BB Erzurumspor",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/europe/blob/63df627f3c87ce71708f016522ea236cf74332c3/turkey/2026-27_tr1.txt",
+        "captured_at_utc": "2026-11-26T15:12:23.502669+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null,
+        "original_date": null,
+        "date_correction_verified": null,
+        "license_url": null,
+        "source_sha256": null,
+        "fixture_verification_url": null,
+        "actual_start_utc": null,
+        "official_result_url": null,
+        "source_original_date": "2026-11-29",
+        "verified_start_utc": "2026-11-29T16:00:00+00:00",
+        "independent_fixture": {
+          "provider_event_id": "401888238",
+          "league": "TR1",
+          "season_year": 2026,
+          "start_utc": "2026-11-29T16:00:00+00:00",
+          "captured_at": "2026-11-26T14:39:56.259170+00:00",
+          "home_name": "Fenerbahce",
+          "away_name": "Erzurum BB",
+          "provider_home_id": "436",
+          "provider_away_id": "19267",
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401888238",
+          "status": "scheduled",
+          "event_id": "TR1_5c5bf8aa8d6bdd7191dca036",
+          "home": "fenerbahce",
+          "away": "bb erzurumspor"
+        }
+      },
+      "prediction": {
+        "model": "football-opponent-v1",
+        "league": "TR1",
+        "home": "fenerbahce",
+        "away": "bb erzurumspor",
+        "expected_home_goals": 2.372361657125045,
+        "expected_away_goals": 0.7937043962887792,
+        "probabilities": {
+          "home": 0.7251195561656067,
+          "draw": 0.16776308055153782,
+          "away": 0.10711736328285562
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          2,
+          0
+        ],
+        "over": {
+          "1.5": 0.824320480428557,
+          "2.5": 0.6129691769851091,
+          "3.5": 0.38991844792608765
+        },
+        "both_teams_score": 0.49674226150275996,
+        "total_goals_80": [
+          1,
+          6
+        ],
+        "training_cutoff_exclusive": "2026-11-26",
+        "training_games": 796,
+        "prior_team_games": {
+          "fenerbahce": 84,
+          "bb erzurumspor": 12
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+        "low_score_rho": 0.0,
+        "research_candidate": false
+      },
+      "recorded_at_utc": "2026-11-26T15:12:27.695534+00:00",
+      "status": "pending",
+      "result": null,
+      "fixture_review": null
+    },
+    {
+      "fixture": {
+        "event_id": "TR1_6a3a9b31f0af2b5822cb3290",
+        "league": "TR1",
+        "season": "2026-27",
+        "date": "2026-11-30",
+        "home": "goztepe",
+        "away": "trabzonspor",
+        "home_name": "Göztepe",
+        "away_name": "Trabzonspor",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/europe/blob/63df627f3c87ce71708f016522ea236cf74332c3/turkey/2026-27_tr1.txt",
+        "captured_at_utc": "2026-11-26T15:12:23.502669+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null,
+        "original_date": null,
+        "date_correction_verified": null,
+        "license_url": null,
+        "source_sha256": null,
+        "fixture_verification_url": null,
+        "actual_start_utc": null,
+        "official_result_url": null,
+        "source_original_date": "2026-11-29",
+        "verified_start_utc": "2026-11-30T16:00:00+00:00",
+        "independent_fixture": {
+          "provider_event_id": "401888239",
+          "league": "TR1",
+          "season_year": 2026,
+          "start_utc": "2026-11-30T16:00:00+00:00",
+          "captured_at": "2026-11-26T14:39:56.240078+00:00",
+          "home_name": "Goztepe",
+          "away_name": "Trabzonspor",
+          "provider_home_id": "789",
+          "provider_away_id": "997",
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401888239",
+          "status": "scheduled",
+          "event_id": "TR1_6a3a9b31f0af2b5822cb3290",
+          "home": "goztepe",
+          "away": "trabzonspor"
+        }
+      },
+      "prediction": {
+        "model": "football-opponent-v1",
+        "league": "TR1",
+        "home": "goztepe",
+        "away": "trabzonspor",
+        "expected_home_goals": 1.2739116531873342,
+        "expected_away_goals": 1.5556173169510439,
+        "probabilities": {
+          "home": 0.31237406684264163,
+          "draw": 0.2484859437145784,
+          "away": 0.43913998944277993
+        },
+        "predicted_outcome": "away",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.7739020934748243,
+          "2.5": 0.5375554299204309,
+          "3.5": 0.3146388527461961
+        },
+        "both_teams_score": 0.5682463533684771,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-11-26",
+        "training_games": 796,
+        "prior_team_games": {
+          "goztepe": 59,
+          "trabzonspor": 85
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+        "low_score_rho": 0.0,
+        "research_candidate": false
+      },
+      "recorded_at_utc": "2026-11-26T15:12:27.713614+00:00",
+      "status": "pending",
+      "result": null,
+      "fixture_review": null
+    },
+    {
+      "fixture": {
         "event_id": "TR1_6ff08a869463b885930c1b34",
         "league": "TR1",
         "season": "2026-27",
@@ -43228,6 +44040,103 @@
         "status": "quarantined_date_conflict",
         "note": "Explicit prior audit identity review. Original forecast remains unchanged; provider date is not automatic rescheduling authority."
       }
+    },
+    {
+      "fixture": {
+        "event_id": "TR1_7dcf7a416564c35c015ad644",
+        "league": "TR1",
+        "season": "2026-27",
+        "date": "2026-11-29",
+        "home": "eyupspor",
+        "away": "istanbul basaksehir",
+        "home_name": "Eyüpspor",
+        "away_name": "İstanbul Başakşehir",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/europe/blob/63df627f3c87ce71708f016522ea236cf74332c3/turkey/2026-27_tr1.txt",
+        "captured_at_utc": "2026-11-26T15:12:23.502669+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null,
+        "original_date": null,
+        "date_correction_verified": null,
+        "license_url": null,
+        "source_sha256": null,
+        "fixture_verification_url": null,
+        "actual_start_utc": null,
+        "official_result_url": null,
+        "source_original_date": "2026-11-29",
+        "verified_start_utc": "2026-11-29T13:00:00+00:00",
+        "independent_fixture": {
+          "provider_event_id": "401888242",
+          "league": "TR1",
+          "season_year": 2026,
+          "start_utc": "2026-11-29T13:00:00+00:00",
+          "captured_at": "2026-11-26T14:39:56.259170+00:00",
+          "home_name": "Eyupspor",
+          "away_name": "Istanbul Basaksehir",
+          "provider_home_id": "20729",
+          "provider_away_id": "7914",
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401888242",
+          "status": "scheduled",
+          "event_id": "TR1_7dcf7a416564c35c015ad644",
+          "home": "eyupspor",
+          "away": "istanbul basaksehir"
+        }
+      },
+      "prediction": {
+        "model": "football-opponent-v1",
+        "league": "TR1",
+        "home": "eyupspor",
+        "away": "istanbul basaksehir",
+        "expected_home_goals": 0.9370038656640999,
+        "expected_away_goals": 1.9271978192187404,
+        "probabilities": {
+          "home": 0.17774334003133052,
+          "draw": 0.21696233586312558,
+          "away": 0.6052943241055438
+        },
+        "predicted_outcome": "away",
+        "most_likely_score": [
+          0,
+          1
+        ],
+        "over": {
+          "1.5": 0.7796298340378806,
+          "2.5": 0.5457082968007597,
+          "3.5": 0.32237547643911113
+        },
+        "both_teams_score": 0.5196731755346314,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-11-26",
+        "training_games": 796,
+        "prior_team_games": {
+          "eyupspor": 59,
+          "istanbul basaksehir": 85
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+        "low_score_rho": 0.0,
+        "research_candidate": false
+      },
+      "recorded_at_utc": "2026-11-26T15:12:27.731397+00:00",
+      "status": "pending",
+      "result": null,
+      "fixture_review": null
     },
     {
       "fixture": {
@@ -43399,6 +44308,103 @@
         "verification": "community_source_final_not_official",
         "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_S%C3%BCper_Lig"
       },
+      "fixture_review": null
+    },
+    {
+      "fixture": {
+        "event_id": "TR1_81eade8ac853db1ae9d7ff92",
+        "league": "TR1",
+        "season": "2026-27",
+        "date": "2026-11-29",
+        "home": "corum",
+        "away": "kocaelispor",
+        "home_name": "Çorum",
+        "away_name": "Kocaelispor",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/europe/blob/63df627f3c87ce71708f016522ea236cf74332c3/turkey/2026-27_tr1.txt",
+        "captured_at_utc": "2026-11-26T15:12:23.502669+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null,
+        "original_date": null,
+        "date_correction_verified": null,
+        "license_url": null,
+        "source_sha256": null,
+        "fixture_verification_url": null,
+        "actual_start_utc": null,
+        "official_result_url": null,
+        "source_original_date": "2026-11-29",
+        "verified_start_utc": "2026-11-29T10:30:00+00:00",
+        "independent_fixture": {
+          "provider_event_id": "401888367",
+          "league": "TR1",
+          "season_year": 2026,
+          "start_utc": "2026-11-29T10:30:00+00:00",
+          "captured_at": "2026-11-26T14:39:56.259170+00:00",
+          "home_name": "Çorum FK",
+          "away_name": "Kocaelispor",
+          "provider_home_id": "132334",
+          "provider_away_id": "995",
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401888367",
+          "status": "scheduled",
+          "event_id": "TR1_81eade8ac853db1ae9d7ff92",
+          "home": "corum",
+          "away": "kocaelispor"
+        }
+      },
+      "prediction": {
+        "model": "football-opponent-v1",
+        "league": "TR1",
+        "home": "corum",
+        "away": "kocaelispor",
+        "expected_home_goals": 1.5214532643325795,
+        "expected_away_goals": 1.4587184067718808,
+        "probabilities": {
+          "home": 0.39193959811616347,
+          "draw": 0.24379099281615682,
+          "away": 0.36426940906768
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.7978705043282281,
+          "2.5": 0.5723528962405787,
+          "3.5": 0.3483258339212285
+        },
+        "both_teams_score": 0.5998557453680711,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-11-26",
+        "training_games": 796,
+        "prior_team_games": {
+          "corum": 12,
+          "kocaelispor": 23
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+        "low_score_rho": 0.0,
+        "research_candidate": false
+      },
+      "recorded_at_utc": "2026-11-26T15:12:27.748862+00:00",
+      "status": "pending",
+      "result": null,
       "fixture_review": null
     },
     {
@@ -43649,6 +44655,103 @@
         "status": "quarantined_date_conflict",
         "note": "Training date independently checked against licensed score; original forecast settlement still requires timing review."
       }
+    },
+    {
+      "fixture": {
+        "event_id": "TR1_a617aaa480484452bcc3cb57",
+        "league": "TR1",
+        "season": "2026-27",
+        "date": "2026-11-27",
+        "home": "aytemiz alanyaspor",
+        "away": "atiker konyaspor",
+        "home_name": "Aytemiz Alanyaspor",
+        "away_name": "Atiker Konyaspor",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/europe/blob/63df627f3c87ce71708f016522ea236cf74332c3/turkey/2026-27_tr1.txt",
+        "captured_at_utc": "2026-11-26T15:12:23.502669+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null,
+        "original_date": null,
+        "date_correction_verified": null,
+        "license_url": null,
+        "source_sha256": null,
+        "fixture_verification_url": null,
+        "actual_start_utc": null,
+        "official_result_url": null,
+        "source_original_date": "2026-11-29",
+        "verified_start_utc": "2026-11-27T17:00:00+00:00",
+        "independent_fixture": {
+          "provider_event_id": "401888241",
+          "league": "TR1",
+          "season_year": 2026,
+          "start_utc": "2026-11-27T17:00:00+00:00",
+          "captured_at": "2026-11-26T14:39:56.193338+00:00",
+          "home_name": "Alanyaspor",
+          "away_name": "Konyaspor",
+          "provider_home_id": "9078",
+          "provider_away_id": "7648",
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401888241",
+          "status": "scheduled",
+          "event_id": "TR1_a617aaa480484452bcc3cb57",
+          "home": "aytemiz alanyaspor",
+          "away": "atiker konyaspor"
+        }
+      },
+      "prediction": {
+        "model": "football-opponent-v1",
+        "league": "TR1",
+        "home": "aytemiz alanyaspor",
+        "away": "atiker konyaspor",
+        "expected_home_goals": 1.2512495272661872,
+        "expected_away_goals": 1.0610595206460665,
+        "probabilities": {
+          "home": 0.4062177864171541,
+          "draw": 0.2811537969023281,
+          "away": 0.31262841668051783
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.6719743604111231,
+          "2.5": 0.40722269452821386,
+          "3.5": 0.20316013703791627
+        },
+        "both_teams_score": 0.4667963644717593,
+        "total_goals_80": [
+          1,
+          4
+        ],
+        "training_cutoff_exclusive": "2026-11-26",
+        "training_games": 796,
+        "prior_team_games": {
+          "aytemiz alanyaspor": 83,
+          "atiker konyaspor": 84
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+        "low_score_rho": 0.0,
+        "research_candidate": false
+      },
+      "recorded_at_utc": "2026-11-26T15:12:27.766915+00:00",
+      "status": "pending",
+      "result": null,
+      "fixture_review": null
     },
     {
       "fixture": {
@@ -43944,6 +45047,200 @@
     },
     {
       "fixture": {
+        "event_id": "TR1_e7501b5a813721a6c2d67749",
+        "league": "TR1",
+        "season": "2026-27",
+        "date": "2026-11-28",
+        "home": "samsunspor",
+        "away": "genclerbirligi",
+        "home_name": "Samsunspor",
+        "away_name": "Gençlerbirligi",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/europe/blob/63df627f3c87ce71708f016522ea236cf74332c3/turkey/2026-27_tr1.txt",
+        "captured_at_utc": "2026-11-26T15:12:23.502669+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null,
+        "original_date": null,
+        "date_correction_verified": null,
+        "license_url": null,
+        "source_sha256": null,
+        "fixture_verification_url": null,
+        "actual_start_utc": null,
+        "official_result_url": null,
+        "source_original_date": "2026-11-29",
+        "verified_start_utc": "2026-11-28T13:00:00+00:00",
+        "independent_fixture": {
+          "provider_event_id": "401888236",
+          "league": "TR1",
+          "season_year": 2026,
+          "start_utc": "2026-11-28T13:00:00+00:00",
+          "captured_at": "2026-11-26T14:39:56.280807+00:00",
+          "home_name": "Samsunspor",
+          "away_name": "Genclerbirligi",
+          "provider_home_id": "11429",
+          "provider_away_id": "996",
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401888236",
+          "status": "scheduled",
+          "event_id": "TR1_e7501b5a813721a6c2d67749",
+          "home": "samsunspor",
+          "away": "genclerbirligi"
+        }
+      },
+      "prediction": {
+        "model": "football-opponent-v1",
+        "league": "TR1",
+        "home": "samsunspor",
+        "away": "genclerbirligi",
+        "expected_home_goals": 1.5194747621166735,
+        "expected_away_goals": 1.3043886797305895,
+        "probabilities": {
+          "home": 0.42353378076355874,
+          "draw": 0.24993539387048813,
+          "away": 0.32653082536595335
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.7729538908479436,
+          "2.5": 0.5362152903559894,
+          "3.5": 0.3133761306215513
+        },
+        "both_teams_score": 0.5692109509998118,
+        "total_goals_80": [
+          1,
+          5
+        ],
+        "training_cutoff_exclusive": "2026-11-26",
+        "training_games": 796,
+        "prior_team_games": {
+          "samsunspor": 83,
+          "genclerbirligi": 23
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+        "low_score_rho": 0.0,
+        "research_candidate": false
+      },
+      "recorded_at_utc": "2026-11-26T15:12:27.784817+00:00",
+      "status": "pending",
+      "result": null,
+      "fixture_review": null
+    },
+    {
+      "fixture": {
+        "event_id": "TR1_ece6663d322b3badd2fb8f3e",
+        "league": "TR1",
+        "season": "2026-27",
+        "date": "2026-11-30",
+        "home": "besiktas",
+        "away": "galatasaray",
+        "home_name": "Beşiktaş",
+        "away_name": "Galatasaray",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/europe/blob/63df627f3c87ce71708f016522ea236cf74332c3/turkey/2026-27_tr1.txt",
+        "captured_at_utc": "2026-11-26T15:12:23.502669+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null,
+        "original_date": null,
+        "date_correction_verified": null,
+        "license_url": null,
+        "source_sha256": null,
+        "fixture_verification_url": null,
+        "actual_start_utc": null,
+        "official_result_url": null,
+        "source_original_date": "2026-11-29",
+        "verified_start_utc": "2026-11-30T18:00:00+00:00",
+        "independent_fixture": {
+          "provider_event_id": "401888237",
+          "league": "TR1",
+          "season_year": 2026,
+          "start_utc": "2026-11-30T18:00:00+00:00",
+          "captured_at": "2026-11-26T14:39:56.240078+00:00",
+          "home_name": "Besiktas",
+          "away_name": "Galatasaray",
+          "provider_home_id": "1895",
+          "provider_away_id": "432",
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401888237",
+          "status": "scheduled",
+          "event_id": "TR1_ece6663d322b3badd2fb8f3e",
+          "home": "besiktas",
+          "away": "galatasaray"
+        }
+      },
+      "prediction": {
+        "model": "football-opponent-v1",
+        "league": "TR1",
+        "home": "besiktas",
+        "away": "galatasaray",
+        "expected_home_goals": 1.6873343166636385,
+        "expected_away_goals": 1.6458909096366445,
+        "probabilities": {
+          "home": 0.39423617423759716,
+          "draw": 0.22890904707709261,
+          "away": 0.3768547786853101
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.8453998396435558,
+          "2.5": 0.6472024174940428,
+          "3.5": 0.426990201728562
+        },
+        "both_teams_score": 0.6578251167655993,
+        "total_goals_80": [
+          1,
+          6
+        ],
+        "training_cutoff_exclusive": "2026-11-26",
+        "training_games": 796,
+        "prior_team_games": {
+          "besiktas": 83,
+          "galatasaray": 83
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+        "low_score_rho": 0.0,
+        "research_candidate": false
+      },
+      "recorded_at_utc": "2026-11-26T15:12:27.802887+00:00",
+      "status": "pending",
+      "result": null,
+      "fixture_review": null
+    },
+    {
+      "fixture": {
         "event_id": "TR1_f0ee178e6d9659a498cebfb7",
         "league": "TR1",
         "season": "2026-27",
@@ -44068,56 +45365,12 @@
       "reason": "Insufficient history (current coverage): moreirense fc: 1 unresolved past fixtures; refresh/review required"
     },
     {
-      "event_id": "ES1_21e8b5cfa76a6292d942a075",
-      "reason": "Insufficient history (current coverage): rayo vallecano de madrid: 1 unresolved past fixtures; refresh/review required"
-    },
-    {
-      "event_id": "ES1_6896cc6310a2b1ba70dee6b5",
-      "reason": "Insufficient history (current coverage): athletic club: 1 unresolved past fixtures; refresh/review required"
-    },
-    {
       "event_id": "PT1_5b2d02b3efff439331761b05",
       "reason": "Insufficient history (current coverage): gil vicente fc: 1 unresolved past fixtures; refresh/review required; gd estoril praia: latest completed history is 32 days old; gd estoril praia: 2 unresolved past fixtures; refresh/review required"
     },
     {
       "event_id": "PT1_baa158283fb2a046b6f9e30c",
       "reason": "Insufficient history (current coverage): fc porto: 1 unresolved past fixtures; refresh/review required"
-    },
-    {
-      "event_id": "TR1_56d4673507b428a9032b3ace",
-      "reason": "Insufficient history (current coverage): caykur rizespor: 2 unresolved past fixtures; refresh/review required; kasimpasa: 2 unresolved past fixtures; refresh/review required"
-    },
-    {
-      "event_id": "TR1_58f28b86723d52568c188d29",
-      "reason": "Insufficient history (current coverage): gaziantep fk: 1 unresolved past fixtures; refresh/review required; amed: 1 unresolved past fixtures; refresh/review required"
-    },
-    {
-      "event_id": "TR1_5c5bf8aa8d6bdd7191dca036",
-      "reason": "Insufficient history (current coverage): fenerbahce: 1 unresolved past fixtures; refresh/review required; bb erzurumspor: 2 unresolved past fixtures; refresh/review required"
-    },
-    {
-      "event_id": "TR1_6a3a9b31f0af2b5822cb3290",
-      "reason": "Insufficient history (current coverage): goztepe: 2 unresolved past fixtures; refresh/review required; trabzonspor: 2 unresolved past fixtures; refresh/review required"
-    },
-    {
-      "event_id": "TR1_7dcf7a416564c35c015ad644",
-      "reason": "Insufficient history (current coverage): eyupspor: 2 unresolved past fixtures; refresh/review required; istanbul basaksehir: 2 unresolved past fixtures; refresh/review required"
-    },
-    {
-      "event_id": "TR1_81eade8ac853db1ae9d7ff92",
-      "reason": "Insufficient history (current coverage): corum: 3 unresolved past fixtures; refresh/review required; kocaelispor: 1 unresolved past fixtures; refresh/review required"
-    },
-    {
-      "event_id": "TR1_a617aaa480484452bcc3cb57",
-      "reason": "Insufficient history (current coverage): aytemiz alanyaspor: 2 unresolved past fixtures; refresh/review required; atiker konyaspor: 2 unresolved past fixtures; refresh/review required"
-    },
-    {
-      "event_id": "TR1_e7501b5a813721a6c2d67749",
-      "reason": "Insufficient history (current coverage): samsunspor: 1 unresolved past fixtures; refresh/review required; genclerbirligi: 1 unresolved past fixtures; refresh/review required"
-    },
-    {
-      "event_id": "TR1_ece6663d322b3badd2fb8f3e",
-      "reason": "Insufficient history (current coverage): besiktas: 2 unresolved past fixtures; refresh/review required; galatasaray: 1 unresolved past fixtures; refresh/review required"
     },
     {
       "event_id": "PT1_404283c949497e42c328671a",
@@ -44166,14 +45419,6 @@
     {
       "event_id": "EN1_2429837f6fecc8c088b79b1d",
       "reason": "Fresh independent future scheduled fixture required"
-    },
-    {
-      "event_id": "EN1_c9160aa05f4d4c726114026e",
-      "reason": "Insufficient history (current coverage): brentford fc: 1 unresolved past fixtures; refresh/review required"
-    },
-    {
-      "event_id": "EN1_e20081e702db5b2026f21e68",
-      "reason": "Insufficient history (current coverage): everton fc: 1 unresolved past fixtures; refresh/review required"
     },
     {
       "event_id": "EN2_2409d46b13ecd1fe7fd037be",
@@ -44352,36 +45597,36 @@
       "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
     }
   ],
-  "pending": 117,
+  "pending": 129,
   "requested_model_variant": "opponent",
   "publisher_performance": {
-    "games": 289,
-    "winner_accuracy": 0.5743944636678201,
-    "log_loss": 0.9805224590285405,
-    "brier": 0.5825311134113835,
-    "total_mae": 1.4336512687109064,
-    "margin_mae": 1.433657809840207,
-    "total_in_80": 0.8858131487889274,
-    "team_score_games": 289,
-    "home_score_mae": 0.9975604604018166,
-    "away_score_mae": 1.0128632193639553,
-    "team_score_mae": 1.005211839882886,
+    "games": 290,
+    "winner_accuracy": 0.5758620689655173,
+    "log_loss": 0.9797191651345225,
+    "brier": 0.5819562313795343,
+    "total_mae": 1.4336848823987798,
+    "margin_mae": 1.4409908296988738,
+    "total_in_80": 0.8862068965517241,
+    "team_score_games": 290,
+    "home_score_mae": 1.0027475498608582,
+    "away_score_mae": 1.013020301936251,
+    "team_score_mae": 1.0078839258985546,
     "goal_markets": {
       "over_1.5": {
-        "accuracy": 0.7993079584775087,
-        "brier": 0.16184190572127383
+        "accuracy": 0.8,
+        "brier": 0.1615462744148551
       },
       "over_2.5": {
-        "accuracy": 0.5190311418685121,
-        "brier": 0.25172741541737176
+        "accuracy": 0.5172413793103449,
+        "brier": 0.2518257399510491
       },
       "over_3.5": {
-        "accuracy": 0.6747404844290658,
-        "brier": 0.22348243863183792
+        "accuracy": 0.6724137931034483,
+        "brier": 0.22462780283243575
       },
       "both_teams_score": {
-        "accuracy": 0.5467128027681661,
-        "brier": 0.24556784208982324
+        "accuracy": 0.5448275862068965,
+        "brier": 0.24560752850009773
       }
     }
   },
