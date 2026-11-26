@@ -1,6 +1,6 @@
 {
   "spec": "live-scorecard-v1",
-  "data_cutoff_utc": "2026-11-26T17:16:39.684351+00:00",
+  "data_cutoff_utc": "2026-11-26T18:48:38.041908+00:00",
   "definitions": {
     "cohort": "One game per league and event ID, using the earliest checksum-verified frozen forecast. A timezone-aware start must be present and strictly later than the freeze. Basketball finals are joined by forecast checksum and fixture identity across saved settlement checks, including checks that reference earlier Argentina and prospective forecast records. Football uses publisher finals from the saved daily report joined to immutable forecasts by fixture identity and freeze time. Community publisher finals lack official verification. Football finals with date-only kickoff evidence and matches flagged for fixture review are excluded.",
     "cutoff": "Latest saved settlement check timestamp used, with each sport's cutoff reported separately. Basketball includes the per-record check timestamps, which can follow the report's start time.",
@@ -15,69 +15,69 @@
   },
   "sports": {
     "basketball": {
-      "cutoff_utc": "2026-11-26T17:16:02.695083+00:00",
+      "cutoff_utc": "2026-11-26T18:47:50.624045+00:00",
       "class_order": [
         "home",
         "away"
       ],
       "total": {
         "model": {
-          "n": 386,
-          "accuracy": 0.6865284974093264,
-          "log_loss": 0.5817930898949585,
-          "brier": 0.20099225908666,
+          "n": 387,
+          "accuracy": 0.6873385012919897,
+          "log_loss": 0.580890689329362,
+          "brier": 0.2005841568069112,
           "ci95": {
             "accuracy": [
-              0.6386035046626513,
-              0.7307774237681348
+              0.6395013666506106,
+              0.7314930525123817
             ],
             "log_loss": [
-              0.5440719321547492,
-              0.6210057569790944
+              0.542052209079618,
+              0.6204907860734119
             ],
             "brier": [
-              0.18424633162176485,
-              0.21816925811181576
+              0.18398303921532844,
+              0.21800720656458938
             ]
           }
         },
         "always_home": {
-          "n": 386,
-          "accuracy": 0.572538860103627,
-          "log_loss": 14.763984728394506,
-          "brier": 0.4274611398963731,
+          "n": 387,
+          "accuracy": 0.5736434108527132,
+          "log_loss": 14.725834897054986,
+          "brier": 0.4263565891472868,
           "ci95": {
             "accuracy": [
-              0.5227105695544432,
-              0.6209375692797514
+              0.5238849976111123,
+              0.6219541878529605
             ],
             "log_loss": [
-              13.151131245186546,
-              16.374601244219377
+              13.030132696788032,
+              16.510784581546517
             ],
             "brier": [
-              0.38076424870466324,
-              0.4740932642487047
+              0.3772609819121447,
+              0.4780361757105943
             ]
           }
         },
         "expanding_rate": {
-          "n": 386,
-          "accuracy": 0.5595854922279793,
-          "log_loss": 0.6961583997980176,
-          "brier": 0.25081716918120833,
+          "n": 387,
+          "accuracy": 0.5581395348837209,
+          "log_loss": 0.6968285627055874,
+          "brier": 0.2511476111855258,
           "ci95": {
             "accuracy": [
-              0.5097151387238517,
-              0.6082815467470939
+              0.5083311662976987,
+              0.606805032752885
             ],
             "log_loss": [
-              0.6788974153579789,
-              0.7149067108308488
+              0.6793346369281458,
+              0.7149954396646138
             ],
             "brier": [
-              0.24289825364654188,
-              0.25947962349369563
+              0.24306719798954488,
+              0.2596797059300989
             ]
           }
         },
@@ -124,9 +124,9 @@
           {
             "lower": 0.7,
             "upper": 0.8,
-            "n": 84,
-            "forecast_mean": 0.7551257657060222,
-            "observed_frequency": 0.75
+            "n": 85,
+            "forecast_mean": 0.7555654504802017,
+            "observed_frequency": 0.7529411764705882
           },
           {
             "lower": 0.8,
@@ -519,62 +519,62 @@
         },
         "ECW": {
           "model": {
-            "n": 66,
-            "accuracy": 0.8333333333333334,
-            "log_loss": 0.46598912024000144,
-            "brier": 0.15358049842215946,
+            "n": 67,
+            "accuracy": 0.835820895522388,
+            "log_loss": 0.4625051642813311,
+            "brier": 0.15193088914457303,
             "ci95": {
               "accuracy": [
-                0.7256941288004796,
-                0.9043041665238262
+                0.7294473706077896,
+                0.9057738790547688
               ],
               "log_loss": [
-                0.3638991093052266,
-                0.577739709935438
+                0.36282067799267587,
+                0.5798856926800205
               ],
               "brier": [
-                0.11221901458724798,
-                0.19800887311810028
+                0.1112764706594688,
+                0.19890396104731897
               ]
             }
           },
           "always_home": {
-            "n": 66,
-            "accuracy": 0.4393939393939394,
-            "log_loss": 19.362647372904462,
-            "brier": 0.5606060606060606,
+            "n": 67,
+            "accuracy": 0.44776119402985076,
+            "log_loss": 19.07365263599544,
+            "brier": 0.5522388059701493,
             "ci95": {
               "accuracy": [
-                0.3262812091954944,
-                0.5591736462000862
+                0.334763933612968,
+                0.5664238719950783
               ],
               "log_loss": [
-                15.1761290220062,
-                23.549165723802723
+                14.949619633618049,
+                23.197685638372832
               ],
               "brier": [
-                0.4393939393939394,
-                0.6818181818181818
+                0.43283582089552236,
+                0.6716417910447762
               ]
             }
           },
           "expanding_rate": {
-            "n": 66,
-            "accuracy": 0.3787878787878788,
-            "log_loss": 0.7358105159879003,
-            "brier": 0.2708079684390569,
+            "n": 67,
+            "accuracy": 0.373134328358209,
+            "log_loss": 0.7390896343317739,
+            "brier": 0.2724182707735795,
             "ci95": {
               "accuracy": [
-                0.2714944699373794,
-                0.499415240853782
+                0.2671815998117198,
+                0.49284592809353583
               ],
               "log_loss": [
-                0.6999272211582497,
-                0.7718344170025271
+                0.7044592679287819,
+                0.7754776436856782
               ],
               "brier": [
-                0.2532986097108068,
-                0.28837338586723055
+                0.25550645174039693,
+                0.29007239575380517
               ]
             }
           },
@@ -621,9 +621,9 @@
             {
               "lower": 0.7,
               "upper": 0.8,
-              "n": 9,
-              "forecast_mean": 0.7623889814817475,
-              "observed_frequency": 0.7777777777777778
+              "n": 10,
+              "forecast_mean": 0.7653999804847024,
+              "observed_frequency": 0.8
             },
             {
               "lower": 0.8,
@@ -1016,7 +1016,7 @@
       }
     },
     "football": {
-      "cutoff_utc": "2026-11-26T17:16:39.684351+00:00",
+      "cutoff_utc": "2026-11-26T18:48:38.041908+00:00",
       "class_order": [
         "home",
         "draw",

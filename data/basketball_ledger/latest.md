@@ -1,12 +1,14 @@
 # Daily basketball research
 
-Checked: 2026-11-26T17:15:59.668349+00:00
+Checked: 2026-11-26T18:47:45.935370+00:00
 
 | Tipoff (Istanbul) | League | Fixture | Score forecast | Home win | Data gate / probability filter |
 |---|---|---|---|---|---|
+| 03 Dec 20:30 | E | Anadolu Efes Istanbul – Valencia Basket | 87.2–88.6 | 45.2% | not selected |
+| 03 Dec 20:45 | E | Fenerbahce Tarfin Istanbul – Crvena Zvezda Meridianbet Belgrade | 87.3–79.2 | 75.8% | passed |
+| 03 Dec 21:45 | E | Hapoel IBI Tel Aviv – Armani Olimpia Milan | 91.6–84.6 | 72.4% | passed |
 | 03 Dec 13:00 | KBL | 고양 소노 스카이거너스 – 서울 SK 나이츠 | 79.5–80.2 | 57.9% | not selected |
 | 03 Dec 13:00 | KBL | 창원 LG 세이커스 – 안양 정관장 레드부스터스 | 78.7–79.7 | 47.4% | not selected |
-| 26 Nov 21:00 | ECW | InvestInTheWest Enea Gorzow – Ensino Lugo CB | 84.3–69.5 | 80.1% | not selected |
 | 26 Nov 22:00 | ECW | Villeneuve d'Ascq Lille Metropole – Maccabi Bnot Ashdod | 81.7–62.5 | 86.3% | not selected |
 | 26 Nov 22:00 | ECW | Lattes-Montpellier – M.G.S PANSERRAIKOS | 83.0–67.0 | 82.0% | not selected |
 | 26 Nov 22:30 | ECW | Basket Namur Capitale – MBK Ruzomberok | 72.5–70.1 | 55.4% | not selected |
@@ -31,9 +33,11 @@ Checked: 2026-11-26T17:15:59.668349+00:00
 | 03 Dec 20:00 | ECW | CBK Mersin – Olympiacos SFP | 85.0–58.3 | 93.7% | passed |
 | 03 Dec 20:00 | ECW | Cinkarna Celje – Nyon Basket Feminin | 79.5–62.0 | 84.1% | passed |
 | 03 Dec 20:00 | ECW | Zabiny Brno – Charnay Basket Bourgogne Sud | 75.9–73.9 | 54.6% | not selected |
+| 03 Dec 20:30 | ECW | ENEA AZS Politechnika Poznan – BCF Elfic Fribourg | 82.2–66.5 | 81.6% | passed |
+| 03 Dec 21:00 | ECW | C'Chartres Metropole Basket Feminin – MBK Ruzomberok | 77.5–75.3 | 54.9% | not selected |
 | 02 Dec 22:00 | FEC | Manchester Basketball Club – Basketball Club "Bashkimi" | 86.4–79.8 | 65.5% | passed |
 
-Settled: 386; pending: 96; winner accuracy: 68.7%.
+Settled: 387; pending: 100; winner accuracy: 68.7%.
 
 | Fixture ID | Status | Final | Winner correct | Team MAE | Total error | Margin error | Total / margin in 80% |
 |---|---|---|---|---|---|---|---|
@@ -129,6 +133,7 @@ Settled: 386; pending: 96; winner accuracy: 68.7%.
 | ECW_F135292 | final | 58–77 | True | 7.16 | 14.32 | 0.63 | True / True |
 | ECW_F135264 | final | 60–70 | True | 5.69 | 11.39 | 7.46 | True / True |
 | ARG_LNB_19676f3c458483801346ac97 | final | 80–88 | True | 4.70 | 9.40 | 8.09 | True / True |
+| E2026_142 | pending | — | — | — | — | — | — |
 | ABA_2026_54 | final | 69–89 | True | 9.35 | 14.67 | 18.71 | True / False |
 | ECW_F135322 | final | 72–62 | False | 14.47 | 10.10 | 28.95 | True / False |
 | TR_BSL_BID2026_1518182 | pending | — | — | — | — | — | — |
@@ -188,6 +193,7 @@ Settled: 386; pending: 96; winner accuracy: 68.7%.
 | ABA_2026_51 | final | 100–82 | True | 3.85 | 7.70 | 4.45 | True / True |
 | FEC_F135823 | final | 89–85 | False | 2.80 | 4.87 | 5.59 | True / True |
 | FEC_F135824 | final | 85–87 | True | 4.45 | 8.89 | 0.16 | True / True |
+| ECW_F135381 | pending | — | — | — | — | — | — |
 | TR_BSL_BID2026_1518166 | pending | — | — | — | — | — | — |
 | ECW_F135267 | final | 78–55 | True | 5.84 | 11.68 | 5.68 | True / True |
 | KBL_S49G01N71 | final | 83–81 | True | 1.01 | 2.02 | 1.36 | True / True |
@@ -206,6 +212,7 @@ Settled: 386; pending: 96; winner accuracy: 68.7%.
 | TR_BSL_BID2026_1518170 | pending | — | — | — | — | — | — |
 | FEC_F135711 | final | 71–70 | True | 8.69 | 17.39 | 4.43 | True / True |
 | KBL_S49G01N43 | final | 96–89 | True | 8.65 | 17.31 | 4.36 | True / True |
+| E2026_144 | pending | — | — | — | — | — | — |
 | FEC_F135801 | final | 78–76 | True | 4.70 | 5.95 | 9.40 | True / True |
 | E2026_121 | final | 72–87 | False | 8.65 | 11.43 | 17.29 | True / False |
 | FEC_F135674 | final | 88–82 | False | 4.79 | 4.74 | 9.58 | True / True |
@@ -231,6 +238,7 @@ Settled: 386; pending: 96; winner accuracy: 68.7%.
 | FEC_F135796 | final | 89–66 | True | 5.91 | 11.82 | 8.43 | True / True |
 | FEC_F135889 | final | 84–80 | False | 9.63 | 2.28 | 19.25 | True / True |
 | E2026_113 | final | 95–97 | True | 8.42 | 16.85 | 7.10 | True / True |
+| E2026_141 | pending | — | — | — | — | — | — |
 | UKR_2026_N42_UKR_21058_UKR_4638193 | final | 75–106 | False | 16.82 | 25.64 | 33.65 | False / False |
 | E2026_98 | final | 75–93 | True | 7.89 | 6.42 | 15.77 | True / False |
 | ARG_LNB_e09a3d42912f230bc370e14f | pending | — | — | — | — | — | — |
@@ -295,7 +303,7 @@ Settled: 386; pending: 96; winner accuracy: 68.7%.
 | ECW_F135361 | pending | — | — | — | — | — | — |
 | ABA_2026_58 | final | 104–109 | False | 22.70 | 45.40 | 5.04 | False / True |
 | ABA_2026_69 | final | 67–51 | True | 21.40 | 42.80 | 12.76 | False / True |
-| ECW_F135284 | pending | — | — | — | — | — | — |
+| ECW_F135284 | final | 78–73 | True | 4.62 | 5.08 | 9.23 | True / True |
 | E2026_99 | final | 88–67 | True | 9.71 | 19.41 | 14.02 | True / True |
 | E2026_85 | final | 94–79 | True | 6.24 | 6.79 | 12.49 | True / True |
 | E2026_137 | final | 71–84 | False | 9.06 | 9.59 | 18.11 | True / False |
@@ -409,6 +417,7 @@ Settled: 386; pending: 96; winner accuracy: 68.7%.
 | ARG_LNB_966350f98edd97e377acdcc5 | pending | — | — | — | — | — | — |
 | FEC_F135684 | final | 94–88 | False | 8.10 | 16.20 | 7.51 | True / True |
 | ABA_2026_61 | final | 91–80 | True | 2.13 | 4.25 | 0.61 | True / True |
+| ECW_F135343 | pending | — | — | — | — | — | — |
 | ECW_F135399 | final | 112–54 | True | 11.59 | 18.96 | 23.18 | True / False |
 | ECW_F135342 | final | 80–87 | True | 10.79 | 21.58 | 1.15 | True / True |
 | E2026_127 | final | 107–81 | True | 9.04 | 12.76 | 18.08 | True / False |
