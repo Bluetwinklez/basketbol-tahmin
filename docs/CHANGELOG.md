@@ -1,3 +1,12 @@
+# Changelog
+
+## 2026-11-26 — Fixture evidence and measured model experiments
+
+- Licensed and independently checked training results restored missing history in England, Türkiye and Portugal. Recorded forecasts retain their original identity, kickoff and payload. [Brentford–Everton #84](https://github.com/Bluetwinklez/basketbol-tahmin/pull/84) · [Süper Lig #86](https://github.com/Bluetwinklez/basketbol-tahmin/pull/86) · [Süper Lig #87](https://github.com/Bluetwinklez/basketbol-tahmin/pull/87) · [Primeira Liga #88](https://github.com/Bluetwinklez/basketbol-tahmin/pull/88)
+- Independently reviewed interrupted or postponed games stay out of scoring while their scheduling and result evidence is unresolved. The new date can temporarily remove a missing-history blocker for other games. [Rayo–Athletic #85](https://github.com/Bluetwinklez/basketbol-tahmin/pull/85) · [Estoril–Marítimo #89](https://github.com/Bluetwinklez/basketbol-tahmin/pull/89)
+- Published the basketball [home-court](kanit/improvement/basketball-home-advantage.md) and [workload decay](kanit/improvement/basketball-rest-decay.md) replays. Both candidates stay in research.
+- Updated the English and Turkish quick starts and linked the generated performance and experiment reports. [Documentation index](INDEX.md)
+
 ## 2026-11-24 — Reliability and automation week
 
 1. **Shadow experiment safeguards:** Awarded forfeit games (`E2001_264`, `E2003_200`, `U2008_72`, `NBL_314773`) are explicitly excluded from the basketball challenger via an allowlist in [`src/bbtahmin/shadow_models.py`](../src/bbtahmin/shadow_models.py), while other nonpositive or tied finals still fail loudly. Experiment registration in [`src/bbtahmin/shadow.py`](../src/bbtahmin/shadow.py) (`paired-forward-policy-v3`) removes the Python interpreter's patch version from the cohort identity hash so CI minor/patch updates do not reset active cohorts while still recording `sys.version` in `source_snapshot.json.gz`; see [improvement-progress.md](improvement-progress.md).
@@ -5,34 +14,34 @@
 3. **Live forecast scorecard and `/performance` page:** Added an offline scorecard (`scripts/live_scorecard.py`) that evaluates checksum-verified frozen basketball and football forecasts against local ledger finals with accuracy, log loss, Brier score, 95% confidence intervals, calibration bins, and naive/market baselines ([live-scorecard.md](live-scorecard.md)). The local browser app now exposes a `/performance` view ([`src/bbtahmin/ui/performance.html`](../src/bbtahmin/ui/performance.html)) to inspect these metrics by sport alongside explicit baseline disclaimers.
 4. **Daily NBA schedule integration:** Added `NBA` to `daily.LEAGUES` using dated ESPN NBA scoreboards (yesterday, today, and 7 days ahead) written atomically to `data/schedules/NBA.json`. Includes strict 30-team archive code mapping, unknown-code rejection, 24-hour freshness checks, and immutable `prospective-v1` forecast freezing and settlement; see [nba-daily.md](nba-daily.md).
 5. **Football draw and double-chance view (display-only):** Surfaced draw probabilities alongside top 1X2 picks and derived double-chance (`1X`, `X2`, `12`) views on the `/football` board, in Markdown exports (`Best double chance`), and in CSV exports (`prob_1x`, `prob_x2`, `prob_12`). No football model, calibration, or frozen forecast record is changed; see [football-double-chance.md](football-double-chance.md).
-6. **NBA closing-odds market comparison and blend (PR #30):** Documented the no-vig market comparison, betting simulation, and CLI odds/blend output (`Piyasa`, `Birleşik`, `Harman`) in [README.md](../README.md#honest-performance-summary).
+6. **NBA closing-odds market comparison and blend (PR #30):** Documented the no-vig market comparison, betting simulation, and CLI odds/blend output (`Piyasa`, `Birleşik`, `Harman`). [Market evaluation](accuracy-review.md) · [Archived CLI details](#historical-readme-sections)
 7. **Paired forward experiment status report:** Added [docs/kanit/experiment_status/status.md](kanit/experiment_status/status.md) tracking 21 experiments (1 `active`, 20 `superseded`) against the 1,000 settled paired games per-league threshold. All 21 experiments are currently reported with verdict `insufficient_sample`.
 8. **Daily E2E test and weekly dependency audit:** Added end-to-end daily workflow tests in [`tests/test_daily_e2e.py`](../tests/test_daily_e2e.py) covering EuroLeague forecast freezing, immutable reuse, settlement, and source-failure handling. Added a weekly GitHub Actions audit workflow in [`.github/workflows/dependency-audit.yml`](../.github/workflows/dependency-audit.yml) running `pip-audit -r requirements.txt` and `npm audit --omit=dev --audit-level=high`.
 9. **Dependabot updates:** Current pinned versions are recorded in [`requirements.txt`](../requirements.txt) (`beautifulsoup4==4.15.0`, `matplotlib==3.11.2`, `nba_api==1.11.3`, `numpy==2.2.6`, `openpyxl==3.1.5`, `pandas==2.2.3`, `pdfplumber==0.11.10`, `pyarrow==23.0.1`, `pytest==9.0.3`, `scikit-learn==1.9.1`, `scipy==1.15.3`, `tzdata==2025.2`) and [`package.json`](../package.json) (`jsdom` `31.0.1`). The `numpy` update was not merged due to a package conflict, leaving `numpy` pinned at `2.2.6`.
 
 ---
 
-# Changelog and Historical README Sections
+## Historical README sections
 
-The sections below were moved verbatim from the root [README.md](../README.md) to keep the main README concise. Relative links inside the moved sections are preserved as originally written from the repository root.
+These sections record earlier snapshots of the project. Archive counts, provider status and commands can differ from the current version. For current commands and entry points, use the [README](../README.md).
 
 ---
 
 ## What works
 
-**Accuracy review (October 2026):** extended basketball features chosen per league on the preceding season, and the opponent-adjusted football model as default. The basketball gain is small (e.g. NBA 65.78% → 66.03%); football 1/X/2 rises from 47.80% to 49.18% on the same 3,973-game cohort. [Diagnosis, measurements and rejected ideas](docs/accuracy-review.md).
+**Accuracy review (October 2026):** extended basketball features chosen per league on the preceding season, and the opponent-adjusted football model as default. The basketball gain is small (e.g. NBA 65.78% → 66.03%); football 1/X/2 rises from 47.80% to 49.18% on the same 3,973-game cohort. [Diagnosis, measurements and rejected ideas](accuracy-review.md).
 
-**Football probability research:** a fixed joint-score ensemble, consistent goal markets and per-market reliability reports now complement the existing candidates. Same-cohort historical 1/X/2 is 48.78% versus baseline 47.80% on 3,973 games; the opponent-adjusted candidate (49.18%) is now the default. Frozen forecasts remain unchanged. [Comparison and usage](docs/football-ensemble.md).
+**Football probability research:** a fixed joint-score ensemble, consistent goal markets and per-market reliability reports now complement the existing candidates. Same-cohort historical 1/X/2 is 48.78% versus baseline 47.80% on 3,973 games; the opponent-adjusted candidate (49.18%) is now the default. Frozen forecasts remain unchanged. [Comparison and usage](football-ensemble.md).
 
-**Sports reliability expansion:** 3,133 additional football results across Belgium, Greece and Scotland (62,373 stored finals / 17 leagues including the preceding archive), explicit opponent-adjusted and low-score research candidates, same-cohort comparisons, football result filters and JSON/CSV/Markdown exports. Basketball adds Turkish provider-duplicate safeguards, stable postponed-fixture identities and display-only totals estimates. Weekly historical backfills and rendered Chromium fixture checks complement daily refresh. [Changes, measured results and remaining limits](docs/sports-upgrade.md).
+**Sports reliability expansion:** 3,133 additional football results across Belgium, Greece and Scotland (62,373 stored finals / 17 leagues including the preceding archive), explicit opponent-adjusted and low-score research candidates, same-cohort comparisons, football result filters and JSON/CSV/Markdown exports. Basketball adds Turkish provider-duplicate safeguards, stable postponed-fixture identities and display-only totals estimates. Weekly historical backfills and rendered Chromium fixture checks complement daily refresh. [Changes, measured results and remaining limits](sports-upgrade.md).
 
-**Football is now a separate supported research workflow:** 59,240 community-source finals across 14 leagues, including 1,884 Turkish Süper Lig results; regulation 1/X/2, goal totals and both-teams-score probabilities; a local Football screen and read-only MCP tools. A seven-day run froze 95 pending forecasts. Daily football and basketball refresh is scheduled through GitHub Actions. [Commands, partial coverage, chronological results and limitations](docs/football.md). Football observed prospective accuracy is unavailable.
+**Football is now a separate supported research workflow:** 59,240 community-source finals across 14 leagues, including 1,884 Turkish Süper Lig results; regulation 1/X/2, goal totals and both-teams-score probabilities; a local Football screen and read-only MCP tools. A seven-day run froze 95 pending forecasts. Daily football and basketball refresh is scheduled through GitHub Actions. [Commands, partial coverage, chronological results and limitations](football.md). Football observed prospective accuracy is unavailable.
 
-The daily application now supports **11 competitions**, including separate Argentina Liga Nacional data and forecasts. [Argentina sources, commands and limitations](docs/argentina.md). The newest expansion adds **3,520 results** from Turkish BSL and Ukrainian SuperLeague, separate models, and 12 pending future forecasts. [Measured results and source limitations](docs/domestic-expansion.md). The earlier expansion included ABA senior men, EuroCup Women and FIBA Europe Cup. A real 7-day run froze **58 additional future fixtures** (9 ABA / 25 ECW / 24 FEC), with 11 passing the configured diagnostic/probability filters. All 58 are pending, so prospective accuracy is unavailable. [New league coverage, validation and measured limits](docs/regional-expansion.md).
+The daily application now supports **11 competitions**, including separate Argentina Liga Nacional data and forecasts. [Argentina sources, commands and limitations](argentina.md). The newest expansion adds **3,520 results** from Turkish BSL and Ukrainian SuperLeague, separate models, and 12 pending future forecasts. [Measured results and source limitations](domestic-expansion.md). The earlier expansion included ABA senior men, EuroCup Women and FIBA Europe Cup. A real 7-day run froze **58 additional future fixtures** (9 ABA / 25 ECW / 24 FEC), with 11 passing the configured diagnostic/probability filters. All 58 are pending, so prospective accuracy is unavailable. [New league coverage, validation and measured limits](regional-expansion.md).
 
-Open the new **local browser application** with **`python -m bbtahmin app`**: match cards, search/league filters, uncertainty details, background source refresh, separate final-result errors and report downloads. It shares the existing local forecast ledger. [Start and use the application](docs/local-app.md).
+Open the new **local browser application** with **`python -m bbtahmin app`**: match cards, search/league filters, uncertainty details, background source refresh, separate final-result errors and report downloads. It shares the existing local forecast ledger. [Start and use the application](local-app.md).
 
-For daily use, run **`python -m bbtahmin gunluk --guncelle`** after installation. It refreshes supported schedules, preserves the earliest pregame forecasts, and writes a separate final-result/error report to `rapor/daily/latest.md`. Source failures and rejected forecasts remain visible. See [daily workflow, historical backfill and measurement limits](docs/daily-workflow.md).
+For daily use, run **`python -m bbtahmin gunluk --guncelle`** after installation. It refreshes supported schedules, preserves the earliest pregame forecasts, and writes a separate final-result/error report to `rapor/daily/latest.md`. Source failures and rejected forecasts remain visible. See [daily workflow, historical backfill and measurement limits](daily-workflow.md).
 
 | Capability | Status |
 |---|---|
@@ -64,17 +73,17 @@ For daily use, run **`python -m bbtahmin gunluk --guncelle`** after installation
 
 ## Asian data extension
 
-The latest backfill adds **3,607 official Japanese finals**. Broader history reduces log loss but lowers completed matched-cohort winner accuracy from **1,523/2,219 to 1,517/2,219** in B1 and **886/1,260 to 878/1,260** in B2. The established 2021–22 onward default is retained. [Exact comparisons and source limits](docs/kanit/history_expansion/README.md).
+The latest backfill adds **3,607 official Japanese finals**. Broader history reduces log loss but lowers completed matched-cohort winner accuracy from **1,523/2,219 to 1,517/2,219** in B1 and **886/1,260 to 878/1,260** in B2. The established 2021–22 onward default is retained. [Exact comparisons and source limits](kanit/history_expansion/README.md).
 
 Stored **12,850 distinct final results**: KBL **2,549**, Japan B1 **5,644**, Japan B2 **3,769**, PBA Governors Cup **322**, Commissioners Cup **291**, Philippine Cup **275**. These archives are independent of the existing 54,808-game core; player/fixture rows are not counted as extra completed games. There are also **1,018 validated PBA player-match observations**, currently excluded from default model inputs.
 
-The extension fits fixed league-specific score/logistic/Elo/ensemble candidates using earlier-season training and calibration. It never silently borrows NBA/NBL models for these leagues. PBA conferences stay separate, the current Governors Cup campaign is explicitly matched rather than inferred from July, and Japanese 2026 league-format changes are recorded. Missing coverage, rejected player rows and skipped model folds are visible. See [Asian sources, training, limitations and refresh commands](docs/asian-data-and-models.md).
+The extension fits fixed league-specific score/logistic/Elo/ensemble candidates using earlier-season training and calibration. It never silently borrows NBA/NBL models for these leagues. PBA conferences stay separate, the current Governors Cup campaign is explicitly matched rather than inferred from July, and Japanese 2026 league-format changes are recorded. Missing coverage, rejected player rows and skipped model folds are visible. See [Asian sources, training, limitations and refresh commands](asian-data-and-models.md).
 
-Full-cohort historical winner accuracy for the prior-selected policy is **64.14% (864/1,347)** on the last five KBL archive seasons, **68.63% (1,523/2,219)** across three Japanese B1 seasons, and **70.32% (886/1,260)** across three B2 seasons. Fixed score candidates score 62.14%, 68.81% and 71.19% respectively: model selection is not uniformly better. Partial current KBL is only **15/32 (46.88%)**. Governors Cup is 45/70 in its partial campaign, with an old calibration regime and no eligible selections; the other two cups lack a qualifying training fold. These are retrospective observations, not promised live success rates. [All variants, errors and partial cohorts](docs/kanit/asia_models/summary.csv).
+Full-cohort historical winner accuracy for the prior-selected policy is **64.14% (864/1,347)** on the last five KBL archive seasons, **68.63% (1,523/2,219)** across three Japanese B1 seasons, and **70.32% (886/1,260)** across three B2 seasons. Fixed score candidates score 62.14%, 68.81% and 71.19% respectively: model selection is not uniformly better. Partial current KBL is only **15/32 (46.88%)**. Governors Cup is 45/70 in its partial campaign, with an old calibration regime and no eligible selections; the other two cups lack a qualifying training fold. These are retrospective observations, not promised live success rates. [All variants, errors and partial cohorts](kanit/asia_models/summary.csv).
 
 ## Reliability development and prospective verification
 
-The reliability releases add **1,878 separately stored domestic/regional results**: Czech women 561, Bulgarian women 249, Slovenian women 331, Finnish women 310, Girona women 123, WABA women 261 and Pärnu men 43. There are also **359 EuroLeague Women results** and **two early ECW results**. These are separate archives/cohorts, not a claim of complete league coverage. This follow-up adds 1,317 results beyond the preceding release. A fresh official EuroLeague runtime overlay preserves the frozen benchmark dataset. See [implementation, measured failures and remaining source gaps](docs/improvement-implementation.md).
+The reliability releases add **1,878 separately stored domestic/regional results**: Czech women 561, Bulgarian women 249, Slovenian women 331, Finnish women 310, Girona women 123, WABA women 261 and Pärnu men 43. There are also **359 EuroLeague Women results** and **two early ECW results**. These are separate archives/cohorts, not a claim of complete league coverage. This follow-up adds 1,317 results beyond the preceding release. A fresh official EuroLeague runtime overlay preserves the frozen benchmark dataset. See [implementation, measured failures and remaining source gaps](improvement-implementation.md).
 
 On the same **214 ECW 2025–26 games**, the baseline and expanded domestic-form candidate both get **150 correct (70.09%)**; their log losses are **0.604484 and 0.607545**. The new hierarchical attack/defence candidate gets **143/214 (66.82%)**, log loss **0.626473**. Neither replaces the default. The earlier Czech-only 152/214 result belongs to the [preceding release](https://github.com/Bluetwinklez/basketbol-tahmin/blob/ba29b1cf503040cecfdc8f8a65bfb4115c8e51f5/docs/kanit/winner/summary.csv), not the expanded-input experiment. All variants, failed selection policies and day-block uncertainty intervals remain visible. **No general accuracy increase is established.**
 
@@ -104,7 +113,7 @@ python -m bbtahmin oyuncu-baglam --ev BOS --dep PHI --tarih 2026-10-24T00:00:00Z
 
 The collection workflow archives actual injury reports, ESPN observations and experimental Iddaa quotes at **20:15 and 23:15 UTC** and supports manual dispatch. Partial failures remain visible; total failure fails the job. Scheduling is not a guarantee of provider availability. Locally observed odds are readable with `bulten --gecmis EVENT_ID`; they are not verified opening/closing prices. No betting orders or paid API subscriptions are created.
 
-`--hierarchical` is an **ECW-only research option**, incompatible with `--adaptive-form`; it is not the default. `seyahat-baglam --event-id EVENT_ID --asof UTC_TIMESTAMP` reads a local venue snapshot and exposes unknowns. The included schedule cache could not be freshly confirmed after an HTTP 403; its freshness remains explicitly unverified. Straight-line venue distances are not actual team travel. See [context evidence](docs/kanit/context/venue_examples.json).
+`--hierarchical` is an **ECW-only research option**, incompatible with `--adaptive-form`; it is not the default. `seyahat-baglam --event-id EVENT_ID --asof UTC_TIMESTAMP` reads a local venue snapshot and exposes unknowns. The included schedule cache could not be freshly confirmed after an HTTP 403; its freshness remains explicitly unverified. Straight-line venue distances are not actual team travel. See [context evidence](kanit/context/venue_examples.json).
 
 ## Frozen two-game prospective demonstration
 
@@ -115,7 +124,7 @@ Predictions were generated by this project's existing score model with fresh off
 | Žalgiris – ASVEL | 23 October 2026, 20:00 | 91–82 | 76.36% |
 | Olympiacos – Fenerbahçe | 23 October 2026, 21:15 | 91–82 | 78.25% |
 
-These are model probabilities, **not observed success rates**. [Frozen inputs, full-precision scores, intervals and hashes](docs/kanit/prospective/2026-10-23.json) remain unchanged. New result-check files report final scores, winner correctness and point/percentage errors. The fresh runtime overlay differs from the historical benchmark dataset and is explicitly flagged. Two games cannot validate general accuracy.
+These are model probabilities, **not observed success rates**. [Frozen inputs, full-precision scores, intervals and hashes](kanit/prospective/2026-10-23.json) remain unchanged. New result-check files report final scores, winner correctness and point/percentage errors. The fresh runtime overlay differs from the historical benchmark dataset and is explicitly flagged. Two games cannot validate general accuracy.
 
 ## Predict and record
 
@@ -156,11 +165,11 @@ This is an **experimental adapter for Iddaa's website backend**, not a contracte
 
 Market configuration is checked explicitly. Regulation/first-half/three-way markets are not treated as two-way overtime moneylines. Unsupported competitions, including women's competitions without a matching model, cannot silently use the men's model. Source minimum-combination counts and alternative price fields are retained; expected-return arithmetic is not proof that a standalone selection is executable or profitable. Quarter-point Asian totals are excluded from the simple settlement calculation.
 
-The statement that no Iddaa MCP exists is incorrect: [`borakilicoglu/iddaa-mcp`](https://github.com/borakilicoglu/iddaa-mcp) exists. Its source helped identify the website endpoint; it is not bundled or executed here. MCP also does **not** require a dynamic external API: the local server below reads project files. See [the source-backed API/MCP review](docs/research-and-roadmap.md).
+The statement that no Iddaa MCP exists is incorrect: [`borakilicoglu/iddaa-mcp`](https://github.com/borakilicoglu/iddaa-mcp) exists. Its source helped identify the website endpoint; it is not bundled or executed here. MCP also does **not** require a dynamic external API: the local server below reads project files. See [the source-backed API/MCP review](research-and-roadmap.md).
 
 ## Current evaluation
 
-The new seven-model run is under [`docs/kanit/pregame_verified`](docs/kanit/pregame_verified). It excludes actual-participant absence labels. Each test season uses only preceding seasons for fitting/tuning; same-UTC-day outcomes are withheld from pregame features. Models refit at season boundaries, not monthly.
+The new seven-model run is under [`docs/kanit/pregame_verified`](kanit/pregame_verified). It excludes actual-participant absence labels. Each test season uses only preceding seasons for fitting/tuning; same-UTC-day outcomes are withheld from pregame features. Models refit at season boundaries, not monthly.
 
 The following are **fixed-model results on the last five completed seasons, 2021–22 through 2025–26**. The current incomplete season is excluded. These are not live results, a comparison with identical previous injury-based metrics, or an out-of-sample evaluation of choosing the winning model after seeing this table.
 
@@ -183,11 +192,11 @@ For the NBA score model on those **same 6,605 games**:
 | 70% | 1,684 | 25.50% | 79.69% | 77.70–81.54% |
 | 75% | 988 | 14.96% | 82.59% | 80.10–84.83% |
 
-The 79.69% number describes a selected quarter of the games, **not overall accuracy**, future certainty or profitability. Thresholds are descriptive diagnostics, not a claim that a threshold optimized on this report will generalize. Full tables: [confidence.csv](docs/kanit/pregame_verified/confidence.csv).
+The 79.69% number describes a selected quarter of the games, **not overall accuracy**, future certainty or profitability. Thresholds are descriptive diagnostics, not a claim that a threshold optimized on this report will generalize. Full tables: [confidence.csv](kanit/pregame_verified/confidence.csv).
 
 Artifact manifests record feature semantics, data fingerprints and parameter/metric checksums. Prediction output includes artifact status for the actual input dataset. Default prediction fails with a rebuild instruction if the verified benchmark is missing or invalid; it cannot silently switch to legacy parameters or use an unsigned aggregate to select a model. Old reports in `docs/sonuclar.md` and top-level `docs/kanit` are retained as historical snapshots; their absence-enhanced results must not be presented as current, achievable pregame performance.
 
-An additional chronological Platt-calibration experiment uses strictly earlier seasons' out-of-sample score predictions. EuroLeague accuracy changed from **64.49% to 65.42%** on 1,391 matched games, but NBA accuracy did not improve and NBL deteriorated. These 2022–23 through 2025–26 comparisons exclude the 2021–22 warmup season from both variants and are **not directly comparable to the five-season table above**. The candidate remains disabled pending untouched future evaluation. [Fold results and method](docs/kanit/calibration_research/).
+An additional chronological Platt-calibration experiment uses strictly earlier seasons' out-of-sample score predictions. EuroLeague accuracy changed from **64.49% to 65.42%** on 1,391 matched games, but NBA accuracy did not improve and NBL deteriorated. These 2022–23 through 2025–26 comparisons exclude the 2021–22 warmup season from both variants and are **not directly comparable to the five-season table above**. The candidate remains disabled pending untouched future evaluation. [Fold results and method](kanit/calibration_research).
 
 ## Reproduce or extend the data
 
@@ -214,7 +223,7 @@ python scripts/evaluate_calibration.py
 
 Available records are not a claim of complete coverage for every season or league. Data collectors preserve existing results, quarantine conflicting scores/shifted-date duplicates, normalize athlete IDs and retain source provenance. Four zero-score/administrative records remain in the factual archive but are excluded from ordinary-game modeling. Rich shot/player data is not automatically a same-game pregame feature.
 
-Sources: official EuroLeague API, Basketball Reference, ESPN/sportsdataverse, nba_api, nblR and verified numeric fields from euroleague-open-data. See [data expansion](docs/data-expansion.md), [source notes](data/KAYNAKLAR.md) and [dataset audit](docs/kanit/dataset_audit.json). The SBR collector remains permission-gated; no closing-odds profitability result is claimed.
+Sources: official EuroLeague API, Basketball Reference, ESPN/sportsdataverse, nba_api, nblR and verified numeric fields from euroleague-open-data. See [data expansion](data-expansion.md), [source notes](../data/KAYNAKLAR.md) and [dataset audit](kanit/dataset_audit.json). The SBR collector remains permission-gated; no closing-odds profitability result is claimed.
 
 ## Experimental CBA and live-state projections
 
@@ -225,7 +234,7 @@ python -m bbtahmin tahmin "Jilin - Xinjiang" --lig CBA --json
 python -m bbtahmin canli --ev Jilin --dep Xinjiang --skor 16 15 --periyot 1 --kalan 01:28 --tarih 2026-10-22T14:52:00+03:00 --replay
 ```
 
-See [CBA methods, sources, evaluation and replay limits](docs/cba-live.md). The older runtime-verification report describes CBA as unsupported at that earlier commit; this extension adds support separately and preserves those historical observations.
+See [CBA methods, sources, evaluation and replay limits](cba-live.md). The older runtime-verification report describes CBA as unsupported at that earlier commit; this extension adds support separately and preserves those historical observations.
 
 ## EuroCup Women, FIBA Europe Cup and VTB
 
@@ -237,13 +246,13 @@ python scripts/evaluate_competitions.py
 python -m bbtahmin bulten --lig ECW
 ```
 
-See [sources, coverage, test results and replay limits](docs/competitions.md). The five October 22 screenshot reconstructions were generated after tipoff and are excluded from prospective performance. No in-play support is implied for these competitions.
+See [sources, coverage, test results and replay limits](competitions.md). The five October 22 screenshot reconstructions were generated after tipoff and are excluded from prospective performance. No in-play support is implied for these competitions.
 
 ## Adaptive form and domestic workload research
 
 An optional monthly-refit policy selected only from earlier-season results improved the same 214-game ECW 2025–26 test from **150 to 152 correct (70.09% → 71.03%)**, with a small log-loss improvement. FEC and VTB retained the fixed baseline. This is exploratory reuse of existing research seasons; no general accuracy increase has been established. The current 2026–27 selection keeps fixed updates in all three leagues.
 
-Use `tahmin --lig ECW --adaptive-form` with the usual matchup and timestamp arguments to inspect the optional policy. Defaults remain unchanged. A separate official-club archive adds **39 domestic/ABA observations** and explicit workload diagnostics; older training coverage is insufficient to include them in score fitting. See [methods, commands and limitations](docs/adaptive-form.md).
+Use `tahmin --lig ECW --adaptive-form` with the usual matchup and timestamp arguments to inspect the optional policy. Defaults remain unchanged. A separate official-club archive adds **39 domestic/ABA observations** and explicit workload diagnostics; older training coverage is insufficient to include them in score fitting. See [methods, commands and limitations](adaptive-form.md).
 
 ## Optional local MCP server
 
@@ -275,11 +284,11 @@ python -m pytest -q
 
 Tests are offline. Install the MCP extra to include its protocol test; otherwise that optional test skips. GitHub Actions installs the extra and runs the suite.
 
-Latest local verification (2026-10-23): **213 tests passed**, including the optional MCP protocol test, source identity/final-score boundaries, date-only embargoes, archive-order invariance, future-result isolation, player-report availability and travel unknowns. See [latest test evidence](docs/kanit/asia_tests.xml). Earlier reports remain historical snapshots. The server exposes six read-only tools.
+Latest local verification (2026-10-23): **213 tests passed**, including the optional MCP protocol test, source identity/final-score boundaries, date-only embargoes, archive-order invariance, future-result isolation, player-report availability and travel unknowns. See [latest test evidence](kanit/asia_tests.xml). Earlier reports remain historical snapshots. The server exposes six read-only tools.
 
-A [fresh runtime verification](docs/kanit/runtime_validation/README.md) retrained all seven models for 2025–26 and partial 2026–27, reproduced 15,932 archived prediction rows within 2.04e-14, exercised a real bulletin fixture, and documented the rejection of unsupported live CBA games. It also reports the chronological **model-selection policy** separately from the fixed-model tables above: NBA 65.81% and NBL 59.22% across five completed seasons.
+A [fresh runtime verification](kanit/runtime_validation/README.md) retrained all seven models for 2025–26 and partial 2026–27, reproduced 15,932 archived prediction rows within 2.04e-14, exercised a real bulletin fixture, and documented the rejection of unsupported live CBA games. It also reports the chronological **model-selection policy** separately from the fixed-model tables above: NBA 65.81% and NBL 59.22% across five completed seasons.
 
-The highest-priority research additions are point-in-time injury/lineup history, timestamped market snapshots, stronger player/rotation value estimates, domestic-league workload and travel, and chronological calibration/interval checks. The implemented shooting-profile experiment did not consistently improve outcomes and remains disabled. Detailed priorities, reviewed repositories, provider limitations and measured ablations are in [research-and-roadmap.md](docs/research-and-roadmap.md).
+The highest-priority research additions are point-in-time injury/lineup history, timestamped market snapshots, stronger player/rotation value estimates, domestic-league workload and travel, and chronological calibration/interval checks. The implemented shooting-profile experiment did not consistently improve outcomes and remains disabled. Detailed priorities, reviewed repositories, provider limitations and measured ablations are in [research-and-roadmap.md](research-and-roadmap.md).
 
 
-Screenshot competition support is audited explicitly in [requested football coverage](docs/requested-football-coverage.md). Brazil Série B adds 2,716 CC0 historical finals, but missing 2026 data blocks current recommendations; unsupported leagues never receive invented model outputs. Same-cohort retrospective evidence includes goal-market calibration and simple baselines.
+Screenshot competition support is audited explicitly in [requested football coverage](requested-football-coverage.md). Brazil Série B adds 2,716 CC0 historical finals, but missing 2026 data blocks current recommendations; unsupported leagues never receive invented model outputs. Same-cohort retrospective evidence includes goal-market calibration and simple baselines.

@@ -50,33 +50,22 @@ All definitions below follow `src/bbtahmin/live_scorecard.py` and the `Definitio
 - **Calibration:** Grouped by highest forecast probability in left-closed 10 percentage-point bins, with `100%` included in the last bin (`90%–100%`). Observed frequency is the fraction whose top pick occurred. Bins begin at `50%` for basketball (`50%–60%` through `90%–100%`) and `30%` for football (`30%–40%` through `90%–100%`) to cover all 1X2 favourites.
 - **Football top picks vs. actual outcomes:** For football, the scorecard also tabulates per-class `top_pick_n`, `top_pick_rate`, `actual_n`, and `actual_rate`.
 
-## Current snapshot summary
+## Latest results
 
-From `docs/kanit/live_scorecard/scorecard.md` (data cutoff UTC `2026-11-23T18:40:38.014012+00:00`):
+Use the [generated Markdown report](kanit/live_scorecard/scorecard.md) or its [JSON counterpart](kanit/live_scorecard/scorecard.json) for the current sample sizes, exclusions, metrics and data cutoff. The local app exposes the same report at `/performance`.
 
-- **Basketball** (ledger cutoff `2026-11-23T18:39:45.724905+00:00`, `n = 360` across `ABA`, `ARG_LNB`, `E`, `ECW`, `FEC`, `KBL`, `UKR`):
-  - **Model:** Accuracy `68.6% [63.6%, 73.2%]`, Log loss `0.5888 [0.5512, 0.6309]`, Brier `0.2036 [0.1871, 0.2223]`.
-  - **Always home:** Accuracy `57.8% [52.6%, 62.8%]`, Log loss `14.5830 [12.8561, 16.3100]`, Brier `0.4222 [0.3722, 0.4722]`.
-  - **Expanding league rate:** Accuracy `57.5% [52.3%, 62.5%]`, Log loss `0.6914 [0.6744, 0.7103]`, Brier `0.2485 [0.2404, 0.2571]`.
-  - **Market:** `no market data` (`n = 0`).
-- **Football** (ledger cutoff `2026-11-23T18:40:38.014012+00:00`, `n = 149` across `DE1`, `EN1`, `EN2`, `ES1`, `FR1`, `IT1`, `NL1`, `PT1`, `TR1`, with `TR1` at `n = 0`):
-  - Excluded `126` publisher finals without a verified kickoff timestamp (`DE1 15, EN1 16, EN2 19, ES1 7, FR1 11, IT1 27, NL1 15, PT1 11, TR1 5`).
-  - **Model:** Accuracy `55.7% [47.7%, 63.4%]`, Log loss `0.9801 [0.9184, 1.0421]`, Brier `0.5821 [0.5381, 0.6267]`.
-  - **Always home:** Accuracy `44.3% [36.6%, 52.3%]`, Log loss `19.2397 [16.4581, 22.0214]`, Brier `1.1141 [0.9530, 1.2752]`.
-  - **Expanding league rate:** Accuracy `44.3% [36.6%, 52.3%]`, Log loss `1.0986 [1.0986, 1.0986]`, Brier `0.6667 [0.6667, 0.6667]`.
-  - **Market:** `no market data` (`n = 0`).
-  - **Top picks vs. actuals (Total):** `home` `95` (`63.8%`) vs `66` (`44.3%`); `draw` `0` (`0.0%`) vs `31` (`20.8%`); `away` `54` (`36.2%`) vs `52` (`34.9%`).
+The [GitHub sports data workflow](../.github/workflows/sports-data.yml) regenerates and publishes the scorecard after collecting sources and updating the ledgers. Refer to the cutoff printed in the report when citing results.
 
 ## Limitations
 
 - **Uniform expanding-rate baseline in football:** Football has no per-game final observation timestamps, so `expanding_rate` uses the single saved report's `checked_at_utc` as `known_at`. Because every forecast in that snapshot was frozen before `checked_at_utc`, all football forecasts receive uniform expanding rates (`1/3` per class; Log loss `1.0986`, Brier `0.6667`, with accuracy ties broken to `home`).
-- **No market data:** Complete decimal odds are absent from the frozen forecasts in the current ledger snapshot (`Market (no market data)`, `n = 0` for both sports), so no market benchmark is available.
-- **Matches without verified start timestamps are excluded:** Only games with a timezone-aware start strictly after the freeze are scored. In football, finals with date-only kickoff evidence (missing `verified_start_utc`) and matches flagged for `fixture_review` are excluded (`126` publisher finals excluded in the current snapshot, leaving `TR1` at `n = 0`).
+- **No market data:** When frozen forecasts have no complete decimal odds, the report shows market sample size zero. Any market comparison uses only matches with matching recorded odds.
+- **Matches without verified start timestamps are excluded:** Only games with a timezone-aware start strictly after the freeze are scored. In football, finals with date-only kickoff evidence (missing `verified_start_utc`) and matches flagged for `fixture_review` are excluded. The generated report lists the date-only exclusions by league.
 - **Unverified football publisher finals:** Football relies on community `publisher_final` entries from `data/football_ledger/latest.json`, which lack official verification.
-- **Small per-league samples:** Individual leagues have small counts (for example `PT1` `n = 4`, `DE1` `n = 12`, `UKR` `n = 23`), resulting in wide 95% confidence intervals.
+- **Small per-league samples:** Small per-league cohorts can produce wide 95% confidence intervals. See the league rows in the generated report.
 
 ## How not to read the results
 
-- **No profitability or market-beating claim:** Beating naive baselines (`Always home` or `Expanding league rate`) is not evidence of beating betting markets or generating profit. Market comparison is currently unavailable (`n = 0`).
+- **No profitability or market-beating claim:** Beating naive baselines (`Always home` or `Expanding league rate`) is not evidence of beating betting markets or generating profit. Check the market sample size and the matched model row before making a comparison.
 - **Not a general performance guarantee:** Point estimates on small per-league cohorts or sparse calibration bins have wide uncertainty and should not be extrapolated as stable long-run accuracy.
 - **Not proof of complete coverage or official verification:** Excluded matches without verified kickoff times and unverified community publisher finals mean the scored cohort is a filtered subset of ledger activity.

@@ -1,77 +1,76 @@
-Türkçe: [README.tr.md](README.tr.md)
+[Türkçe](README.tr.md)
 
-# Basketball and Football Pregame Research
+# Basketball and Football Match Forecasts
 
-A Python research package (`bbtahmin`) for pregame basketball and football probabilities, score/goal margins and totals. It combines reproducible historical archives, chronological walk-forward evaluation, an experimental Iddaa bulletin reader, a local browser app and a read-only local MCP server.
+`bbtahmin` is a Python research project for pregame basketball and football forecasts. Run the local browser app, inspect the forecasts saved by GitHub Actions, or reproduce a chronological backtest from the included archives.
 
-## Scope: leagues and models
+[![Tests](https://github.com/Bluetwinklez/basketbol-tahmin/actions/workflows/tests.yml/badge.svg)](https://github.com/Bluetwinklez/basketbol-tahmin/actions/workflows/tests.yml)
+[![Sports data refresh](https://github.com/Bluetwinklez/basketbol-tahmin/actions/workflows/sports-data.yml/badge.svg)](https://github.com/Bluetwinklez/basketbol-tahmin/actions/workflows/sports-data.yml)
 
-- **Core basketball (54,808 stored games; the separate Asian archives contain 12,850 results):** NBA, EuroLeague (`E`), EuroCup (`U`) and Australian NBL. Models: home baseline, Elo, MOV Elo, logistic regression, gradient boosting, score regression and ensemble, evaluated chronologically with prior-season parameter/model selection and per-league extended feature selection. Retrospective player-absence features and four-factor/shooting profiles are disabled by default.
-- **Additional basketball archives (separate models):** Chinese CBA (2,386 games, plus experimental manual regulation live-state projection), EuroCup Women (`ECW`, 678), FIBA Europe Cup men (`FEC`, 651), VTB men (860), ABA League senior men (3,023), Turkish BSL (2,523), Ukrainian SuperLeague (997), Argentina Liga Nacional (`ARG_LNB`) and Asian archives (12,850 distinct finals: KBL 2,549, Japan B1 5,644, Japan B2 3,769, PBA Governors Cup 322, Commissioners Cup 291, Philippine Cup 275).
-- **Football (separate workflow):** 62,373 stored community-source finals across 17 European leagues (including Turkish Süper Lig), plus separate historical archives for requested leagues. Predicts regulation 1/X/2, goal totals and both-teams-score probabilities; the opponent-adjusted model is the default (`--model baseline` and `ensemble` remain available).
-- **Explicit limits:** Japan 2026–27 B.PREMIER/B.ONE legacy model transfer is blocked until separately validated; unsupported leagues (e.g. Swedish SBL) have no enabled model; betting execution and guaranteed returns are not provided. Current delivery audit and unresolved acceptance criteria: [scope ledger](docs/delivery-scope.md) (see also [docs/screenshot-leagues.md](docs/screenshot-leagues.md)). Screenshot pairings, unknown dates and source verification are tracked separately from model performance.
+[Latest scorecard](docs/kanit/live_scorecard/scorecard.md) · [Paired experiment status](data/improvement_shadow/latest.json) · [Documentation](docs/INDEX.md) · [Changelog](docs/CHANGELOG.md)
 
-## Honest performance summary
+## Quick start
 
-**More data has not established a general increase in prediction accuracy.** All figures below are retrospective chronological backtests, not live results or betting guarantees; prospective football and recent expansion cohorts remain pending or too small to validate general accuracy.
-
-Fixed-model results on the last five completed core basketball seasons (**2021–22 through 2025–26**, excluding actual-participant absence labels; [docs/kanit/pregame_verified](docs/kanit/pregame_verified)):
-
-| League | Model | Games | Winner accuracy | Log loss |
-|---|---|---:|---:|---:|
-| NBA | Score regression | 6,605 | 65.80% | 0.61977 |
-| EuroLeague | Score regression | 1,690 | 64.62% | 0.61594 |
-| EuroCup | Score regression | 970 | 65.88% | 0.60567 |
-| NBL | Ensemble | 824 | 61.04% | 0.65857 |
-
-- **Confidence filtering vs. full coverage:** on the same 6,605 NBA games, filtering to ≥70% predicted winner probability yields 79.69% accuracy on 1,684 games (25.50% coverage; [confidence.csv](docs/kanit/pregame_verified/confidence.csv)). This is a subset diagnostic, not overall accuracy.
-- **October 2026 accuracy review:** per-league extended basketball features gave small gains (e.g. NBA 65.78% → 66.03%), while promoting the opponent-adjusted football default raised same-cohort 2025–26 1/X/2 accuracy from 47.80% to 49.18% across 3,973 games in 17 leagues ([docs/accuracy-review.md](docs/accuracy-review.md)).
-- **NBA closing odds:** On 6,758 matched games (2017–18 through 2022–23), the no-vig market outperformed the score model. The blend fitted on earlier seasons stayed close to the market. See the [market comparison](docs/kanit/piyasa.csv) and [betting simulation](docs/kanit/bahis.csv).
-- **NBA odds in the CLI:** Add `@1.65/2.30` to a `tahmin` matchup to see `Piyasa` (no-vig market), `Birleşik` (fixed 90% market, 10% model logit blend), and `Harman` when [fitted coefficients](docs/kanit/harman.json) are available. SBR odds collection via `topla --sbr-izni` requires written permission.
-- **Other leagues:** Asian, regional, domestic and CBA retrospective evaluations (and partial-season caveats) are documented in [docs/INDEX.md](docs/INDEX.md). Historical snapshots in [docs/sonuclar.md](docs/sonuclar.md) include legacy absence features and must not be presented as current pregame performance.
-
-## Install
-
-Requires **Python 3.12+** (Node.js 18+ only for the legacy `scripts/fetch.mjs` collector).
+Clone the repository and run the commands from its root. Use Python 3.12 or newer.
 
 ```bash
+git clone https://github.com/Bluetwinklez/basketbol-tahmin.git
+cd basketbol-tahmin
 python -m venv .venv
 # Linux/macOS: source .venv/bin/activate
 # Windows PowerShell: .venv\Scripts\Activate.ps1
 python -m pip install -r requirements.txt
 python -m pip install --no-deps -e .
+python -m bbtahmin app
 ```
 
-Optional read-only local MCP server extra: `python -m pip install -e '.[mcp]'`.
+The app opens at `http://127.0.0.1:8765`. Use the basketball board, `/football` for football, and `/performance` for measured accuracy and probability losses. The browser app runs locally without a Node.js build. Node.js 22 is used for the frontend tests. [Local app guide](docs/local-app.md)
 
-The checked-in Parquet files can be used immediately. `requirements-lock.txt` records an older Windows environment and contains a machine-specific editable-install path; `requirements.txt` is the portable direct-dependency specification.
+## What you can forecast
 
-## Common commands
+| Sport | Outputs | Coverage |
+| --- | --- | --- |
+| Basketball | Winner probability, expected team scores, margin, total and uncertainty intervals | Core historical models for NBA, EuroLeague, EuroCup and Australian NBL. Separate archives and models cover KBL, ABA, Türkiye BSL, EuroCup Women, FIBA Europe Cup and other competitions. |
+| Football | Regulation-time 1/X/2, expected goals, goal totals and both teams to score. The board also derives double chance from 1/X/2. | European and American archives. Scheduled forecasts depend on a current, independently confirmed kickoff and adequate team history. The default is the opponent-adjusted model. |
+
+Historical coverage, manual forecasts and scheduled forecasts depend on different sources. NBA historical and manual forecasts are supported. Automated NBA schedules are currently blocked by source access. Japan's 2026–27 B.PREMIER/B.ONE requires separate model validation before forecasts can be enabled. [League coverage](docs/delivery-scope.md) · [NBA status](docs/nba-daily.md) · [Refresh exceptions](docs/refresh-known-missing.md)
+
+## Commands and outputs
+
+| Task | Command | Output |
+| --- | --- | --- |
+| Run basketball using saved sources | `python -m bbtahmin gunluk --ligler E KBL` | Local forecasts and daily report in `rapor/daily/` |
+| Refresh basketball and run | `python -m bbtahmin gunluk --ligler E KBL --guncelle` | Updates public sources before the local run |
+| Run football using saved sources | `python -m bbtahmin futbol daily --days 7` | Local report in `rapor/football/latest.json` |
+| Refresh football and run | `python -m bbtahmin futbol daily --refresh --days 7` | Refreshes the current archive and fixture confirmations |
+| Produce a manual NBA forecast | `python -m bbtahmin tahmin "BOS - LAL @1.65/2.30" --lig NBA --json` | JSON with experimental odds comparison |
+| Read the experimental İddaa bulletin | `python -m bbtahmin bulten --guncelle --limit 10` | Refreshes and reads the local bulletin snapshot |
+| Rebuild the offline scorecard | `python scripts/live_scorecard.py` | Markdown and JSON in `docs/kanit/live_scorecard/` |
+| Check pinned forecast files | `python scripts/pin_improvement_baseline.py --verify-only` | Verifies the original file hashes |
+
+The [repository refresh workflow](.github/workflows/sports-data.yml) publishes to the checked-in ledgers and scorecards. Local daily commands use the `rapor/` directory by default. Reuse the same local output directory to preserve the earliest local forecasts. For an existing experiment, use the published report or `python scripts/run_shadow_cycle.py --settle-only`. [Daily workflow](docs/daily-workflow.md) · [Football workflow](docs/football.md)
+
+## Performance and evidence
+
+The live scorecard measures saved pregame forecasts after a final is observed. It reports sample size, accuracy, log loss, Brier score, calibration and baselines. Dates, exclusions and results are in the versioned report. Use both accuracy and coverage when reading confidence filters. Historical replays and paired pregame experiments have separate evidence.
+
+| Evidence | Where to look |
+| --- | --- |
+| Recorded forecasts and observed results | [Live scorecard](docs/kanit/live_scorecard/scorecard.md) · [Method](docs/live-scorecard.md) |
+| Fixed reference and candidate on the same upcoming fixture | [Published experiment report](data/improvement_shadow/latest.json) · [Improvement plan and gates](docs/improvement-progress.md) |
+| Reproducible historical comparisons | [Basketball backtests](docs/kanit/pregame_verified/completed_seasons.csv) · [Football and basketball review](docs/accuracy-review.md) · [Workload experiment](docs/kanit/improvement/basketball-rest-decay.md) |
+| Closing-odds evidence for the matched NBA historical sample | [Market comparison](docs/kanit/piyasa.csv) · [Simulation](docs/kanit/bahis.csv) |
+
+Forecasts are for research and do not provide betting execution or guaranteed returns. Missing source data, uncertain kickoff times and disputed results remain visible in the reports.
+
+## Development and data
 
 ```bash
-# 1. Open the local browser application (basketball and football boards)
-python -m bbtahmin app
-
-# 2. Run daily basketball refresh, freeze pregame forecasts and write rapor/daily/latest.md
-python -m bbtahmin gunluk --guncelle
-
-# 3. Inspect a pregame basketball prediction with hypothetical decimal odds
-python -m bbtahmin tahmin "BOS - LAL @1.65/2.30" --lig NBA --tarih 2026-10-25T20:00 --json
-
-# 4. Refresh the experimental Iddaa basketball bulletin snapshot (3 read-only GETs)
-python -m bbtahmin bulten --guncelle --limit 10
-
-# 5. Refresh active football seasons and freeze 7-day pregame forecasts
-python -m bbtahmin futbol daily --refresh --days 7
-
-# 6. Run the offline test suite (or reproduce core backtest via `python -m bbtahmin backtest --ilk-test 2021 --cikti docs/kanit/pregame_verified`)
 python -m pytest -q
+npm ci --no-audit --no-fund
+npm run test:ui
 ```
 
-## Data, license and documentation
+The optional read-only local MCP server is available with `python -m pip install -e '.[mcp]'` and `bbtahmin-mcp`. Use `requirements.txt` for a portable install. `requirements-lock.txt` records an older Windows environment.
 
-- **Data:** checked-in Parquet archives live under `data/` and can be used immediately after install. Raw download caches (`data/raw/`), local bulletin history (`data/bulten/`) and local daily reports (`rapor/`) are gitignored. See [data/KAYNAKLAR.md](data/KAYNAKLAR.md) and [docs/data-expansion.md](docs/data-expansion.md) for table schemas and source provenance.
-- **License:** repository code is licensed under the [MIT License](LICENSE). Third-party historical data archives retain their upstream licenses and attributions (including CC0, CC BY-SA 4.0 and ODC-By 1.0); see [data/KAYNAKLAR.md](data/KAYNAKLAR.md), [data/football/ARGENTINA-LICENSE-DATOS.md](data/football/ARGENTINA-LICENSE-DATOS.md) and the per-dataset docs.
-- **Documentation:** browse the full topic-grouped index at [docs/INDEX.md](docs/INDEX.md). Detailed release history and earlier README sections were moved verbatim to [docs/CHANGELOG.md](docs/CHANGELOG.md).
-
-[Security policy](SECURITY.md) · [Repository security audit](SECURITY_AUDIT.md)
+Code is [MIT licensed](LICENSE). The archives retain their separate [source licenses and attributions](data/KAYNAKLAR.md). Raw caches, local bulletin history and local reports are ignored by Git. [Security policy](SECURITY.md) · [Security audit](SECURITY_AUDIT.md)
