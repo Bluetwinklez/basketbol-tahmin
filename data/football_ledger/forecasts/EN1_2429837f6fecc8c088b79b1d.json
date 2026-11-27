@@ -1,0 +1,126 @@
+{
+  "spec": "football-prospective-v1",
+  "recorded_at_utc": "2026-11-27T16:54:10.412577+00:00",
+  "fixture": {
+    "event_id": "EN1_2429837f6fecc8c088b79b1d",
+    "league": "EN1",
+    "season": "2026-27",
+    "date": "2026-12-03",
+    "home": "tottenham hotspur fc",
+    "away": "fulham fc",
+    "home_name": "Tottenham Hotspur FC",
+    "away_name": "Fulham FC",
+    "home_goals": null,
+    "away_goals": null,
+    "status": "scheduled",
+    "date_precision": "day",
+    "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/en.1.json",
+    "captured_at_utc": "2026-11-27T16:54:06.597772+00:00",
+    "source_kind": "community_CC0_not_official",
+    "license": null,
+    "attribution": null,
+    "publisher_url": null,
+    "source_home_ident": null,
+    "source_away_ident": null,
+    "original_date": null,
+    "date_correction_verified": null,
+    "license_url": null,
+    "source_sha256": null,
+    "fixture_verification_url": null,
+    "actual_start_utc": null,
+    "official_result_url": null,
+    "source_original_date": "2026-12-02",
+    "verified_start_utc": "2026-12-03T20:00:00+00:00",
+    "independent_fixture": {
+      "provider_event_id": "401878749",
+      "league": "EN1",
+      "season_year": 2026,
+      "start_utc": "2026-12-03T20:00:00+00:00",
+      "captured_at": "2026-11-26T18:47:54.149910+00:00",
+      "home_name": "Tottenham Hotspur",
+      "away_name": "Fulham",
+      "provider_home_id": "367",
+      "provider_away_id": "370",
+      "source_url": "https://www.espn.com/soccer/game/_/gameId/401878749",
+      "status": "scheduled",
+      "event_id": "EN1_2429837f6fecc8c088b79b1d",
+      "home": "tottenham hotspur fc",
+      "away": "fulham fc"
+    }
+  },
+  "prediction": {
+    "model": "football-opponent-v1",
+    "league": "EN1",
+    "home": "tottenham hotspur fc",
+    "away": "fulham fc",
+    "expected_home_goals": 1.2651141426104848,
+    "expected_away_goals": 1.033533354301294,
+    "probabilities": {
+      "home": 0.41640410716259496,
+      "draw": 0.28134531270997415,
+      "away": 0.30225058012743095
+    },
+    "predicted_outcome": "home",
+    "most_likely_score": [
+      1,
+      1
+    ],
+    "over": {
+      "1.5": 0.6688338155821449,
+      "2.5": 0.4036024794241623,
+      "3.5": 0.20037803043679123
+    },
+    "both_teams_score": 0.46243969900066656,
+    "total_goals_80": [
+      0,
+      4
+    ],
+    "training_cutoff_exclusive": "2026-11-27",
+    "training_games": 1120,
+    "prior_team_games": {
+      "tottenham hotspur fc": 112,
+      "fulham fc": 112
+    },
+    "issues": [],
+    "recommendation_validated": false,
+    "settings": {
+      "half_life_days": 180.0,
+      "shrinkage_games": 8.0,
+      "window_days": 1095
+    },
+    "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+    "low_score_rho": 0.0,
+    "research_candidate": false
+  },
+  "archive_sha256": "42c857d1fb6b6dabe675bf49887ea4a8861055bf478050b0242532c689faac2d",
+  "source_code_sha256": "e22140e4ea93345fa34a25c3f6276a265066c7b94469e20fc25bd05eeff3201d",
+  "requested_model_variant": "opponent",
+  "history_health": {
+    "spec": "football-history-health-v1",
+    "checked_at_utc": "2026-11-27T16:54:08.208580+00:00",
+    "information_cutoff_exclusive": "2026-11-27",
+    "teams": {
+      "tottenham hotspur fc": {
+        "prior_finals": 239,
+        "active_season_finals": 11,
+        "last_final_date": "2026-11-21",
+        "days_since_last_final": 6,
+        "unresolved_past_fixture_ids": []
+      },
+      "fulham fc": {
+        "prior_finals": 391,
+        "active_season_finals": 11,
+        "last_final_date": "2026-11-21",
+        "days_since_last_final": 6,
+        "unresolved_past_fixture_ids": []
+      }
+    },
+    "diagnostic_gate_passed": true,
+    "blocking_issues": [],
+    "max_history_age_days": 30,
+    "calendar_completeness_verified": false,
+    "note": "Diagnostic policy, not a validated success threshold. Unresolved fixtures may be postponed or missing results. Fresh source captures do not make old histories current."
+  },
+  "selection_policy": "Current-history diagnostic gate plus existing model issues; research only, no validated recommendation.",
+  "payload_sha256": "09f0889bba65bf74c7932bc1f92dc392030410fc57bf9f48fdffc13b49d6b4ea"
+}

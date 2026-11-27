@@ -1,7 +1,7 @@
 {
   "spec": "football-daily-v1",
-  "checked_at_utc": "2026-11-26T18:48:38.041908+00:00",
-  "collection_checked_at_utc": "2026-11-26T18:44:24.550490+00:00",
+  "checked_at_utc": "2026-11-27T16:59:19.932776+00:00",
+  "collection_checked_at_utc": "2026-11-27T16:54:06.597772+00:00",
   "source_errors": [
     {
       "league": "DE2",
@@ -5455,6 +5455,103 @@
         "verification": "community_source_final_not_official",
         "source_url": "https://en.wikipedia.org/wiki/2026%E2%80%9327_Premier_League"
       },
+      "fixture_review": null
+    },
+    {
+      "fixture": {
+        "event_id": "EN1_2429837f6fecc8c088b79b1d",
+        "league": "EN1",
+        "season": "2026-27",
+        "date": "2026-12-03",
+        "home": "tottenham hotspur fc",
+        "away": "fulham fc",
+        "home_name": "Tottenham Hotspur FC",
+        "away_name": "Fulham FC",
+        "home_goals": null,
+        "away_goals": null,
+        "status": "scheduled",
+        "date_precision": "day",
+        "source_url": "https://github.com/openfootball/football.json/blob/e6744429ee395bc86f247348c6184bb08d4eb361/2026-27/en.1.json",
+        "captured_at_utc": "2026-11-27T16:54:06.597772+00:00",
+        "source_kind": "community_CC0_not_official",
+        "license": null,
+        "attribution": null,
+        "publisher_url": null,
+        "source_home_ident": null,
+        "source_away_ident": null,
+        "original_date": null,
+        "date_correction_verified": null,
+        "license_url": null,
+        "source_sha256": null,
+        "fixture_verification_url": null,
+        "actual_start_utc": null,
+        "official_result_url": null,
+        "source_original_date": "2026-12-02",
+        "verified_start_utc": "2026-12-03T20:00:00+00:00",
+        "independent_fixture": {
+          "provider_event_id": "401878749",
+          "league": "EN1",
+          "season_year": 2026,
+          "start_utc": "2026-12-03T20:00:00+00:00",
+          "captured_at": "2026-11-26T18:47:54.149910+00:00",
+          "home_name": "Tottenham Hotspur",
+          "away_name": "Fulham",
+          "provider_home_id": "367",
+          "provider_away_id": "370",
+          "source_url": "https://www.espn.com/soccer/game/_/gameId/401878749",
+          "status": "scheduled",
+          "event_id": "EN1_2429837f6fecc8c088b79b1d",
+          "home": "tottenham hotspur fc",
+          "away": "fulham fc"
+        }
+      },
+      "prediction": {
+        "model": "football-opponent-v1",
+        "league": "EN1",
+        "home": "tottenham hotspur fc",
+        "away": "fulham fc",
+        "expected_home_goals": 1.2651141426104848,
+        "expected_away_goals": 1.033533354301294,
+        "probabilities": {
+          "home": 0.41640410716259496,
+          "draw": 0.28134531270997415,
+          "away": 0.30225058012743095
+        },
+        "predicted_outcome": "home",
+        "most_likely_score": [
+          1,
+          1
+        ],
+        "over": {
+          "1.5": 0.6688338155821449,
+          "2.5": 0.4036024794241623,
+          "3.5": 0.20037803043679123
+        },
+        "both_teams_score": 0.46243969900066656,
+        "total_goals_80": [
+          0,
+          4
+        ],
+        "training_cutoff_exclusive": "2026-11-27",
+        "training_games": 1120,
+        "prior_team_games": {
+          "tottenham hotspur fc": 112,
+          "fulham fc": 112
+        },
+        "issues": [],
+        "recommendation_validated": false,
+        "settings": {
+          "half_life_days": 180.0,
+          "shrinkage_games": 8.0,
+          "window_days": 1095
+        },
+        "note": "Regulation only. Opponent-adjusted pooled venue strengths; low-score correction fitted on earlier results. Default since its same-cohort retrospective comparison; no lineup/xG/odds inputs.",
+        "low_score_rho": 0.0,
+        "research_candidate": false
+      },
+      "recorded_at_utc": "2026-11-27T16:54:10.412577+00:00",
+      "status": "pending",
+      "result": null,
       "fixture_review": null
     },
     {
@@ -46047,16 +46144,12 @@
       "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
     },
     {
-      "event_id": "EN1_2429837f6fecc8c088b79b1d",
+      "event_id": "EN2_2409d46b13ecd1fe7fd037be",
       "reason": "Fresh independent future scheduled fixture required"
     },
     {
-      "event_id": "EN2_2409d46b13ecd1fe7fd037be",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
-    },
-    {
       "event_id": "NL1_ff7440977c7780afe0edae0c",
-      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+      "reason": "Fresh independent future scheduled fixture required"
     },
     {
       "event_id": "DE1_065e05c409d2d243a54fee5d",
@@ -46225,9 +46318,181 @@
     {
       "event_id": "NL1_9f7785f0c01920ab65b0dc17",
       "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "EN2_f4f05030cfdbda22c5a2b4e5",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "ES1_2d78ff492823e5e85f2477e3",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "ES1_37faaae1960700e3313fb88a",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "ES1_4873dbdc1260dc74e9103639",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "ES1_59b78771ee5b29467a63206b",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "ES1_5aff73c4b265a22d865506f1",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "ES1_5ebb45c96306a0dba5a1ec34",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "ES1_b1acebfad566a5c86ffe5195",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "ES1_c1ff8719547bd5971a936531",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "ES1_c3b5651f01c474285a1a7ae3",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "ES1_d4c64a091f3b6d5fedf1defd",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "IT1_08247a2b56407927a5e73d7b",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "IT1_1049c83f4512fd4ca881bcf6",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "IT1_34fc6917f433a3bfb3546915",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "IT1_6d164c9410ee5e876c57bddb",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "IT1_944bbfb834303707f4092617",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "IT1_a27fb18c9fc61feedc36e132",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "IT1_becff8d42760983e13422ea7",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "IT1_c8bf856be2e602ccddeb4b40",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "IT1_ee67177ee60e7ba043cbe137",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "IT1_fb5bcd9bbc8e46e88cbeb918",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "NL1_b05d3c875c2f58b929b9d125",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "NL1_b5004583543c42a0493c85e6",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "NL1_d0540f2fba29557b5fbb59ca",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "NL1_f5c84b50bfd182901a83966a",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "PT1_0c7846bf7240d8ad5842850f",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "PT1_5a8ba796ebdabf6adfb51bfb",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "PT1_8d5e63ad392184b5bebebf12",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "PT1_a379c4ccba2ce94995093872",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "PT1_afadf861cedcd21fd55e3d9c",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "PT1_bd5d001c4900d457220b306e",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "PT1_c7c7d465743239ebe550d412",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "PT1_cf77fb024bb0ddb867d86a60",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "PT1_e24ef56bb6264bde300475f4",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "TR1_8cc529c6f7daf57a8f546624",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "TR1_8ee667a5a1bee76a6c7ab1a0",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "TR1_96c206d4b10aaa936bc375e2",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "TR1_b7fad99a3d98868867ad2e8b",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "TR1_ca770babc9631aef4f418b88",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "TR1_cb0961218d8b53fc68978755",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "TR1_d88aaa298ea4f449001afddc",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "TR1_e3851d06ea9a4767fb68c9f1",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
+    },
+    {
+      "event_id": "TR1_ec47941156b6aed5a8a94394",
+      "reason": "Independent fixture identity/time unconfirmed; refresh fixture checks"
     }
   ],
-  "pending": 133,
+  "pending": 134,
   "requested_model_variant": "opponent",
   "publisher_performance": {
     "games": 292,

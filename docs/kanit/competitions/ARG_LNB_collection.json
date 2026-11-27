@@ -1,5 +1,5 @@
 {
-  "captured_at_utc": "2026-11-26T18:47:14.912600+00:00",
+  "captured_at_utc": "2026-11-27T16:57:10.805815+00:00",
   "league": "ARG_LNB",
   "games": 1768,
   "seasons": {
@@ -16,12 +16,12 @@
       "finals": 85
     }
   ],
-  "fixtures": 36,
+  "fixtures": 38,
   "errors": [],
   "sources": [
     {
-      "url": "https://www.laliganacional.com.ar/laliga/fixture?handler=ProximosPartidos&fechaInicio=2026-07-01&fechaFin=2026-12-26",
-      "sha256": "e7f6e462d005bb43eec76a6f07c1a0c9a1c566ec2c5d983de5c386c374df1bd9"
+      "url": "https://www.laliganacional.com.ar/laliga/fixture?handler=ProximosPartidos&fechaInicio=2026-07-01&fechaFin=2026-12-27",
+      "sha256": "e0b256ba63a4600783eda73f0e5f4c011ce109a7b8ee0899d59ed60582b48324"
     }
   ],
   "official_current_refresh": true,
@@ -29,729 +29,705 @@
   "rejected_results": [],
   "identity_links": [
     {
-      "observed_id": "ARG_LNB_ac0a11f8d37c179883ed8e77",
+      "observed_id": "ARG_LNB_4b5a7b901ceec6681826590b",
       "canonical_id": "ARG_LNB_47c1c9c4b43308a0b4465687",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2yYIy_K2dxpdjXAmvMC-I9Q0jcr_XC-2s1R4h3_WGJBMERLBne6J4HQ==/lanus-vs-gimnasia-cr",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2TicT5miW2p5SlvOm_jqmqzOfsgShDqvDBzd6t1tWiJwDuqO3TyT6hg==/lanus-vs-gimnasia-cr",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_8b53d59ba60e3e90ade4a65e",
+      "observed_id": "ARG_LNB_a5b5aa0670fcf095ab4eb6bc",
       "canonical_id": "ARG_LNB_87f09443eee981a21d1d2d42",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v26r2fAuFzgLv49GH8X0l99gEoLf8gB2P8DCa7WuaJFUA5IJwHEXiYtA==/penarol-mdp-vs-gimnasia-cr",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2uBdyMuucJLqLOX0gtzqD5mVS5ftOhSJ_Y2QdNFHo0BLChXzxrh4iRw==/penarol-mdp-vs-gimnasia-cr",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_e8593bdbceb7ca67bb4cc11e",
+      "observed_id": "ARG_LNB_b64a22961d0d15bb008a00cf",
       "canonical_id": "ARG_LNB_8275312046e3b3ae2f68c0d6",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2hk4NNV3JMpYtx8pbn3cYpDcz4Y-7zw-a0KeiQkc35hzlEQ4BtnPA0w==/argentino-j-vs-ferro",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2ETxVWNt6_9jDcm7nvHKVgcEymJpVsbefpAx6m7ZU9POw_tlh_TyOKw==/argentino-j-vs-ferro",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_9b1374398af31df8d577b1c8",
+      "observed_id": "ARG_LNB_07b1863da9114125dda25346",
       "canonical_id": "ARG_LNB_5b4da8290ee79abc84e57310",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v27wGZjH1MOwBdTVzcnKyJFBNnxx8L1fIx9HZ4yPXunmthcMLPZfLbIQ==/san-martin-c-vs-instituto",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2AnsGt3z05CaQGvpFzGsEYAb-AchJkipXYcGWidusUPCmNqyOyXGOgA==/san-martin-c-vs-instituto",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_fdad3f5e0c990b2628611bd8",
+      "observed_id": "ARG_LNB_8c5a695df8248d31270e9e21",
       "canonical_id": "ARG_LNB_bcafa482fe9afd1611033c29",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2QR_UMXW_b7xqjYk8nOiipwBnZqYqMkg-2PA6iQOlDjq493bTWVKxdw==/olimpico-lb-vs-platense",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2EfMIPRedBYeerIIEiRJLmz_ZfyVN10vztNIycGOEiSrEqlCVemD9zg==/olimpico-lb-vs-platense",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_8339597fbfb895a31b26614d",
+      "observed_id": "ARG_LNB_b5398035a5a9e425db4d8193",
       "canonical_id": "ARG_LNB_3134ce3aefc6de55613d4795",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2IBh1ZvVN-8jK6tNG4_h8XXD2qjhvfev-EJAADHZk0VFSJLd_8AzMbg==/regatas-c-vs-instituto",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2u5j7Le-An9kq1ynV_E3dtJFmK2eh0mDWs5AiCcsBOC7Bukx7stes4A==/regatas-c-vs-instituto",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_ade161e9e0632e00f1886090",
+      "observed_id": "ARG_LNB_3eb6c8866d478c0265a74b85",
       "canonical_id": "ARG_LNB_b8a22c62b1b9f764d3c0f893",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2xPAShdmdWUydIyZxh4D6C-NWvWw7ekB0pp2n2sbiX9QeMeTWrdWKKg==/quimsa-vs-platense",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2AgzbXQvzGbzYL6Cm5xt1lutF-nv8RruYRAZRWVDmkj3PKNoMy9vblw==/quimsa-vs-platense",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_4f7269839446528c30d5ccc5",
+      "observed_id": "ARG_LNB_c4e4f539871e6827e8539441",
       "canonical_id": "ARG_LNB_2092bf6a1bef212764c61f2e",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2csBiYQPqLBETVrFUyGV5YQ9SXDO0Cn8sfP_a1LqSuLTf880oRhnJ2Q==/gimnasia-cr-vs-la-union-fsa",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2VhiQfA-lWx8BcEXVhP1UJpehOk3O4ftdNxBZ0xdxbVaPA4j574js0w==/gimnasia-cr-vs-la-union-fsa",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_b37d778649d901705093730d",
+      "observed_id": "ARG_LNB_ec758008acd29d734259122e",
       "canonical_id": "ARG_LNB_3d56a27240dac7b49fbe2a3a",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2mGgT8nIUHM59npynZ98QsD2mIr06C095ITKJRoHGcnNIPzlqKYVanQ==/quimsa-vs-atenas-c",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2nC25UK-vNbh1FPXSJ6QUSwZb0zoNSY7FucAENBciAg4Jwt6cYuiygg==/quimsa-vs-atenas-c",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_a4ec1aec33d42e5161552c9e",
+      "observed_id": "ARG_LNB_f046c18e090d1e1668fc8fdf",
       "canonical_id": "ARG_LNB_ca2eb78613a9530b8a04578c",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v27_FQl_Gsfdw_HW9wMBacb5NLVIprDd9ulMN-PN20nEMIBO_fIlrItw==/platense-vs-la-union-fsa",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2iMsT2I_mQDA7qWauIPFMpr6XoFe2KozLu-VzQMIWd4Qc-f9PD8y1Rg==/platense-vs-la-union-fsa",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_db9c722d65edee1a437b67d9",
+      "observed_id": "ARG_LNB_157c481cea0acddfe79c168d",
       "canonical_id": "ARG_LNB_4b1ee2bc7948bca83c69af16",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v29r_eBVBfqxm4S6CzMj-STcsphs3oUSedRnj4SaK9ZD4munM-HZavEA==/boca-vs-obera",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2G49RJdN9cYs5JAYajdVzOFmx7aj_FluEVb2ZhqKCAMFtu-yHZVmIvA==/boca-vs-obera",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_1ef6f3eff51da52c0fa496b8",
+      "observed_id": "ARG_LNB_c87cca53d82f48a869b4f2b4",
       "canonical_id": "ARG_LNB_53e5159cddd65c77aadb4c97",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2fqSf9jzL05vWMBpXDJsqjLNH2qt7J9KvZ1WhOsLBjMg2_kAybVtLnw==/olimpico-lb-vs-atenas-c",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v22BSt04CNEMYg3oC_MDnki-8N5gClSejKtikP1GT61mlXwD98mSfcSg==/olimpico-lb-vs-atenas-c",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_4245fdbfe999b68b050ed98f",
+      "observed_id": "ARG_LNB_c2fb1499f0bd018ffc171170",
       "canonical_id": "ARG_LNB_55758432f43c6490a7f4b844",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2yvd7ILZ6QhsZg0VwIWTjqQmbSP0ImtzH2cRnhvxOGhs3Y2EEmC8L7g==/racing-ch-vs-san-martin-c",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2Z9BAWFaZ4r5L-S1fsf7gdiiS5zuV46YM0oEmN5uJneYj8Daq08nS5Q==/racing-ch-vs-san-martin-c",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_5c28ceb18c82755e303c678f",
+      "observed_id": "ARG_LNB_08d3befe36b542469ed025bd",
       "canonical_id": "ARG_LNB_a3a2337a8103aebfeb4be668",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2Rhuf7cpO8xc9hjuLArLP4UkBZ1BsrBOHbbXJVDBak37ViqtVrFY-gA==/independiente-o-vs-ferro",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2i800G9E1gqnowsJBcU-OcU2R7y9W0Aao_Ayr2yNUP1st8K6Ru69cYg==/independiente-o-vs-ferro",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_ed1ac66e5b56cfa68b16e591",
+      "observed_id": "ARG_LNB_59e4bac5abc18d0200196693",
       "canonical_id": "ARG_LNB_965fab4de70f622c36631bd3",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2Mxa2YaM2Qlz1VXEBM9_ay1yzKhkEOmdo4td08UNb2HPD4pPp0exAcA==/san-lorenzo-vs-gimnasia-cr",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2vSUEXIffKHcL7aCe_2PJML8pH3xgPWJdi6SNyoP--xWnoIIux8EkMQ==/san-lorenzo-vs-gimnasia-cr",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_b03179d8b1ebf21174a5d737",
+      "observed_id": "ARG_LNB_8cfa1496d77484d22c294920",
       "canonical_id": "ARG_LNB_30a494d44deb89528ca9ca73",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2u3nj20L_fikKaqbpqjp8zkr2zoizndpvgi1qelimfWApsHdVO8FZlQ==/lanus-vs-obera",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2rhK8EoZnOrx-XOTTHEA4xRrV4R6wuBdMWI29hRuctWOgfM3OOazVFg==/lanus-vs-obera",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_e838fc05d6e1f19e99413be2",
+      "observed_id": "ARG_LNB_804469c166b859ea07a3ca5c",
       "canonical_id": "ARG_LNB_19bb0151e70b8fce4b693f60",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2hVxKrJAXtAzBs0QtEdhE3trGhv3QLh-7Cg1-rhcXgO4czov-D_PnGQ==/instituto-vs-ferro",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2lD57Lfc_OmeuthXycO9-pPgJ2aVEqLkNtN0yVVcLAvIZrZemPM5CBA==/instituto-vs-ferro",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_f37009cc189e103e038d0057",
+      "observed_id": "ARG_LNB_7f2cfc90258aa0768e169792",
       "canonical_id": "ARG_LNB_fd96c1c90407c97b0fff5cf0",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2VeU7huKCYkEZ9QhTwPJxFuWvbW3bMw4SqrOrraAwzBZmTefYvBhelA==/argentino-j-vs-san-martin-c",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2-eB-C6Qtg8viUwpLoTAqdLPqb1Jj2oc61VMW6G9g5Z6DlQarNVepyA==/argentino-j-vs-san-martin-c",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_2d3e69c6fa8bb9dc21d31975",
+      "observed_id": "ARG_LNB_124e3e98584f725344b45fbd",
       "canonical_id": "ARG_LNB_67c88e9ec35d5a1e2af4f6cd",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2LeJkN0HBPLm0-6AVg87QpCEUEGuUDvZxRKgQLd-y0C3X-Pi57gSJ1Q==/quimsa-vs-boca",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2C6YepspG8YOJ1qeBUtTnHv8kkXcYbWTj58BK5aOTBJ0xeLyJI1y3dA==/quimsa-vs-boca",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_8f343ef90cc48ebed2b735d9",
+      "observed_id": "ARG_LNB_925c39e21fcfa555a5b673ee",
       "canonical_id": "ARG_LNB_d7eb0c43ade1994f58028fda",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2CBUC5RbNjOhoapNMkt63YgiAqNtjfsYDvontII70so3SgmNUvDb1eQ==/racing-ch-vs-gimnasia-cr",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2rZNvsr9bNxQAmXkWkxBY1hd1xosxn7ryr9hRdNdFhHXyO_RPC7sX8A==/racing-ch-vs-gimnasia-cr",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_637972caf63dad90971f7ce3",
+      "observed_id": "ARG_LNB_b7b0ed76c3d0d6a560e507a3",
       "canonical_id": "ARG_LNB_1de46e0ea524f8a1c89a5f01",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2lCrCkHzQN_VqKnLNzdAjB5jqj1iV-f2r4JG9v6OpWibmQCVh_EezYA==/argentino-j-vs-gimnasia-cr",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2Rz2o61bui62XrSNqwhvExmEGJzG4uoLHv-SeI1-jcF9x9IRWXHDk4w==/argentino-j-vs-gimnasia-cr",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_4d88f39df3a8ac34ba6ad557",
+      "observed_id": "ARG_LNB_aa79a2a9bed6944d53185e88",
       "canonical_id": "ARG_LNB_109fb3a03c4b1efb46b8cbcb",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2JwZTcJpj6-vG5VVooLU1pEQxTFFliIl_DFmANmbhsg7t-6H95WMJoA==/atenas-c-vs-ferro",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2ChUYlDqYcuowZtAnY9J-p98BRA7Ole-HHlxd7KLFnnQacHhUNjQmAQ==/atenas-c-vs-ferro",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_adc0731eca47269cd6743c01",
+      "observed_id": "ARG_LNB_47a5fe846494b5b44ff2a1d4",
       "canonical_id": "ARG_LNB_95d7221c65075d0d2419767a",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2KkzMfP9sGdfisLq3YtIudhxHqqKMVob9vBMOk-hcXWQ_T264V6MKfg==/olimpico-lb-vs-boca",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2XskpFSJWddVeTfFMB5t0SXM7kGbM-s6Aa-CwriI-tKTs94Ig57DXIA==/olimpico-lb-vs-boca",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_8e88b31fbf063b97d254ed85",
+      "observed_id": "ARG_LNB_3ec5dbd9585bf4ddba72c9a3",
       "canonical_id": "ARG_LNB_1e19472400a1300631107948",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2mB0VXrImyv8SVN0xeDHfCw_rz_e-VoJKijXqmBRMGyTUICdCT0wSHQ==/obera-vs-racing-ch",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2ycuFkQHs1pBrn_0mGxHPfEPlhkCBnINzto8jMAyUTYx0cWyjnLO_cw==/obera-vs-racing-ch",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_b0ec7cd68426b3efbf9bd978",
+      "observed_id": "ARG_LNB_113959bc1d41d13afdcaa441",
       "canonical_id": "ARG_LNB_de65fd07bf9fd295c78fa88f",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2vZKhiG77_N6ZIZoc3bXqlUgyiXeVi09O8TBHceohz8dsWUyCybsWgA==/lanus-vs-penarol-mdp",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2so_E5_ySxl-xq2yLCau7HpZ3sYI4OjHgopxuehnVWN4S_9ijp1IXwg==/lanus-vs-penarol-mdp",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_8d49e2d99f3234e13b842eb2",
+      "observed_id": "ARG_LNB_b291a336606c2710b2e92f94",
       "canonical_id": "ARG_LNB_500ec0f914b182cf291fe7b7",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2jE4qcVxy7OryOsH7eooF7xbe_goVxCRrVraC2yV_Hpfaxhxv7GV2oA==/la-union-fsa-vs-racing-ch",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2517EIg_V62fOLJ5gDKMpnSMF2pjRUZ8jfCMWJ8TLGNcgZ1j34t0QLg==/la-union-fsa-vs-racing-ch",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_515210ff71edfbcdeb2ba3b5",
+      "observed_id": "ARG_LNB_e12dbee05497fb99cfab0f5d",
       "canonical_id": "ARG_LNB_026b77dc13a7009d4a34e8c0",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2XIUOlGHUMCckzezrf8nX1yldegtJVbfCVAMdaBl-uGHZbk9YEwdqfg==/platense-vs-obera",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v23p-Zsm8FXylm7iF341VlSyfAEdVOoPBcpctPgX0RTzFOnXPnjghf6A==/platense-vs-obera",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_54dc4b6d4d27d08a2c3dfc80",
+      "observed_id": "ARG_LNB_6ac58f17b1fbc0fd08973eb6",
       "canonical_id": "ARG_LNB_159a5c3b58f0350fd306c41a",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2M5EI0nJ5BtBlle9KZh_lfmLpbdAUmruyhYz3CHl2MPEc9UBTJWzLtA==/san-lorenzo-vs-penarol-mdp",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2DBBOj1lYn2g9EDMHskuPC5YhcpX82hBWMBMmmk9JZCqWi5c6hBeCpQ==/san-lorenzo-vs-penarol-mdp",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_47386dc121b950c159818672",
+      "observed_id": "ARG_LNB_a1592490d231204322a5b134",
       "canonical_id": "ARG_LNB_e1def0cedaac3188488c03ba",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2QQbyPEQga7HUo-SpM7s173BQbGV2c5KbsQRY77AOOenEO1JP1zs4Ww==/san-lorenzo-vs-obera",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2Wfpdfuai3TjtI5Q6igFeZyg93Myl9Yd-QolzZ7BD_4c94uZnrv8Ksg==/san-lorenzo-vs-obera",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_d198ca439f25cf5d700125e3",
+      "observed_id": "ARG_LNB_e1419e22c0c935937af24419",
       "canonical_id": "ARG_LNB_ffc6ab185055145b9077461a",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2HYHsMLjJDILkQ43N3YFIY7soU6KmUL_A_rPToLtofyxHcmnUlW0y6g==/regatas-c-vs-olimpico-lb",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2dsL9Ve4IcRZb-_RnabGRbqdNletmS6osrGzBtJdlQCBPUhGy62epDw==/regatas-c-vs-olimpico-lb",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_b43d8b2bacda7529a12cd0ee",
+      "observed_id": "ARG_LNB_6698571d6c01c0ed1f8d307f",
       "canonical_id": "ARG_LNB_c13795c5d3ce6b9abef02f90",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2-XKM2IDzuFPqqcQtlWUNtPFraKLdh7pFA3w1iV73SIxqfiWhyV2lIw==/independiente-o-vs-lanus",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2hZLri7lGi_PcTr0rB8ZB4UrG7eMWHCUZi4Y1chaS-kziGXHZ8tMq8Q==/independiente-o-vs-lanus",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_9204abe2932bb25d1b642491",
+      "observed_id": "ARG_LNB_76f80d99dfb14acfeddc2fa7",
       "canonical_id": "ARG_LNB_2c2de666c3e24576ebed6584",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2Ja3rbqKVN8v45lqrIdmA-v1gdurz7-bztl46Y2S0T3cxPb73Gg9umQ==/san-martin-c-vs-olimpico-lb",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2Lr0mBWKXry83aV4VoZ1ZxC6DLVntUapHzi3iKtlExIBR_ipAYT3Zug==/san-martin-c-vs-olimpico-lb",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_3d7d49897a095edaa2865295",
+      "observed_id": "ARG_LNB_4d537f372f6c0751ee8deefd",
       "canonical_id": "ARG_LNB_ce54720c7bbd01eac500dbc2",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2w-OygY9sR7MpyhM7c-nd1BRacAGezr27ZNcy2PbWg3bipN9qIdfyXg==/ferro-vs-platense",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v28pSr_SEL0U9TkNzMqs0Gbr6hlUmP4gY_TQUKw76MxJArC2xaCKdDAQ==/ferro-vs-platense",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_278febdc5127040bdebed799",
+      "observed_id": "ARG_LNB_bab8d8303cf137458d69b26c",
       "canonical_id": "ARG_LNB_c85feb12266c5a0a9babc73a",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v26yAS7b78UAvNOxX6MvLiBtJBtHHjNDIB4gPwyf1VWgR8kdOHNqSsIg==/argentino-j-vs-boca",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2lZ7TtEJ77KOOuGRFF47BrP_0fWD09ICLZwZqDuu3A6WlWLBLsxRk2A==/argentino-j-vs-boca",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_6f13dca22590a9cb5bbdcbf3",
+      "observed_id": "ARG_LNB_c6b5dce0bcc4ca5ef4848827",
       "canonical_id": "ARG_LNB_a43f82a039966573527b56af",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2G9x7KEm6tQDSR-opyojfXHID6R_eEOMBfG9v8N-qqrsN1OXvKcwxXA==/instituto-vs-lanus",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2CnsI3k-np3Vpx50LiHlpOc-bEY-VCqG0Lq6MY01hl0fT-wyJx1t6XA==/instituto-vs-lanus",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_abfa720db7e300333562952c",
+      "observed_id": "ARG_LNB_b1fc554a5e595dd9cb8913bc",
       "canonical_id": "ARG_LNB_9324c7c7a56e38eb2fb05393",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2YGtEZY6BqVozeQgCKPxuUFlmXmVkz--mqWx0pY2YgAd_oUoS6oW9jA==/argentino-j-vs-quimsa",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2R1YJ-J_V23chAFHWFZ66_0pMH4YNzzxdv9unJLXbCq7jwT0N9vhc1w==/argentino-j-vs-quimsa",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_1b4af0e49040613997b2600d",
+      "observed_id": "ARG_LNB_11b7f1c4370163a13a3c0676",
       "canonical_id": "ARG_LNB_ce57cb5a5f9dfe30999a108e",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2j9Wln3kloV4sX6munYUISV0BnR8RfLVJihLBI-bAksxEhDBT20M1HA==/atenas-c-vs-lanus",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2LLrynLgEaUgxhM_bZNaVqtB9WFMkQxgvVhxqCLwxYeJ-5mSQ6FCiKQ==/atenas-c-vs-lanus",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_6dc30d7064c96232039cc068",
+      "observed_id": "ARG_LNB_f6e45ecf6d6e8d8ca547543e",
       "canonical_id": "ARG_LNB_37806c608a637044008a6185",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2mlHKRKe4Y6x0zu6L2rEotgj_t9br599GVcXs33KP9-wncrGQAOnErQ==/racing-ch-vs-boca",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2Q5AjwP2c_l7InR241TMeK9Negog1u2pOSsmkRRPo5jOcdCYVcXr3wQ==/racing-ch-vs-boca",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_30b37f37ada264ff8cf00f0b",
+      "observed_id": "ARG_LNB_10b7d77a6c130e47e0fa9ada",
       "canonical_id": "ARG_LNB_948031aef52b0920727968d8",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v22pqZwHlkoU8vur4BfjRrXTPrB_OC7_ae4LyOC1mGpuDBd1lw7nFCeg==/racing-ch-vs-quimsa",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v20oBZcPg1rIqpv0Zp5F3jmVqfLkLH-iooeTjQWzCqoY6qr24Q0z4Ehw==/racing-ch-vs-quimsa",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_f97c25f3cfaa40cb7f7944fd",
+      "observed_id": "ARG_LNB_3a01bd80ed24b2ebb0384ec9",
       "canonical_id": "ARG_LNB_02f55b4e3130a1f40b8bf1c9",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2Inf_7phBWMFSJUvr7UIwB1b-9AOaVbQcg8OnXdHluGvjz_1TdqYjTA==/lanus-vs-regatas-c",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2l1QUf8jFiutDJtkYch0YHq-eUl07-rTdCS_sbCKwe7ZG0icCEaa6Aw==/lanus-vs-regatas-c",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_df2a7ab930d489aa84bea1c1",
+      "observed_id": "ARG_LNB_e5726b0db0d8777248bebfe6",
       "canonical_id": "ARG_LNB_9b1a912dea58612618a7cb8d",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2pXMl8B5nAw9Gy2qF8sgE3d9ThI10UNcYP2pTETlSBzOXCOwFBs1Dtg==/penarol-mdp-vs-san-martin-c",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2ZLqdwbFHNggTGsGTzG-hfK0fiBRTIb0d2INlMb_c8O3KAOcE-KgWrw==/penarol-mdp-vs-san-martin-c",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_9a40b363b963b1eef2574ec7",
+      "observed_id": "ARG_LNB_bae008f311b4db7374bcf793",
       "canonical_id": "ARG_LNB_1960230c36b1dcfc538a81d6",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2LLfRI9HILJc8-aiBAdDY3m97OTW7nMCkjD0bPk9_Vh5uyr9bd-7ptA==/san-lorenzo-vs-platense",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2G-vUGGPaGUA_v7SABWSBGIMyJ0taXED_L58tFyYQ7vuMxqQ7khbb3Q==/san-lorenzo-vs-platense",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_6973ea239d03aec94d3396bc",
+      "observed_id": "ARG_LNB_94405f43b75fc2fb5921d7a9",
       "canonical_id": "ARG_LNB_66531a495580310d081e18b6",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v250inlGUVre_VV7Og5gLSDa7biCFdcngGnIbqVyfn8xw4433jlZ_X2w==/boca-vs-regatas-c",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2phsmLDgffY89O3Z6_9pLFj23_mYLkpGbBgLrYDtu7R6R86S-J9PpKw==/boca-vs-regatas-c",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_434d4d9d16c091257c90f76a",
+      "observed_id": "ARG_LNB_6e27881c260248ff6b290082",
       "canonical_id": "ARG_LNB_811d4583aa343eebdc0ddc79",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2IPG3DPcGOkKxbtBI7S8AYnTMlhhBoXrSDkL9ni12bMH_jW7Y6Ky_Xg==/gimnasia-cr-vs-ferro",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2XfOTByzWdGE2AqzJzRcyxG3-PDL2kp81oy_h7itfZ8nE8Mh-v8IlxA==/gimnasia-cr-vs-ferro",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_db6157f9882c0b4c39e76c58",
+      "observed_id": "ARG_LNB_f3b10e2e57d07acc89992d91",
       "canonical_id": "ARG_LNB_605664aaaf5cb52de37dec39",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2kpDWIa3-NMvAul41Mu5-WVgXZKA6mH6ZEVLDMr-JWAgjCesUKvLl_w==/lanus-vs-san-martin-c",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2FjPM3zJ11dX34UIbFYJGi-9BI6YaJRmxMx3jDfHLCWkZL9ffbXOWWw==/lanus-vs-san-martin-c",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_1e39bc0766d8dd4522936cdb",
+      "observed_id": "ARG_LNB_05014dc1116423466a5bd7b6",
       "canonical_id": "ARG_LNB_75eb75c834e4b39e2c98cfc7",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v27xV2c6YQ20HJmqXlzk6oNQ3bOR8Zo1zr7fpilCqNf5XlXbEuYj6wTw==/quimsa-vs-penarol-mdp",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2g3Z7osD4P3SMADpBZ66NicbJUvYl8CAqHXJsmKUzM8e-I8e15hGEkg==/quimsa-vs-penarol-mdp",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_ceea3b92efc01e052f6f994e",
+      "observed_id": "ARG_LNB_a4963c154cd289d38bc8e91b",
       "canonical_id": "ARG_LNB_de077cd7bf7843bd130312f0",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2y6jLnnMCrqo_LqLF7ukFU_eJc1PNeNQ42XnIANisGuK-UFodX-jPPQ==/instituto-vs-gimnasia-cr",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2a1CNH27tHTKTN0ASFvTPR4UrzWPWRCQASQbsllObFIccW5nsyXBZIQ==/instituto-vs-gimnasia-cr",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_5b86617592f94a2051f7caef",
+      "observed_id": "ARG_LNB_2c9cc8d155125326a8d51751",
       "canonical_id": "ARG_LNB_4c69f86a9670f93503eb6898",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2XenUejgf7Tb9t6UY2LbdH-rUU9bMqFXHFg_eGKZvtlxHVZwyw388Fw==/atenas-c-vs-racing-ch",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2kurTJ6ekc2vI4kjdBht0Dos0hwjxhpmFiITIefQ8jhHqZ4GRBRu1eg==/atenas-c-vs-racing-ch",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_65e5d84a0b39880480d60d3c",
+      "observed_id": "ARG_LNB_9494854db60bc6c2299c97ac",
       "canonical_id": "ARG_LNB_fd8be0313b750577ad6d2d36",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2TjoEnG663Vv5HD8IM98FppEWlGsfRb_j0gzRnfIXkAftY1KQXoF2kQ==/olimpico-lb-vs-penarol-mdp",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2LH0ECNvFVZYghCcSYG5fanEL009yGXMW9me9iYuOJSps5MiegUng9w==/olimpico-lb-vs-penarol-mdp",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_4d854a0dcf0955fda41e0667",
+      "observed_id": "ARG_LNB_81663e78188a260e99c049fd",
       "canonical_id": "ARG_LNB_a7472fbe8c7499a733a39f87",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2tggCqR7_fmz8LJfpY_H82RIEQEoNF6H6e8_bPM6haf6oBe2jATReeQ==/instituto-vs-racing-ch",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2gxNM6c7Plej8rA23ETOld1aNaGHKnMvIJs1wGHQ_Z13dJpfVis_Osg==/instituto-vs-racing-ch",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_fcaab1806ecf784cf274d69f",
+      "observed_id": "ARG_LNB_dca955d3bceab93bf3f4611c",
       "canonical_id": "ARG_LNB_fc2ae60ed0edc615ec24bc9a",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2vgeKgIbaMjSHqhlQJKMH3HpeK3UgByHAoleaHGf2g8rhS6l5RtJCNw==/atenas-c-vs-gimnasia-cr",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2WVEZjdSHMv1_KQ3_EB37OhUDRBCyf426ONXHI7jjIG8JkKf8L91meA==/atenas-c-vs-gimnasia-cr",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_0a32dce07d436801915ea966",
+      "observed_id": "ARG_LNB_35018cb926e30d14755fb703",
       "canonical_id": "ARG_LNB_8c649084ef7c092e651d7c03",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v27jMP-V7N7byRYEA_I3MI53fa1qwO8FqNvFuNoVIAVfZ3IyRUrV1t3Q==/la-union-fsa-vs-argentino-j",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2NPP9Clt14aW6kUJmV-8McCR9Ny8oesMfxJ-e5o1Nxh4sIgveTY0KlA==/la-union-fsa-vs-argentino-j",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_182c9a0bfbb55d80574ce7e0",
+      "observed_id": "ARG_LNB_75f9fbeba0afc60e80d3b1fb",
       "canonical_id": "ARG_LNB_b12672073a8ff3640820abca",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2rVCvgUCpfA5HDgrkfp41sWD2OEwQ0d8FEEY9Ef2F0uT3LnlQRQOjBA==/olimpico-lb-vs-lanus",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2AiBdY7Z7sNpDmJxY050Zc21L7aP1OsmK7a1JnwQO9LSDsTnhpWI43Q==/olimpico-lb-vs-lanus",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_5c37fb09b45c82a206198fd7",
+      "observed_id": "ARG_LNB_35c7ef4257c8326eb536ba7a",
       "canonical_id": "ARG_LNB_0a04c66c54f4326d0552fe47",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2_6IDNPEcQY7e96TQbVPzhWnS03zoyIUKpPqSA9S7MG1QTKfvahyE6g==/obera-vs-argentino-j",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2QJjKpAcDePf9-5qwEZ6q98pIgc1v69rRqIm3KEueV-z1TRfSw4MNpg==/obera-vs-argentino-j",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_1936b27fd65ac6c7701efade",
+      "observed_id": "ARG_LNB_09af8a79b23ad21f5b0d2ec5",
       "canonical_id": "ARG_LNB_a9b4af9b2996c63bc6b36dac",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2qKzLPotiBjpHuA4TnCZ61mKVkrd0UYsthDOwFhVtEYrgY5nT-1IldA==/independiente-o-vs-gimnasia-cr",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2lnVFmM9By6Zs-_0axQJcGSJgwaziPpPGwA4kyMyMWcS1JXqrANd2Dg==/independiente-o-vs-gimnasia-cr",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_4192229db36404580b87b014",
+      "observed_id": "ARG_LNB_177de5dbe7e7cd7b6e0c4d15",
       "canonical_id": "ARG_LNB_7cb40c7589dc4fe54dcc0102",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2d8XgG282YJ_Kl6YS8KtlpC1PaZXi1F8qOueV89W_XuwGJz2_0iOKbg==/quimsa-vs-lanus",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2OyaMZq6UTFjHoR4HsJIkn1fvJpOI51yuYgn_4TLdHRG8R-jJfFvR_g==/quimsa-vs-lanus",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_b64dfe279900d7a562ac3af3",
+      "observed_id": "ARG_LNB_d5929f2564f382c7792fe62a",
       "canonical_id": "ARG_LNB_547faf21690292c3f87d8584",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2TwJQ46xQcNrNhHx8zMDLrFsKxDj2VxypXgzyGb4uEj5_pw6kqS7p-A==/boca-vs-san-martin-c",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2cBeP2UiXGdXrp0oeZKm4mwXjAEiA-o7joqluDq_P5vZitG8Yteoz5Q==/boca-vs-san-martin-c",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_6c826bbb71972b863ab286cc",
+      "observed_id": "ARG_LNB_45c10e963e0370253872915d",
       "canonical_id": "ARG_LNB_0fdadd5b8199ba8ee1e2f498",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v290G7_v85iMIPjIcU8DsWmBbAU0mUQut2qmFfF89x_srL1rtPBeWrMg==/san-lorenzo-vs-regatas-c",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2EobxlGqZvuEUgUcmtkLJn7mtxYZ8Tc5E12QTPTCnSaPr2jW-wWedYg==/san-lorenzo-vs-regatas-c",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_d0b3294b5a7d49c6aee78e5d",
+      "observed_id": "ARG_LNB_adff608c1a990bad66912964",
       "canonical_id": "ARG_LNB_22313fed11c910d85ee93a52",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2U2n7Pl60bWWL0rFwMTtRyDFTjLxm4sS6VUAcVJp1MEBV1ocqvtxkCw==/san-lorenzo-vs-san-martin-c",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2cwIb84pgsuj4ytLdIkMBhDQoVd4gFGG_Eol7JRLYMU8b5U9EbN1TKw==/san-lorenzo-vs-san-martin-c",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_70ab610b0860986402cd2f3e",
+      "observed_id": "ARG_LNB_c1cb1a6c7c3a92e6baf1c395",
       "canonical_id": "ARG_LNB_f00986168c01727ff2953ec1",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2dK6B_KzyXGxQbnidk_rpoHZYyPQYxEyCtjFZ69jH7RAFJTh_C9qEQg==/quimsa-vs-instituto",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2bmweWTAp9ep28gmjOt1sCyis5qHxHEmF3LkI0WXsIdE7PGRezNxUnw==/quimsa-vs-instituto",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_e70dd1f8bddb3334fc13edee",
+      "observed_id": "ARG_LNB_0b73ae286434100a54aa9cb6",
       "canonical_id": "ARG_LNB_3c8899b60521d11a21897559",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2PWE-a13l2UPyOeHqtElpNlMZnfYtoij-hQlalk8yq8PpcIgdEuSTUg==/racing-ch-vs-regatas-c",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2U2Nzfx733H1iC9S9dbtuIXJYREs3EkOgDYFUKboXzXPURZVzJC5-LQ==/racing-ch-vs-regatas-c",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_21191af632e059c6f3c2dfac",
+      "observed_id": "ARG_LNB_3653c47b329f79aadedf9651",
       "canonical_id": "ARG_LNB_4e653fb7b84a45d993c7c9ca",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2mn0o-5LafCJ2m0DNzwlRYAtndOeTZ5GrSj6YEAMCClsgVfp11nPrTg==/boca-vs-la-union-fsa",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2p2sj-zIyZVGuW1cC8CLV2ZRPsh9dhiELi6z92uDifIRk5hhUhBN7_Q==/boca-vs-la-union-fsa",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_3457772b1a562ab3f2f762c7",
+      "observed_id": "ARG_LNB_bc6b5348e0eaea3803327424",
       "canonical_id": "ARG_LNB_055b3407b9c28cce6daafb11",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2nsXGxUS1AQEYhr2JS14QsBS4UzLawGBRg0QnMkEORGJLNiEyis05YQ==/gimnasia-cr-vs-obera",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2XR7lG2NcgAuUphOBdajT1ikkOi7MrIXY4Vm2JThomJlpUNd9qlRp3g==/gimnasia-cr-vs-obera",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_11240541a03856b00e083377",
+      "observed_id": "ARG_LNB_6ed626297ddf1013ae3c4cf7",
       "canonical_id": "ARG_LNB_560604ac1d33b58ab9a22f4e",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2OBtEey9fuMc6-xJFHvS2X7Q-PrLokrDLCyNZ_bZdLzz_3_I4-oo9ZA==/argentino-j-vs-regatas-c",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2PffpfGMjOyizpg1w1FC_ybI8PWoS3Lfe4unwn3KGbprwy3MW9QxlGg==/argentino-j-vs-regatas-c",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_8392e857e54910a148812552",
+      "observed_id": "ARG_LNB_78d9ba7cb733361ca878e750",
       "canonical_id": "ARG_LNB_0358b1467edd70a3b9c177e8",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2v084YNV6zeguhXLLO9R6Mc33-Gbxd3YGiz5DcazZvJe-BEwr9OqbFg==/olimpico-lb-vs-instituto",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2JLA6eEr0ZJjuqBYyP03ni-r0CWWXWiwKRAviJp9Lkv-zqJgJljD-Yw==/olimpico-lb-vs-instituto",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_ca3ee1f6bb5beb6d703bbaed",
+      "observed_id": "ARG_LNB_d219994a738b73d804306120",
       "canonical_id": "ARG_LNB_b641af1a077935f8eed456de",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2A_pYQ1sq-I-HXIxPnzNPBR_Myx5oXIk5DnlQGkl_eGgx11ZLz9-D2w==/ferro-vs-san-martin-c",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2iuoL8sKk2fDvRPMAHQoKm8JfFK-b1_yM4VMaHGgdPDSjSaYm6oh9iA==/ferro-vs-san-martin-c",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_8b7c38564c9f5cc74fcd9c0b",
+      "observed_id": "ARG_LNB_8590e542550eeee93560967e",
       "canonical_id": "ARG_LNB_f71a53a0472ce2d42e6855d1",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2jZJ46isbTydlPUcIJlBjSeknIBB3rR8a6IOunOUhNYv7bWV6sIVABQ==/platense-vs-penarol-mdp",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2WnVQajdhmtnQwrLuu7IbHngy0roGkGEhQ5hMPuucKMlHDzBxhK0GcQ==/platense-vs-penarol-mdp",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_ee2acae44c7de7962ba965b5",
+      "observed_id": "ARG_LNB_ace02300b9db1c5e7615aed9",
       "canonical_id": "ARG_LNB_5d8d8b5a81d51065b6dfd1fe",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2INwHN8RabRFNuLulipO-Zn4oFqTY0gdRu6B6f2aTZNLn2-Jj2p2DUA==/lanus-vs-la-union-fsa",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v22VnsiDmazY6AiuI17T91dBrvHksdBlx8zoVpza4QYRvfK6Bqw0dTqQ==/lanus-vs-la-union-fsa",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_5546267de9731a5890a440ce",
+      "observed_id": "ARG_LNB_cb897698dbaa666b7b659aca",
       "canonical_id": "ARG_LNB_24ab84416684cfcb4d836995",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2XbedriddQUk8mPzosKTHYNPTraEW_xYYRwBR56mHOD6Gxq2TIl9egw==/atenas-c-vs-san-lorenzo",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2n_OqWVfTdHYUXs0xjEw4LC79UoqrB6VwXqEq0kZoCb2kc7khrx2x3g==/atenas-c-vs-san-lorenzo",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_4192759aec9889360a196a78",
+      "observed_id": "ARG_LNB_a70c410051870799d15b3939",
       "canonical_id": "ARG_LNB_2bc6c20f33b962fd2ac804df",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2WiNtSK_nAEUorStYMyDflHqcR8b5RRR_s2uFCReiF6qGU7_x8raU5w==/ferro-vs-penarol-mdp",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2qHT0nCMjHAD2chzMoUbJ4CmM9A2UQXu_4VQEgNZPclT1pmxrpdhqrg==/ferro-vs-penarol-mdp",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_a540f2556ed59e1570a08b84",
+      "observed_id": "ARG_LNB_f8c2762e9d4cd6ecd15d0f6b",
       "canonical_id": "ARG_LNB_bce47b7018d411f3510c1396",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2ztpnTEDvbVcUOQde1vfusynr81BRw0CpDJluvCCc1IWHWr0Y_5xhGQ==/gimnasia-cr-vs-platense",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2EuGI9T4f7RyLo0na9-i8FOzzG6nXNznrL2VMTEDXDvMeOuncdF_LbQ==/gimnasia-cr-vs-platense",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_9a47df2d6e035876e39a0ed0",
+      "observed_id": "ARG_LNB_899163a7508b2f374d5c6631",
       "canonical_id": "ARG_LNB_f6200694d43c12798e6c98ca",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v29wo7gRJrjIUviALDgQV358RodEBbe_CLqVPTBqkamC3pqYuNyr7dgg==/independiente-o-vs-san-lorenzo",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2Ymt6t9qGIUkQ_jCsRaadp8iieQtBxKZcMifdpEjJZJrKtIh6OQmt7Q==/independiente-o-vs-san-lorenzo",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_b8f73d103a226db9f9e88e66",
-      "canonical_id": "ARG_LNB_fb1c11978a49199e3400a05e",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2FMoDYQt8gP7mGpYx4W1whxCbmqMF01z-yTy-wBGk_Zt28ugFzt2Enw==/san-martin-c-vs-quimsa",
-      "basis": "exact season/UTC tipoff/ordered clubs"
-    },
-    {
-      "observed_id": "ARG_LNB_27d2a30e555ac34f1ac38abd",
+      "observed_id": "ARG_LNB_8080a75f38e3b287353cc5a4",
       "canonical_id": "ARG_LNB_030e28e8befe651116e7c4c0",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2RVWXUNhzvhNMysK-IWEB2zg-6Jp5p1_dRhK1cUt8U967D01K-Bf84A==/la-union-fsa-vs-atenas-c",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2SAgtBu-V8Ktd-G7sYG_H07nivUQeCu-OqAzDCmXusHAqszFSdMM97g==/la-union-fsa-vs-atenas-c",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_c6abb19236a050d8f1044e20",
+      "observed_id": "ARG_LNB_f3ac118cc62e94482c531522",
+      "canonical_id": "ARG_LNB_fb1c11978a49199e3400a05e",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2-mbzgYLEvqtCOiCIHRF5A1oRPYeLCNlT32BHsnEVT5s-2OmbUL4z0Q==/san-martin-c-vs-quimsa",
+      "basis": "exact season/UTC tipoff/ordered clubs"
+    },
+    {
+      "observed_id": "ARG_LNB_2e8861de9b2d84bcd0452eab",
       "canonical_id": "ARG_LNB_1e43ea275ab0f041ec3cf914",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2UQOL79ABctVD3imNfYRzO4q7DvUvv1Eg_vO1aKmzlGyqe8pBy1Zjag==/instituto-vs-san-lorenzo",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v278-rTwuYG7_wtwQ-zqVOqAXkJmgXnr6t_z565OtcV3002eDMAKjFgg==/instituto-vs-san-lorenzo",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_f35452589233dc65fac82d5d",
+      "observed_id": "ARG_LNB_e612419a6fb6e08ae8685056",
       "canonical_id": "ARG_LNB_8fe13897ffcebc2cc00922f7",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v26BnoAUAGCWer5GJPGUqqUvs-xnoQwrxfoYdZDFO9QzfN9XUFDIEz4w==/racing-ch-vs-lanus",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2erLwxahXmqucq3pYMhe2WyKtYvFitSnraXESFRl_wwvxRCmfDwTWWA==/racing-ch-vs-lanus",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_904d61814f9325f5c0a9b0ac",
+      "observed_id": "ARG_LNB_0fecffe2ec98d6a6655baaa3",
       "canonical_id": "ARG_LNB_c3fac9213d7ee139bb554581",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v20SHkZtyHqW5s5t9OXuUNzNbdpw8UviQNXg41XSJ_K1Z82C4hN90d-A==/obera-vs-atenas-c",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2fM2O9LA0tO4VsVSF9CrMkAxLH7e6mvpWlQdzRksBbqMbSi_g1d2T4w==/obera-vs-atenas-c",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_4f58014be8975a413054addc",
+      "observed_id": "ARG_LNB_47804f0404d48b3aa37ff262",
       "canonical_id": "ARG_LNB_14b18be8a50413f36c299b0d",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v27wCfIFvZR_buTELAtGA20jXVIDpI2cy6QnO-B5iOHtR2prxaS3ZU1w==/regatas-c-vs-quimsa",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2xFn89jIcF8Pv6ZFG8qFU3XUyewUdZ6ggVPL4MfGKv80ZetWQREkI4w==/regatas-c-vs-quimsa",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_ee67fbd0b77b914a207a98e5",
+      "observed_id": "ARG_LNB_d609399cc35d5c64f60a9dbb",
       "canonical_id": "ARG_LNB_3b64f9a1f982de7ad3388d42",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2jU_Q0ooKcldqko3SfK92-gmb01HLZy8pGHvB8Y3_chLbVKxXg3G_wg==/argentino-j-vs-lanus",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2Bxb0PBSycmtnXS0e03BCQvQj1e_Us5Za6sZ653kY9kVgg6sbmOEtkA==/argentino-j-vs-lanus",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_ca00af01e3e158ae43220e91",
+      "observed_id": "ARG_LNB_10e080955fb52e9dff7d4687",
       "canonical_id": "ARG_LNB_bc16f313cea1389d7aa967ba",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2e24ARuoQyFBzJKKT1TL2PSjiO5_ImmLI1UZvmUNnprsqnHOszbUMQg==/obera-vs-independiente-o",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2XahJy1yfccFxqQhLdR1j3Lzh46cJd6cmgET1V3p4LAoGe_PYKsbrDg==/obera-vs-independiente-o",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_a2b084de17efc880c93aca26",
+      "observed_id": "ARG_LNB_d344b77cef46d23c5788ddd4",
       "canonical_id": "ARG_LNB_3c7ec8aee008314b8d172aba",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2PA9bpkYv9vJH6qn9b21trEHD83sdcjBfh0guDPO8qQ2pjz4KZx3WCA==/olimpico-lb-vs-ferro",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2L1WaqTM3Vkd3TcJWc_O-bqClxBZwnjiR2Z-StmNTqLZ1T63bNm8XoA==/olimpico-lb-vs-ferro",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_7ec3fbd2aba6aaebd8570595",
+      "observed_id": "ARG_LNB_33cdd10a7555d3ee61e3631b",
       "canonical_id": "ARG_LNB_19676f3c458483801346ac97",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v27DGOLYf7l0SAAxONA1u_Lx80xGOCEqDTTDBnvINDBCDg9I3bNU3Ffw==/atenas-c-vs-instituto",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2g8UeNu1-z31_5ZZQa5l1XcOmFJmclN-xLKU6nilijsbiFQM30XzCDQ==/atenas-c-vs-instituto",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_418265029202bd783cae13de",
+      "observed_id": "ARG_LNB_f516d41cce63a66155c89b58",
       "canonical_id": "ARG_LNB_048e6f59e5cc8e0f512ddc4e",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2LXZNLnfRqzZ_RJN-HstO808CFYVGNMf3wEm9t8sjNi4qF_clTxv-jQ==/quimsa-vs-ferro",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2oOAlK9B62wQu_pbc_GJogspzlQWkDsxI-ojNQhrbSQObOt8vyqbm8g==/quimsa-vs-ferro",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_cd31ed94f72a87e29a7e68df",
+      "observed_id": "ARG_LNB_3938ff0aca36be6f34d58c59",
       "canonical_id": "ARG_LNB_3680e46697930dd91f4e990f",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2WMDVo_jOvwOQiw1S0cJvrBnFCHtudMrFiUdezUVf2K4dy2OQV4InhQ==/la-union-fsa-vs-independiente-o",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v20JmAx6sdqHUnXkdfR3Tv4tOKVN9lgoONSHYZ2VrK5tr1sw0rZnpWcA==/la-union-fsa-vs-independiente-o",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_a6c95ab1db3e10be75559a6b",
+      "observed_id": "ARG_LNB_ff80e9c5cad5631ec7e57765",
       "canonical_id": "ARG_LNB_1b80043e39533ec926bc9906",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2BGAp2t7u_3g3iohP0bdbdlfciRTjJ09p_OVodxDzbmH2B0oGRhUhJg==/gimnasia-cr-vs-boca",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2z_3K8yNPKP-kiG8ZO58VT_VirNsHUTf9yzdRr7saVP5TYmrHqUxU8A==/gimnasia-cr-vs-boca",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_98cf54f1430ecfde4c94148d",
-      "canonical_id": "ARG_LNB_a0efad520460f984b210aa3e",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2tSXzt4AEEnvH4FluBiUPSnIQ9_PtuEjxe_yWPAa_Eui1all0qvbjSQ==/ferro-vs-racing-ch",
-      "basis": "exact season/UTC tipoff/ordered clubs"
-    },
-    {
-      "observed_id": "ARG_LNB_92f089fff1075adcbdb35f9a",
-      "canonical_id": "ARG_LNB_9e9263cb41c3f94f1c912f71",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2IOzQiomSnPitkD9U3YD5I3DC3IEhpZQ2So3RSX476vGjx_ufSt0Hcw==/olimpico-lb-vs-san-lorenzo",
-      "basis": "exact season/UTC tipoff/ordered clubs"
-    },
-    {
-      "observed_id": "ARG_LNB_b681d412bf6aa8ef4fdc16ab",
-      "canonical_id": "ARG_LNB_11ff6e3c6d8da5fb635ee173",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2GWbf1loKidwT1k4TaYjXYkMijIq_8eTkBYP0MKWvEXviBSIeaBh7Zw==/platense-vs-racing-ch",
-      "basis": "exact season/UTC tipoff/ordered clubs"
-    },
-    {
-      "observed_id": "ARG_LNB_ad03bd7749f92b6e81394092",
-      "canonical_id": "ARG_LNB_dc038dc0aa9cb0de509e4d06",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v27eXKYIP7TmOnek209qBM3ItIx44xMUEXheRqpp4vKKGDLoZ6HOQmqA==/quimsa-vs-san-lorenzo",
-      "basis": "exact season/UTC tipoff/ordered clubs"
-    },
-    {
-      "observed_id": "ARG_LNB_79ce2273f4ac825a248e5a14",
+      "observed_id": "ARG_LNB_fafa0f9a46f55671954d3971",
       "canonical_id": "ARG_LNB_ca5745e6dfdaa024d5f17533",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v215W3RZqM-fvfIqs9zlh_WHaOYJxlujXyvL3xGaR2qy_vbsVhYFwLhQ==/san-martin-c-vs-atenas-c",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2StKfWSY0uHJUBKbFh_2GiGbxzeo3vor1RfoqfoHlDu-XU_-hmC6izA==/san-martin-c-vs-atenas-c",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_a71db27ddcdfdd07f3b38f60",
+      "observed_id": "ARG_LNB_7866c007b258a34ec6069f17",
       "canonical_id": "ARG_LNB_36a4d6bcd8c080752126aa34",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2MGNmqBzQ1wkBizUqWzB6gmc4Mj46SIjNb-ZzC2m8pygjWX6iDGaM9Q==/regatas-c-vs-atenas-c",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2YsuZDYfU4fdpzSPKmRRkb2tzv6ueVqzUai4P7h-QUcEIuoFfHfGgfQ==/regatas-c-vs-atenas-c",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_51143b7b8be28cdde4b13953",
+      "observed_id": "ARG_LNB_e6f9f56bc9da8552813711ba",
       "canonical_id": "ARG_LNB_2f5fca63ad94927b3ee6a387",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2VWWRDGnaz40sRxG-H7Xh7Pdbdsac-DsfTUTGq0YhCclOacSl6z-hSg==/independiente-o-vs-argentino-j",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2InPgZx-wqE1dpHR4yLyOThpt1K2bb0ITvvuMbCvJK2AN3xA74fjvTg==/independiente-o-vs-argentino-j",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_0823911ec0997890279c0ddb",
+      "observed_id": "ARG_LNB_1631d68b322ab78dac17f952",
       "canonical_id": "ARG_LNB_f9dc12e02245714e1dcded6c",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2rDGSFRvqMQxb_yYiXWlg6U3xxp74UqPMW0ytuFEOSD6a0e2_huaJIQ==/obera-vs-olimpico-lb",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2K8qGw8czpV8BGgJ_7VAEn7rS5uQFvu30FQaHizuysp5x5nRDEF-bZg==/obera-vs-olimpico-lb",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_872b41a06a705208a84b55d5",
+      "observed_id": "ARG_LNB_42c81fae592b8247a7c3c756",
       "canonical_id": "ARG_LNB_1231feb62339c9d3bf8ae34d",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2ZLRe4szG3W6EoXYL3QYfDf3OLMMd3Lq3nxeD7ckDlrkgQ-AAuPF37A==/penarol-mdp-vs-boca",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2vH-0VZrMl9DbX-3-KvG511xLS-OvV2FS9MrCasz9_CJyu4fK7eUYCw==/penarol-mdp-vs-boca",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_dd37b09a4b7644180e35c4ba",
+      "observed_id": "ARG_LNB_8fe41a6336bcc19bc6be69a7",
       "canonical_id": "ARG_LNB_8fcd2ba7990117f1aeb5151c",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2IDksGJUY5jfCB--aNAxOOhXNvxRt2JidwE3r7lQAfxqqrTSfeKm9_Q==/instituto-vs-argentino-j",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2PRYhG86YU6WqPZFGn48_c81VGaMXqFfthqpiUzkG1kbP2VEgjnHsGw==/instituto-vs-argentino-j",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_57a8379a0cbec94d71e2b844",
+      "observed_id": "ARG_LNB_baf0ce0bf1c416621d4dcb0d",
       "canonical_id": "ARG_LNB_86f60094e3ac7aff2a200765",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v27Jsdhm9cFdznuwCIPSQKu4gRv7_l3ttE21-B_-PRzopEuj0eA-444w==/la-union-fsa-vs-olimpico-lb",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2d3r5eGnxmi1OoMIU8jvbgarzVZ5TkyWSZwDA1BXjuvOTDLCzvgNpNw==/la-union-fsa-vs-olimpico-lb",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_d1584792cbdeb0d8c438cd0b",
-      "canonical_id": "ARG_LNB_fa897749a1a40a6aeb3d1054",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2dtdiwEjVyX0fQgYsfUXBc0dM2htMqhpwaGNGoIDGoxLkvJgg1Jb5mw==/independiente-o-vs-racing-ch",
-      "basis": "exact season/UTC tipoff/ordered clubs"
-    },
-    {
-      "observed_id": "ARG_LNB_fb005a1c945bec06aaaca824",
+      "observed_id": "ARG_LNB_edd4f1b1fa7a967089899c93",
       "canonical_id": "ARG_LNB_c333a5629000c5ad36903922",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2PL5nwedcLxlNwDBDC1rSnRfliQeiGOY7aBe8h4KYNH3K8tl3Afz1Hw==/san-lorenzo-vs-boca",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2zHnVJN9zGEIbm30U2fRCOs6jKvyXLsGoMmOQFbNTCCj8cUCEWEUmdQ==/san-lorenzo-vs-boca",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_98b22d3cc7ee3a8f52ddc154",
+      "observed_id": "ARG_LNB_277644a0f9288f515c57da01",
+      "canonical_id": "ARG_LNB_fa897749a1a40a6aeb3d1054",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2FOXBo43uT-cfFHlgQP2yr1SBPjvZ-mgPnsHNe2pa3VE8MvO6AZEfTA==/independiente-o-vs-racing-ch",
+      "basis": "exact season/UTC tipoff/ordered clubs"
+    },
+    {
+      "observed_id": "ARG_LNB_e56f3e99c6484fe9dd997778",
       "canonical_id": "ARG_LNB_6e9d85a70bbac3df882b7e8c",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2oMwWaqLpmArJPiRo4RrgGplIAqZNwhpk3wTBmtifw8Q-EBXg8Simqg==/lanus-vs-platense",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2UEFxwQ9zTkp4fcHM4_ED01JhV5mURKxKWQ-BhndkXzf7k2wGIzY_dw==/lanus-vs-platense",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_f301a2f2a9fac7b3daa5632e",
+      "observed_id": "ARG_LNB_9c30434673de1664bba61b3b",
       "canonical_id": "ARG_LNB_e6f051add241c2d98bee7e0b",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2mB4_MRqfspW2bu3k2ONj6roHLhGp_jpQkQ3N0VLEdb1obMka0fVC7w==/penarol-mdp-vs-obera",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v26Xz0CM0pKVvO1tTtp0AFdEGC_aI5xDapbAnSyQ9huEu8QvP65IMCHQ==/penarol-mdp-vs-obera",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_301ac2f09512bba26417f5ae",
+      "observed_id": "ARG_LNB_b122175845d39edb9b10358a",
       "canonical_id": "ARG_LNB_57b35b01c0c28472a19facd4",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v24PZtGXEDGrqgOfF8HrxKhUeHhyikRnS2fSe76J9w3SLX20d4YQ5HCA==/atenas-c-vs-argentino-j",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2Cqr2cwoqMB3507APtahSzjSn_ID6qKu3YOcUHFejk0w9BIc6Z0I0iQ==/atenas-c-vs-argentino-j",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_84f200a7fb36574a7719c6a5",
+      "observed_id": "ARG_LNB_de3444d8adf14aab2c5aa27a",
       "canonical_id": "ARG_LNB_f5ee09462a8cf7a35529d0e2",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2A5cSNpWPbtOs-OeYwEWweEuuTGF3AGQHauc0rvLsb1Oy9XP8Gj5aBA==/ferro-vs-obera",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v28NHRVt4pWBxKFvuBMgTKAzFF1w7jTYjICkVgHMqmntxnAGSMxflRfA==/ferro-vs-obera",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_591170fa056da00b05c41e1e",
+      "observed_id": "ARG_LNB_d89648e40787dac4079d576d",
       "canonical_id": "ARG_LNB_f229b8bb0308b5b697ef401b",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2H6iKb0TRLq5Bwq3-3Ap-xNyPiNtricMtPhl9wynFbbQJ80HGD9WpQA==/argentino-j-vs-san-lorenzo",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2_VkPEkcQflR7AXURUG_Sve86uF-yVOjb5UzYRopyr_KyhscCG3DyOw==/argentino-j-vs-san-lorenzo",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_2e5d7acc849385edc340d187",
+      "observed_id": "ARG_LNB_ab1156e7e15cd3634f53dc39",
       "canonical_id": "ARG_LNB_0d54ce0696f1fa737d981140",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v25LHSlhxmly9Wt5-0KxCydYNz1bR7RJvpX0ghr5ikb-bg16Y7r0bvcA==/la-union-fsa-vs-quimsa",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v28xmDWcQjuHNhSfbVBHVuBzNe5YdNIE9Glhke5GcMeR9sltkUb6mYQw==/la-union-fsa-vs-quimsa",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_f8c7c6da054245caa515b187",
+      "observed_id": "ARG_LNB_a73e8a762efc2b08dc163223",
       "canonical_id": "ARG_LNB_d7c687f4b5c8e9a2995c21fb",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2iDFYA2kkkGL2C2ngkIubJ1VhPefZ7Ke_L-j6LFkQ9yYTBEhk8qPTTg==/san-martin-c-vs-independiente-o",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2FYSgC9JsEhF3XEzFNb8E8wMiMaqRX3nkiwOrDqdlxAJj5HtF3Nya4A==/san-martin-c-vs-independiente-o",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_639e84980043cb64088d07e6",
+      "observed_id": "ARG_LNB_6cea7b90a83c8c9ceaf46476",
       "canonical_id": "ARG_LNB_a069214cac64d66152dc88f1",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2Wqzqimw-_ub5ASaZtpUL_bzaw-6-4dB5F8NoKCl42_44Pyc8O069cg==/regatas-c-vs-independiente-o",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2QmnTuH94RBEFyL8GFXLJ08gJhifQKfimh_3MRgcBG8xllLrJjFYWwA==/regatas-c-vs-independiente-o",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_a48713325f11338601d29063",
+      "observed_id": "ARG_LNB_621e6fcde84ba9bb70d0b75d",
       "canonical_id": "ARG_LNB_62c39295c14df00c864c4b7a",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2cRKRkNbYBF-Ud3u8CfXJ1BNE6OMTUkDluDR61vwumiZiAtIywTI2xg==/instituto-vs-platense",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2Kwu4T8YvuOiSLcgxoEaA5b1o_GQWBwAwptZpSx5Pb8lj2VePisLtZQ==/instituto-vs-platense",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_61b5670d785fbb2906c4a047",
+      "observed_id": "ARG_LNB_bc01bcdda6efc0193bcb273d",
       "canonical_id": "ARG_LNB_5a1006aaacee7c8c52096699",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2nd3MucXj_0MDlce5FHH_KRCL_qCWuYwA_LvEegIZRIwiO8Hj42hV4Q==/obera-vs-quimsa",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2SAn1DDVJmUrUK2U_3nXlLcdP7ZwNXReOd7vhL8JKbLIhG9PnOtIjLg==/obera-vs-quimsa",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_35f95421ea53bfe916c20fc3",
+      "observed_id": "ARG_LNB_19965f12a4c909bb8b72a4d6",
       "canonical_id": "ARG_LNB_2931bd18637a9dfb3e5d1c65",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v253JyCwKZP5eLLD6yZRlpt7ot-1KN8DCJnWoBuwQmOgtkKSUmEbwbnQ==/racing-ch-vs-san-lorenzo",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2GvP-q2z3eB0zwK__Za1U2Q2bLifAnce44wv7VEYxgXIY9yvF8WEVig==/racing-ch-vs-san-lorenzo",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_a044ba97a77070708daac3dd",
+      "observed_id": "ARG_LNB_0240a35265f433075002f21a",
       "canonical_id": "ARG_LNB_46539447808c02c597df0f1a",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2mgOBPzyD9kc2DL3SUBjM0WW-Z1W1e_s0r7iQa9NnzJxQaf52PhTW6Q==/olimpico-lb-vs-gimnasia-cr",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2co-tOM_wu7A7-B_Ux65z0ckC3lWlA-W6HW030qZdcGlbe_EvBuryRg==/olimpico-lb-vs-gimnasia-cr",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_ac61708a952a9cce7678d7fd",
+      "observed_id": "ARG_LNB_ed7a4631e7001f9f8fc12fb4",
       "canonical_id": "ARG_LNB_eea425566ee55a717a6ece27",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2HHjS0sW5MHFjHzkqpx8yjDc6jU9N_jpcHuznw0IXEiOj6pa0htvsag==/regatas-c-vs-la-union-fsa",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2hRJnL0dhl24gMMkoAn7gf1RPQ4Z-mfx92gmw76LXWW2q_N9VPDYEaw==/regatas-c-vs-la-union-fsa",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_45d06dace4c65b40c69caad2",
+      "observed_id": "ARG_LNB_217c021ccc9050096a4deebd",
       "canonical_id": "ARG_LNB_b7b03481df5e982c93595d41",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v21q9kh3LIpzhN08eET38RQRmPt17vEA4QwufkmW4ICaRkzURq6U2vZg==/atenas-c-vs-platense",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2Riz7n5eCbRIK_b_QkvdMgQK6QbMeNdCk0174lBy5X_8xYYGbjtpFLg==/atenas-c-vs-platense",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_a851303e321807763bc3d6da",
+      "observed_id": "ARG_LNB_6c8bdf12c98e3b4fa2c32e94",
       "canonical_id": "ARG_LNB_4ae95e0d79385301da319cb8",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2wRXaMpzxB8McURpJlzM7TEvZ8KTBtp-4wMovMj0TYj6nZES6zo8GgA==/boca-vs-ferro",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2vWuuzAHI0K_1CrkkRMja3fnBU6I77Om26Sra-06HWNNhK3hGJtcy4A==/boca-vs-ferro",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_e1b4e386083ac9109ba5f5c6",
+      "observed_id": "ARG_LNB_407e857621f4d05ea8e51525",
       "canonical_id": "ARG_LNB_d74f0891d636b5a4365a0d8e",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2IDUKmj8Hx2wjO4UNRw6WmPqEUQqw-hefdaC871s1JZadOYJJCS57_Q==/quimsa-vs-gimnasia-cr",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2mWJGnvAQyZe0jUnHhhDH7EZRIv5VH6tci6PcU_u7kfm68xwyfbki_Q==/quimsa-vs-gimnasia-cr",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_6c8e3480bdfde73dc4d9a1e4",
+      "observed_id": "ARG_LNB_e15a80e5be1f0797cc3b105c",
       "canonical_id": "ARG_LNB_32ed7a1f264a935a5d416c08",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2HieXBvey2y1T_qwYY1V9-q2wLMBFEjOqfDE6cJkw6yocC2rg2_c_AA==/independiente-o-vs-platense",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2eUolPx54zoX_7rVkjvtw6emLiO-8ZEjarxXVZ2J43O76njxZ6cEf4g==/independiente-o-vs-platense",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_2cd1b1ae4814b7f48b321de4",
+      "observed_id": "ARG_LNB_a37ae9aedcadb50aeb29e32e",
       "canonical_id": "ARG_LNB_9699ad98e10d832fe436194e",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v26ZwWZUsB-Cd0QTBva0RYee1W1JCcFtiI8ECB5JomFPrGxvKXLn63nw==/san-martin-c-vs-la-union-fsa",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2mkWmpH41yGrRzKWH51P7jQjez1A2Yxc3oRyAEOyPVqNiKTI3JdhVXw==/san-martin-c-vs-la-union-fsa",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_40b10be904d7d13e65679b12",
+      "observed_id": "ARG_LNB_3c53dd88338f0a2dfbdbb330",
       "canonical_id": "ARG_LNB_2313a07b777b045b00ebde50",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2V5RdfdAk6SvzLJDGio6xbp3ena5ybIxuT9G_DihtnPgfb4BIYQxQpw==/lanus-vs-san-lorenzo",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2H0PvedEhRtipxsqATxAHBS3fBT8fy2m-_i5vYtqNvTHPtZOh2ZeFIQ==/lanus-vs-san-lorenzo",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_f973fe663d3694dcc002b8a2",
+      "observed_id": "ARG_LNB_9c661c164fd7e6a7811e4b1c",
       "canonical_id": "ARG_LNB_e138abd482c28687a387057b",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2iBcuc-enFxiUGiMOBoDG3yUd0T091vQdu4UdFx43fQyu7z_BsltoAg==/penarol-mdp-vs-argentino-j",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2Nl9pTZZ07qHJ6CeP68LAvoDIyVEgnTManmnUmbeWeKuawMmE_GHRgA==/penarol-mdp-vs-argentino-j",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_8efb5118030e0a7688d0de01",
+      "observed_id": "ARG_LNB_620272007e385a9203620b8c",
       "canonical_id": "ARG_LNB_a84f0272f2831e60e24b4811",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2qrwvUshC38TaM3nW4EBIRUyd5d76lAegM9SJRz1ab10p4kSVYzgaxg==/independiente-o-vs-atenas-c",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2vVraEce-e5_G3rlBXDFJHBAYxrj3Va3iinVbd-828_COdjVamQn0kw==/independiente-o-vs-atenas-c",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_d284ad1c75e7300d3f08646c",
+      "observed_id": "ARG_LNB_78547d64f1e30bdccf98eada",
       "canonical_id": "ARG_LNB_073c9e8e3a938c4b820e75a0",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2zafS8ImScLivIJ6cxO3xM5GKoGA-v5jrX6QxJE53kxVa1NNCz_ExEA==/olimpico-lb-vs-quimsa",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2ZxwXcXrNPN5f07T4R4D_DXaMwd7pTasR8mTbXGYiPHnqKUjPgrAbhA==/olimpico-lb-vs-quimsa",
       "basis": "exact season/UTC tipoff/ordered clubs"
     },
     {
-      "observed_id": "ARG_LNB_6b419c9813084aa73b55b51c",
+      "observed_id": "ARG_LNB_f33a4648a7409c23652fd513",
       "canonical_id": "ARG_LNB_b5449824586266e0d3727727",
-      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2QaauHW_5LDIz2fu1qck_l_tpzSDGYi4Mrzlp3YbWvzpAtGgg1-Qocw==/obera-vs-regatas-c",
+      "source_url": "https://www.laliganacional.com.ar/laliga/partido/v2AU9yzP1DouwSNTg4508TUTcnzs1U3ilHe7JJxjww9APuMPUUKwyQMw==/obera-vs-regatas-c",
       "basis": "exact season/UTC tipoff/ordered clubs"
     }
   ],
